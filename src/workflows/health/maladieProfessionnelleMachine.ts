@@ -173,7 +173,7 @@ export const maladieProfessionnelleMachine = createMachine<
           bareme: 'Barème spécifique maladies professionnelles',
           indemnisation: {
             moins_16_pourcent: 'Capital unique',
-            16_pourcent_et_plus: 'Rente mensuelle viagère',
+            '16_pourcent_et_plus': 'Rente mensuelle viagère',
           },
         },
         montantRente: {

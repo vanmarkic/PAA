@@ -121,7 +121,7 @@ export const reconnaissanceEnfantMachine = createMachine<
           comparution: 'Comparution personnelle obligatoire',
           identite: 'Vérification identité (carte identité, passeport)',
           lecture_acte: 'Officier lit acte et explique conséquences',
-          signature: 'Signature père (+ mère si consent ement)',
+          signature: 'Signature père (+ mère si consentement)',
         },
         documentsNecessaires: [
           'Carte identité du père',
@@ -129,7 +129,7 @@ export const reconnaissanceEnfantMachine = createMachine<
           'Acte naissance enfant (si déjà né)',
           'Certificat médical grossesse (si reconnaissance prénatale)',
           'Acte décès mère (si applicable)',
-        },
+        ],
         gratuit: 'Acte gratuit (pas de frais)',
         langues: 'Français, néerlandais, allemand',
       },

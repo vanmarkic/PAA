@@ -24,7 +24,7 @@ interface RISContext {
   situation: {
     categorie?: 'cohabitant' | 'isole' | 'famille_a_charge';
     revenus?: number;
-    patrimo ine?: number;
+    patrimoine?: number;
   };
   montantRIS?: number;
   piis?: {

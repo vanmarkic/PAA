@@ -17,7 +17,7 @@ interface ExpulsionContext {
   litige: LitigeLocatif | null;
   commandementDonne: boolean; // Terme juridique: commandement de quitter
   jugementObtenu: boolean; // Titre exécutoire
-  huis sierDesigne: boolean; // Huissier de justice
+  huissierDesigne: boolean; // Huissier de justice
   expulsionRealisee: boolean;
   protectionHivernale: boolean; // Protection période hivernale
 }
@@ -56,7 +56,7 @@ export const expulsionDomicileMachine = createMachine({
         description: 'Congé donné au locataire (recommandé)',
         delais: {
           bail9ans: '6 mois de préavis (bailleur)',
-          bailCourte Duree: '3 mois',
+          bailCourteDuree: '3 mois',
           locataire: '3 mois (bail 9 ans) ou 1 mois',
         },
       },

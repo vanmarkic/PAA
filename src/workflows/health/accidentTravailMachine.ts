@@ -162,7 +162,7 @@ export const accidentTravailMachine = createMachine<
         bareme: 'Barème officiel lésions (annexe AR)',
         tauxIPT: {
           moins_16_pourcent: 'Indemnité en capital (une fois)',
-          16_pourcent_et_plus: 'Rente viagère mensuelle',
+          '16_pourcent_et_plus': 'Rente viagère mensuelle',
         },
         montantRente: {
           calcul: 'Salaire de base × taux IPT × coefficient âge',
