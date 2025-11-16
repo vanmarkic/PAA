@@ -1,0 +1,31 @@
+{
+  "name": "paa-poc",
+  "version": "1.0.0",
+  "description": "POC for Plateforme d'Aide Administrative - Business Logic Encoding",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node",
+    "example:agr": "ts-node src/examples/agrExample.ts",
+    "example:conversion": "ts-node src/examples/conversionExample.ts",
+    "test": "echo \"Tests not yet implemented\" && exit 0",
+    "cucumber": "cucumber-js"
+  },
+  "keywords": ["legal-tech", "civic-tech", "belgium", "business-rules", "xstate", "gherkin"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "json-rules-engine": "^7.3.1",
+    "xstate": "^5.24.0",
+    "zod": "^4.1.12"
+  }
+}
