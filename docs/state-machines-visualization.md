@@ -8,8 +8,8 @@ stateDiagram-v2
 
     idle --> checkingEligibility: START_APPLICATION
 
-    checkingEligibility --> eligible: ELIGIBILITY_CHECKED<br/>(isEligible = true)
-    checkingEligibility --> ineligible: ELIGIBILITY_CHECKED<br/>(isEligible = false)
+    checkingEligibility --> eligible: ELIGIBILITY_CHECKED
+    checkingEligibility --> ineligible: NOT_ELIGIBLE
 
     eligible --> creatingPIIS: ACCEPT_RIS
     eligible --> declined: DECLINE_RIS
@@ -114,8 +114,8 @@ stateDiagram-v2
     validating --> checkingRetries: VALIDATION_FAILED
 
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount < 3
-    checkingRetries --> failed: retryCount >= 3
+    checkingRetries --> regeneratingWithConstraints: [retryCount < 3]
+    checkingRetries --> failed: [retryCount >= 3]
 
     regeneratingWithConstraints --> generatingVersions: RETRY
 
