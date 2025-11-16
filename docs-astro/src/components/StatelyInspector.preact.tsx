@@ -1,11 +1,13 @@
 /**
  * StatelyInspector Component
- * Lazy-loads XState machine for interactive visualization with Intersection Observer
- * Note: @stately/inspect package not available, so shows machine metadata instead
+ * Lazy-loads XState machine for interactive visualization with Stately Inspector
+ * Uses @statelyai/inspect to display interactive state machine diagrams
  */
 
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { AnyStateMachine } from 'xstate';
+import { createActor } from 'xstate';
+import { createBrowserInspector } from '@statelyai/inspect';
 
 interface Props {
   machineId: string;
@@ -14,10 +16,12 @@ interface Props {
 
 export default function StatelyInspector({ machineId, machineName }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [machine, setMachine] = useState<AnyStateMachine | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [actor, setActor] = useState<any>(null);
 
   // Intersection Observer - load when scrolled into view
   useEffect(() => {
@@ -38,9 +42,9 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
     return () => observer.disconnect();
   }, []);
 
-  // Load machine when visible
+  // Load machine and initialize inspector when visible
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || !iframeRef.current) return;
 
     async function loadInspector() {
       setIsLoading(true);
@@ -53,8 +57,21 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
         const loadedMachine = await loadMachine(machineId);
         setMachine(loadedMachine);
 
-        // Log successful load
-        console.log('Machine loaded:', loadedMachine);
+        // Create browser inspector with iframe
+        const { inspect } = createBrowserInspector({
+          iframe: iframeRef.current!,
+          autoStart: true,
+        });
+
+        // Create and start actor with inspector
+        const newActor = createActor(loadedMachine, {
+          inspect,
+        });
+
+        newActor.start();
+        setActor(newActor);
+
+        console.log('Machine loaded and inspector started:', loadedMachine.id);
 
       } catch (err) {
         console.error('Failed to load machine:', err);
@@ -65,6 +82,13 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
     }
 
     loadInspector();
+
+    // Cleanup: stop actor when component unmounts
+    return () => {
+      if (actor) {
+        actor.stop();
+      }
+    };
   }, [isVisible, machineId]);
 
   return (
@@ -95,31 +119,22 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
         </div>
       )}
 
-      {machine && !error && (
-        <div className="machine-info">
-          <h3>Machine Loaded: {machine.id || machineId}</h3>
-          <div className="machine-details">
-            <p><strong>Total States:</strong> {Object.keys(machine.states || {}).length}</p>
-            {Object.keys(machine.states || {}).length > 0 && (
-              <div className="states-preview">
-                <strong>State List:</strong>
-                <div className="states-list">
-                  {Object.keys(machine.states).map(state => (
-                    <span key={state} className="state-badge">{state}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-            <details className="machine-json">
-              <summary>View Machine Definition (JSON)</summary>
-              <pre>{JSON.stringify(machine, (key, value) => {
-                // Exclude functions from JSON output
-                if (typeof value === 'function') return '[Function]';
-                return value;
-              }, 2)}</pre>
-            </details>
-            <p className="placeholder-note"><em>Full Stately Inspector visualization can be integrated when @stately/inspect becomes available.</em></p>
-          </div>
+      {isVisible && !error && (
+        <div className="inspector-wrapper">
+          <iframe
+            ref={iframeRef}
+            className="stately-inspector-iframe"
+            title={`Inspector for ${machineName}`}
+            sandbox="allow-scripts allow-same-origin"
+          />
+          {machine && (
+            <div className="machine-meta">
+              <small>
+                Machine: <strong>{machine.id || machineId}</strong> •
+                States: <strong>{Object.keys(machine.states || {}).length}</strong>
+              </small>
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -45,7 +45,7 @@ export default defineConfig({
             }
 
             // Separate vendor chunks
-            if (id.includes('@stately/inspect')) {
+            if (id.includes('@statelyai/inspect')) {
               return 'stately-inspector';
             }
             if (id.includes('xstate')) {
