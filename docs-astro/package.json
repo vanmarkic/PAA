@@ -3,10 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "npm run prepare:metadata && astro dev",
+    "build": "npm run prepare:metadata && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "prepare:metadata": "cd .. && npm run docs:metadata && cp docs/machines-metadata.json docs-astro/public/",
+    "check": "astro check",
+    "clean": "rm -rf dist .astro"
   },
   "dependencies": {
     "@astrojs/preact": "^4.1.3",
