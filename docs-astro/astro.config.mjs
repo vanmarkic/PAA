@@ -10,6 +10,10 @@ export default defineConfig({
 
   output: 'static',
 
+  // GitHub Pages deployment at /PAA
+  base: '/PAA',
+  site: 'https://vanmarkic.github.io',
+
   server: {
     port: 4444,
     host: true
