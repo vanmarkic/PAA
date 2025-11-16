@@ -41,13 +41,13 @@ export class AuditLog {
   @Index()
   actorId: string;
 
-  @Column()
+  @Column({ type: 'varchar' })
   actorRole: string;
 
   @Column({ type: 'inet', nullable: true })
   ipAddress: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   userAgent: string | null;
 
   // Action details

@@ -38,10 +38,10 @@ export class User {
   @Index()
   organizationId: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   firstName: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   lastName: string | null;
 
   // Employment & eligibility data (for beneficiaries)

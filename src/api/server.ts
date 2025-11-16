@@ -12,7 +12,7 @@ import swagger from '@fastify/swagger';
 import swaggerUi from '@fastify/swagger-ui';
 
 import { initializeDatabase, closeDatabase } from '../database/data-source';
-import { closeCacheConnections } from '../cache/cacheService';
+import { closeCacheConnections, redisClient } from '../cache/cacheService';
 import { closeQueue } from '../queue/conversionQueue';
 import { authenticate } from '../middleware/auth';
 
@@ -58,11 +58,7 @@ export async function createServer() {
   await server.register(rateLimit, {
     max: 100, // Max requests per time window
     timeWindow: '1 minute',
-    cache: 10000, // Cache size
-    redis: {
-      host: process.env.REDIS_HOST || 'localhost',
-      port: parseInt(process.env.REDIS_PORT || '6379'),
-    },
+    // Use in-memory cache for rate limiting (Redis can be added later if needed)
   });
 
   await server.register(jwt, {
