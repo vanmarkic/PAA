@@ -252,6 +252,7 @@
         <div id="lang-en" class="lang-content active">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-en')">Overview</button>
+                <button class="tab" onclick="showTab('architecture-en')">System Architecture</button>
                 <button class="tab" onclick="showTab('ris-en')">RIS Workflow</button>
                 <button class="tab" onclick="showTab('conversion-en')">Legal Conversion</button>
                 <button class="tab" onclick="showTab('about-en')">About</button>
@@ -289,6 +290,151 @@
                 </div>
             </div>
 
+            <div id="architecture-en" class="content">
+                <div class="card">
+                    <h2>PAA System Architecture</h2>
+                    <p style="margin-bottom: 2rem;">
+                        The PAA platform integrates multiple state machines and rule engines to provide a comprehensive
+                        social benefits assistance system for Belgian citizens.
+                    </p>
+
+                    <h3>System Overview</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "User Interface Layer"
+        UI[Web/Mobile Interface]
+        CONV[Conversational Assistant]
+    end
+
+    subgraph "State Machine Layer"
+        RIS[RIS Workflow Machine<br/>11 states]
+        LEGAL[Legal Conversion Machine<br/>8 states]
+    end
+
+    subgraph "Business Rules Layer"
+        RIS_RULES[RIS Eligibility Rules]
+        AGR_RULES[AGR Calculation Rules]
+        VALIDATION[Semantic Validation]
+    end
+
+    subgraph "Data Layer"
+        KB[Knowledge Base<br/>Legal Texts & Benefits]
+        USER_DB[(User Data)]
+        DOC_GEN[Document Generator]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Feeds| RIS_RULES
+    KB -.->|Feeds| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>State Machines Integration Flow</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User
+    participant UI as User Interface
+    participant RIS as RIS Machine
+    participant Legal as Legal Conversion
+    participant KB as Knowledge Base
+    participant Rules as Business Rules
+
+    User->>UI: Request benefit info
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Fetch legal text
+    Legal->>Legal: Process & simplify
+    Legal-->>UI: Simplified explanation
+
+    User->>UI: Apply for RIS
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Check eligibility
+    Rules-->>RIS: Eligibility result
+
+    alt Eligible
+        RIS->>RIS: Create PIIS contract
+        RIS->>KB: Generate documents
+        RIS-->>User: Application approved
+    else Not Eligible
+        RIS-->>User: Show alternatives
+    end
+                    </div>
+
+                    <h3>Component Overview</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 State Machines (2)</h4>
+                            <ul>
+                                <li><strong>RIS Workflow:</strong> 11 states, 11 events</li>
+                                <li><strong>Legal Conversion:</strong> 8 states, 9 events</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Business Rules</h4>
+                            <ul>
+                                <li><strong>RIS Eligibility:</strong> Age, residency, income</li>
+                                <li><strong>AGR Calculation:</strong> Part-time salary optimization</li>
+                                <li><strong>Semantic Validation:</strong> Legal accuracy checks</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Data Components</h4>
+                            <ul>
+                                <li><strong>Knowledge Base:</strong> Legal texts repository</li>
+                                <li><strong>User Database:</strong> Application tracking</li>
+                                <li><strong>Document Gen:</strong> PIIS contracts, forms</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Technology Stack</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> State management</li>
+                                <li><strong>json-rules-engine:</strong> Business logic</li>
+                                <li><strong>TypeScript:</strong> Type safety</li>
+                                <li><strong>AI/NLP:</strong> Text processing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Machine Interaction Patterns</h3>
+                    <div class="mermaid">
+graph LR
+    A[User Query] --> B{Question Type?}
+    B -->|Legal Text| C[Legal Conversion Machine]
+    B -->|Benefit Application| D[RIS Workflow Machine]
+    B -->|Optimization| E[AGR Rules Engine]
+
+    C --> F[Simplified Content]
+    D --> G[Application Status]
+    E --> H[Optimization Advice]
+
+    F --> I[User Response]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
+                    </div>
+                </div>
+            </div>
+
             <div id="ris-en" class="content">
                 <div class="card">
                     <h2>RIS Application Workflow State Machine</h2>
@@ -317,6 +463,95 @@ stateDiagram-v2
     ineligible --> idle: RESET
     declined --> idle: RESET
     terminated --> idle: RESET
+                    </div>
+
+                    <h3>Decision Flow & Actions</h3>
+                    <p style="margin-bottom: 1rem;">
+                        This flowchart shows the detailed decision-making process and actions at each step of the RIS workflow.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([User Starts Application]) --> Input[Collect User Data]
+    Input --> Check{Check Eligibility Rules}
+
+    Check -->|Age ≥ 18, Residency OK, Income Low| Eligible[Eligible State]
+    Check -->|Failed Criteria| NotEligible[Ineligible State]
+
+    NotEligible --> ShowAlternatives[Show Alternative Benefits]
+    ShowAlternatives --> End1([End])
+
+    Eligible --> Decision{User Decision}
+    Decision -->|Accept| CreatePIIS[Create PIIS Contract]
+    Decision -->|Decline| Declined[Declined State]
+    Declined --> End2([End])
+
+    CreatePIIS --> Sign{Contract Signed?}
+    Sign -->|Yes| Active[Active RIS Benefit]
+    Sign -->|No| CreatePIIS
+
+    Active --> Monitor{Monitoring Event}
+    Monitor -->|Income Change| Recalc[Recalculate Amount]
+    Monitor -->|Compliance Check| CheckComp{Check Compliance}
+    Monitor -->|No Event| Active
+
+    Recalc --> UpdateAmount[Update RIS Amount]
+    UpdateAmount --> Active
+
+    CheckComp -->|OK| Active
+    CheckComp -->|Issue Found| Warning[Compliance Warning]
+
+    Warning --> Resolve{Issue Resolved?}
+    Resolve -->|Yes| Active
+    Resolve -->|No| Terminate[Terminate RIS]
+
+    Terminate --> End3([End])
+
+    Monitor -->|Manual Termination| Terminate
+
+    style Eligible fill:#48bb78,color:#fff
+    style Active fill:#667eea,color:#fff
+    style Warning fill:#f6ad55,color:#fff
+    style NotEligible fill:#fc8181,color:#fff
+    style Terminate fill:#fc8181,color:#fff
+                    </div>
+
+                    <h3>State Context & Data</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Each state manages specific context data that influences transitions and actions.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Context Data Model"
+        CTX[Context]
+        CTX --> USER[user: RISUser]
+        CTX --> ELIG[eligibilityResult]
+        CTX --> PIIS[piisContract]
+        CTX --> COMP[complianceIssues]
+        CTX --> RETRY[retryCount]
+    end
+
+    subgraph "State Actions"
+        IDLE[idle] -.->|Stores| USER
+        CHECK[checkingEligibility] -.->|Evaluates| ELIG
+        ACTIVE_STATE[active] -.->|Uses| PIIS
+        COMPLIANCE[checkingCompliance] -.->|Updates| COMP
+    end
+
+    subgraph "Business Rules Integration"
+        AGE[Age Check ≥ 18]
+        RES[Residency Check]
+        INC[Income Check]
+        PAT[Patrimony Check]
+    end
+
+    ELIG --> AGE
+    ELIG --> RES
+    ELIG --> INC
+    ELIG --> PAT
+
+    style CTX fill:#4299e1,color:#fff
+    style ACTIVE_STATE fill:#667eea,color:#fff
+    style ELIG fill:#48bb78,color:#fff
                     </div>
 
                     <h3>Key Features</h3>
@@ -366,11 +601,132 @@ stateDiagram-v2
     validating --> completed: VALIDATION_PASSED
     validating --> checkingRetries: VALIDATION_FAILED
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
-    checkingRetries --> failed: retryCount_greater_equal_3
+    checkingRetries --> regeneratingWithConstraints: [retryCount < 3]
+    checkingRetries --> failed: [retryCount >= 3]
     regeneratingWithConstraints --> generatingVersions: RETRY
     completed --> [*]
     failed --> idle: RESET
+                    </div>
+
+                    <h3>Conversion Pipeline Flow</h3>
+                    <p style="margin-bottom: 1rem;">
+                        This detailed flowchart illustrates the AI-powered legal text conversion process with validation and retry logic.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([Legal Text Input]) --> Extract[Extract Legal Structure<br/>using NLP]
+
+    Extract --> Structure{Structure Valid?}
+    Structure -->|Yes| Identify[Identify Key Legal<br/>Concepts]
+    Structure -->|No| Extract
+
+    Identify --> Concepts[List of Legal Concepts<br/>e.g. 'eligibility', 'PIIS', etc.]
+
+    Concepts --> Map[Map to Common<br/>Vocabulary]
+
+    Map --> Mapped[Mapped Terms Dictionary<br/>Legal → Simple]
+
+    Mapped --> Generate[Generate Multiple Versions]
+
+    Generate --> Versions[4 Output Versions:<br/>Simple, Detailed,<br/>Examples, Warnings]
+
+    Versions --> Validate{Semantic Validation}
+
+    Validate -->|Pass| Complete[Completed State]
+    Complete --> Output([Return Simplified Text])
+
+    Validate -->|Fail| CheckRetry{Retry Count < 3?}
+
+    CheckRetry -->|Yes| Regen[Regenerate with<br/>Stricter Constraints]
+    CheckRetry -->|No| Failed[Failed State]
+
+    Regen --> IncrementRetry[retryCount++]
+    IncrementRetry --> Generate
+
+    Failed --> Manual[Require Human<br/>Intervention]
+    Manual --> End([End])
+
+    style Complete fill:#48bb78,color:#fff
+    style Generate fill:#667eea,color:#fff
+    style Validate fill:#4299e1,color:#fff
+    style Failed fill:#fc8181,color:#fff
+    style Regen fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Retry Mechanism & Validation</h3>
+                    <p style="margin-bottom: 1rem;">
+                        The machine uses an intelligent retry system to ensure semantic accuracy while preventing infinite loops.
+                    </p>
+                    <div class="mermaid">
+graph LR
+    subgraph "Validation Cycle"
+        V1[Validation Attempt 1] -->|Fail| R1[Retry 1]
+        R1 --> V2[Validation Attempt 2]
+        V2 -->|Fail| R2[Retry 2]
+        R2 --> V3[Validation Attempt 3]
+        V3 -->|Fail| R3[Retry 3]
+        R3 --> V4[Validation Attempt 4]
+        V4 -->|Fail| FAIL[Failed - Manual Review]
+
+        V1 -->|Pass| SUCCESS[Success]
+        V2 -->|Pass| SUCCESS
+        V3 -->|Pass| SUCCESS
+        V4 -->|Pass| SUCCESS
+    end
+
+    subgraph "Constraint Evolution"
+        C1[Base Constraints] --> C2[+ Stricter Vocabulary]
+        C2 --> C3[+ Sentence Length Limits]
+        C3 --> C4[+ Maximum Constraints]
+    end
+
+    R1 -.->|Apply| C2
+    R2 -.->|Apply| C3
+    R3 -.->|Apply| C4
+
+    style SUCCESS fill:#48bb78,color:#fff
+    style FAIL fill:#fc8181,color:#fff
+    style C1 fill:#667eea,color:#fff
+    style C4 fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Context Data Pipeline</h3>
+                    <p style="margin-bottom: 1rem;">
+                        The machine maintains rich context throughout the conversion process.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Input Context"
+        I1[legalText: Original]
+        I2[targetLevel: simple/detailed]
+        I3[targetAudience: general/expert]
+    end
+
+    subgraph "Processing Context"
+        P1[extractedStructure]
+        P2[identifiedConcepts]
+        P3[mappedTerms]
+    end
+
+    subgraph "Output Context"
+        O1[generatedVersions]
+        O2[validationErrors]
+        O3[retryCount]
+    end
+
+    I1 --> P1
+    P1 --> P2
+    P2 --> P3
+    P3 --> O1
+    O1 --> O2
+
+    O2 -.->|if errors| O3
+    O3 -.->|feedback loop| P3
+
+    style I1 fill:#4299e1,color:#fff
+    style P3 fill:#667eea,color:#fff
+    style O1 fill:#48bb78,color:#fff
+    style O2 fill:#f6ad55,color:#fff
                     </div>
 
                     <h3>Key Features</h3>
@@ -421,6 +777,7 @@ stateDiagram-v2
         <div id="lang-fr" class="lang-content">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-fr')">Aperçu</button>
+                <button class="tab" onclick="showTab('architecture-fr')">Architecture Système</button>
                 <button class="tab" onclick="showTab('ris-fr')">Workflow RIS</button>
                 <button class="tab" onclick="showTab('conversion-fr')">Conversion Juridique</button>
                 <button class="tab" onclick="showTab('about-fr')">À Propos</button>
@@ -462,6 +819,151 @@ stateDiagram-v2
                 </div>
             </div>
 
+            <div id="architecture-fr" class="content">
+                <div class="card">
+                    <h2>Architecture du Système PAA</h2>
+                    <p style="margin-bottom: 2rem;">
+                        La plateforme PAA intègre plusieurs machines d'état et moteurs de règles pour fournir un système
+                        complet d'assistance aux prestations sociales pour les citoyens belges.
+                    </p>
+
+                    <h3>Vue d'Ensemble du Système</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "Couche Interface Utilisateur"
+        UI[Interface Web/Mobile]
+        CONV[Assistant Conversationnel]
+    end
+
+    subgraph "Couche Machines d'État"
+        RIS[Machine Workflow RIS<br/>11 états]
+        LEGAL[Machine Conversion Juridique<br/>8 états]
+    end
+
+    subgraph "Couche Règles Métier"
+        RIS_RULES[Règles d'Éligibilité RIS]
+        AGR_RULES[Règles de Calcul AGR]
+        VALIDATION[Validation Sémantique]
+    end
+
+    subgraph "Couche Données"
+        KB[Base de Connaissances<br/>Textes Juridiques & Prestations]
+        USER_DB[(Données Utilisateur)]
+        DOC_GEN[Générateur de Documents]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Alimente| RIS_RULES
+    KB -.->|Alimente| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>Flux d'Intégration des Machines d'État</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User as Utilisateur
+    participant UI as Interface
+    participant RIS as Machine RIS
+    participant Legal as Conversion Juridique
+    participant KB as Base de Connaissances
+    participant Rules as Règles Métier
+
+    User->>UI: Demande info prestation
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Récupération texte juridique
+    Legal->>Legal: Traitement & simplification
+    Legal-->>UI: Explication simplifiée
+
+    User->>UI: Demande de RIS
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Vérification éligibilité
+    Rules-->>RIS: Résultat éligibilité
+
+    alt Éligible
+        RIS->>RIS: Création contrat PIIS
+        RIS->>KB: Génération documents
+        RIS-->>User: Demande approuvée
+    else Non éligible
+        RIS-->>User: Affichage alternatives
+    end
+                    </div>
+
+                    <h3>Vue d'Ensemble des Composants</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 Machines d'État (2)</h4>
+                            <ul>
+                                <li><strong>Workflow RIS:</strong> 11 états, 11 événements</li>
+                                <li><strong>Conversion Juridique:</strong> 8 états, 9 événements</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Règles Métier</h4>
+                            <ul>
+                                <li><strong>Éligibilité RIS:</strong> Âge, résidence, revenus</li>
+                                <li><strong>Calcul AGR:</strong> Optimisation salaire temps partiel</li>
+                                <li><strong>Validation Sémantique:</strong> Vérifications exactitude juridique</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Composants de Données</h4>
+                            <ul>
+                                <li><strong>Base de Connaissances:</strong> Dépôt textes juridiques</li>
+                                <li><strong>Base Utilisateurs:</strong> Suivi des demandes</li>
+                                <li><strong>Génération Docs:</strong> Contrats PIIS, formulaires</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Stack Technologique</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> Gestion d'état</li>
+                                <li><strong>json-rules-engine:</strong> Logique métier</li>
+                                <li><strong>TypeScript:</strong> Sûreté des types</li>
+                                <li><strong>IA/NLP:</strong> Traitement de texte</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Modèles d'Interaction entre Machines</h3>
+                    <div class="mermaid">
+graph LR
+    A[Requête Utilisateur] --> B{Type de Question?}
+    B -->|Texte Juridique| C[Machine Conversion Juridique]
+    B -->|Demande Prestation| D[Machine Workflow RIS]
+    B -->|Optimisation| E[Moteur Règles AGR]
+
+    C --> F[Contenu Simplifié]
+    D --> G[Statut Demande]
+    E --> H[Conseil d'Optimisation]
+
+    F --> I[Réponse Utilisateur]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
+                    </div>
+                </div>
+            </div>
+
             <div id="ris-fr" class="content">
                 <div class="card">
                     <h2>Machine d'État du Workflow de Demande RIS</h2>
@@ -490,6 +992,95 @@ stateDiagram-v2
     ineligible --> idle: RESET
     declined --> idle: RESET
     terminated --> idle: RESET
+                    </div>
+
+                    <h3>Flux de Décision & Actions</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Ce diagramme de flux montre le processus de prise de décision détaillé et les actions à chaque étape du workflow RIS.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([User Starts Application]) --> Input[Collect User Data]
+    Input --> Check{Check Eligibility Rules}
+
+    Check -->|Age ≥ 18, Residency OK, Income Low| Eligible[Eligible State]
+    Check -->|Failed Criteria| NotEligible[Ineligible State]
+
+    NotEligible --> ShowAlternatives[Show Alternative Benefits]
+    ShowAlternatives --> End1([End])
+
+    Eligible --> Decision{User Decision}
+    Decision -->|Accept| CreatePIIS[Create PIIS Contract]
+    Decision -->|Decline| Declined[Declined State]
+    Declined --> End2([End])
+
+    CreatePIIS --> Sign{Contract Signed?}
+    Sign -->|Yes| Active[Active RIS Benefit]
+    Sign -->|No| CreatePIIS
+
+    Active --> Monitor{Monitoring Event}
+    Monitor -->|Income Change| Recalc[Recalculate Amount]
+    Monitor -->|Compliance Check| CheckComp{Check Compliance}
+    Monitor -->|No Event| Active
+
+    Recalc --> UpdateAmount[Update RIS Amount]
+    UpdateAmount --> Active
+
+    CheckComp -->|OK| Active
+    CheckComp -->|Issue Found| Warning[Compliance Warning]
+
+    Warning --> Resolve{Issue Resolved?}
+    Resolve -->|Yes| Active
+    Resolve -->|No| Terminate[Terminate RIS]
+
+    Terminate --> End3([End])
+
+    Monitor -->|Manual Termination| Terminate
+
+    style Eligible fill:#48bb78,color:#fff
+    style Active fill:#667eea,color:#fff
+    style Warning fill:#f6ad55,color:#fff
+    style NotEligible fill:#fc8181,color:#fff
+    style Terminate fill:#fc8181,color:#fff
+                    </div>
+
+                    <h3>Contexte d'État & Données</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Chaque état gère des données de contexte spécifiques qui influencent les transitions et les actions.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Context Data Model"
+        CTX[Context]
+        CTX --> USER[user: RISUser]
+        CTX --> ELIG[eligibilityResult]
+        CTX --> PIIS[piisContract]
+        CTX --> COMP[complianceIssues]
+        CTX --> RETRY[retryCount]
+    end
+
+    subgraph "State Actions"
+        IDLE[idle] -.->|Stores| USER
+        CHECK[checkingEligibility] -.->|Evaluates| ELIG
+        ACTIVE_STATE[active] -.->|Uses| PIIS
+        COMPLIANCE[checkingCompliance] -.->|Updates| COMP
+    end
+
+    subgraph "Business Rules Integration"
+        AGE[Age Check ≥ 18]
+        RES[Residency Check]
+        INC[Income Check]
+        PAT[Patrimony Check]
+    end
+
+    ELIG --> AGE
+    ELIG --> RES
+    ELIG --> INC
+    ELIG --> PAT
+
+    style CTX fill:#4299e1,color:#fff
+    style ACTIVE_STATE fill:#667eea,color:#fff
+    style ELIG fill:#48bb78,color:#fff
                     </div>
 
                     <h3>Caractéristiques Clés</h3>
@@ -539,11 +1130,132 @@ stateDiagram-v2
     validating --> completed: VALIDATION_PASSED
     validating --> checkingRetries: VALIDATION_FAILED
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
-    checkingRetries --> failed: retryCount_greater_equal_3
+    checkingRetries --> regeneratingWithConstraints: [retryCount < 3]
+    checkingRetries --> failed: [retryCount >= 3]
     regeneratingWithConstraints --> generatingVersions: RETRY
     completed --> [*]
     failed --> idle: RESET
+                    </div>
+
+                    <h3>Flux du Pipeline de Conversion</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Ce diagramme de flux détaillé illustre le processus de conversion de texte juridique alimenté par l'IA avec validation et logique de réessai.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([Legal Text Input]) --> Extract[Extract Legal Structure<br/>using NLP]
+
+    Extract --> Structure{Structure Valid?}
+    Structure -->|Yes| Identify[Identify Key Legal<br/>Concepts]
+    Structure -->|No| Extract
+
+    Identify --> Concepts[List of Legal Concepts<br/>e.g. 'eligibility', 'PIIS', etc.]
+
+    Concepts --> Map[Map to Common<br/>Vocabulary]
+
+    Map --> Mapped[Mapped Terms Dictionary<br/>Legal → Simple]
+
+    Mapped --> Generate[Generate Multiple Versions]
+
+    Generate --> Versions[4 Output Versions:<br/>Simple, Detailed,<br/>Examples, Warnings]
+
+    Versions --> Validate{Semantic Validation}
+
+    Validate -->|Pass| Complete[Completed State]
+    Complete --> Output([Return Simplified Text])
+
+    Validate -->|Fail| CheckRetry{Retry Count < 3?}
+
+    CheckRetry -->|Yes| Regen[Regenerate with<br/>Stricter Constraints]
+    CheckRetry -->|No| Failed[Failed State]
+
+    Regen --> IncrementRetry[retryCount++]
+    IncrementRetry --> Generate
+
+    Failed --> Manual[Require Human<br/>Intervention]
+    Manual --> End([End])
+
+    style Complete fill:#48bb78,color:#fff
+    style Generate fill:#667eea,color:#fff
+    style Validate fill:#4299e1,color:#fff
+    style Failed fill:#fc8181,color:#fff
+    style Regen fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Mécanisme de Réessai & Validation</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La machine utilise un système de réessai intelligent pour assurer l'exactitude sémantique tout en prévenant les boucles infinies.
+                    </p>
+                    <div class="mermaid">
+graph LR
+    subgraph "Validation Cycle"
+        V1[Validation Attempt 1] -->|Fail| R1[Retry 1]
+        R1 --> V2[Validation Attempt 2]
+        V2 -->|Fail| R2[Retry 2]
+        R2 --> V3[Validation Attempt 3]
+        V3 -->|Fail| R3[Retry 3]
+        R3 --> V4[Validation Attempt 4]
+        V4 -->|Fail| FAIL[Failed - Manual Review]
+
+        V1 -->|Pass| SUCCESS[Success]
+        V2 -->|Pass| SUCCESS
+        V3 -->|Pass| SUCCESS
+        V4 -->|Pass| SUCCESS
+    end
+
+    subgraph "Constraint Evolution"
+        C1[Base Constraints] --> C2[+ Stricter Vocabulary]
+        C2 --> C3[+ Sentence Length Limits]
+        C3 --> C4[+ Maximum Constraints]
+    end
+
+    R1 -.->|Apply| C2
+    R2 -.->|Apply| C3
+    R3 -.->|Apply| C4
+
+    style SUCCESS fill:#48bb78,color:#fff
+    style FAIL fill:#fc8181,color:#fff
+    style C1 fill:#667eea,color:#fff
+    style C4 fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Pipeline de Données de Contexte</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La machine maintient un contexte riche tout au long du processus de conversion.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Input Context"
+        I1[legalText: Original]
+        I2[targetLevel: simple/detailed]
+        I3[targetAudience: general/expert]
+    end
+
+    subgraph "Processing Context"
+        P1[extractedStructure]
+        P2[identifiedConcepts]
+        P3[mappedTerms]
+    end
+
+    subgraph "Output Context"
+        O1[generatedVersions]
+        O2[validationErrors]
+        O3[retryCount]
+    end
+
+    I1 --> P1
+    P1 --> P2
+    P2 --> P3
+    P3 --> O1
+    O1 --> O2
+
+    O2 -.->|if errors| O3
+    O3 -.->|feedback loop| P3
+
+    style I1 fill:#4299e1,color:#fff
+    style P3 fill:#667eea,color:#fff
+    style O1 fill:#48bb78,color:#fff
+    style O2 fill:#f6ad55,color:#fff
                     </div>
 
                     <h3>Caractéristiques Clés</h3>
@@ -595,6 +1307,7 @@ stateDiagram-v2
         <div id="lang-nl" class="lang-content">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-nl')">Overzicht</button>
+                <button class="tab" onclick="showTab('architecture-nl')">Systeemarchitectuur</button>
                 <button class="tab" onclick="showTab('ris-nl')">RIS Workflow</button>
                 <button class="tab" onclick="showTab('conversion-nl')">Juridische Conversie</button>
                 <button class="tab" onclick="showTab('about-nl')">Over</button>
@@ -636,6 +1349,151 @@ stateDiagram-v2
                 </div>
             </div>
 
+            <div id="architecture-nl" class="content">
+                <div class="card">
+                    <h2>PAA Systeemarchitectuur</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Het PAA-platform integreert meerdere state machines en regelengines om een uitgebreid
+                        hulpsysteem voor sociale uitkeringen te bieden voor Belgische burgers.
+                    </p>
+
+                    <h3>Systeemoverzicht</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "Gebruikersinterfacelaag"
+        UI[Web/Mobiele Interface]
+        CONV[Conversatie-assistent]
+    end
+
+    subgraph "State Machine Laag"
+        RIS[OCMW Workflow Machine<br/>11 toestanden]
+        LEGAL[Juridische Conversie Machine<br/>8 toestanden]
+    end
+
+    subgraph "Bedrijfsregels Laag"
+        RIS_RULES[OCMW Geschiktheidsregels]
+        AGR_RULES[AGR Berekeningsregels]
+        VALIDATION[Semantische Validatie]
+    end
+
+    subgraph "Data Laag"
+        KB[Kennisbank<br/>Juridische Teksten & Uitkeringen]
+        USER_DB[(Gebruikersgegevens)]
+        DOC_GEN[Documentgenerator]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Voedt| RIS_RULES
+    KB -.->|Voedt| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>State Machines Integratie Flow</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User as Gebruiker
+    participant UI as Interface
+    participant RIS as OCMW Machine
+    participant Legal as Juridische Conversie
+    participant KB as Kennisbank
+    participant Rules as Bedrijfsregels
+
+    User->>UI: Vraag uitkeringsinfo
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Haal juridische tekst op
+    Legal->>Legal: Verwerking & vereenvoudiging
+    Legal-->>UI: Vereenvoudigde uitleg
+
+    User->>UI: Aanvraag OCMW
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Controleer geschiktheid
+    Rules-->>RIS: Geschiktheidsresultaat
+
+    alt Geschikt
+        RIS->>RIS: Maak PIIS-contract
+        RIS->>KB: Genereer documenten
+        RIS-->>User: Aanvraag goedgekeurd
+    else Niet geschikt
+        RIS-->>User: Toon alternatieven
+    end
+                    </div>
+
+                    <h3>Componentenoverzicht</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 State Machines (2)</h4>
+                            <ul>
+                                <li><strong>OCMW Workflow:</strong> 11 toestanden, 11 gebeurtenissen</li>
+                                <li><strong>Juridische Conversie:</strong> 8 toestanden, 9 gebeurtenissen</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Bedrijfsregels</h4>
+                            <ul>
+                                <li><strong>OCMW Geschiktheid:</strong> Leeftijd, verblijf, inkomen</li>
+                                <li><strong>AGR Berekening:</strong> Deeltijds salaris optimalisatie</li>
+                                <li><strong>Semantische Validatie:</strong> Juridische nauwkeurigheidscontroles</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Datacomponenten</h4>
+                            <ul>
+                                <li><strong>Kennisbank:</strong> Juridische tekstenrepository</li>
+                                <li><strong>Gebruikersdatabase:</strong> Aanvraagtracking</li>
+                                <li><strong>Documentgen:</strong> PIIS-contracten, formulieren</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Technology Stack</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> Statusbeheer</li>
+                                <li><strong>json-rules-engine:</strong> Bedrijfslogica</li>
+                                <li><strong>TypeScript:</strong> Type-veiligheid</li>
+                                <li><strong>AI/NLP:</strong> Tekstverwerking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Machine Interactiepatronen</h3>
+                    <div class="mermaid">
+graph LR
+    A[Gebruikersvraag] --> B{Vraagtype?}
+    B -->|Juridische Tekst| C[Juridische Conversie Machine]
+    B -->|Uitkeringsaanvraag| D[OCMW Workflow Machine]
+    B -->|Optimalisatie| E[AGR Regelengine]
+
+    C --> F[Vereenvoudigde Inhoud]
+    D --> G[Aanvraagstatus]
+    E --> H[Optimalisatieadvies]
+
+    F --> I[Gebruikersreactie]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
+                    </div>
+                </div>
+            </div>
+
             <div id="ris-nl" class="content">
                 <div class="card">
                     <h2>OCMW-aanvraag Workflow State Machine</h2>
@@ -664,6 +1522,95 @@ stateDiagram-v2
     ineligible --> idle: RESET
     declined --> idle: RESET
     terminated --> idle: RESET
+                    </div>
+
+                    <h3>Beslissingsstroom & Acties</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Dit stroomdiagram toont het gedetailleerde besluitvormingsproces en acties op elk stap van de OCMW-workflow.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([Gebruiker Start Aanvraag]) --> Input[Verzamel Gebruikersgegevens]
+    Input --> Check{Controleer Geschiktheid Regels}
+
+    Check -->|Leeftijd ≥ 18, Verblijf OK, Inkomen Laag| Eligible[Geschikt Staat]
+    Check -->|Criteria Mislukt| NotEligible[Niet Geschikt Staat]
+
+    NotEligible --> ShowAlternatives[Toon Alternatieve Uitkeringen]
+    ShowAlternatives --> End1([Einde])
+
+    Eligible --> Decision{Gebruiker Beslissing}
+    Decision -->|Accepteer| CreatePIIS[Maak PIIS-contract]
+    Decision -->|Weigeren| Declined[Geweigerd Staat]
+    Declined --> End2([Einde])
+
+    CreatePIIS --> Sign{Contract Ondertekend?}
+    Sign -->|Ja| Active[Actieve OCMW-uitkering]
+    Sign -->|Nee| CreatePIIS
+
+    Active --> Monitor{Monitoringgebeurtenis}
+    Monitor -->|Inkomenswijziging| Recalc[Herbereken Bedrag]
+    Monitor -->|Nalevingscontrole| CheckComp{Controleer Naleving}
+    Monitor -->|Geen Gebeurtenis| Active
+
+    Recalc --> UpdateAmount[Update OCMW-bedrag]
+    UpdateAmount --> Active
+
+    CheckComp -->|OK| Active
+    CheckComp -->|Probleem Gevonden| Warning[Nalevingswaarschuwing]
+
+    Warning --> Resolve{Probleem Opgelost?}
+    Resolve -->|Ja| Active
+    Resolve -->|Nee| Terminate[Beëindig OCMW]
+
+    Terminate --> End3([Einde])
+
+    Monitor -->|Handmatige Beëindiging| Terminate
+
+    style Eligible fill:#48bb78,color:#fff
+    style Active fill:#667eea,color:#fff
+    style Warning fill:#f6ad55,color:#fff
+    style NotEligible fill:#fc8181,color:#fff
+    style Terminate fill:#fc8181,color:#fff
+                    </div>
+
+                    <h3>Statuscontext & Gegevens</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Elke staat beheert specifieke contextgegevens die transities en acties beïnvloeden.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Context Datamodel"
+        CTX[Context]
+        CTX --> USER[user: RISUser]
+        CTX --> ELIG[eligibilityResult]
+        CTX --> PIIS[piisContract]
+        CTX --> COMP[complianceIssues]
+        CTX --> RETRY[retryCount]
+    end
+
+    subgraph "State Acties"
+        IDLE[idle] -.->|Slaat op| USER
+        CHECK[checkingEligibility] -.->|Evalueert| ELIG
+        ACTIVE_STATE[active] -.->|Gebruikt| PIIS
+        COMPLIANCE[checkingCompliance] -.->|Update| COMP
+    end
+
+    subgraph "Bedrijfsregelintegratie"
+        AGE[Leeftijdscontrole ≥ 18]
+        RES[Verblijfscontrole]
+        INC[Inkomstencontrole]
+        PAT[Vermogenscontrole]
+    end
+
+    ELIG --> AGE
+    ELIG --> RES
+    ELIG --> INC
+    ELIG --> PAT
+
+    style CTX fill:#4299e1,color:#fff
+    style ACTIVE_STATE fill:#667eea,color:#fff
+    style ELIG fill:#48bb78,color:#fff
                     </div>
 
                     <h3>Belangrijkste Kenmerken</h3>
@@ -713,11 +1660,132 @@ stateDiagram-v2
     validating --> completed: VALIDATION_PASSED
     validating --> checkingRetries: VALIDATION_FAILED
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
-    checkingRetries --> failed: retryCount_greater_equal_3
+    checkingRetries --> regeneratingWithConstraints: [retryCount < 3]
+    checkingRetries --> failed: [retryCount >= 3]
     regeneratingWithConstraints --> generatingVersions: RETRY
     completed --> [*]
     failed --> idle: RESET
+                    </div>
+
+                    <h3>Conversie Pipeline Stroom</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Dit gedetailleerde stroomdiagram illustreert het AI-aangedreven proces van juridische tekstconversie met validatie en retry-logica.
+                    </p>
+                    <div class="mermaid">
+flowchart TD
+    Start([Juridische Tekstinvoer]) --> Extract[Extraheer Juridische Structuur<br/>met NLP]
+
+    Extract --> Structure{Structuur Geldig?}
+    Structure -->|Ja| Identify[Identificeer Sleutel<br/>Juridische Concepten]
+    Structure -->|Nee| Extract
+
+    Identify --> Concepts[Lijst van Juridische Concepten<br/>bijv. 'geschiktheid', 'PIIS', etc.]
+
+    Concepts --> Map[Toewijzen aan Gemeenschappelijke<br/>Woordenschat]
+
+    Map --> Mapped[Toewijzingswoordenboek<br/>Juridisch → Simpel]
+
+    Mapped --> Generate[Genereer Meerdere Versies]
+
+    Generate --> Versions[4 Uitvoerversies:<br/>Simpel, Gedetailleerd,<br/>Voorbeelden, Waarschuwingen]
+
+    Versions --> Validate{Semantische Validatie}
+
+    Validate -->|Succes| Complete[Voltooide Staat]
+    Complete --> Output([Retourneer Vereenvoudigde Tekst])
+
+    Validate -->|Fout| CheckRetry{Herhalingen Tellen < 3?}
+
+    CheckRetry -->|Ja| Regen[Regenereer met<br/>Striktere Beperkingen]
+    CheckRetry -->|Nee| Failed[Mislukte Staat]
+
+    Regen --> IncrementRetry[retryCount++]
+    IncrementRetry --> Generate
+
+    Failed --> Manual[Vereist Menselijke<br/>Interventie]
+    Manual --> End([Einde])
+
+    style Complete fill:#48bb78,color:#fff
+    style Generate fill:#667eea,color:#fff
+    style Validate fill:#4299e1,color:#fff
+    style Failed fill:#fc8181,color:#fff
+    style Regen fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Retry-mechanisme & Validatie</h3>
+                    <p style="margin-bottom: 1rem;">
+                        De machine gebruikt een intelligent retry-systeem om semantische nauwkeurigheid te garanderen terwijl oneindige lussen worden voorkomen.
+                    </p>
+                    <div class="mermaid">
+graph LR
+    subgraph "Validatiecyclus"
+        V1[Validatiepoging 1] -->|Fout| R1[Herhaling 1]
+        R1 --> V2[Validatiepoging 2]
+        V2 -->|Fout| R2[Herhaling 2]
+        R2 --> V3[Validatiepoging 3]
+        V3 -->|Fout| R3[Herhaling 3]
+        R3 --> V4[Validatiepoging 4]
+        V4 -->|Fout| FAIL[Mislukt - Handmatige Beoordeling]
+
+        V1 -->|Succes| SUCCESS[Succes]
+        V2 -->|Succes| SUCCESS
+        V3 -->|Succes| SUCCESS
+        V4 -->|Succes| SUCCESS
+    end
+
+    subgraph "Beperkingenevolutie"
+        C1[Basisbeperkingen] --> C2[+ Strengere Woordenschat]
+        C2 --> C3[+ Limieten Zinlengte]
+        C3 --> C4[+ Maximale Beperkingen]
+    end
+
+    R1 -.->|Pas Toe| C2
+    R2 -.->|Pas Toe| C3
+    R3 -.->|Pas Toe| C4
+
+    style SUCCESS fill:#48bb78,color:#fff
+    style FAIL fill:#fc8181,color:#fff
+    style C1 fill:#667eea,color:#fff
+    style C4 fill:#f6ad55,color:#fff
+                    </div>
+
+                    <h3>Context Data Pipeline</h3>
+                    <p style="margin-bottom: 1rem;">
+                        De machine behoudt rijke context tijdens het conversieproces.
+                    </p>
+                    <div class="mermaid">
+graph TB
+    subgraph "Invoercontext"
+        I1[legalText: Origineel]
+        I2[targetLevel: simpel/gedetailleerd]
+        I3[targetAudience: algemeen/expert]
+    end
+
+    subgraph "Verwerkingscontext"
+        P1[extractedStructure]
+        P2[identifiedConcepts]
+        P3[mappedTerms]
+    end
+
+    subgraph "Uitvoercontext"
+        O1[generatedVersions]
+        O2[validationErrors]
+        O3[retryCount]
+    end
+
+    I1 --> P1
+    P1 --> P2
+    P2 --> P3
+    P3 --> O1
+    O1 --> O2
+
+    O2 -.->|bij fouten| O3
+    O3 -.->|feedbacklus| P3
+
+    style I1 fill:#4299e1,color:#fff
+    style P3 fill:#667eea,color:#fff
+    style O1 fill:#48bb78,color:#fff
+    style O2 fill:#f6ad55,color:#fff
                     </div>
 
                     <h3>Belangrijkste Kenmerken</h3>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAA - All State Machines (Dynamic)</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'default',
+            securityLevel: 'loose',
+        });
+        window.mermaid = mermaid;
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .controls {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #f0f0f0;
+            border: 2px solid #ddd;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .machine-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .machine-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .machine-header {
+            margin-bottom: 1rem;
+        }
+
+        .machine-title {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .machine-category {
+            display: inline-block;
+            background: #764ba2;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .machine-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .machine-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .machine-stat {
+            flex: 1;
+            background: #f7f7f9;
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .machine-stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .machine-stat-label {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .mermaid {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            min-height: 200px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .error {
+            background: #fc8181;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .machines-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇧🇪 PAA State Machines</h1>
+            <p class="subtitle">Dynamic Visualization of <span id="total-machines">109</span> Belgian Administrative Workflows</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="search" class="search-bar" placeholder="🔍 Rechercher une machine par nom, catégorie ou description...">
+
+            <div id="filters" class="filters">
+                <button class="filter-btn active" data-category="all">Toutes</button>
+            </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <div id="loading" class="loading">⏳ Chargement des machines...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="machines-container" class="machines-grid"></div>
+    </div>
+
+    <script>
+        let allMachines = [];
+        let currentCategory = 'all';
+        let searchTerm = '';
+
+        // Chargement des données
+        async function loadMachines() {
+            try {
+                const response = await fetch('machines-metadata.json');
+                if (!response.ok) throw new Error('Failed to load machines metadata');
+
+                const data = await response.json();
+                allMachines = data.machines;
+
+                document.getElementById('total-machines').textContent = data.totalMachines;
+
+                // Créer les filtres de catégorie
+                createCategoryFilters(data.categories);
+
+                // Afficher les statistiques
+                displayStatistics(data.statistics);
+
+                // Afficher les machines
+                displayMachines();
+
+                document.getElementById('loading').style.display = 'none';
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').textContent = `Erreur: ${error.message}`;
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        // Créer les boutons de filtre
+        function createCategoryFilters(categories) {
+            const filtersDiv = document.getElementById('filters');
+
+            categories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.category = category;
+                btn.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                btn.onclick = () => filterByCategory(category);
+                filtersDiv.appendChild(btn);
+            });
+        }
+
+        // Filtre par catégorie
+        function filterByCategory(category) {
+            currentCategory = category;
+
+            // Mettre à jour les boutons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.category === category);
+            });
+
+            displayMachines();
+        }
+
+        // Recherche
+        document.getElementById('search').addEventListener('input', (e) => {
+            searchTerm = e.target.value.toLowerCase();
+            displayMachines();
+        });
+
+        // Afficher les statistiques
+        function displayStatistics(stats) {
+            const statsDiv = document.getElementById('stats');
+            statsDiv.innerHTML = `
+                <div class="stat-box">
+                    <div class="stat-value">${stats.totalStates}</div>
+                    <div class="stat-label">Total States</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">${stats.totalEvents}</div>
+                    <div class="stat-label">Total Events</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">${stats.averageStatesPerMachine}</div>
+                    <div class="stat-label">Avg States/Machine</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">${stats.averageEventsPerMachine}</div>
+                    <div class="stat-label">Avg Events/Machine</div>
+                </div>
+            `;
+        }
+
+        // Afficher les machines
+        function displayMachines() {
+            const container = document.getElementById('machines-container');
+
+            // Filtrer les machines
+            const filtered = allMachines.filter(machine => {
+                const matchesCategory = currentCategory === 'all' || machine.category === currentCategory;
+                const matchesSearch = !searchTerm ||
+                    machine.name.toLowerCase().includes(searchTerm) ||
+                    machine.description.toLowerCase().includes(searchTerm) ||
+                    machine.category.toLowerCase().includes(searchTerm);
+
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: white; padding: 2rem;">Aucune machine trouvée</p>';
+                return;
+            }
+
+            // Créer les cartes
+            container.innerHTML = filtered.map(machine => createMachineCard(machine)).join('');
+
+            // Générer les diagrammes Mermaid
+            window.mermaid.run({
+                nodes: document.querySelectorAll('.mermaid'),
+            });
+        }
+
+        // Créer une carte de machine
+        function createMachineCard(machine) {
+            const diagram = generateMermaidDiagram(machine);
+
+            return `
+                <div class="machine-card">
+                    <div class="machine-header">
+                        <h3 class="machine-title">${machine.name}</h3>
+                        <span class="machine-category">${machine.category}</span>
+                        <p class="machine-description">${machine.description || 'No description available'}</p>
+                    </div>
+
+                    <div class="machine-stats">
+                        <div class="machine-stat">
+                            <div class="machine-stat-value">${machine.states.length}</div>
+                            <div class="machine-stat-label">States</div>
+                        </div>
+                        <div class="machine-stat">
+                            <div class="machine-stat-value">${machine.events.length}</div>
+                            <div class="machine-stat-label">Events</div>
+                        </div>
+                    </div>
+
+                    <div class="mermaid">
+${diagram}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Générer le diagramme Mermaid
+        function generateMermaidDiagram(machine) {
+            let diagram = 'stateDiagram-v2\n';
+            diagram += `    [*] --> ${machine.initial}\n`;
+
+            // Ajouter les états (sans transitions pour simplifier)
+            machine.states.forEach(state => {
+                if (state !== machine.initial) {
+                    diagram += `    ${machine.initial} --> ${state}\n`;
+                }
+            });
+
+            return diagram;
+        }
+
+        // Charger au démarrage
+        loadMachines();
+    </script>
+</body>
+</html>
