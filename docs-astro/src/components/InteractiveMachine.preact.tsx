@@ -46,7 +46,13 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
 
   // Load machine and start actor when visible
   useEffect(() => {
-    if (!isVisible || !iframeRef.current) return;
+    if (!isVisible) return;
+
+    // Wait for iframe to be ready
+    if (!iframeRef.current) {
+      console.log('[InteractiveMachine] Waiting for iframe...');
+      return;
+    }
 
     async function loadAndStartMachine() {
       setIsLoading(true);
@@ -158,12 +164,7 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
       {!isVisible && (
         <div className="skeleton">
           <p>Loading {machineName} interactive machine...</p>
-        </div>
-      )}
-
-      {isLoading && isVisible && (
-        <div className="skeleton">
-          <p>Starting machine...</p>
+          <p><small>Scroll to activate</small></p>
         </div>
       )}
 
@@ -174,9 +175,9 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
         </div>
       )}
 
-      {actor && machine && !error && (
+      {isVisible && !error && (
         <div className="machine-interactive">
-          {/* Stately Inspector Visualization */}
+          {/* Stately Inspector Visualization - Always render iframe */}
           <div className="inspector-panel">
             <h3>State Diagram (Live)</h3>
             <div className="inspector-wrapper">
@@ -187,15 +188,26 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
                 sandbox="allow-scripts allow-same-origin allow-popups"
                 allow="accelerometer 'none'; camera 'none'; geolocation 'none'; microphone 'none'; payment 'none'"
               />
-              {!inspectorReady && (
+              {(isLoading || !inspectorReady) && (
                 <div className="inspector-loading">
-                  <p>Loading Stately Inspector...</p>
+                  <p>
+                    {isLoading ? 'Loading machine...' : 'Starting Stately Inspector...'}
+                  </p>
                 </div>
               )}
             </div>
           </div>
 
-          {/* Current State Display */}
+          {/* Only show controls when machine is loaded */}
+          {!actor && !isLoading && !machine && (
+            <div className="skeleton">
+              <p>Initializing...</p>
+            </div>
+          )}
+
+          {/* Current State Display - Only when actor exists */}
+          {actor && machine && (
+            <>
           <div className="current-state-panel">
             <h3>Current State</h3>
             <div className="state-display">
@@ -268,6 +280,8 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
               Current: <strong>{currentState}</strong>
             </small>
           </div>
+            </>
+          )}
         </div>
       )}
     </div>
