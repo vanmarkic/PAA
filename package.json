@@ -7,6 +7,8 @@
     "build": "tsc",
     "dev": "ts-node",
     "example:agr": "ts-node src/examples/agrExample.ts",
+    "example:ris": "ts-node src/examples/risExample.ts",
+    "example:ris:workflow": "ts-node src/examples/risWorkflowSimple.ts",
     "example:conversion": "ts-node src/examples/conversionExample.ts",
     "test": "echo \"Tests not yet implemented\" && exit 0",
     "cucumber": "cucumber-js"
