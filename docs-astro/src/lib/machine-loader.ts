@@ -11,8 +11,9 @@ import type { AnyStateMachine } from 'xstate';
  */
 export async function loadMachine(machineId: string): Promise<AnyStateMachine> {
   // Use Vite's glob import for all machine files
+  // Note: src/workflows is a symlink to ../../src/workflows
   const machines = import.meta.glob<{ [key: string]: AnyStateMachine }>(
-    '../../src/workflows/**/*Machine.ts',
+    '../workflows/**/*Machine.ts',
     { eager: false }
   );
 
@@ -90,7 +91,7 @@ export async function loadMachines(
  * Check if a machine file exists
  */
 export function machineExists(machineId: string): boolean {
-  const machines = import.meta.glob('../../src/workflows/**/*Machine.ts');
+  const machines = import.meta.glob('../workflows/**/*Machine.ts');
   return Object.keys(machines).some(path => {
     const filename = path.split('/').pop()?.replace('.ts', '');
     return filename === `${machineId}Machine` || filename === machineId;
