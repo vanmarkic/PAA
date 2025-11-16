@@ -16,14 +16,32 @@ export async function loadMachine(machineId: string): Promise<AnyStateMachine> {
     { eager: false }
   );
 
+  // Debug: log available paths
+  const availablePaths = Object.keys(machines);
+  console.log(`[machine-loader] Looking for machine: ${machineId}`);
+  console.log(`[machine-loader] Available paths (${availablePaths.length}):`, availablePaths.slice(0, 5));
+
   // Find the machine file that matches this ID
-  const machinePath = Object.keys(machines).find(path => {
+  // Try multiple matching strategies
+  const machinePath = availablePaths.find(path => {
     const filename = path.split('/').pop()?.replace('.ts', '');
-    return filename === `${machineId}Machine` || filename === machineId;
+    const normalizedPath = path.toLowerCase();
+    const normalizedId = machineId.toLowerCase();
+
+    // Match: declarationTVAMachine.ts or declarationTVA.ts
+    return filename === `${machineId}Machine` ||
+           filename === machineId ||
+           filename?.toLowerCase() === `${normalizedId}machine` ||
+           normalizedPath.includes(`/${normalizedId}machine.ts`);
   });
 
   if (!machinePath) {
-    throw new Error(`Machine file not found for ID: ${machineId}`);
+    throw new Error(
+      `Machine file not found for ID: ${machineId}\n` +
+      `Expected: src/workflows/**/${machineId}Machine.ts\n` +
+      `Available paths: ${availablePaths.length} total\n` +
+      `Sample: ${availablePaths.slice(0, 3).join(', ')}`
+    );
   }
 
   // Import the module
