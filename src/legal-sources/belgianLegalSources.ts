@@ -345,6 +345,217 @@ export const AGR_CONDITIONS_2025 = {
 };
 
 /**
+ * ALLOCATIONS FAMILIALES - Région de Bruxelles-Capitale
+ * Cadre juridique complet
+ */
+export const FAMILY_ALLOWANCES_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Allocations Familiales (Région de Bruxelles-Capitale)',
+
+  primaryLegislation: {
+    type: 'ordonnance',
+    title: 'Ordonnance réglant l\'octroi des prestations familiales',
+    date: '2019-04-25',
+    publication: {
+      date: '2019-05-06',
+      reference: 'Moniteur Belge 2019-05-06'
+    },
+    officialUrl: 'https://www.ejustice.just.fgov.be',
+    authority: 'Région de Bruxelles-Capitale - Iriscare'
+  },
+
+  notes: [
+    'Régionalisation des allocations familiales depuis le 1er janvier 2020',
+    'La loi spéciale du 6 janvier 2014 relative à la Sixième Réforme de l\'État organise le transfert',
+    'Article 23 de la Constitution garantit le droit aux allocations familiales',
+    'Le critère d\'attachement principal est le domicile légal de l\'enfant'
+  ]
+};
+
+/**
+ * Montants des allocations familiales 2024 - Bruxelles
+ */
+export const FAMILY_ALLOWANCES_AMOUNTS_2024 = {
+  birthAllowance: {
+    firstChild: 1367.74,
+    otherChildren: 621.70,
+    currency: 'EUR'
+  },
+  monthlyAllowances: {
+    age0to11: {
+      bornBefore2019: 174.08,
+      bornAfter2019: 186.51,
+      currency: 'EUR'
+    },
+    age12to17: {
+      bornBefore2019: 186.51,
+      bornAfter2019: 198.94,
+      currency: 'EUR'
+    },
+    age18to24NoHigherEd: {
+      bornBefore2019: 186.51,
+      bornAfter2019: 198.94,
+      currency: 'EUR'
+    },
+    age18to24HigherEd: {
+      bornBefore2019: 198.95,
+      bornAfter2019: 211.38,
+      currency: 'EUR'
+    }
+  },
+  supplements: {
+    ageSupplement: {
+      min: 24.87,
+      max: 99.47,
+      description: 'Supplément d\'âge annuel'
+    },
+    socialSupplement: {
+      description: 'Pour ménages à revenus limités (seuil défini)',
+      note: 'Montant variable selon revenus du ménage'
+    },
+    orphanSupplement: {
+      description: 'Supplément pour enfant orphelin'
+    },
+    disabilitySupplement: {
+      description: 'Supplément handicap (jusqu\'à 21 ans)'
+    }
+  },
+  conditions: {
+    domicile: 'Domicilié en Région de Bruxelles-Capitale ou résidence effective',
+    nationality: 'Belge ou étranger avec titre de séjour valide',
+    ageRanges: {
+      unconditional: '0-18 ans',
+      conditional: '18-25 ans (apprenti, étudiant, stagiaire ou demandeur d\'emploi)'
+    }
+  },
+  legalBasis: {
+    ordonnance: 'Ordonnance bruxelloise du 25 avril 2019',
+    effectiveDate: '2020-01-01'
+  }
+};
+
+/**
+ * GRAPA - Garantie de Revenus aux Personnes Âgées
+ * Cadre juridique complet
+ */
+export const GRAPA_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Garantie de Revenus aux Personnes Âgées (GRAPA)',
+
+  primaryLegislation: {
+    type: 'loi',
+    title: 'Loi instituant la garantie de revenus aux personnes âgées',
+    date: '1969-05-22',
+    officialUrl: 'https://www.ejustice.just.fgov.be',
+    authority: 'Service Fédéral des Pensions (SFP)'
+  },
+
+  notes: [
+    'La GRAPA n\'est pas une pension mais un régime d\'assistance',
+    'Ne relève pas de la sécurité sociale',
+    'Octroyée après examen des ressources et des pensions',
+    'Montants indexés régulièrement'
+  ]
+};
+
+/**
+ * Montants GRAPA 2024
+ */
+export const GRAPA_AMOUNTS_2024 = {
+  baseAmountAnnual: {
+    amount: 7303.10,
+    currency: 'EUR',
+    effectiveDate: '2024-01-01',
+    description: 'Montant annuel de base'
+  },
+  monthlyAmounts: {
+    isolated: {
+      amount: 1549.42,
+      currency: 'EUR',
+      effectiveDate: '2024-05-01',
+      category: 'Personne isolée (montant majoré indexé)'
+    },
+    cohabitant: {
+      amount: 1032.95,
+      currency: 'EUR',
+      effectiveDate: '2024-05-01',
+      category: 'Personne en situation de cohabitation (montant de base indexé)'
+    }
+  },
+  conditions: {
+    age: {
+      minimum: 65,
+      description: 'Âge légal de la pension'
+    },
+    resourcesTest: {
+      required: true,
+      description: 'Examen des ressources et des pensions'
+    },
+    residency: {
+      description: 'Résidence effective en Belgique'
+    }
+  },
+  source: 'Service Fédéral des Pensions - Recueil GRAPA septembre 2024',
+  officialDocument: 'https://www.sfpd.fgov.be/files/3286/receuil-grapa-septembre-2024.pdf'
+};
+
+/**
+ * ALLOCATION DE LOYER - Région de Bruxelles-Capitale
+ * Cadre juridique complet
+ */
+export const RENT_ALLOWANCE_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Allocation de Loyer (Région de Bruxelles-Capitale)',
+
+  primaryLegislation: {
+    type: 'arrete_royal',
+    title: 'Arrêté du Gouvernement de la Région de Bruxelles-Capitale instituant une allocation de loyer',
+    date: '2021-07-15',
+    publication: {
+      date: '2021-10-01',
+      reference: 'Moniteur Belge 2021-10-01'
+    },
+    officialUrl: 'https://www.ejustice.just.fgov.be',
+    alternativeUrls: [
+      'https://etaamb.openjustice.be/fr/arrete-ministeriel-du-30-septembre-2021_n2021022047.html'
+    ],
+    authority: 'Région de Bruxelles-Capitale'
+  },
+
+  implementingLegislation: [
+    {
+      type: 'arrete_ministeriel',
+      title: 'Arrêté ministériel portant exécution de l\'arrêté du Gouvernement de la Région de Bruxelles-Capitale du 15 juillet 2021',
+      date: '2021-09-30',
+      publication: {
+        date: '2021-10-13',
+        reference: 'Moniteur Belge 2021-10-13'
+      },
+      officialUrl: 'https://etaamb.openjustice.be/fr/arrete-ministeriel-du-30-septembre-2021_n2021022047.html',
+      authority: 'Région de Bruxelles-Capitale'
+    }
+  ],
+
+  notes: [
+    'Aide financière pour locataires précaires',
+    'Régionalisée - spécifique à la Région de Bruxelles-Capitale',
+    'Conditions de revenus et de loyer applicables'
+  ]
+};
+
+/**
+ * ALLOCATION D'ATTENTE LOGEMENT - Région Wallonne
+ */
+export const HOUSING_WAITING_ALLOWANCE_WALLONIA = {
+  benefitName: 'Allocation d\'attente logement social (Wallonie)',
+  description: 'Aide financière en attendant un logement social',
+  authority: 'Région Wallonne',
+  officialUrl: 'https://www.wallonie.be/fr/demarches/obtenir-une-allocation-dattente-logement',
+  notes: [
+    'Aide pour personnes inscrites sur liste d\'attente logement social',
+    'Conditions de revenus applicables',
+    'Montant variable selon la composition du ménage'
+  ]
+};
+
+/**
  * Correspondance entre les catégories de code et les références juridiques
  */
 export const LEGAL_MAPPING = {
@@ -357,6 +568,17 @@ export const LEGAL_MAPPING = {
     framework: AGR_LEGAL_FRAMEWORK,
     articles: AGR_KEY_ARTICLES,
     conditions: AGR_CONDITIONS_2025
+  },
+  FAMILY_ALLOWANCES: {
+    framework: FAMILY_ALLOWANCES_LEGAL_FRAMEWORK,
+    amounts: FAMILY_ALLOWANCES_AMOUNTS_2024
+  },
+  GRAPA: {
+    framework: GRAPA_LEGAL_FRAMEWORK,
+    amounts: GRAPA_AMOUNTS_2024
+  },
+  RENT_ALLOWANCE: {
+    framework: RENT_ALLOWANCE_LEGAL_FRAMEWORK
   }
 };
 
