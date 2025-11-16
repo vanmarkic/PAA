@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatsOverview from '../components/StatsOverview.astro';
+import SearchFilter from '../components/SearchFilter.preact.tsx';
 import { loadMachinesMetadata } from '../lib/machines';
 
 const metadata = await loadMachinesMetadata();
@@ -16,5 +17,11 @@ const metadata = await loadMachinesMetadata();
     stats={metadata.statistics}
     totalMachines={metadata.totalMachines}
     totalCategories={metadata.categories.length}
+  />
+
+  <SearchFilter
+    machines={metadata.machines}
+    categories={metadata.categories}
+    client:load
   />
 </BaseLayout>

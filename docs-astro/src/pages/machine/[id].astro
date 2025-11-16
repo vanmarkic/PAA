@@ -1,6 +1,7 @@
 ---
 import MachineLayout from '../../layouts/MachineLayout.astro';
 import CategoryBadge from '../../components/CategoryBadge.astro';
+import StatelyInspector from '../../components/StatelyInspector.preact.tsx';
 import { loadMachinesMetadata } from '../../lib/machines';
 import type { MachineMeta } from '../../lib/machines';
 
@@ -74,12 +75,14 @@ const { machine } = Astro.props;
       </div>
     </section>
 
-    <!-- Placeholder for Stately Inspector -->
+    <!-- StatelyInspector with lazy loading -->
     <section class="diagram-section">
       <h2>State Diagram</h2>
-      <div class="diagram-placeholder">
-        <p>Interactive Stately diagram will be added here</p>
-      </div>
+      <StatelyInspector
+        machineId={machine.id}
+        machineName={machine.name}
+        client:visible
+      />
     </section>
   </article>
 </MachineLayout>
