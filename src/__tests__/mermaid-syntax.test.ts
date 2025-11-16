@@ -60,12 +60,17 @@ describe('Mermaid Syntax Validation', () => {
     }
 
     // Check for unescaped < or > in transition labels (can cause parsing issues)
+    // But allow them inside square brackets for choice state conditions
     const transitionRegex = /-->\s*\w+:\s*[^:\n]*[<>][^:\n]*/g;
     const transitions = block.match(transitionRegex);
     if (transitions) {
       transitions.forEach(transition => {
         // Ignore <<choice>> and similar valid syntax
-        if (!transition.includes('<<') && !transition.includes('>>')) {
+        // Also ignore comparison operators inside square brackets like [retryCount < 3]
+        const isChoiceDeclaration = transition.includes('<<') && transition.includes('>>');
+        const isSquareBracketCondition = /\[[^\]]*[<>][^\]]*\]/.test(transition);
+
+        if (!isChoiceDeclaration && !isSquareBracketCondition) {
           errors.push(`Unescaped < or > character in transition: "${transition.trim()}"`);
         }
       });
@@ -128,27 +133,36 @@ describe('Mermaid Syntax Validation', () => {
         });
       });
 
-      test('should not contain unescaped comparison operators in labels', () => {
+      test('choice state transitions should use square bracket syntax', () => {
         if (!fs.existsSync(filePath)) {
           return; // Skip if file doesn't exist
         }
 
         const blocks = extractMermaidBlocks(filePath);
         blocks.forEach(({ block }, index) => {
-          // Check for patterns like "retry_count < 3" in transition labels
-          const problematicPatterns = [
-            /-->\s*\w+:\s*\w+\s*<\s*\d+/,  // e.g., "retry_count < 3"
-            /-->\s*\w+:\s*\w+\s*>=\s*\d+/, // e.g., "retry_count >= 3"
-            /-->\s*\w+:\s*\w+\s*>\s*\d+/,  // e.g., "retry_count > 3"
-            /-->\s*\w+:\s*\w+\s*<=\s*\d+/, // e.g., "retry_count <= 3"
-          ];
+          // If this is a state diagram with choice states
+          if (block.includes('stateDiagram') && block.includes('<<choice>>')) {
+            // Check for old underscore-based naming patterns (should NOT exist)
+            const oldPatterns = [
+              /-->\s*\w+:\s*\w+_less_\d+/,          // e.g., "retryCount_less_3"
+              /-->\s*\w+:\s*\w+_greater_equal_\d+/, // e.g., "retryCount_greater_equal_3"
+              /-->\s*\w+:\s*\w+_greater_\d+/,       // e.g., "retryCount_greater_3"
+              /-->\s*\w+:\s*\w+_equal_\d+/,         // e.g., "retryCount_equal_3"
+            ];
 
-          problematicPatterns.forEach(pattern => {
-            const match = block.match(pattern);
-            if (match) {
-              throw new Error(`Block #${index + 1} contains comparison operators in label: "${match[0]}". Use underscore naming like "retryCount_less_3" instead.`);
+            oldPatterns.forEach(pattern => {
+              const match = block.match(pattern);
+              if (match) {
+                throw new Error(`Block #${index + 1} uses old underscore naming for choice conditions: "${match[0]}". Use square bracket syntax like "[retryCount < 3]" instead.`);
+              }
+            });
+
+            // Check for proper square bracket syntax (should exist for choice states)
+            const hasSquareBracketConditions = /-->\s*\w+:\s*\[[^\]]+\]/.test(block);
+            if (!hasSquareBracketConditions) {
+              throw new Error(`Block #${index + 1} has a choice state but no square bracket conditions found. Use syntax like "[retryCount < 3]" for choice transitions.`);
             }
-          });
+          }
         });
       });
     });
