@@ -10,7 +10,9 @@
     "example:ris": "ts-node src/examples/risExample.ts",
     "example:ris:workflow": "ts-node src/examples/risWorkflowSimple.ts",
     "example:conversion": "ts-node src/examples/conversionExample.ts",
-    "test": "echo \"Tests not yet implemented\" && exit 0",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "cucumber": "cucumber-js"
   },
   "keywords": ["legal-tech", "civic-tech", "belgium", "business-rules", "xstate", "gherkin"],
