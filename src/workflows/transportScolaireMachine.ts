@@ -27,13 +27,13 @@ export const transportScolaireMachine = createMachine({
   id: 'transportScolaire',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as TransportScolaireContext,
     events: {} as
       | { type: 'DEMANDER_TRANSPORT'; eleve: EleveTransport }
       | { type: 'DISTANCE_CALCULEE'; distance: number }
       | { type: 'ITINERAIRE_ASSIGNE'; itineraire: string }
-      | { type: 'ABONNEMENT_EMIS'; type: string }
+      | { type: 'ABONNEMENT_EMIS'; typeAbonnement: string }
       | { type: 'RENOUVELER_ABONNEMENT' }
       | { type: 'SIGNALER_PROBLEME' }
       | { type: 'PROBLEME_RESOLU' }
@@ -56,7 +56,7 @@ export const transportScolaireMachine = createMachine({
         DEMANDER_TRANSPORT: {
           target: 'calculDistance',
           actions: assign({
-            eleve: (_, event) => event.eleve,
+            eleve: ({ event }) => event.eleve,
           }),
         },
       },
@@ -71,16 +71,16 @@ export const transportScolaireMachine = createMachine({
         DISTANCE_CALCULEE: [
           {
             target: 'assignationItineraire',
-            cond: (_, event) => event.distance >= 4,
+            guard: ({ event }) => event.distance >= 4,
             actions: assign({
-              distanceKm: (_, event) => event.distance,
+              distanceKm: ({ event }) => event.distance,
               estEligible: true,
             }),
           },
           {
             target: 'tropProche',
             actions: assign({
-              distanceKm: (_, event) => event.distance,
+              distanceKm: ({ event }) => event.distance,
               estEligible: false,
             }),
           },
@@ -109,7 +109,7 @@ export const transportScolaireMachine = createMachine({
         ITINERAIRE_ASSIGNE: {
           target: 'emissionAbonnement',
           actions: assign({
-            itineraire: (_, event) => event.itineraire,
+            itineraire: ({ event }) => event.itineraire,
           }),
         },
       },
@@ -125,7 +125,7 @@ export const transportScolaireMachine = createMachine({
           target: 'abonnementActif',
           actions: assign({
             abonnementActif: true,
-            typeAbonnement: (_, event) => event.type,
+            typeAbonnement: ({ event }) => event.type,
           }),
         },
       },
@@ -161,7 +161,7 @@ export const transportScolaireMachine = createMachine({
         ITINERAIRE_ASSIGNE: {
           target: 'abonnementActif',
           actions: assign({
-            itineraire: (_, event) => event.itineraire,
+            itineraire: ({ event }) => event.itineraire,
           }),
         },
       },

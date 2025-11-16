@@ -37,10 +37,7 @@ type CotisationsIndependantEvent =
   | { type: 'REVENUS_REELS_CONNUS'; montant: number }
   | { type: 'REGULARISATION' };
 
-export const cotisationsSocialesIndependantMachine = createMachine<
-  CotisationsIndependantContext,
-  CotisationsIndependantEvent
->({
+export const cotisationsSocialesIndependantMachine = createMachine({
   id: 'cotisationsSocialesIndependant',
   initial: 'estimation',
   context: {

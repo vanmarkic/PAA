@@ -38,7 +38,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
   id: 'parcoursDemandeurEmploi',
   initial: 'perteEmploi',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursDemarcheurContext,
     events: {} as
       | { type: 'EMPLOI_PERDU'; demandeur: Demandeur }
@@ -75,8 +75,8 @@ export const parcoursDemandeurEmploiMachine = createMachine({
         EMPLOI_PERDU: {
           target: 'inscriptionONEM',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
-            warnings: (_, event) => {
+            demandeur: ({ event }) => event.demandeur,
+            warnings: ({ event }) => {
               const warnings: string[] = [];
               if (event.demandeur.joursTravailes < 312) {
                 warnings.push('⚠️ Moins de 312 jours travaillés: risque inéligibilité chômage');
@@ -99,8 +99,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
       on: {
         ONEM_INSCRIT: {
           target: 'inscriptionServiceEmploi',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               inscriptionONEM: true,
             }),
@@ -124,8 +123,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
       on: {
         SERVICE_EMPLOI_INSCRIT: {
           target: 'demandeAllocations',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               inscriptionForem: true,
             }),
@@ -158,9 +156,8 @@ export const parcoursDemandeurEmploiMachine = createMachine({
         ALLOCATIONS_DEMANDEES: [
           {
             target: 'recherche EmploiActive',
-            cond: (context) => (context.demandeur?.joursTravailes ?? 0) >= 312,
-            actions: assign({
-              demarches: (context) => ({
+            guard: (context) => (context.demandeur?.joursTravailes ?? 0) >= 312,
+            actions: assign({ demarches: ({ context }) => ({
                 ...context.demarches,
                 demandeAllocations: true,
               }),
@@ -178,8 +175,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
           },
           {
             target: 'verificationDroitRIS',
-            actions: assign({
-              warnings: (context) => [
+            actions: assign({ warnings: ({ context }) => [
                 ...context.warnings,
                 '❌ Inéligible chômage - vérification droit au RIS (CPAS)',
               ],
@@ -206,8 +202,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
       on: {
         CV_REDIGE: {
           target: 'rechercheEmploiActive',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               cvRedige: true,
             }),
@@ -215,8 +210,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
         },
         FORMATION_CHOISIE: {
           target: 'rechercheEmploiActive',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               formationsPlanifiees: true,
             }),
@@ -248,8 +242,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
       on: {
         RIS_DEMANDE: {
           target: 'demarchesCPAS',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               droitRIS: true,
             }),

@@ -23,7 +23,7 @@ interface ComptabiliteAnnuelleContext {
 export const comptabiliteAnnuelleMachine = createMachine({
   id: 'comptabiliteAnnuelle',
   initial: 'clotureExercice',
-  schema: {
+  schemas: {
     context: {} as ComptabiliteAnnuelleContext,
     events: {} as
       | { type: 'CLOTURER_EXERCICE'; societe: Societe; date: Date }
@@ -47,9 +47,9 @@ export const comptabiliteAnnuelleMachine = createMachine({
         CLOTURER_EXERCICE: {
           target: 'etablissementComptes',
           actions: assign({
-            societe: (_, event) => event.societe,
-            dateClotureExercice: (_, event) => event.date,
-            delaiDepot: (_, event) => {
+            societe: ({ event }) => event.societe,
+            dateClotureExercice: ({ event }) => event.date,
+            delaiDepot: ({ event }) => {
               const date = new Date(event.date);
               date.setMonth(date.getMonth() + 7); // 7 mois après clôture
               return date;

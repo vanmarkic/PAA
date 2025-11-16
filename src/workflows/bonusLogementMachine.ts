@@ -46,7 +46,7 @@ export const bonusLogementMachine = createMachine({
   id: 'bonusLogement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as BonusLogementContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; emprunteur: Emprunteur; pret: PretHypothecaire }
@@ -76,8 +76,8 @@ export const bonusLogementMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            emprunteur: (_, event) => event.emprunteur,
-            pret: (_, event) => event.pret,
+            emprunteur: ({ event }) => event.emprunteur,
+            pret: ({ event }) => event.pret,
           }),
         },
       },
@@ -92,16 +92,16 @@ export const bonusLogementMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.bonus.estEligible,
+            guard: ({ event }) => event.bonus.estEligible,
             actions: assign({
-              bonus: (_, event) => event.bonus,
-              anneesRestantes: (_, event) => event.bonus.dureeBonus,
+              bonus: ({ event }) => event.bonus,
+              anneesRestantes: ({ event }) => event.bonus.dureeBonus,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              bonus: (_, event) => event.bonus,
+              bonus: ({ event }) => event.bonus,
             }),
           },
         ],
@@ -156,7 +156,7 @@ export const bonusLogementMachine = createMachine({
         DOCUMENTS_SOUMIS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsHypothecaires: (_, event) => event.documents,
+            documentsHypothecaires: ({ event }) => event.documents,
           }),
         },
       },
@@ -198,17 +198,15 @@ export const bonusLogementMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'actif',
-            cond: (context) => context.anneesRestantes > 1,
-            actions: assign({
-              anneesRestantes: (context) => context.anneesRestantes - 1,
+            guard: (context) => context.anneesRestantes > 1,
+            actions: assign({ anneesRestantes: ({ context }) => context.anneesRestantes - 1,
               montantTotalRecu: (context) =>
                 context.montantTotalRecu + (context.bonus?.montantBonusAnnuel || 0),
             }),
           },
           {
             target: 'termine',
-            actions: assign({
-              montantTotalRecu: (context) =>
+            actions: assign({ montantTotalRecu: ({ context }) =>
                 context.montantTotalRecu + (context.bonus?.montantBonusAnnuel || 0),
             }),
           },

@@ -52,7 +52,7 @@ export const gardeEnfantsMachine = createMachine({
   id: 'gardeEnfants',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as GardeEnfantsContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; parent: Parent; enfant: Enfant }
@@ -83,8 +83,8 @@ export const gardeEnfantsMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'recherchePlaces',
           actions: assign({
-            parent: (_, event) => event.parent,
-            enfant: (_, event) => event.enfant,
+            parent: ({ event }) => event.parent,
+            enfant: ({ event }) => event.enfant,
           }),
         },
       },
@@ -99,7 +99,7 @@ export const gardeEnfantsMachine = createMachine({
         PLACES_VERIFIEES: [
           {
             target: 'evaluationRevenus',
-            cond: (_, event) => event.disponible,
+            guard: ({ event }) => event.disponible,
           },
           {
             target: 'listeAttente',
@@ -147,7 +147,7 @@ export const gardeEnfantsMachine = createMachine({
         TARIF_CALCULE: {
           target: 'attributionPlace',
           actions: assign({
-            tarif: (_, event) => event.tarif,
+            tarif: ({ event }) => event.tarif,
           }),
         },
       },
@@ -162,7 +162,7 @@ export const gardeEnfantsMachine = createMachine({
         PLACE_ATTRIBUEE: {
           target: 'inscription',
           actions: assign({
-            placeGarde: (_, event) => event.place,
+            placeGarde: ({ event }) => event.place,
           }),
         },
       },
@@ -204,8 +204,8 @@ export const gardeEnfantsMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculTarif',
           actions: assign({
-            parent: (context, event) => ({
-              ...context.parent!,
+            parent: ({ context, event }) => ({
+              ...(context.parent || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),
@@ -225,7 +225,7 @@ export const gardeEnfantsMachine = createMachine({
         TARIF_CALCULE: {
           target: 'gardeActive',
           actions: assign({
-            tarif: (_, event) => event.tarif,
+            tarif: ({ event }) => event.tarif,
           }),
         },
       },

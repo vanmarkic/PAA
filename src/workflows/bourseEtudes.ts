@@ -44,7 +44,7 @@ export const bourseEtudesMachine = createMachine({
   id: 'bourseEtudes',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as BourseEtudesContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; etudiant: EtudiantSuperieur; criteres: CriteresSociaux }
@@ -74,8 +74,8 @@ export const bourseEtudesMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'constitutionDossier',
           actions: assign({
-            etudiant: (_, event) => event.etudiant,
-            criteresSociaux: (_, event) => event.criteres,
+            etudiant: ({ event }) => event.etudiant,
+            criteresSociaux: ({ event }) => event.criteres,
           }),
         },
       },
@@ -105,7 +105,7 @@ export const bourseEtudesMachine = createMachine({
         CRITERES_ACADEMIQUES_VERIFIES: [
           {
             target: 'verificationCriteresSociaux',
-            cond: (_, event) => event.valide,
+            guard: ({ event }) => event.valide,
             actions: assign({
               performanceAcademique: true,
             }),
@@ -129,7 +129,7 @@ export const bourseEtudesMachine = createMachine({
         CRITERES_SOCIAUX_VERIFIES: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -147,7 +147,7 @@ export const bourseEtudesMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'bourseApprouvee',
           actions: assign({
-            montantBourse: (_, event) => event.montant,
+            montantBourse: ({ event }) => event.montant,
           }),
         },
       },
@@ -195,7 +195,7 @@ export const bourseEtudesMachine = createMachine({
         CRITERES_ACADEMIQUES_VERIFIES: [
           {
             target: 'bourseActive',
-            cond: (_, event) => event.valide,
+            guard: ({ event }) => event.valide,
           },
           {
             target: 'suspensionBourse',
@@ -213,7 +213,7 @@ export const bourseEtudesMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'bourseActive',
           actions: assign({
-            montantBourse: (_, event) => event.montant,
+            montantBourse: ({ event }) => event.montant,
           }),
         },
       },
@@ -227,7 +227,7 @@ export const bourseEtudesMachine = createMachine({
       on: {
         CRITERES_ACADEMIQUES_VERIFIES: {
           target: 'bourseActive',
-          cond: (_, event) => event.valide,
+          guard: ({ event }) => event.valide,
         },
       },
 

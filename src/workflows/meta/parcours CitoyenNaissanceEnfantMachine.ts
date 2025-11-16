@@ -47,7 +47,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
   id: 'parcoursNaissanceEnfant',
   initial: 'naissanceEnfant',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursNaissanceContext,
     events: {} as
       | { type: 'ENFANT_NE'; enfant: Enfant; parents: Parent[] }
@@ -86,8 +86,8 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         ENFANT_NE: {
           target: 'declarationNaissance',
           actions: assign({
-            enfant: (_, event) => event.enfant,
-            parents: (_, event) => event.parents,
+            enfant: ({ event }) => event.enfant,
+            parents: ({ event }) => event.parents,
             delaiJoursDeclaration: 0,
           }),
         },
@@ -103,8 +103,8 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         DECLARATION_EFFECTUEE: {
           target: 'affiliationMutuelle',
           actions: assign({
-            enfant: (context, event) => ({
-              ...context.enfant!,
+            enfant: ({ context, event }) => ({
+              ...(context.enfant || {}),
               numeroNational: event.numeroNational,
             }),
             demarchesCompletees: (context) => ({
@@ -122,7 +122,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         ERREUR: {
           target: 'declarationNaissance',
           actions: assign({
-            erreurs: (context, event) => [...context.erreurs, event.message],
+            erreurs: ({ context, event }) => [...context.erreurs, event.message],
             delaiJoursDeclaration: (context) => context.delaiJoursDeclaration + 1,
           }),
         },
@@ -143,8 +143,8 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         MUTUELLE_AFFILIEE: {
           target: 'demandeAllocationsFamiliales',
           actions: assign({
-            enfant: (context, event) => ({
-              ...context.enfant!,
+            enfant: ({ context, event }) => ({
+              ...(context.enfant || {}),
               mutuelle: event.mutuelle,
             }),
             demarchesCompletees: (context) => ({
@@ -173,8 +173,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
       on: {
         ALLOCATIONS_DEMANDEES: {
           target: 'demandePrimeNaissance',
-          actions: assign({
-            demarchesCompletees: (context) => ({
+          actions: assign({ demarchesCompletees: ({ context }) => ({
               ...context.demarchesCompletees,
               allocationsFamiliales: true,
             }),
@@ -200,8 +199,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
       on: {
         PRIME_DEMANDEE: {
           target: 'demandeCongeParental',
-          actions: assign({
-            demarchesCompletees: (context) => ({
+          actions: assign({ demarchesCompletees: ({ context }) => ({
               ...context.demarchesCompletees,
               primeNaissance: true,
             }),
@@ -231,9 +229,8 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         CONGE_DEMANDE: [
           {
             target: 'inscriptionGarderie',
-            cond: (context) => context.parents.some(p => p.situationProfessionnelle === 'salarie'),
-            actions: assign({
-              demarchesCompletees: (context) => ({
+            guard: (context) => context.parents.some(p => p.situationProfessionnelle === 'salarie'),
+            actions: assign({ demarchesCompletees: ({ context }) => ({
                 ...context.demarchesCompletees,
                 congeParental: true,
               }),
@@ -263,8 +260,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
       on: {
         GARDERIE_INSCRITE: {
           target: 'preparationDeclarationImpots',
-          actions: assign({
-            demarchesCompletees: (context) => ({
+          actions: assign({ demarchesCompletees: ({ context }) => ({
               ...context.demarchesCompletees,
               garderie: true,
             }),
@@ -286,8 +282,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
       on: {
         TOUTES_DEMARCHES_COMPLETEES: {
           target: 'parcoursComplete',
-          actions: assign({
-            demarchesCompletees: (context) => ({
+          actions: assign({ demarchesCompletees: ({ context }) => ({
               ...context.demarchesCompletees,
               declarationImpots: true,
             }),

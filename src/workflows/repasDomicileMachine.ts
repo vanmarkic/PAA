@@ -34,7 +34,7 @@ export const repasDomicileMachine = createMachine({
   id: 'repasDomicile',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RepasDomicileContext,
     events: {} as
       | { type: 'DEMANDER_SERVICE'; beneficiaire: BeneficiaireRepas }
@@ -65,7 +65,7 @@ export const repasDomicileMachine = createMachine({
         DEMANDER_SERVICE: {
           target: 'evaluationBesoins',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -92,7 +92,7 @@ export const repasDomicileMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'personnalisationMenu',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
           }),
         },
       },
@@ -122,8 +122,7 @@ export const repasDomicileMachine = createMachine({
       on: {
         LIVRER_REPAS: {
           target: 'livraisonsActives',
-          actions: assign({
-            repasLivres: (context) => context.repasLivres + 1,
+          actions: assign({ repasLivres: ({ context }) => context.repasLivres + 1,
           }),
         },
         MODIFIER_MENU: {

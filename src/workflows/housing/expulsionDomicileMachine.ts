@@ -17,7 +17,7 @@ interface ExpulsionContext {
   litige: LitigeLocatif | null;
   commandementDonne: boolean; // Terme juridique: commandement de quitter
   jugementObtenu: boolean; // Titre exécutoire
-  huis sierDesigne: boolean; // Huissier de justice
+  huissierDesigne: boolean; // Huissier de justice
   expulsionRealisee: boolean;
   protectionHivernale: boolean; // Protection période hivernale
 }
@@ -25,7 +25,7 @@ interface ExpulsionContext {
 export const expulsionDomicileMachine = createMachine({
   id: 'expulsionDomicile',
   initial: 'congeLocatif',
-  schema: {
+  schemas: {
     context: {} as ExpulsionContext,
     events: {} as
       | { type: 'DONNER_CONGE'; litige: LitigeLocatif }
@@ -49,14 +49,14 @@ export const expulsionDomicileMachine = createMachine({
       on: {
         DONNER_CONGE: {
           target: 'delaiPreavis',
-          actions: assign({ litige: (_, event) => event.litige }),
+          actions: assign({ litige: ({ event }) => event.litige }),
         },
       },
       meta: {
         description: 'Congé donné au locataire (recommandé)',
         delais: {
           bail9ans: '6 mois de préavis (bailleur)',
-          bailCourte Duree: '3 mois',
+          bailCourteDuree: '3 mois',
           locataire: '3 mois (bail 9 ans) ou 1 mois',
         },
       },

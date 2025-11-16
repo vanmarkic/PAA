@@ -25,7 +25,7 @@ export const travailInterimaireMachine = createMachine({
   id: 'travailInterimaire',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as TravailInterimaireContext,
     events: {} as
       | { type: 'INSCRIRE_AGENCE'; interimaire: string; agence: string }
@@ -70,8 +70,8 @@ export const travailInterimaireMachine = createMachine({
         INSCRIRE_AGENCE: {
           target: 'evaluationCompetences',
           actions: assign({
-            interimaire: (_, event) => event.interimaire,
-            agence: (_, event) => event.agence,
+            interimaire: ({ event }) => event.interimaire,
+            agence: ({ event }) => event.agence,
             retryCount: 0,
           }),
         },
@@ -99,9 +99,9 @@ export const travailInterimaireMachine = createMachine({
         MISSION_PROPOSEE: {
           target: 'missionProposee',
           actions: assign({
-            entrepriseUtilisatrice: (_, event) => event.entrepriseUtilisatrice,
-            typeMission: (_, event) => event.typeMission,
-            dureeMission: (_, event) => event.dureeMission,
+            entrepriseUtilisatrice: ({ event }) => event.entrepriseUtilisatrice,
+            typeMission: ({ event }) => event.typeMission,
+            dureeMission: ({ event }) => event.dureeMission,
           }),
         },
       },
@@ -131,9 +131,9 @@ export const travailInterimaireMachine = createMachine({
         SIGNER_CONTRAT: {
           target: 'formationSecurite',
           actions: assign({
-            salaire: (_, event) => event.salaire,
-            dateDebut: (_, event) => event.dateDebut,
-            dateFin: (_, event) => event.dateFin,
+            salaire: ({ event }) => event.salaire,
+            dateDebut: ({ event }) => event.dateDebut,
+            dateFin: ({ event }) => event.dateFin,
           }),
         },
       },
@@ -181,7 +181,7 @@ export const travailInterimaireMachine = createMachine({
         PROLONGER_MISSION: {
           target: 'missionActive',
           actions: assign({
-            dureeMission: (_, event) => event.nouvelleDuree,
+            dureeMission: ({ event }) => event.nouvelleDuree,
           }),
         },
       },
@@ -195,8 +195,7 @@ export const travailInterimaireMachine = createMachine({
       on: {
         MISSION_REUSSIE: {
           target: 'missionTerminee',
-          actions: assign({
-            missionsCompletes: (context) => context.missionsCompletes + 1,
+          actions: assign({ missionsCompletes: ({ context }) => context.missionsCompletes + 1,
           }),
         },
         MISSION_PROBLEMATIQUE: {

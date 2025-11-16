@@ -28,7 +28,7 @@ export const outplacementMachine = createMachine({
   id: 'outplacement',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as OutplacementContext,
     events: {} as
       | { type: 'NOTIFIER_LICENCIEMENT'; employe: string; employeur: string; age: number; anciennete: number }
@@ -75,10 +75,10 @@ export const outplacementMachine = createMachine({
         NOTIFIER_LICENCIEMENT: {
           target: 'verificationObligation',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            age: (_, event) => event.age,
-            anciennete: (_, event) => event.anciennete,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            age: ({ event }) => event.age,
+            anciennete: ({ event }) => event.anciennete,
             retryCount: 0,
           }),
         },
@@ -95,7 +95,7 @@ export const outplacementMachine = createMachine({
           target: 'choixBureau',
           actions: assign({
             obligatoireOutplacement: true,
-            dureeOutplacement: (_, event) => event.dureeOutplacement,
+            dureeOutplacement: ({ event }) => event.dureeOutplacement,
           }),
         },
         OUTPLACEMENT_NON_OBLIGATOIRE: {
@@ -128,7 +128,7 @@ export const outplacementMachine = createMachine({
         CHOISIR_BUREAU: {
           target: 'signatureConvention',
           actions: assign({
-            bureauOutplacement: (_, event) => event.bureauOutplacement,
+            bureauOutplacement: ({ event }) => event.bureauOutplacement,
           }),
         },
       },
@@ -209,7 +209,7 @@ export const outplacementMachine = createMachine({
         ENVOYER_CANDIDATURE: {
           target: 'suiviCandidatures',
           actions: assign({
-            candidatures: (_, event) => event.nombreCandidatures,
+            candidatures: ({ event }) => event.nombreCandidatures,
           }),
         },
         FIN_PERIODE_OUTPLACEMENT: {
@@ -227,7 +227,7 @@ export const outplacementMachine = createMachine({
         OBTENIR_ENTRETIEN: {
           target: 'processusEntretien',
           actions: assign({
-            entretiens: (_, event) => event.nombreEntretiens,
+            entretiens: ({ event }) => event.nombreEntretiens,
           }),
         },
         ENVOYER_CANDIDATURE: {
@@ -290,7 +290,7 @@ export const outplacementMachine = createMachine({
         PROLONGATION: {
           target: 'rechercheActive',
           actions: assign({
-            dureeOutplacement: (_, event) => event.nouvelleDuree,
+            dureeOutplacement: ({ event }) => event.nouvelleDuree,
           }),
         },
         RESET: {

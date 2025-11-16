@@ -51,7 +51,7 @@ export const renteAlimentaireMachine = createMachine({
   id: 'renteAlimentaire',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as RenteAlimentaireContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; payeur: Payeur; beneficiaire: Beneficiaire; rente: RenteAlimentaire }
@@ -82,9 +82,9 @@ export const renteAlimentaireMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'verificationJugement',
           actions: assign({
-            payeur: (_, event) => event.payeur,
-            beneficiaire: (_, event) => event.beneficiaire,
-            rente: (_, event) => event.rente,
+            payeur: ({ event }) => event.payeur,
+            beneficiaire: ({ event }) => event.beneficiaire,
+            rente: ({ event }) => event.rente,
           }),
         },
       },
@@ -126,7 +126,7 @@ export const renteAlimentaireMachine = createMachine({
         FISCALITE_CALCULEE: {
           target: 'fiscaliteCalculee',
           actions: assign({
-            fiscalite: (_, event) => event.fiscalite,
+            fiscalite: ({ event }) => event.fiscalite,
           }),
         },
       },
@@ -141,7 +141,7 @@ export const renteAlimentaireMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsVersement: (_, event) => event.documents,
+            attestationsVersement: ({ event }) => event.documents,
           }),
         },
       },

@@ -40,7 +40,7 @@ export const chequesRepasMachine = createMachine({
   id: 'chequesRepas',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ChequesRepasContext,
     events: {} as
       | { type: 'INSCRIRE_EMPLOYEUR'; employeur: Employeur }
@@ -69,7 +69,7 @@ export const chequesRepasMachine = createMachine({
         INSCRIRE_EMPLOYEUR: {
           target: 'inscriptionEnCours',
           actions: assign({
-            employeur: (_, event) => event.employeur,
+            employeur: ({ event }) => event.employeur,
           }),
         },
       },
@@ -99,7 +99,7 @@ export const chequesRepasMachine = createMachine({
         AJOUTER_EMPLOYES: {
           target: 'gestionEmployes',
           actions: assign({
-            employes: (_, event) => event.employes,
+            employes: ({ event }) => event.employes,
           }),
         },
       },
@@ -126,7 +126,7 @@ export const chequesRepasMachine = createMachine({
         DISTRIBUTION_CALCULEE: {
           target: 'distributionPrete',
           actions: assign({
-            distribution: (_, event) => event.distribution,
+            distribution: ({ event }) => event.distribution,
           }),
         },
       },
@@ -152,8 +152,7 @@ export const chequesRepasMachine = createMachine({
       on: {
         CHEQUES_DISTRIBUES: {
           target: 'actif',
-          actions: assign({
-            totalDistribue: (context) =>
+          actions: assign({ totalDistribue: ({ context }) =>
               context.totalDistribue +
               ((context.distribution?.nombreCheques || 0) * (context.distribution?.valeurUnitaire || 0)),
           }),

@@ -46,7 +46,7 @@ export const aideSocialeMachine = createMachine({
   id: 'aideSociale',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AideSocialeContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurAideSociale }
@@ -76,7 +76,7 @@ export const aideSocialeMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'accueilDemande',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -118,7 +118,7 @@ export const aideSocialeMachine = createMachine({
         ENQUETE_COMPLETE: {
           target: 'analyseBesoins',
           actions: assign({
-            enqueteSociale: (_, event) => event.enquete,
+            enqueteSociale: ({ event }) => event.enquete,
           }),
         },
       },
@@ -133,7 +133,7 @@ export const aideSocialeMachine = createMachine({
         PLAN_ETABLI: {
           target: 'etablissementPlan',
           actions: assign({
-            planAide: (_, event) => event.plan,
+            planAide: ({ event }) => event.plan,
           }),
         },
       },
@@ -181,7 +181,7 @@ export const aideSocialeMachine = createMachine({
         ENQUETE_COMPLETE: {
           target: 'analyseBesoins',
           actions: assign({
-            enqueteSociale: (_, event) => event.enquete,
+            enqueteSociale: ({ event }) => event.enquete,
           }),
         },
       },
@@ -196,7 +196,7 @@ export const aideSocialeMachine = createMachine({
         PLAN_ETABLI: {
           target: 'aideActive',
           actions: assign({
-            planAide: (_, event) => event.plan,
+            planAide: ({ event }) => event.plan,
           }),
         },
       },

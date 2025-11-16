@@ -24,7 +24,7 @@ export const discriminationEmploiMachine = createMachine({
   id: 'discriminationEmploi',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as DiscriminationEmploiContext,
     events: {} as
       | { type: 'SIGNALER_DISCRIMINATION'; victime: string; typeDiscrimination: 'age' | 'genre' | 'origine' | 'handicap' | 'orientation' | 'religion' | 'autre'; contexte: 'recrutement' | 'remuneration' | 'promotion' | 'conditions_travail' | 'licenciement' }
@@ -67,9 +67,9 @@ export const discriminationEmploiMachine = createMachine({
         SIGNALER_DISCRIMINATION: {
           target: 'documentationIncident',
           actions: assign({
-            victime: (_, event) => event.victime,
-            typeDiscrimination: (_, event) => event.typeDiscrimination,
-            contexte: (_, event) => event.contexte,
+            victime: ({ event }) => event.victime,
+            typeDiscrimination: ({ event }) => event.typeDiscrimination,
+            contexte: ({ event }) => event.contexte,
             retryCount: 0,
           }),
         },
@@ -85,8 +85,8 @@ export const discriminationEmploiMachine = createMachine({
         DOCUMENTER_INCIDENT: {
           target: 'collectePreuves',
           actions: assign({
-            dateIncident: (_, event) => event.dateIncident,
-            preuves: (_, event) => event.preuves,
+            dateIncident: ({ event }) => event.dateIncident,
+            preuves: ({ event }) => event.preuves,
           }),
         },
       },
@@ -101,7 +101,7 @@ export const discriminationEmploiMachine = createMachine({
         AJOUTER_TEMOINS: {
           target: 'analyseCas',
           actions: assign({
-            temoins: (_, event) => event.temoins,
+            temoins: ({ event }) => event.temoins,
           }),
         },
       },

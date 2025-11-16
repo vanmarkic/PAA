@@ -45,7 +45,7 @@ export const exonerationPrecompteMachine = createMachine({
   id: 'exonerationPrecompte',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ExonerationPrecompteContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: ProprietaireImmobilier; bien: BienImmobilier }
@@ -74,8 +74,8 @@ export const exonerationPrecompteMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            proprietaire: (_, event) => event.proprietaire,
-            bienConcerne: (_, event) => event.bien,
+            proprietaire: ({ event }) => event.proprietaire,
+            bienConcerne: ({ event }) => event.bien,
           }),
         },
       },
@@ -90,15 +90,15 @@ export const exonerationPrecompteMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.exoneration.estEligible,
+            guard: ({ event }) => event.exoneration.estEligible,
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
         ],
@@ -153,7 +153,7 @@ export const exonerationPrecompteMachine = createMachine({
         DOCUMENTS_SOUMIS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsPropriety: (_, event) => event.documents,
+            documentsPropriety: ({ event }) => event.documents,
           }),
         },
       },
@@ -195,7 +195,7 @@ export const exonerationPrecompteMachine = createMachine({
         ANNEE_SUIVANTE: {
           target: 'verificationAnnuelle',
           actions: assign({
-            anneeFiscale: (_, event) => event.annee,
+            anneeFiscale: ({ event }) => event.annee,
           }),
         },
       },
@@ -210,9 +210,9 @@ export const exonerationPrecompteMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'active',
-            cond: (_, event) => event.exoneration.estEligible,
+            guard: ({ event }) => event.exoneration.estEligible,
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
           {

@@ -43,10 +43,7 @@ type PensionSurvieEvent =
   | { type: 'REFUS'; motif: string }
   | { type: 'REVISION_REVENUS'; nouveauxRevenus: number };
 
-export const pensionSurvieMachine = createMachine<
-  PensionSurvieContext,
-  PensionSurvieEvent
->({
+export const pensionSurvieMachine = createMachine({
   id: 'pensionSurvie',
   initial: 'verification',
   context: {
@@ -85,7 +82,7 @@ export const pensionSurvieMachine = createMachine<
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluation',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -137,7 +134,7 @@ export const pensionSurvieMachine = createMachine<
         OCTROI: {
           target: 'paiement',
           actions: assign({
-            montantPension: (context, event) => event.montant,
+            montantPension: ({ context, event }) => event.montant,
           }),
         },
         REFUS: 'refus',

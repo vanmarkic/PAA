@@ -34,13 +34,10 @@ type AdministrationProvisoireEvent =
   | { type: 'DEMANDER_PROTECTION'; data: AdministrationProvisoireContext }
   | { type: 'AUDITION' }
   | { type: 'EXPERTISE_MEDICALE' }
-  | { type: 'JUGEMENT_FAVORABLE'; type: 'generale' | 'limitee' }
+  | { type: 'JUGEMENT_FAVORABLE'; typeAdministration: 'generale' | 'limitee' }
   | { type: 'JUGEMENT_DEFAVORABLE' };
 
-export const administrationProvisoireMachine = createMachine<
-  AdministrationProvisoireContext,
-  AdministrationProvisoireEvent
->({
+export const administrationProvisoireMachine = createMachine({
   id: 'administrationProvisoire',
   initial: 'evaluation',
   context: {

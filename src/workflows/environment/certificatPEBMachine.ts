@@ -22,7 +22,7 @@ interface CertificatPEBContext {
 export const certificatPEBMachine = createMachine({
   id: 'certificatPEB',
   initial: 'demandeCertificat',
-  schema: {
+  schemas: {
     context: {} as CertificatPEBContext,
     events: {} as
       | { type: 'DEMANDER'; bien: BienImmobilier }
@@ -44,7 +44,7 @@ export const certificatPEBMachine = createMachine({
       on: {
         DEMANDER: {
           target: 'designationCertificateur',
-          actions: assign({ bien: (_, event) => event.bien }),
+          actions: assign({ bien: ({ event }) => event.bien }),
         },
       },
       meta: { description: 'Demande certificat PEB (obligatoire vente/location)' },
@@ -53,7 +53,7 @@ export const certificatPEBMachine = createMachine({
       on: {
         CERTIFICATEUR_DESIGNE: {
           target: 'visiteBatiment',
-          actions: assign({ certificateurAgree: (_, event) => event.nom }),
+          actions: assign({ certificateurAgree: ({ event }) => event.nom }),
         },
       },
       meta: { description: 'Choix certificateur agréé (liste régionale)' },
@@ -69,8 +69,8 @@ export const certificatPEBMachine = createMachine({
         CALCUL_REALISE: {
           target: 'emissionCertificat',
           actions: assign({
-            scorePEB: (_, event) => event.score,
-            consommationKwhM2: (_, event) => event.consommation,
+            scorePEB: ({ event }) => event.score,
+            consommationKwhM2: ({ event }) => event.consommation,
             recommandationsAmelioration: [
               'Isolation toiture',
               'Double vitrage',

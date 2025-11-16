@@ -48,7 +48,7 @@ export const titreSejourEtrangerMachine = createMachine({
       on: {
         ENTREE_BELGIQUE: {
           target: 'declarationCommune',
-          actions: assign({ demande: (_, event) => event.demande }),
+          actions: assign({ demande: ({ event }) => event.demande }),
         },
       },
       meta: {
@@ -92,15 +92,15 @@ export const titreSejourEtrangerMachine = createMachine({
         DECISION_OE: [
           {
             target: 'delivranceCarte',
-            cond: (_, event) => event.decision === 'favorable',
+            guard: ({ event }) => event.decision === 'favorable',
             actions: assign({
-              decisionOE: (_, event) => event.decision,
-              typePermis: (_, event) => event.typePermis || null,
+              decisionOE: ({ event }) => event.decision,
+              typePermis: ({ event }) => event.typePermis || null,
             }),
           },
           {
             target: 'ordreQuitter',
-            actions: assign({ decisionOE: (_, event) => event.decision }),
+            actions: assign({ decisionOE: ({ event }) => event.decision }),
           },
         ],
       },
@@ -140,7 +140,7 @@ export const titreSejourEtrangerMachine = createMachine({
         DECISION_OE: [
           {
             target: 'delivranceCarte',
-            cond: (_, event) => event.decision === 'favorable',
+            guard: ({ event }) => event.decision === 'favorable',
           },
         ],
       },

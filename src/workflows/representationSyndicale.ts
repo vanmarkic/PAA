@@ -24,7 +24,7 @@ export const representationSyndicaleMachine = createMachine({
   id: 'representationSyndicale',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as RepresentationSyndicaleContext,
     events: {} as
       | { type: 'VERIFIER_SEUIL'; entreprise: string; nombreTravailleurs: number }
@@ -67,8 +67,8 @@ export const representationSyndicaleMachine = createMachine({
         VERIFIER_SEUIL: {
           target: 'verificationSeuil',
           actions: assign({
-            entreprise: (_, event) => event.entreprise,
-            nombreTravailleurs: (_, event) => event.nombreTravailleurs,
+            entreprise: ({ event }) => event.entreprise,
+            nombreTravailleurs: ({ event }) => event.nombreTravailleurs,
             retryCount: 0,
           }),
         },
@@ -111,8 +111,8 @@ export const representationSyndicaleMachine = createMachine({
         IDENTIFIER_SYNDICATS: {
           target: 'organisationElections',
           actions: assign({
-            syndicatsPresents: (_, event) => event.syndicatsPresents,
-            typeElections: (_, event) => event.typeElections || 'les_deux',
+            syndicatsPresents: ({ event }) => event.syndicatsPresents,
+            typeElections: ({ event }) => event.typeElections || 'les_deux',
           }),
         },
       },
@@ -127,7 +127,7 @@ export const representationSyndicaleMachine = createMachine({
         ORGANISER_ELECTIONS: {
           target: 'electionsEnCours',
           actions: assign({
-            dateElections: (_, event) => event.dateElections,
+            dateElections: ({ event }) => event.dateElections,
           }),
         },
       },
@@ -142,7 +142,7 @@ export const representationSyndicaleMachine = createMachine({
         RESULTATS_PROCLAMES: {
           target: 'designationDelegues',
           actions: assign({
-            deleguesSyndicaux: (_, event) => event.deleguesSyndicaux,
+            deleguesSyndicaux: ({ event }) => event.deleguesSyndicaux,
           }),
         },
       },
@@ -168,8 +168,7 @@ export const representationSyndicaleMachine = createMachine({
       on: {
         INSTALLER_DELEGATION: {
           target: 'representationActive',
-          actions: assign({
-            mandatsActifs: (context) => context.deleguesSyndicaux,
+          actions: assign({ mandatsActifs: ({ context }) => context.deleguesSyndicaux,
           }),
         },
       },
@@ -205,7 +204,7 @@ export const representationSyndicaleMachine = createMachine({
         CCE_SIGNEE: {
           target: 'representationActive',
           actions: assign({
-            conventionsCollectives: (context, event) => [...context.conventionsCollectives, event.convention],
+            conventionsCollectives: ({ context, event }) => [...context.conventionsCollectives, event.convention],
           }),
         },
       },
@@ -219,8 +218,7 @@ export const representationSyndicaleMachine = createMachine({
       on: {
         REUNION_TENUE: {
           target: 'representationActive',
-          actions: assign({
-            reunionsAnnuelles: (context) => context.reunionsAnnuelles + 1,
+          actions: assign({ reunionsAnnuelles: ({ context }) => context.reunionsAnnuelles + 1,
           }),
         },
       },

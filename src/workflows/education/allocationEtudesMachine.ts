@@ -25,7 +25,7 @@ interface AllocationEtudesContext {
 export const allocationEtudesMachine = createMachine({
   id: 'allocationEtudes',
   initial: 'depotDemande',
-  schema: {
+  schemas: {
     context: {} as AllocationEtudesContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandeAllocation }
@@ -48,7 +48,7 @@ export const allocationEtudesMachine = createMachine({
       on: {
         DEPOSER_DEMANDE: {
           target: 'completudeDossier',
-          actions: assign({ demande: (_, event) => event.demande }),
+          actions: assign({ demande: ({ event }) => event.demande }),
         },
       },
       meta: {
@@ -78,7 +78,7 @@ export const allocationEtudesMachine = createMachine({
       on: {
         CALCULER_POINTS: {
           target: 'evaluationEligibilite',
-          actions: assign({ pointsCalcules: (_, event) => event.points }),
+          actions: assign({ pointsCalcules: ({ event }) => event.points }),
         },
       },
       meta: {
@@ -95,8 +95,8 @@ export const allocationEtudesMachine = createMachine({
         ALLOCATION_CALCULEE: {
           target: 'decisionAllocation',
           actions: assign({
-            montantAllocation: (_, event) => event.montant,
-            exonerationMinerval: (_, event) => event.exoneration,
+            montantAllocation: ({ event }) => event.montant,
+            exonerationMinerval: ({ event }) => event.exoneration,
           }),
         },
       },

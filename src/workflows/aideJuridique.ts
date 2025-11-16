@@ -42,7 +42,7 @@ export const aideJuridiqueMachine = createMachine({
   id: 'aideJuridique',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AideJuridiqueContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: Demandeur; litige: Litige }
@@ -71,8 +71,8 @@ export const aideJuridiqueMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'accueilDemande',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
-            litige: (_, event) => event.litige,
+            demandeur: ({ event }) => event.demandeur,
+            litige: ({ event }) => event.litige,
           }),
         },
       },
@@ -102,7 +102,7 @@ export const aideJuridiqueMachine = createMachine({
         AVOCAT_DESIGNE: {
           target: 'aideActive',
           actions: assign({
-            aideAccordee: (_, event) => ({
+            aideAccordee: ({ event }) => ({
               typeAide: 'pro-deo' as const,
               avocatDesigne: event.avocat,
               barreauCompetent: '',
@@ -122,7 +122,7 @@ export const aideJuridiqueMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'evaluationAide',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -140,7 +140,7 @@ export const aideJuridiqueMachine = createMachine({
         AIDE_EVALUEE: {
           target: 'designationAvocat',
           actions: assign({
-            aideAccordee: (_, event) => event.aide,
+            aideAccordee: ({ event }) => event.aide,
           }),
         },
       },
@@ -155,8 +155,8 @@ export const aideJuridiqueMachine = createMachine({
         AVOCAT_DESIGNE: {
           target: 'aideActive',
           actions: assign({
-            aideAccordee: (context, event) => ({
-              ...context.aideAccordee!,
+            aideAccordee: ({ context, event }) => ({
+              ...(context.aideAccordee || {}),
               avocatDesigne: event.avocat,
             }),
             dossierOuvert: true,

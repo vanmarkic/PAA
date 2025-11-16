@@ -34,10 +34,7 @@ type DroitsDonationEvent =
   | { type: 'ENREGISTRER_DONATION' }
   | { type: 'PAYER_DROITS'; montant: number };
 
-export const droitsDonationMachine = createMachine<
-  DroitsDonationContext,
-  DroitsDonationEvent
->({
+export const droitsDonationMachine = createMachine({
   id: 'droitsDonation',
   initial: 'preparation',
   context: {

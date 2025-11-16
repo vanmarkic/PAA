@@ -47,7 +47,7 @@ export const primeRenovationMachine = createMachine({
   id: 'primeRenovation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PrimeRenovationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: Proprietaire }
@@ -80,7 +80,7 @@ export const primeRenovationMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'saisieInformations',
           actions: assign({
-            proprietaire: (_, event) => event.proprietaire,
+            proprietaire: ({ event }) => event.proprietaire,
           }),
         },
       },
@@ -95,7 +95,7 @@ export const primeRenovationMachine = createMachine({
         AJOUTER_TRAVAUX: {
           target: 'soumissionDevis',
           actions: assign({
-            travaux: (context, event) => [...context.travaux, event.travaux],
+            travaux: ({ context, event }) => [...context.travaux, event.travaux],
           }),
         },
       },
@@ -110,7 +110,7 @@ export const primeRenovationMachine = createMachine({
         SOUMETTRE_DEVIS: {
           target: 'validationDevis',
           actions: assign({
-            devis: (_, event) => event.documents,
+            devis: ({ event }) => event.documents,
           }),
         },
       },
@@ -152,7 +152,7 @@ export const primeRenovationMachine = createMachine({
         SOUMETTRE_FACTURES: {
           target: 'validationFactures',
           actions: assign({
-            factures: (_, event) => event.documents,
+            factures: ({ event }) => event.documents,
           }),
         },
       },
@@ -182,16 +182,16 @@ export const primeRenovationMachine = createMachine({
         PRIME_CALCULEE: [
           {
             target: 'primeAccordee',
-            cond: (_, event) => event.prime.estEligible,
+            guard: ({ event }) => event.prime.estEligible,
             actions: assign({
-              prime: (_, event) => event.prime,
-              totalPrime: (_, event) => event.prime.montantPrime,
+              prime: ({ event }) => event.prime,
+              totalPrime: ({ event }) => event.prime.montantPrime,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              prime: (_, event) => event.prime,
+              prime: ({ event }) => event.prime,
             }),
           },
         ],

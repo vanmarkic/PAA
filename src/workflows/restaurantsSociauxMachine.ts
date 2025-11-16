@@ -26,7 +26,7 @@ export const restaurantsSociauxMachine = createMachine({
   id: 'restaurantsSociaux',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RestaurantsSociauxContext,
     events: {} as
       | { type: 'INSCRIRE_CLIENT'; client: ClientRestaurant }
@@ -56,7 +56,7 @@ export const restaurantsSociauxMachine = createMachine({
         INSCRIRE_CLIENT: {
           target: 'evaluationCategorie',
           actions: assign({
-            client: (_, event) => event.client,
+            client: ({ event }) => event.client,
           }),
         },
       },
@@ -71,8 +71,8 @@ export const restaurantsSociauxMachine = createMachine({
         CATEGORIE_ASSIGNEE: {
           target: 'emissionCarte',
           actions: assign({
-            categoriePrice: (_, event) => event.categorie,
-            prixRepas: (_, event) => event.prix,
+            categoriePrice: ({ event }) => event.categorie,
+            prixRepas: ({ event }) => event.prix,
             estInscrit: true,
           }),
         },
@@ -103,15 +103,15 @@ export const restaurantsSociauxMachine = createMachine({
         RECHARGER_CARTE: {
           target: 'rechargementCarte',
           actions: assign({
-            soldeCarte: (context, event) => context.soldeCarte + event.montant,
+            soldeCarte: ({ context, event }) => context.soldeCarte + event.montant,
           }),
         },
         CONSOMMER_REPAS: [
           {
             target: 'repasServi',
-            cond: (context, event) => context.soldeCarte >= event.prix,
+            guard: ({ context, event }) => context.soldeCarte >= event.prix,
             actions: assign({
-              soldeCarte: (context, event) => context.soldeCarte - event.prix,
+              soldeCarte: ({ context, event }) => context.soldeCarte - event.prix,
             }),
           },
           {
@@ -148,9 +148,9 @@ export const restaurantsSociauxMachine = createMachine({
         CONSOMMER_REPAS: [
           {
             target: 'repasServi',
-            cond: (context, event) => context.soldeCarte >= event.prix,
+            guard: ({ context, event }) => context.soldeCarte >= event.prix,
             actions: assign({
-              soldeCarte: (context, event) => context.soldeCarte - event.prix,
+              soldeCarte: ({ context, event }) => context.soldeCarte - event.prix,
             }),
           },
           {
@@ -160,7 +160,7 @@ export const restaurantsSociauxMachine = createMachine({
         RECHARGER_CARTE: {
           target: 'carteActive',
           actions: assign({
-            soldeCarte: (context, event) => context.soldeCarte + event.montant,
+            soldeCarte: ({ context, event }) => context.soldeCarte + event.montant,
           }),
         },
       },
@@ -175,7 +175,7 @@ export const restaurantsSociauxMachine = createMachine({
         RECHARGER_CARTE: {
           target: 'carteActive',
           actions: assign({
-            soldeCarte: (context, event) => context.soldeCarte + event.montant,
+            soldeCarte: ({ context, event }) => context.soldeCarte + event.montant,
           }),
         },
       },

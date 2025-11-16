@@ -25,10 +25,10 @@ interface SoinsDentairesContext {
 export const dentisteSoinsMachine = createMachine({
   id: 'dentisteSoins',
   initial: 'consultation',
-  schema: {
+  schemas: {
     context: {} as SoinsDentairesContext,
     events: {} as
-      | { type: 'CONSULTER'; patient: PatientDentiste; type: 'preventif' | 'curatif' | 'orthodontie' | 'esthetique' }
+      | { type: 'CONSULTER'; patient: PatientDentiste; typeConsultation: 'preventif' | 'curatif' | 'orthodontie' | 'esthetique' }
       | { type: 'DIAGNOSTIC_ETABLI' }
       | { type: 'DEVIS_PRESENTE'; montant: number }
       | { type: 'SOINS_REALISES'; soins: string[] }
@@ -48,8 +48,8 @@ export const dentisteSoinsMachine = createMachine({
         CONSULTER: {
           target: 'examenBuccal',
           actions: assign({
-            patient: (_, event) => event.patient,
-            typeConsultation: (_, event) => event.type,
+            patient: ({ event }) => event.patient,
+            typeConsultation: ({ event }) => event.type,
           }),
         },
       },
@@ -74,7 +74,7 @@ export const dentisteSoinsMachine = createMachine({
       on: {
         DEVIS_PRESENTE: {
           target: 'soins',
-          actions: assign({ montantTotal: (_, event) => event.montant }),
+          actions: assign({ montantTotal: ({ event }) => event.montant }),
         },
       },
       meta: {
@@ -86,7 +86,7 @@ export const dentisteSoinsMachine = createMachine({
       on: {
         SOINS_REALISES: {
           target: 'calculRemboursement',
-          actions: assign({ soinsProdiguees: (_, event) => event.soins }),
+          actions: assign({ soinsProdiguees: ({ event }) => event.soins }),
         },
       },
       meta: {
@@ -106,8 +106,8 @@ export const dentisteSoinsMachine = createMachine({
         REMBOURSEMENT_CALCULE: {
           target: 'termine',
           actions: assign({
-            remboursement: (_, event) => event.rembourse,
-            ticketModerateur: (_, event) => event.ticket,
+            remboursement: ({ event }) => event.rembourse,
+            ticketModerateur: ({ event }) => event.ticket,
           }),
         },
       },

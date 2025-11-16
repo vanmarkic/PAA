@@ -26,10 +26,10 @@ export const procedureDivorceMachine = createMachine({
   id: 'procedureDivorce',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ProcedureDivorceContext,
     events: {} as
-      | { type: 'DEMARRER_PROCEDURE'; epoux1: Epoux; epoux2: Epoux; type: 'consentement-mutuel' | 'desunion-irremediale' | 'faute' }
+      | { type: 'DEMARRER_PROCEDURE'; epoux1: Epoux; epoux2: Epoux; typeDivorce: 'consentement-mutuel' | 'desunion-irremediale' | 'faute' }
       | { type: 'AVOCATS_DESIGNES' }
       | { type: 'MEDIATION_ACCEPTEE' }
       | { type: 'MEDIATION_REFUSEE' }
@@ -59,9 +59,9 @@ export const procedureDivorceMachine = createMachine({
         DEMARRER_PROCEDURE: {
           target: 'designationAvocats',
           actions: assign({
-            epoux1: (_, event) => event.epoux1,
-            epoux2: (_, event) => event.epoux2,
-            typeDivorce: (_, event) => event.type,
+            epoux1: ({ event }) => event.epoux1,
+            epoux2: ({ event }) => event.epoux2,
+            typeDivorce: ({ event }) => event.type,
           }),
         },
       },

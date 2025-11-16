@@ -32,7 +32,7 @@ export const fondsCreancesMachine = createMachine({
   id: 'fondsCreances',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as FondsCreancesContext,
     events: {} as
       | { type: 'SOUMETTRE_CREANCE'; creancier: Creancier; debiteur: Debiteur }
@@ -63,8 +63,8 @@ export const fondsCreancesMachine = createMachine({
         SOUMETTRE_CREANCE: {
           target: 'verificationDossier',
           actions: assign({
-            creancier: (_, event) => event.creancier,
-            debiteur: (_, event) => event.debiteur,
+            creancier: ({ event }) => event.creancier,
+            debiteur: ({ event }) => event.debiteur,
           }),
         },
       },
@@ -86,7 +86,7 @@ export const fondsCreancesMachine = createMachine({
           target: 'attenteDossier',
           actions: assign({
             dossierComplet: false,
-            documentsManquants: (_, event) => event.documents,
+            documentsManquants: ({ event }) => event.documents,
           }),
         },
       },
@@ -116,7 +116,7 @@ export const fondsCreancesMachine = createMachine({
         APPROUVER_PAIEMENT: {
           target: 'paiementApprouve',
           actions: assign({
-            montantRecuperable: (_, event) => event.montant || 0,
+            montantRecuperable: ({ event }) => event.montant || 0,
           }),
         },
         REFUSER_CREANCE: {
@@ -134,7 +134,7 @@ export const fondsCreancesMachine = createMachine({
         EFFECTUER_PAIEMENT: {
           target: 'paiementEffectue',
           actions: assign({
-            montantPaye: (_, event) => event.montant,
+            montantPaye: ({ event }) => event.montant,
           }),
         },
       },

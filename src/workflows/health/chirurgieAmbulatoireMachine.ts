@@ -20,7 +20,7 @@ interface ChirurgieContext {
 export const chirurgieAmbulatoireMachine = createMachine({
   id: 'chirurgieAmbulatoire',
   initial: 'consultationPreoperatoire',
-  schema: {
+  schemas: {
     context: {} as ChirurgieContext,
     events: {} as
       | { type: 'PLANIFIER'; patient: PatientChirurgie }
@@ -41,7 +41,7 @@ export const chirurgieAmbulatoireMachine = createMachine({
       on: {
         PLANIFIER: {
           target: 'bilanPreoperatoire',
-          actions: assign({ patient: (_, event) => event.patient }),
+          actions: assign({ patient: ({ event }) => event.patient }),
         },
       },
       meta: { description: 'Consultation chirurgien + anesthésiste' },

@@ -7,7 +7,7 @@ import { createMachine, assign } from 'xstate';
 
 interface DemandeRegroupement {
   regroupant: string; // Personne en Belgique
-  membresF amille: string[]; // Conjoint, enfants < 18 ans, ascendants
+  membresFamille: string[]; // Conjoint, enfants < 18 ans, ascendants
   lienParente: 'conjoint' | 'enfant' | 'ascendant';
   ressourcesSuffisantes: boolean;
   logementAdapte: boolean;
@@ -24,7 +24,7 @@ interface RegroupementFamilialContext {
 export const regroupementFamilialMachine = createMachine({
   id: 'regroupementFamilial',
   initial: 'verificationConditions',
-  schema: {
+  schemas: {
     context: {} as RegroupementFamilialContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandeRegroupement }
@@ -45,7 +45,7 @@ export const regroupementFamilialMachine = createMachine({
       on: {
         DEPOSER_DEMANDE: {
           target: 'evaluationEligibilite',
-          actions: assign({ demande: (_, event) => event.demande }),
+          actions: assign({ demande: ({ event }) => event.demande }),
         },
       },
       meta: {

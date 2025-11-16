@@ -40,10 +40,7 @@ type CongeParentalEvent =
   | { type: 'EMPLOYEUR_REPORTE'; motif: string }
   | { type: 'ONEM_OCTROIE'; montant: number };
 
-export const congeParentalMachine = createMachine<
-  CongeParentalContext,
-  CongeParentalEvent
->({
+export const congeParentalMachine = createMachine({
   id: 'congeParental',
   initial: 'information',
   context: {

@@ -23,7 +23,7 @@ export const preavisMachine = createMachine({
   id: 'preavis',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as PreavisContext,
     events: {} as
       | { type: 'NOTIFIER_PREAVIS'; employe: string; employeur: string; anciennete: number }
@@ -58,9 +58,9 @@ export const preavisMachine = createMachine({
         NOTIFIER_PREAVIS: {
           target: 'calculDuree',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            anciennete: (_, event) => event.anciennete,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            anciennete: ({ event }) => event.anciennete,
             retryCount: 0,
           }),
         },
@@ -76,7 +76,7 @@ export const preavisMachine = createMachine({
         CALCULER_DUREE: {
           target: 'confirmationDates',
           actions: assign({
-            dureePreavis: (_, event) => event.dureePreavis,
+            dureePreavis: ({ event }) => event.dureePreavis,
           }),
         },
       },
@@ -91,8 +91,8 @@ export const preavisMachine = createMachine({
         CONFIRMER_DATES: {
           target: 'validationConformite',
           actions: assign({
-            dateNotification: (_, event) => event.dateNotification,
-            dateFinPreavis: (_, event) => event.dateFinPreavis,
+            dateNotification: ({ event }) => event.dateNotification,
+            dateFinPreavis: ({ event }) => event.dateFinPreavis,
           }),
         },
       },
@@ -125,7 +125,7 @@ export const preavisMachine = createMachine({
         CALCULER_INDEMNITE: {
           target: 'indemniteCalculee',
           actions: assign({
-            indemnite: (_, event) => event.indemnite,
+            indemnite: ({ event }) => event.indemnite,
           }),
         },
       },

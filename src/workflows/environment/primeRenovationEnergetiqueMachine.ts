@@ -22,7 +22,7 @@ interface PrimeRenovationContext {
 export const primeRenovationEnergetiqueMachine = createMachine({
   id: 'primeRenovationEnergetique',
   initial: 'auditEnergetique',
-  schema: {
+  schemas: {
     context: {} as PrimeRenovationContext,
     events: {} as
       | { type: 'DEMANDER_AUDIT' }
@@ -60,7 +60,7 @@ export const primeRenovationEnergetiqueMachine = createMachine({
       on: {
         DEMANDE_PRIME: {
           target: 'analyseDemande',
-          actions: assign({ demande: (_, event) => event.demande }),
+          actions: assign({ demande: ({ event }) => event.demande }),
         },
       },
       meta: { description: 'Dépôt demande AVANT début travaux' },
@@ -69,7 +69,7 @@ export const primeRenovationEnergetiqueMachine = createMachine({
       on: {
         PRIME_ACCORDEE: {
           target: 'realisationTravaux',
-          actions: assign({ montantPrime: (_, event) => event.montant }),
+          actions: assign({ montantPrime: ({ event }) => event.montant }),
         },
       },
       meta: { description: 'Analyse conformité et calcul prime (30-70% selon revenus)' },

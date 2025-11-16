@@ -43,7 +43,7 @@ export const aideLogementMachine = createMachine({
   id: 'aideLogement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AideLogementContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; locataire: Locataire; logement: Logement }
@@ -73,8 +73,8 @@ export const aideLogementMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationBail',
           actions: assign({
-            locataire: (_, event) => event.locataire,
-            logement: (_, event) => event.logement,
+            locataire: ({ event }) => event.locataire,
+            logement: ({ event }) => event.logement,
           }),
         },
       },
@@ -89,7 +89,7 @@ export const aideLogementMachine = createMachine({
         BAIL_VERIFIE: [
           {
             target: 'verificationRevenus',
-            cond: (_, event) => event.enregistre,
+            guard: ({ event }) => event.enregistre,
             actions: assign({
               bailEnregistre: true,
             }),
@@ -110,7 +110,7 @@ export const aideLogementMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'inspectionLogement',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -128,7 +128,7 @@ export const aideLogementMachine = createMachine({
         LOGEMENT_INSPECTE: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.conforme,
+            guard: ({ event }) => event.conforme,
           },
           {
             target: 'miseEnConformite',
@@ -145,7 +145,7 @@ export const aideLogementMachine = createMachine({
       on: {
         LOGEMENT_INSPECTE: {
           target: 'calculMontant',
-          cond: (_, event) => event.conforme,
+          guard: ({ event }) => event.conforme,
         },
       },
 
@@ -159,7 +159,7 @@ export const aideLogementMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'aideApprouvee',
           actions: assign({
-            montantAide: (_, event) => event.montant,
+            montantAide: ({ event }) => event.montant,
           }),
         },
       },
@@ -189,8 +189,8 @@ export const aideLogementMachine = createMachine({
         CHANGEMENT_LOYER: {
           target: 'recalculMontant',
           actions: assign({
-            logement: (context, event) => ({
-              ...context.logement!,
+            logement: ({ context, event }) => ({
+              ...(context.logement || {}),
               loyerMensuel: event.nouveauLoyer,
             }),
           }),
@@ -198,8 +198,8 @@ export const aideLogementMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculMontant',
           actions: assign({
-            locataire: (context, event) => ({
-              ...context.locataire!,
+            locataire: ({ context, event }) => ({
+              ...(context.locataire || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),
@@ -234,7 +234,7 @@ export const aideLogementMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'aideActive',
           actions: assign({
-            montantAide: (_, event) => event.montant,
+            montantAide: ({ event }) => event.montant,
             controleAnnuel: false,
           }),
         },

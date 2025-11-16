@@ -44,7 +44,7 @@ export const fraisProfessionnelsMachine = createMachine({
   id: 'fraisProfessionnels',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as FraisProfessionnelsContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; travailleur: Travailleur }
@@ -75,7 +75,7 @@ export const fraisProfessionnelsMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'saisieFrais',
           actions: assign({
-            travailleur: (_, event) => event.travailleur,
+            travailleur: ({ event }) => event.travailleur,
           }),
         },
       },
@@ -90,8 +90,8 @@ export const fraisProfessionnelsMachine = createMachine({
         AJOUTER_FRAIS: {
           target: 'saisieFrais',
           actions: assign({
-            frais: (context, event) => [...context.frais, event.frais],
-            totalFrais: (context, event) => context.totalFrais + event.frais.montant,
+            frais: ({ context, event }) => [...context.frais, event.frais],
+            totalFrais: ({ context, event }) => context.totalFrais + event.frais.montant,
           }),
         },
         CALCULER_OPTIONS: {
@@ -109,7 +109,7 @@ export const fraisProfessionnelsMachine = createMachine({
         OPTIONS_CALCULEES: {
           target: 'choixMode',
           actions: assign({
-            deduction: (_, event) => event.deduction,
+            deduction: ({ event }) => event.deduction,
           }),
         },
       },
@@ -157,7 +157,7 @@ export const fraisProfessionnelsMachine = createMachine({
         SOUMETTRE_JUSTIFICATIFS: {
           target: 'validationJustificatifs',
           actions: assign({
-            justificatifs: (_, event) => event.documents,
+            justificatifs: ({ event }) => event.documents,
           }),
         },
       },

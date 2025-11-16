@@ -47,7 +47,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
   id: 'deductionEmpruntHypothecaire',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionEmpruntHypothecaireContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; emprunteur: Emprunteur; emprunt: EmpruntHypothecaire }
@@ -78,8 +78,8 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            emprunteur: (_, event) => event.emprunteur,
-            emprunt: (_, event) => event.emprunt,
+            emprunteur: ({ event }) => event.emprunteur,
+            emprunt: ({ event }) => event.emprunt,
           }),
         },
       },
@@ -94,15 +94,15 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
         ],
@@ -157,7 +157,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsBanque: (_, event) => event.documents,
+            attestationsBanque: ({ event }) => event.documents,
           }),
         },
       },
@@ -171,8 +171,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
       on: {
         ATTESTATIONS_VALIDEES: {
           target: 'deductionAccordee',
-          actions: assign({
-            totalDeductAnnuel: (context) => context.deduction?.montantDeductible || 0,
+          actions: assign({ totalDeductAnnuel: ({ context }) => context.deduction?.montantDeductible || 0,
           }),
         },
         ATTESTATIONS_INVALIDES: {
@@ -202,7 +201,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         ANNEE_SUIVANTE: {
           target: 'verificationAnnuelle',
           actions: assign({
-            anneeFiscale: (_, event) => event.annee,
+            anneeFiscale: ({ event }) => event.annee,
           }),
         },
       },
@@ -217,9 +216,9 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'active',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
           {

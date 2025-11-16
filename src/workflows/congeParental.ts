@@ -43,7 +43,7 @@ export const congeParentalMachine = createMachine({
   id: 'congeParental',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CongeParentalContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; parent: ParentDemandeur; enfant: EnfantConcerne }
@@ -73,8 +73,8 @@ export const congeParentalMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            parent: (_, event) => event.parent,
-            enfant: (_, event) => event.enfant,
+            parent: ({ event }) => event.parent,
+            enfant: ({ event }) => event.enfant,
           }),
         },
       },
@@ -89,7 +89,7 @@ export const congeParentalMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'etablissementPlan',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -107,7 +107,7 @@ export const congeParentalMachine = createMachine({
         PLAN_ETABLI: {
           target: 'notificationEmployeur',
           actions: assign({
-            planConge: (_, event) => event.plan,
+            planConge: ({ event }) => event.plan,
           }),
         },
       },
@@ -152,7 +152,7 @@ export const congeParentalMachine = createMachine({
         PLAN_ETABLI: {
           target: 'notificationEmployeur',
           actions: assign({
-            planConge: (_, event) => event.plan,
+            planConge: ({ event }) => event.plan,
           }),
         },
       },

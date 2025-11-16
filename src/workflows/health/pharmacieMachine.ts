@@ -24,7 +24,7 @@ export const pharmacieMachine = createMachine({
   id: 'pharmacie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PharmacieContext,
     events: {} as
       | { type: 'PRESENTER_ORDONNANCE'; prescription: Prescription; patient: any }
@@ -49,8 +49,8 @@ export const pharmacieMachine = createMachine({
         PRESENTER_ORDONNANCE: {
           target: 'validationOrdonnance',
           actions: assign({
-            prescription: (_, event) => event.prescription,
-            patient: (_, event) => event.patient,
+            prescription: ({ event }) => event.prescription,
+            patient: ({ event }) => event.patient,
           }),
         },
       },
@@ -76,8 +76,8 @@ export const pharmacieMachine = createMachine({
         REMBOURSEMENT_CALCULE: {
           target: 'delivrance',
           actions: assign({
-            montantRembourse: (_, event) => event.montant,
-            ticketModerateur: (_, event) => event.ticket,
+            montantRembourse: ({ event }) => event.montant,
+            ticketModerateur: ({ event }) => event.ticket,
           }),
         },
       },

@@ -53,10 +53,7 @@ type ARREvent =
   | { type: 'RECOURS' }
   | { type: 'REVISION'; nouveauMontant: number };
 
-export const allocationRemplacementRevenusMachine = createMachine<
-  ARRContext,
-  ARREvent
->({
+export const allocationRemplacementRevenusMachine = createMachine({
   id: 'allocationRemplacementRevenus',
   initial: 'verification',
   context: {
@@ -87,7 +84,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluationMedicale',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -115,7 +112,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
         EVALUATION_MEDICALE_FAVORABLE: {
           target: 'enqueteSociale',
           actions: assign({
-            handicap: (context, event) => ({
+            handicap: ({ context, event }) => ({
               ...context.handicap,
               reductionCapaciteGain: event.reductionCapaciteGain,
             }),
@@ -155,7 +152,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
         ENQUETE_SOCIALE_TERMINEE: {
           target: 'decision',
           actions: assign({
-            situation: (context, event) => ({
+            situation: ({ context, event }) => ({
               ...context.situation,
               categorie: event.categorie,
             }),
@@ -174,7 +171,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
         DECISION_OCTROI: {
           target: 'paiement',
           actions: assign({
-            montantMensuel: (context, event) => event.montant,
+            montantMensuel: ({ context, event }) => event.montant,
             decision: {
               accordee: true,
               dateEffet: new Date().toISOString().split('T')[0],
@@ -184,7 +181,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
         DECISION_REFUS: {
           target: 'refus',
           actions: assign({
-            decision: (context, event) => ({
+            decision: ({ context, event }) => ({
               accordee: false,
               motifRefus: event.motif,
             }),
@@ -217,7 +214,7 @@ export const allocationRemplacementRevenusMachine = createMachine<
         REVISION: {
           target: 'paiement',
           actions: assign({
-            montantMensuel: (context, event) => event.nouveauMontant,
+            montantMensuel: ({ context, event }) => event.nouveauMontant,
           }),
         },
       },

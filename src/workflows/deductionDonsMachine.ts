@@ -46,7 +46,7 @@ export const deductionDonsMachine = createMachine({
   id: 'deductionDons',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionDonsContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; donateur: Donateur }
@@ -77,7 +77,7 @@ export const deductionDonsMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'saisieDons',
           actions: assign({
-            donateur: (_, event) => event.donateur,
+            donateur: ({ event }) => event.donateur,
           }),
         },
       },
@@ -92,8 +92,8 @@ export const deductionDonsMachine = createMachine({
         AJOUTER_DON: {
           target: 'saisieDons',
           actions: assign({
-            dons: (context, event) => [...context.dons, event.don],
-            totalDons: (context, event) => context.totalDons + event.don.montant,
+            dons: ({ context, event }) => [...context.dons, event.don],
+            totalDons: ({ context, event }) => context.totalDons + event.don.montant,
           }),
         },
         VERIFIER_ORGANISMES: {
@@ -111,7 +111,7 @@ export const deductionDonsMachine = createMachine({
         ORGANISMES_VERIFIES: {
           target: 'calculDeduction',
           actions: assign({
-            dons: (_, event) => event.donsValides,
+            dons: ({ event }) => event.donsValides,
           }),
         },
       },
@@ -126,15 +126,15 @@ export const deductionDonsMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
         ],
@@ -150,7 +150,7 @@ export const deductionDonsMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsDons: (_, event) => event.documents,
+            attestationsDons: ({ event }) => event.documents,
           }),
         },
       },

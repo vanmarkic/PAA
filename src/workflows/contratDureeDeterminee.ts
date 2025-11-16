@@ -25,7 +25,7 @@ export const contratDureeDetermineeMachine = createMachine({
   id: 'contratDureeDeterminee',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as ContratDureeDetermineeContext,
     events: {} as
       | { type: 'CREER_CDD'; employe: string; employeur: string; motifCDD: 'remplacement' | 'surcroit' | 'travaux_temporaires' }
@@ -67,9 +67,9 @@ export const contratDureeDetermineeMachine = createMachine({
         CREER_CDD: {
           target: 'definitionDuree',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            motifCDD: (_, event) => event.motifCDD,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            motifCDD: ({ event }) => event.motifCDD,
             retryCount: 0,
           }),
         },
@@ -85,10 +85,10 @@ export const contratDureeDetermineeMachine = createMachine({
         DEFINIR_DUREE: {
           target: 'justificationMotif',
           actions: assign({
-            dateDebut: (_, event) => event.dateDebut,
-            dateFin: (_, event) => event.dateFin,
-            dureeInitiale: (_, event) => event.dureeInitiale,
-            dureeTotal: (_, event) => event.dureeInitiale,
+            dateDebut: ({ event }) => event.dateDebut,
+            dateFin: ({ event }) => event.dateFin,
+            dureeInitiale: ({ event }) => event.dureeInitiale,
+            dureeTotal: ({ event }) => event.dureeInitiale,
           }),
         },
       },
@@ -192,9 +192,8 @@ export const contratDureeDetermineeMachine = createMachine({
       on: {
         RENOUVELLEMENT_ACCEPTE: {
           target: 'cddActif',
-          actions: assign({
-            renouvellements: (context) => context.renouvellements + 1,
-            dureeTotal: (context, event) => context.dureeTotal + event.nouvelleDuree,
+          actions: assign({ renouvellements: ({ context }) => context.renouvellements + 1,
+            dureeTotal: ({ context, event }) => context.dureeTotal + event.nouvelleDuree,
           }),
         },
         RENOUVELLEMENT_REFUSE: {

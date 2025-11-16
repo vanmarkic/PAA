@@ -42,7 +42,7 @@ export const avantagesNatureMachine = createMachine({
   id: 'avantagesNature',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AvantagesNatureContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; beneficiaire: BeneficiaireAvantage }
@@ -70,8 +70,8 @@ export const avantagesNatureMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'declarationAvantages',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
-            avantagesDeclarés: (_, event) => event.beneficiaire.avantages,
+            beneficiaire: ({ event }) => event.beneficiaire,
+            avantagesDeclarés: ({ event }) => event.beneficiaire.avantages,
           }),
         },
       },
@@ -86,7 +86,7 @@ export const avantagesNatureMachine = createMachine({
         AJOUTER_AVANTAGE: {
           target: 'declarationAvantages',
           actions: assign({
-            avantagesDeclarés: (context, event) => [...context.avantagesDeclarés, event.avantage],
+            avantagesDeclarés: ({ context, event }) => [...context.avantagesDeclarés, event.avantage],
           }),
         },
         CALCULER_VALORISATION: {
@@ -104,8 +104,8 @@ export const avantagesNatureMachine = createMachine({
         VALORISATION_CALCULEE: {
           target: 'verificationValorisatioin',
           actions: assign({
-            valorisation: (_, event) => event.valorisation,
-            totalImposable: (_, event) => event.valorisation.montantImposable,
+            valorisation: ({ event }) => event.valorisation,
+            totalImposable: ({ event }) => event.valorisation.montantImposable,
           }),
         },
       },

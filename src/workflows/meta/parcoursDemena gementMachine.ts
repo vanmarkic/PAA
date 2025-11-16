@@ -42,7 +42,7 @@ export const parcoursDemenagementMachine = createMachine({
   id: 'parcoursDemenagement',
   initial: 'preparationDemenagement',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursDemenagementContext,
     events: {} as
       | { type: 'DEMENAGEMENT_PLANIFIE'; citoyen: Citoyen }
@@ -83,8 +83,8 @@ export const parcoursDemenagementMachine = createMachine({
         DEMENAGEMENT_PLANIFIE: {
           target: 'changementAdresseOfficiel',
           actions: assign({
-            citoyen: (_, event) => event.citoyen,
-            changementCommune: (_, event) =>
+            citoyen: ({ event }) => event.citoyen,
+            changementCommune: ({ event }) =>
               event.citoyen.ancienneAdresse.split(',')[1] !== event.citoyen.nouvelleAdresse.split(',')[1],
             checklistRestante: [
               'Changement adresse commune',
@@ -111,8 +111,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         CHANGEMENT_ADRESSE_EFFECTUE: {
           target: 'redirectionCourrier',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               changementAdresseCommune: true,
             }),
@@ -145,8 +144,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         COURRIER_REDIRIGE: {
           target: 'transfertEnergie',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               courrier: true,
             }),
@@ -175,8 +173,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ENERGIE_TRANSFEREE: {
           target: 'transfertInternet',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               electriciteGaz: true,
               eau: true,
@@ -213,8 +210,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         INTERNET_TRANSFERE: {
           target: 'assuranceHabitation',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               internet: true,
             }),
@@ -240,8 +236,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ASSURANCE_MODIFIEE: {
           target: 'notificationOrganismes',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               assuranceHabitation: true,
             }),
@@ -270,8 +265,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ORGANISMES_NOTIFIES: {
           target: 'demenagementComplete',
-          actions: assign({
-            demarches: (context) => ({
+          actions: assign({ demarches: ({ context }) => ({
               ...context.demarches,
               banque: true,
               employeur: true,

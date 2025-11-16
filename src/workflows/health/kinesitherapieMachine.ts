@@ -20,7 +20,7 @@ interface KinesitherapieContext {
 export const kinesitherapieMachine = createMachine({
   id: 'kinesitherapie',
   initial: 'prescription',
-  schema: {
+  schemas: {
     context: {} as KinesitherapieContext,
     events: {} as
       | { type: 'PRESCRIRE'; prescription: PrescriptionKine; patient: any }
@@ -40,8 +40,8 @@ export const kinesitherapieMachine = createMachine({
         PRESCRIRE: {
           target: 'evaluationInitiale',
           actions: assign({
-            prescription: (_, event) => event.prescription,
-            patient: (_, event) => event.patient,
+            prescription: ({ event }) => event.prescription,
+            patient: ({ event }) => event.patient,
           }),
         },
       },
@@ -60,8 +60,7 @@ export const kinesitherapieMachine = createMachine({
       on: {
         SEANCE_EFFECTUEE: {
           target: 'traitement',
-          actions: assign({
-            seancesEffectuees: (context) => context.seancesEffectuees + 1,
+          actions: assign({ seancesEffectuees: ({ context }) => context.seancesEffectuees + 1,
           }),
         },
         PROGRAMME_COMPLETE: { target: 'evaluationFinale' },

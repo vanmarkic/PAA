@@ -34,7 +34,7 @@ export const aideSansAbriMachine = createMachine({
   id: 'aideSansAbri',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideSansAbriContext,
     events: {} as
       | { type: 'SIGNALER_PERSONNE'; personne: PersonneSansAbri }
@@ -64,7 +64,7 @@ export const aideSansAbriMachine = createMachine({
         SIGNALER_PERSONNE: {
           target: 'premierContact',
           actions: assign({
-            personne: (_, event) => event.personne,
+            personne: ({ event }) => event.personne,
           }),
         },
       },
@@ -121,7 +121,7 @@ export const aideSansAbriMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'accompagnementReintegration',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
           }),
         },
       },
@@ -150,8 +150,7 @@ export const aideSansAbriMachine = createMachine({
       on: {
         ETAPE_COMPLETEE: {
           target: 'hebergementTransition',
-          actions: assign({
-            etapesCompletees: (context) => context.etapesCompletees + 1,
+          actions: assign({ etapesCompletees: ({ context }) => context.etapesCompletees + 1,
           }),
         },
         LOGEMENT_TROUVE: {

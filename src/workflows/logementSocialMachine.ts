@@ -32,7 +32,7 @@ export const logementSocialMachine = createMachine({
   id: 'logementSocial',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as LogementSocialContext,
     events: {} as
       | { type: 'DEMANDER_LOGEMENT'; demandeur: LogementSocialUser }
@@ -61,7 +61,7 @@ export const logementSocialMachine = createMachine({
         DEMANDER_LOGEMENT: {
           target: 'verificationEligibilite',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -76,7 +76,7 @@ export const logementSocialMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'calculPriorite',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
             actions: assign({
               estEligible: true,
             }),
@@ -85,7 +85,7 @@ export const logementSocialMachine = createMachine({
             target: 'ineligible',
             actions: assign({
               estEligible: false,
-              raisonIneligibilite: (_, event) => event.raisons || [],
+              raisonIneligibilite: ({ event }) => event.raisons || [],
             }),
           },
         ],
@@ -101,7 +101,7 @@ export const logementSocialMachine = createMachine({
         PRIORITE_CALCULEE: {
           target: 'inscriptionListeAttente',
           actions: assign({
-            dossier: (context, event) => ({
+            dossier: ({ context, event }) => ({
               dateInscription: new Date(),
               priorite: event.priorite,
               zoneGeographique: '',
@@ -120,7 +120,7 @@ export const logementSocialMachine = createMachine({
         INSCRIPTION_CONFIRMEE: {
           target: 'enAttente',
           actions: assign({
-            dossier: (_, event) => event.dossier,
+            dossier: ({ event }) => event.dossier,
           }),
         },
       },

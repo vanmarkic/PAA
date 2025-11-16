@@ -23,7 +23,7 @@ export const congeMaladieMachine = createMachine({
   id: 'congeMaladie',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as CongeMaladieContext,
     events: {} as
       | { type: 'DECLARER_MALADIE'; employe: string; dateDebut: Date; dureePrevue: number }
@@ -58,9 +58,9 @@ export const congeMaladieMachine = createMachine({
         DECLARER_MALADIE: {
           target: 'certificatRequis',
           actions: assign({
-            employe: (_, event) => event.employe,
-            dateDebut: (_, event) => event.dateDebut,
-            dureePrevue: (_, event) => event.dureePrevue,
+            employe: ({ event }) => event.employe,
+            dateDebut: ({ event }) => event.dateDebut,
+            dureePrevue: ({ event }) => event.dureePrevue,
             retryCount: 0,
           }),
         },
@@ -154,7 +154,7 @@ export const congeMaladieMachine = createMachine({
         PROLONGER_CONGE: {
           target: 'congeMaladieActif',
           actions: assign({
-            dureePrevue: (_, event) => event.nouvelleDuree,
+            dureePrevue: ({ event }) => event.nouvelleDuree,
             prolongations: (context) => context.prolongations + 1,
           }),
         },
@@ -170,7 +170,7 @@ export const congeMaladieMachine = createMachine({
         PLANIFIER_REPRISE: {
           target: 'reprise',
           actions: assign({
-            dateReprise: (_, event) => event.dateReprise,
+            dateReprise: ({ event }) => event.dateReprise,
           }),
         },
       },

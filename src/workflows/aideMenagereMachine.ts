@@ -34,7 +34,7 @@ export const aideMenagereMachine = createMachine({
   id: 'aideMenagere',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideMenagereContext,
     events: {} as
       | { type: 'DEMANDER_AIDE'; beneficiaire: BeneficiaireAide }
@@ -66,7 +66,7 @@ export const aideMenagereMachine = createMachine({
         DEMANDER_AIDE: {
           target: 'evaluationBesoins',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -93,7 +93,7 @@ export const aideMenagereMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'attributionAide',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
           }),
         },
       },
@@ -108,7 +108,7 @@ export const aideMenagereMachine = createMachine({
         DESIGNER_AIDE: {
           target: 'serviceEnCours',
           actions: assign({
-            aideDesignee: (_, event) => event.nom,
+            aideDesignee: ({ event }) => event.nom,
             serviceActif: true,
           }),
         },
@@ -123,8 +123,7 @@ export const aideMenagereMachine = createMachine({
       on: {
         INTERVENTION_EFFECTUEE: {
           target: 'serviceEnCours',
-          actions: assign({
-            interventionsEffectuees: (context) => context.interventionsEffectuees + 1,
+          actions: assign({ interventionsEffectuees: ({ context }) => context.interventionsEffectuees + 1,
           }),
         },
         REEVALUER_BESOINS: {
@@ -148,7 +147,7 @@ export const aideMenagereMachine = createMachine({
         AJUSTER_PLAN: {
           target: 'serviceEnCours',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
           }),
         },
         ARRETER_SERVICE: {

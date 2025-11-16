@@ -44,10 +44,7 @@ type CarteStationnementEvent =
   | { type: 'RENOUVELER' }
   | { type: 'DELIVRER_CARTE' };
 
-export const carteStationnementHandicapMachine = createMachine<
-  CarteStationnementContext,
-  CarteStationnementEvent
->({
+export const carteStationnementHandicapMachine = createMachine({
   id: 'carteStationnementHandicap',
   initial: 'preparation',
   context: {
@@ -81,7 +78,7 @@ export const carteStationnementHandicapMachine = createMachine<
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluation',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
             numeroReference: `STAT-${Date.now()}`,

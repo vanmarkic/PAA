@@ -32,7 +32,7 @@ export const mediationFamilialeMachine = createMachine({
   id: 'mediationFamiliale',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as MediationFamilialeContext,
     events: {} as
       | { type: 'DEMANDER_MEDIATION'; parties: PartiesMediation }
@@ -62,7 +62,7 @@ export const mediationFamilialeMachine = createMachine({
         DEMANDER_MEDIATION: {
           target: 'seanceInformation',
           actions: assign({
-            parties: (_, event) => event.parties,
+            parties: ({ event }) => event.parties,
           }),
         },
       },
@@ -103,8 +103,7 @@ export const mediationFamilialeMachine = createMachine({
       on: {
         SEANCE_MEDIATION: {
           target: 'processusMediation',
-          actions: assign({
-            seancesEffectuees: (context) => context.seancesEffectuees + 1,
+          actions: assign({ seancesEffectuees: ({ context }) => context.seancesEffectuees + 1,
           }),
         },
         ACCORD_PARTIEL: {
@@ -113,7 +112,7 @@ export const mediationFamilialeMachine = createMachine({
         ACCORD_TOTAL: {
           target: 'redactionAccord',
           actions: assign({
-            accord: (_, event) => event.accord,
+            accord: ({ event }) => event.accord,
             accordTrouve: true,
           }),
         },

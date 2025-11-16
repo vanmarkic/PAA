@@ -41,7 +41,7 @@ export const primeNaissanceMachine = createMachine({
   id: 'primeNaissance',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PrimeNaissanceContext,
     events: {} as
       | { type: 'DECLARER_NAISSANCE'; naissance: Naissance; parent: Parent }
@@ -68,8 +68,8 @@ export const primeNaissanceMachine = createMachine({
         DECLARER_NAISSANCE: {
           target: 'declarationRecue',
           actions: assign({
-            naissance: (_, event) => event.naissance,
-            parent: (_, event) => event.parent,
+            naissance: ({ event }) => event.naissance,
+            parent: ({ event }) => event.parent,
           }),
         },
       },
@@ -132,7 +132,7 @@ export const primeNaissanceMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'paiementEnCours',
           actions: assign({
-            montantPrime: (_, event) => event.montant,
+            montantPrime: ({ event }) => event.montant,
           }),
         },
       },

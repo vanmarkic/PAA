@@ -44,7 +44,7 @@ export const quotientConjugalMachine = createMachine({
   id: 'quotientConjugal',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as QuotientConjugalContext,
     events: {} as
       | { type: 'DEMARRER_CALCUL'; couple: Couple }
@@ -72,7 +72,7 @@ export const quotientConjugalMachine = createMachine({
         DEMARRER_CALCUL: {
           target: 'verificationEligibilite',
           actions: assign({
-            couple: (_, event) => event.couple,
+            couple: ({ event }) => event.couple,
           }),
         },
       },
@@ -87,15 +87,15 @@ export const quotientConjugalMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'applicable',
-            cond: (_, event) => event.quotient.estApplicable,
+            guard: ({ event }) => event.quotient.estApplicable,
             actions: assign({
-              quotient: (_, event) => event.quotient,
+              quotient: ({ event }) => event.quotient,
             }),
           },
           {
             target: 'nonApplicable',
             actions: assign({
-              quotient: (_, event) => event.quotient,
+              quotient: ({ event }) => event.quotient,
             }),
           },
         ],
@@ -150,7 +150,7 @@ export const quotientConjugalMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsIdentite: (_, event) => event.documents,
+            documentsIdentite: ({ event }) => event.documents,
           }),
         },
       },

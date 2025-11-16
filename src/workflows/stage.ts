@@ -26,7 +26,7 @@ export const stageMachine = createMachine({
   id: 'stage',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as StageContext,
     events: {} as
       | { type: 'INITIER_STAGE'; stagiaire: string; entreprise: string; etablissementEnseignement: string; typeStage: 'observation' | 'immersion' | 'insertion' }
@@ -70,10 +70,10 @@ export const stageMachine = createMachine({
         INITIER_STAGE: {
           target: 'definitionModalites',
           actions: assign({
-            stagiaire: (_, event) => event.stagiaire,
-            entreprise: (_, event) => event.entreprise,
-            etablissementEnseignement: (_, event) => event.etablissementEnseignement,
-            typeStage: (_, event) => event.typeStage,
+            stagiaire: ({ event }) => event.stagiaire,
+            entreprise: ({ event }) => event.entreprise,
+            etablissementEnseignement: ({ event }) => event.etablissementEnseignement,
+            typeStage: ({ event }) => event.typeStage,
             retryCount: 0,
           }),
         },
@@ -89,9 +89,9 @@ export const stageMachine = createMachine({
         DEFINIR_MODALITES: {
           target: 'verificationAssurance',
           actions: assign({
-            duree: (_, event) => event.duree,
-            dateDebut: (_, event) => event.dateDebut,
-            dateFin: (_, event) => event.dateFin,
+            duree: ({ event }) => event.duree,
+            dateDebut: ({ event }) => event.dateDebut,
+            dateFin: ({ event }) => event.dateFin,
           }),
         },
       },
@@ -166,7 +166,7 @@ export const stageMachine = createMachine({
         DESIGNER_TUTEUR: {
           target: 'pretPourDebut',
           actions: assign({
-            tuteur: (_, event) => event.tuteur,
+            tuteur: ({ event }) => event.tuteur,
           }),
         },
       },
@@ -214,7 +214,7 @@ export const stageMachine = createMachine({
         EVALUATION_INTERMEDIAIRE: {
           target: 'stageEnCours',
           actions: assign({
-            evaluations: (context, event) => [...context.evaluations, event.note],
+            evaluations: ({ context, event }) => [...context.evaluations, event.note],
           }),
         },
       },

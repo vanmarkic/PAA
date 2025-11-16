@@ -26,7 +26,7 @@ export const repasScolairesGratuitsMachine = createMachine({
   id: 'repasScolairesGratuits',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RepasScolairesContext,
     events: {} as
       | { type: 'DEMANDER_AIDE'; famille: FamilleDemandeuse }
@@ -55,7 +55,7 @@ export const repasScolairesGratuitsMachine = createMachine({
         DEMANDER_AIDE: {
           target: 'verificationJustificatifs',
           actions: assign({
-            famille: (_, event) => event.famille,
+            famille: ({ event }) => event.famille,
           }),
         },
       },
@@ -77,7 +77,7 @@ export const repasScolairesGratuitsMachine = createMachine({
           target: 'justificatifsManquants',
           actions: assign({
             justificatifsValides: false,
-            erreurs: (_, event) => event.erreurs,
+            erreurs: ({ event }) => event.erreurs,
           }),
         },
       },
@@ -107,10 +107,10 @@ export const repasScolairesGratuitsMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'aideApprouvee',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
             actions: assign({
               estEligible: true,
-              montantAide: (_, event) => event.montant || 0,
+              montantAide: ({ event }) => event.montant || 0,
             }),
           },
           {
@@ -132,7 +132,7 @@ export const repasScolairesGratuitsMachine = createMachine({
         APPROUVER_AIDE: {
           target: 'aideActive',
           actions: assign({
-            periode: (_, event) => event.periode,
+            periode: ({ event }) => event.periode,
           }),
         },
       },

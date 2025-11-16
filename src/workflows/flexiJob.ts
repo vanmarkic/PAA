@@ -24,7 +24,7 @@ export const flexiJobMachine = createMachine({
   id: 'flexiJob',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as FlexiJobContext,
     events: {} as
       | { type: 'DEMANDER_FLEXIJOB'; travailleur: string; employeurFlexijob: string; secteur: 'horeca' | 'commerce' }
@@ -63,9 +63,9 @@ export const flexiJobMachine = createMachine({
         DEMANDER_FLEXIJOB: {
           target: 'verificationEligibilite',
           actions: assign({
-            travailleur: (_, event) => event.travailleur,
-            employeurFlexijob: (_, event) => event.employeurFlexijob,
-            secteur: (_, event) => event.secteur,
+            travailleur: ({ event }) => event.travailleur,
+            employeurFlexijob: ({ event }) => event.employeurFlexijob,
+            secteur: ({ event }) => event.secteur,
             retryCount: 0,
           }),
         },
@@ -108,8 +108,8 @@ export const flexiJobMachine = createMachine({
         ENREGISTRER_EMPLOYEUR: {
           target: 'creationContrat',
           actions: assign({
-            employeurPrincipal: (_, event) => event.employeurPrincipal || null,
-            heuresEmployeurPrincipal: (_, event) => event.heuresEmployeurPrincipal || 0,
+            employeurPrincipal: ({ event }) => event.employeurPrincipal || null,
+            heuresEmployeurPrincipal: ({ event }) => event.heuresEmployeurPrincipal || 0,
           }),
         },
       },
@@ -124,7 +124,7 @@ export const flexiJobMachine = createMachine({
         CREER_CONTRAT: {
           target: 'declarationONSS',
           actions: assign({
-            tarifHoraire: (_, event) => event.tarifHoraire,
+            tarifHoraire: ({ event }) => event.tarifHoraire,
           }),
         },
       },
@@ -154,7 +154,7 @@ export const flexiJobMachine = createMachine({
         ENREGISTRER_HEURES: {
           target: 'calculCotisations',
           actions: assign({
-            heuresFlexijob: (context, event) => context.heuresFlexijob + event.heures,
+            heuresFlexijob: ({ context, event }) => context.heuresFlexijob + event.heures,
           }),
         },
         VERIFIER_CONDITIONS: {
@@ -175,7 +175,7 @@ export const flexiJobMachine = createMachine({
         CALCULER_COTISATIONS: {
           target: 'flexijobActif',
           actions: assign({
-            cotisationsSociales: (_, event) => event.cotisations,
+            cotisationsSociales: ({ event }) => event.cotisations,
           }),
         },
       },

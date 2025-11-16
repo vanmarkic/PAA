@@ -25,7 +25,7 @@ export const permisEnvironnementMachine = createMachine({
   id: 'permisEnvironnement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PermisEnvironnementContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandePermis }
@@ -53,9 +53,9 @@ export const permisEnvironnementMachine = createMachine({
         DEPOSER_DEMANDE: {
           target: 'examenRecevabilite',
           actions: assign({
-            demande: (_, event) => event.demande,
-            enquetePubliqueRequise: (_, event) => event.demande.classePermis === '1',
-            etudeImpactRequise: (_, event) => event.demande.impactEnvironnemental === 'eleve',
+            demande: ({ event }) => event.demande,
+            enquetePubliqueRequise: ({ event }) => event.demande.classePermis === '1',
+            etudeImpactRequise: ({ event }) => event.demande.impactEnvironnemental === 'eleve',
           }),
         },
       },
@@ -67,11 +67,11 @@ export const permisEnvironnementMachine = createMachine({
         DOSSIER_COMPLET: [
           {
             target: 'etudeImpact',
-            cond: (context) => context.etudeImpactRequise,
+            guard: (context) => context.etudeImpactRequise,
           },
           {
             target: 'enquetePublique',
-            cond: (context) => context.enquetePubliqueRequise,
+            guard: (context) => context.enquetePubliqueRequise,
           },
           {
             target: 'instructionTechnique',

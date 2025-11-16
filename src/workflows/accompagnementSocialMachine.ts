@@ -33,7 +33,7 @@ export const accompagnementSocialMachine = createMachine({
   id: 'accompagnementSocial',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AccompagnementSocialContext,
     events: {} as
       | { type: 'DEMANDER_ACCOMPAGNEMENT'; beneficiaire: Beneficiaire }
@@ -65,7 +65,7 @@ export const accompagnementSocialMachine = createMachine({
         DEMANDER_ACCOMPAGNEMENT: {
           target: 'evaluationSociale',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -95,7 +95,7 @@ export const accompagnementSocialMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'validationPlan',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
           }),
         },
       },
@@ -127,14 +127,12 @@ export const accompagnementSocialMachine = createMachine({
       on: {
         RENDEZVOUS_EFFECTUE: {
           target: 'accompagnementEnCours',
-          actions: assign({
-            rendezvousEffectues: (context) => context.rendezvousEffectues + 1,
+          actions: assign({ rendezvousEffectues: ({ context }) => context.rendezvousEffectues + 1,
           }),
         },
         OBJECTIF_ATTEINT: {
           target: 'accompagnementEnCours',
-          actions: assign({
-            objectifsAtteints: (context) => context.objectifsAtteints + 1,
+          actions: assign({ objectifsAtteints: ({ context }) => context.objectifsAtteints + 1,
           }),
         },
         REEVALUER_SITUATION: {

@@ -28,14 +28,11 @@ interface ReductionTransportContext {
 
 type ReductionTransportEvent =
   | { type: 'VERIFIER_ELIGIBILITE'; data: ReductionTransportContext }
-  | { type: 'ELIGIBLE'; type: string }
+  | { type: 'ELIGIBLE'; typeReduction: string }
   | { type: 'DEMANDER_CARTE' }
   | { type: 'CARTE_OBTENUE' };
 
-export const reductionTransportPublicMachine = createMachine<
-  ReductionTransportContext,
-  ReductionTransportEvent
->({
+export const reductionTransportPublicMachine = createMachine({
   id: 'reductionTransportPublic',
   initial: 'information',
   context: {

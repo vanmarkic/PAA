@@ -36,7 +36,7 @@ export const deductionHabitationMachine = createMachine({
   id: 'deductionHabitation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionHabitationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: Proprietaire; annee: number }
@@ -64,8 +64,8 @@ export const deductionHabitationMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationPropriete',
           actions: assign({
-            proprietaire: (_, event) => event.proprietaire,
-            anneeFiscale: (_, event) => event.annee,
+            proprietaire: ({ event }) => event.proprietaire,
+            anneeFiscale: ({ event }) => event.annee,
           }),
         },
       },
@@ -80,7 +80,7 @@ export const deductionHabitationMachine = createMachine({
         PROPRIETE_VERIFIEE: [
           {
             target: 'calculDeduction',
-            cond: (_, event) => event.estProprietaire,
+            guard: ({ event }) => event.estProprietaire,
           },
           {
             target: 'nonProprietaire',
@@ -110,15 +110,15 @@ export const deductionHabitationMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: ({ event }) => event.resultat.estEligible,
             actions: assign({
-              resultatDeduction: (_, event) => event.resultat,
+              resultatDeduction: ({ event }) => event.resultat,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              resultatDeduction: (_, event) => event.resultat,
+              resultatDeduction: ({ event }) => event.resultat,
             }),
           },
         ],
@@ -134,7 +134,7 @@ export const deductionHabitationMachine = createMachine({
         DOCUMENTS_SOUMIS: {
           target: 'validationDocuments',
           actions: assign({
-            preuvesPropriete: (_, event) => event.documents,
+            preuvesPropriete: ({ event }) => event.documents,
           }),
         },
       },
@@ -160,8 +160,7 @@ export const deductionHabitationMachine = createMachine({
       on: {
         VALIDATION_REUSSIE: {
           target: 'deductionActive',
-          actions: assign({
-            montantAnnuel: (context) => context.resultatDeduction?.montantDeduction || 0,
+          actions: assign({ montantAnnuel: ({ context }) => context.resultatDeduction?.montantDeduction || 0,
           }),
         },
         VALIDATION_ECHOUEE: {
@@ -179,7 +178,7 @@ export const deductionHabitationMachine = createMachine({
         ANNEE_SUIVANTE: {
           target: 'verificationAnnuelle',
           actions: assign({
-            anneeFiscale: (_, event) => event.nouvelleAnnee,
+            anneeFiscale: ({ event }) => event.nouvelleAnnee,
           }),
         },
       },
@@ -194,7 +193,7 @@ export const deductionHabitationMachine = createMachine({
         PROPRIETE_VERIFIEE: [
           {
             target: 'deductionActive',
-            cond: (_, event) => event.estProprietaire,
+            guard: ({ event }) => event.estProprietaire,
           },
           {
             target: 'termine',

@@ -42,10 +42,7 @@ type MaladieProfessionnelleEvent =
   | { type: 'EVALUATION_IPP'; taux: number }
   | { type: 'RECOURS' };
 
-export const maladieProfessionnelleMachine = createMachine<
-  MaladieProfessionnelleContext,
-  MaladieProfessionnelleEvent
->({
+export const maladieProfessionnelleMachine = createMachine({
   id: 'maladieProfessionnelle',
   initial: 'information',
   context: {
@@ -173,7 +170,7 @@ export const maladieProfessionnelleMachine = createMachine<
           bareme: 'Barème spécifique maladies professionnelles',
           indemnisation: {
             moins_16_pourcent: 'Capital unique',
-            16_pourcent_et_plus: 'Rente mensuelle viagère',
+            '16_pourcent_et_plus': 'Rente mensuelle viagère',
           },
         },
         montantRente: {

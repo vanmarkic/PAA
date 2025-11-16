@@ -34,7 +34,7 @@ export const creditImpotMachine = createMachine({
   id: 'creditImpot',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CreditImpotContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; contribuable: Contribuable }
@@ -63,7 +63,7 @@ export const creditImpotMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            contribuable: (_, event) => event.contribuable,
+            contribuable: ({ event }) => event.contribuable,
             tentativesVerification: 0,
           }),
         },
@@ -79,15 +79,15 @@ export const creditImpotMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: ({ event }) => event.resultat.estEligible,
             actions: assign({
-              resultatEligibilite: (_, event) => event.resultat,
+              resultatEligibilite: ({ event }) => event.resultat,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              resultatEligibilite: (_, event) => event.resultat,
+              resultatEligibilite: ({ event }) => event.resultat,
             }),
           },
         ],
@@ -142,7 +142,7 @@ export const creditImpotMachine = createMachine({
         DOCUMENTS_SOUMIS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsJustificatifs: (_, event) => event.documents,
+            documentsJustificatifs: ({ event }) => event.documents,
           }),
         },
       },
@@ -159,8 +159,7 @@ export const creditImpotMachine = createMachine({
         },
         DOCUMENTS_INVALIDES: {
           target: 'soumissionDocuments',
-          actions: assign({
-            tentativesVerification: (context) => context.tentativesVerification + 1,
+          actions: assign({ tentativesVerification: ({ context }) => context.tentativesVerification + 1,
           }),
         },
       },
@@ -175,7 +174,7 @@ export const creditImpotMachine = createMachine({
         CREDIT_APPROUVE: {
           target: 'approuve',
           actions: assign({
-            montantFinal: (_, event) => event.montant,
+            montantFinal: ({ event }) => event.montant,
           }),
         },
       },

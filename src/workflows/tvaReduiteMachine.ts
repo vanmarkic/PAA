@@ -45,7 +45,7 @@ export const tvaReduiteMachine = createMachine({
   id: 'tvaReduite',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as TvaReduiteContext,
     events: {} as
       | { type: 'DEMARRER_TRANSACTION'; transaction: TransactionTVA }
@@ -74,7 +74,7 @@ export const tvaReduiteMachine = createMachine({
         DEMARRER_TRANSACTION: {
           target: 'verificationEligibilite',
           actions: assign({
-            transaction: (_, event) => event.transaction,
+            transaction: ({ event }) => event.transaction,
           }),
         },
       },
@@ -89,8 +89,8 @@ export const tvaReduiteMachine = createMachine({
         ELIGIBILITE_DETERMINEE: {
           target: 'eligibiliteVerifiee',
           actions: assign({
-            produitsEligibles: (_, event) => event.eligibles,
-            produitsNonEligibles: (_, event) => event.nonEligibles,
+            produitsEligibles: ({ event }) => event.eligibles,
+            produitsNonEligibles: ({ event }) => event.nonEligibles,
           }),
         },
       },
@@ -117,7 +117,7 @@ export const tvaReduiteMachine = createMachine({
         TVA_CALCULEE: {
           target: 'tvaCalculee',
           actions: assign({
-            calcul: (_, event) => event.calcul,
+            calcul: ({ event }) => event.calcul,
           }),
         },
       },
@@ -132,7 +132,7 @@ export const tvaReduiteMachine = createMachine({
         SOUMETTRE_JUSTIFICATIFS: {
           target: 'validationJustificatifs',
           actions: assign({
-            justificatifs: (_, event) => event.documents,
+            justificatifs: ({ event }) => event.documents,
           }),
         },
       },

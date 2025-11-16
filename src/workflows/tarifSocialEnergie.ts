@@ -43,7 +43,7 @@ export const tarifSocialEnergieMachine = createMachine({
   id: 'tarifSocialEnergie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as TarifSocialEnergieContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; beneficiaire: Beneficiaire }
@@ -72,7 +72,7 @@ export const tarifSocialEnergieMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
         VERIFICATION_AUTOMATIQUE: {
@@ -90,13 +90,13 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'calculTarif',
-            cond: (_, event) =>
+            guard: ({ event }) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.beneficiaireGRAPA ||
               event.conditions.beneficiaireAllocationHandicap,
             actions: assign({
-              conditionsEligibilite: (_, event) => event.conditions,
+              conditionsEligibilite: ({ event }) => event.conditions,
               activationAutomatique: true,
             }),
           },
@@ -116,9 +116,9 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'demandeAttestation',
-            cond: (_, event) => event.conditions.revenusInferieursPlafond,
+            guard: ({ event }) => event.conditions.revenusInferieursPlafond,
             actions: assign({
-              conditionsEligibilite: (_, event) => event.conditions,
+              conditionsEligibilite: ({ event }) => event.conditions,
             }),
           },
           {
@@ -152,7 +152,7 @@ export const tarifSocialEnergieMachine = createMachine({
         TARIF_CALCULE: {
           target: 'notificationFournisseur',
           actions: assign({
-            tarifSocial: (_, event) => event.tarif,
+            tarifSocial: ({ event }) => event.tarif,
           }),
         },
       },
@@ -206,12 +206,12 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'tarifActif',
-            cond: (_, event) =>
+            guard: ({ event }) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.revenusInferieursPlafond,
             actions: assign({
-              conditionsEligibilite: (_, event) => event.conditions,
+              conditionsEligibilite: ({ event }) => event.conditions,
             }),
           },
           {

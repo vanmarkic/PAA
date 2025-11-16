@@ -25,7 +25,7 @@ export const reclamationConsommationMachine = createMachine({
   id: 'reclamationConsommation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ReclamationConsommationContext,
     events: {} as
       | { type: 'DEPOSER_RECLAMATION'; reclamation: Reclamation }
@@ -53,7 +53,7 @@ export const reclamationConsommationMachine = createMachine({
         DEPOSER_RECLAMATION: {
           target: 'reclamationVendeur',
           actions: assign({
-            reclamation: (_, event) => event.reclamation,
+            reclamation: ({ event }) => event.reclamation,
             reclamationDeposeAupresVendeur: true,
           }),
         },

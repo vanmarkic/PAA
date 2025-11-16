@@ -27,7 +27,7 @@ export const banqueAlimentaireMachine = createMachine({
   id: 'banqueAlimentaire',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as BanqueAlimentaireContext,
     events: {} as
       | { type: 'INSCRIRE_MEMBRE'; membre: MembreBanqueAlimentaire }
@@ -58,7 +58,7 @@ export const banqueAlimentaireMachine = createMachine({
         INSCRIRE_MEMBRE: {
           target: 'verificationInscription',
           actions: assign({
-            membre: (_, event) => event.membre,
+            membre: ({ event }) => event.membre,
           }),
         },
       },
@@ -74,7 +74,7 @@ export const banqueAlimentaireMachine = createMachine({
           target: 'membreActif',
           actions: assign({
             estInscrit: true,
-            numeroMembre: (_, event) => event.numeroMembre,
+            numeroMembre: ({ event }) => event.numeroMembre,
           }),
         },
         INSCRIPTION_REFUSEE: {
@@ -126,7 +126,7 @@ export const banqueAlimentaireMachine = createMachine({
           target: 'preparationColis',
           actions: assign({
             quotaAtteint: false,
-            prochainRetrait: (_, event) => event.prochainRetrait,
+            prochainRetrait: ({ event }) => event.prochainRetrait,
           }),
         },
         QUOTA_DEPASSE: {
@@ -159,7 +159,7 @@ export const banqueAlimentaireMachine = createMachine({
         DISTRIBUER_COLIS: {
           target: 'membreActif',
           actions: assign({
-            dernierRetrait: (_, event) => event.date,
+            dernierRetrait: ({ event }) => event.date,
           }),
         },
       },

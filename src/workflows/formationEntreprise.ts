@@ -25,7 +25,7 @@ export const formationEntrepriseMachine = createMachine({
   id: 'formationEntreprise',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as FormationEntrepriseContext,
     events: {} as
       | { type: 'IDENTIFIER_BESOIN'; employe: string; entreprise: string; domaineFormation: string }
@@ -68,9 +68,9 @@ export const formationEntrepriseMachine = createMachine({
         IDENTIFIER_BESOIN: {
           target: 'evaluationCompetences',
           actions: assign({
-            employe: (_, event) => event.employe,
-            entreprise: (_, event) => event.entreprise,
-            domaineFormation: (_, event) => event.domaineFormation,
+            employe: ({ event }) => event.employe,
+            entreprise: ({ event }) => event.entreprise,
+            domaineFormation: ({ event }) => event.domaineFormation,
             retryCount: 0,
           }),
         },
@@ -98,7 +98,7 @@ export const formationEntrepriseMachine = createMachine({
         CHOISIR_TYPE_FORMATION: {
           target: 'selectionFormation',
           actions: assign({
-            typeFormation: (_, event) => event.typeFormation,
+            typeFormation: ({ event }) => event.typeFormation,
           }),
         },
       },
@@ -113,8 +113,8 @@ export const formationEntrepriseMachine = createMachine({
         SELECTIONNER_FORMATION: {
           target: 'demandeFinancement',
           actions: assign({
-            dureeHeures: (_, event) => event.dureeHeures,
-            coutFormation: (_, event) => event.coutFormation,
+            dureeHeures: ({ event }) => event.dureeHeures,
+            coutFormation: ({ event }) => event.coutFormation,
           }),
         },
       },
@@ -204,7 +204,7 @@ export const formationEntrepriseMachine = createMachine({
         REUSSIR_FORMATION: {
           target: 'formationReussie',
           actions: assign({
-            competencesAcquises: (_, event) => event.competencesAcquises,
+            competencesAcquises: ({ event }) => event.competencesAcquises,
           }),
         },
         ECHOUER_FORMATION: {

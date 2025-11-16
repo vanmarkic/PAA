@@ -41,7 +41,7 @@ export const allocationIntegrationMachine = createMachine({
   id: 'allocationIntegration',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationIntegrationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; beneficiaire: BeneficiaireIntegration }
@@ -68,7 +68,7 @@ export const allocationIntegrationMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationARR',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -95,7 +95,7 @@ export const allocationIntegrationMachine = createMachine({
         EVALUATION_COMPLETE: {
           target: 'determinationCategorie',
           actions: assign({
-            evaluationAutonomie: (_, event) => event.evaluation,
+            evaluationAutonomie: ({ event }) => event.evaluation,
           }),
         },
       },
@@ -110,7 +110,7 @@ export const allocationIntegrationMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'calculMontant',
           actions: assign({
-            montantIntegration: (_, event) => event.montant,
+            montantIntegration: ({ event }) => event.montant,
           }),
         },
       },
@@ -152,9 +152,9 @@ export const allocationIntegrationMachine = createMachine({
         EVALUATION_COMPLETE: [
           {
             target: 'determinationCategorie',
-            cond: (_, event) => event.evaluation.categorieIntegration > 0,
+            guard: ({ event }) => event.evaluation.categorieIntegration > 0,
             actions: assign({
-              evaluationAutonomie: (_, event) => event.evaluation,
+              evaluationAutonomie: ({ event }) => event.evaluation,
             }),
           },
           {

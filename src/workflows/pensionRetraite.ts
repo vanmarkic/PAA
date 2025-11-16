@@ -44,7 +44,7 @@ export const pensionRetraiteMachine = createMachine({
   id: 'pensionRetraite',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PensionRetraiteContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; pensionnaire: Pensionnaire }
@@ -73,7 +73,7 @@ export const pensionRetraiteMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationAge',
           actions: assign({
-            pensionnaire: (_, event) => event.pensionnaire,
+            pensionnaire: ({ event }) => event.pensionnaire,
           }),
         },
       },
@@ -109,7 +109,7 @@ export const pensionRetraiteMachine = createMachine({
         CARRIERE_CALCULEE: {
           target: 'calculMontant',
           actions: assign({
-            calculCarriere: (_, event) => event.carriere,
+            calculCarriere: ({ event }) => event.carriere,
           }),
         },
       },
@@ -124,7 +124,7 @@ export const pensionRetraiteMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'verificationDroits',
           actions: assign({
-            montantPension: (_, event) => event.montant,
+            montantPension: ({ event }) => event.montant,
           }),
         },
       },
@@ -178,7 +178,7 @@ export const pensionRetraiteMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'pensionActive',
           actions: assign({
-            montantPension: (_, event) => event.montant,
+            montantPension: ({ event }) => event.montant,
           }),
         },
       },

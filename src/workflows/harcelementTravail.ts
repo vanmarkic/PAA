@@ -25,7 +25,7 @@ export const harcelementTravailMachine = createMachine({
   id: 'harcelementTravail',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as HarcelementTravailContext,
     events: {} as
       | { type: 'SIGNALER_HARCELEMENT'; victime: string; typeHarcelement: 'moral' | 'sexuel' | 'mixte'; harceleur: string }
@@ -68,9 +68,9 @@ export const harcelementTravailMachine = createMachine({
         SIGNALER_HARCELEMENT: {
           target: 'documentationFaits',
           actions: assign({
-            victime: (_, event) => event.victime,
-            typeHarcelement: (_, event) => event.typeHarcelement,
-            harceleur: (_, event) => event.harceleur,
+            victime: ({ event }) => event.victime,
+            typeHarcelement: ({ event }) => event.typeHarcelement,
+            harceleur: ({ event }) => event.harceleur,
             retryCount: 0,
           }),
         },
@@ -86,8 +86,8 @@ export const harcelementTravailMachine = createMachine({
         DOCUMENTER_FAITS: {
           target: 'collecteTemoignages',
           actions: assign({
-            datesPremiersFaits: (_, event) => event.datesPremiersFaits,
-            preuves: (_, event) => event.preuves,
+            datesPremiersFaits: ({ event }) => event.datesPremiersFaits,
+            preuves: ({ event }) => event.preuves,
           }),
         },
       },
@@ -102,7 +102,7 @@ export const harcelementTravailMachine = createMachine({
         AJOUTER_TEMOINS: {
           target: 'choixProcedure',
           actions: assign({
-            temoins: (_, event) => event.temoins,
+            temoins: ({ event }) => event.temoins,
           }),
         },
       },
@@ -181,7 +181,7 @@ export const harcelementTravailMachine = createMachine({
         MESURES_PROTECTION: {
           target: 'sanctionDisciplinaire',
           actions: assign({
-            mesuresProtection: (_, event) => event.mesures,
+            mesuresProtection: ({ event }) => event.mesures,
           }),
         },
       },

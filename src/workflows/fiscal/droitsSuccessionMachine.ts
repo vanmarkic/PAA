@@ -40,10 +40,7 @@ type DroitsSuccessionEvent =
   | { type: 'PAYER_DROITS'; montant: number }
   | { type: 'DEMANDER_ECHEANCIER' };
 
-export const droitsSuccessionMachine = createMachine<
-  DroitsSuccessionContext,
-  DroitsSuccessionEvent
->({
+export const droitsSuccessionMachine = createMachine({
   id: 'droitsSuccession',
   initial: 'inventaire',
   context: {

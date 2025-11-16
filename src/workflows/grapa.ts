@@ -45,7 +45,7 @@ export const grapaMachine = createMachine({
   id: 'grapa',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as GRAPAContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurGRAPA }
@@ -73,7 +73,7 @@ export const grapaMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationAge',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -88,7 +88,7 @@ export const grapaMachine = createMachine({
         AGE_VERIFIE: [
           {
             target: 'verificationResidence',
-            cond: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -118,7 +118,7 @@ export const grapaMachine = createMachine({
         ENQUETE_COMPLETE: {
           target: 'calculMontant',
           actions: assign({
-            enqueteRessources: (_, event) => event.enquete,
+            enqueteRessources: ({ event }) => event.enquete,
           }),
         },
       },
@@ -133,7 +133,7 @@ export const grapaMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'verificationDroits',
           actions: assign({
-            montantGRAPA: (_, event) => event.montant,
+            montantGRAPA: ({ event }) => event.montant,
           }),
         },
       },
@@ -163,7 +163,7 @@ export const grapaMachine = createMachine({
         CHANGEMENT_RESSOURCES: {
           target: 'recalculMontant',
           actions: assign({
-            enqueteRessources: (_, event) => event.nouvelles,
+            enqueteRessources: ({ event }) => event.nouvelles,
           }),
         },
         PENSION_OCTROYEE: {
@@ -181,7 +181,7 @@ export const grapaMachine = createMachine({
         ENQUETE_COMPLETE: {
           target: 'recalculMontant',
           actions: assign({
-            enqueteRessources: (_, event) => event.enquete,
+            enqueteRessources: ({ event }) => event.enquete,
             enqueteAnnuelle: true,
           }),
         },
@@ -197,7 +197,7 @@ export const grapaMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'grapaActive',
           actions: assign({
-            montantGRAPA: (_, event) => event.montant,
+            montantGRAPA: ({ event }) => event.montant,
             enqueteAnnuelle: false,
           }),
         },

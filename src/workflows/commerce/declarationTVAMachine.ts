@@ -24,7 +24,7 @@ interface DeclarationTVAContext {
 export const declarationTVAMachine = createMachine({
   id: 'declarationTVA',
   initial: 'periode',
-  schema: {
+  schemas: {
     context: {} as DeclarationTVAContext,
     events: {} as
       | { type: 'NOUVELLE_PERIODE'; entreprise: EntrepriseTVA; periode: string }
@@ -48,8 +48,8 @@ export const declarationTVAMachine = createMachine({
         NOUVELLE_PERIODE: {
           target: 'comptabilisation',
           actions: assign({
-            entreprise: (_, event) => event.entreprise,
-            periode: (_, event) => event.periode,
+            entreprise: ({ event }) => event.entreprise,
+            periode: ({ event }) => event.periode,
           }),
         },
       },
@@ -60,9 +60,9 @@ export const declarationTVAMachine = createMachine({
         COMPTABILITE_FINALISEE: {
           target: 'redactionDeclaration',
           actions: assign({
-            tvaCollectee: (_, event) => event.collectee,
-            tvaDeductible: (_, event) => event.deductible,
-            solde: (_, event) => event.collectee - event.deductible,
+            tvaCollectee: ({ event }) => event.collectee,
+            tvaDeductible: ({ event }) => event.deductible,
+            solde: ({ event }) => event.collectee - event.deductible,
           }),
         },
       },

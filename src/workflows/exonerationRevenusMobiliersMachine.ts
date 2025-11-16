@@ -46,7 +46,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
   id: 'exonerationRevenusMobiliers',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ExonerationRevenusMobiliersContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; contribuable: Contribuable }
@@ -78,7 +78,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'saisieRevenus',
           actions: assign({
-            contribuable: (_, event) => event.contribuable,
+            contribuable: ({ event }) => event.contribuable,
             anneeFiscale: new Date().getFullYear(),
           }),
         },
@@ -94,7 +94,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         AJOUTER_REVENU: {
           target: 'saisieRevenus',
           actions: assign({
-            revenus: (context, event) => [...context.revenus, event.revenu],
+            revenus: ({ context, event }) => [...context.revenus, event.revenu],
           }),
         },
         CALCULER_TOTAL: {
@@ -112,7 +112,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         TOTAL_CALCULE: {
           target: 'verificationExoneration',
           actions: assign({
-            totalRevenusMobiliers: (_, event) => event.total,
+            totalRevenusMobiliers: ({ event }) => event.total,
           }),
         },
       },
@@ -127,15 +127,15 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         EXONERATION_VERIFIEE: [
           {
             target: 'exonere',
-            cond: (_, event) => event.exoneration.estExonere,
+            guard: ({ event }) => event.exoneration.estExonere,
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
           {
             target: 'imposable',
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
         ],
@@ -151,7 +151,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsFiscales: (_, event) => event.documents,
+            attestationsFiscales: ({ event }) => event.documents,
           }),
         },
       },
@@ -166,7 +166,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsFiscales: (_, event) => event.documents,
+            attestationsFiscales: ({ event }) => event.documents,
           }),
         },
       },
@@ -208,7 +208,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         NOUVELLE_ANNEE: {
           target: 'inactif',
           actions: assign({
-            anneeFiscale: (_, event) => event.annee,
+            anneeFiscale: ({ event }) => event.annee,
             revenus: [],
             totalRevenusMobiliers: 0,
           }),

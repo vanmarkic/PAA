@@ -24,13 +24,13 @@ interface AdoptionContext {
 export const adoptionProcedureMachine = createMachine({
   id: 'adoptionProcedure',
   initial: 'informationPrealable',
-  schema: {
+  schemas: {
     context: {} as AdoptionContext,
     events: {} as
       | { type: 'SEANCES_INFO'; candidats: CandidatsAdoption }
       | { type: 'DEMANDE_AGREMENT' }
       | { type: 'ENQUETE_SOCIALE_PSYCHOLOGIQUE' }
-      | { type: 'AGREMENT_ACCORDE'; type: 'nationale' | 'internationale' }
+      | { type: 'AGREMENT_ACCORDE'; typeAdoption: 'nationale' | 'internationale' }
       | { type: 'APPARENTEMENT_REALISE' }
       | { type: 'PLACEMENT_DEBUTE' }
       | { type: 'REQUETE_ADOPTION' }
@@ -49,7 +49,7 @@ export const adoptionProcedureMachine = createMachine({
       on: {
         SEANCES_INFO: {
           target: 'demandeAgrement',
-          actions: assign({ candidats: (_, event) => event.candidats }),
+          actions: assign({ candidats: ({ event }) => event.candidats }),
         },
       },
       meta: {
@@ -94,7 +94,7 @@ export const adoptionProcedureMachine = createMachine({
           target: 'apparentement',
           actions: assign({
             agrementObtenu: true,
-            typeAdoption: (_, event) => event.type,
+            typeAdoption: ({ event }) => event.type,
           }),
         },
       },

@@ -25,7 +25,7 @@ interface PermisConduireContext {
 export const permisConduireMachine = createMachine({
   id: 'permisConduire',
   initial: 'inscriptionAutoEcole',
-  schema: {
+  schemas: {
     context: {} as PermisConduireContext,
     events: {} as
       | { type: 'INSCRIRE'; candidat: CandidatPermis }
@@ -51,7 +51,7 @@ export const permisConduireMachine = createMachine({
       on: {
         INSCRIRE: {
           target: 'formationTheorique',
-          actions: assign({ candidat: (_, event) => event.candidat }),
+          actions: assign({ candidat: ({ event }) => event.candidat }),
         },
       },
       meta: {
@@ -89,7 +89,7 @@ export const permisConduireMachine = createMachine({
       on: {
         FORMATION_PRATIQUE: {
           target: 'permisProvisoire',
-          actions: assign({ heuresFormation: (_, event) => event.heures }),
+          actions: assign({ heuresFormation: ({ event }) => event.heures }),
         },
       },
       meta: {
@@ -109,7 +109,7 @@ export const permisConduireMachine = createMachine({
           target: 'conduiteProvisoire',
           actions: assign({
             permisProvisoire: true,
-            dureeProvisoire: (_, event) => event.duree,
+            dureeProvisoire: ({ event }) => event.duree,
           }),
         },
       },

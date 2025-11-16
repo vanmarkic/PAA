@@ -34,7 +34,7 @@ export const soinsSanteMentaleMachine = createMachine({
   id: 'soinsSanteMentale',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as SoinsSanteMentaleContext,
     events: {} as
       | { type: 'DEMANDER_SOINS'; patient: PatientSanteMentale }
@@ -67,7 +67,7 @@ export const soinsSanteMentaleMachine = createMachine({
         DEMANDER_SOINS: {
           target: 'evaluationInitiale',
           actions: assign({
-            patient: (_, event) => event.patient,
+            patient: ({ event }) => event.patient,
           }),
         },
       },
@@ -112,7 +112,7 @@ export const soinsSanteMentaleMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'traitementEnCours',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
             traitementActif: true,
           }),
         },
@@ -127,8 +127,7 @@ export const soinsSanteMentaleMachine = createMachine({
       on: {
         SEANCE_EFFECTUEE: {
           target: 'traitementEnCours',
-          actions: assign({
-            seancesEffectuees: (context) => context.seancesEffectuees + 1,
+          actions: assign({ seancesEffectuees: ({ context }) => context.seancesEffectuees + 1,
           }),
         },
         EVALUER_PROGRESSION: {

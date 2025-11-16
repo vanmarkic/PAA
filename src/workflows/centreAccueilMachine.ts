@@ -33,7 +33,7 @@ export const centreAccueilMachine = createMachine({
   id: 'centreAccueil',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as CentreAccueilContext,
     events: {} as
       | { type: 'ACCUEILLIR_PERSONNE'; personne: PersonneAccueillie }
@@ -62,7 +62,7 @@ export const centreAccueilMachine = createMachine({
         ACCUEILLIR_PERSONNE: {
           target: 'accueilInitial',
           actions: assign({
-            personne: (_, event) => event.personne,
+            personne: ({ event }) => event.personne,
           }),
         },
       },
@@ -101,7 +101,7 @@ export const centreAccueilMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'sejourCentre',
           actions: assign({
-            plan: (_, event) => event.plan,
+            plan: ({ event }) => event.plan,
             accueilActif: true,
           }),
         },
@@ -116,8 +116,7 @@ export const centreAccueilMachine = createMachine({
       on: {
         FOURNIR_SERVICE: {
           target: 'sejourCentre',
-          actions: assign({
-            servicesRecus: (context) => context.servicesRecus + 1,
+          actions: assign({ servicesRecus: ({ context }) => context.servicesRecus + 1,
           }),
         },
         REGULARISER_SITUATION: {

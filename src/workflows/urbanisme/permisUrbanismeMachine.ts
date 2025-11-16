@@ -42,10 +42,7 @@ type PermisUrbanismeEvent =
   | { type: 'DECISION_REFUS'; motif: string }
   | { type: 'RECOURS' };
 
-export const permisUrbanismeMachine = createMachine<
-  PermisUrbanismeContext,
-  PermisUrbanismeEvent
->({
+export const permisUrbanismeMachine = createMachine({
   id: 'permisUrbanisme',
   initial: 'preparation',
   context: {

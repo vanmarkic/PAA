@@ -21,7 +21,7 @@ interface MaterniteContext {
 export const materniteAccouchementMachine = createMachine({
   id: 'materniteAccouchement',
   initial: 'suiviPrenatal',
-  schema: {
+  schemas: {
     context: {} as MaterniteContext,
     events: {} as
       | { type: 'GROSSESSE_CONFIRMEE'; grossesse: Grossesse; patiente: any }
@@ -45,8 +45,8 @@ export const materniteAccouchementMachine = createMachine({
         GROSSESSE_CONFIRMEE: {
           target: 'consultationsRegulieress',
           actions: assign({
-            grossesse: (_, event) => event.grossesse,
-            patiente: (_, event) => event.patiente,
+            grossesse: ({ event }) => event.grossesse,
+            patiente: ({ event }) => event.patiente,
           }),
         },
       },
@@ -56,8 +56,7 @@ export const materniteAccouchementMachine = createMachine({
       on: {
         CONSULTATION_PRENATALE: {
           target: 'consultationsRegulieres',
-          actions: assign({
-            consultationsPrenatales: (context) => context.consultationsPrenatales + 1,
+          actions: assign({ consultationsPrenatales: ({ context }) => context.consultationsPrenatales + 1,
           }),
         },
         TRAVAIL_DEBUTE: { target: 'admissionMaternite' },

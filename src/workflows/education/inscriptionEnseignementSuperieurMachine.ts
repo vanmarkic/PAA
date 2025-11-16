@@ -24,7 +24,7 @@ interface InscriptionSuperieurContext {
 export const inscriptionEnseignementSuperieurMachine = createMachine({
   id: 'inscriptionEnseignementSuperieur',
   initial: 'choixEtudes',
-  schema: {
+  schemas: {
     context: {} as InscriptionSuperieurContext,
     events: {} as
       | { type: 'CHOISIR_PROGRAMME'; etablissement: string; programme: string }
@@ -51,8 +51,8 @@ export const inscriptionEnseignementSuperieurMachine = createMachine({
         CHOISIR_PROGRAMME: {
           target: 'verificationAcces',
           actions: assign({
-            etablissement: (_, event) => event.etablissement,
-            programme: (_, event) => event.programme,
+            etablissement: ({ event }) => event.etablissement,
+            programme: ({ event }) => event.programme,
           }),
         },
       },
@@ -64,7 +64,7 @@ export const inscriptionEnseignementSuperieurMachine = createMachine({
       on: {
         VERIFIER_FINANCABILITE: {
           target: 'evaluationFinancabilite',
-          actions: assign({ etudiant: (_, event) => event.etudiant }),
+          actions: assign({ etudiant: ({ event }) => event.etudiant }),
         },
       },
       meta: {

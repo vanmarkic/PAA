@@ -33,7 +33,7 @@ export const aideVictimesMachine = createMachine({
   id: 'aideVictimes',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideVictimesContext,
     events: {} as
       | { type: 'SIGNALER_VICTIME'; victime: Victime }
@@ -66,7 +66,7 @@ export const aideVictimesMachine = createMachine({
         SIGNALER_VICTIME: {
           target: 'accueilVictime',
           actions: assign({
-            victime: (_, event) => event.victime,
+            victime: ({ event }) => event.victime,
           }),
         },
       },
@@ -93,7 +93,7 @@ export const aideVictimesMachine = createMachine({
         BESOINS_IDENTIFIES: {
           target: 'orientationServices',
           actions: assign({
-            dossier: (_, event) => event.dossier,
+            dossier: ({ event }) => event.dossier,
           }),
         },
       },
@@ -140,8 +140,7 @@ export const aideVictimesMachine = createMachine({
       on: {
         SEANCE_SOUTIEN: {
           target: 'soutienPsychologique',
-          actions: assign({
-            seancesSoutien: (context) => context.seancesSoutien + 1,
+          actions: assign({ seancesSoutien: ({ context }) => context.seancesSoutien + 1,
             suiviPsychologique: true,
           }),
         },

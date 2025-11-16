@@ -34,7 +34,7 @@ export const servicePublicEmploiMachine = createMachine({
   id: 'servicePublicEmploi',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as ServicePublicEmploiContext,
     events: {} as
       | { type: 'INSCRIRE_DEMANDEUR'; demandeur: DemandeurEmploi }
@@ -67,7 +67,7 @@ export const servicePublicEmploiMachine = createMachine({
         INSCRIRE_DEMANDEUR: {
           target: 'validationInscription',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -97,7 +97,7 @@ export const servicePublicEmploiMachine = createMachine({
         DEFINIR_PROJET: {
           target: 'demandeAllocations',
           actions: assign({
-            projet: (_, event) => event.projet,
+            projet: ({ event }) => event.projet,
             entretiensCounseling: 1,
           }),
         },
@@ -134,13 +134,12 @@ export const servicePublicEmploiMachine = createMachine({
         PROPOSER_OFFRES: {
           target: 'suiviActif',
           actions: assign({
-            offresProposees: (context, event) => context.offresProposees + event.nombre,
+            offresProposees: ({ context, event }) => context.offresProposees + event.nombre,
           }),
         },
         ENTRETIEN_SUIVI: {
           target: 'suiviActif',
-          actions: assign({
-            entretiensCounseling: (context) => context.entretiensCounseling + 1,
+          actions: assign({ entretiensCounseling: ({ context }) => context.entretiensCounseling + 1,
           }),
         },
         CONTROLE_RECHERCHE: {

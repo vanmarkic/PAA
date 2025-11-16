@@ -43,7 +43,7 @@ export const pensionSurvieMachine = createMachine({
   id: 'pensionSurvie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PensionSurvieContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; survivant: Survivant; defunt: DefuntInfo }
@@ -72,8 +72,8 @@ export const pensionSurvieMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationDeces',
           actions: assign({
-            survivant: (_, event) => event.survivant,
-            defuntInfo: (_, event) => event.defunt,
+            survivant: ({ event }) => event.survivant,
+            defuntInfo: ({ event }) => event.defunt,
           }),
         },
       },
@@ -100,7 +100,7 @@ export const pensionSurvieMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.remplies,
+            guard: ({ event }) => event.remplies,
             actions: assign({
               conditionsRemplies: true,
             }),
@@ -124,7 +124,7 @@ export const pensionSurvieMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'periodeTransition',
           actions: assign({
-            montantPension: (_, event) => event.montant,
+            montantPension: ({ event }) => event.montant,
           }),
         },
       },
@@ -160,8 +160,8 @@ export const pensionSurvieMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculMontant',
           actions: assign({
-            survivant: (context, event) => ({
-              ...context.survivant!,
+            survivant: ({ context, event }) => ({
+              ...(context.survivant || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),
@@ -181,7 +181,7 @@ export const pensionSurvieMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'pensionActive',
           actions: assign({
-            montantPension: (_, event) => event.montant,
+            montantPension: ({ event }) => event.montant,
           }),
         },
       },

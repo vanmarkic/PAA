@@ -48,10 +48,7 @@ type AccidentTravailEvent =
   | { type: 'INCAPACITE_PERMANENTE'; taux: number }
   | { type: 'GUERISON_SANS_SEQUELLES' };
 
-export const accidentTravailMachine = createMachine<
-  AccidentTravailContext,
-  AccidentTravailEvent
->({
+export const accidentTravailMachine = createMachine({
   id: 'accidentTravail',
   initial: 'declaration',
   context: {
@@ -97,7 +94,7 @@ export const accidentTravailMachine = createMachine<
       on: {
         DECLARER_ACCIDENT: {
           target: 'expertise',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -162,7 +159,7 @@ export const accidentTravailMachine = createMachine<
         bareme: 'Barème officiel lésions (annexe AR)',
         tauxIPT: {
           moins_16_pourcent: 'Indemnité en capital (une fois)',
-          16_pourcent_et_plus: 'Rente viagère mensuelle',
+          '16_pourcent_et_plus': 'Rente viagère mensuelle',
         },
         montantRente: {
           calcul: 'Salaire de base × taux IPT × coefficient âge',
