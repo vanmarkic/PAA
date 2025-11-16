@@ -10,7 +10,7 @@ export default async function risRoutes(server: FastifyInstance) {
   /**
    * Check RIS eligibility
    */
-  server.post(
+  server.post<{ Body: any }>(
     '/check-eligibility',
     {
       onRequest: [authenticate],
@@ -26,7 +26,7 @@ export default async function risRoutes(server: FastifyInstance) {
   /**
    * Create RIS application
    */
-  server.post(
+  server.post<{ Body: any }>(
     '/applications',
     {
       onRequest: [authenticate],
@@ -74,7 +74,7 @@ export default async function risRoutes(server: FastifyInstance) {
   /**
    * Update application
    */
-  server.patch<{ Params: { id: string } }>(
+  server.patch<{ Params: { id: string }; Body: any }>(
     '/applications/:id',
     {
       onRequest: [authenticate],
@@ -90,7 +90,7 @@ export default async function risRoutes(server: FastifyInstance) {
   /**
    * Batch eligibility check (CPAS workers only)
    */
-  server.post(
+  server.post<{ Body: any }>(
     '/batch-check',
     {
       onRequest: [authenticate],

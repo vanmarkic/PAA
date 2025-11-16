@@ -30,8 +30,8 @@ export const vaccinationEnfantsMachine = createMachine({
   },
   context: {
     enfant: null,
-    calendrierVaccins: [],
-    vaccinsAdministres: [],
+    calendrierVaccins: [] as string[],
+    vaccinsAdministres: [] as string[],
     prochainRappel: null,
   },
   states: {

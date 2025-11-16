@@ -65,9 +65,9 @@ export const exonerationRevenusMobiliersMachine = createMachine({
 
   context: {
     contribuable: null,
-    revenus: [],
+    revenus: [] as RevenuMobilier[],
     exoneration: null,
-    attestationsFiscales: [],
+    attestationsFiscales: [] as string[],
     totalRevenusMobiliers: 0,
     anneeFiscale: new Date().getFullYear(),
   },

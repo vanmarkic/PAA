@@ -46,6 +46,10 @@ type PensionSurvieEvent =
 export const pensionSurvieMachine = createMachine({
   id: 'pensionSurvie',
   initial: 'verification',
+  types: {} as {
+    context: PensionSurvieContext;
+    events: PensionSurvieEvent;
+  },
   context: {
     demandeur: {
       nom: '',
@@ -134,7 +138,7 @@ export const pensionSurvieMachine = createMachine({
         OCTROI: {
           target: 'paiement',
           actions: assign({
-            montantPension: ({ context, event }) => event.montant,
+            montantPension: ({ event }) => event.montant,
           }),
         },
         REFUS: 'refus',

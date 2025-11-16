@@ -86,8 +86,8 @@ export const parcoursCreationEntrepriseMachine = createMachine({
         PROJET_DEFINI: {
           target: 'formationGestion',
           actions: assign({
-            entrepreneur: ({ event }) => event.entrepreneur,
-            projet: ({ event }) => event.projet,
+            entrepreneur: ({ event }: { event: any }) => event.entrepreneur,
+            projet: ({ event }: { event: any }) => event.projet,
           }),
         },
       },
@@ -107,11 +107,11 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         FORMATION_VALIDEE: {
           target: 'elaborationPlanAffaires',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               formationGestion: true,
             }),
-            couts: (context) => [
+            couts: ({ context }: { context: any }) => [
               ...context.couts,
               { libelle: 'Formation gestion base', montant: 700 },
             ],
@@ -120,7 +120,7 @@ export const parcoursCreationEntrepriseMachine = createMachine({
         WARNING: {
           target: 'formationGestion',
           actions: assign({
-            warnings: ({ context, event }) => [...context.warnings, event.message],
+            warnings: ({ context, event }: { context: any; event: any }) => [...context.warnings, event.message],
           }),
         },
       },
@@ -144,7 +144,7 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         PLAN_AFFAIRES_VALIDE: {
           target: 'rechercheFinancement',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               planAffaires: true,
             }),
@@ -169,11 +169,11 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         FINANCEMENT_OBTENU: {
           target: 'ouvertureCompteBancaire',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               financementSecurise: true,
             }),
-            aidesObtenues: ({ context, event }) => [
+            aidesObtenues: ({ context, event }: { context: any; event: any }) => [
               ...context.aidesObtenues,
               { type: 'Financement obtenu', montant: event.montant },
             ],
@@ -203,11 +203,11 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         COMPTE_OUVERT: {
           target: 'guichetEntreprise',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               compteBancaire: true,
             }),
-            couts: (context) => [
+            couts: ({ context }: { context: any }) => [
               ...context.couts,
               { libelle: 'Compte professionnel', montant: 15 },
             ],
@@ -230,12 +230,12 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         GUICHET_COMPLETE: {
           target: 'activationTVA',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               guichetEntreprise: true,
             }),
-            numeroEntreprise: ({ event }) => event.numeroEntreprise,
-            couts: (context) => [
+            numeroEntreprise: ({ event }: { event: any }) => event.numeroEntreprise,
+            couts: ({ context }: { context: any }) => [
               ...context.couts,
               { libelle: 'Inscription BCE', montant: 95 },
               { libelle: 'Extrait BCE', montant: 10 },
@@ -267,7 +267,7 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         TVA_ACTIVEE: {
           target: 'affiliationCaisseAssurances',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               numeroTVA: true,
             }),
@@ -290,11 +290,11 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         CAISSE_AFFILIEE: {
           target: 'autorisationsSpecifiques',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               caisseAssurances: true,
             }),
-            couts: (context) => [
+            couts: ({ context }: { context: any }) => [
               ...context.couts,
               { libelle: 'Cotisations sociales trimestrielles provisoires', montant: 800 },
             ],
@@ -325,7 +325,7 @@ export const parcoursCreationEntrepriseMachine = createMachine({
       on: {
         AUTORISATIONS_OBTENUES: {
           target: 'entrepriseOperationnelle',
-          actions: assign({ etapesCompletees: ({ context }) => ({
+          actions: assign({ etapesCompletees: ({ context }: { context: any }) => ({
               ...context.etapesCompletees,
               autorisationsSpecifiques: true,
             }),

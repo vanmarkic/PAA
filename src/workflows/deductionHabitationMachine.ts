@@ -51,9 +51,9 @@ export const deductionHabitationMachine = createMachine({
   },
 
   context: {
-    proprietaire: null,
-    resultatDeduction: null,
-    preuvesPropriete: [],
+    proprietaire: null as Proprietaire | null,
+    resultatDeduction: null as DeductionResult | null,
+    preuvesPropriete: [] as string[],
     montantAnnuel: 0,
     anneeFiscale: new Date().getFullYear(),
   },
@@ -160,7 +160,8 @@ export const deductionHabitationMachine = createMachine({
       on: {
         VALIDATION_REUSSIE: {
           target: 'deductionActive',
-          actions: assign({ montantAnnuel: ({ context }) => context.resultatDeduction?.montantDeduction || 0,
+          actions: assign({
+            montantAnnuel: ({ context }) => context.resultatDeduction?.montantDeduction || 0,
           }),
         },
         VALIDATION_ECHOUEE: {

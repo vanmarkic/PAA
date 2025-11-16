@@ -43,7 +43,7 @@ export const permisEnvironnementMachine = createMachine({
     enquetePubliqueRequise: false,
     etudeImpactRequise: false,
     avisFavorable: false,
-    conditionsImposees: [],
+    conditionsImposees: [] as string[],
     dureeValidite: 20,
   },
 
@@ -67,11 +67,11 @@ export const permisEnvironnementMachine = createMachine({
         DOSSIER_COMPLET: [
           {
             target: 'etudeImpact',
-            guard: (context) => context.etudeImpactRequise,
+            guard: ({ context }) => context.etudeImpactRequise,
           },
           {
             target: 'enquetePublique',
-            guard: (context) => context.enquetePubliqueRequise,
+            guard: ({ context }) => context.enquetePubliqueRequise,
           },
           {
             target: 'instructionTechnique',

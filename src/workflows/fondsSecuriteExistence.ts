@@ -171,7 +171,8 @@ export const fondsSecuriteExistenceMachine = createMachine({
       on: {
         PRIME_VERSEE: {
           target: 'droitsActifs',
-          actions: assign({ anneeReference: ({ context }) => context.anneeReference + 1,
+          actions: assign({
+            anneeReference: ({ context }) => context.anneeReference + 1,
           }),
         },
       },
@@ -198,10 +199,11 @@ export const fondsSecuriteExistenceMachine = createMachine({
         SECTEUR_IDENTIFIE: {
           target: 'calculDroits',
           actions: assign({
-            travailleur: ({ context, event }) => ({
-              ...(context.travailleur || {}),
-              employeur: event.secteur,
-            }),
+            travailleur: ({ context, event }) => {
+              const currentTravailleur = context.travailleur;
+              if (!currentTravailleur) return null;
+              return Object.assign({}, currentTravailleur, { employeur: event.secteur });
+            },
           }),
         },
       },

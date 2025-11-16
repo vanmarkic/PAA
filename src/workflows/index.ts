@@ -37,7 +37,7 @@ export { aideLogementMachine } from './aideLogement';
 export { garantieLocativeMachine } from './garantieLocative';
 export { aidePersonnesAgeesMachine } from './aidePersonnesAgees';
 export { gardeEnfantsMachine } from './gardeEnfants';
-export { carteMedicaleMachine } from './carteMedicale';
+export { cartemedicaleMachine } from './carteMedicale';
 export { aideJuridiqueMachine } from './aideJuridique';
 export { fondsSecuriteExistenceMachine } from './fondsSecuriteExistence';
 export { allocationChauffageMachine } from './allocationChauffage';

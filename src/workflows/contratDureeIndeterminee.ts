@@ -57,9 +57,9 @@ export const contratDureeIndetermineeMachine = createMachine({
     dureePeriodeEssai: 0,
     anciennete: 0,
     avenants: 0,
-    suspensions: [],
+    suspensions: [] as string[],
     retryCount: 0,
-  },
+  } as ContratDureeIndetermineeContext,
 
   states: {
     idle: {
@@ -122,7 +122,7 @@ export const contratDureeIndetermineeMachine = createMachine({
       always: [
         {
           target: 'periodeEssai',
-          guard: (context) => context.periodeEssai,
+          guard: ({ context }) => context.periodeEssai,
         },
         {
           target: 'cdiActif',
@@ -173,14 +173,14 @@ export const contratDureeIndetermineeMachine = createMachine({
           target: 'cdiActif',
           actions: assign({
             salaire: ({ event }) => event.nouveauSalaire,
-            avenants: (context) => context.avenants + 1,
+            avenants: ({ context }) => context.avenants + 1,
           }),
         },
         PROMOTION: {
           target: 'cdiActif',
           actions: assign({
             fonction: ({ event }) => event.nouvelleFonction,
-            avenants: (context) => context.avenants + 1,
+            avenants: ({ context }) => context.avenants + 1,
           }),
         },
         SUSPENSION_TEMPORAIRE: {
@@ -209,7 +209,8 @@ export const contratDureeIndetermineeMachine = createMachine({
       on: {
         AVENANT_CONTRACTUEL: {
           target: 'cdiActif',
-          actions: assign({ avenants: ({ context }) => context.avenants + 1,
+          actions: assign({
+            avenants: ({ context }) => context.avenants + 1,
           }),
         },
       },

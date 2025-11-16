@@ -204,10 +204,11 @@ export const gardeEnfantsMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculTarif',
           actions: assign({
-            parent: ({ context, event }) => ({
-              ...(context.parent || {}),
-              revenus: event.nouveauxRevenus,
-            }),
+            parent: ({ context, event }) => {
+              const currentParent = context.parent;
+              if (!currentParent) return null;
+              return Object.assign({}, currentParent, { revenus: event.nouveauxRevenus });
+            },
           }),
         },
         ENTREE_MATERNELLE: {

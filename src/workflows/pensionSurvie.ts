@@ -72,8 +72,8 @@ export const pensionSurvieMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationDeces',
           actions: assign({
-            survivant: ({ event }) => event.survivant,
-            defuntInfo: ({ event }) => event.defunt,
+            survivant: ({ event }: { event: any }) => event.survivant,
+            defuntInfo: ({ event }: { event: any }) => event.defunt,
           }),
         },
       },
@@ -100,7 +100,7 @@ export const pensionSurvieMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'calculMontant',
-            guard: ({ event }) => event.remplies,
+            guard: ({ event }: { event: any }) => event.remplies,
             actions: assign({
               conditionsRemplies: true,
             }),
@@ -124,7 +124,7 @@ export const pensionSurvieMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'periodeTransition',
           actions: assign({
-            montantPension: ({ event }) => event.montant,
+            montantPension: ({ event }: { event: any }) => event.montant,
           }),
         },
       },
@@ -160,8 +160,8 @@ export const pensionSurvieMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculMontant',
           actions: assign({
-            survivant: ({ context, event }) => ({
-              ...(context.survivant || {}),
+            survivant: ({ context, event }: { context: any; event: any }) => ({
+              ...((context.survivant as any) || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

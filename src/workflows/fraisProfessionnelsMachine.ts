@@ -62,10 +62,10 @@ export const fraisProfessionnelsMachine = createMachine({
 
   context: {
     travailleur: null,
-    frais: [],
+    frais: [] as FraisProfessionnels[],
     deduction: null,
-    modeChoisi: null,
-    justificatifs: [],
+    modeChoisi: null as 'forfaitaire' | 'reels' | null,
+    justificatifs: [] as string[],
     totalFrais: 0,
   },
 
@@ -124,13 +124,13 @@ export const fraisProfessionnelsMachine = createMachine({
         CHOISIR_FORFAITAIRE: {
           target: 'forfaitaireChoisi',
           actions: assign({
-            modeChoisi: 'forfaitaire',
+            modeChoisi: () => 'forfaitaire',
           }),
         },
         CHOISIR_REELS: {
           target: 'reelsChoisi',
           actions: assign({
-            modeChoisi: 'reels',
+            modeChoisi: () => 'reels',
           }),
         },
       },

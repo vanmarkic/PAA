@@ -57,7 +57,7 @@ export const budgetEnergetiqueMachine = createMachine({
     tarifSocial: false,
     planActif: false,
     mensualitesPayees: 0,
-  },
+  } as BudgetEnergetiqueContext,
 
   states: {
     attente: {
@@ -113,7 +113,7 @@ export const budgetEnergetiqueMachine = createMachine({
         ACTIVER_PLAN: {
           target: 'budgetActif',
           actions: assign({
-            budget: ({ event }) => ({ mensualite: 0, aideAttribuee: 0, dureeEnMois: 12 }),
+            budget: () => ({ mensualite: 0, aideAttribuee: 0, dureeEnMois: 12 }),
             planActif: true,
           }),
         },
@@ -128,7 +128,8 @@ export const budgetEnergetiqueMachine = createMachine({
       on: {
         PAYER_MENSUALITE: {
           target: 'budgetActif',
-          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
+          actions: assign({
+            mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
           }),
         },
         RETARD_PAIEMENT: {
@@ -151,7 +152,8 @@ export const budgetEnergetiqueMachine = createMachine({
       on: {
         PAYER_MENSUALITE: {
           target: 'budgetActif',
-          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
+          actions: assign({
+            mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
           }),
         },
         REAJUSTER_BUDGET: {

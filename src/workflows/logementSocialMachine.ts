@@ -61,7 +61,7 @@ export const logementSocialMachine = createMachine({
         DEMANDER_LOGEMENT: {
           target: 'verificationEligibilite',
           actions: assign({
-            demandeur: ({ event }) => event.demandeur,
+            demandeur: ({ event }: { event: any }) => event.demandeur,
           }),
         },
       },
@@ -76,7 +76,7 @@ export const logementSocialMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'calculPriorite',
-            guard: ({ event }) => event.eligible,
+            guard: ({ event }: { event: any }) => event.eligible,
             actions: assign({
               estEligible: true,
             }),
@@ -85,7 +85,7 @@ export const logementSocialMachine = createMachine({
             target: 'ineligible',
             actions: assign({
               estEligible: false,
-              raisonIneligibilite: ({ event }) => event.raisons || [],
+              raisonIneligibilite: ({ event }: { event: any }) => event.raisons || [],
             }),
           },
         ],
@@ -101,7 +101,7 @@ export const logementSocialMachine = createMachine({
         PRIORITE_CALCULEE: {
           target: 'inscriptionListeAttente',
           actions: assign({
-            dossier: ({ context, event }) => ({
+            dossier: ({ context, event }: { context: any; event: any }) => ({
               dateInscription: new Date(),
               priorite: event.priorite,
               zoneGeographique: '',
@@ -120,7 +120,7 @@ export const logementSocialMachine = createMachine({
         INSCRIPTION_CONFIRMEE: {
           target: 'enAttente',
           actions: assign({
-            dossier: ({ event }) => event.dossier,
+            dossier: ({ event }: { event: any }) => event.dossier,
           }),
         },
       },

@@ -46,13 +46,21 @@ type AIEvent =
 export const allocationIntegrationMachine = createMachine({
   id: 'allocationIntegration',
   initial: 'preparation',
+
+  schemas: {
+    context: {} as AIContext,
+    events: {} as AIEvent,
+  },
+
   context: {
     demandeur: {
       nom: '',
       dateNaissance: '',
     },
     handicap: {},
+    montantMensuel: undefined as number | undefined,
   },
+
   states: {
     preparation: {
       meta: {
@@ -78,10 +86,10 @@ export const allocationIntegrationMachine = createMachine({
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluationAutonomie',
-          actions: assign(({ context, event }) => ({
-            ...context,
-            ...event.data,
-          })),
+          actions: assign({
+            demandeur: ({ event }) => event.data.demandeur,
+            handicap: ({ event }) => event.data.handicap,
+          }),
         },
       },
     },
@@ -141,23 +149,27 @@ export const allocationIntegrationMachine = createMachine({
       on: {
         EVALUATION_FAVORABLE: {
           target: 'octroi',
-          actions: assign({
-            handicap: ({ context, event }) => ({
-              ...context.handicap,
-              pointsAutonomie: event.points,
-              categorie: event.categorie,
+          actions: [
+            assign({
+              handicap: ({ context, event }) => ({
+                ...context.handicap,
+                pointsAutonomie: event.points,
+                categorie: event.categorie,
+              }),
             }),
-            montantMensuel: ({ context, event }) => {
-              const montants = {
-                I: 129.05,
-                II: 362.44,
-                III: 575.02,
-                IV: 906.47,
-                V: 1139.53,
-              };
-              return montants[event.categorie];
-            },
-          }),
+            assign({
+              montantMensuel: ({ event }) => {
+                const montants: Record<'I' | 'II' | 'III' | 'IV' | 'V', number> = {
+                  I: 129.05,
+                  II: 362.44,
+                  III: 575.02,
+                  IV: 906.47,
+                  V: 1139.53,
+                };
+                return montants[event.categorie as 'I' | 'II' | 'III' | 'IV' | 'V'];
+              },
+            }),
+          ],
         },
         EVALUATION_DEFAVORABLE: 'refus',
       },

@@ -40,7 +40,7 @@ export const comptabiliteAnnuelleMachine = createMachine({
     comptesApprouves: false,
     comptesDeposes: false,
     delaiDepot: null,
-  },
+  } as ComptabiliteAnnuelleContext,
   states: {
     clotureExercice: {
       on: {
@@ -62,7 +62,7 @@ export const comptabiliteAnnuelleMachine = createMachine({
     etablissementComptes: {
       on: {
         COMPTES_ETABLIS: {
-          target: 'assemblee Generale',
+          target: 'assembleeGenerale',
           actions: assign({ comptesEtablis: true }),
         },
       },

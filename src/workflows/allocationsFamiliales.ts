@@ -114,11 +114,17 @@ export const allocationsFamilialesMachine = createMachine({
         NAISSANCE_ENFANT: {
           target: 'recalculMontant',
           actions: assign({
-            famille: ({ context, event }) => ({
-              ...(context.famille || {}),
-              enfants: [...(context.famille || {}).enfants, event.enfant],
-            }),
-          }),
+            famille: ({ context, event }) => {
+              if (!context.famille) {
+                throw new Error('famille must be set before adding enfant');
+              }
+              const current: Famille = context.famille;
+              return {
+                ...current,
+                enfants: [...current.enfants, event.enfant],
+              };
+            },
+          }) as any,
         },
         CHANGEMENT_SITUATION: {
           target: 'recalculMontant',

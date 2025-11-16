@@ -35,9 +35,9 @@ export const urgencesHospitalieresMachine = createMachine({
   },
   context: {
     patient: null,
-    heureArrivee: null,
+    heureArrivee: null as Date | null,
     numeroTriage: 0,
-    examensRealises: [],
+    examensRealises: [] as string[],
     traitementAdministre: false,
     hospitalisation: false,
   },

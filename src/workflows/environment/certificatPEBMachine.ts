@@ -36,7 +36,7 @@ export const certificatPEBMachine = createMachine({
     certificateurAgree: null,
     scorePEB: null,
     consommationKwhM2: 0,
-    recommandationsAmelioration: [],
+    recommandationsAmelioration: [] as string[],
     certificatValide: false,
   },
   states: {

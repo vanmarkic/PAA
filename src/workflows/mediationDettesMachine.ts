@@ -65,7 +65,7 @@ export const mediationDettesMachine = createMachine({
         DEMANDER_MEDIATION: {
           target: 'analyseDettes',
           actions: assign({
-            debiteur: ({ event }) => event.debiteur,
+            debiteur: ({ event }: { event: any }) => event.debiteur,
           }),
         },
       },
@@ -95,7 +95,7 @@ export const mediationDettesMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'negociationCreanciers',
           actions: assign({
-            planRemboursement: ({ event }) => event.plan,
+            planRemboursement: ({ event }: { event: any }) => event.plan,
           }),
         },
       },
@@ -109,7 +109,7 @@ export const mediationDettesMachine = createMachine({
       on: {
         CREANCIERS_ACCEPTENT: {
           target: 'homologationPlan',
-          actions: assign({ creanciersAccord: ({ context }) => (context.debiteur?.nombreCreanciers || 0),
+          actions: assign({ creanciersAccord: ({ context }: { context: any }) => (context.debiteur?.nombreCreanciers || 0),
           }),
         },
         CREANCIERS_REFUSENT: {
@@ -141,7 +141,7 @@ export const mediationDettesMachine = createMachine({
       on: {
         MENSUALITE_PAYEE: {
           target: 'planEnCours',
-          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
+          actions: assign({ mensualitesPayees: ({ context }: { context: any }) => context.mensualitesPayees + 1,
           }),
         },
         MENSUALITE_IMPAYEE: {
@@ -161,13 +161,13 @@ export const mediationDettesMachine = createMachine({
       on: {
         MENSUALITE_PAYEE: {
           target: 'planEnCours',
-          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
+          actions: assign({ mensualitesPayees: ({ context }: { context: any }) => context.mensualitesPayees + 1,
           }),
         },
         ETABLIR_PLAN: {
           target: 'negociationCreanciers',
           actions: assign({
-            planRemboursement: ({ event }) => event.plan,
+            planRemboursement: ({ event }: { event: any }) => event.plan,
           }),
         },
       },

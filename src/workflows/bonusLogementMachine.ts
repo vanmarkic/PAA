@@ -65,10 +65,10 @@ export const bonusLogementMachine = createMachine({
     emprunteur: null,
     pret: null,
     bonus: null,
-    documentsHypothecaires: [],
+    documentsHypothecaires: [] as string[],
     montantTotalRecu: 0,
     anneesRestantes: 0,
-  },
+  } as BonusLogementContext,
 
   states: {
     inactif: {
@@ -198,16 +198,18 @@ export const bonusLogementMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'actif',
-            guard: (context) => context.anneesRestantes > 1,
-            actions: assign({ anneesRestantes: ({ context }) => context.anneesRestantes - 1,
-              montantTotalRecu: (context) =>
-                context.montantTotalRecu + (context.bonus?.montantBonusAnnuel || 0),
+            guard: ({ context }) => context.anneesRestantes > 1,
+            actions: assign({
+              anneesRestantes: ({ context }) => context.anneesRestantes - 1,
+              montantTotalRecu: ({ context }) =>
+                context.montantTotalRecu + (context.bonus!.montantBonusAnnuel),
             }),
           },
           {
             target: 'termine',
-            actions: assign({ montantTotalRecu: ({ context }) =>
-                context.montantTotalRecu + (context.bonus?.montantBonusAnnuel || 0),
+            actions: assign({
+              montantTotalRecu: ({ context }) =>
+                context.montantTotalRecu + (context.bonus!.montantBonusAnnuel),
             }),
           },
         ],

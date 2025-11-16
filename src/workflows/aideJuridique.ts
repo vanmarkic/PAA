@@ -108,7 +108,7 @@ export const aideJuridiqueMachine = createMachine({
               barreauCompetent: '',
               montantContribution: 0,
             }),
-          }),
+          }) as any,
         },
       },
 
@@ -155,12 +155,18 @@ export const aideJuridiqueMachine = createMachine({
         AVOCAT_DESIGNE: {
           target: 'aideActive',
           actions: assign({
-            aideAccordee: ({ context, event }) => ({
-              ...(context.aideAccordee || {}),
-              avocatDesigne: event.avocat,
-            }),
+            aideAccordee: ({ context, event }) => {
+              if (!context.aideAccordee) {
+                throw new Error('aideAccordee must be set before assigning avocat');
+              }
+              const current: AideAccordee = context.aideAccordee;
+              return {
+                ...current,
+                avocatDesigne: event.avocat,
+              };
+            },
             dossierOuvert: true,
-          }),
+          }) as any,
         },
       },
 

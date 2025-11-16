@@ -33,9 +33,9 @@ export const protectionEnfanceMachine = createMachine({
   id: 'protectionEnfance',
   initial: 'attente',
 
-  schemas: {
-    context: {} as ProtectionEnfanceContext,
-    events: {} as
+  types: {} as {
+    context: ProtectionEnfanceContext;
+    events:
       | { type: 'SIGNALEMENT_RECU'; enfant: Enfant }
       | { type: 'EVALUER_SITUATION' }
       | { type: 'EVALUATION_TERMINEE'; evaluation: EvaluationRisque }
@@ -48,14 +48,14 @@ export const protectionEnfanceMachine = createMachine({
       | { type: 'SITUATION_AMELIOREE' }
       | { type: 'RETOUR_FAMILLE' }
       | { type: 'CLOTURER_DOSSIER' }
-      | { type: 'REINITIALISER' }
+      | { type: 'REINITIALISER' };
   },
 
   context: {
     enfant: null,
     evaluation: null,
     signalementRecu: false,
-    mesuresProtection: [],
+    mesuresProtection: [] as string[],
     placementEffectue: false,
     suiviActif: false,
   },
