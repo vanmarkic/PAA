@@ -1,0 +1,108 @@
+---
+import MachineLayout from '../../layouts/MachineLayout.astro';
+import CategoryBadge from '../../components/CategoryBadge.astro';
+import { loadMachinesMetadata, getMachinesByCategory } from '../../lib/machines';
+import type { MachineMeta } from '../../lib/machines';
+
+export async function getStaticPaths() {
+  const metadata = await loadMachinesMetadata();
+
+  return metadata.categories.map(category => ({
+    params: { slug: category },
+    props: {
+      category,
+      machines: getMachinesByCategory(metadata, category),
+      allCategories: metadata.categories
+    }
+  }));
+}
+
+interface Props {
+  category: string;
+  machines: MachineMeta[];
+  allCategories: string[];
+}
+
+const { category, machines, allCategories } = Astro.props;
+---
+
+<MachineLayout title={`${category} - PAA Machines`}>
+  <header>
+    <h1>{category}</h1>
+    <p>{machines.length} machine{machines.length !== 1 ? 's' : ''} in this category</p>
+  </header>
+
+  <div class="category-nav">
+    {allCategories.map(cat => (
+      <CategoryBadge category={cat} />
+    ))}
+  </div>
+
+  <div class="machines-grid">
+    {machines.map(machine => (
+      <a href={`/machine/${machine.id}`} class="machine-card">
+        <h3>{machine.name}</h3>
+        <p>{machine.description || 'No description available'}</p>
+        <div class="machine-stats">
+          <span>{machine.states.length} states</span>
+          <span>{machine.events.length} events</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</MachineLayout>
+
+<style>
+  .category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .machines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .machine-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .machine-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .machine-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .machine-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .machine-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+
+  @media (max-width: 768px) {
+    .machines-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

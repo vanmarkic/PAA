@@ -1,0 +1,173 @@
+---
+import MachineLayout from '../../layouts/MachineLayout.astro';
+import CategoryBadge from '../../components/CategoryBadge.astro';
+import { loadMachinesMetadata } from '../../lib/machines';
+import type { MachineMeta } from '../../lib/machines';
+
+export async function getStaticPaths() {
+  const metadata = await loadMachinesMetadata();
+
+  return metadata.machines.map(machine => ({
+    params: { id: machine.id },
+    props: { machine }
+  }));
+}
+
+interface Props {
+  machine: MachineMeta;
+}
+
+const { machine } = Astro.props;
+---
+
+<MachineLayout
+  title={`${machine.name} - PAA`}
+  description={machine.description}
+>
+  <article class="machine-detail">
+    <header>
+      <h1>{machine.name}</h1>
+      <CategoryBadge category={machine.category} />
+    </header>
+
+    {machine.description && (
+      <p class="description">{machine.description}</p>
+    )}
+
+    <div class="metadata-grid">
+      <div class="metadata-card">
+        <strong>Machine ID</strong>
+        <code>{machine.id}</code>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Initial State</strong>
+        <code>{machine.initial}</code>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Total States</strong>
+        <span>{machine.states.length}</span>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Total Events</strong>
+        <span>{machine.events.length}</span>
+      </div>
+    </div>
+
+    <section class="states-section">
+      <h2>States ({machine.states.length})</h2>
+      <div class="badge-grid">
+        {machine.states.map(state => (
+          <span class="badge">{state}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="events-section">
+      <h2>Events ({machine.events.length})</h2>
+      <div class="badge-grid">
+        {machine.events.map(event => (
+          <span class="badge event-badge">{event}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- Placeholder for Stately Inspector -->
+    <section class="diagram-section">
+      <h2>State Diagram</h2>
+      <div class="diagram-placeholder">
+        <p>Interactive Stately diagram will be added here</p>
+      </div>
+    </section>
+  </article>
+</MachineLayout>
+
+<style>
+  .machine-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .metadata-card {
+    background: #f7f7f9;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .metadata-card strong {
+    display: block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .metadata-card code {
+    background: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+
+  .event-badge {
+    background: var(--secondary);
+  }
+
+  .diagram-placeholder {
+    background: #f7f7f9;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-light);
+  }
+</style>
