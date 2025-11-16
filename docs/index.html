@@ -472,12 +472,12 @@ stateDiagram-v2
                     <div class="mermaid">
 flowchart TD
     Start([User Starts Application]) --> Input[Collect User Data]
-    Input --> Check{Check Eligibility<br/>Rules}
+    Input --> Check{Check Eligibility Rules}
 
-    Check -->|Age ≥ 18<br/>Residency OK<br/>Income Low| Eligible[Eligible State]
+    Check -->|Age ≥ 18, Residency OK, Income Low| Eligible[Eligible State]
     Check -->|Failed Criteria| NotEligible[Ineligible State]
 
-    NotEligible --> ShowAlternatives[Show Alternative<br/>Benefits]
+    NotEligible --> ShowAlternatives[Show Alternative Benefits]
     ShowAlternatives --> End1([End])
 
     Eligible --> Decision{User Decision}
@@ -630,12 +630,12 @@ flowchart TD
 
     Generate --> Versions[4 Output Versions:<br/>Simple, Detailed,<br/>Examples, Warnings]
 
-    Versions --> Validate{Semantic<br/>Validation}
+    Versions --> Validate{Semantic Validation}
 
     Validate -->|Pass| Complete[Completed State]
     Complete --> Output([Return Simplified Text])
 
-    Validate -->|Fail| CheckRetry{Retry Count<br/>< 3?}
+    Validate -->|Fail| CheckRetry{Retry Count < 3?}
 
     CheckRetry -->|Yes| Regen[Regenerate with<br/>Stricter Constraints]
     CheckRetry -->|No| Failed[Failed State]
@@ -1001,12 +1001,12 @@ stateDiagram-v2
                     <div class="mermaid">
 flowchart TD
     Start([User Starts Application]) --> Input[Collect User Data]
-    Input --> Check{Check Eligibility<br/>Rules}
+    Input --> Check{Check Eligibility Rules}
 
-    Check -->|Age ≥ 18<br/>Residency OK<br/>Income Low| Eligible[Eligible State]
+    Check -->|Age ≥ 18, Residency OK, Income Low| Eligible[Eligible State]
     Check -->|Failed Criteria| NotEligible[Ineligible State]
 
-    NotEligible --> ShowAlternatives[Show Alternative<br/>Benefits]
+    NotEligible --> ShowAlternatives[Show Alternative Benefits]
     ShowAlternatives --> End1([End])
 
     Eligible --> Decision{User Decision}
@@ -1159,12 +1159,12 @@ flowchart TD
 
     Generate --> Versions[4 Output Versions:<br/>Simple, Detailed,<br/>Examples, Warnings]
 
-    Versions --> Validate{Semantic<br/>Validation}
+    Versions --> Validate{Semantic Validation}
 
     Validate -->|Pass| Complete[Completed State]
     Complete --> Output([Return Simplified Text])
 
-    Validate -->|Fail| CheckRetry{Retry Count<br/>< 3?}
+    Validate -->|Fail| CheckRetry{Retry Count < 3?}
 
     CheckRetry -->|Yes| Regen[Regenerate with<br/>Stricter Constraints]
     CheckRetry -->|No| Failed[Failed State]
@@ -1531,12 +1531,12 @@ stateDiagram-v2
                     <div class="mermaid">
 flowchart TD
     Start([Gebruiker Start Aanvraag]) --> Input[Verzamel Gebruikersgegevens]
-    Input --> Check{Controleer Geschiktheid<br/>Regels}
+    Input --> Check{Controleer Geschiktheid Regels}
 
-    Check -->|Leeftijd ≥ 18<br/>Verblijf OK<br/>Inkomen Laag| Eligible[Geschikt Staat]
+    Check -->|Leeftijd ≥ 18, Verblijf OK, Inkomen Laag| Eligible[Geschikt Staat]
     Check -->|Criteria Mislukt| NotEligible[Niet Geschikt Staat]
 
-    NotEligible --> ShowAlternatives[Toon Alternatieve<br/>Uitkeringen]
+    NotEligible --> ShowAlternatives[Toon Alternatieve Uitkeringen]
     ShowAlternatives --> End1([Einde])
 
     Eligible --> Decision{Gebruiker Beslissing}
@@ -1689,12 +1689,12 @@ flowchart TD
 
     Generate --> Versions[4 Uitvoerversies:<br/>Simpel, Gedetailleerd,<br/>Voorbeelden, Waarschuwingen]
 
-    Versions --> Validate{Semantische<br/>Validatie}
+    Versions --> Validate{Semantische Validatie}
 
     Validate -->|Succes| Complete[Voltooide Staat]
     Complete --> Output([Retourneer Vereenvoudigde Tekst])
 
-    Validate -->|Fout| CheckRetry{Herhalingen Tellen<br/>< 3?}
+    Validate -->|Fout| CheckRetry{Herhalingen Tellen < 3?}
 
     CheckRetry -->|Ja| Regen[Regenereer met<br/>Striktere Beperkingen]
     CheckRetry -->|Nee| Failed[Mislukte Staat]
