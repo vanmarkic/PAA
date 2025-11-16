@@ -20,6 +20,13 @@ export default defineConfig({
   },
 
   vite: {
+    server: {
+      fs: {
+        // Allow serving files from the parent project
+        allow: ['..']
+      }
+    },
+
     build: {
       rollupOptions: {
         output: {
