@@ -61,8 +61,8 @@ export const ecoChequeMachine = createMachine({
 
   context: {
     employeur: null,
-    employes: [],
-    transactions: [],
+    employes: [] as EmployeEco[],
+    transactions: [] as TransactionEco[],
     montantTotalAttribue: 0,
     montantTotalUtilise: 0,
     anneeEnCours: new Date().getFullYear(),
@@ -103,7 +103,7 @@ export const ecoChequeMachine = createMachine({
           actions: assign({
             employes: ({ event }) => event.employes,
             montantTotalAttribue: ({ event }) =>
-              event.employes.reduce((sum, emp) => sum + emp.montantAttribue, 0),
+              event.employes.reduce((sum: number, emp: EmployeEco) => sum + emp.montantAttribue, 0),
           }),
         },
       },
@@ -134,7 +134,7 @@ export const ecoChequeMachine = createMachine({
           target: 'attribution',
           actions: assign({
             anneeEnCours: ({ event }) => event.annee,
-            employes: (context) =>
+            employes: ({ context }) =>
               context.employes.map(emp => ({ ...emp, montantUtilise: 0 })),
           }),
         },
@@ -168,10 +168,10 @@ export const ecoChequeMachine = createMachine({
         TRANSACTION_CONFIRMEE: {
           target: 'actif',
           actions: assign({
-            transactions: (context, event: any) => [...context.transactions, event.transaction],
-            montantTotalUtilise: (context, event: any) =>
+            transactions: ({ context, event }) => [...context.transactions, event.transaction],
+            montantTotalUtilise: ({ context, event }) =>
               context.montantTotalUtilise + event.transaction.montant,
-            employes: (context, event: any) =>
+            employes: ({ context, event }) =>
               context.employes.map(emp =>
                 emp.id === event.transaction.employeId
                   ? { ...emp, montantUtilise: emp.montantUtilise + event.transaction.montant }

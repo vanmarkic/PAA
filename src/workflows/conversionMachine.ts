@@ -36,6 +36,11 @@ export const conversionMachine = createMachine({
     legalText: null as any,
     targetLevel: 'simple' as ConversionLevel,
     targetAudience: 'general' as any,
+    extractedStructure: undefined,
+    identifiedConcepts: undefined,
+    mappedTerms: undefined,
+    generatedVersions: undefined,
+    validationErrors: undefined,
     retryCount: 0,
   },
 
@@ -136,8 +141,9 @@ export const conversionMachine = createMachine({
       always: [
         {
           target: 'regeneratingWithConstraints',
-          guard: (context) => context.retryCount < 3,
-          actions: assign({ retryCount: ({ context }) => context.retryCount + 1,
+          guard: ({ context }) => context.retryCount < 3,
+          actions: assign({
+            retryCount: ({ context }) => context.retryCount + 1,
           }),
         },
         {

@@ -69,11 +69,11 @@ export const deductionFraisGardeMachine = createMachine({
   },
 
   context: {
-    parent: null,
-    enfants: [],
-    fraisGarde: [],
-    deduction: null,
-    attestations: [],
+    parent: null as Parent | null,
+    enfants: [] as Enfant[],
+    fraisGarde: [] as FraisGarde[],
+    deduction: null as DeductionFraisGarde | null,
+    attestations: [] as string[],
     anneeFiscale: new Date().getFullYear(),
   },
 

@@ -149,11 +149,17 @@ export const allocationHandicapesMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculMontant',
           actions: assign({
-            personne: ({ context, event }) => ({
-              ...(context.personne || {}),
-              revenus: event.nouveauxRevenus,
-            }),
-          }),
+            personne: ({ context, event }) => {
+              if (!context.personne) {
+                throw new Error('personne must be set before changing revenus');
+              }
+              const current: PersonneHandicapee = context.personne;
+              return {
+                ...current,
+                revenus: event.nouveauxRevenus,
+              };
+            },
+          }) as any,
         },
         CHANGEMENT_SITUATION_MEDICALE: {
           target: 'reevaluationMedicale',

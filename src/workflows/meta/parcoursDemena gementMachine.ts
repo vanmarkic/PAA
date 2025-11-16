@@ -56,7 +56,7 @@ export const parcoursDemenagementMachine = createMachine({
   },
 
   context: {
-    citoyen: null,
+    citoyen: null as Citoyen | null,
     demarches: {
       changementAdresseCommune: false,
       courrier: false,
@@ -73,8 +73,8 @@ export const parcoursDemenagementMachine = createMachine({
     ancienneCommune: '',
     nouvelleCommune: '',
     changementCommune: false,
-    checklistRestante: [],
-    documentsObtenus: [],
+    checklistRestante: [] as string[],
+    documentsObtenus: [] as string[],
   },
 
   states: {
@@ -83,10 +83,10 @@ export const parcoursDemenagementMachine = createMachine({
         DEMENAGEMENT_PLANIFIE: {
           target: 'changementAdresseOfficiel',
           actions: assign({
-            citoyen: ({ event }) => event.citoyen,
-            changementCommune: ({ event }) =>
+            citoyen: ({ event }: { event: any }) => event.citoyen,
+            changementCommune: ({ event }: { event: any }): boolean =>
               event.citoyen.ancienneAdresse.split(',')[1] !== event.citoyen.nouvelleAdresse.split(',')[1],
-            checklistRestante: [
+            checklistRestante: (): string[] => [
               'Changement adresse commune',
               'Redirection courrier',
               'Électricité/Gaz',
@@ -111,16 +111,16 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         CHANGEMENT_ADRESSE_EFFECTUE: {
           target: 'redirectionCourrier',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               changementAdresseCommune: true,
             }),
-            documentsObtenus: (context) => [
+            documentsObtenus: ({ context }: { context: ParcoursDemenagementContext }): string[] => [
               ...context.documentsObtenus,
               'Nouvelle carte d\'identité',
               'Attestation de résidence',
             ],
-            checklistRestante: (context) =>
+            checklistRestante: ({ context }: { context: ParcoursDemenagementContext }): string[] =>
               context.checklistRestante.filter(item => item !== 'Changement adresse commune'),
           }),
         },
@@ -144,11 +144,11 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         COURRIER_REDIRIGE: {
           target: 'transfertEnergie',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               courrier: true,
             }),
-            checklistRestante: (context) =>
+            checklistRestante: ({ context }: { context: ParcoursDemenagementContext }): string[] =>
               context.checklistRestante.filter(item => item !== 'Redirection courrier'),
           }),
         },
@@ -173,12 +173,12 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ENERGIE_TRANSFEREE: {
           target: 'transfertInternet',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               electriciteGaz: true,
               eau: true,
             }),
-            checklistRestante: (context) =>
+            checklistRestante: ({ context }: { context: ParcoursDemenagementContext }): string[] =>
               context.checklistRestante.filter(item => !['Électricité/Gaz', 'Eau'].includes(item)),
           }),
         },
@@ -210,11 +210,11 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         INTERNET_TRANSFERE: {
           target: 'assuranceHabitation',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               internet: true,
             }),
-            checklistRestante: (context) =>
+            checklistRestante: ({ context }: { context: ParcoursDemenagementContext }): string[] =>
               context.checklistRestante.filter(item => item !== 'Internet'),
           }),
         },
@@ -236,11 +236,11 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ASSURANCE_MODIFIEE: {
           target: 'notificationOrganismes',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               assuranceHabitation: true,
             }),
-            checklistRestante: (context) =>
+            checklistRestante: ({ context }: { context: ParcoursDemenagementContext }): string[] =>
               context.checklistRestante.filter(item => item !== 'Assurance habitation'),
           }),
         },
@@ -265,7 +265,7 @@ export const parcoursDemenagementMachine = createMachine({
       on: {
         ORGANISMES_NOTIFIES: {
           target: 'demenagementComplete',
-          actions: assign({ demarches: ({ context }) => ({
+          actions: assign({ demarches: ({ context }: { context: ParcoursDemenagementContext }) => ({
               ...context.demarches,
               banque: true,
               employeur: true,
@@ -273,7 +273,7 @@ export const parcoursDemenagementMachine = createMachine({
               impots: true,
               voiture: true,
             }),
-            checklistRestante: [],
+            checklistRestante: (): string[] => [],
           }),
         },
       },

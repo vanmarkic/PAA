@@ -64,10 +64,10 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
   },
 
   context: {
-    emprunteur: null,
-    emprunt: null,
-    deduction: null,
-    attestationsBanque: [],
+    emprunteur: null as Emprunteur | null,
+    emprunt: null as EmpruntHypothecaire | null,
+    deduction: null as DeductionEmprunt | null,
+    attestationsBanque: [] as string[],
     totalDeductAnnuel: 0,
     anneeFiscale: new Date().getFullYear(),
   },
@@ -171,7 +171,8 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
       on: {
         ATTESTATIONS_VALIDEES: {
           target: 'deductionAccordee',
-          actions: assign({ totalDeductAnnuel: ({ context }) => context.deduction?.montantDeductible || 0,
+          actions: assign({
+            totalDeductAnnuel: ({ context }) => context.deduction?.montantDeductible || 0,
           }),
         },
         ATTESTATIONS_INVALIDES: {

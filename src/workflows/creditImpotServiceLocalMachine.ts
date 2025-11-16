@@ -65,10 +65,10 @@ export const creditImpotServiceLocalMachine = createMachine({
   },
 
   context: {
-    beneficiaire: null,
-    services: [],
-    credit: null,
-    attestationsPrestataires: [],
+    beneficiaire: null as Beneficiaire | null,
+    services: [] as ServiceLocal[],
+    credit: null as CreditServiceLocal | null,
+    attestationsPrestataires: [] as string[],
     totalDepenses: 0,
     totalCredit: 0,
   },

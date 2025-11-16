@@ -189,20 +189,32 @@ export const aideLogementMachine = createMachine({
         CHANGEMENT_LOYER: {
           target: 'recalculMontant',
           actions: assign({
-            logement: ({ context, event }) => ({
-              ...(context.logement || {}),
-              loyerMensuel: event.nouveauLoyer,
-            }),
-          }),
+            logement: ({ context, event }) => {
+              if (!context.logement) {
+                throw new Error('logement must be set before changing loyer');
+              }
+              const current: Logement = context.logement;
+              return {
+                ...current,
+                loyerMensuel: event.nouveauLoyer,
+              };
+            },
+          }) as any,
         },
         CHANGEMENT_REVENUS: {
           target: 'recalculMontant',
           actions: assign({
-            locataire: ({ context, event }) => ({
-              ...(context.locataire || {}),
-              revenus: event.nouveauxRevenus,
-            }),
-          }),
+            locataire: ({ context, event }) => {
+              if (!context.locataire) {
+                throw new Error('locataire must be set before changing revenus');
+              }
+              const current: Locataire = context.locataire;
+              return {
+                ...current,
+                revenus: event.nouveauxRevenus,
+              };
+            },
+          }) as any,
         },
         DEMENAGEMENT: {
           target: 'verificationBail',

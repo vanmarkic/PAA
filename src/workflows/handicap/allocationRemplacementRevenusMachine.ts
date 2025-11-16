@@ -56,6 +56,12 @@ type ARREvent =
 export const allocationRemplacementRevenusMachine = createMachine({
   id: 'allocationRemplacementRevenus',
   initial: 'verification',
+
+  schemas: {
+    context: {} as ARRContext,
+    events: {} as ARREvent,
+  },
+
   context: {
     demandeur: {
       nom: '',
@@ -64,7 +70,10 @@ export const allocationRemplacementRevenusMachine = createMachine({
     },
     handicap: {},
     situation: {},
+    montantMensuel: undefined as number | undefined,
+    decision: undefined as ARRContext['decision'],
   },
+
   states: {
     verification: {
       meta: {
@@ -84,10 +93,11 @@ export const allocationRemplacementRevenusMachine = createMachine({
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluationMedicale',
-          actions: assign(({ context, event }) => ({
-            ...context,
-            ...event.data,
-          })),
+          actions: assign({
+            demandeur: ({ event }) => event.data.demandeur,
+            handicap: ({ event }) => event.data.handicap,
+            situation: ({ event }) => event.data.situation,
+          }),
         },
       },
     },
@@ -170,21 +180,25 @@ export const allocationRemplacementRevenusMachine = createMachine({
       on: {
         DECISION_OCTROI: {
           target: 'paiement',
-          actions: assign({
-            montantMensuel: ({ context, event }) => event.montant,
-            decision: {
-              accordee: true,
-              dateEffet: new Date().toISOString().split('T')[0],
-            },
-          }),
+          actions: [
+            assign({
+              montantMensuel: ({ event }) => event.montant,
+            }),
+            assign({
+              decision: () => ({
+                accordee: true,
+                dateEffet: new Date().toISOString().split('T')[0],
+              } as ARRContext['decision']),
+            }),
+          ],
         },
         DECISION_REFUS: {
           target: 'refus',
           actions: assign({
-            decision: ({ context, event }) => ({
+            decision: ({ event }) => ({
               accordee: false,
               motifRefus: event.motif,
-            }),
+            } as ARRContext['decision']),
           }),
         },
       },
@@ -214,7 +228,7 @@ export const allocationRemplacementRevenusMachine = createMachine({
         REVISION: {
           target: 'paiement',
           actions: assign({
-            montantMensuel: ({ context, event }) => event.nouveauMontant,
+            montantMensuel: ({ event }) => event.nouveauMontant,
           }),
         },
       },

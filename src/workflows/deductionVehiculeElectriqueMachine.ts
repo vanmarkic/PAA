@@ -64,10 +64,10 @@ export const deductionVehiculeElectriqueMachine = createMachine({
   },
 
   context: {
-    acquereur: null,
-    vehicule: null,
-    deduction: null,
-    documentsVehicule: [],
+    acquereur: null as Acquereur | null,
+    vehicule: null as VehiculeElectrique | null,
+    deduction: null as DeductionVehicule | null,
+    documentsVehicule: [] as string[],
     montantDeductAnnuel: 0,
     anneesRestantes: 0,
   },
@@ -172,7 +172,8 @@ export const deductionVehiculeElectriqueMachine = createMachine({
       on: {
         DOCUMENTS_VALIDES: {
           target: 'deductionAccordee',
-          actions: assign({ montantDeductAnnuel: ({ context }) =>
+          actions: assign({
+            montantDeductAnnuel: ({ context }) =>
               (context.deduction?.montantDeduction || 0) / (context.anneesRestantes || 1),
           }),
         },
@@ -203,8 +204,9 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'actif',
-            guard: (context) => context.anneesRestantes > 1,
-            actions: assign({ anneesRestantes: ({ context }) => context.anneesRestantes - 1,
+            guard: ({ context }) => context.anneesRestantes > 1,
+            actions: assign({
+              anneesRestantes: ({ context }) => context.anneesRestantes - 1,
             }),
           },
           {

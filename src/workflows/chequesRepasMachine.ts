@@ -58,10 +58,10 @@ export const chequesRepasMachine = createMachine({
   context: {
     employeur: null,
     distribution: null,
-    employes: [],
+    employes: [] as Employe[],
     totalDistribue: 0,
     avantagesFiscaux: 0,
-  },
+  } as ChequesRepasContext,
 
   states: {
     inactif: {
@@ -152,9 +152,10 @@ export const chequesRepasMachine = createMachine({
       on: {
         CHEQUES_DISTRIBUES: {
           target: 'actif',
-          actions: assign({ totalDistribue: ({ context }) =>
+          actions: assign({
+            totalDistribue: ({ context }) =>
               context.totalDistribue +
-              ((context.distribution?.nombreCheques || 0) * (context.distribution?.valeurUnitaire || 0)),
+              (context.distribution!.nombreCheques * context.distribution!.valeurUnitaire),
           }),
         },
       },

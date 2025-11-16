@@ -190,7 +190,7 @@ export const assuranceMaladieMachine = createMachine({
               ...context.remboursements,
               event as any,
             ],
-          }),
+          }) as any,
         },
       },
 

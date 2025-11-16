@@ -87,7 +87,7 @@ export const avantagesNatureMachine = createMachine({
           target: 'declarationAvantages',
           actions: assign({
             avantagesDeclarés: ({ context, event }) => [...context.avantagesDeclarés, event.avantage],
-          }),
+          }) as any,
         },
         CALCULER_VALORISATION: {
           target: 'valorisation',

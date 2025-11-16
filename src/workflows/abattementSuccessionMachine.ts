@@ -103,7 +103,7 @@ export const abattementSuccessionMachine = createMachine({
           target: 'inventaireBiens',
           actions: assign({
             biens: ({ context, event }) => [...context.biens, event.bien],
-          }),
+          }) as any,
         },
         EVALUER_BIENS: {
           target: 'evaluationBiens',

@@ -56,7 +56,7 @@ export const transportScolaireMachine = createMachine({
         DEMANDER_TRANSPORT: {
           target: 'calculDistance',
           actions: assign({
-            eleve: ({ event }) => event.eleve,
+            eleve: ({ event }: { event: any }) => event.eleve,
           }),
         },
       },
@@ -71,16 +71,16 @@ export const transportScolaireMachine = createMachine({
         DISTANCE_CALCULEE: [
           {
             target: 'assignationItineraire',
-            guard: ({ event }) => event.distance >= 4,
+            guard: ({ event }: { event: any }) => event.distance >= 4,
             actions: assign({
-              distanceKm: ({ event }) => event.distance,
+              distanceKm: ({ event }: { event: any }) => event.distance,
               estEligible: true,
             }),
           },
           {
             target: 'tropProche',
             actions: assign({
-              distanceKm: ({ event }) => event.distance,
+              distanceKm: ({ event }: { event: any }) => event.distance,
               estEligible: false,
             }),
           },
@@ -109,7 +109,7 @@ export const transportScolaireMachine = createMachine({
         ITINERAIRE_ASSIGNE: {
           target: 'emissionAbonnement',
           actions: assign({
-            itineraire: ({ event }) => event.itineraire,
+            itineraire: ({ event }: { event: any }) => event.itineraire,
           }),
         },
       },
@@ -125,7 +125,7 @@ export const transportScolaireMachine = createMachine({
           target: 'abonnementActif',
           actions: assign({
             abonnementActif: true,
-            typeAbonnement: ({ event }) => event.type,
+            typeAbonnement: ({ event }: { event: any }) => event.typeAbonnement,
           }),
         },
       },
@@ -161,7 +161,7 @@ export const transportScolaireMachine = createMachine({
         ITINERAIRE_ASSIGNE: {
           target: 'abonnementActif',
           actions: assign({
-            itineraire: ({ event }) => event.itineraire,
+            itineraire: ({ event }: { event: any }) => event.itineraire,
           }),
         },
       },

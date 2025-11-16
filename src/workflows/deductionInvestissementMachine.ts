@@ -51,9 +51,9 @@ export const deductionInvestissementMachine = createMachine({
   },
 
   context: {
-    investisseur: null,
-    resultat: null,
-    documentsInvestissement: [],
+    investisseur: null as Investisseur | null,
+    resultat: null as ResultatInvestissement | null,
+    documentsInvestissement: [] as string[],
     montantDeductAnnuellement: 0,
     anneesRestantes: 0,
   },
@@ -157,7 +157,8 @@ export const deductionInvestissementMachine = createMachine({
       on: {
         DOCUMENTS_APPROUVES: {
           target: 'deductionActive',
-          actions: assign({ montantDeductAnnuellement: ({ context }) =>
+          actions: assign({
+            montantDeductAnnuellement: ({ context }) =>
               (context.resultat?.montantDeductible || 0) / (context.anneesRestantes || 1),
           }),
         },
@@ -176,8 +177,9 @@ export const deductionInvestissementMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'deductionActive',
-            guard: (context) => context.anneesRestantes > 1,
-            actions: assign({ anneesRestantes: ({ context }) => context.anneesRestantes - 1,
+            guard: ({ context }) => context.anneesRestantes > 1,
+            actions: assign({
+              anneesRestantes: ({ context }) => context.anneesRestantes - 1,
             }),
           },
           {

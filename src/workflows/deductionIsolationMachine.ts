@@ -64,11 +64,11 @@ export const deductionIsolationMachine = createMachine({
   },
 
   context: {
-    proprietaire: null,
-    travaux: [],
-    deduction: null,
-    certificatsPEB: [],
-    factures: [],
+    proprietaire: null as ProprietaireHabitation | null,
+    travaux: [] as TravauxIsolation[],
+    deduction: null as DeductionIsolation | null,
+    certificatsPEB: [] as string[],
+    factures: [] as string[],
     totalDeduction: 0,
   },
 

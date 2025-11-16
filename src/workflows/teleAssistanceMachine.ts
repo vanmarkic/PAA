@@ -33,9 +33,9 @@ export const teleAssistanceMachine = createMachine({
   id: 'teleAssistance',
   initial: 'attente',
 
-  schemas: {
-    context: {} as TeleAssistanceContext,
-    events: {} as
+  types: {} as {
+    context: TeleAssistanceContext;
+    events:
       | { type: 'DEMANDER_SERVICE'; personne: PersonneAgee }
       | { type: 'EVALUER_ELIGIBILITE' }
       | { type: 'ELIGIBLE' }
@@ -49,7 +49,7 @@ export const teleAssistanceMachine = createMachine({
       | { type: 'INTERVENTION_EFFECTUEE' }
       | { type: 'TEST_EQUIPEMENT' }
       | { type: 'RESILIER_SERVICE' }
-      | { type: 'REINITIALISER' }
+      | { type: 'REINITIALISER' };
   },
 
   context: {
@@ -108,7 +108,7 @@ export const teleAssistanceMachine = createMachine({
         ACTIVER_SERVICE: {
           target: 'serviceActif',
           actions: assign({
-            equipement: ({ event }) => ({
+            equipement: () => ({
               typeBoitier: 'standard',
               dateInstallation: new Date(),
               contactsUrgence: [],
@@ -127,7 +127,8 @@ export const teleAssistanceMachine = createMachine({
       on: {
         ALERTE_RECUE: {
           target: 'traitementAlerte',
-          actions: assign({ alertesRecues: ({ context }) => context.alertesRecues + 1,
+          actions: assign({
+            alertesRecues: ({ context }) => context.alertesRecues + 1,
           }),
         },
         TEST_EQUIPEMENT: {
@@ -174,7 +175,8 @@ export const teleAssistanceMachine = createMachine({
       on: {
         INTERVENTION_EFFECTUEE: {
           target: 'serviceActif',
-          actions: assign({ interventionsEffectuees: ({ context }) => context.interventionsEffectuees + 1,
+          actions: assign({
+            interventionsEffectuees: ({ context }) => context.interventionsEffectuees + 1,
           }),
         },
       },

@@ -50,7 +50,7 @@ export const congeMaladieMachine = createMachine({
     indemniteMutuelle: 0,
     dateReprise: null,
     retryCount: 0,
-  },
+  } as CongeMaladieContext,
 
   states: {
     idle: {
@@ -155,7 +155,7 @@ export const congeMaladieMachine = createMachine({
           target: 'congeMaladieActif',
           actions: assign({
             dureePrevue: ({ event }) => event.nouvelleDuree,
-            prolongations: (context) => context.prolongations + 1,
+            prolongations: ({ context }) => context.prolongations + 1,
           }),
         },
       },

@@ -51,7 +51,7 @@ export const risApplicationMachine = createMachine({
         START_APPLICATION: {
           target: 'checkingEligibility',
           actions: assign({
-            user: ({ event }) => event.user,
+            user: ({ event }: { event: any }) => event.user,
             retryCount: 0,
           }),
         },
@@ -67,15 +67,15 @@ export const risApplicationMachine = createMachine({
         ELIGIBILITY_CHECKED: [
           {
             target: 'eligible',
-            guard: ({ event }) => event.result.isEligible,
+            guard: ({ event }: { event: any }) => event.result.isEligible,
             actions: assign({
-              eligibilityResult: ({ event }) => event.result,
+              eligibilityResult: ({ event }: { event: any }) => event.result,
             }),
           },
           {
             target: 'ineligible',
             actions: assign({
-              eligibilityResult: ({ event }) => event.result,
+              eligibilityResult: ({ event }: { event: any }) => event.result,
             }),
           },
         ],
@@ -130,7 +130,7 @@ export const risApplicationMachine = createMachine({
         PIIS_SIGNED: {
           target: 'active',
           actions: assign({
-            piisContract: ({ event }) => event.contract,
+            piisContract: ({ event }: { event: any }) => event.contract,
           }),
         },
       },
@@ -145,8 +145,8 @@ export const risApplicationMachine = createMachine({
         INCOME_CHANGE: {
           target: 'recalculating',
           actions: assign({
-            user: ({ context, event }) => ({
-              ...(context.user || {}),
+            user: ({ context, event }: { context: any; event: any }) => ({
+              ...((context.user as any) || {}),
               monthlyIncome: event.newIncome,
             }),
           }),
@@ -169,7 +169,7 @@ export const risApplicationMachine = createMachine({
         ELIGIBILITY_CHECKED: {
           target: 'active',
           actions: assign({
-            eligibilityResult: ({ event }) => event.result,
+            eligibilityResult: ({ event }: { event: any }) => event.result,
           }),
         },
       },
@@ -187,7 +187,7 @@ export const risApplicationMachine = createMachine({
         COMPLIANCE_ISSUE: {
           target: 'complianceWarning',
           actions: assign({
-            complianceIssues: ({ event }) => event.issues,
+            complianceIssues: ({ event }: { event: any }) => event.issues,
           }),
         },
       },

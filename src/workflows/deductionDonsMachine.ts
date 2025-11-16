@@ -63,10 +63,10 @@ export const deductionDonsMachine = createMachine({
   },
 
   context: {
-    donateur: null,
-    dons: [],
-    deduction: null,
-    attestationsDons: [],
+    donateur: null as Donateur | null,
+    dons: [] as Don[],
+    deduction: null as DeductionDons | null,
+    attestationsDons: [] as string[],
     totalDons: 0,
     anneeFiscale: new Date().getFullYear(),
   },
