@@ -114,8 +114,8 @@ stateDiagram-v2
     validating --> checkingRetries: VALIDATION_FAILED
 
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
-    checkingRetries --> failed: retryCount_greater_equal_3
+    checkingRetries --> regeneratingWithConstraints: [retryCount < 3]
+    checkingRetries --> failed: [retryCount >= 3]
 
     regeneratingWithConstraints --> generatingVersions: RETRY
 
