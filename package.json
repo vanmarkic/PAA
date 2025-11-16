@@ -11,6 +11,7 @@
     "example:ris:workflow": "ts-node src/examples/risWorkflowSimple.ts",
     "example:conversion": "ts-node src/examples/conversionExample.ts",
     "docs:generate": "ts-node scripts/generateVisualizationDocs.ts",
+    "docs:metadata": "ts-node scripts/generateMachinesMetadata.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
