@@ -10,8 +10,8 @@ export default defineConfig({
 
   output: 'static',
 
-  // GitHub Pages deployment at /PAA
-  base: '/PAA',
+  // GitHub Pages deployment at /PAA (only in production builds)
+  base: process.env.NODE_ENV === 'production' ? '/PAA' : '/',
   site: 'https://vanmarkic.github.io',
 
   server: {
