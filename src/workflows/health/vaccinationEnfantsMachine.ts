@@ -40,7 +40,7 @@ export const vaccinationEnfantsMachine = createMachine({
         INSCRIRE_ENFANT: {
           target: 'premieresVaccinations',
           actions: assign({
-            enfant: (_, event) => event.enfant,
+            enfant: ({ event }) => event.enfant,
             calendrierVaccins: [
               'Polio (2, 3, 4, 13 mois)',
               'Diphtérie-Tétanos (2, 3, 4, 13 mois)',
@@ -61,7 +61,7 @@ export const vaccinationEnfantsMachine = createMachine({
         VACCINER: {
           target: 'premieresVaccinations',
           actions: assign({
-            vaccinsAdministres: (context, event) => [
+            vaccinsAdministres: ({ context, event }) => [
               ...context.vaccinsAdministres,
               event.vaccin,
             ],
@@ -69,7 +69,7 @@ export const vaccinationEnfantsMachine = createMachine({
         },
         RAPPEL_PLANIFIE: {
           target: 'rappels',
-          actions: assign({ prochainRappel: (_, event) => event.date }),
+          actions: assign({ prochainRappel: ({ event }) => event.date }),
         },
       },
       meta: { description: 'Vaccinations 2-13 mois (GRATUIT)' },
@@ -79,7 +79,7 @@ export const vaccinationEnfantsMachine = createMachine({
         VACCINER: {
           target: 'rappels',
           actions: assign({
-            vaccinsAdministres: (context, event) => [
+            vaccinsAdministres: ({ context, event }) => [
               ...context.vaccinsAdministres,
               event.vaccin,
             ],

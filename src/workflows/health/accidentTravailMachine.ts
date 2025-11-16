@@ -97,7 +97,7 @@ export const accidentTravailMachine = createMachine<
       on: {
         DECLARER_ACCIDENT: {
           target: 'expertise',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),

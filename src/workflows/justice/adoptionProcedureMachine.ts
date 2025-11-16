@@ -49,7 +49,7 @@ export const adoptionProcedureMachine = createMachine({
       on: {
         SEANCES_INFO: {
           target: 'demandeAgrement',
-          actions: assign({ candidats: (_, event) => event.candidats }),
+          actions: assign({ candidats: ({ event }) => event.candidats }),
         },
       },
       meta: {
@@ -94,7 +94,7 @@ export const adoptionProcedureMachine = createMachine({
           target: 'apparentement',
           actions: assign({
             agrementObtenu: true,
-            typeAdoption: (_, event) => event.type,
+            typeAdoption: ({ event }) => event.type,
           }),
         },
       },

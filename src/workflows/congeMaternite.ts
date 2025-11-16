@@ -74,7 +74,7 @@ export const congeMaterniteMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'declarationGrossesse',
           actions: assign({
-            mere: (_, event) => event.mere,
+            mere: ({ event }) => event.mere,
           }),
         },
       },
@@ -89,7 +89,7 @@ export const congeMaterniteMachine = createMachine({
         CERTIFICAT_FOURNI: {
           target: 'calculPlanConge',
           actions: assign({
-            certificatMedical: (_, event) => event.certificat,
+            certificatMedical: ({ event }) => event.certificat,
           }),
         },
       },
@@ -104,7 +104,7 @@ export const congeMaterniteMachine = createMachine({
         PLAN_CALCULE: {
           target: 'attenteReposPrenatal',
           actions: assign({
-            planConge: (_, event) => event.plan,
+            planConge: ({ event }) => event.plan,
           }),
         },
       },
@@ -137,7 +137,7 @@ export const congeMaterniteMachine = createMachine({
         ACCOUCHEMENT: {
           target: 'reposPostnatal',
           actions: assign({
-            datAccouchement: (_, event) => event.date,
+            datAccouchement: ({ event }) => event.date,
           }),
         },
       },
@@ -152,7 +152,7 @@ export const congeMaterniteMachine = createMachine({
         ACCOUCHEMENT: {
           target: 'reposPostnatal',
           actions: assign({
-            datAccouchement: (_, event) => event.date,
+            datAccouchement: ({ event }) => event.date,
           }),
         },
       },

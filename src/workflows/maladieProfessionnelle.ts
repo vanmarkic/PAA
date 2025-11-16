@@ -64,9 +64,9 @@ export const maladieProfessionnelleMachine = createMachine({
         DECLARER_SYMPTOMES: {
           target: 'identificationExposition',
           actions: assign({
-            employe: (_, event) => event.employe,
-            typeMaladie: (_, event) => event.typeMaladie,
-            dateApparition: (_, event) => event.dateApparition,
+            employe: ({ event }) => event.employe,
+            typeMaladie: ({ event }) => event.typeMaladie,
+            dateApparition: ({ event }) => event.dateApparition,
             retryCount: 0,
           }),
         },
@@ -82,7 +82,7 @@ export const maladieProfessionnelleMachine = createMachine({
         IDENTIFIER_EXPOSITION: {
           target: 'collectePreuvesMedicales',
           actions: assign({
-            expositionProfessionnelle: (_, event) => event.expositionProfessionnelle,
+            expositionProfessionnelle: ({ event }) => event.expositionProfessionnelle,
           }),
         },
       },
@@ -97,7 +97,7 @@ export const maladieProfessionnelleMachine = createMachine({
         RASSEMBLER_PREUVES_MEDICALES: {
           target: 'collectePreuvesExposition',
           actions: assign({
-            preuvesMedicales: (_, event) => event.preuvesMedicales,
+            preuvesMedicales: ({ event }) => event.preuvesMedicales,
           }),
         },
       },
@@ -112,7 +112,7 @@ export const maladieProfessionnelleMachine = createMachine({
         RASSEMBLER_PREUVES_EXPOSITION: {
           target: 'demandeSoumise',
           actions: assign({
-            preuveExposition: (_, event) => event.preuveExposition,
+            preuveExposition: ({ event }) => event.preuveExposition,
           }),
         },
       },
@@ -140,7 +140,7 @@ export const maladieProfessionnelleMachine = createMachine({
           target: 'reconnue',
           actions: assign({
             reconnaissance: true,
-            tauxIncapacite: (_, event) => event.tauxIncapacite,
+            tauxIncapacite: ({ event }) => event.tauxIncapacite,
           }),
         },
         REFUSEE: {
@@ -158,7 +158,7 @@ export const maladieProfessionnelleMachine = createMachine({
         CALCULER_INDEMNISATION: {
           target: 'indemnisation',
           actions: assign({
-            indemnisation: (_, event) => event.indemnisation,
+            indemnisation: ({ event }) => event.indemnisation,
           }),
         },
       },
@@ -230,7 +230,7 @@ export const maladieProfessionnelleMachine = createMachine({
         AGGRAVATION: {
           target: 'indemnisation',
           actions: assign({
-            tauxIncapacite: (_, event) => event.nouveauTaux,
+            tauxIncapacite: ({ event }) => event.nouveauTaux,
           }),
         },
       },

@@ -74,7 +74,7 @@ export const abonnementSocialTransportMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationConditions',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -89,14 +89,14 @@ export const abonnementSocialTransportMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'demandeAttestation',
-            guard: (_, event) =>
+            guard: ({ event }) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.invalide ||
               event.conditions.ancienCombattant ||
               event.conditions.plus65ans,
             actions: assign({
-              conditionsSpeciales: (_, event) => event.conditions,
+              conditionsSpeciales: ({ event }) => event.conditions,
             }),
           },
           {
@@ -127,7 +127,7 @@ export const abonnementSocialTransportMachine = createMachine({
         ABONNEMENT_CALCULE: {
           target: 'emissionCarte',
           actions: assign({
-            abonnement: (_, event) => event.abonnement,
+            abonnement: ({ event }) => event.abonnement,
           }),
         },
       },
@@ -189,7 +189,7 @@ export const abonnementSocialTransportMachine = createMachine({
       on: {
         CONDITIONS_VERIFIEES: {
           target: 'activationAbonnement',
-          guard: (_, event) =>
+          guard: ({ event }) =>
             event.conditions.beneficiaireBIM ||
             event.conditions.beneficiaireRIS,
         },

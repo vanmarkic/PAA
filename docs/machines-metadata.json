@@ -1,5 +1,5 @@
 {
-  "generated": "2025-11-16T20:31:51.894Z",
+  "generated": "2025-11-16T20:51:54.331Z",
   "totalMachines": 109,
   "categories": [
     "agriculture",
@@ -610,7 +610,19 @@
         "refus_mere",
         "delai_reflexion",
         "etablissement_acte",
-        "procedure"
+        "procedure",
+        "reconnaissance_etablie",
+        "effets_juridiques",
+        "nom_enfant",
+        "autorite_parentale",
+        "contribution_alimentaire",
+        "contestation_possible",
+        "refus",
+        "alternatives",
+        "recherche_paternite",
+        "action_judiciaire",
+        "delais",
+        "frais"
       ],
       "events": [
         "DEMANDER_RECONNAISSANCE",
@@ -4153,9 +4165,9 @@
     }
   ],
   "statistics": {
-    "totalStates": 2007,
+    "totalStates": 2019,
     "totalEvents": 917,
-    "averageStatesPerMachine": "18.4",
+    "averageStatesPerMachine": "18.5",
     "averageEventsPerMachine": "8.4"
   }
 }

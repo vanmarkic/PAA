@@ -74,7 +74,7 @@ export const cartemedicaleMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationPrerequis',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -104,7 +104,7 @@ export const cartemedicaleMachine = createMachine({
         CARTE_EMISE: {
           target: 'enqueteSociale',
           actions: assign({
-            carteMedicale: (_, event) => event.carte,
+            carteMedicale: ({ event }) => event.carte,
           }),
         },
       },
@@ -119,7 +119,7 @@ export const cartemedicaleMachine = createMachine({
         ENQUETE_COMPLETE: {
           target: 'evaluationEligibilite',
           actions: assign({
-            enquete: (_, event) => event.enquete,
+            enquete: ({ event }) => event.enquete,
           }),
         },
       },
@@ -146,7 +146,7 @@ export const cartemedicaleMachine = createMachine({
         CARTE_EMISE: {
           target: 'carteActive',
           actions: assign({
-            carteMedicale: (_, event) => event.carte,
+            carteMedicale: ({ event }) => event.carte,
           }),
         },
       },

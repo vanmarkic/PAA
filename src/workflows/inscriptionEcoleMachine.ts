@@ -65,7 +65,7 @@ export const inscriptionEcoleMachine = createMachine({
         COMMENCER_INSCRIPTION: {
           target: 'selectionEcole',
           actions: assign({
-            enfant: (_, event) => event.enfant,
+            enfant: ({ event }) => event.enfant,
           }),
         },
       },
@@ -80,7 +80,7 @@ export const inscriptionEcoleMachine = createMachine({
         CHOISIR_ECOLE: {
           target: 'verificationDocuments',
           actions: assign({
-            ecoleChoisie: (_, event) => event.ecole,
+            ecoleChoisie: ({ event }) => event.ecole,
           }),
         },
         ANNULER: {
@@ -98,7 +98,7 @@ export const inscriptionEcoleMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            documents: (_, event) => event.documents,
+            documents: ({ event }) => event.documents,
           }),
         },
       },
@@ -120,7 +120,7 @@ export const inscriptionEcoleMachine = createMachine({
           target: 'verificationDocuments',
           actions: assign({
             documentsValides: false,
-            erreurs: (_, event) => event.erreurs,
+            erreurs: ({ event }) => event.erreurs,
           }),
         },
       },
@@ -159,7 +159,7 @@ export const inscriptionEcoleMachine = createMachine({
         CHOISIR_ECOLE: {
           target: 'verificationDisponibilite',
           actions: assign({
-            ecoleChoisie: (_, event) => event.ecole,
+            ecoleChoisie: ({ event }) => event.ecole,
           }),
         },
         ANNULER: {

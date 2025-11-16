@@ -75,7 +75,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'evaluationBesoins',
           actions: assign({
-            personne: (_, event) => event.personne,
+            personne: ({ event }) => event.personne,
           }),
         },
       },
@@ -90,7 +90,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         EVALUATION_COMPLETE: {
           target: 'etablissementPlan',
           actions: assign({
-            evaluationBesoins: (_, event) => event.evaluation,
+            evaluationBesoins: ({ event }) => event.evaluation,
           }),
         },
       },
@@ -105,7 +105,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         PLAN_ETABLI: {
           target: 'attributionServices',
           actions: assign({
-            planAide: (_, event) => event.plan,
+            planAide: ({ event }) => event.plan,
           }),
         },
       },
@@ -156,7 +156,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         PLAN_ETABLI: {
           target: 'aideActive',
           actions: assign({
-            planAide: (_, event) => event.plan,
+            planAide: ({ event }) => event.plan,
           }),
         },
       },
@@ -171,7 +171,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         PLAN_ETABLI: {
           target: 'aideActive',
           actions: assign({
-            planAide: (_, event) => event.plan,
+            planAide: ({ event }) => event.plan,
           }),
         },
       },
@@ -186,7 +186,7 @@ export const aidePersonnesAgeesMachine = createMachine({
         EVALUATION_COMPLETE: {
           target: 'etablissementPlan',
           actions: assign({
-            evaluationBesoins: (_, event) => event.evaluation,
+            evaluationBesoins: ({ event }) => event.evaluation,
             reevaluationSemestrielle: true,
           }),
         },

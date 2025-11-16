@@ -49,7 +49,7 @@ export const expulsionDomicileMachine = createMachine({
       on: {
         DONNER_CONGE: {
           target: 'delaiPreavis',
-          actions: assign({ litige: (_, event) => event.litige }),
+          actions: assign({ litige: ({ event }) => event.litige }),
         },
       },
       meta: {

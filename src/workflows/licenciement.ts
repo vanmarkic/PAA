@@ -59,9 +59,9 @@ export const licenciementMachine = createMachine({
         INITIER_LICENCIEMENT: {
           target: 'collectePreuves',
           actions: assign({
-            employe: (_, event) => event.employe,
-            motif: (_, event) => event.motif,
-            typeMotif: (_, event) => event.typeMotif,
+            employe: ({ event }) => event.employe,
+            motif: ({ event }) => event.motif,
+            typeMotif: ({ event }) => event.typeMotif,
             retryCount: 0,
           }),
         },
@@ -77,7 +77,7 @@ export const licenciementMachine = createMachine({
         RASSEMBLER_PREUVES: {
           target: 'validationMotif',
           actions: assign({
-            preuves: (_, event) => event.preuves,
+            preuves: ({ event }) => event.preuves,
           }),
         },
       },
@@ -94,8 +94,7 @@ export const licenciementMachine = createMachine({
         },
         MOTIF_INSUFFISANT: {
           target: 'collectePreuves',
-          actions: assign({
-            retryCount: (context) => context.retryCount + 1,
+          actions: assign({ retryCount: ({ context }) => context.retryCount + 1,
           }),
         },
       },
@@ -110,7 +109,7 @@ export const licenciementMachine = createMachine({
         NOTIFIER_EMPLOYE: {
           target: 'calculIndemnite',
           actions: assign({
-            dateNotification: (_, event) => event.dateNotification,
+            dateNotification: ({ event }) => event.dateNotification,
           }),
         },
       },
@@ -125,7 +124,7 @@ export const licenciementMachine = createMachine({
         CALCULER_INDEMNITE: {
           target: 'attentReaction',
           actions: assign({
-            indemnite: (_, event) => event.indemnite,
+            indemnite: ({ event }) => event.indemnite,
           }),
         },
       },

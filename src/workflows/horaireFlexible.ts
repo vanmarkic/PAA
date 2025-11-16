@@ -66,8 +66,8 @@ export const horaireFlexibleMachine = createMachine({
         DEMANDER_HORAIRE_FLEXIBLE: {
           target: 'definitionPlages',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
             retryCount: 0,
           }),
         },
@@ -83,8 +83,8 @@ export const horaireFlexibleMachine = createMachine({
         DEFINIR_PLAGES: {
           target: 'negociationConditions',
           actions: assign({
-            plagesFixes: (_, event) => event.plagesFixes,
-            plagesFlexibles: (_, event) => event.plagesFlexibles,
+            plagesFixes: ({ event }) => event.plagesFixes,
+            plagesFlexibles: ({ event }) => event.plagesFlexibles,
           }),
         },
       },
@@ -100,8 +100,8 @@ export const horaireFlexibleMachine = createMachine({
           target: 'signatureAccord',
           actions: assign({
             accordEmployeur: true,
-            heuresHebdomadaires: (_, event) => event.heuresHebdomadaires || 38,
-            limiteReportHeures: (_, event) => event.limiteReportHeures || 20,
+            heuresHebdomadaires: ({ event }) => event.heuresHebdomadaires || 38,
+            limiteReportHeures: ({ event }) => event.limiteReportHeures || 20,
           }),
         },
         EMPLOYEUR_REFUSE: {
@@ -143,7 +143,7 @@ export const horaireFlexibleMachine = createMachine({
         ENREGISTRER_HEURES: {
           target: 'calculSolde',
           actions: assign({
-            compteurHeures: (context, event) => context.compteurHeures + event.heures,
+            compteurHeures: ({ context, event }) => context.compteurHeures + event.heures,
           }),
         },
         MODIFIER_PLAGES: {
@@ -218,7 +218,7 @@ export const horaireFlexibleMachine = createMachine({
         NOUVELLE_PERIODE: {
           target: 'horaireFlexibleActif',
           actions: assign({
-            periodeReference: (_, event) => event.periodeReference,
+            periodeReference: ({ event }) => event.periodeReference,
           }),
         },
       },
@@ -233,8 +233,8 @@ export const horaireFlexibleMachine = createMachine({
         DEFINIR_PLAGES: {
           target: 'horaireFlexibleActif',
           actions: assign({
-            plagesFixes: (_, event) => event.plagesFixes,
-            plagesFlexibles: (_, event) => event.plagesFlexibles,
+            plagesFixes: ({ event }) => event.plagesFixes,
+            plagesFlexibles: ({ event }) => event.plagesFlexibles,
           }),
         },
       },

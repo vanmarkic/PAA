@@ -48,7 +48,7 @@ export const protectionDonneesPersonnellesRGPDMachine = createMachine({
       on: {
         IDENTIFIER_TRAITEMENTS: {
           target: 'registreActivitesTraitement',
-          actions: assign({ traitement: (_, event) => event.traitement }),
+          actions: assign({ traitement: ({ event }) => event.traitement }),
         },
       },
       meta: {

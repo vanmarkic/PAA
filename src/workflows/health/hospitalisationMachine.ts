@@ -47,7 +47,7 @@ export const hospitalisationMachine = createMachine({
         ADMISSION: {
           target: 'admission',
           actions: assign({
-            patient: (_, event) => event.patient,
+            patient: ({ event }) => event.patient,
           }),
         },
       },
@@ -61,7 +61,7 @@ export const hospitalisationMachine = createMachine({
         TRAITEMENT_DEBUTE: {
           target: 'hospitalise',
           actions: assign({
-            dureeSejourJours: (_, event) => event.duree,
+            dureeSejourJours: ({ event }) => event.duree,
           }),
         },
       },
@@ -86,7 +86,7 @@ export const hospitalisationMachine = createMachine({
         FACTURE_GENEREE: {
           target: 'remboursement',
           actions: assign({
-            coutTotal: (_, event) => event.cout,
+            coutTotal: ({ event }) => event.cout,
           }),
         },
       },

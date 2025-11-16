@@ -70,10 +70,10 @@ export const pensionComplementaireMachine = createMachine({
         ADHERER_PLAN: {
           target: 'choixOrganisme',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            typePlan: (_, event) => event.typePlan,
-            ageAdhesion: (_, event) => event.ageAdhesion,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            typePlan: ({ event }) => event.typePlan,
+            ageAdhesion: ({ event }) => event.ageAdhesion,
             retryCount: 0,
           }),
         },
@@ -89,7 +89,7 @@ export const pensionComplementaireMachine = createMachine({
         CHOISIR_ORGANISME: {
           target: 'definitionCotisations',
           actions: assign({
-            organismeAssurance: (_, event) => event.organismeAssurance,
+            organismeAssurance: ({ event }) => event.organismeAssurance,
           }),
         },
       },
@@ -104,8 +104,8 @@ export const pensionComplementaireMachine = createMachine({
         DEFINIR_COTISATIONS: {
           target: 'designationBeneficiaire',
           actions: assign({
-            cotisationEmployeur: (_, event) => event.cotisationEmployeur,
-            cotisationPersonnelle: (_, event) => event.cotisationPersonnelle,
+            cotisationEmployeur: ({ event }) => event.cotisationEmployeur,
+            cotisationPersonnelle: ({ event }) => event.cotisationPersonnelle,
           }),
         },
       },
@@ -120,7 +120,7 @@ export const pensionComplementaireMachine = createMachine({
         DESIGNER_BENEFICIAIRE: {
           target: 'signatureAdhesion',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -156,7 +156,7 @@ export const pensionComplementaireMachine = createMachine({
         CHANGER_BENEFICIAIRE: {
           target: 'planActif',
           actions: assign({
-            beneficiaire: (_, event) => event.nouveauBeneficiaire,
+            beneficiaire: ({ event }) => event.nouveauBeneficiaire,
           }),
         },
         CHANGER_EMPLOYEUR: {
@@ -180,7 +180,7 @@ export const pensionComplementaireMachine = createMachine({
         VERSER_COTISATION: {
           target: 'calculRendement',
           actions: assign({
-            capitalAccumule: (context, event) => context.capitalAccumule + event.montant,
+            capitalAccumule: ({ context, event }) => context.capitalAccumule + event.montant,
           }),
         },
       },
@@ -195,7 +195,7 @@ export const pensionComplementaireMachine = createMachine({
         CALCULER_RENDEMENT: {
           target: 'planActif',
           actions: assign({
-            rendementAnnuel: (_, event) => event.rendementAnnuel,
+            rendementAnnuel: ({ event }) => event.rendementAnnuel,
           }),
         },
       },
@@ -210,7 +210,7 @@ export const pensionComplementaireMachine = createMachine({
         CONSULTER_CAPITAL: {
           target: 'planActif',
           actions: assign({
-            capitalAccumule: (_, event) => event.capitalAccumule,
+            capitalAccumule: ({ event }) => event.capitalAccumule,
           }),
         },
       },
@@ -225,7 +225,7 @@ export const pensionComplementaireMachine = createMachine({
         MODIFIER_COTISATIONS: {
           target: 'planActif',
           actions: assign({
-            cotisationPersonnelle: (_, event) => event.nouvelleCotisation,
+            cotisationPersonnelle: ({ event }) => event.nouvelleCotisation,
           }),
         },
       },
@@ -240,7 +240,7 @@ export const pensionComplementaireMachine = createMachine({
         TRANSFERER_CAPITAL: {
           target: 'planActif',
           actions: assign({
-            organismeAssurance: (_, event) => event.nouvelOrganisme,
+            organismeAssurance: ({ event }) => event.nouvelOrganisme,
           }),
         },
       },

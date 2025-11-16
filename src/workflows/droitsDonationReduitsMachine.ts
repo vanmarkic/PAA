@@ -87,9 +87,9 @@ export const droitsDonationReduitsMachine = createMachine({
         DEMARRER_DONATION: {
           target: 'verificationConditions',
           actions: assign({
-            donateur: (_, event) => event.donateur,
-            donataire: (_, event) => event.donataire,
-            donation: (_, event) => event.donation,
+            donateur: ({ event }) => event.donateur,
+            donataire: ({ event }) => event.donataire,
+            donation: ({ event }) => event.donation,
           }),
         },
       },
@@ -104,7 +104,7 @@ export const droitsDonationReduitsMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'calculDroits',
-            guard: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'nonEligible',
@@ -134,7 +134,7 @@ export const droitsDonationReduitsMachine = createMachine({
         DROITS_CALCULES: {
           target: 'droitsCalcules',
           actions: assign({
-            droits: (_, event) => event.droits,
+            droits: ({ event }) => event.droits,
           }),
         },
       },
@@ -176,7 +176,7 @@ export const droitsDonationReduitsMachine = createMachine({
         SOUMETTRE_ACTE: {
           target: 'validationActe',
           actions: assign({
-            acteNotarie: (_, event) => event.acte,
+            acteNotarie: ({ event }) => event.acte,
           }),
         },
       },
@@ -206,7 +206,7 @@ export const droitsDonationReduitsMachine = createMachine({
         SOUMETTRE_EVALUATIONS: {
           target: 'validationEvaluations',
           actions: assign({
-            evaluations: (_, event) => event.documents,
+            evaluations: ({ event }) => event.documents,
           }),
         },
       },

@@ -75,8 +75,8 @@ export const garantieLocativeMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            locataire: (_, event) => event.locataire,
-            logement: (_, event) => event.logement,
+            locataire: ({ event }) => event.locataire,
+            logement: ({ event }) => event.logement,
           }),
         },
       },
@@ -91,7 +91,7 @@ export const garantieLocativeMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'etablissementConvention',
-            guard: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -109,7 +109,7 @@ export const garantieLocativeMachine = createMachine({
         CONVENTION_ETABLIE: {
           target: 'signatureBail',
           actions: assign({
-            convention: (_, event) => event.convention,
+            convention: ({ event }) => event.convention,
             fpcl: true,
           }),
         },
@@ -137,7 +137,7 @@ export const garantieLocativeMachine = createMachine({
         ETAT_LIEUX_ENTREE: {
           target: 'garantieActive',
           actions: assign({
-            etatDesLieuxEntree: (_, event) => event.etat,
+            etatDesLieuxEntree: ({ event }) => event.etat,
           }),
         },
       },
@@ -164,7 +164,7 @@ export const garantieLocativeMachine = createMachine({
         ETAT_LIEUX_SORTIE: {
           target: 'evaluationDegats',
           actions: assign({
-            etatDesLieuxSortie: (_, event) => event.etat,
+            etatDesLieuxSortie: ({ event }) => event.etat,
           }),
         },
       },

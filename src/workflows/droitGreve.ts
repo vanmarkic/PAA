@@ -71,9 +71,9 @@ export const droitGreveMachine = createMachine({
         DECLARER_CONFLIT: {
           target: 'conflitDeclare',
           actions: assign({
-            syndicat: (_, event) => event.syndicat,
-            entreprise: (_, event) => event.entreprise,
-            motifGreve: (_, event) => event.motifGreve,
+            syndicat: ({ event }) => event.syndicat,
+            entreprise: ({ event }) => event.entreprise,
+            motifGreve: ({ event }) => event.motifGreve,
             retryCount: 0,
           }),
         },
@@ -89,7 +89,7 @@ export const droitGreveMachine = createMachine({
         CHOISIR_TYPE_GREVE: {
           target: 'tentativeNegociation',
           actions: assign({
-            typeGreve: (_, event) => event.typeGreve,
+            typeGreve: ({ event }) => event.typeGreve,
           }),
         },
       },
@@ -123,7 +123,7 @@ export const droitGreveMachine = createMachine({
           target: 'organisationVote',
           actions: assign({
             preavisDonne: true,
-            dateDebut: (_, event) => event.dateDebut,
+            dateDebut: ({ event }) => event.dateDebut,
           }),
         },
       },
@@ -138,7 +138,7 @@ export const droitGreveMachine = createMachine({
         VOTE_FAVORABLE: {
           target: 'declarationGreve',
           actions: assign({
-            participants: (_, event) => event.participants,
+            participants: ({ event }) => event.participants,
           }),
         },
         VOTE_DEFAVORABLE: {
@@ -180,7 +180,7 @@ export const droitGreveMachine = createMachine({
         VERIFIER_SERVICES_MINIMUMS: {
           target: 'greveEnCours',
           actions: assign({
-            servicesMinimums: (_, event) => event.servicesMinimums,
+            servicesMinimums: ({ event }) => event.servicesMinimums,
           }),
         },
       },

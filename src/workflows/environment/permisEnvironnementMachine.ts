@@ -53,9 +53,9 @@ export const permisEnvironnementMachine = createMachine({
         DEPOSER_DEMANDE: {
           target: 'examenRecevabilite',
           actions: assign({
-            demande: (_, event) => event.demande,
-            enquetePubliqueRequise: (_, event) => event.demande.classePermis === '1',
-            etudeImpactRequise: (_, event) => event.demande.impactEnvironnemental === 'eleve',
+            demande: ({ event }) => event.demande,
+            enquetePubliqueRequise: ({ event }) => event.demande.classePermis === '1',
+            etudeImpactRequise: ({ event }) => event.demande.impactEnvironnemental === 'eleve',
           }),
         },
       },

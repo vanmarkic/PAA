@@ -119,13 +119,13 @@ export const pensionAnticipeeMachine = createMachine<
         CALCULER_ELIGIBILITE: [
           {
             target: 'eligibleClassique',
-            guard: (context, event) => {
+            guard: ({ context, event }) => {
               const age = event.data.demandeur.age;
               const carriere = event.data.carriere.anneesCarriere || 0;
               // Simplifié: 2024-2025
               return age >= 63 && carriere >= 42;
             },
-            actions: assign((context, event) => ({
+            actions: assign(({ context, event }) => ({
               ...context,
               ...event.data,
               conditions: {
@@ -136,7 +136,7 @@ export const pensionAnticipeeMachine = createMachine<
           },
           {
             target: 'eligibleCarriereLongue',
-            guard: (context, event) => {
+            guard: ({ context, event }) => {
               const age = event.data.demandeur.age;
               const carriere = event.data.carriere.anneesCarriere || 0;
               const avantVingtAns = event.data.carriere.anneesAvant20Ans || 0;
@@ -146,7 +146,7 @@ export const pensionAnticipeeMachine = createMachine<
                 (age >= 61 && carriere >= 43)
               );
             },
-            actions: assign((context, event) => ({
+            actions: assign(({ context, event }) => ({
               ...context,
               ...event.data,
               conditions: {
@@ -157,7 +157,7 @@ export const pensionAnticipeeMachine = createMachine<
           },
           {
             target: 'ineligible',
-            actions: assign((context, event) => ({
+            actions: assign(({ context, event }) => ({
               ...context,
               ...event.data,
               conditions: {
@@ -248,7 +248,7 @@ export const pensionAnticipeeMachine = createMachine<
         DEMANDE_ACCEPTEE: {
           target: 'pensionOctroyee',
           actions: assign({
-            montantEstime: (context, event) => event.montant,
+            montantEstime: ({ context, event }) => event.montant,
           }),
         },
         DEMANDE_REFUSEE: 'refus',

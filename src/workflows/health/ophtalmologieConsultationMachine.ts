@@ -47,7 +47,7 @@ export const ophtalmologieConsultationMachine = createMachine({
       on: {
         CONSULTER: {
           target: 'examenOphtalmologique',
-          actions: assign({ patient: (_, event) => event.patient }),
+          actions: assign({ patient: ({ event }) => event.patient }),
         },
       },
       meta: {
@@ -76,7 +76,7 @@ export const ophtalmologieConsultationMachine = createMachine({
       on: {
         PRESCRIPTION_ETABLIE: {
           target: 'choixLunettes',
-          actions: assign({ prescription: (_, event) => event.correction }),
+          actions: assign({ prescription: ({ event }) => event.correction }),
         },
       },
       meta: {
@@ -89,8 +89,8 @@ export const ophtalmologieConsultationMachine = createMachine({
         CHOISIR_LUNETTES: {
           target: 'interventionOptique',
           actions: assign({
-            typeLunettes: (_, event) => event.type,
-            montantLunettes: (_, event) => event.montant,
+            typeLunettes: ({ event }) => event.type,
+            montantLunettes: ({ event }) => event.montant,
           }),
         },
       },
@@ -103,7 +103,7 @@ export const ophtalmologieConsultationMachine = createMachine({
       on: {
         INTERVENTION_CALCULEE: {
           target: 'termine',
-          actions: assign({ interventionMutuelle: (_, event) => event.intervention }),
+          actions: assign({ interventionMutuelle: ({ event }) => event.intervention }),
         },
       },
       meta: {

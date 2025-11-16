@@ -74,7 +74,7 @@ export const ecoChequeMachine = createMachine({
         ACTIVER_PROGRAMME: {
           target: 'activation',
           actions: assign({
-            employeur: (_, event) => event.employeur,
+            employeur: ({ event }) => event.employeur,
           }),
         },
       },
@@ -101,8 +101,8 @@ export const ecoChequeMachine = createMachine({
         ATTRIBUER_ECOCHEQUES: {
           target: 'validationAttribution',
           actions: assign({
-            employes: (_, event) => event.employes,
-            montantTotalAttribue: (_, event) =>
+            employes: ({ event }) => event.employes,
+            montantTotalAttribue: ({ event }) =>
               event.employes.reduce((sum, emp) => sum + emp.montantAttribue, 0),
           }),
         },
@@ -133,7 +133,7 @@ export const ecoChequeMachine = createMachine({
         NOUVELLE_ANNEE: {
           target: 'attribution',
           actions: assign({
-            anneeEnCours: (_, event) => event.annee,
+            anneeEnCours: ({ event }) => event.annee,
             employes: (context) =>
               context.employes.map(emp => ({ ...emp, montantUtilise: 0 })),
           }),

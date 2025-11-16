@@ -49,8 +49,8 @@ export const subventionAssociationCulturelleMachine = createMachine({
         DEPOSER_DOSSIER: {
           target: 'instructionDossier',
           actions: assign({
-            association: (_, event) => event.association,
-            montantDemande: (_, event) => event.montant,
+            association: ({ event }) => event.association,
+            montantDemande: ({ event }) => event.montant,
           }),
         },
       },
@@ -96,7 +96,7 @@ export const subventionAssociationCulturelleMachine = createMachine({
       on: {
         SUBSIDE_ACCORDE: {
           target: 'subsidePonctuel',
-          actions: assign({ montantAccorde: (_, event) => event.montant }),
+          actions: assign({ montantAccorde: ({ event }) => event.montant }),
         },
         DEMANDE_CONVENTIONNEMENT: { target: 'procedureConventionnement' },
       },

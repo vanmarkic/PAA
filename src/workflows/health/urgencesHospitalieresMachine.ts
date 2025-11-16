@@ -47,7 +47,7 @@ export const urgencesHospitalieresMachine = createMachine({
         PATIENT_ARRIVE: {
           target: 'triage',
           actions: assign({
-            patient: (_, event) => event.patient,
+            patient: ({ event }) => event.patient,
             heureArrivee: () => new Date(),
           }),
         },
@@ -59,7 +59,7 @@ export const urgencesHospitalieresMachine = createMachine({
         TRIAGE_EFFECTUE: [
           {
             target: 'priseEnChargeImmediate',
-            guard: (_, event) => event.gravite === 'critique',
+            guard: ({ event }) => event.gravite === 'critique',
           },
           {
             target: 'salleAttente',

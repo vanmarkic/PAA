@@ -75,7 +75,7 @@ export const assuranceMaladieMachine = createMachine({
         DEMARRER_AFFILIATION: {
           target: 'choixMutuelle',
           actions: assign({
-            assure: (_, event) => event.assure,
+            assure: ({ event }) => event.assure,
           }),
         },
       },
@@ -114,7 +114,7 @@ export const assuranceMaladieMachine = createMachine({
         DMG_OUVERT: {
           target: 'assureAvecDMG',
           actions: assign({
-            dmg: (_, event) => event.dmg,
+            dmg: ({ event }) => event.dmg,
           }),
         },
         PRESTATION_SOINS: {
@@ -186,7 +186,7 @@ export const assuranceMaladieMachine = createMachine({
         REMBOURSEMENT_EFFECTUE: {
           target: 'assureActif',
           actions: assign({
-            remboursements: (context, event) => [
+            remboursements: ({ context, event }) => [
               ...context.remboursements,
               event as any,
             ],

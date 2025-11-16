@@ -65,7 +65,7 @@ export const mediationDettesMachine = createMachine({
         DEMANDER_MEDIATION: {
           target: 'analyseDettes',
           actions: assign({
-            debiteur: (_, event) => event.debiteur,
+            debiteur: ({ event }) => event.debiteur,
           }),
         },
       },
@@ -95,7 +95,7 @@ export const mediationDettesMachine = createMachine({
         ETABLIR_PLAN: {
           target: 'negociationCreanciers',
           actions: assign({
-            planRemboursement: (_, event) => event.plan,
+            planRemboursement: ({ event }) => event.plan,
           }),
         },
       },
@@ -109,8 +109,7 @@ export const mediationDettesMachine = createMachine({
       on: {
         CREANCIERS_ACCEPTENT: {
           target: 'homologationPlan',
-          actions: assign({
-            creanciersAccord: (context) => (context.debiteur?.nombreCreanciers || 0),
+          actions: assign({ creanciersAccord: ({ context }) => (context.debiteur?.nombreCreanciers || 0),
           }),
         },
         CREANCIERS_REFUSENT: {
@@ -142,8 +141,7 @@ export const mediationDettesMachine = createMachine({
       on: {
         MENSUALITE_PAYEE: {
           target: 'planEnCours',
-          actions: assign({
-            mensualitesPayees: (context) => context.mensualitesPayees + 1,
+          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
           }),
         },
         MENSUALITE_IMPAYEE: {
@@ -163,14 +161,13 @@ export const mediationDettesMachine = createMachine({
       on: {
         MENSUALITE_PAYEE: {
           target: 'planEnCours',
-          actions: assign({
-            mensualitesPayees: (context) => context.mensualitesPayees + 1,
+          actions: assign({ mensualitesPayees: ({ context }) => context.mensualitesPayees + 1,
           }),
         },
         ETABLIR_PLAN: {
           target: 'negociationCreanciers',
           actions: assign({
-            planRemboursement: (_, event) => event.plan,
+            planRemboursement: ({ event }) => event.plan,
           }),
         },
       },

@@ -47,7 +47,7 @@ export const logementInsalubreMachine = createMachine({
       on: {
         SIGNALER: {
           target: 'enregistrementPlainte',
-          actions: assign({ signalement: (_, event) => event.signalement }),
+          actions: assign({ signalement: ({ event }) => event.signalement }),
         },
       },
       meta: {
@@ -79,8 +79,8 @@ export const logementInsalubreMachine = createMachine({
           target: 'arreteInsalubrite',
           actions: assign({
             arreteInsalubrite: true,
-            travauxImposes: (_, event) => event.travaux,
-            delaiTravaux: (_, event) => event.delai,
+            travauxImposes: ({ event }) => event.travaux,
+            delaiTravaux: ({ event }) => event.delai,
           }),
         },
       },

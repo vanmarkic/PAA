@@ -45,7 +45,7 @@ export const regroupementFamilialMachine = createMachine({
       on: {
         DEPOSER_DEMANDE: {
           target: 'evaluationEligibilite',
-          actions: assign({ demande: (_, event) => event.demande }),
+          actions: assign({ demande: ({ event }) => event.demande }),
         },
       },
       meta: {

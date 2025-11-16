@@ -79,7 +79,7 @@ export const creditImpotServiceLocalMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'saisieServices',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -94,8 +94,8 @@ export const creditImpotServiceLocalMachine = createMachine({
         AJOUTER_SERVICE: {
           target: 'saisieServices',
           actions: assign({
-            services: (context, event) => [...context.services, event.service],
-            totalDepenses: (context, event) => context.totalDepenses + event.service.montantDepense,
+            services: ({ context, event }) => [...context.services, event.service],
+            totalDepenses: ({ context, event }) => context.totalDepenses + event.service.montantDepense,
           }),
         },
         VERIFIER_PRESTATAIRES: {
@@ -113,7 +113,7 @@ export const creditImpotServiceLocalMachine = createMachine({
         PRESTATAIRES_VERIFIES: {
           target: 'calculCredit',
           actions: assign({
-            services: (_, event) => event.servicesValides,
+            services: ({ event }) => event.servicesValides,
           }),
         },
       },
@@ -128,16 +128,16 @@ export const creditImpotServiceLocalMachine = createMachine({
         CREDIT_CALCULE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.credit.estEligible,
+            guard: ({ event }) => event.credit.estEligible,
             actions: assign({
-              credit: (_, event) => event.credit,
-              totalCredit: (_, event) => event.credit.montantCredit,
+              credit: ({ event }) => event.credit,
+              totalCredit: ({ event }) => event.credit.montantCredit,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              credit: (_, event) => event.credit,
+              credit: ({ event }) => event.credit,
             }),
           },
         ],
@@ -153,7 +153,7 @@ export const creditImpotServiceLocalMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsPrestataires: (_, event) => event.documents,
+            attestationsPrestataires: ({ event }) => event.documents,
           }),
         },
       },

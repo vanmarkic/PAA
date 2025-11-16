@@ -70,9 +70,9 @@ export const teletravailMachine = createMachine({
         DEMANDER_TELETRAVAIL: {
           target: 'definitionModalites',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            typeTeletravail: (_, event) => event.typeTeletravail,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            typeTeletravail: ({ event }) => event.typeTeletravail,
             retryCount: 0,
           }),
         },
@@ -88,8 +88,8 @@ export const teletravailMachine = createMachine({
         DEFINIR_MODALITES: {
           target: 'evaluationFaisabilite',
           actions: assign({
-            joursParSemaine: (_, event) => event.joursParSemaine,
-            lieuTravail: (_, event) => event.lieuTravail,
+            joursParSemaine: ({ event }) => event.joursParSemaine,
+            lieuTravail: ({ event }) => event.lieuTravail,
           }),
         },
       },
@@ -131,8 +131,8 @@ export const teletravailMachine = createMachine({
         ETABLIR_ACCORD: {
           target: 'signatureAccord',
           actions: assign({
-            equipementFourni: (_, event) => event.equipementFourni,
-            indemniteBureau: (_, event) => event.indemniteBureau,
+            equipementFourni: ({ event }) => event.equipementFourni,
+            indemniteBureau: ({ event }) => event.indemniteBureau,
           }),
         },
       },
@@ -240,7 +240,7 @@ export const teletravailMachine = createMachine({
         MODIFIER_ACCORD: {
           target: 'teletravailActif',
           actions: assign({
-            joursParSemaine: (_, event) => event.nouveauxJours,
+            joursParSemaine: ({ event }) => event.nouveauxJours,
           }),
         },
       },

@@ -56,8 +56,8 @@ export const demissionMachine = createMachine({
         NOTIFIER_DEMISSION: {
           target: 'notificationEnregistree',
           actions: assign({
-            employe: (_, event) => event.employe,
-            motifDemission: (_, event) => event.motifDemission,
+            employe: ({ event }) => event.employe,
+            motifDemission: ({ event }) => event.motifDemission,
             retryCount: 0,
           }),
         },
@@ -73,7 +73,7 @@ export const demissionMachine = createMachine({
         ENREGISTRER_NOTIFICATION: {
           target: 'calculPreavis',
           actions: assign({
-            dateNotification: (_, event) => event.dateNotification,
+            dateNotification: ({ event }) => event.dateNotification,
           }),
         },
       },
@@ -88,7 +88,7 @@ export const demissionMachine = createMachine({
         CALCULER_PREAVIS: {
           target: 'confirmationDateFin',
           actions: assign({
-            dureePreavis: (_, event) => event.dureePreavis,
+            dureePreavis: ({ event }) => event.dureePreavis,
           }),
         },
       },
@@ -103,7 +103,7 @@ export const demissionMachine = createMachine({
         CONFIRMER_DATE_FIN: {
           target: 'optionsPreavis',
           actions: assign({
-            dateFinContrat: (_, event) => event.dateFinContrat,
+            dateFinContrat: ({ event }) => event.dateFinContrat,
           }),
         },
       },
@@ -151,7 +151,7 @@ export const demissionMachine = createMachine({
         RACHETER_PREAVIS: {
           target: 'remiseDocuments',
           actions: assign({
-            indemniteAPayer: (_, event) => event.indemnite,
+            indemniteAPayer: ({ event }) => event.indemnite,
           }),
         },
       },

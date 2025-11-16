@@ -83,8 +83,8 @@ export const exonerationPlusValueMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'calculPlusValue',
           actions: assign({
-            vendeur: (_, event) => event.vendeur,
-            bien: (_, event) => event.bien,
+            vendeur: ({ event }) => event.vendeur,
+            bien: ({ event }) => event.bien,
           }),
         },
       },
@@ -99,8 +99,8 @@ export const exonerationPlusValueMachine = createMachine({
         PLUS_VALUE_CALCULEE: {
           target: 'verificationExoneration',
           actions: assign({
-            plusValue: (_, event) => event.plusValue,
-            dureeDetention: (_, event) => event.duree,
+            plusValue: ({ event }) => event.plusValue,
+            dureeDetention: ({ event }) => event.duree,
           }),
         },
       },
@@ -115,15 +115,15 @@ export const exonerationPlusValueMachine = createMachine({
         EXONERATION_VERIFIEE: [
           {
             target: 'exonere',
-            guard: (_, event) => event.exoneration.estExonere,
+            guard: ({ event }) => event.exoneration.estExonere,
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
           {
             target: 'imposable',
             actions: assign({
-              exoneration: (_, event) => event.exoneration,
+              exoneration: ({ event }) => event.exoneration,
             }),
           },
         ],
@@ -139,7 +139,7 @@ export const exonerationPlusValueMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsTransaction: (_, event) => event.documents,
+            documentsTransaction: ({ event }) => event.documents,
           }),
         },
       },

@@ -81,7 +81,7 @@ export const carteStationnementHandicapMachine = createMachine<
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluation',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
             numeroReference: `STAT-${Date.now()}`,

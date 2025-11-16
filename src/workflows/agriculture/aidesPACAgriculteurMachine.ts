@@ -48,7 +48,7 @@ export const aidesPACAgriculteurMachine = createMachine({
       on: {
         INSCRIRE: {
           target: 'declarationPAC',
-          actions: assign({ exploitation: (_, event) => event.exploitation }),
+          actions: assign({ exploitation: ({ event }) => event.exploitation }),
         },
       },
       meta: {
@@ -111,8 +111,8 @@ export const aidesPACAgriculteurMachine = createMachine({
         AIDES_CALCULEES: {
           target: 'versementAides',
           actions: assign({
-            montantAidesPremierPilier: (_, event) => event.premierPilier,
-            montantAidesSecondPilier: (_, event) => event.secondPilier,
+            montantAidesPremierPilier: ({ event }) => event.premierPilier,
+            montantAidesSecondPilier: ({ event }) => event.secondPilier,
           }),
         },
       },

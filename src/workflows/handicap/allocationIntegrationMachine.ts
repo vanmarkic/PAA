@@ -78,7 +78,7 @@ export const allocationIntegrationMachine = createMachine<AIContext, AIEvent>({
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluationAutonomie',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -142,12 +142,12 @@ export const allocationIntegrationMachine = createMachine<AIContext, AIEvent>({
         EVALUATION_FAVORABLE: {
           target: 'octroi',
           actions: assign({
-            handicap: (context, event) => ({
+            handicap: ({ context, event }) => ({
               ...context.handicap,
               pointsAutonomie: event.points,
               categorie: event.categorie,
             }),
-            montantMensuel: (context, event) => {
+            montantMensuel: ({ context, event }) => {
               const montants = {
                 I: 129.05,
                 II: 362.44,

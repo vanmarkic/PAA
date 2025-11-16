@@ -67,10 +67,10 @@ export const egaliteSalarialeMachine = createMachine({
         DEMANDER_ANALYSE: {
           target: 'identificationComparateurs',
           actions: assign({
-            employe: (_, event) => event.employe,
-            genreEmploye: (_, event) => event.genreEmploye,
-            fonction: (_, event) => event.fonction,
-            salaireActuel: (_, event) => event.salaireActuel,
+            employe: ({ event }) => event.employe,
+            genreEmploye: ({ event }) => event.genreEmploye,
+            fonction: ({ event }) => event.fonction,
+            salaireActuel: ({ event }) => event.salaireActuel,
             retryCount: 0,
           }),
         },
@@ -86,7 +86,7 @@ export const egaliteSalarialeMachine = createMachine({
         IDENTIFIER_COMPARATEURS: {
           target: 'calculEcart',
           actions: assign({
-            salaireReference: (_, event) => event.salaireReference,
+            salaireReference: ({ event }) => event.salaireReference,
           }),
         },
       },
@@ -101,7 +101,7 @@ export const egaliteSalarialeMachine = createMachine({
         CALCULER_ECART: {
           target: 'collectePreuves',
           actions: assign({
-            ecartConstate: (_, event) => event.ecartConstate,
+            ecartConstate: ({ event }) => event.ecartConstate,
           }),
         },
       },
@@ -116,7 +116,7 @@ export const egaliteSalarialeMachine = createMachine({
         COLLECTER_PREUVES: {
           target: 'analyseJustification',
           actions: assign({
-            preuves: (_, event) => event.preuves,
+            preuves: ({ event }) => event.preuves,
             analyseFaite: true,
           }),
         },
@@ -210,7 +210,7 @@ export const egaliteSalarialeMachine = createMachine({
         APPLIQUER_RAPPEL: {
           target: 'egaliteRetablie',
           actions: assign({
-            rappelSalarial: (_, event) => event.rappelSalarial || 0,
+            rappelSalarial: ({ event }) => event.rappelSalarial || 0,
           }),
         },
       },
@@ -240,7 +240,7 @@ export const egaliteSalarialeMachine = createMachine({
         JUGEMENT_FAVORABLE: {
           target: 'rappelSalarial',
           actions: assign({
-            rappelSalarial: (_, event) => event.rappelSalarial,
+            rappelSalarial: ({ event }) => event.rappelSalarial,
           }),
         },
         JUGEMENT_DEFAVORABLE: {

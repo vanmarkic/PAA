@@ -59,9 +59,9 @@ export const procedureDivorceMachine = createMachine({
         DEMARRER_PROCEDURE: {
           target: 'designationAvocats',
           actions: assign({
-            epoux1: (_, event) => event.epoux1,
-            epoux2: (_, event) => event.epoux2,
-            typeDivorce: (_, event) => event.type,
+            epoux1: ({ event }) => event.epoux1,
+            epoux2: ({ event }) => event.epoux2,
+            typeDivorce: ({ event }) => event.type,
           }),
         },
       },

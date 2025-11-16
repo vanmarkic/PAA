@@ -69,7 +69,7 @@ export const formationProfessionnelleMachine = createMachine({
         DEMANDER_FORMATION: {
           target: 'orientationProfessionnelle',
           actions: assign({
-            stagiaire: (_, event) => event.stagiaire,
+            stagiaire: ({ event }) => event.stagiaire,
           }),
         },
       },
@@ -99,7 +99,7 @@ export const formationProfessionnelleMachine = createMachine({
         CHOISIR_FORMATION: {
           target: 'inscriptionFormation',
           actions: assign({
-            formation: (_, event) => event.formation,
+            formation: ({ event }) => event.formation,
           }),
         },
       },
@@ -132,7 +132,7 @@ export const formationProfessionnelleMachine = createMachine({
         CHOISIR_FORMATION: {
           target: 'inscriptionFormation',
           actions: assign({
-            formation: (_, event) => event.formation,
+            formation: ({ event }) => event.formation,
           }),
         },
         REINITIALISER: {
@@ -150,13 +150,12 @@ export const formationProfessionnelleMachine = createMachine({
         COMPLETER_MODULE: {
           target: 'formationEnCours',
           actions: assign({
-            heuresCompletees: (context, event) => context.heuresCompletees + event.heures,
+            heuresCompletees: ({ context, event }) => context.heuresCompletees + event.heures,
           }),
         },
         REUSSIR_EVALUATION: {
           target: 'formationEnCours',
-          actions: assign({
-            evaluationsReussies: (context) => context.evaluationsReussies + 1,
+          actions: assign({ evaluationsReussies: ({ context }) => context.evaluationsReussies + 1,
           }),
         },
         ECHOUER_EVALUATION: {
@@ -179,8 +178,7 @@ export const formationProfessionnelleMachine = createMachine({
       on: {
         REUSSIR_EVALUATION: {
           target: 'formationEnCours',
-          actions: assign({
-            evaluationsReussies: (context) => context.evaluationsReussies + 1,
+          actions: assign({ evaluationsReussies: ({ context }) => context.evaluationsReussies + 1,
           }),
         },
         ECHOUER_EVALUATION: {

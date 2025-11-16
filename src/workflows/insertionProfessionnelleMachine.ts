@@ -65,7 +65,7 @@ export const insertionProfessionnelleMachine = createMachine({
         INSCRIRE_DEMANDEUR: {
           target: 'bilanCompetences',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
           }),
         },
       },
@@ -80,7 +80,7 @@ export const insertionProfessionnelleMachine = createMachine({
         BILAN_TERMINE: {
           target: 'rechercheEmploi',
           actions: assign({
-            bilan: (_, event) => event.bilan,
+            bilan: ({ event }) => event.bilan,
           }),
         },
         SUIVRE_FORMATION: {
@@ -110,7 +110,7 @@ export const insertionProfessionnelleMachine = createMachine({
         RECHERCHER_OFFRES: {
           target: 'offresTrouvees',
           actions: assign({
-            offresTrouvees: (_, event) => event.nombre,
+            offresTrouvees: ({ event }) => event.nombre,
           }),
         },
       },
@@ -124,14 +124,13 @@ export const insertionProfessionnelleMachine = createMachine({
       on: {
         SOUMETTRE_CANDIDATURE: {
           target: 'candidaturesSoumises',
-          actions: assign({
-            candidaturesSoumises: (context) => context.candidaturesSoumises + 1,
+          actions: assign({ candidaturesSoumises: ({ context }) => context.candidaturesSoumises + 1,
           }),
         },
         RECHERCHER_OFFRES: {
           target: 'offresTrouvees',
           actions: assign({
-            offresTrouvees: (context, event) => context.offresTrouvees + event.nombre,
+            offresTrouvees: ({ context, event }) => context.offresTrouvees + event.nombre,
           }),
         },
       },
@@ -145,8 +144,7 @@ export const insertionProfessionnelleMachine = createMachine({
       on: {
         ENTRETIEN_OBTENU: {
           target: 'preparationEntretien',
-          actions: assign({
-            entretiensObtenus: (context) => context.entretiensObtenus + 1,
+          actions: assign({ entretiensObtenus: ({ context }) => context.entretiensObtenus + 1,
           }),
         },
         REFUS_RECU: {
@@ -154,8 +152,7 @@ export const insertionProfessionnelleMachine = createMachine({
         },
         SOUMETTRE_CANDIDATURE: {
           target: 'candidaturesSoumises',
-          actions: assign({
-            candidaturesSoumises: (context) => context.candidaturesSoumises + 1,
+          actions: assign({ candidaturesSoumises: ({ context }) => context.candidaturesSoumises + 1,
           }),
         },
       },

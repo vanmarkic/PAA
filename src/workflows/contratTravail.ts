@@ -58,8 +58,8 @@ export const contratTravailMachine = createMachine({
         DEMARRER_NEGOCIATION: {
           target: 'negociation',
           actions: assign({
-            employeur: (_, event) => event.employeur,
-            employe: (_, event) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            employe: ({ event }) => event.employe,
             retryCount: 0,
           }),
         },
@@ -75,7 +75,7 @@ export const contratTravailMachine = createMachine({
         CHOISIR_TYPE: {
           target: 'definitionConditions',
           actions: assign({
-            typeContrat: (_, event) => event.typeContrat,
+            typeContrat: ({ event }) => event.typeContrat,
           }),
         },
       },
@@ -90,10 +90,10 @@ export const contratTravailMachine = createMachine({
         DEFINIR_CONDITIONS: {
           target: 'validation',
           actions: assign({
-            salaireBrut: (_, event) => event.salaireBrut,
-            dateDebut: (_, event) => event.dateDebut,
-            dateFin: (_, event) => event.dateFin || null,
-            conditions: (_, event) => event.conditions,
+            salaireBrut: ({ event }) => event.salaireBrut,
+            dateDebut: ({ event }) => event.dateDebut,
+            dateFin: ({ event }) => event.dateFin || null,
+            conditions: ({ event }) => event.conditions,
           }),
         },
       },
@@ -110,8 +110,7 @@ export const contratTravailMachine = createMachine({
         },
         VALIDATION_REFUSEE: {
           target: 'negociation',
-          actions: assign({
-            retryCount: (context) => context.retryCount + 1,
+          actions: assign({ retryCount: ({ context }) => context.retryCount + 1,
           }),
         },
       },

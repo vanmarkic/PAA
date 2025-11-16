@@ -72,8 +72,8 @@ export const allocationsEtudesMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationDocuments',
           actions: assign({
-            etudiant: (_, event) => event.etudiant,
-            situationFamiliale: (_, event) => event.situation,
+            etudiant: ({ event }) => event.etudiant,
+            situationFamiliale: ({ event }) => event.situation,
           }),
         },
       },
@@ -104,7 +104,7 @@ export const allocationsEtudesMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculMontant',
-            guard: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -122,7 +122,7 @@ export const allocationsEtudesMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'allocationApprouvee',
           actions: assign({
-            montantAllocation: (_, event) => event.montant,
+            montantAllocation: ({ event }) => event.montant,
           }),
         },
       },

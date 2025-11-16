@@ -83,8 +83,8 @@ export const deductionFraisGardeMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'saisieInformations',
           actions: assign({
-            parent: (_, event) => event.parent,
-            enfants: (_, event) => event.enfants,
+            parent: ({ event }) => event.parent,
+            enfants: ({ event }) => event.enfants,
           }),
         },
       },
@@ -99,7 +99,7 @@ export const deductionFraisGardeMachine = createMachine({
         AJOUTER_FRAIS: {
           target: 'saisieInformations',
           actions: assign({
-            fraisGarde: (context, event) => [...context.fraisGarde, event.frais],
+            fraisGarde: ({ context, event }) => [...context.fraisGarde, event.frais],
           }),
         },
         CALCULER_DEDUCTION: {
@@ -117,15 +117,15 @@ export const deductionFraisGardeMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
         ],
@@ -141,7 +141,7 @@ export const deductionFraisGardeMachine = createMachine({
         SOUMETTRE_ATTESTATIONS: {
           target: 'validationAttestations',
           actions: assign({
-            attestations: (_, event) => event.documents,
+            attestations: ({ event }) => event.documents,
           }),
         },
       },
@@ -195,7 +195,7 @@ export const deductionFraisGardeMachine = createMachine({
         NOUVELLE_ANNEE: {
           target: 'inactif',
           actions: assign({
-            anneeFiscale: (_, event) => event.annee,
+            anneeFiscale: ({ event }) => event.annee,
             fraisGarde: [],
           }),
         },

@@ -62,7 +62,7 @@ export const aideMobiliteMachine = createMachine({
         DEMANDER_AIDE: {
           target: 'evaluationBesoin',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -107,7 +107,7 @@ export const aideMobiliteMachine = createMachine({
         ATTRIBUER_AIDE: {
           target: 'aideActive',
           actions: assign({
-            aide: (_, event) => event.aide,
+            aide: ({ event }) => event.aide,
             aideActive: true,
           }),
         },
@@ -122,8 +122,7 @@ export const aideMobiliteMachine = createMachine({
       on: {
         VERSER_MENSUALITE: {
           target: 'aideActive',
-          actions: assign({
-            mensualitesVersees: (context) => context.mensualitesVersees + 1,
+          actions: assign({ mensualitesVersees: ({ context }) => context.mensualitesVersees + 1,
           }),
         },
         VERIFIER_ELIGIBILITE: {

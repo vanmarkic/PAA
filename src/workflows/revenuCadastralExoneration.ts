@@ -71,8 +71,8 @@ export const revenuCadastralExonerationMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationHabitationPrincipale',
           actions: assign({
-            proprietaire: (_, event) => event.proprietaire,
-            bienImmobilier: (_, event) => event.bien,
+            proprietaire: ({ event }) => event.proprietaire,
+            bienImmobilier: ({ event }) => event.bien,
           }),
         },
       },
@@ -87,7 +87,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         HABITATION_PRINCIPALE_VERIFIEE: [
           {
             target: 'verificationRevenus',
-            guard: (_, event) => event.confirme,
+            guard: ({ event }) => event.confirme,
           },
           {
             target: 'demandeRejetee',
@@ -105,7 +105,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculExoneration',
-            guard: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -123,9 +123,9 @@ export const revenuCadastralExonerationMachine = createMachine({
         EXONERATION_CALCULEE: {
           target: 'exonerationApprouvee',
           actions: assign({
-            calculExoneration: (_, event) => event.calcul,
-            exonerationPartielle: (_, event) => event.calcul.tauxReduction < 100,
-            exonerationComplete: (_, event) => event.calcul.tauxReduction === 100,
+            calculExoneration: ({ event }) => event.calcul,
+            exonerationPartielle: ({ event }) => event.calcul.tauxReduction < 100,
+            exonerationComplete: ({ event }) => event.calcul.tauxReduction === 100,
           }),
         },
       },
@@ -155,7 +155,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         CHANGEMENT_REVENUS: {
           target: 'recalculExoneration',
           actions: assign({
-            proprietaire: (context, event) => ({
+            proprietaire: ({ context, event }) => ({
               ...context.proprietaire!,
               revenus: event.nouveauxRevenus,
             }),
@@ -176,7 +176,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculExoneration',
-            guard: (_, event) => event.eligible,
+            guard: ({ event }) => event.eligible,
           },
           {
             target: 'exonerationSuspendue',
@@ -194,9 +194,9 @@ export const revenuCadastralExonerationMachine = createMachine({
         EXONERATION_CALCULEE: {
           target: 'exonerationActive',
           actions: assign({
-            calculExoneration: (_, event) => event.calcul,
-            exonerationPartielle: (_, event) => event.calcul.tauxReduction < 100,
-            exonerationComplete: (_, event) => event.calcul.tauxReduction === 100,
+            calculExoneration: ({ event }) => event.calcul,
+            exonerationPartielle: ({ event }) => event.calcul.tauxReduction < 100,
+            exonerationComplete: ({ event }) => event.calcul.tauxReduction === 100,
           }),
         },
       },
@@ -210,7 +210,7 @@ export const revenuCadastralExonerationMachine = createMachine({
       on: {
         REVENUS_VERIFIES: {
           target: 'calculExoneration',
-          guard: (_, event) => event.eligible,
+          guard: ({ event }) => event.eligible,
         },
         REINITIALISER: {
           target: 'inactif',

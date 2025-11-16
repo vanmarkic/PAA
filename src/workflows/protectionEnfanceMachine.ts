@@ -66,7 +66,7 @@ export const protectionEnfanceMachine = createMachine({
         SIGNALEMENT_RECU: {
           target: 'evaluationSignalement',
           actions: assign({
-            enfant: (_, event) => event.enfant,
+            enfant: ({ event }) => event.enfant,
             signalementRecu: true,
           }),
         },
@@ -82,7 +82,7 @@ export const protectionEnfanceMachine = createMachine({
         EVALUATION_TERMINEE: {
           target: 'analyseDanger',
           actions: assign({
-            evaluation: (_, event) => event.evaluation,
+            evaluation: ({ event }) => event.evaluation,
           }),
         },
       },

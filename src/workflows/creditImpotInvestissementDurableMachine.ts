@@ -76,8 +76,8 @@ export const creditImpotInvestissementDurableMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            investisseur: (_, event) => event.investisseur,
-            investissement: (_, event) => event.investissement,
+            investisseur: ({ event }) => event.investisseur,
+            investissement: ({ event }) => event.investissement,
           }),
         },
       },
@@ -92,16 +92,16 @@ export const creditImpotInvestissementDurableMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.credit.estEligible,
+            guard: ({ event }) => event.credit.estEligible,
             actions: assign({
-              credit: (_, event) => event.credit,
-              totalCredit: (_, event) => event.credit.montantCredit,
+              credit: ({ event }) => event.credit,
+              totalCredit: ({ event }) => event.credit.montantCredit,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              credit: (_, event) => event.credit,
+              credit: ({ event }) => event.credit,
             }),
           },
         ],
@@ -156,8 +156,8 @@ export const creditImpotInvestissementDurableMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            factures: (_, event) => event.factures,
-            certificatsEnergetiques: (_, event) => event.certificats,
+            factures: ({ event }) => event.factures,
+            certificatsEnergetiques: ({ event }) => event.certificats,
           }),
         },
       },

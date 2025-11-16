@@ -66,7 +66,7 @@ export const teleAssistanceMachine = createMachine({
         DEMANDER_SERVICE: {
           target: 'evaluationEligibilite',
           actions: assign({
-            personne: (_, event) => event.personne,
+            personne: ({ event }) => event.personne,
           }),
         },
       },
@@ -108,7 +108,7 @@ export const teleAssistanceMachine = createMachine({
         ACTIVER_SERVICE: {
           target: 'serviceActif',
           actions: assign({
-            equipement: (_, event) => ({
+            equipement: ({ event }) => ({
               typeBoitier: 'standard',
               dateInstallation: new Date(),
               contactsUrgence: [],
@@ -127,8 +127,7 @@ export const teleAssistanceMachine = createMachine({
       on: {
         ALERTE_RECUE: {
           target: 'traitementAlerte',
-          actions: assign({
-            alertesRecues: (context) => context.alertesRecues + 1,
+          actions: assign({ alertesRecues: ({ context }) => context.alertesRecues + 1,
           }),
         },
         TEST_EQUIPEMENT: {
@@ -175,8 +174,7 @@ export const teleAssistanceMachine = createMachine({
       on: {
         INTERVENTION_EFFECTUEE: {
           target: 'serviceActif',
-          actions: assign({
-            interventionsEffectuees: (context) => context.interventionsEffectuees + 1,
+          actions: assign({ interventionsEffectuees: ({ context }) => context.interventionsEffectuees + 1,
           }),
         },
       },

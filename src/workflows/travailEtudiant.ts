@@ -65,9 +65,9 @@ export const travailEtudiantMachine = createMachine({
         CREER_CONTRAT: {
           target: 'verificationEligibilite',
           actions: assign({
-            etudiant: (_, event) => event.etudiant,
-            employeur: (_, event) => event.employeur,
-            salaireBrut: (_, event) => event.salaireBrut,
+            etudiant: ({ event }) => event.etudiant,
+            employeur: ({ event }) => event.employeur,
+            salaireBrut: ({ event }) => event.salaireBrut,
             retryCount: 0,
           }),
         },
@@ -110,7 +110,7 @@ export const travailEtudiantMachine = createMachine({
         CONSULTER_QUOTA: {
           target: 'preparationContrat',
           actions: assign({
-            heuresDisponibles: (_, event) => event.heuresDisponibles,
+            heuresDisponibles: ({ event }) => event.heuresDisponibles,
           }),
         },
       },
@@ -155,7 +155,7 @@ export const travailEtudiantMachine = createMachine({
         ENREGISTRER_HEURES: {
           target: 'verificationQuota',
           actions: assign({
-            heuresUtilisees: (context, event) => context.heuresUtilisees + event.heures,
+            heuresUtilisees: ({ context, event }) => context.heuresUtilisees + event.heures,
           }),
         },
         FIN_CONTRAT: {
@@ -203,7 +203,7 @@ export const travailEtudiantMachine = createMachine({
         NOUVEAU_TRIMESTRE: {
           target: 'travailActif',
           actions: assign({
-            trimestre: (_, event) => event.trimestre,
+            trimestre: ({ event }) => event.trimestre,
             heuresUtilisees: 0,
             cotisationsReduites: true,
           }),

@@ -56,7 +56,7 @@ export const aideAlimentaireMachine = createMachine({
         DEMANDER_AIDE: {
           target: 'evaluationBesoin',
           actions: assign({
-            beneficiaire: (_, event) => event.beneficiaire,
+            beneficiaire: ({ event }) => event.beneficiaire,
           }),
         },
       },
@@ -72,15 +72,15 @@ export const aideAlimentaireMachine = createMachine({
           target: 'aideApprouvee',
           actions: assign({
             estEligible: true,
-            montantBons: (_, event) => event.montant,
-            frequenceDistribution: (_, event) => event.frequence,
+            montantBons: ({ event }) => event.montant,
+            frequenceDistribution: ({ event }) => event.frequence,
           }),
         },
         BESOIN_NON_JUSTIFIE: {
           target: 'refusee',
           actions: assign({
             estEligible: false,
-            raisonRefus: (_, event) => event.raisons,
+            raisonRefus: ({ event }) => event.raisons,
           }),
         },
       },
@@ -107,7 +107,7 @@ export const aideAlimentaireMachine = createMachine({
         BONS_DISTRIBUES: {
           target: 'aideActive',
           actions: assign({
-            derniereDistribution: (_, event) => event.date,
+            derniereDistribution: ({ event }) => event.date,
           }),
         },
       },

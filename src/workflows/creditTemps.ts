@@ -61,9 +61,9 @@ export const creditTempsMachine = createMachine({
         DEMANDER_CREDIT_TEMPS: {
           target: 'verificationEligibilite',
           actions: assign({
-            employe: (_, event) => event.employe,
-            typeCredit: (_, event) => event.typeCredit,
-            motif: (_, event) => event.motif,
+            employe: ({ event }) => event.employe,
+            typeCredit: ({ event }) => event.typeCredit,
+            motif: ({ event }) => event.motif,
             retryCount: 0,
           }),
         },
@@ -94,8 +94,8 @@ export const creditTempsMachine = createMachine({
         SOUMETTRE_EMPLOYEUR: {
           target: 'attentAccordEmployeur',
           actions: assign({
-            duree: (_, event) => event.duree,
-            dateDebut: (_, event) => event.dateDebut,
+            duree: ({ event }) => event.duree,
+            dateDebut: ({ event }) => event.dateDebut,
           }),
         },
       },
@@ -128,7 +128,7 @@ export const creditTempsMachine = createMachine({
         ONEM_APPROUVE: {
           target: 'approuve',
           actions: assign({
-            allocationsONEM: (_, event) => event.allocations,
+            allocationsONEM: ({ event }) => event.allocations,
           }),
         },
         ONEM_REFUSE: {
@@ -173,7 +173,7 @@ export const creditTempsMachine = createMachine({
         PROLONGER_CREDIT: {
           target: 'attentAccordEmployeur',
           actions: assign({
-            duree: (_, event) => event.nouvelleDuree,
+            duree: ({ event }) => event.nouvelleDuree,
           }),
         },
       },

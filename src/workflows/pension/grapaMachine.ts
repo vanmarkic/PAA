@@ -91,7 +91,7 @@ export const grapaMachine = createMachine<GRAPAContext, GRAPAEvent>({
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'enqueteRessources',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -149,11 +149,11 @@ export const grapaMachine = createMachine<GRAPAContext, GRAPAEvent>({
         ENQUETE_TERMINEE: {
           target: 'decision',
           actions: assign({
-            situation: (context, event) => ({
+            situation: ({ context, event }) => ({
               ...context.situation,
               statut: event.statut,
             }),
-            revenus: (context, event) => ({
+            revenus: ({ context, event }) => ({
               ...context.revenus,
               menage: event.revenusMenage,
             }),
@@ -171,7 +171,7 @@ export const grapaMachine = createMachine<GRAPAContext, GRAPAEvent>({
         DECISION_OCTROI: {
           target: 'paiement',
           actions: assign({
-            montantGRAPA: (context, event) => event.montant,
+            montantGRAPA: ({ context, event }) => event.montant,
           }),
         },
         DECISION_REFUS: 'refus',

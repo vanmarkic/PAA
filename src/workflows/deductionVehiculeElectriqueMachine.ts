@@ -78,8 +78,8 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            acquereur: (_, event) => event.acquereur,
-            vehicule: (_, event) => event.vehicule,
+            acquereur: ({ event }) => event.acquereur,
+            vehicule: ({ event }) => event.vehicule,
           }),
         },
       },
@@ -94,16 +94,16 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
-              anneesRestantes: (_, event) => event.deduction.periodeAmortissement,
+              deduction: ({ event }) => event.deduction,
+              anneesRestantes: ({ event }) => event.deduction.periodeAmortissement,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
         ],
@@ -158,7 +158,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            documentsVehicule: (_, event) => event.documents,
+            documentsVehicule: ({ event }) => event.documents,
           }),
         },
       },
@@ -172,8 +172,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
       on: {
         DOCUMENTS_VALIDES: {
           target: 'deductionAccordee',
-          actions: assign({
-            montantDeductAnnuel: (context) =>
+          actions: assign({ montantDeductAnnuel: ({ context }) =>
               (context.deduction?.montantDeduction || 0) / (context.anneesRestantes || 1),
           }),
         },
@@ -205,8 +204,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
           {
             target: 'actif',
             guard: (context) => context.anneesRestantes > 1,
-            actions: assign({
-              anneesRestantes: (context) => context.anneesRestantes - 1,
+            actions: assign({ anneesRestantes: ({ context }) => context.anneesRestantes - 1,
             }),
           },
           {

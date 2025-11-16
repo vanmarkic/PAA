@@ -56,7 +56,7 @@ export const creationEntrepriseMachine = createMachine({
         DEMARRER_CREATION: {
           target: 'planFinancier',
           actions: assign({
-            entrepreneur: (_, event) => event.entrepreneur,
+            entrepreneur: ({ event }) => event.entrepreneur,
           }),
         },
       },
@@ -102,7 +102,7 @@ export const creationEntrepriseMachine = createMachine({
         NUMERO_ENTREPRISE_ATTRIBUE: {
           target: 'activationTVA',
           actions: assign({
-            numeroEntreprise: (_, event) => event.numero,
+            numeroEntreprise: ({ event }) => event.numero,
             immatriculationBCE: true,
           }),
         },
@@ -114,7 +114,7 @@ export const creationEntrepriseMachine = createMachine({
       on: {
         TVA_ACTIVEE: {
           target: 'affiliationCaisseAssurances',
-          actions: assign({ numeroTVA: (_, event) => event.numeroTVA }),
+          actions: assign({ numeroTVA: ({ event }) => event.numeroTVA }),
         },
       },
       meta: { description: 'Activation numéro TVA auprès du SPF Finances' },

@@ -69,7 +69,7 @@ export const allocationsFamilialesMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'enregistrementEnfants',
           actions: assign({
-            famille: (_, event) => event.famille,
+            famille: ({ event }) => event.famille,
           }),
         },
       },
@@ -99,7 +99,7 @@ export const allocationsFamilialesMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'paiementActif',
           actions: assign({
-            calculMontant: (_, event) => event.calcul,
+            calculMontant: ({ event }) => event.calcul,
           }),
         },
       },
@@ -114,7 +114,7 @@ export const allocationsFamilialesMachine = createMachine({
         NAISSANCE_ENFANT: {
           target: 'recalculMontant',
           actions: assign({
-            famille: (context, event) => ({
+            famille: ({ context, event }) => ({
               ...context.famille!,
               enfants: [...context.famille!.enfants, event.enfant],
             }),
@@ -123,7 +123,7 @@ export const allocationsFamilialesMachine = createMachine({
         CHANGEMENT_SITUATION: {
           target: 'recalculMontant',
           actions: assign({
-            changementsPendants: (_, event) => event.changements,
+            changementsPendants: ({ event }) => event.changements,
           }),
         },
         VERIFICATION_ANNUELLE: {
@@ -144,7 +144,7 @@ export const allocationsFamilialesMachine = createMachine({
         MONTANT_CALCULE: {
           target: 'paiementActif',
           actions: assign({
-            calculMontant: (_, event) => event.calcul,
+            calculMontant: ({ event }) => event.calcul,
             changementsPendants: [],
           }),
         },

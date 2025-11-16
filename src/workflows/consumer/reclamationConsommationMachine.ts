@@ -53,7 +53,7 @@ export const reclamationConsommationMachine = createMachine({
         DEPOSER_RECLAMATION: {
           target: 'reclamationVendeur',
           actions: assign({
-            reclamation: (_, event) => event.reclamation,
+            reclamation: ({ event }) => event.reclamation,
             reclamationDeposeAupresVendeur: true,
           }),
         },

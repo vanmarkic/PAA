@@ -42,7 +42,7 @@ export const pensionAlimentaireDemandeMachine = createMachine({
       on: {
         DEPOSER_DEMANDE: {
           target: 'evaluationRessources',
-          actions: assign({ parties: (_, event) => event.parties }),
+          actions: assign({ parties: ({ event }) => event.parties }),
         },
       },
       meta: { description: 'Demande contribution alimentaire' },
@@ -57,7 +57,7 @@ export const pensionAlimentaireDemandeMachine = createMachine({
       on: {
         MONTANT_PROPOSE: {
           target: 'audienceConciliation',
-          actions: assign({ montantPropose: (_, event) => event.montant }),
+          actions: assign({ montantPropose: ({ event }) => event.montant }),
         },
       },
       meta: { description: 'Calcul selon grille indicative (± 150-300€/enfant/mois)' },
@@ -67,7 +67,7 @@ export const pensionAlimentaireDemandeMachine = createMachine({
         ACCORD_PARTIES: { target: 'homologation' },
         JUGEMENT_RENDU: {
           target: 'decisionJugement',
-          actions: assign({ montantFixe: (_, event) => event.montant }),
+          actions: assign({ montantFixe: ({ event }) => event.montant }),
         },
       },
       meta: { description: 'Audience conciliation tribunal famille' },

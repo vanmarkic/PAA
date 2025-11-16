@@ -66,7 +66,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'identificationSecteur',
           actions: assign({
-            travailleur: (_, event) => event.travailleur,
+            travailleur: ({ event }) => event.travailleur,
           }),
         },
       },
@@ -81,7 +81,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         SECTEUR_IDENTIFIE: {
           target: 'verificationCotisations',
           actions: assign({
-            secteurFonds: (_, event) => event.secteur,
+            secteurFonds: ({ event }) => event.secteur,
           }),
         },
       },
@@ -96,7 +96,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         COTISATIONS_VERIFIEES: [
           {
             target: 'calculDroits',
-            guard: (_, event) => event.ajour,
+            guard: ({ event }) => event.ajour,
             actions: assign({
               cotisationsEmployeur: true,
             }),
@@ -119,7 +119,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
       on: {
         COTISATIONS_VERIFIEES: {
           target: 'calculDroits',
-          guard: (_, event) => event.ajour,
+          guard: ({ event }) => event.ajour,
           actions: assign({
             cotisationsEmployeur: true,
           }),
@@ -136,7 +136,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         DROITS_CALCULES: {
           target: 'droitsActifs',
           actions: assign({
-            droitsFonds: (_, event) => event.droits,
+            droitsFonds: ({ event }) => event.droits,
           }),
         },
       },
@@ -171,8 +171,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
       on: {
         PRIME_VERSEE: {
           target: 'droitsActifs',
-          actions: assign({
-            anneeReference: (context) => context.anneeReference + 1,
+          actions: assign({ anneeReference: ({ context }) => context.anneeReference + 1,
           }),
         },
       },
@@ -199,7 +198,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         SECTEUR_IDENTIFIE: {
           target: 'calculDroits',
           actions: assign({
-            travailleur: (context, event) => ({
+            travailleur: ({ context, event }) => ({
               ...context.travailleur!,
               employeur: event.secteur,
             }),

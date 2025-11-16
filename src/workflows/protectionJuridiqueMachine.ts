@@ -63,8 +63,8 @@ export const protectionJuridiqueMachine = createMachine({
         DEMANDER_PROTECTION: {
           target: 'evaluationEligibilite',
           actions: assign({
-            justiciable: (_, event) => event.justiciable,
-            dossier: (_, event) => event.dossier,
+            justiciable: ({ event }) => event.justiciable,
+            dossier: ({ event }) => event.dossier,
           }),
         },
       },
@@ -80,7 +80,7 @@ export const protectionJuridiqueMachine = createMachine({
           target: 'designationAvocat',
           actions: assign({
             eligibleAideJuridique: true,
-            niveauAide: (_, event) => event.niveau,
+            niveauAide: ({ event }) => event.niveau,
           }),
         },
         NON_ELIGIBLE: {
@@ -113,7 +113,7 @@ export const protectionJuridiqueMachine = createMachine({
         DESIGNER_AVOCAT: {
           target: 'representationAttribuee',
           actions: assign({
-            avocatDesigne: (_, event) => event.avocat,
+            avocatDesigne: ({ event }) => event.avocat,
           }),
         },
       },

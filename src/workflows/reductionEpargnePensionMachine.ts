@@ -65,7 +65,7 @@ export const reductionEpargnePensionMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationVersements',
           actions: assign({
-            epargnant: (_, event) => event.epargnant,
+            epargnant: ({ event }) => event.epargnant,
             anneeFiscale: new Date().getFullYear(),
           }),
         },
@@ -81,7 +81,7 @@ export const reductionEpargnePensionMachine = createMachine({
         VERSEMENTS_VERIFIES: {
           target: 'calculReduction',
           actions: assign({
-            totalVersements: (_, event) => event.total,
+            totalVersements: ({ event }) => event.total,
           }),
         },
       },
@@ -96,15 +96,15 @@ export const reductionEpargnePensionMachine = createMachine({
         REDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.reduction.estEligible,
+            guard: ({ event }) => event.reduction.estEligible,
             actions: assign({
-              reduction: (_, event) => event.reduction,
+              reduction: ({ event }) => event.reduction,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              reduction: (_, event) => event.reduction,
+              reduction: ({ event }) => event.reduction,
             }),
           },
         ],
@@ -120,7 +120,7 @@ export const reductionEpargnePensionMachine = createMachine({
         ATTESTATIONS_SOUMISES: {
           target: 'validationAttestations',
           actions: assign({
-            attestationsVersement: (_, event) => event.documents,
+            attestationsVersement: ({ event }) => event.documents,
           }),
         },
       },
@@ -174,7 +174,7 @@ export const reductionEpargnePensionMachine = createMachine({
         NOUVELLE_ANNEE: {
           target: 'inactif',
           actions: assign({
-            anneeFiscale: (_, event) => event.annee,
+            anneeFiscale: ({ event }) => event.annee,
           }),
         },
       },

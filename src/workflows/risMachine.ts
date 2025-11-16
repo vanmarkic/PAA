@@ -51,7 +51,7 @@ export const risApplicationMachine = createMachine({
         START_APPLICATION: {
           target: 'checkingEligibility',
           actions: assign({
-            user: (_, event) => event.user,
+            user: ({ event }) => event.user,
             retryCount: 0,
           }),
         },
@@ -67,15 +67,15 @@ export const risApplicationMachine = createMachine({
         ELIGIBILITY_CHECKED: [
           {
             target: 'eligible',
-            guard: (_, event) => event.result.isEligible,
+            guard: ({ event }) => event.result.isEligible,
             actions: assign({
-              eligibilityResult: (_, event) => event.result,
+              eligibilityResult: ({ event }) => event.result,
             }),
           },
           {
             target: 'ineligible',
             actions: assign({
-              eligibilityResult: (_, event) => event.result,
+              eligibilityResult: ({ event }) => event.result,
             }),
           },
         ],
@@ -130,7 +130,7 @@ export const risApplicationMachine = createMachine({
         PIIS_SIGNED: {
           target: 'active',
           actions: assign({
-            piisContract: (_, event) => event.contract,
+            piisContract: ({ event }) => event.contract,
           }),
         },
       },
@@ -145,7 +145,7 @@ export const risApplicationMachine = createMachine({
         INCOME_CHANGE: {
           target: 'recalculating',
           actions: assign({
-            user: (context, event) => ({
+            user: ({ context, event }) => ({
               ...context.user!,
               monthlyIncome: event.newIncome,
             }),
@@ -169,7 +169,7 @@ export const risApplicationMachine = createMachine({
         ELIGIBILITY_CHECKED: {
           target: 'active',
           actions: assign({
-            eligibilityResult: (_, event) => event.result,
+            eligibilityResult: ({ event }) => event.result,
           }),
         },
       },
@@ -187,7 +187,7 @@ export const risApplicationMachine = createMachine({
         COMPLIANCE_ISSUE: {
           target: 'complianceWarning',
           actions: assign({
-            complianceIssues: (_, event) => event.issues,
+            complianceIssues: ({ event }) => event.issues,
           }),
         },
       },

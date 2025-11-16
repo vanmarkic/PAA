@@ -65,9 +65,9 @@ export const tempsPartielMachine = createMachine({
         DEMANDER_TEMPS_PARTIEL: {
           target: 'calculPourcentage',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            heuresHebdomadaires: (_, event) => event.heuresHebdomadaires,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            heuresHebdomadaires: ({ event }) => event.heuresHebdomadaires,
             retryCount: 0,
           }),
         },
@@ -83,7 +83,7 @@ export const tempsPartielMachine = createMachine({
         CALCULER_POURCENTAGE: {
           target: 'choixHoraire',
           actions: assign({
-            pourcentageTempsPlein: (_, event) => event.pourcentageTempsPlein,
+            pourcentageTempsPlein: ({ event }) => event.pourcentageTempsPlein,
           }),
         },
       },
@@ -98,8 +98,8 @@ export const tempsPartielMachine = createMachine({
         CHOISIR_HORAIRE: {
           target: 'negociationConditions',
           actions: assign({
-            horaireFixes: (_, event) => event.type === 'fixe',
-            horaireVariable: (_, event) => event.type === 'variable',
+            horaireFixes: ({ event }) => event.type === 'fixe',
+            horaireVariable: ({ event }) => event.type === 'variable',
           }),
         },
       },
@@ -141,7 +141,7 @@ export const tempsPartielMachine = createMachine({
         SIGNER_CONTRAT: {
           target: 'verificationDroits',
           actions: assign({
-            dateDebut: (_, event) => event.dateDebut,
+            dateDebut: ({ event }) => event.dateDebut,
           }),
         },
       },
@@ -174,7 +174,7 @@ export const tempsPartielMachine = createMachine({
         AGR_ACCORDEE: {
           target: 'tempsPartielActif',
           actions: assign({
-            allocationGarantieRevenus: (_, event) => event.montant,
+            allocationGarantieRevenus: ({ event }) => event.montant,
           }),
         },
         AGR_REFUSEE: {
@@ -210,13 +210,13 @@ export const tempsPartielMachine = createMachine({
         AUGMENTER_HEURES: {
           target: 'tempsPartielActif',
           actions: assign({
-            heuresHebdomadaires: (_, event) => event.nouvellesHeures,
+            heuresHebdomadaires: ({ event }) => event.nouvellesHeures,
           }),
         },
         DIMINUER_HEURES: {
           target: 'verificationDroits',
           actions: assign({
-            heuresHebdomadaires: (_, event) => event.nouvellesHeures,
+            heuresHebdomadaires: ({ event }) => event.nouvellesHeures,
           }),
         },
       },

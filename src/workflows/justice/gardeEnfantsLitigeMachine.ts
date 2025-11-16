@@ -45,7 +45,7 @@ export const gardeEnfantsLitigeMachine = createMachine({
       on: {
         DEPOSER_DEMANDE: {
           target: 'tentativeMediation',
-          actions: assign({ parents: (_, event) => event.parents }),
+          actions: assign({ parents: ({ event }) => event.parents }),
         },
       },
       meta: { description: 'Demande fixation hébergement au tribunal famille' },
@@ -81,8 +81,8 @@ export const gardeEnfantsLitigeMachine = createMachine({
         JUGEMENT: {
           target: 'decisionJugement',
           actions: assign({
-            decisionJuge: (_, event) => event.decision,
-            hebergementPrincipal: (_, event) => event.hebergementPrincipal,
+            decisionJuge: ({ event }) => event.decision,
+            hebergementPrincipal: ({ event }) => event.hebergementPrincipal,
           }),
         },
       },

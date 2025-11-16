@@ -67,10 +67,10 @@ export const contratDureeIndetermineeMachine = createMachine({
         CREER_CDI: {
           target: 'preparationContrat',
           actions: assign({
-            employe: (_, event) => event.employe,
-            employeur: (_, event) => event.employeur,
-            fonction: (_, event) => event.fonction,
-            salaire: (_, event) => event.salaire,
+            employe: ({ event }) => event.employe,
+            employeur: ({ event }) => event.employeur,
+            fonction: ({ event }) => event.fonction,
+            salaire: ({ event }) => event.salaire,
             retryCount: 0,
           }),
         },
@@ -87,7 +87,7 @@ export const contratDureeIndetermineeMachine = createMachine({
           target: 'signatureContrat',
           actions: assign({
             periodeEssai: true,
-            dureePeriodeEssai: (_, event) => event.dureePeriodeEssai,
+            dureePeriodeEssai: ({ event }) => event.dureePeriodeEssai,
           }),
         },
         SIGNER_CONTRAT: {
@@ -108,7 +108,7 @@ export const contratDureeIndetermineeMachine = createMachine({
         SIGNER_CONTRAT: {
           target: 'periodeEssaiOuActif',
           actions: assign({
-            dateDebut: (_, event) => event.dateDebut,
+            dateDebut: ({ event }) => event.dateDebut,
           }),
         },
       },
@@ -172,14 +172,14 @@ export const contratDureeIndetermineeMachine = createMachine({
         AUGMENTATION_SALARIALE: {
           target: 'cdiActif',
           actions: assign({
-            salaire: (_, event) => event.nouveauSalaire,
+            salaire: ({ event }) => event.nouveauSalaire,
             avenants: (context) => context.avenants + 1,
           }),
         },
         PROMOTION: {
           target: 'cdiActif',
           actions: assign({
-            fonction: (_, event) => event.nouvelleFonction,
+            fonction: ({ event }) => event.nouvelleFonction,
             avenants: (context) => context.avenants + 1,
           }),
         },
@@ -209,8 +209,7 @@ export const contratDureeIndetermineeMachine = createMachine({
       on: {
         AVENANT_CONTRACTUEL: {
           target: 'cdiActif',
-          actions: assign({
-            avenants: (context) => context.avenants + 1,
+          actions: assign({ avenants: ({ context }) => context.avenants + 1,
           }),
         },
       },
@@ -228,7 +227,7 @@ export const contratDureeIndetermineeMachine = createMachine({
         SUSPENSION_TEMPORAIRE: {
           target: 'suspensionContrat',
           actions: assign({
-            suspensions: (context, event) => [...context.suspensions, event.motif],
+            suspensions: ({ context, event }) => [...context.suspensions, event.motif],
           }),
         },
       },

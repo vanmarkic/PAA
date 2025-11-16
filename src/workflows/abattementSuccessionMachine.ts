@@ -86,8 +86,8 @@ export const abattementSuccessionMachine = createMachine({
         DEMARRER_DECLARATION: {
           target: 'inventaireBiens',
           actions: assign({
-            defunt: (_, event) => event.defunt,
-            heritiers: (_, event) => event.heritiers,
+            defunt: ({ event }) => event.defunt,
+            heritiers: ({ event }) => event.heritiers,
           }),
         },
       },
@@ -102,7 +102,7 @@ export const abattementSuccessionMachine = createMachine({
         AJOUTER_BIEN: {
           target: 'inventaireBiens',
           actions: assign({
-            biens: (context, event) => [...context.biens, event.bien],
+            biens: ({ context, event }) => [...context.biens, event.bien],
           }),
         },
         EVALUER_BIENS: {
@@ -120,7 +120,7 @@ export const abattementSuccessionMachine = createMachine({
         BIENS_EVALUES: {
           target: 'calculAbattement',
           actions: assign({
-            totalSuccession: (_, event) => event.total,
+            totalSuccession: ({ event }) => event.total,
           }),
         },
       },
@@ -135,7 +135,7 @@ export const abattementSuccessionMachine = createMachine({
         ABATTEMENT_CALCULE: {
           target: 'abattementCalcule',
           actions: assign({
-            abattement: (_, event) => event.abattement,
+            abattement: ({ event }) => event.abattement,
           }),
         },
       },
@@ -150,7 +150,7 @@ export const abattementSuccessionMachine = createMachine({
         SOUMETTRE_ACTE: {
           target: 'validationActe',
           actions: assign({
-            acteSuccession: (_, event) => event.acte,
+            acteSuccession: ({ event }) => event.acte,
           }),
         },
       },
@@ -180,7 +180,7 @@ export const abattementSuccessionMachine = createMachine({
         SOUMETTRE_EVALUATIONS: {
           target: 'validationEvaluations',
           actions: assign({
-            evaluations: (_, event) => event.documents,
+            evaluations: ({ event }) => event.documents,
           }),
         },
       },

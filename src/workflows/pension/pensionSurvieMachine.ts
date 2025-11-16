@@ -85,7 +85,7 @@ export const pensionSurvieMachine = createMachine<
       on: {
         SOUMETTRE_DEMANDE: {
           target: 'evaluation',
-          actions: assign((context, event) => ({
+          actions: assign(({ context, event }) => ({
             ...context,
             ...event.data,
           })),
@@ -137,7 +137,7 @@ export const pensionSurvieMachine = createMachine<
         OCTROI: {
           target: 'paiement',
           actions: assign({
-            montantPension: (context, event) => event.montant,
+            montantPension: ({ context, event }) => event.montant,
           }),
         },
         REFUS: 'refus',

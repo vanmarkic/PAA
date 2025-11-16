@@ -78,7 +78,7 @@ export const deductionIsolationMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'saisieTravaux',
           actions: assign({
-            proprietaire: (_, event) => event.proprietaire,
+            proprietaire: ({ event }) => event.proprietaire,
           }),
         },
       },
@@ -93,7 +93,7 @@ export const deductionIsolationMachine = createMachine({
         AJOUTER_TRAVAUX: {
           target: 'saisieTravaux',
           actions: assign({
-            travaux: (context, event) => [...context.travaux, event.travaux],
+            travaux: ({ context, event }) => [...context.travaux, event.travaux],
           }),
         },
         VERIFIER_NORMES: {
@@ -111,7 +111,7 @@ export const deductionIsolationMachine = createMachine({
         NORMES_VERIFIEES: {
           target: 'calculDeduction',
           actions: assign({
-            travaux: (_, event) => event.travauxConformes,
+            travaux: ({ event }) => event.travauxConformes,
           }),
         },
       },
@@ -126,16 +126,16 @@ export const deductionIsolationMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            guard: (_, event) => event.deduction.estEligible,
+            guard: ({ event }) => event.deduction.estEligible,
             actions: assign({
-              deduction: (_, event) => event.deduction,
-              totalDeduction: (_, event) => event.deduction.montantDeductible,
+              deduction: ({ event }) => event.deduction,
+              totalDeduction: ({ event }) => event.deduction.montantDeductible,
             }),
           },
           {
             target: 'nonEligible',
             actions: assign({
-              deduction: (_, event) => event.deduction,
+              deduction: ({ event }) => event.deduction,
             }),
           },
         ],
@@ -151,8 +151,8 @@ export const deductionIsolationMachine = createMachine({
         SOUMETTRE_DOCUMENTS: {
           target: 'validationDocuments',
           actions: assign({
-            factures: (_, event) => event.factures,
-            certificatsPEB: (_, event) => event.certificats,
+            factures: ({ event }) => event.factures,
+            certificatsPEB: ({ event }) => event.certificats,
           }),
         },
       },

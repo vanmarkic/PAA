@@ -68,10 +68,10 @@ export const accidentTravailMachine = createMachine({
         DECLARER_ACCIDENT: {
           target: 'declaration',
           actions: assign({
-            employe: (_, event) => event.employe,
-            dateAccident: (_, event) => event.dateAccident,
-            lieuAccident: (_, event) => event.lieuAccident,
-            description: (_, event) => event.description,
+            employe: ({ event }) => event.employe,
+            dateAccident: ({ event }) => event.dateAccident,
+            lieuAccident: ({ event }) => event.lieuAccident,
+            description: ({ event }) => event.description,
             retryCount: 0,
           }),
         },
@@ -87,7 +87,7 @@ export const accidentTravailMachine = createMachine({
         AJOUTER_TEMOINS: {
           target: 'evaluationGravite',
           actions: assign({
-            temoins: (_, event) => event.temoins,
+            temoins: ({ event }) => event.temoins,
           }),
         },
       },
@@ -102,7 +102,7 @@ export const accidentTravailMachine = createMachine({
         EVALUER_GRAVITE: {
           target: 'soinsMedicaux',
           actions: assign({
-            gravite: (_, event) => event.gravite,
+            gravite: ({ event }) => event.gravite,
           }),
         },
       },
@@ -156,7 +156,7 @@ export const accidentTravailMachine = createMachine({
         ASSURANCE_ACCEPTE: {
           target: 'indemnisation',
           actions: assign({
-            indemniteJournaliere: (_, event) => event.indemnite,
+            indemniteJournaliere: ({ event }) => event.indemnite,
           }),
         },
         ASSURANCE_CONTESTE: {
@@ -234,7 +234,7 @@ export const accidentTravailMachine = createMachine({
         PLANIFIER_REPRISE: {
           target: 'termine',
           actions: assign({
-            dateReprise: (_, event) => event.dateReprise,
+            dateReprise: ({ event }) => event.dateReprise,
           }),
         },
       },

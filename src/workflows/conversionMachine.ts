@@ -45,9 +45,9 @@ export const conversionMachine = createMachine({
         START_CONVERSION: {
           target: 'extractingStructure',
           actions: assign({
-            legalText: (_, event) => event.legalText,
-            targetLevel: (_, event) => event.targetLevel,
-            targetAudience: (_, event) => event.targetAudience,
+            legalText: ({ event }) => event.legalText,
+            targetLevel: ({ event }) => event.targetLevel,
+            targetAudience: ({ event }) => event.targetAudience,
             retryCount: 0,
           }),
         },
@@ -59,7 +59,7 @@ export const conversionMachine = createMachine({
         STRUCTURE_EXTRACTED: {
           target: 'identifyingConcepts',
           actions: assign({
-            extractedStructure: (_, event) => event.structure,
+            extractedStructure: ({ event }) => event.structure,
           }),
         },
       },
@@ -74,7 +74,7 @@ export const conversionMachine = createMachine({
         CONCEPTS_IDENTIFIED: {
           target: 'mappingVocabulary',
           actions: assign({
-            identifiedConcepts: (_, event) => event.concepts,
+            identifiedConcepts: ({ event }) => event.concepts,
           }),
         },
       },
@@ -89,7 +89,7 @@ export const conversionMachine = createMachine({
         TERMS_MAPPED: {
           target: 'generatingVersions',
           actions: assign({
-            mappedTerms: (_, event) => event.mappedTerms,
+            mappedTerms: ({ event }) => event.mappedTerms,
           }),
         },
       },
@@ -104,7 +104,7 @@ export const conversionMachine = createMachine({
         VERSIONS_GENERATED: {
           target: 'validating',
           actions: assign({
-            generatedVersions: (_, event) => event.versions,
+            generatedVersions: ({ event }) => event.versions,
           }),
         },
       },
@@ -122,7 +122,7 @@ export const conversionMachine = createMachine({
         VALIDATION_FAILED: {
           target: 'checkingRetries',
           actions: assign({
-            validationErrors: (_, event) => event.errors,
+            validationErrors: ({ event }) => event.errors,
           }),
         },
       },
@@ -137,8 +137,7 @@ export const conversionMachine = createMachine({
         {
           target: 'regeneratingWithConstraints',
           guard: (context) => context.retryCount < 3,
-          actions: assign({
-            retryCount: (context) => context.retryCount + 1,
+          actions: assign({ retryCount: ({ context }) => context.retryCount + 1,
           }),
         },
         {
