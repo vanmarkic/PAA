@@ -2,10 +2,18 @@
  * Business Rules for Revenu d'Intégration Sociale (RIS)
  *
  * Implements the Gherkin specifications from features/benefits/ris.feature
+ *
+ * BASE JURIDIQUE:
+ * - Loi du 26 mai 2002 concernant le droit à l'intégration sociale
+ *   https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi
+ * - Arrêté royal du 11 juillet 2002 portant règlement général en matière de droit à l'intégration sociale
+ *   https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&table_name=loi&cn=2002071138
+ * - Publication au Moniteur Belge: 31 juillet 2002
  */
 
 import { Engine } from 'json-rules-engine';
 import { RISUser, RISEligibilityResult, RIS_AMOUNTS_2024, RIS_CONSTANTS, RISCategory } from '../domain/risTypes';
+import { RIS_LEGAL_FRAMEWORK, RIS_KEY_ARTICLES } from '../legal-sources/belgianLegalSources';
 
 /**
  * Create the RIS eligibility rules engine
@@ -303,34 +311,113 @@ export function compareWithOtherBenefits(
 
 /**
  * Export rules in JSON format for transparency
+ * Avec références juridiques authentiques
  */
 export const RIS_RULES_JSON = {
+  legalFramework: {
+    primaryLaw: {
+      title: RIS_LEGAL_FRAMEWORK.primaryLegislation.title,
+      date: RIS_LEGAL_FRAMEWORK.primaryLegislation.date,
+      officialUrl: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+      authority: RIS_LEGAL_FRAMEWORK.primaryLegislation.authority,
+    },
+    implementingDecree: RIS_LEGAL_FRAMEWORK.implementingLegislation?.[0],
+    notes: RIS_LEGAL_FRAMEWORK.notes,
+  },
   rules: [
     {
       id: 'ris-age-requirement',
       description: `Personne doit avoir au moins ${RIS_CONSTANTS.MIN_AGE} ans`,
       condition: 'age >= 18',
       priority: 10,
+      legalBasis: {
+        article: 'Article 3',
+        text: RIS_KEY_ARTICLES['Article 3'].conditions[1],
+        url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+      },
     },
     {
       id: 'ris-residency-requirement',
       description: 'Personne doit avoir un titre de séjour valide en Belgique',
       condition: 'residencyStatus != no-valid-status',
       priority: 10,
+      legalBasis: {
+        article: 'Article 3',
+        text: RIS_KEY_ARTICLES['Article 3'].conditions.slice(0, 3).join(' ET '),
+        url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+      },
     },
     {
       id: 'ris-patrimony-limit',
       description: `Patrimoine mobilier doit être inférieur à ${RIS_CONSTANTS.MAX_PATRIMONY_MOVABLE}€`,
       condition: `patrimonyValue <= ${RIS_CONSTANTS.MAX_PATRIMONY_MOVABLE}`,
       priority: 9,
+      legalBasis: {
+        article: 'Article 3',
+        text: RIS_KEY_ARTICLES['Article 3'].conditions[3],
+        url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+      },
     },
     {
       id: 'ris-student-restriction',
       description: 'Étudiant temps plein généralement inéligible (sauf exceptions)',
       condition: 'isFullTimeStudent == false OR age >= 25',
       priority: 8,
+      legalBasis: {
+        article: 'Article 3',
+        text: 'Disposition à travailler (sauf raisons de santé ou d\'équité)',
+        url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+        note: 'Les étudiants de moins de 25 ans sont généralement considérés comme non disponibles pour le marché du travail',
+      },
     },
   ],
+  categories: {
+    legalBasis: {
+      article: 'Article 14, §1',
+      url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+      title: RIS_KEY_ARTICLES['Article 14'].title,
+    },
+    definitions: {
+      cohabitant: {
+        legalDefinition: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.cohabitant.description,
+        baseAmount2002: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.cohabitant.amount,
+        currentAmount2024: RIS_AMOUNTS_2024.cohabitant,
+      },
+      isolated: {
+        legalDefinition: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.isolated.description,
+        baseAmount2002: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.isolated.amount,
+        currentAmount2024: RIS_AMOUNTS_2024.isolé,
+      },
+      familyCharge: {
+        legalDefinition: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.familyCharge.description,
+        baseAmount2002: RIS_KEY_ARTICLES['Article 14'].paragraph1.categories.familyCharge.amount,
+        currentAmount2024: RIS_AMOUNTS_2024.familleMonoparentale,
+      },
+    },
+    indexation: RIS_KEY_ARTICLES['Article 14'].paragraph1.indexation,
+  },
+  obligations: {
+    legalBasis: [
+      {
+        article: 'Article 11',
+        title: RIS_KEY_ARTICLES['Article 11'].title,
+        requirements: RIS_KEY_ARTICLES['Article 11'].requirements,
+      },
+      {
+        article: 'Article 22',
+        title: RIS_KEY_ARTICLES['Article 22'].title,
+        content: RIS_KEY_ARTICLES['Article 22'].content,
+      },
+    ],
+  },
+  sanctions: {
+    legalBasis: {
+      article: 'Article 30',
+      title: RIS_KEY_ARTICLES['Article 30'].title,
+      url: RIS_LEGAL_FRAMEWORK.primaryLegislation.officialUrl,
+    },
+    types: RIS_KEY_ARTICLES['Article 30'].sanctions,
+  },
   amounts: RIS_AMOUNTS_2024,
   constants: RIS_CONSTANTS,
 };
