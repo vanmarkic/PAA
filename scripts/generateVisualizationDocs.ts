@@ -33,12 +33,34 @@ function parseMachineFile(filePath: string): MachineInfo | null {
   const id = idMatch[1];
   const initial = initialMatch[1];
 
-  // Extraire les états
+  // Extraire les états using brace counting
   const states: string[] = [];
-  const statesContent = statesMatch ? statesMatch[1] : '';
-  const stateMatches = statesContent.matchAll(/(\w+):\s*\{/g);
-  for (const match of stateMatches) {
-    states.push(match[1]);
+  const statesStart = content.indexOf('states:');
+  if (statesStart !== -1) {
+    const openBraceIdx = content.indexOf('{', statesStart);
+    if (openBraceIdx !== -1) {
+      let braceCount = 0;
+      let endIdx = openBraceIdx;
+      for (let i = openBraceIdx; i < content.length; i++) {
+        if (content[i] === '{') braceCount++;
+        if (content[i] === '}') braceCount--;
+        if (braceCount === 0) {
+          endIdx = i;
+          break;
+        }
+      }
+      const statesContent = content.substring(openBraceIdx + 1, endIdx);
+      // Extract top-level state names
+      const lines = statesContent.split('\n');
+      for (const line of lines) {
+        const match = line.match(/^\s+(\w+):\s*\{/);
+        if (match && match[1] !== 'on' && match[1] !== 'meta' && match[1] !== 'entry' && match[1] !== 'exit') {
+          if (!states.includes(match[1])) {
+            states.push(match[1]);
+          }
+        }
+      }
+    }
   }
 
   // Extraire les événements

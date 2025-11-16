@@ -73,19 +73,19 @@ describe('Legal Sources - Structure Tests', () => {
 
     it('should have 2024 amounts', () => {
       expect(RIS_AMOUNTS_2024).toBeDefined();
-      expect(RIS_AMOUNTS_2024.cohabitant).toBe(713.66);
-      expect(RIS_AMOUNTS_2024.isolé).toBe(1070.49);
-      expect(RIS_AMOUNTS_2024.familleMonoparentale).toBe(1450.52);
+      expect(RIS_AMOUNTS_2024.cohabitant.monthly).toBe(713.66);
+      expect(RIS_AMOUNTS_2024.isolated.monthly).toBe(1070.49);
+      expect(RIS_AMOUNTS_2024.familyCharge.monthly).toBe(1450.52);
     });
 
     it('should have work income exemption', () => {
-      expect(RIS_AMOUNTS_2024.exonerationAmount).toBe(252.00);
+      expect(RIS_AMOUNTS_2024.workIncomeExemption.monthly).toBe(252.00);
     });
 
     it('should have patrimony limits', () => {
       expect(RIS_AMOUNTS_2024.patrimonyLimits).toBeDefined();
-      expect(RIS_AMOUNTS_2024.patrimonyLimits.movable).toBe(6200);
-      expect(RIS_AMOUNTS_2024.patrimonyLimits.immovable).toBe(12500);
+      expect(RIS_AMOUNTS_2024.patrimonyLimits.movable.amount).toBe(6200);
+      expect(RIS_AMOUNTS_2024.patrimonyLimits.immovable.amount).toBe(12500);
     });
   });
 

@@ -9,7 +9,7 @@ interface AssociationCulturelle {
   nom: string;
   formeJuridique: 'ASBL' | 'association-de-fait';
   domaine: 'theatre' | 'musique' | 'arts-plastiques' | 'danse' | 'patrimoine' | 'pluridisciplinaire';
-  budget Annuel: number;
+  budgetAnnuel: number;
   membresActifs: number;
 }
 
@@ -21,18 +21,20 @@ interface SubventionCultureContext {
   conventionnement: boolean; // Reconnaissance FWB
 }
 
+type SubventionCultureEvents =
+  | { type: 'DEPOSER_DOSSIER'; association: AssociationCulturelle; montant: number }
+  | { type: 'DOSSIER_COMPLET' }
+  | { type: 'EVALUATION_COMMISSION' }
+  | { type: 'SUBSIDE_ACCORDE'; montant: number }
+  | { type: 'DEMANDE_CONVENTIONNEMENT' }
+  | { type: 'CONVENTIONNEMENT_ACCORDE' };
+
 export const subventionAssociationCulturelleMachine = createMachine({
   id: 'subventionAssociationCulturelle',
-  initial: 'depot DossierSubside',
-  schema: {
-    context: {} as SubventionCultureContext,
-    events: {} as
-      | { type: 'DEPOSER_DOSSIER'; association: AssociationCulturelle; montant: number }
-      | { type: 'DOSSIER_COMPLET' }
-      | { type: 'EVALUATION_COMMISSION' }
-      | { type: 'SUBSIDE_ACCORDE'; montant: number }
-      | { type: 'DEMANDE_CONVENTIONNEMENT' }
-      | { type: 'CONVENTIONNEMENT_ACCORDE' }
+  initial: 'depotDossierSubside',
+  types: {} as {
+    context: SubventionCultureContext;
+    events: SubventionCultureEvents;
   },
   context: {
     association: null,

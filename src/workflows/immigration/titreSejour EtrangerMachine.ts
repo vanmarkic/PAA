@@ -20,19 +20,21 @@ interface TitreSejourContext {
   carteSejourDelivree: boolean;
 }
 
+type TitreSejourEvents =
+  | { type: 'ENTREE_BELGIQUE'; demande: DemandeSejourEtranger }
+  | { type: 'DECLARATION_COMMUNE' }
+  | { type: 'DEMANDE_OFFICE_ETRANGERS' }
+  | { type: 'ATTESTATION_DELIVREE' }
+  | { type: 'DECISION_OE'; decision: 'favorable' | 'defavorable'; typePermis?: 'A' | 'B' | 'C' | 'F' | 'F+' }
+  | { type: 'CARTE_SEJOUR_DELIVREE' }
+  | { type: 'RECOURS_INTRODUIT' };
+
 export const titreSejourEtrangerMachine = createMachine({
   id: 'titreSejourEtranger',
-  initial: 'entreeTerrritoire',
-  schema: {
-    context: {} as TitreSejourContext,
-    events: {} as
-      | { type: 'ENTREE_BELGIQUE'; demande: DemandeSejourEtranger }
-      | { type: 'DECLARATION_COMMUNE' }
-      | { type: 'DEMANDE_OFFICE_ETRANGERS' }
-      | { type: 'ATTESTATION_DELIVREE' }
-      | { type: 'DECISION_OE'; decision: 'favorable' | 'defavorable'; typePermis?: 'A' | 'B' | 'C' | 'F' | 'F+' }
-      | { type: 'CARTE_SEJOUR_DELIVREE' }
-      | { type: 'RECOURS_INTRODUIT' }
+  initial: 'entreeTerritoire',
+  types: {} as {
+    context: TitreSejourContext;
+    events: TitreSejourEvents;
   },
   context: {
     demande: null,

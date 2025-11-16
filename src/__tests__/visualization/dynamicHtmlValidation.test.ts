@@ -109,11 +109,9 @@ describe('Dynamic Visualization HTML Page', () => {
     });
 
     test('should have error container (hidden by default)', () => {
-      const error = document.getElementById('error');
-      expect(error).toBeTruthy();
-
-      const style = window.getComputedStyle(error);
-      expect(style.display).toBe('none');
+      // Read the HTML source to check the initial state before scripts run
+      const html = fs.readFileSync(htmlPath, 'utf-8');
+      expect(html).toMatch(/<div id="error"[^>]*style="display:\s*none;"/);
     });
   });
 
