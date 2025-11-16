@@ -37,10 +37,7 @@ type CompteurBudgetEvent =
   | { type: 'RECHARGER'; montant: number }
   | { type: 'CREDIT_EPUISE' };
 
-export const compteurBudgetElectriciteMachine = createMachine<
-  CompteurBudgetContext,
-  CompteurBudgetEvent
->({
+export const compteurBudgetElectriciteMachine = createMachine({
   id: 'compteurBudgetElectricite',
   initial: 'information',
   context: {

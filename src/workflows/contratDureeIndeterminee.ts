@@ -35,7 +35,7 @@ export const contratDureeIndetermineeMachine = createMachine({
       | { type: 'VALIDER_PERIODE_ESSAI' }
       | { type: 'ECHEC_PERIODE_ESSAI' }
       | { type: 'ACTIVER_CDI' }
-      | { type: 'AVENANT_CONTRACTUEL'; type: string }
+      | { type: 'AVENANT_CONTRACTUEL'; typeAvenant: string }
       | { type: 'AUGMENTATION_SALARIALE'; nouveauSalaire: number }
       | { type: 'PROMOTION'; nouvelleFonction: string }
       | { type: 'SUSPENSION_TEMPORAIRE'; motif: string }

@@ -43,7 +43,7 @@ type AIEvent =
   | { type: 'RECOURS' }
   | { type: 'REVISION'; nouveauxPoints: number };
 
-export const allocationIntegrationMachine = createMachine<AIContext, AIEvent>({
+export const allocationIntegrationMachine = createMachine({
   id: 'allocationIntegration',
   initial: 'preparation',
   context: {

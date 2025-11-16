@@ -29,7 +29,7 @@ export const procedureDivorceMachine = createMachine({
   schemas: {
     context: {} as ProcedureDivorceContext,
     events: {} as
-      | { type: 'DEMARRER_PROCEDURE'; epoux1: Epoux; epoux2: Epoux; type: 'consentement-mutuel' | 'desunion-irremediale' | 'faute' }
+      | { type: 'DEMARRER_PROCEDURE'; epoux1: Epoux; epoux2: Epoux; typeDivorce: 'consentement-mutuel' | 'desunion-irremediale' | 'faute' }
       | { type: 'AVOCATS_DESIGNES' }
       | { type: 'MEDIATION_ACCEPTEE' }
       | { type: 'MEDIATION_REFUSEE' }

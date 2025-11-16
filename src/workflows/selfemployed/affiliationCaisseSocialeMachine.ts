@@ -36,10 +36,7 @@ type AffiliationCaisseEvent =
   | { type: 'AFFILIATION_COMPLETE' }
   | { type: 'PREMIERE_COTISATION' };
 
-export const affiliationCaisseSocialeMachine = createMachine<
-  AffiliationCaisseContext,
-  AffiliationCaisseEvent
->({
+export const affiliationCaisseSocialeMachine = createMachine({
   id: 'affiliationCaisseSociale',
   initial: 'information',
   context: {

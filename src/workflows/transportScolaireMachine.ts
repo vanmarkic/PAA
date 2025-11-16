@@ -33,7 +33,7 @@ export const transportScolaireMachine = createMachine({
       | { type: 'DEMANDER_TRANSPORT'; eleve: EleveTransport }
       | { type: 'DISTANCE_CALCULEE'; distance: number }
       | { type: 'ITINERAIRE_ASSIGNE'; itineraire: string }
-      | { type: 'ABONNEMENT_EMIS'; type: string }
+      | { type: 'ABONNEMENT_EMIS'; typeAbonnement: string }
       | { type: 'RENOUVELER_ABONNEMENT' }
       | { type: 'SIGNALER_PROBLEME' }
       | { type: 'PROBLEME_RESOLU' }

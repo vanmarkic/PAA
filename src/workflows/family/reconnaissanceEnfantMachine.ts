@@ -40,10 +40,7 @@ type ReconnaissanceEvent =
   | { type: 'ACTE_DRESSE' }
   | { type: 'CONTESTER' };
 
-export const reconnaissanceEnfantMachine = createMachine<
-  ReconnaissanceContext,
-  ReconnaissanceEvent
->({
+export const reconnaissanceEnfantMachine = createMachine({
   id: 'reconnaissanceEnfant',
   initial: 'information',
   context: {

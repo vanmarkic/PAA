@@ -42,10 +42,7 @@ type MaladieProfessionnelleEvent =
   | { type: 'EVALUATION_IPP'; taux: number }
   | { type: 'RECOURS' };
 
-export const maladieProfessionnelleMachine = createMachine<
-  MaladieProfessionnelleContext,
-  MaladieProfessionnelleEvent
->({
+export const maladieProfessionnelleMachine = createMachine({
   id: 'maladieProfessionnelle',
   initial: 'information',
   context: {

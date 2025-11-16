@@ -30,7 +30,7 @@ export const adoptionProcedureMachine = createMachine({
       | { type: 'SEANCES_INFO'; candidats: CandidatsAdoption }
       | { type: 'DEMANDE_AGREMENT' }
       | { type: 'ENQUETE_SOCIALE_PSYCHOLOGIQUE' }
-      | { type: 'AGREMENT_ACCORDE'; type: 'nationale' | 'internationale' }
+      | { type: 'AGREMENT_ACCORDE'; typeAdoption: 'nationale' | 'internationale' }
       | { type: 'APPARENTEMENT_REALISE' }
       | { type: 'PLACEMENT_DEBUTE' }
       | { type: 'REQUETE_ADOPTION' }

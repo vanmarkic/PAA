@@ -46,10 +46,7 @@ type PensionAnticipeeEvent =
   | { type: 'DEMANDE_ACCEPTEE'; montant: number }
   | { type: 'DEMANDE_REFUSEE'; motif: string };
 
-export const pensionAnticipeeMachine = createMachine<
-  PensionAnticipeeContext,
-  PensionAnticipeeEvent
->({
+export const pensionAnticipeeMachine = createMachine({
   id: 'pensionAnticipee',
   initial: 'verification',
   context: {

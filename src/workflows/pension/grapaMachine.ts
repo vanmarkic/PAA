@@ -44,7 +44,7 @@ type GRAPAEvent =
   | { type: 'DECISION_REFUS'; motif: string }
   | { type: 'REVISION_ANNUELLE' };
 
-export const grapaMachine = createMachine<GRAPAContext, GRAPAEvent>({
+export const grapaMachine = createMachine({
   id: 'grapa',
   initial: 'verification',
   context: {

@@ -38,7 +38,7 @@ type AISEvent =
   | { type: 'LOGEMENT_PROPOSE'; loyer: number }
   | { type: 'ACCEPTER_LOGEMENT' };
 
-export const agenceImmobiliereSocialeMachine = createMachine<AISContext, AISEvent>({
+export const agenceImmobiliereSocialeMachine = createMachine({
   id: 'agenceImmobiliereSociale',
   initial: 'information',
   context: {

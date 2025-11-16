@@ -53,10 +53,7 @@ type ARREvent =
   | { type: 'RECOURS' }
   | { type: 'REVISION'; nouveauMontant: number };
 
-export const allocationRemplacementRevenusMachine = createMachine<
-  ARRContext,
-  ARREvent
->({
+export const allocationRemplacementRevenusMachine = createMachine({
   id: 'allocationRemplacementRevenus',
   initial: 'verification',
   context: {

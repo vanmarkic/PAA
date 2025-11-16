@@ -28,7 +28,7 @@ export const dentisteSoinsMachine = createMachine({
   schemas: {
     context: {} as SoinsDentairesContext,
     events: {} as
-      | { type: 'CONSULTER'; patient: PatientDentiste; type: 'preventif' | 'curatif' | 'orthodontie' | 'esthetique' }
+      | { type: 'CONSULTER'; patient: PatientDentiste; typeConsultation: 'preventif' | 'curatif' | 'orthodontie' | 'esthetique' }
       | { type: 'DIAGNOSTIC_ETABLI' }
       | { type: 'DEVIS_PRESENTE'; montant: number }
       | { type: 'SOINS_REALISES'; soins: string[] }

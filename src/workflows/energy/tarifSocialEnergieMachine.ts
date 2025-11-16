@@ -36,10 +36,7 @@ type TarifSocialEvent =
   | { type: 'NON_ELIGIBLE' }
   | { type: 'APPLIQUER_TARIF' };
 
-export const tarifSocialEnergieMachine = createMachine<
-  TarifSocialContext,
-  TarifSocialEvent
->({
+export const tarifSocialEnergieMachine = createMachine({
   id: 'tarifSocialEnergie',
   initial: 'information',
   context: {

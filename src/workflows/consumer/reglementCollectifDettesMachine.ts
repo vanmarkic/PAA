@@ -40,7 +40,7 @@ type RCDEvent =
   | { type: 'PLAN_REFUSE' }
   | { type: 'EXECUTION_TERMINEE' };
 
-export const reglementCollectifDettesMachine = createMachine<RCDContext, RCDEvent>({
+export const reglementCollectifDettesMachine = createMachine({
   id: 'reglementCollectifDettes',
   initial: 'evaluation',
   context: {

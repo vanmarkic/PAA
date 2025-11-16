@@ -40,7 +40,7 @@ type RISEvent =
   | { type: 'DECISION_REFUS'; motif: string }
   | { type: 'SIGNER_PIIS'; objectifs: string[] };
 
-export const revenuIntegrationSocialeMachine = createMachine<RISContext, RISEvent>({
+export const revenuIntegrationSocialeMachine = createMachine({
   id: 'revenuIntegrationSociale',
   initial: 'demande',
   context: {

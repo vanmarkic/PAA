@@ -29,7 +29,7 @@ export const tempsPartielMachine = createMachine({
     events: {} as
       | { type: 'DEMANDER_TEMPS_PARTIEL'; employe: string; employeur: string; heuresHebdomadaires: number }
       | { type: 'CALCULER_POURCENTAGE'; pourcentageTempsPlein: number }
-      | { type: 'CHOISIR_HORAIRE'; type: 'fixe' | 'variable' }
+      | { type: 'CHOISIR_HORAIRE'; typeHoraire: 'fixe' | 'variable' }
       | { type: 'NEGOCIER_CONDITIONS' }
       | { type: 'ACCORD_TROUVE' }
       | { type: 'DESACCORD' }

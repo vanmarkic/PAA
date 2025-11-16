@@ -43,10 +43,7 @@ type PensionSurvieEvent =
   | { type: 'REFUS'; motif: string }
   | { type: 'REVISION_REVENUS'; nouveauxRevenus: number };
 
-export const pensionSurvieMachine = createMachine<
-  PensionSurvieContext,
-  PensionSurvieEvent
->({
+export const pensionSurvieMachine = createMachine({
   id: 'pensionSurvie',
   initial: 'verification',
   context: {

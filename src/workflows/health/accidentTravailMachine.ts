@@ -48,10 +48,7 @@ type AccidentTravailEvent =
   | { type: 'INCAPACITE_PERMANENTE'; taux: number }
   | { type: 'GUERISON_SANS_SEQUELLES' };
 
-export const accidentTravailMachine = createMachine<
-  AccidentTravailContext,
-  AccidentTravailEvent
->({
+export const accidentTravailMachine = createMachine({
   id: 'accidentTravail',
   initial: 'declaration',
   context: {

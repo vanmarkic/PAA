@@ -31,7 +31,7 @@ export const ophtalmologieConsultationMachine = createMachine({
       | { type: 'CONSULTER'; patient: PatientOphtalmo }
       | { type: 'EXAMEN_REALISE' }
       | { type: 'PRESCRIPTION_ETABLIE'; correction: string }
-      | { type: 'CHOISIR_LUNETTES'; type: 'unifocales' | 'bifocales' | 'progressives' | 'lentilles'; montant: number }
+      | { type: 'CHOISIR_LUNETTES'; typeLunettes: 'unifocales' | 'bifocales' | 'progressives' | 'lentilles'; montant: number }
       | { type: 'INTERVENTION_CALCULEE'; intervention: number }
   },
   context: {
