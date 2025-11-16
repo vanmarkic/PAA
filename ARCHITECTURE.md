@@ -50,8 +50,9 @@ stateDiagram-v2
     generatingVersions --> validating: VERSIONS_GENERATED
     validating --> completed: VALIDATION_PASSED
     validating --> checkingRetries: VALIDATION_FAILED
-    checkingRetries --> regeneratingWithConstraints: retry_count < 3
-    checkingRetries --> failed: retry_count >= 3
+    state checkingRetries <<choice>>
+    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
+    checkingRetries --> failed: retryCount_greater_equal_3
     regeneratingWithConstraints --> generatingVersions: RETRY
     completed --> [*]
     failed --> idle: RESET
