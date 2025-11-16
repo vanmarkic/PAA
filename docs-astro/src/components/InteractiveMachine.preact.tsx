@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { AnyStateMachine, AnyActorRef } from 'xstate';
 import { createActor } from 'xstate';
+import { createBrowserInspector } from '@statelyai/inspect';
 
 interface Props {
   machineId: string;
@@ -14,6 +15,7 @@ interface Props {
 
 export default function InteractiveMachine({ machineId, machineName }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [machine, setMachine] = useState<AnyStateMachine | null>(null);
   const [actor, setActor] = useState<AnyActorRef | null>(null);
@@ -22,6 +24,7 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [stateHistory, setStateHistory] = useState<string[]>([]);
+  const [inspectorReady, setInspectorReady] = useState(false);
 
   // Intersection Observer - load when scrolled into view
   useEffect(() => {
@@ -43,7 +46,7 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
 
   // Load machine and start actor when visible
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || !iframeRef.current) return;
 
     async function loadAndStartMachine() {
       setIsLoading(true);
@@ -54,8 +57,18 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
         const loadedMachine = await loadMachine(machineId);
         setMachine(loadedMachine);
 
-        // Create and start actor
-        const newActor = createActor(loadedMachine);
+        // Create browser inspector with iframe
+        const { inspect } = createBrowserInspector({
+          iframe: iframeRef.current!,
+          autoStart: true,
+        });
+
+        setInspectorReady(true);
+
+        // Create and start actor with inspector
+        const newActor = createActor(loadedMachine, {
+          inspect, // This sends all state changes to the Stately Inspector!
+        });
 
         // Subscribe to state changes
         newActor.subscribe((snapshot) => {
@@ -71,7 +84,7 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
         newActor.start();
         setActor(newActor);
 
-        console.log('Machine started:', loadedMachine.id);
+        console.log('Machine started with inspector:', loadedMachine.id);
 
       } catch (err) {
         console.error('Failed to load machine:', err);
@@ -101,9 +114,18 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
 
   // Reset machine to initial state
   const resetMachine = () => {
-    if (machine) {
+    if (machine && iframeRef.current) {
       actor?.stop();
-      const newActor = createActor(machine);
+
+      // Recreate inspector
+      const { inspect } = createBrowserInspector({
+        iframe: iframeRef.current!,
+        autoStart: true,
+      });
+
+      const newActor = createActor(machine, {
+        inspect,
+      });
 
       newActor.subscribe((snapshot) => {
         const state = snapshot.value as string;
@@ -154,6 +176,25 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
 
       {actor && machine && !error && (
         <div className="machine-interactive">
+          {/* Stately Inspector Visualization */}
+          <div className="inspector-panel">
+            <h3>State Diagram (Live)</h3>
+            <div className="inspector-wrapper">
+              <iframe
+                ref={iframeRef}
+                className="stately-inspector-iframe"
+                title={`Inspector for ${machineName}`}
+                sandbox="allow-scripts allow-same-origin allow-popups"
+                allow="accelerometer 'none'; camera 'none'; geolocation 'none'; microphone 'none'; payment 'none'"
+              />
+              {!inspectorReady && (
+                <div className="inspector-loading">
+                  <p>Loading Stately Inspector...</p>
+                </div>
+              )}
+            </div>
+          </div>
+
           {/* Current State Display */}
           <div className="current-state-panel">
             <h3>Current State</h3>

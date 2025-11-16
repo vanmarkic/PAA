@@ -255,6 +255,48 @@ const { machine } = Astro.props;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
+  :global(.inspector-panel) {
+    grid-column: 1 / -1;
+    background: #f7f7f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  :global(.inspector-panel h3) {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.inspector-wrapper) {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.stately-inspector-iframe) {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+  }
+
+  :global(.inspector-loading) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
   :global(.current-state-panel),
   :global(.events-panel),
   :global(.states-panel),
