@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StatsOverview from '../components/StatsOverview.astro';
 import { loadMachinesMetadata } from '../lib/machines';
 
 const metadata = await loadMachinesMetadata();
@@ -11,18 +12,9 @@ const metadata = await loadMachinesMetadata();
     <p class="subtitle">Comprehensive Belgian Administrative Workflows</p>
   </header>
 
-  <div class="stats">
-    <div class="stat-card">
-      <strong>{metadata.totalMachines}</strong>
-      <span>Machines</span>
-    </div>
-    <div class="stat-card">
-      <strong>{metadata.categories.length}</strong>
-      <span>Categories</span>
-    </div>
-    <div class="stat-card">
-      <strong>{metadata.statistics.totalStates}</strong>
-      <span>Total States</span>
-    </div>
-  </div>
+  <StatsOverview
+    stats={metadata.statistics}
+    totalMachines={metadata.totalMachines}
+    totalCategories={metadata.categories.length}
+  />
 </BaseLayout>
