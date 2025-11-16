@@ -1,16 +1,28 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { loadMachinesMetadata } from '../lib/machines';
 
-// This runs at build time
 const metadata = await loadMachinesMetadata();
 ---
 
-<html>
-  <head>
-    <title>Test - {metadata.totalMachines} Machines</title>
-  </head>
-  <body>
-    <h1>Found {metadata.totalMachines} machines</h1>
-    <p>Categories: {metadata.categories.join(', ')}</p>
-  </body>
-</html>
+<BaseLayout title={`PAA - ${metadata.totalMachines} State Machines`}>
+  <header>
+    <h1>🇧🇪 PAA - {metadata.totalMachines} State Machines</h1>
+    <p class="subtitle">Comprehensive Belgian Administrative Workflows</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat-card">
+      <strong>{metadata.totalMachines}</strong>
+      <span>Machines</span>
+    </div>
+    <div class="stat-card">
+      <strong>{metadata.categories.length}</strong>
+      <span>Categories</span>
+    </div>
+    <div class="stat-card">
+      <strong>{metadata.statistics.totalStates}</strong>
+      <span>Total States</span>
+    </div>
+  </div>
+</BaseLayout>
