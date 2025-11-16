@@ -252,6 +252,7 @@
         <div id="lang-en" class="lang-content active">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-en')">Overview</button>
+                <button class="tab" onclick="showTab('architecture-en')">System Architecture</button>
                 <button class="tab" onclick="showTab('ris-en')">RIS Workflow</button>
                 <button class="tab" onclick="showTab('conversion-en')">Legal Conversion</button>
                 <button class="tab" onclick="showTab('about-en')">About</button>
@@ -285,6 +286,151 @@
                             <h4>🔗 Integration</h4>
                             <p>Connects social benefit optimization, conversational assistants, and document generation through a unified knowledge base.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="architecture-en" class="content">
+                <div class="card">
+                    <h2>PAA System Architecture</h2>
+                    <p style="margin-bottom: 2rem;">
+                        The PAA platform integrates multiple state machines and rule engines to provide a comprehensive
+                        social benefits assistance system for Belgian citizens.
+                    </p>
+
+                    <h3>System Overview</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "User Interface Layer"
+        UI[Web/Mobile Interface]
+        CONV[Conversational Assistant]
+    end
+
+    subgraph "State Machine Layer"
+        RIS[RIS Workflow Machine<br/>11 states]
+        LEGAL[Legal Conversion Machine<br/>8 states]
+    end
+
+    subgraph "Business Rules Layer"
+        RIS_RULES[RIS Eligibility Rules]
+        AGR_RULES[AGR Calculation Rules]
+        VALIDATION[Semantic Validation]
+    end
+
+    subgraph "Data Layer"
+        KB[Knowledge Base<br/>Legal Texts & Benefits]
+        USER_DB[(User Data)]
+        DOC_GEN[Document Generator]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Feeds| RIS_RULES
+    KB -.->|Feeds| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>State Machines Integration Flow</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User
+    participant UI as User Interface
+    participant RIS as RIS Machine
+    participant Legal as Legal Conversion
+    participant KB as Knowledge Base
+    participant Rules as Business Rules
+
+    User->>UI: Request benefit info
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Fetch legal text
+    Legal->>Legal: Process & simplify
+    Legal-->>UI: Simplified explanation
+
+    User->>UI: Apply for RIS
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Check eligibility
+    Rules-->>RIS: Eligibility result
+
+    alt Eligible
+        RIS->>RIS: Create PIIS contract
+        RIS->>KB: Generate documents
+        RIS-->>User: Application approved
+    else Not Eligible
+        RIS-->>User: Show alternatives
+    end
+                    </div>
+
+                    <h3>Component Overview</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 State Machines (2)</h4>
+                            <ul>
+                                <li><strong>RIS Workflow:</strong> 11 states, 11 events</li>
+                                <li><strong>Legal Conversion:</strong> 8 states, 9 events</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Business Rules</h4>
+                            <ul>
+                                <li><strong>RIS Eligibility:</strong> Age, residency, income</li>
+                                <li><strong>AGR Calculation:</strong> Part-time salary optimization</li>
+                                <li><strong>Semantic Validation:</strong> Legal accuracy checks</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Data Components</h4>
+                            <ul>
+                                <li><strong>Knowledge Base:</strong> Legal texts repository</li>
+                                <li><strong>User Database:</strong> Application tracking</li>
+                                <li><strong>Document Gen:</strong> PIIS contracts, forms</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Technology Stack</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> State management</li>
+                                <li><strong>json-rules-engine:</strong> Business logic</li>
+                                <li><strong>TypeScript:</strong> Type safety</li>
+                                <li><strong>AI/NLP:</strong> Text processing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Machine Interaction Patterns</h3>
+                    <div class="mermaid">
+graph LR
+    A[User Query] --> B{Question Type?}
+    B -->|Legal Text| C[Legal Conversion Machine]
+    B -->|Benefit Application| D[RIS Workflow Machine]
+    B -->|Optimization| E[AGR Rules Engine]
+
+    C --> F[Simplified Content]
+    D --> G[Application Status]
+    E --> H[Optimization Advice]
+
+    F --> I[User Response]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
                     </div>
                 </div>
             </div>
@@ -421,6 +567,7 @@ stateDiagram-v2
         <div id="lang-fr" class="lang-content">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-fr')">Aperçu</button>
+                <button class="tab" onclick="showTab('architecture-fr')">Architecture Système</button>
                 <button class="tab" onclick="showTab('ris-fr')">Workflow RIS</button>
                 <button class="tab" onclick="showTab('conversion-fr')">Conversion Juridique</button>
                 <button class="tab" onclick="showTab('about-fr')">À Propos</button>
@@ -458,6 +605,151 @@ stateDiagram-v2
                             <p>Connecte l'optimisation des prestations sociales, les assistants conversationnels et la génération
                             de documents via une base de connaissances unifiée.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="architecture-fr" class="content">
+                <div class="card">
+                    <h2>Architecture du Système PAA</h2>
+                    <p style="margin-bottom: 2rem;">
+                        La plateforme PAA intègre plusieurs machines d'état et moteurs de règles pour fournir un système
+                        complet d'assistance aux prestations sociales pour les citoyens belges.
+                    </p>
+
+                    <h3>Vue d'Ensemble du Système</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "Couche Interface Utilisateur"
+        UI[Interface Web/Mobile]
+        CONV[Assistant Conversationnel]
+    end
+
+    subgraph "Couche Machines d'État"
+        RIS[Machine Workflow RIS<br/>11 états]
+        LEGAL[Machine Conversion Juridique<br/>8 états]
+    end
+
+    subgraph "Couche Règles Métier"
+        RIS_RULES[Règles d'Éligibilité RIS]
+        AGR_RULES[Règles de Calcul AGR]
+        VALIDATION[Validation Sémantique]
+    end
+
+    subgraph "Couche Données"
+        KB[Base de Connaissances<br/>Textes Juridiques & Prestations]
+        USER_DB[(Données Utilisateur)]
+        DOC_GEN[Générateur de Documents]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Alimente| RIS_RULES
+    KB -.->|Alimente| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>Flux d'Intégration des Machines d'État</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User as Utilisateur
+    participant UI as Interface
+    participant RIS as Machine RIS
+    participant Legal as Conversion Juridique
+    participant KB as Base de Connaissances
+    participant Rules as Règles Métier
+
+    User->>UI: Demande info prestation
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Récupération texte juridique
+    Legal->>Legal: Traitement & simplification
+    Legal-->>UI: Explication simplifiée
+
+    User->>UI: Demande de RIS
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Vérification éligibilité
+    Rules-->>RIS: Résultat éligibilité
+
+    alt Éligible
+        RIS->>RIS: Création contrat PIIS
+        RIS->>KB: Génération documents
+        RIS-->>User: Demande approuvée
+    else Non éligible
+        RIS-->>User: Affichage alternatives
+    end
+                    </div>
+
+                    <h3>Vue d'Ensemble des Composants</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 Machines d'État (2)</h4>
+                            <ul>
+                                <li><strong>Workflow RIS:</strong> 11 états, 11 événements</li>
+                                <li><strong>Conversion Juridique:</strong> 8 états, 9 événements</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Règles Métier</h4>
+                            <ul>
+                                <li><strong>Éligibilité RIS:</strong> Âge, résidence, revenus</li>
+                                <li><strong>Calcul AGR:</strong> Optimisation salaire temps partiel</li>
+                                <li><strong>Validation Sémantique:</strong> Vérifications exactitude juridique</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Composants de Données</h4>
+                            <ul>
+                                <li><strong>Base de Connaissances:</strong> Dépôt textes juridiques</li>
+                                <li><strong>Base Utilisateurs:</strong> Suivi des demandes</li>
+                                <li><strong>Génération Docs:</strong> Contrats PIIS, formulaires</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Stack Technologique</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> Gestion d'état</li>
+                                <li><strong>json-rules-engine:</strong> Logique métier</li>
+                                <li><strong>TypeScript:</strong> Sûreté des types</li>
+                                <li><strong>IA/NLP:</strong> Traitement de texte</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Modèles d'Interaction entre Machines</h3>
+                    <div class="mermaid">
+graph LR
+    A[Requête Utilisateur] --> B{Type de Question?}
+    B -->|Texte Juridique| C[Machine Conversion Juridique]
+    B -->|Demande Prestation| D[Machine Workflow RIS]
+    B -->|Optimisation| E[Moteur Règles AGR]
+
+    C --> F[Contenu Simplifié]
+    D --> G[Statut Demande]
+    E --> H[Conseil d'Optimisation]
+
+    F --> I[Réponse Utilisateur]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
                     </div>
                 </div>
             </div>
@@ -595,6 +887,7 @@ stateDiagram-v2
         <div id="lang-nl" class="lang-content">
             <div class="tabs">
                 <button class="tab active" onclick="showTab('overview-nl')">Overzicht</button>
+                <button class="tab" onclick="showTab('architecture-nl')">Systeemarchitectuur</button>
                 <button class="tab" onclick="showTab('ris-nl')">RIS Workflow</button>
                 <button class="tab" onclick="showTab('conversion-nl')">Juridische Conversie</button>
                 <button class="tab" onclick="showTab('about-nl')">Over</button>
@@ -632,6 +925,151 @@ stateDiagram-v2
                             <p>Verbindt optimalisatie van sociale uitkeringen, conversatie-assistenten en documentgeneratie
                             via een uniforme kennisbank.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="architecture-nl" class="content">
+                <div class="card">
+                    <h2>PAA Systeemarchitectuur</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Het PAA-platform integreert meerdere state machines en regelengines om een uitgebreid
+                        hulpsysteem voor sociale uitkeringen te bieden voor Belgische burgers.
+                    </p>
+
+                    <h3>Systeemoverzicht</h3>
+                    <div class="mermaid">
+graph TB
+    subgraph "Gebruikersinterfacelaag"
+        UI[Web/Mobiele Interface]
+        CONV[Conversatie-assistent]
+    end
+
+    subgraph "State Machine Laag"
+        RIS[OCMW Workflow Machine<br/>11 toestanden]
+        LEGAL[Juridische Conversie Machine<br/>8 toestanden]
+    end
+
+    subgraph "Bedrijfsregels Laag"
+        RIS_RULES[OCMW Geschiktheidsregels]
+        AGR_RULES[AGR Berekeningsregels]
+        VALIDATION[Semantische Validatie]
+    end
+
+    subgraph "Data Laag"
+        KB[Kennisbank<br/>Juridische Teksten & Uitkeringen]
+        USER_DB[(Gebruikersgegevens)]
+        DOC_GEN[Documentgenerator]
+    end
+
+    UI --> RIS
+    UI --> LEGAL
+    CONV --> RIS
+    CONV --> LEGAL
+
+    RIS --> RIS_RULES
+    RIS --> AGR_RULES
+    RIS --> USER_DB
+    RIS --> DOC_GEN
+
+    LEGAL --> VALIDATION
+    LEGAL --> KB
+    LEGAL --> DOC_GEN
+
+    KB -.->|Voedt| RIS_RULES
+    KB -.->|Voedt| AGR_RULES
+
+    style RIS fill:#667eea,color:#fff
+    style LEGAL fill:#764ba2,color:#fff
+    style KB fill:#48bb78,color:#fff
+    style UI fill:#4299e1,color:#fff
+                    </div>
+
+                    <h3>State Machines Integratie Flow</h3>
+                    <div class="mermaid">
+sequenceDiagram
+    participant User as Gebruiker
+    participant UI as Interface
+    participant RIS as OCMW Machine
+    participant Legal as Juridische Conversie
+    participant KB as Kennisbank
+    participant Rules as Bedrijfsregels
+
+    User->>UI: Vraag uitkeringsinfo
+    UI->>Legal: START_CONVERSION
+    Legal->>KB: Haal juridische tekst op
+    Legal->>Legal: Verwerking & vereenvoudiging
+    Legal-->>UI: Vereenvoudigde uitleg
+
+    User->>UI: Aanvraag OCMW
+    UI->>RIS: START_APPLICATION
+    RIS->>Rules: Controleer geschiktheid
+    Rules-->>RIS: Geschiktheidsresultaat
+
+    alt Geschikt
+        RIS->>RIS: Maak PIIS-contract
+        RIS->>KB: Genereer documenten
+        RIS-->>User: Aanvraag goedgekeurd
+    else Niet geschikt
+        RIS-->>User: Toon alternatieven
+    end
+                    </div>
+
+                    <h3>Componentenoverzicht</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎰 State Machines (2)</h4>
+                            <ul>
+                                <li><strong>OCMW Workflow:</strong> 11 toestanden, 11 gebeurtenissen</li>
+                                <li><strong>Juridische Conversie:</strong> 8 toestanden, 9 gebeurtenissen</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>📋 Bedrijfsregels</h4>
+                            <ul>
+                                <li><strong>OCMW Geschiktheid:</strong> Leeftijd, verblijf, inkomen</li>
+                                <li><strong>AGR Berekening:</strong> Deeltijds salaris optimalisatie</li>
+                                <li><strong>Semantische Validatie:</strong> Juridische nauwkeurigheidscontroles</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>💾 Datacomponenten</h4>
+                            <ul>
+                                <li><strong>Kennisbank:</strong> Juridische tekstenrepository</li>
+                                <li><strong>Gebruikersdatabase:</strong> Aanvraagtracking</li>
+                                <li><strong>Documentgen:</strong> PIIS-contracten, formulieren</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔧 Technology Stack</h4>
+                            <ul>
+                                <li><strong>XState v5.24.0:</strong> Statusbeheer</li>
+                                <li><strong>json-rules-engine:</strong> Bedrijfslogica</li>
+                                <li><strong>TypeScript:</strong> Type-veiligheid</li>
+                                <li><strong>AI/NLP:</strong> Tekstverwerking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Machine Interactiepatronen</h3>
+                    <div class="mermaid">
+graph LR
+    A[Gebruikersvraag] --> B{Vraagtype?}
+    B -->|Juridische Tekst| C[Juridische Conversie Machine]
+    B -->|Uitkeringsaanvraag| D[OCMW Workflow Machine]
+    B -->|Optimalisatie| E[AGR Regelengine]
+
+    C --> F[Vereenvoudigde Inhoud]
+    D --> G[Aanvraagstatus]
+    E --> H[Optimalisatieadvies]
+
+    F --> I[Gebruikersreactie]
+    G --> I
+    H --> I
+
+    style C fill:#764ba2,color:#fff
+    style D fill:#667eea,color:#fff
+    style E fill:#48bb78,color:#fff
                     </div>
                 </div>
             </div>
