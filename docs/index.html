@@ -42,7 +42,7 @@
             text-align: center;
             color: white;
             padding: 3rem 0;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
         h1 {
@@ -56,6 +56,34 @@
             font-size: 1.2rem;
             opacity: 0.9;
             font-weight: 300;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
         }
 
         .tabs {
@@ -93,6 +121,14 @@
         }
 
         .content.active {
+            display: block;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
             display: block;
         }
 
@@ -206,389 +242,571 @@
             <p class="subtitle">Plateforme d'Aide Administrative - Visualizing Belgian Social Benefits Workflows</p>
         </header>
 
-        <div class="tabs">
-            <button class="tab active" onclick="showTab('overview')">Overview</button>
-            <button class="tab" onclick="showTab('ris')">RIS Workflow</button>
-            <button class="tab" onclick="showTab('conversion')">Legal Conversion</button>
-            <button class="tab" onclick="showTab('about')">About</button>
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="switchLanguage('en')">🇬🇧 English</button>
+            <button class="lang-btn" onclick="switchLanguage('fr')">🇫🇷 Français</button>
+            <button class="lang-btn" onclick="switchLanguage('nl')">🇳🇱 Nederlands</button>
         </div>
 
-        <div id="overview" class="content active">
-            <div class="card">
-                <h2>Project Overview</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    The Plateforme d'Aide Administrative (PAA) uses XState machines to model complex Belgian social benefit workflows
-                    and legal text conversion pipelines, making social services more accessible to everyone.
-                </p>
+        <!-- ENGLISH VERSION -->
+        <div id="lang-en" class="lang-content active">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview-en')">Overview</button>
+                <button class="tab" onclick="showTab('ris-en')">RIS Workflow</button>
+                <button class="tab" onclick="showTab('conversion-en')">Legal Conversion</button>
+                <button class="tab" onclick="showTab('about-en')">About</button>
+            </div>
 
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>🎯 Mission</h4>
-                        <p>Democratize access to Belgian social benefits through automated eligibility checking, workflow management, and legal text simplification.</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>⚙️ Technology</h4>
-                        <p>Built with XState v5.24.0 for robust state management, TypeScript for type safety, and AI-powered legal text conversion.</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>📊 State Machines</h4>
-                        <ul>
-                            <li>RIS Application Workflow (11 states)</li>
-                            <li>Legal Text Conversion Pipeline (8 states)</li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h4>🔗 Integration</h4>
-                        <p>Connects social benefit optimization, conversational assistants, and document generation through a unified knowledge base.</p>
+            <div id="overview-en" class="content active">
+                <div class="card">
+                    <h2>Project Overview</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        The Plateforme d'Aide Administrative (PAA) uses XState machines to model complex Belgian social benefit workflows
+                        and legal text conversion pipelines, making social services more accessible to everyone.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎯 Mission</h4>
+                            <p>Democratize access to Belgian social benefits through automated eligibility checking, workflow management, and legal text simplification.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>⚙️ Technology</h4>
+                            <p>Built with XState v5.24.0 for robust state management, TypeScript for type safety, and AI-powered legal text conversion.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>📊 State Machines</h4>
+                            <ul>
+                                <li>RIS Application Workflow (11 states)</li>
+                                <li>Legal Text Conversion Pipeline (8 states)</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔗 Integration</h4>
+                            <p>Connects social benefit optimization, conversational assistants, and document generation through a unified knowledge base.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="ris" class="content">
-            <div class="card">
-                <h2>RIS Application Workflow State Machine</h2>
-                <p style="margin-bottom: 2rem;">
-                    Manages the complete lifecycle of RIS (Revenu d'Intégration Sociale - Social Integration Income)
-                    applications, from initial eligibility checking through active benefit management and compliance monitoring.
-                </p>
+            <div id="ris-en" class="content">
+                <div class="card">
+                    <h2>RIS Application Workflow State Machine</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Manages the complete lifecycle of RIS (Revenu d'Intégration Sociale - Social Integration Income)
+                        applications, from initial eligibility checking through active benefit management and compliance monitoring.
+                    </p>
 
-                <div class="mermaid">
+                    <div class="mermaid">
 stateDiagram-v2
     [*] --> idle
-
     idle --> checkingEligibility: START_APPLICATION
-
-    checkingEligibility --> eligible: ELIGIBILITY_CHECKED<br/>(isEligible = true)
-    checkingEligibility --> ineligible: ELIGIBILITY_CHECKED<br/>(isEligible = false)
-
+    checkingEligibility --> eligible: ELIGIBILITY_CHECKED
+    checkingEligibility --> ineligible: NOT_ELIGIBLE
     eligible --> creatingPIIS: ACCEPT_RIS
     eligible --> declined: DECLINE_RIS
-
     creatingPIIS --> active: PIIS_SIGNED
-
     active --> recalculating: INCOME_CHANGE
     active --> checkingCompliance: COMPLIANCE_CHECK
     active --> terminated: TERMINATE_RIS
-
     recalculating --> active: ELIGIBILITY_CHECKED
-
     checkingCompliance --> active: COMPLIANCE_OK
     checkingCompliance --> complianceWarning: COMPLIANCE_ISSUE
-
     complianceWarning --> active: ISSUE_RESOLVED
     complianceWarning --> terminated: TERMINATE_RIS
-
     ineligible --> idle: RESET
     declined --> idle: RESET
     terminated --> idle: RESET
-
-    note right of idle
-        Waiting for RIS
-        application to start
-    end note
-
-    note right of checkingEligibility
-        Checking age, residency,
-        patrimony, and eligibility
-    end note
-
-    note right of active
-        RIS is active
-        monitoring for changes
-    end note
-                </div>
-
-                <h3>Key Features</h3>
-                <div style="margin: 1rem 0;">
-                    <span class="badge">11 States</span>
-                    <span class="badge">11 Events</span>
-                    <span class="badge">Eligibility Checking</span>
-                    <span class="badge">PIIS Contract</span>
-                    <span class="badge">Compliance Monitoring</span>
-                    <span class="badge">Income Recalculation</span>
-                </div>
-
-                <h3>RIS Amounts (2024)</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>Isolé (Single Person)</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1,070.49</p>
                     </div>
-                    <div class="info-box">
-                        <h4>Cohabitant (Cohabiting)</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€713.66</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Famille Monoparentale</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1,450.52</p>
-                    </div>
-                </div>
 
-                <h3>States</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>Application Phase</h4>
-                        <ul>
-                            <li>idle</li>
-                            <li>checkingEligibility</li>
-                            <li>eligible / ineligible</li>
-                            <li>declined</li>
-                        </ul>
+                    <h3>Key Features</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">11 States</span>
+                        <span class="badge">11 Events</span>
+                        <span class="badge">Eligibility Checking</span>
+                        <span class="badge">PIIS Contract</span>
+                        <span class="badge">Compliance Monitoring</span>
+                        <span class="badge">Income Recalculation</span>
                     </div>
-                    <div class="info-box">
-                        <h4>Setup Phase</h4>
-                        <ul>
-                            <li>creatingPIIS</li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h4>Active Phase</h4>
-                        <ul>
-                            <li>active</li>
-                            <li>recalculating</li>
-                            <li>checkingCompliance</li>
-                            <li>complianceWarning</li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h4>End States</h4>
-                        <ul>
-                            <li>terminated</li>
-                        </ul>
+
+                    <h3>RIS Amounts (2024)</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Single Person</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1,070.49</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Cohabiting</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€713.66</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Single Parent Family</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1,450.52</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="conversion" class="content">
-            <div class="card">
-                <h2>Legal Text Conversion Pipeline State Machine</h2>
-                <p style="margin-bottom: 2rem;">
-                    Transforms complex Belgian legal text into simplified, accessible language through an AI-powered pipeline
-                    with automatic validation and retry logic to ensure semantic accuracy.
-                </p>
+            <div id="conversion-en" class="content">
+                <div class="card">
+                    <h2>Legal Text Conversion Pipeline State Machine</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Transforms complex Belgian legal text into simplified, accessible language through an AI-powered pipeline
+                        with automatic validation and retry logic to ensure semantic accuracy.
+                    </p>
 
-                <div class="mermaid">
+                    <div class="mermaid">
 stateDiagram-v2
     [*] --> idle
-
     idle --> extractingStructure: START_CONVERSION
     extractingStructure --> identifyingConcepts: STRUCTURE_EXTRACTED
     identifyingConcepts --> mappingVocabulary: CONCEPTS_IDENTIFIED
     mappingVocabulary --> generatingVersions: TERMS_MAPPED
     generatingVersions --> validating: VERSIONS_GENERATED
-
     validating --> completed: VALIDATION_PASSED
     validating --> checkingRetries: VALIDATION_FAILED
-
     state checkingRetries <<choice>>
-    checkingRetries --> regeneratingWithConstraints: retryCount < 3
-    checkingRetries --> failed: retryCount >= 3
-
+    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
+    checkingRetries --> failed: retryCount_greater_equal_3
     regeneratingWithConstraints --> generatingVersions: RETRY
-
     completed --> [*]
     failed --> idle: RESET
-
-    note right of extractingStructure
-        Extract legal structure
-        using NLP and patterns
-    end note
-
-    note right of generatingVersions
-        Generate multiple versions:
-        simple, detailed,
-        examples, warnings
-    end note
-
-    note right of validating
-        Validate semantic
-        accuracy against
-        original text
-    end note
-                </div>
-
-                <h3>Key Features</h3>
-                <div style="margin: 1rem 0;">
-                    <span class="badge">8 States</span>
-                    <span class="badge">9 Events</span>
-                    <span class="badge">NLP Processing</span>
-                    <span class="badge">Multi-Level Output</span>
-                    <span class="badge">Semantic Validation</span>
-                    <span class="badge">Auto Retry (Max 3)</span>
-                </div>
-
-                <h3>Conversion Levels</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>Simple</h4>
-                        <p>Basic simplification for general public</p>
                     </div>
-                    <div class="info-box">
-                        <h4>Detailed</h4>
-                        <p>Contextual explanations with examples</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Examples</h4>
-                        <p>Real-world application scenarios</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Warnings</h4>
-                        <p>Critical information and exceptions</p>
+
+                    <h3>Key Features</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">8 States</span>
+                        <span class="badge">9 Events</span>
+                        <span class="badge">NLP Processing</span>
+                        <span class="badge">Multi-Level Output</span>
+                        <span class="badge">Semantic Validation</span>
+                        <span class="badge">Auto Retry (Max 3)</span>
                     </div>
                 </div>
+            </div>
 
-                <h3>Target Audiences</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>General Public</h4>
-                        <p>Simplified language for everyone</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>CPAS Beneficiaries</h4>
-                        <p>Specific context for benefit recipients</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Social Workers</h4>
-                        <p>Professional guidance materials</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Optimizer</h4>
-                        <p>Machine-readable rule format</p>
-                    </div>
-                </div>
+            <div id="about-en" class="content">
+                <div class="card">
+                    <h2>About the Project</h2>
+                    <h3>The Problem</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Belgian social benefit systems are notoriously complex, with legal texts that are difficult to understand
+                        for the average person, leading to low comprehension (23%), high abandonment (68%), and long processing times (47 min).
+                    </p>
 
-                <h3>Pipeline Stages</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>1. Structure Extraction</h4>
-                        <p>Parse legal text using NLP to identify structure, articles, and sections</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>2. Concept Identification</h4>
-                        <p>Detect key legal concepts that require simplification</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>3. Vocabulary Mapping</h4>
-                        <p>Map complex legal terms to common language equivalents</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>4. Version Generation</h4>
-                        <p>Create multiple simplified versions using LLM</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>5. Validation</h4>
-                        <p>Ensure semantic accuracy against original legal text</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>6. Retry Logic</h4>
-                        <p>Regenerate with stricter constraints if validation fails (max 3 attempts)</p>
+                    <h3>Impact Metrics</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Comprehension</h4>
+                            <p><strong>+287%</strong> improvement<br/>23% → 89%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Correct Actions</h4>
+                            <p><strong>+171%</strong> improvement<br/>31% → 84%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Abandonment</h4>
+                            <p><strong>-82%</strong> reduction<br/>68% → 12%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Time Saved</h4>
+                            <p><strong>-83%</strong> reduction<br/>47min → 8min</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="about" class="content">
-            <div class="card">
-                <h2>About the Project</h2>
+        <!-- FRENCH VERSION -->
+        <div id="lang-fr" class="lang-content">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview-fr')">Aperçu</button>
+                <button class="tab" onclick="showTab('ris-fr')">Workflow RIS</button>
+                <button class="tab" onclick="showTab('conversion-fr')">Conversion Juridique</button>
+                <button class="tab" onclick="showTab('about-fr')">À Propos</button>
+            </div>
 
-                <h3>The Problem</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belgian social benefit systems are notoriously complex, with legal texts that are difficult to understand
-                    for the average person. This creates barriers to accessing critical social services, leading to:
-                </p>
-                <ul style="margin-bottom: 1.5rem; padding-left: 2rem;">
-                    <li>Low comprehension rates (only 23% understand original legal texts)</li>
-                    <li>High abandonment rates (68% give up on applications)</li>
-                    <li>Incorrect actions (only 31% take appropriate steps)</li>
-                    <li>Long processing times (average 47 minutes per document)</li>
-                </ul>
+            <div id="overview-fr" class="content active">
+                <div class="card">
+                    <h2>Aperçu du Projet</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        La Plateforme d'Aide Administrative (PAA) utilise des machines XState pour modéliser les workflows complexes
+                        des prestations sociales belges et les pipelines de conversion de textes juridiques, rendant les services sociaux
+                        accessibles à tous.
+                    </p>
 
-                <h3>The Solution</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    PAA uses state machines and AI to automate and simplify:
-                </p>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>Automated Eligibility</h4>
-                        <p>Instantly check eligibility for social benefits based on personal circumstances</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Workflow Automation</h4>
-                        <p>Guide users through application processes step-by-step</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Legal Simplification</h4>
-                        <p>Convert complex legal texts to plain language with 89% comprehension</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Compliance Monitoring</h4>
-                        <p>Track obligations and warn users before issues arise</p>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎯 Mission</h4>
+                            <p>Démocratiser l'accès aux prestations sociales belges grâce à la vérification automatique d'éligibilité,
+                            la gestion des workflows et la simplification des textes juridiques.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>⚙️ Technologie</h4>
+                            <p>Construit avec XState v5.24.0 pour une gestion d'état robuste, TypeScript pour la sûreté des types,
+                            et conversion de textes juridiques assistée par IA.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>📊 Machines d'État</h4>
+                            <ul>
+                                <li>Workflow de Demande RIS (11 états)</li>
+                                <li>Pipeline de Conversion Juridique (8 états)</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔗 Intégration</h4>
+                            <p>Connecte l'optimisation des prestations sociales, les assistants conversationnels et la génération
+                            de documents via une base de connaissances unifiée.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <h3>Impact Metrics</h3>
-                <div class="info-grid">
-                    <div class="info-box">
-                        <h4>Comprehension</h4>
-                        <p><strong>+287%</strong> improvement<br/>23% → 89%</p>
+            <div id="ris-fr" class="content">
+                <div class="card">
+                    <h2>Machine d'État du Workflow de Demande RIS</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Gère le cycle de vie complet des demandes de RIS (Revenu d'Intégration Sociale), de la vérification
+                        initiale d'éligibilité à la gestion active des prestations et au suivi de la conformité.
+                    </p>
+
+                    <div class="mermaid">
+stateDiagram-v2
+    [*] --> idle
+    idle --> checkingEligibility: START_APPLICATION
+    checkingEligibility --> eligible: ELIGIBILITY_CHECKED
+    checkingEligibility --> ineligible: NOT_ELIGIBLE
+    eligible --> creatingPIIS: ACCEPT_RIS
+    eligible --> declined: DECLINE_RIS
+    creatingPIIS --> active: PIIS_SIGNED
+    active --> recalculating: INCOME_CHANGE
+    active --> checkingCompliance: COMPLIANCE_CHECK
+    active --> terminated: TERMINATE_RIS
+    recalculating --> active: ELIGIBILITY_CHECKED
+    checkingCompliance --> active: COMPLIANCE_OK
+    checkingCompliance --> complianceWarning: COMPLIANCE_ISSUE
+    complianceWarning --> active: ISSUE_RESOLVED
+    complianceWarning --> terminated: TERMINATE_RIS
+    ineligible --> idle: RESET
+    declined --> idle: RESET
+    terminated --> idle: RESET
                     </div>
-                    <div class="info-box">
-                        <h4>Correct Actions</h4>
-                        <p><strong>+171%</strong> improvement<br/>31% → 84%</p>
+
+                    <h3>Caractéristiques Clés</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">11 États</span>
+                        <span class="badge">11 Événements</span>
+                        <span class="badge">Vérification d'Éligibilité</span>
+                        <span class="badge">Contrat PIIS</span>
+                        <span class="badge">Suivi de Conformité</span>
+                        <span class="badge">Recalcul des Revenus</span>
                     </div>
-                    <div class="info-box">
-                        <h4>Abandonment</h4>
-                        <p><strong>-82%</strong> reduction<br/>68% → 12%</p>
-                    </div>
-                    <div class="info-box">
-                        <h4>Time Saved</h4>
-                        <p><strong>-83%</strong> reduction<br/>47min → 8min</p>
+
+                    <h3>Montants RIS (2024)</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Isolé (Personne Seule)</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1.070,49</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Cohabitant</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€713,66</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Famille Monoparentale</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1.450,52</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <h3>Technology Stack</h3>
-                <div style="margin: 1.5rem 0;">
-                    <span class="badge">XState v5.24.0</span>
-                    <span class="badge">TypeScript</span>
-                    <span class="badge">Claude 3 Sonnet</span>
-                    <span class="badge">GPT-4 Turbo</span>
-                    <span class="badge">spaCy NLP</span>
-                    <span class="badge">PostgreSQL</span>
-                    <span class="badge">Elasticsearch</span>
-                    <span class="badge">Redis</span>
+            <div id="conversion-fr" class="content">
+                <div class="card">
+                    <h2>Machine d'État du Pipeline de Conversion Juridique</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Transforme les textes juridiques belges complexes en langage simplifié et accessible grâce à un pipeline
+                        alimenté par l'IA avec validation automatique et logique de réessai pour garantir l'exactitude sémantique.
+                    </p>
+
+                    <div class="mermaid">
+stateDiagram-v2
+    [*] --> idle
+    idle --> extractingStructure: START_CONVERSION
+    extractingStructure --> identifyingConcepts: STRUCTURE_EXTRACTED
+    identifyingConcepts --> mappingVocabulary: CONCEPTS_IDENTIFIED
+    mappingVocabulary --> generatingVersions: TERMS_MAPPED
+    generatingVersions --> validating: VERSIONS_GENERATED
+    validating --> completed: VALIDATION_PASSED
+    validating --> checkingRetries: VALIDATION_FAILED
+    state checkingRetries <<choice>>
+    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
+    checkingRetries --> failed: retryCount_greater_equal_3
+    regeneratingWithConstraints --> generatingVersions: RETRY
+    completed --> [*]
+    failed --> idle: RESET
+                    </div>
+
+                    <h3>Caractéristiques Clés</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">8 États</span>
+                        <span class="badge">9 Événements</span>
+                        <span class="badge">Traitement NLP</span>
+                        <span class="badge">Sortie Multi-Niveaux</span>
+                        <span class="badge">Validation Sémantique</span>
+                        <span class="badge">Réessai Auto (Max 3)</span>
+                    </div>
                 </div>
+            </div>
 
-                <h3>Repository</h3>
-                <p>
-                    Implementation files:
-                </p>
-                <ul style="padding-left: 2rem; margin-top: 0.5rem;">
-                    <li><code>/src/workflows/risMachine.ts</code> - RIS state machine</li>
-                    <li><code>/src/workflows/conversionMachine.ts</code> - Conversion pipeline</li>
-                    <li><code>/src/domain/risTypes.ts</code> - RIS domain types</li>
-                    <li><code>/src/domain/types.ts</code> - Conversion types</li>
-                    <li><code>/src/examples/</code> - Usage examples</li>
-                </ul>
+            <div id="about-fr" class="content">
+                <div class="card">
+                    <h2>À Propos du Projet</h2>
+                    <h3>Le Problème</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Les systèmes de prestations sociales belges sont notoirement complexes, avec des textes juridiques difficiles
+                        à comprendre pour la personne moyenne, entraînant une faible compréhension (23%), un abandon élevé (68%)
+                        et des temps de traitement longs (47 min).
+                    </p>
+
+                    <h3>Métriques d'Impact</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Compréhension</h4>
+                            <p><strong>+287%</strong> d'amélioration<br/>23% → 89%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Actions Correctes</h4>
+                            <p><strong>+171%</strong> d'amélioration<br/>31% → 84%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Abandon</h4>
+                            <p><strong>-82%</strong> de réduction<br/>68% → 12%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Temps Gagné</h4>
+                            <p><strong>-83%</strong> de réduction<br/>47min → 8min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DUTCH VERSION -->
+        <div id="lang-nl" class="lang-content">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview-nl')">Overzicht</button>
+                <button class="tab" onclick="showTab('ris-nl')">RIS Workflow</button>
+                <button class="tab" onclick="showTab('conversion-nl')">Juridische Conversie</button>
+                <button class="tab" onclick="showTab('about-nl')">Over</button>
+            </div>
+
+            <div id="overview-nl" class="content active">
+                <div class="card">
+                    <h2>Projectoverzicht</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        Het Platform voor Administratieve Hulp (PAA) gebruikt XState-machines om complexe Belgische sociale
+                        uitkeringsworkflows en juridische tekstconversie-pipelines te modelleren, waardoor sociale diensten
+                        toegankelijk worden voor iedereen.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🎯 Missie</h4>
+                            <p>Democratiseren van toegang tot Belgische sociale uitkeringen via geautomatiseerde geschiktheidscontrole,
+                            workflowbeheer en vereenvoudiging van juridische teksten.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>⚙️ Technologie</h4>
+                            <p>Gebouwd met XState v5.24.0 voor robuust statusbeheer, TypeScript voor type-veiligheid en
+                            AI-aangedreven juridische tekstconversie.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>📊 State Machines</h4>
+                            <ul>
+                                <li>OCMW-aanvraag Workflow (11 toestanden)</li>
+                                <li>Juridische Tekstconversie Pipeline (8 toestanden)</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h4>🔗 Integratie</h4>
+                            <p>Verbindt optimalisatie van sociale uitkeringen, conversatie-assistenten en documentgeneratie
+                            via een uniforme kennisbank.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ris-nl" class="content">
+                <div class="card">
+                    <h2>OCMW-aanvraag Workflow State Machine</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Beheert de volledige levenscyclus van OCMW-aanvragen (Leefloon - Revenu d'Intégration Sociale),
+                        van initiële geschiktheidscontrole tot actief uitkeringsbeheer en nalevingsmonitoring.
+                    </p>
+
+                    <div class="mermaid">
+stateDiagram-v2
+    [*] --> idle
+    idle --> checkingEligibility: START_APPLICATION
+    checkingEligibility --> eligible: ELIGIBILITY_CHECKED
+    checkingEligibility --> ineligible: NOT_ELIGIBLE
+    eligible --> creatingPIIS: ACCEPT_RIS
+    eligible --> declined: DECLINE_RIS
+    creatingPIIS --> active: PIIS_SIGNED
+    active --> recalculating: INCOME_CHANGE
+    active --> checkingCompliance: COMPLIANCE_CHECK
+    active --> terminated: TERMINATE_RIS
+    recalculating --> active: ELIGIBILITY_CHECKED
+    checkingCompliance --> active: COMPLIANCE_OK
+    checkingCompliance --> complianceWarning: COMPLIANCE_ISSUE
+    complianceWarning --> active: ISSUE_RESOLVED
+    complianceWarning --> terminated: TERMINATE_RIS
+    ineligible --> idle: RESET
+    declined --> idle: RESET
+    terminated --> idle: RESET
+                    </div>
+
+                    <h3>Belangrijkste Kenmerken</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">11 Toestanden</span>
+                        <span class="badge">11 Gebeurtenissen</span>
+                        <span class="badge">Geschiktheidscontrole</span>
+                        <span class="badge">PIIS-contract</span>
+                        <span class="badge">Nalevingsmonitoring</span>
+                        <span class="badge">Inkomensherberekening</span>
+                    </div>
+
+                    <h3>Leefloon Bedragen (2024)</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Alleenstaande</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1.070,49</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Samenwonende</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€713,66</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Gezin met Eenoudergezin</h4>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #667eea;">€1.450,52</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="conversion-nl" class="content">
+                <div class="card">
+                    <h2>Juridische Tekstconversie Pipeline State Machine</h2>
+                    <p style="margin-bottom: 2rem;">
+                        Transformeert complexe Belgische juridische teksten naar vereenvoudigde, toegankelijke taal via een
+                        AI-aangedreven pipeline met automatische validatie en retry-logica om semantische nauwkeurigheid te garanderen.
+                    </p>
+
+                    <div class="mermaid">
+stateDiagram-v2
+    [*] --> idle
+    idle --> extractingStructure: START_CONVERSION
+    extractingStructure --> identifyingConcepts: STRUCTURE_EXTRACTED
+    identifyingConcepts --> mappingVocabulary: CONCEPTS_IDENTIFIED
+    mappingVocabulary --> generatingVersions: TERMS_MAPPED
+    generatingVersions --> validating: VERSIONS_GENERATED
+    validating --> completed: VALIDATION_PASSED
+    validating --> checkingRetries: VALIDATION_FAILED
+    state checkingRetries <<choice>>
+    checkingRetries --> regeneratingWithConstraints: retryCount_less_3
+    checkingRetries --> failed: retryCount_greater_equal_3
+    regeneratingWithConstraints --> generatingVersions: RETRY
+    completed --> [*]
+    failed --> idle: RESET
+                    </div>
+
+                    <h3>Belangrijkste Kenmerken</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="badge">8 Toestanden</span>
+                        <span class="badge">9 Gebeurtenissen</span>
+                        <span class="badge">NLP-verwerking</span>
+                        <span class="badge">Multi-niveau Output</span>
+                        <span class="badge">Semantische Validatie</span>
+                        <span class="badge">Auto Retry (Max 3)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about-nl" class="content">
+                <div class="card">
+                    <h2>Over het Project</h2>
+                    <h3>Het Probleem</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Belgische sociale uitkeringssystemen zijn notoir complex, met juridische teksten die moeilijk te begrijpen
+                        zijn voor de gemiddelde persoon, wat leidt tot een laag begrip (23%), hoge uitval (68%) en lange
+                        verwerkingstijden (47 min).
+                    </p>
+
+                    <h3>Impact Statistieken</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>Begrip</h4>
+                            <p><strong>+287%</strong> verbetering<br/>23% → 89%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Correcte Acties</h4>
+                            <p><strong>+171%</strong> verbetering<br/>31% → 84%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Uitval</h4>
+                            <p><strong>-82%</strong> vermindering<br/>68% → 12%</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Tijd Bespaard</h4>
+                            <p><strong>-83%</strong> vermindering<br/>47min → 8min</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <footer>
             <p>Plateforme d'Aide Administrative (PAA)</p>
-            <p>Making Belgian social benefits accessible to everyone</p>
+            <p>Making Belgian social benefits accessible to everyone | Rendre les prestations sociales belges accessibles à tous | Belgische sociale uitkeringen toegankelijk maken voor iedereen</p>
         </footer>
     </div>
 
     <script>
-        function showTab(tabName) {
-            // Hide all content
-            document.querySelectorAll('.content').forEach(content => {
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Hide all language content
+            document.querySelectorAll('.lang-content').forEach(content => {
                 content.classList.remove('active');
             });
 
-            // Deactivate all tabs
-            document.querySelectorAll('.tab').forEach(tab => {
+            // Show selected language content
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Reinitialize mermaid diagrams
+            setTimeout(() => {
+                mermaid.run();
+            }, 100);
+        }
+
+        function showTab(tabName) {
+            const langSuffix = tabName.split('-').pop();
+
+            // Hide all content for current language
+            document.querySelectorAll(`#lang-${langSuffix} .content`).forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Deactivate all tabs for current language
+            document.querySelectorAll(`#lang-${langSuffix} .tab`).forEach(tab => {
                 tab.classList.remove('active');
             });
 
