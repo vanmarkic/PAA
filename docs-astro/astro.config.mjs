@@ -10,6 +10,11 @@ export default defineConfig({
 
   output: 'static',
 
+  server: {
+    port: 4444,
+    host: true
+  },
+
   build: {
     inlineStylesheets: 'auto',
   },
