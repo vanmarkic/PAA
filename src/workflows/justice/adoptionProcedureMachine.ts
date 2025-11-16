@@ -24,7 +24,7 @@ interface AdoptionContext {
 export const adoptionProcedureMachine = createMachine({
   id: 'adoptionProcedure',
   initial: 'informationPrealable',
-  schema: {
+  schemas: {
     context: {} as AdoptionContext,
     events: {} as
       | { type: 'SEANCES_INFO'; candidats: CandidatsAdoption }

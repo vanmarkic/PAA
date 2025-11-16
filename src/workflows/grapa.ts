@@ -45,7 +45,7 @@ export const grapaMachine = createMachine({
   id: 'grapa',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as GRAPAContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurGRAPA }
@@ -88,7 +88,7 @@ export const grapaMachine = createMachine({
         AGE_VERIFIE: [
           {
             target: 'verificationResidence',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',

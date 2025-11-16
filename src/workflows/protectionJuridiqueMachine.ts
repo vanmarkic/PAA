@@ -32,7 +32,7 @@ export const protectionJuridiqueMachine = createMachine({
   id: 'protectionJuridique',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as ProtectionJuridiqueContext,
     events: {} as
       | { type: 'DEMANDER_PROTECTION'; justiciable: Justiciable; dossier: DossierJuridique }

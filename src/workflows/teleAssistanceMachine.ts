@@ -33,7 +33,7 @@ export const teleAssistanceMachine = createMachine({
   id: 'teleAssistance',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as TeleAssistanceContext,
     events: {} as
       | { type: 'DEMANDER_SERVICE'; personne: PersonneAgee }

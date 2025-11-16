@@ -47,7 +47,7 @@ export const primeRenovationMachine = createMachine({
   id: 'primeRenovation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PrimeRenovationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: Proprietaire }
@@ -182,7 +182,7 @@ export const primeRenovationMachine = createMachine({
         PRIME_CALCULEE: [
           {
             target: 'primeAccordee',
-            cond: (_, event) => event.prime.estEligible,
+            guard: (_, event) => event.prime.estEligible,
             actions: assign({
               prime: (_, event) => event.prime,
               totalPrime: (_, event) => event.prime.montantPrime,

@@ -34,7 +34,7 @@ export const creditImpotMachine = createMachine({
   id: 'creditImpot',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CreditImpotContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; contribuable: Contribuable }
@@ -79,7 +79,7 @@ export const creditImpotMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: (_, event) => event.resultat.estEligible,
             actions: assign({
               resultatEligibilite: (_, event) => event.resultat,
             }),

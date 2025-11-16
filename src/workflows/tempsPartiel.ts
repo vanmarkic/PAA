@@ -24,7 +24,7 @@ export const tempsPartielMachine = createMachine({
   id: 'tempsPartiel',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as tempsPartielContext,
     events: {} as
       | { type: 'DEMANDER_TEMPS_PARTIEL'; employe: string; employeur: string; heuresHebdomadaires: number }

@@ -46,7 +46,7 @@ export const aidePersonnesAgeesMachine = createMachine({
   id: 'aidePersonnesAgees',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AidePersonnesAgeesContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; personne: PersonneAgee }

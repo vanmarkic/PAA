@@ -23,7 +23,7 @@ interface ComptabiliteAnnuelleContext {
 export const comptabiliteAnnuelleMachine = createMachine({
   id: 'comptabiliteAnnuelle',
   initial: 'clotureExercice',
-  schema: {
+  schemas: {
     context: {} as ComptabiliteAnnuelleContext,
     events: {} as
       | { type: 'CLOTURER_EXERCICE'; societe: Societe; date: Date }

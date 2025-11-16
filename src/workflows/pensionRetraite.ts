@@ -44,7 +44,7 @@ export const pensionRetraiteMachine = createMachine({
   id: 'pensionRetraite',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PensionRetraiteContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; pensionnaire: Pensionnaire }

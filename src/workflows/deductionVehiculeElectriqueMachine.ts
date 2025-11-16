@@ -47,7 +47,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
   id: 'deductionVehiculeElectrique',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionVehiculeElectriqueContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; acquereur: Acquereur; vehicule: VehiculeElectrique }
@@ -94,7 +94,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
               anneesRestantes: (_, event) => event.deduction.periodeAmortissement,
@@ -204,7 +204,7 @@ export const deductionVehiculeElectriqueMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'actif',
-            cond: (context) => context.anneesRestantes > 1,
+            guard: (context) => context.anneesRestantes > 1,
             actions: assign({
               anneesRestantes: (context) => context.anneesRestantes - 1,
             }),

@@ -26,7 +26,7 @@ export const procedureDivorceMachine = createMachine({
   id: 'procedureDivorce',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ProcedureDivorceContext,
     events: {} as
       | { type: 'DEMARRER_PROCEDURE'; epoux1: Epoux; epoux2: Epoux; type: 'consentement-mutuel' | 'desunion-irremediale' | 'faute' }

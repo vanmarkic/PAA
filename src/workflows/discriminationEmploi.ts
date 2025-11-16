@@ -24,7 +24,7 @@ export const discriminationEmploiMachine = createMachine({
   id: 'discriminationEmploi',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as DiscriminationEmploiContext,
     events: {} as
       | { type: 'SIGNALER_DISCRIMINATION'; victime: string; typeDiscrimination: 'age' | 'genre' | 'origine' | 'handicap' | 'orientation' | 'religion' | 'autre'; contexte: 'recrutement' | 'remuneration' | 'promotion' | 'conditions_travail' | 'licenciement' }

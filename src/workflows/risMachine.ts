@@ -20,7 +20,7 @@ export const risApplicationMachine = createMachine({
   id: 'risApplication',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as RISApplicationContext,
     events: {} as
       | { type: 'START_APPLICATION'; user: RISUser }
@@ -67,7 +67,7 @@ export const risApplicationMachine = createMachine({
         ELIGIBILITY_CHECKED: [
           {
             target: 'eligible',
-            cond: (_, event) => event.result.isEligible,
+            guard: (_, event) => event.result.isEligible,
             actions: assign({
               eligibilityResult: (_, event) => event.result,
             }),

@@ -22,7 +22,7 @@ export const licenciementMachine = createMachine({
   id: 'licenciement',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as LicenciementContext,
     events: {} as
       | { type: 'INITIER_LICENCIEMENT'; employe: string; motif: string; typeMotif: 'grave' | 'economique' | 'reorganisation' }

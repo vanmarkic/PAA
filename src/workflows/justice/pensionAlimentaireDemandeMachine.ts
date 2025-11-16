@@ -22,7 +22,7 @@ interface PensionAlimentaireContext {
 export const pensionAlimentaireDemandeMachine = createMachine({
   id: 'pensionAlimentaireDemande',
   initial: 'demande',
-  schema: {
+  schemas: {
     context: {} as PensionAlimentaireContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; parties: PartiePension }

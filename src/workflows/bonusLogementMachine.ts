@@ -46,7 +46,7 @@ export const bonusLogementMachine = createMachine({
   id: 'bonusLogement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as BonusLogementContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; emprunteur: Emprunteur; pret: PretHypothecaire }
@@ -92,7 +92,7 @@ export const bonusLogementMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.bonus.estEligible,
+            guard: (_, event) => event.bonus.estEligible,
             actions: assign({
               bonus: (_, event) => event.bonus,
               anneesRestantes: (_, event) => event.bonus.dureeBonus,
@@ -198,7 +198,7 @@ export const bonusLogementMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'actif',
-            cond: (context) => context.anneesRestantes > 1,
+            guard: (context) => context.anneesRestantes > 1,
             actions: assign({
               anneesRestantes: (context) => context.anneesRestantes - 1,
               montantTotalRecu: (context) =>

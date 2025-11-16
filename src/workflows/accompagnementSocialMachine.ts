@@ -33,7 +33,7 @@ export const accompagnementSocialMachine = createMachine({
   id: 'accompagnementSocial',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AccompagnementSocialContext,
     events: {} as
       | { type: 'DEMANDER_ACCOMPAGNEMENT'; beneficiaire: Beneficiaire }

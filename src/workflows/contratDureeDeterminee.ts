@@ -25,7 +25,7 @@ export const contratDureeDetermineeMachine = createMachine({
   id: 'contratDureeDeterminee',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as ContratDureeDetermineeContext,
     events: {} as
       | { type: 'CREER_CDD'; employe: string; employeur: string; motifCDD: 'remplacement' | 'surcroit' | 'travaux_temporaires' }

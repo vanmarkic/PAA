@@ -44,7 +44,7 @@ export const fraisProfessionnelsMachine = createMachine({
   id: 'fraisProfessionnels',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as FraisProfessionnelsContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; travailleur: Travailleur }

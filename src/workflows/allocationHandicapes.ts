@@ -42,7 +42,7 @@ export const allocationHandicapesMachine = createMachine({
   id: 'allocationHandicapes',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationHandicapesContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; personne: PersonneHandicapee }
@@ -98,7 +98,7 @@ export const allocationHandicapesMachine = createMachine({
         EVALUATION_COMPLETE: [
           {
             target: 'determinationCategorie',
-            cond: (_, event) => event.evaluation.categorieARR !== null,
+            guard: (_, event) => event.evaluation.categorieARR !== null,
             actions: assign({
               evaluationMedicale: (_, event) => event.evaluation,
             }),
@@ -188,7 +188,7 @@ export const allocationHandicapesMachine = createMachine({
         EVALUATION_COMPLETE: [
           {
             target: 'determinationCategorie',
-            cond: (_, event) => event.evaluation.categorieARR !== null,
+            guard: (_, event) => event.evaluation.categorieARR !== null,
             actions: assign({
               evaluationMedicale: (_, event) => event.evaluation,
             }),

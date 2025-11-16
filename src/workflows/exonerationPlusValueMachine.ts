@@ -53,7 +53,7 @@ export const exonerationPlusValueMachine = createMachine({
   id: 'exonerationPlusValue',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ExonerationPlusValueContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; vendeur: Vendeur; bien: BienVendu }
@@ -115,7 +115,7 @@ export const exonerationPlusValueMachine = createMachine({
         EXONERATION_VERIFIEE: [
           {
             target: 'exonere',
-            cond: (_, event) => event.exoneration.estExonere,
+            guard: (_, event) => event.exoneration.estExonere,
             actions: assign({
               exoneration: (_, event) => event.exoneration,
             }),

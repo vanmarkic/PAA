@@ -25,7 +25,7 @@ export const permisEnvironnementMachine = createMachine({
   id: 'permisEnvironnement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PermisEnvironnementContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandePermis }
@@ -67,11 +67,11 @@ export const permisEnvironnementMachine = createMachine({
         DOSSIER_COMPLET: [
           {
             target: 'etudeImpact',
-            cond: (context) => context.etudeImpactRequise,
+            guard: (context) => context.etudeImpactRequise,
           },
           {
             target: 'enquetePublique',
-            cond: (context) => context.enquetePubliqueRequise,
+            guard: (context) => context.enquetePubliqueRequise,
           },
           {
             target: 'instructionTechnique',

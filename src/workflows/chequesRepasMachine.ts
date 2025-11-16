@@ -40,7 +40,7 @@ export const chequesRepasMachine = createMachine({
   id: 'chequesRepas',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ChequesRepasContext,
     events: {} as
       | { type: 'INSCRIRE_EMPLOYEUR'; employeur: Employeur }

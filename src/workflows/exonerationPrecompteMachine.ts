@@ -45,7 +45,7 @@ export const exonerationPrecompteMachine = createMachine({
   id: 'exonerationPrecompte',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ExonerationPrecompteContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: ProprietaireImmobilier; bien: BienImmobilier }
@@ -90,7 +90,7 @@ export const exonerationPrecompteMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.exoneration.estEligible,
+            guard: (_, event) => event.exoneration.estEligible,
             actions: assign({
               exoneration: (_, event) => event.exoneration,
             }),
@@ -210,7 +210,7 @@ export const exonerationPrecompteMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'active',
-            cond: (_, event) => event.exoneration.estEligible,
+            guard: (_, event) => event.exoneration.estEligible,
             actions: assign({
               exoneration: (_, event) => event.exoneration,
             }),

@@ -25,7 +25,7 @@ interface InstallationAlarmeContext {
 export const installationAlarmeHabitationMachine = createMachine({
   id: 'installationAlarmeHabitation',
   initial: 'evaluationBesoins',
-  schema: {
+  schemas: {
     context: {} as InstallationAlarmeContext,
     events: {} as
       | { type: 'EVALUER'; systeme: SystemeAlarme }

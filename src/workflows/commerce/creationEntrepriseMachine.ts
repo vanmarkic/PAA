@@ -26,7 +26,7 @@ export const creationEntrepriseMachine = createMachine({
   id: 'creationEntreprise',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CreationEntrepriseContext,
     events: {} as
       | { type: 'DEMARRER_CREATION'; entrepreneur: Entrepreneur }

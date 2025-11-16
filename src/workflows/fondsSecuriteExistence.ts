@@ -37,7 +37,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
   id: 'fondsSecuriteExistence',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as FondsSecuriteExistenceContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; travailleur: Travailleur }
@@ -96,7 +96,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
         COTISATIONS_VERIFIEES: [
           {
             target: 'calculDroits',
-            cond: (_, event) => event.ajour,
+            guard: (_, event) => event.ajour,
             actions: assign({
               cotisationsEmployeur: true,
             }),
@@ -119,7 +119,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
       on: {
         COTISATIONS_VERIFIEES: {
           target: 'calculDroits',
-          cond: (_, event) => event.ajour,
+          guard: (_, event) => event.ajour,
           actions: assign({
             cotisationsEmployeur: true,
           }),

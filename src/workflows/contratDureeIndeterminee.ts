@@ -25,7 +25,7 @@ export const contratDureeIndetermineeMachine = createMachine({
   id: 'contratDureeIndeterminee',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as ContratDureeIndetermineeContext,
     events: {} as
       | { type: 'CREER_CDI'; employe: string; employeur: string; fonction: string; salaire: number }
@@ -122,7 +122,7 @@ export const contratDureeIndetermineeMachine = createMachine({
       always: [
         {
           target: 'periodeEssai',
-          cond: (context) => context.periodeEssai,
+          guard: (context) => context.periodeEssai,
         },
         {
           target: 'cdiActif',

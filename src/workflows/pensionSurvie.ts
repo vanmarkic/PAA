@@ -43,7 +43,7 @@ export const pensionSurvieMachine = createMachine({
   id: 'pensionSurvie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PensionSurvieContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; survivant: Survivant; defunt: DefuntInfo }
@@ -100,7 +100,7 @@ export const pensionSurvieMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.remplies,
+            guard: (_, event) => event.remplies,
             actions: assign({
               conditionsRemplies: true,
             }),

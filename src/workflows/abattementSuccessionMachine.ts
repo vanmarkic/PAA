@@ -51,7 +51,7 @@ export const abattementSuccessionMachine = createMachine({
   id: 'abattementSuccession',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AbattementSuccessionContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; defunt: Defunt; heritiers: Heritier[] }

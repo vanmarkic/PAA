@@ -34,7 +34,7 @@ export const repasDomicileMachine = createMachine({
   id: 'repasDomicile',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RepasDomicileContext,
     events: {} as
       | { type: 'DEMANDER_SERVICE'; beneficiaire: BeneficiaireRepas }

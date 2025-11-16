@@ -24,7 +24,7 @@ export const maladieProfessionnelleMachine = createMachine({
   id: 'maladieProfessionnelle',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as MaladieProfessionnelleContext,
     events: {} as
       | { type: 'DECLARER_SYMPTOMES'; employe: string; typeMaladie: string; dateApparition: Date }

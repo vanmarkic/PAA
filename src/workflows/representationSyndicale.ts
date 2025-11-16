@@ -24,7 +24,7 @@ export const representationSyndicaleMachine = createMachine({
   id: 'representationSyndicale',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as RepresentationSyndicaleContext,
     events: {} as
       | { type: 'VERIFIER_SEUIL'; entreprise: string; nombreTravailleurs: number }

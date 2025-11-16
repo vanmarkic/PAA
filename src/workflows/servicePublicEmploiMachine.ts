@@ -34,7 +34,7 @@ export const servicePublicEmploiMachine = createMachine({
   id: 'servicePublicEmploi',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as ServicePublicEmploiContext,
     events: {} as
       | { type: 'INSCRIRE_DEMANDEUR'; demandeur: DemandeurEmploi }

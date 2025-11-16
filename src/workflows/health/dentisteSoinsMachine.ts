@@ -25,7 +25,7 @@ interface SoinsDentairesContext {
 export const dentisteSoinsMachine = createMachine({
   id: 'dentisteSoins',
   initial: 'consultation',
-  schema: {
+  schemas: {
     context: {} as SoinsDentairesContext,
     events: {} as
       | { type: 'CONSULTER'; patient: PatientDentiste; type: 'preventif' | 'curatif' | 'orthodontie' | 'esthetique' }

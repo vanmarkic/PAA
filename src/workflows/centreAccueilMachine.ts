@@ -33,7 +33,7 @@ export const centreAccueilMachine = createMachine({
   id: 'centreAccueil',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as CentreAccueilContext,
     events: {} as
       | { type: 'ACCUEILLIR_PERSONNE'; personne: PersonneAccueillie }

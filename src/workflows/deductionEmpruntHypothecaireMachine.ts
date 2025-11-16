@@ -47,7 +47,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
   id: 'deductionEmpruntHypothecaire',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionEmpruntHypothecaireContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; emprunteur: Emprunteur; emprunt: EmpruntHypothecaire }
@@ -94,7 +94,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
             }),
@@ -217,7 +217,7 @@ export const deductionEmpruntHypothecaireMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'active',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
             }),

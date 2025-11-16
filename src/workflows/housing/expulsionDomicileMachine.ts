@@ -25,7 +25,7 @@ interface ExpulsionContext {
 export const expulsionDomicileMachine = createMachine({
   id: 'expulsionDomicile',
   initial: 'congeLocatif',
-  schema: {
+  schemas: {
     context: {} as ExpulsionContext,
     events: {} as
       | { type: 'DONNER_CONGE'; litige: LitigeLocatif }

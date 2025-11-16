@@ -34,7 +34,7 @@ export const inscriptionEcoleMachine = createMachine({
   id: 'inscriptionEcole',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as InscriptionEcoleContext,
     events: {} as
       | { type: 'COMMENCER_INSCRIPTION'; enfant: Enfant }

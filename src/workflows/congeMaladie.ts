@@ -23,7 +23,7 @@ export const congeMaladieMachine = createMachine({
   id: 'congeMaladie',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as CongeMaladieContext,
     events: {} as
       | { type: 'DECLARER_MALADIE'; employe: string; dateDebut: Date; dureePrevue: number }

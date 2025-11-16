@@ -46,7 +46,7 @@ export const creditImpotInvestissementDurableMachine = createMachine({
   id: 'creditImpotInvestissementDurable',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CreditImpotInvestissementDurableContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; investisseur: InvestisseurDurable; investissement: InvestissementDurable }
@@ -92,7 +92,7 @@ export const creditImpotInvestissementDurableMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.credit.estEligible,
+            guard: (_, event) => event.credit.estEligible,
             actions: assign({
               credit: (_, event) => event.credit,
               totalCredit: (_, event) => event.credit.montantCredit,

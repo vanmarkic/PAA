@@ -43,7 +43,7 @@ export const allocationsEtudesMachine = createMachine({
   id: 'allocationsEtudes',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationsEtudesContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; etudiant: Etudiant; situation: SituationFamiliale }
@@ -104,7 +104,7 @@ export const allocationsEtudesMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',

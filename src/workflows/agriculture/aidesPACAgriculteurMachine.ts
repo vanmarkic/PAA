@@ -25,7 +25,7 @@ interface AidesPACContext {
 export const aidesPACAgriculteurMachine = createMachine({
   id: 'aidesPACAgriculteur',
   initial: 'inscriptionAgriculteur',
-  schema: {
+  schemas: {
     context: {} as AidesPACContext,
     events: {} as
       | { type: 'INSCRIRE'; exploitation: ExploitationAgricole }

@@ -43,7 +43,7 @@ export const revenuCadastralExonerationMachine = createMachine({
   id: 'revenuCadastralExoneration',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as RevenuCadastralExonerationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: Proprietaire; bien: BienImmobilier }
@@ -87,7 +87,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         HABITATION_PRINCIPALE_VERIFIEE: [
           {
             target: 'verificationRevenus',
-            cond: (_, event) => event.confirme,
+            guard: (_, event) => event.confirme,
           },
           {
             target: 'demandeRejetee',
@@ -105,7 +105,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculExoneration',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -176,7 +176,7 @@ export const revenuCadastralExonerationMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'calculExoneration',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'exonerationSuspendue',
@@ -210,7 +210,7 @@ export const revenuCadastralExonerationMachine = createMachine({
       on: {
         REVENUS_VERIFIES: {
           target: 'calculExoneration',
-          cond: (_, event) => event.eligible,
+          guard: (_, event) => event.eligible,
         },
         REINITIALISER: {
           target: 'inactif',

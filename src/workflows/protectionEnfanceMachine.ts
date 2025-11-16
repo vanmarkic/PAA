@@ -33,7 +33,7 @@ export const protectionEnfanceMachine = createMachine({
   id: 'protectionEnfance',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as ProtectionEnfanceContext,
     events: {} as
       | { type: 'SIGNALEMENT_RECU'; enfant: Enfant }

@@ -23,7 +23,7 @@ export const creditTempsMachine = createMachine({
   id: 'creditTemps',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as CreditTempsContext,
     events: {} as
       | { type: 'DEMANDER_CREDIT_TEMPS'; employe: string; typeCredit: 'complet' | 'mi-temps' | 'un-cinquieme'; motif: string }

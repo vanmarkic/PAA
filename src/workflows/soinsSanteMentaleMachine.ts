@@ -34,7 +34,7 @@ export const soinsSanteMentaleMachine = createMachine({
   id: 'soinsSanteMentale',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as SoinsSanteMentaleContext,
     events: {} as
       | { type: 'DEMANDER_SOINS'; patient: PatientSanteMentale }

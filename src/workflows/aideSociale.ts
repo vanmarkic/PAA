@@ -46,7 +46,7 @@ export const aideSocialeMachine = createMachine({
   id: 'aideSociale',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AideSocialeContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurAideSociale }

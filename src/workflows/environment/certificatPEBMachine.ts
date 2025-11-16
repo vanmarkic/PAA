@@ -22,7 +22,7 @@ interface CertificatPEBContext {
 export const certificatPEBMachine = createMachine({
   id: 'certificatPEB',
   initial: 'demandeCertificat',
-  schema: {
+  schemas: {
     context: {} as CertificatPEBContext,
     events: {} as
       | { type: 'DEMANDER'; bien: BienImmobilier }

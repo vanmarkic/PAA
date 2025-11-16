@@ -41,7 +41,7 @@ export const primeNaissanceMachine = createMachine({
   id: 'primeNaissance',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PrimeNaissanceContext,
     events: {} as
       | { type: 'DECLARER_NAISSANCE'; naissance: Naissance; parent: Parent }

@@ -34,7 +34,7 @@ export const insertionProfessionnelleMachine = createMachine({
   id: 'insertionProfessionnelle',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as InsertionProfessionnelleContext,
     events: {} as
       | { type: 'INSCRIRE_DEMANDEUR'; demandeur: Demandeur }

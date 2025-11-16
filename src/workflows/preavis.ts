@@ -23,7 +23,7 @@ export const preavisMachine = createMachine({
   id: 'preavis',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as PreavisContext,
     events: {} as
       | { type: 'NOTIFIER_PREAVIS'; employe: string; employeur: string; anciennete: number }

@@ -43,7 +43,7 @@ export const assuranceMaladieMachine = createMachine({
   id: 'assuranceMaladie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AssuranceMaladieContext,
     events: {} as
       | { type: 'DEMARRER_AFFILIATION'; assure: Assure }

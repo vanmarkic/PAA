@@ -34,7 +34,7 @@ export const aideSansAbriMachine = createMachine({
   id: 'aideSansAbri',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideSansAbriContext,
     events: {} as
       | { type: 'SIGNALER_PERSONNE'; personne: PersonneSansAbri }

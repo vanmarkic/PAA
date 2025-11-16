@@ -25,7 +25,7 @@ export const droitGreveMachine = createMachine({
   id: 'droitGreve',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as DroitGreveContext,
     events: {} as
       | { type: 'DECLARER_CONFLIT'; syndicat: string; entreprise: string; motifGreve: string }

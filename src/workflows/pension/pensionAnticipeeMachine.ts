@@ -119,7 +119,7 @@ export const pensionAnticipeeMachine = createMachine<
         CALCULER_ELIGIBILITE: [
           {
             target: 'eligibleClassique',
-            cond: (context, event) => {
+            guard: (context, event) => {
               const age = event.data.demandeur.age;
               const carriere = event.data.carriere.anneesCarriere || 0;
               // Simplifié: 2024-2025
@@ -136,7 +136,7 @@ export const pensionAnticipeeMachine = createMachine<
           },
           {
             target: 'eligibleCarriereLongue',
-            cond: (context, event) => {
+            guard: (context, event) => {
               const age = event.data.demandeur.age;
               const carriere = event.data.carriere.anneesCarriere || 0;
               const avantVingtAns = event.data.carriere.anneesAvant20Ans || 0;

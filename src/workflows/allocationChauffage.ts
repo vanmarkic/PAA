@@ -42,7 +42,7 @@ export const allocationChauffageMachine = createMachine({
   id: 'allocationChauffage',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationChauffageContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurAllocation; menage: Menage }
@@ -86,7 +86,7 @@ export const allocationChauffageMachine = createMachine({
         PERIODE_VERIFIEE: [
           {
             target: 'verificationRevenus',
-            cond: (_, event) => event.valide,
+            guard: (_, event) => event.valide,
             actions: assign({
               periodeDemandeValide: true,
             }),
@@ -107,7 +107,7 @@ export const allocationChauffageMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'verificationFacture',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',
@@ -125,7 +125,7 @@ export const allocationChauffageMachine = createMachine({
         FACTURE_VERIFIEE: [
           {
             target: 'calculMontant',
-            cond: (_, event) => event.conforme,
+            guard: (_, event) => event.conforme,
             actions: assign({
               factureVerifiee: true,
             }),
@@ -145,7 +145,7 @@ export const allocationChauffageMachine = createMachine({
       on: {
         FACTURE_VERIFIEE: {
           target: 'calculMontant',
-          cond: (_, event) => event.conforme,
+          guard: (_, event) => event.conforme,
           actions: assign({
             factureVerifiee: true,
           }),

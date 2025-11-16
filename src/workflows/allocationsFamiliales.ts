@@ -40,7 +40,7 @@ export const allocationsFamilialesMachine = createMachine({
   id: 'allocationsFamiliales',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationsFamilialesContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; famille: Famille }

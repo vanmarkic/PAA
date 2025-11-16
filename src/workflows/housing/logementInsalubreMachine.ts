@@ -24,7 +24,7 @@ interface LogementInsalubreContext {
 export const logementInsalubreMachine = createMachine({
   id: 'logementInsalubre',
   initial: 'signalement',
-  schema: {
+  schemas: {
     context: {} as LogementInsalubreContext,
     events: {} as
       | { type: 'SIGNALER'; signalement: SignalementInsalubrite }

@@ -26,7 +26,7 @@ export const repasScolairesGratuitsMachine = createMachine({
   id: 'repasScolairesGratuits',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RepasScolairesContext,
     events: {} as
       | { type: 'DEMANDER_AIDE'; famille: FamilleDemandeuse }
@@ -107,7 +107,7 @@ export const repasScolairesGratuitsMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'aideApprouvee',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
             actions: assign({
               estEligible: true,
               montantAide: (_, event) => event.montant || 0,

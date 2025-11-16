@@ -51,7 +51,7 @@ export const renteAlimentaireMachine = createMachine({
   id: 'renteAlimentaire',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as RenteAlimentaireContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; payeur: Payeur; beneficiaire: Beneficiaire; rente: RenteAlimentaire }

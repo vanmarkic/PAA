@@ -26,7 +26,7 @@ export const stageMachine = createMachine({
   id: 'stage',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as StageContext,
     events: {} as
       | { type: 'INITIER_STAGE'; stagiaire: string; entreprise: string; etablissementEnseignement: string; typeStage: 'observation' | 'immersion' | 'insertion' }

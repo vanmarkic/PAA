@@ -20,7 +20,7 @@ interface VaccinationContext {
 export const vaccinationEnfantsMachine = createMachine({
   id: 'vaccinationEnfants',
   initial: 'calendrierVaccinal',
-  schema: {
+  schemas: {
     context: {} as VaccinationContext,
     events: {} as
       | { type: 'INSCRIRE_ENFANT'; enfant: EnfantVaccination }

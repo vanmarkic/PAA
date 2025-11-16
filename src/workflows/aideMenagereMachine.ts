@@ -34,7 +34,7 @@ export const aideMenagereMachine = createMachine({
   id: 'aideMenagere',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideMenagereContext,
     events: {} as
       | { type: 'DEMANDER_AIDE'; beneficiaire: BeneficiaireAide }

@@ -54,7 +54,7 @@ export const agenceImmobiliereSocialeMachine = createMachine<AISContext, AISEven
         description: 'Information sur le système AIS',
         principe: {
           fonctionnement: 'AIS = intermédiaire entre propriétaires privés et locataires à revenus modestes',
-          schema: 'Propriétaire → (mandat) → AIS → (sous-location) → Locataire',
+          schemas: 'Propriétaire → (mandat) → AIS → (sous-location) → Locataire',
           avantage_proprietaire: 'Garantie loyer, pas de gestion, avantages fiscaux',
           avantage_locataire: 'Loyer réduit, accompagnement social',
         },

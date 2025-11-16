@@ -53,7 +53,7 @@ export const deductionFraisGardeMachine = createMachine({
   id: 'deductionFraisGarde',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionFraisGardeContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; parent: Parent; enfants: Enfant[] }
@@ -117,7 +117,7 @@ export const deductionFraisGardeMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
             }),

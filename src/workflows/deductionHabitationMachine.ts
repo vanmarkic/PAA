@@ -36,7 +36,7 @@ export const deductionHabitationMachine = createMachine({
   id: 'deductionHabitation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionHabitationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: Proprietaire; annee: number }
@@ -80,7 +80,7 @@ export const deductionHabitationMachine = createMachine({
         PROPRIETE_VERIFIEE: [
           {
             target: 'calculDeduction',
-            cond: (_, event) => event.estProprietaire,
+            guard: (_, event) => event.estProprietaire,
           },
           {
             target: 'nonProprietaire',
@@ -110,7 +110,7 @@ export const deductionHabitationMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: (_, event) => event.resultat.estEligible,
             actions: assign({
               resultatDeduction: (_, event) => event.resultat,
             }),
@@ -194,7 +194,7 @@ export const deductionHabitationMachine = createMachine({
         PROPRIETE_VERIFIEE: [
           {
             target: 'deductionActive',
-            cond: (_, event) => event.estProprietaire,
+            guard: (_, event) => event.estProprietaire,
           },
           {
             target: 'termine',

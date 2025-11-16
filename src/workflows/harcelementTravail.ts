@@ -25,7 +25,7 @@ export const harcelementTravailMachine = createMachine({
   id: 'harcelementTravail',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as HarcelementTravailContext,
     events: {} as
       | { type: 'SIGNALER_HARCELEMENT'; victime: string; typeHarcelement: 'moral' | 'sexuel' | 'mixte'; harceleur: string }

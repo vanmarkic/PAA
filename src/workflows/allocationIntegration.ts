@@ -41,7 +41,7 @@ export const allocationIntegrationMachine = createMachine({
   id: 'allocationIntegration',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AllocationIntegrationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; beneficiaire: BeneficiaireIntegration }
@@ -152,7 +152,7 @@ export const allocationIntegrationMachine = createMachine({
         EVALUATION_COMPLETE: [
           {
             target: 'determinationCategorie',
-            cond: (_, event) => event.evaluation.categorieIntegration > 0,
+            guard: (_, event) => event.evaluation.categorieIntegration > 0,
             actions: assign({
               evaluationAutonomie: (_, event) => event.evaluation,
             }),

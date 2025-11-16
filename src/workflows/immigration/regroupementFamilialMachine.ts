@@ -24,7 +24,7 @@ interface RegroupementFamilialContext {
 export const regroupementFamilialMachine = createMachine({
   id: 'regroupementFamilial',
   initial: 'verificationConditions',
-  schema: {
+  schemas: {
     context: {} as RegroupementFamilialContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandeRegroupement }

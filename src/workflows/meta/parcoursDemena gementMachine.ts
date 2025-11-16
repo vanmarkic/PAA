@@ -42,7 +42,7 @@ export const parcoursDemenagementMachine = createMachine({
   id: 'parcoursDemenagement',
   initial: 'preparationDemenagement',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursDemenagementContext,
     events: {} as
       | { type: 'DEMENAGEMENT_PLANIFIE'; citoyen: Citoyen }

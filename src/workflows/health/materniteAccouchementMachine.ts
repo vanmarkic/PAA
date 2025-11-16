@@ -21,7 +21,7 @@ interface MaterniteContext {
 export const materniteAccouchementMachine = createMachine({
   id: 'materniteAccouchement',
   initial: 'suiviPrenatal',
-  schema: {
+  schemas: {
     context: {} as MaterniteContext,
     events: {} as
       | { type: 'GROSSESSE_CONFIRMEE'; grossesse: Grossesse; patiente: any }

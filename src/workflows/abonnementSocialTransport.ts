@@ -45,7 +45,7 @@ export const abonnementSocialTransportMachine = createMachine({
   id: 'abonnementSocialTransport',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AbonnementSocialTransportContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: Demandeur }
@@ -89,7 +89,7 @@ export const abonnementSocialTransportMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'demandeAttestation',
-            cond: (_, event) =>
+            guard: (_, event) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.invalide ||
@@ -189,7 +189,7 @@ export const abonnementSocialTransportMachine = createMachine({
       on: {
         CONDITIONS_VERIFIEES: {
           target: 'activationAbonnement',
-          cond: (_, event) =>
+          guard: (_, event) =>
             event.conditions.beneficiaireBIM ||
             event.conditions.beneficiaireRIS,
         },

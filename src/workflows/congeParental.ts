@@ -43,7 +43,7 @@ export const congeParentalMachine = createMachine({
   id: 'congeParental',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CongeParentalContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; parent: ParentDemandeur; enfant: EnfantConcerne }
@@ -89,7 +89,7 @@ export const congeParentalMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'etablissementPlan',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',

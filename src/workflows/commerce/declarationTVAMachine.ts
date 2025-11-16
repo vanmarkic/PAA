@@ -24,7 +24,7 @@ interface DeclarationTVAContext {
 export const declarationTVAMachine = createMachine({
   id: 'declarationTVA',
   initial: 'periode',
-  schema: {
+  schemas: {
     context: {} as DeclarationTVAContext,
     events: {} as
       | { type: 'NOUVELLE_PERIODE'; entreprise: EntrepriseTVA; periode: string }

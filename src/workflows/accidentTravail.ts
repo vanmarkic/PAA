@@ -26,7 +26,7 @@ export const accidentTravailMachine = createMachine({
   id: 'accidentTravail',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as AccidentTravailContext,
     events: {} as
       | { type: 'DECLARER_ACCIDENT'; employe: string; dateAccident: Date; lieuAccident: string; description: string }

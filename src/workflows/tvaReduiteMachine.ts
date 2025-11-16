@@ -45,7 +45,7 @@ export const tvaReduiteMachine = createMachine({
   id: 'tvaReduite',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as TvaReduiteContext,
     events: {} as
       | { type: 'DEMARRER_TRANSACTION'; transaction: TransactionTVA }

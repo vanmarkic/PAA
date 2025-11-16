@@ -44,7 +44,7 @@ export const congeMaterniteMachine = createMachine({
   id: 'congeMaternite',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CongeMaterniteContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; mere: MereTravailleuse }

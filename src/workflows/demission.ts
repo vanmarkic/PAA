@@ -22,7 +22,7 @@ export const demissionMachine = createMachine({
   id: 'demission',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as DemissionContext,
     events: {} as
       | { type: 'NOTIFIER_DEMISSION'; employe: string; motifDemission: string }

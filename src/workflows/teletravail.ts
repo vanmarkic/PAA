@@ -25,7 +25,7 @@ export const teletravailMachine = createMachine({
   id: 'teletravail',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as TeletravailContext,
     events: {} as
       | { type: 'DEMANDER_TELETRAVAIL'; employe: string; employeur: string; typeTeletravail: 'occasionnel' | 'regulier' | 'structurel' }

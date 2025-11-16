@@ -26,7 +26,7 @@ export const pensionComplementaireMachine = createMachine({
   id: 'pensionComplementaire',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as PensionComplementaireContext,
     events: {} as
       | { type: 'ADHERER_PLAN'; employe: string; employeur: string; typePlan: 'contribution_definie' | 'prestation_definie'; ageAdhesion: number }

@@ -45,7 +45,7 @@ export const parcoursCreationEntrepriseMachine = createMachine({
   id: 'parcoursCreationEntreprise',
   initial: 'ideationProjet',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursCreationContext,
     events: {} as
       | { type: 'PROJET_DEFINI'; entrepreneur: Entrepreneur; projet: ProjetEntreprise }

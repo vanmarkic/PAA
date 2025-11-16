@@ -47,7 +47,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
   id: 'parcoursNaissanceEnfant',
   initial: 'naissanceEnfant',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursNaissanceContext,
     events: {} as
       | { type: 'ENFANT_NE'; enfant: Enfant; parents: Parent[] }
@@ -231,7 +231,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
         CONGE_DEMANDE: [
           {
             target: 'inscriptionGarderie',
-            cond: (context) => context.parents.some(p => p.situationProfessionnelle === 'salarie'),
+            guard: (context) => context.parents.some(p => p.situationProfessionnelle === 'salarie'),
             actions: assign({
               demarchesCompletees: (context) => ({
                 ...context.demarchesCompletees,

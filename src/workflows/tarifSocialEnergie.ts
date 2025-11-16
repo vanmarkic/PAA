@@ -43,7 +43,7 @@ export const tarifSocialEnergieMachine = createMachine({
   id: 'tarifSocialEnergie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as TarifSocialEnergieContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; beneficiaire: Beneficiaire }
@@ -90,7 +90,7 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'calculTarif',
-            cond: (_, event) =>
+            guard: (_, event) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.beneficiaireGRAPA ||
@@ -116,7 +116,7 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'demandeAttestation',
-            cond: (_, event) => event.conditions.revenusInferieursPlafond,
+            guard: (_, event) => event.conditions.revenusInferieursPlafond,
             actions: assign({
               conditionsEligibilite: (_, event) => event.conditions,
             }),
@@ -206,7 +206,7 @@ export const tarifSocialEnergieMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'tarifActif',
-            cond: (_, event) =>
+            guard: (_, event) =>
               event.conditions.beneficiaireBIM ||
               event.conditions.beneficiaireRIS ||
               event.conditions.revenusInferieursPlafond,

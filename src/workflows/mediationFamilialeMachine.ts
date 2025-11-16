@@ -32,7 +32,7 @@ export const mediationFamilialeMachine = createMachine({
   id: 'mediationFamiliale',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as MediationFamilialeContext,
     events: {} as
       | { type: 'DEMANDER_MEDIATION'; parties: PartiesMediation }

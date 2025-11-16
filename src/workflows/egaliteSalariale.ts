@@ -25,7 +25,7 @@ export const egaliteSalarialeMachine = createMachine({
   id: 'egaliteSalariale',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as EgaliteSalarialeContext,
     events: {} as
       | { type: 'DEMANDER_ANALYSE'; employe: string; genreEmploye: 'homme' | 'femme' | 'autre'; fonction: string; salaireActuel: number }

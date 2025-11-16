@@ -32,7 +32,7 @@ export const logementSocialMachine = createMachine({
   id: 'logementSocial',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as LogementSocialContext,
     events: {} as
       | { type: 'DEMANDER_LOGEMENT'; demandeur: LogementSocialUser }
@@ -76,7 +76,7 @@ export const logementSocialMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'calculPriorite',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
             actions: assign({
               estEligible: true,
             }),

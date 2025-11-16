@@ -24,7 +24,7 @@ export const horaireFlexibleMachine = createMachine({
   id: 'horaireFlexible',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as HoraireFlexibleContext,
     events: {} as
       | { type: 'DEMANDER_HORAIRE_FLEXIBLE'; employe: string; employeur: string }

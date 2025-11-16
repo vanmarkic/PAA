@@ -22,7 +22,7 @@ interface GardeEnfantsContext {
 export const gardeEnfantsLitigeMachine = createMachine({
   id: 'gardeEnfantsLitige',
   initial: 'demande',
-  schema: {
+  schemas: {
     context: {} as GardeEnfantsContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; parents: Parents }

@@ -23,7 +23,7 @@ interface UrgencesContext {
 export const urgencesHospitalieresMachine = createMachine({
   id: 'urgencesHospitalieres',
   initial: 'arrivee',
-  schema: {
+  schemas: {
     context: {} as UrgencesContext,
     events: {} as
       | { type: 'PATIENT_ARRIVE'; patient: PatientUrgence }
@@ -59,7 +59,7 @@ export const urgencesHospitalieresMachine = createMachine({
         TRIAGE_EFFECTUE: [
           {
             target: 'priseEnChargeImmediate',
-            cond: (_, event) => event.gravite === 'critique',
+            guard: (_, event) => event.gravite === 'critique',
           },
           {
             target: 'salleAttente',

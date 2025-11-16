@@ -24,7 +24,7 @@ export const pharmacieMachine = createMachine({
   id: 'pharmacie',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as PharmacieContext,
     events: {} as
       | { type: 'PRESENTER_ORDONNANCE'; prescription: Prescription; patient: any }

@@ -25,7 +25,7 @@ interface PermisConduireContext {
 export const permisConduireMachine = createMachine({
   id: 'permisConduire',
   initial: 'inscriptionAutoEcole',
-  schema: {
+  schemas: {
     context: {} as PermisConduireContext,
     events: {} as
       | { type: 'INSCRIRE'; candidat: CandidatPermis }

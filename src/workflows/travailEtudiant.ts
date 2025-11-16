@@ -24,7 +24,7 @@ export const travailEtudiantMachine = createMachine({
   id: 'travailEtudiant',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as TravailEtudiantContext,
     events: {} as
       | { type: 'CREER_CONTRAT'; etudiant: string; employeur: string; salaireBrut: number }

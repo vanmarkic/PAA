@@ -44,7 +44,7 @@ export const ecoChequeMachine = createMachine({
   id: 'ecoCheque',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as EcoChequeContext,
     events: {} as
       | { type: 'ACTIVER_PROGRAMME'; employeur: EmployeurEco }

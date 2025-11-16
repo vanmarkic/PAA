@@ -46,7 +46,7 @@ export const deductionDonsMachine = createMachine({
   id: 'deductionDons',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionDonsContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; donateur: Donateur }
@@ -126,7 +126,7 @@ export const deductionDonsMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
             }),

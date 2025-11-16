@@ -47,7 +47,7 @@ export const deductionIsolationMachine = createMachine({
   id: 'deductionIsolation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionIsolationContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; proprietaire: ProprietaireHabitation }
@@ -126,7 +126,7 @@ export const deductionIsolationMachine = createMachine({
         DEDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.deduction.estEligible,
+            guard: (_, event) => event.deduction.estEligible,
             actions: assign({
               deduction: (_, event) => event.deduction,
               totalDeduction: (_, event) => event.deduction.montantDeductible,

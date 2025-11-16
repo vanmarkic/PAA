@@ -25,7 +25,7 @@ interface ProtectionDonneesContext {
 export const protectionDonneesPersonnellesRGPDMachine = createMachine({
   id: 'protectionDonneesPersonnellesRGPD',
   initial: 'identificationTraitements',
-  schema: {
+  schemas: {
     context: {} as ProtectionDonneesContext,
     events: {} as
       | { type: 'IDENTIFIER_TRAITEMENTS'; traitement: TraitementDonnees }

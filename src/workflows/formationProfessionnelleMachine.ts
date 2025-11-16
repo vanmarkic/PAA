@@ -35,7 +35,7 @@ export const formationProfessionnelleMachine = createMachine({
   id: 'formationProfessionnelle',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as FormationProfessionnelleContext,
     events: {} as
       | { type: 'DEMANDER_FORMATION'; stagiaire: Stagiaire }

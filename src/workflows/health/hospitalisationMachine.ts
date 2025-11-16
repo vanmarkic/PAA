@@ -23,7 +23,7 @@ export const hospitalisationMachine = createMachine({
   id: 'hospitalisation',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as HospitalisationContext,
     events: {} as
       | { type: 'ADMISSION'; patient: PatientHospitalisation }

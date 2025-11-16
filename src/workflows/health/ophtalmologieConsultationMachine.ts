@@ -25,7 +25,7 @@ interface OphtalmologieContext {
 export const ophtalmologieConsultationMachine = createMachine({
   id: 'ophtalmologieConsultation',
   initial: 'consultation',
-  schema: {
+  schemas: {
     context: {} as OphtalmologieContext,
     events: {} as
       | { type: 'CONSULTER'; patient: PatientOphtalmo }

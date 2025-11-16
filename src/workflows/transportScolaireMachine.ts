@@ -27,7 +27,7 @@ export const transportScolaireMachine = createMachine({
   id: 'transportScolaire',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as TransportScolaireContext,
     events: {} as
       | { type: 'DEMANDER_TRANSPORT'; eleve: EleveTransport }
@@ -71,7 +71,7 @@ export const transportScolaireMachine = createMachine({
         DISTANCE_CALCULEE: [
           {
             target: 'assignationItineraire',
-            cond: (_, event) => event.distance >= 4,
+            guard: (_, event) => event.distance >= 4,
             actions: assign({
               distanceKm: (_, event) => event.distance,
               estEligible: true,

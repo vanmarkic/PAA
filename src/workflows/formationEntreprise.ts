@@ -25,7 +25,7 @@ export const formationEntrepriseMachine = createMachine({
   id: 'formationEntreprise',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as FormationEntrepriseContext,
     events: {} as
       | { type: 'IDENTIFIER_BESOIN'; employe: string; entreprise: string; domaineFormation: string }

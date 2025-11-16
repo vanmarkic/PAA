@@ -25,7 +25,7 @@ export const travailInterimaireMachine = createMachine({
   id: 'travailInterimaire',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as TravailInterimaireContext,
     events: {} as
       | { type: 'INSCRIRE_AGENCE'; interimaire: string; agence: string }

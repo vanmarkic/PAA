@@ -24,7 +24,7 @@ interface InscriptionSuperieurContext {
 export const inscriptionEnseignementSuperieurMachine = createMachine({
   id: 'inscriptionEnseignementSuperieur',
   initial: 'choixEtudes',
-  schema: {
+  schemas: {
     context: {} as InscriptionSuperieurContext,
     events: {} as
       | { type: 'CHOISIR_PROGRAMME'; etablissement: string; programme: string }

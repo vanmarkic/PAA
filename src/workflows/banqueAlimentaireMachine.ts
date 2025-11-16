@@ -27,7 +27,7 @@ export const banqueAlimentaireMachine = createMachine({
   id: 'banqueAlimentaire',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as BanqueAlimentaireContext,
     events: {} as
       | { type: 'INSCRIRE_MEMBRE'; membre: MembreBanqueAlimentaire }

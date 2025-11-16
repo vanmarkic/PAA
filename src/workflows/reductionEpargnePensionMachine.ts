@@ -37,7 +37,7 @@ export const reductionEpargnePensionMachine = createMachine({
   id: 'reductionEpargnePension',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ReductionEpargnePensionContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; epargnant: Epargnant }
@@ -96,7 +96,7 @@ export const reductionEpargnePensionMachine = createMachine({
         REDUCTION_CALCULEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.reduction.estEligible,
+            guard: (_, event) => event.reduction.estEligible,
             actions: assign({
               reduction: (_, event) => event.reduction,
             }),

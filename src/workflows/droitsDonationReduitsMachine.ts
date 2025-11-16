@@ -53,7 +53,7 @@ export const droitsDonationReduitsMachine = createMachine({
   id: 'droitsDonationReduits',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DroitsDonationReduitsContext,
     events: {} as
       | { type: 'DEMARRER_DONATION'; donateur: Donateur; donataire: Donataire; donation: Donation }
@@ -104,7 +104,7 @@ export const droitsDonationReduitsMachine = createMachine({
         CONDITIONS_VERIFIEES: [
           {
             target: 'calculDroits',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'nonEligible',

@@ -33,7 +33,7 @@ export const aideVictimesMachine = createMachine({
   id: 'aideVictimes',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as AideVictimesContext,
     events: {} as
       | { type: 'SIGNALER_VICTIME'; victime: Victime }

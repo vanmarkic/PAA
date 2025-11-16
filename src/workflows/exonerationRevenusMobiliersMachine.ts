@@ -46,7 +46,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
   id: 'exonerationRevenusMobiliers',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as ExonerationRevenusMobiliersContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; contribuable: Contribuable }
@@ -127,7 +127,7 @@ export const exonerationRevenusMobiliersMachine = createMachine({
         EXONERATION_VERIFIEE: [
           {
             target: 'exonere',
-            cond: (_, event) => event.exoneration.estExonere,
+            guard: (_, event) => event.exoneration.estExonere,
             actions: assign({
               exoneration: (_, event) => event.exoneration,
             }),

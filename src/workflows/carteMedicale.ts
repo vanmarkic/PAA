@@ -44,7 +44,7 @@ export const cartemedicaleMachine = createMachine({
   id: 'carteMedicale',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CarteMedicaleContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: Demandeur }

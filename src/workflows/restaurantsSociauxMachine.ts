@@ -26,7 +26,7 @@ export const restaurantsSociauxMachine = createMachine({
   id: 'restaurantsSociaux',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as RestaurantsSociauxContext,
     events: {} as
       | { type: 'INSCRIRE_CLIENT'; client: ClientRestaurant }
@@ -109,7 +109,7 @@ export const restaurantsSociauxMachine = createMachine({
         CONSOMMER_REPAS: [
           {
             target: 'repasServi',
-            cond: (context, event) => context.soldeCarte >= event.prix,
+            guard: (context, event) => context.soldeCarte >= event.prix,
             actions: assign({
               soldeCarte: (context, event) => context.soldeCarte - event.prix,
             }),
@@ -148,7 +148,7 @@ export const restaurantsSociauxMachine = createMachine({
         CONSOMMER_REPAS: [
           {
             target: 'repasServi',
-            cond: (context, event) => context.soldeCarte >= event.prix,
+            guard: (context, event) => context.soldeCarte >= event.prix,
             actions: assign({
               soldeCarte: (context, event) => context.soldeCarte - event.prix,
             }),

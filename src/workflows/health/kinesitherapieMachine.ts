@@ -20,7 +20,7 @@ interface KinesitherapieContext {
 export const kinesitherapieMachine = createMachine({
   id: 'kinesitherapie',
   initial: 'prescription',
-  schema: {
+  schemas: {
     context: {} as KinesitherapieContext,
     events: {} as
       | { type: 'PRESCRIRE'; prescription: PrescriptionKine; patient: any }

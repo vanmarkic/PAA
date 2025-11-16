@@ -33,7 +33,7 @@ export const budgetEnergetiqueMachine = createMachine({
   id: 'budgetEnergetique',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as BudgetEnergetiqueContext,
     events: {} as
       | { type: 'DEMANDER_BUDGET'; menage: MenageEnergie }

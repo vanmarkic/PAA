@@ -17,7 +17,7 @@ export const conversionMachine = createMachine({
   id: 'legalConversion',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as ConversionContext,
     events: {} as
       | { type: 'START_CONVERSION'; legalText: any; targetLevel: ConversionLevel; targetAudience: string }
@@ -136,7 +136,7 @@ export const conversionMachine = createMachine({
       always: [
         {
           target: 'regeneratingWithConstraints',
-          cond: (context) => context.retryCount < 3,
+          guard: (context) => context.retryCount < 3,
           actions: assign({
             retryCount: (context) => context.retryCount + 1,
           }),

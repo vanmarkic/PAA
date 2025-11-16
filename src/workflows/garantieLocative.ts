@@ -43,7 +43,7 @@ export const garantieLocativeMachine = createMachine({
   id: 'garantieLocative',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as GarantieLocativeContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; locataire: LocataireGarantie; logement: LogementLoue }
@@ -91,7 +91,7 @@ export const garantieLocativeMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'etablissementConvention',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',

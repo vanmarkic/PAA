@@ -52,7 +52,7 @@ export const gardeEnfantsMachine = createMachine({
   id: 'gardeEnfants',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as GardeEnfantsContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; parent: Parent; enfant: Enfant }
@@ -99,7 +99,7 @@ export const gardeEnfantsMachine = createMachine({
         PLACES_VERIFIEES: [
           {
             target: 'evaluationRevenus',
-            cond: (_, event) => event.disponible,
+            guard: (_, event) => event.disponible,
           },
           {
             target: 'listeAttente',

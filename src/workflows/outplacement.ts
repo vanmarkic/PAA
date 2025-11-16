@@ -28,7 +28,7 @@ export const outplacementMachine = createMachine({
   id: 'outplacement',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as OutplacementContext,
     events: {} as
       | { type: 'NOTIFIER_LICENCIEMENT'; employe: string; employeur: string; age: number; anciennete: number }

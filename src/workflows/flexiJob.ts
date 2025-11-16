@@ -24,7 +24,7 @@ export const flexiJobMachine = createMachine({
   id: 'flexiJob',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as FlexiJobContext,
     events: {} as
       | { type: 'DEMANDER_FLEXIJOB'; travailleur: string; employeurFlexijob: string; secteur: 'horeca' | 'commerce' }

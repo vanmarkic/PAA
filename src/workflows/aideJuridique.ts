@@ -42,7 +42,7 @@ export const aideJuridiqueMachine = createMachine({
   id: 'aideJuridique',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AideJuridiqueContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; demandeur: Demandeur; litige: Litige }
@@ -122,7 +122,7 @@ export const aideJuridiqueMachine = createMachine({
         REVENUS_VERIFIES: [
           {
             target: 'evaluationAide',
-            cond: (_, event) => event.eligible,
+            guard: (_, event) => event.eligible,
           },
           {
             target: 'demandeRejetee',

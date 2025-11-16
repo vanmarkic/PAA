@@ -32,7 +32,7 @@ export const fondsCreancesMachine = createMachine({
   id: 'fondsCreances',
   initial: 'attente',
 
-  schema: {
+  schemas: {
     context: {} as FondsCreancesContext,
     events: {} as
       | { type: 'SOUMETTRE_CREANCE'; creancier: Creancier; debiteur: Debiteur }

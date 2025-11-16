@@ -25,7 +25,7 @@ interface AllocationEtudesContext {
 export const allocationEtudesMachine = createMachine({
   id: 'allocationEtudes',
   initial: 'depotDemande',
-  schema: {
+  schemas: {
     context: {} as AllocationEtudesContext,
     events: {} as
       | { type: 'DEPOSER_DEMANDE'; demande: DemandeAllocation }

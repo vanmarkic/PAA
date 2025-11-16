@@ -38,7 +38,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
   id: 'parcoursDemandeurEmploi',
   initial: 'perteEmploi',
 
-  schema: {
+  schemas: {
     context: {} as ParcoursDemarcheurContext,
     events: {} as
       | { type: 'EMPLOI_PERDU'; demandeur: Demandeur }
@@ -158,7 +158,7 @@ export const parcoursDemandeurEmploiMachine = createMachine({
         ALLOCATIONS_DEMANDEES: [
           {
             target: 'recherche EmploiActive',
-            cond: (context) => (context.demandeur?.joursTravailes ?? 0) >= 312,
+            guard: (context) => (context.demandeur?.joursTravailes ?? 0) >= 312,
             actions: assign({
               demarches: (context) => ({
                 ...context.demarches,

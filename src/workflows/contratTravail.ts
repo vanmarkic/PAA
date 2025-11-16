@@ -24,7 +24,7 @@ export const contratTravailMachine = createMachine({
   id: 'contratTravail',
   initial: 'idle',
 
-  schema: {
+  schemas: {
     context: {} as ContratTravailContext,
     events: {} as
       | { type: 'DEMARRER_NEGOCIATION'; employeur: string; employe: string }

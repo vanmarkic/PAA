@@ -48,7 +48,7 @@ export const creditImpotServiceLocalMachine = createMachine({
   id: 'creditImpotServiceLocal',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as CreditImpotServiceLocalContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; beneficiaire: Beneficiaire }
@@ -128,7 +128,7 @@ export const creditImpotServiceLocalMachine = createMachine({
         CREDIT_CALCULE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.credit.estEligible,
+            guard: (_, event) => event.credit.estEligible,
             actions: assign({
               credit: (_, event) => event.credit,
               totalCredit: (_, event) => event.credit.montantCredit,

@@ -44,7 +44,7 @@ export const quotientConjugalMachine = createMachine({
   id: 'quotientConjugal',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as QuotientConjugalContext,
     events: {} as
       | { type: 'DEMARRER_CALCUL'; couple: Couple }
@@ -87,7 +87,7 @@ export const quotientConjugalMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'applicable',
-            cond: (_, event) => event.quotient.estApplicable,
+            guard: (_, event) => event.quotient.estApplicable,
             actions: assign({
               quotient: (_, event) => event.quotient,
             }),

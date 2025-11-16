@@ -92,7 +92,7 @@ export const titreSejourEtrangerMachine = createMachine({
         DECISION_OE: [
           {
             target: 'delivranceCarte',
-            cond: (_, event) => event.decision === 'favorable',
+            guard: (_, event) => event.decision === 'favorable',
             actions: assign({
               decisionOE: (_, event) => event.decision,
               typePermis: (_, event) => event.typePermis || null,
@@ -140,7 +140,7 @@ export const titreSejourEtrangerMachine = createMachine({
         DECISION_OE: [
           {
             target: 'delivranceCarte',
-            cond: (_, event) => event.decision === 'favorable',
+            guard: (_, event) => event.decision === 'favorable',
           },
         ],
       },

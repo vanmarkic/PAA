@@ -22,7 +22,7 @@ interface PrimeRenovationContext {
 export const primeRenovationEnergetiqueMachine = createMachine({
   id: 'primeRenovationEnergetique',
   initial: 'auditEnergetique',
-  schema: {
+  schemas: {
     context: {} as PrimeRenovationContext,
     events: {} as
       | { type: 'DEMANDER_AUDIT' }

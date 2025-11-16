@@ -36,7 +36,7 @@ export const deductionInvestissementMachine = createMachine({
   id: 'deductionInvestissement',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as DeductionInvestissementContext,
     events: {} as
       | { type: 'DEMARRER_DEMANDE'; investisseur: Investisseur }
@@ -79,7 +79,7 @@ export const deductionInvestissementMachine = createMachine({
         INVESTISSEMENT_VERIFIE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: (_, event) => event.resultat.estEligible,
             actions: assign({
               resultat: (_, event) => event.resultat,
               anneesRestantes: (_, event) => event.resultat.periodeAmortissement,
@@ -177,7 +177,7 @@ export const deductionInvestissementMachine = createMachine({
         ANNEE_ECOULEE: [
           {
             target: 'deductionActive',
-            cond: (context) => context.anneesRestantes > 1,
+            guard: (context) => context.anneesRestantes > 1,
             actions: assign({
               anneesRestantes: (context) => context.anneesRestantes - 1,
             }),

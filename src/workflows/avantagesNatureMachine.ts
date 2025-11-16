@@ -42,7 +42,7 @@ export const avantagesNatureMachine = createMachine({
   id: 'avantagesNature',
   initial: 'inactif',
 
-  schema: {
+  schemas: {
     context: {} as AvantagesNatureContext,
     events: {} as
       | { type: 'DEMARRER_DECLARATION'; beneficiaire: BeneficiaireAvantage }
