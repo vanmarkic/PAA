@@ -199,7 +199,7 @@ export const fondsSecuriteExistenceMachine = createMachine({
           target: 'calculDroits',
           actions: assign({
             travailleur: ({ context, event }) => ({
-              ...context.travailleur!,
+              ...(context.travailleur || {}),
               employeur: event.secteur,
             }),
           }),

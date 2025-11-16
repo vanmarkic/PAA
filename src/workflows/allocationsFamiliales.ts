@@ -115,8 +115,8 @@ export const allocationsFamilialesMachine = createMachine({
           target: 'recalculMontant',
           actions: assign({
             famille: ({ context, event }) => ({
-              ...context.famille!,
-              enfants: [...context.famille!.enfants, event.enfant],
+              ...(context.famille || {}),
+              enfants: [...(context.famille || {}).enfants, event.enfant],
             }),
           }),
         },

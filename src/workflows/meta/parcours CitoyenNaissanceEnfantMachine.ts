@@ -104,7 +104,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
           target: 'affiliationMutuelle',
           actions: assign({
             enfant: ({ context, event }) => ({
-              ...context.enfant!,
+              ...(context.enfant || {}),
               numeroNational: event.numeroNational,
             }),
             demarchesCompletees: (context) => ({
@@ -144,7 +144,7 @@ export const parcoursNaissanceEnfantMachine = createMachine({
           target: 'demandeAllocationsFamiliales',
           actions: assign({
             enfant: ({ context, event }) => ({
-              ...context.enfant!,
+              ...(context.enfant || {}),
               mutuelle: event.mutuelle,
             }),
             demarchesCompletees: (context) => ({

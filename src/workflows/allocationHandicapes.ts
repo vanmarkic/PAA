@@ -150,7 +150,7 @@ export const allocationHandicapesMachine = createMachine({
           target: 'recalculMontant',
           actions: assign({
             personne: ({ context, event }) => ({
-              ...context.personne!,
+              ...(context.personne || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

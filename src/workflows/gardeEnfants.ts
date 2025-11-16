@@ -205,7 +205,7 @@ export const gardeEnfantsMachine = createMachine({
           target: 'recalculTarif',
           actions: assign({
             parent: ({ context, event }) => ({
-              ...context.parent!,
+              ...(context.parent || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

@@ -156,7 +156,7 @@ export const revenuCadastralExonerationMachine = createMachine({
           target: 'recalculExoneration',
           actions: assign({
             proprietaire: ({ context, event }) => ({
-              ...context.proprietaire!,
+              ...(context.proprietaire || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

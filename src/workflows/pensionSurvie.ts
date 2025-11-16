@@ -161,7 +161,7 @@ export const pensionSurvieMachine = createMachine({
           target: 'recalculMontant',
           actions: assign({
             survivant: ({ context, event }) => ({
-              ...context.survivant!,
+              ...(context.survivant || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

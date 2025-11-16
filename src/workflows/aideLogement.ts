@@ -190,7 +190,7 @@ export const aideLogementMachine = createMachine({
           target: 'recalculMontant',
           actions: assign({
             logement: ({ context, event }) => ({
-              ...context.logement!,
+              ...(context.logement || {}),
               loyerMensuel: event.nouveauLoyer,
             }),
           }),
@@ -199,7 +199,7 @@ export const aideLogementMachine = createMachine({
           target: 'recalculMontant',
           actions: assign({
             locataire: ({ context, event }) => ({
-              ...context.locataire!,
+              ...(context.locataire || {}),
               revenus: event.nouveauxRevenus,
             }),
           }),

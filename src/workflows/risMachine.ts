@@ -146,7 +146,7 @@ export const risApplicationMachine = createMachine({
           target: 'recalculating',
           actions: assign({
             user: ({ context, event }) => ({
-              ...context.user!,
+              ...(context.user || {}),
               monthlyIncome: event.newIncome,
             }),
           }),

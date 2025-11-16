@@ -156,7 +156,7 @@ export const aideJuridiqueMachine = createMachine({
           target: 'aideActive',
           actions: assign({
             aideAccordee: ({ context, event }) => ({
-              ...context.aideAccordee!,
+              ...(context.aideAccordee || {}),
               avocatDesigne: event.avocat,
             }),
             dossierOuvert: true,
