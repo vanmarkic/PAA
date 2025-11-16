@@ -125,7 +125,8 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
             ref={iframeRef}
             className="stately-inspector-iframe"
             title={`Inspector for ${machineName}`}
-            sandbox="allow-scripts allow-same-origin"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            allow="accelerometer 'none'; camera 'none'; geolocation 'none'; microphone 'none'; payment 'none'"
           />
           {machine && (
             <div className="machine-meta">

@@ -1,7 +1,7 @@
 ---
 import MachineLayout from '../../layouts/MachineLayout.astro';
 import CategoryBadge from '../../components/CategoryBadge.astro';
-import StatelyInspector from '../../components/StatelyInspector.preact.tsx';
+import InteractiveMachine from '../../components/InteractiveMachine.preact.tsx';
 import { loadMachinesMetadata } from '../../lib/machines';
 import type { MachineMeta } from '../../lib/machines';
 
@@ -75,10 +75,13 @@ const { machine } = Astro.props;
       </div>
     </section>
 
-    <!-- StatelyInspector with lazy loading -->
+    <!-- Interactive Machine -->
     <section class="diagram-section">
-      <h2>State Diagram</h2>
-      <StatelyInspector
+      <h2>Interactive State Machine</h2>
+      <p class="section-description">
+        Click on events to trigger state transitions and see the machine in action.
+      </p>
+      <InteractiveMachine
         machineId={machine.id}
         machineName={machine.name}
         client:visible
@@ -229,5 +232,161 @@ const { machine } = Astro.props;
     cursor: pointer;
     font-weight: 600;
     margin-top: 1rem;
+  }
+
+  /* Interactive Machine Styles */
+  .section-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  :global(.interactive-machine-container) {
+    min-height: 200px;
+  }
+
+  :global(.machine-interactive) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.current-state-panel),
+  :global(.events-panel),
+  :global(.states-panel),
+  :global(.history-panel) {
+    background: #f7f7f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  :global(.current-state-panel) {
+    grid-column: 1 / -1;
+  }
+
+  :global(.current-state-panel h3),
+  :global(.events-panel h3),
+  :global(.states-panel h3),
+  :global(.history-panel h3) {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.state-display) {
+    margin: 1rem 0;
+  }
+
+  :global(.state-badge) {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    color: #666;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  :global(.state-badge.active) {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+
+  :global(.control-buttons) {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  :global(.reset-btn),
+  :global(.export-btn),
+  :global(.event-btn) {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  :global(.reset-btn) {
+    background: #f44336;
+    color: white;
+  }
+
+  :global(.reset-btn:hover) {
+    background: #d32f2f;
+    transform: translateY(-2px);
+  }
+
+  :global(.export-btn) {
+    background: #4caf50;
+    color: white;
+  }
+
+  :global(.export-btn:hover) {
+    background: #388e3c;
+    transform: translateY(-2px);
+  }
+
+  :global(.event-btn) {
+    background: var(--primary);
+    color: white;
+  }
+
+  :global(.event-btn:hover) {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  :global(.event-buttons) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.no-events) {
+    color: #999;
+    font-style: italic;
+  }
+
+  :global(.states-grid) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.history-panel) {
+    grid-column: 1 / -1;
+  }
+
+  :global(.history-list) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.history-item) {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    :global(.machine-interactive) {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
