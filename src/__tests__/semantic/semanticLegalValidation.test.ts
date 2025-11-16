@@ -118,9 +118,8 @@ describe('Validation Sémantique - Allocations de Chômage', () => {
       // ASSERTION SÉMANTIQUE:
       // Une démission volontaire doit rendre inéligible (sauf circonstances exceptionnelles)
       expect(snapshot.value).toBe('ineligible');
-      expect(snapshot.context.resultatEligibilite?.raisons).toContain(
-        expect.stringMatching(/[Dd]émission/)
-      );
+      const raisons = snapshot.context.resultatEligibilite?.raisons || [];
+      expect(raisons.some((r: string) => /[Dd]émission/.test(r))).toBe(true);
     });
 
     test('Durée maximale selon âge (Article 114)', () => {

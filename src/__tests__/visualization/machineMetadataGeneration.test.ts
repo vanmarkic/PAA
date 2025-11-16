@@ -336,11 +336,32 @@ function parseMachineFile(filePath: string): any {
   const initial = initialMatch[1];
 
   const states: string[] = [];
-  const statesMatch = content.match(/states:\s*\{([^}]+(?:\{[^}]*\}[^}]*)*)\}/s);
-  if (statesMatch) {
-    const stateMatches = statesMatch[1].matchAll(/(\w+):\s*\{/g);
-    for (const match of stateMatches) {
-      states.push(match[1]);
+  // Find states block using brace counting
+  const statesStart = content.indexOf('states:');
+  if (statesStart !== -1) {
+    const openBraceIdx = content.indexOf('{', statesStart);
+    if (openBraceIdx !== -1) {
+      let braceCount = 0;
+      let endIdx = openBraceIdx;
+      for (let i = openBraceIdx; i < content.length; i++) {
+        if (content[i] === '{') braceCount++;
+        if (content[i] === '}') braceCount--;
+        if (braceCount === 0) {
+          endIdx = i;
+          break;
+        }
+      }
+      const statesContent = content.substring(openBraceIdx + 1, endIdx);
+      // Extract top-level state names (first level after states: {)
+      const lines = statesContent.split('\n');
+      for (const line of lines) {
+        const match = line.match(/^\s+(\w+):\s*\{/);
+        if (match && match[1] !== 'on' && match[1] !== 'meta' && match[1] !== 'entry' && match[1] !== 'exit') {
+          if (!states.includes(match[1])) {
+            states.push(match[1]);
+          }
+        }
+      }
     }
   }
 

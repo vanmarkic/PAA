@@ -32,25 +32,27 @@ interface AllocationsChomageContext {
   sanctionEnCours: boolean;
 }
 
+type AllocationsChomageEvents =
+  | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurChomage }
+  | { type: 'ELIGIBILITE_VERIFIEE'; resultat: ResultatEligibilite }
+  | { type: 'INSCRIPTION_COMPLETE' }
+  | { type: 'RECHERCHE_EMPLOI_ACTIVE' }
+  | { type: 'CONTROLE_DEMANDE' }
+  | { type: 'CONTROLE_REUSSI' }
+  | { type: 'MANQUEMENT_DETECTE' }
+  | { type: 'SANCTION_APPLIQUEE' }
+  | { type: 'SANCTION_LEVEE' }
+  | { type: 'EMPLOI_TROUVE' }
+  | { type: 'DUREE_EXPIREE' }
+  | { type: 'REINITIALISER' };
+
 export const allocationsChomageMachine = createMachine({
   id: 'allocationsChomage',
   initial: 'inactif',
 
-  schema: {
-    context: {} as AllocationsChomageContext,
-    events: {} as
-      | { type: 'DEMARRER_DEMANDE'; demandeur: DemandeurChomage }
-      | { type: 'ELIGIBILITE_VERIFIEE'; resultat: ResultatEligibilite }
-      | { type: 'INSCRIPTION_COMPLETE' }
-      | { type: 'RECHERCHE_EMPLOI_ACTIVE' }
-      | { type: 'CONTROLE_DEMANDE' }
-      | { type: 'CONTROLE_REUSSI' }
-      | { type: 'MANQUEMENT_DETECTE' }
-      | { type: 'SANCTION_APPLIQUEE' }
-      | { type: 'SANCTION_LEVEE' }
-      | { type: 'EMPLOI_TROUVE' }
-      | { type: 'DUREE_EXPIREE' }
-      | { type: 'REINITIALISER' }
+  types: {} as {
+    context: AllocationsChomageContext;
+    events: AllocationsChomageEvents;
   },
 
   context: {
@@ -68,7 +70,7 @@ export const allocationsChomageMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationEligibilite',
           actions: assign({
-            demandeur: (_, event) => event.demandeur,
+            demandeur: ({ event }) => event.demandeur,
             controleCount: 0,
           }),
         },
@@ -84,15 +86,15 @@ export const allocationsChomageMachine = createMachine({
         ELIGIBILITE_VERIFIEE: [
           {
             target: 'eligible',
-            cond: (_, event) => event.resultat.estEligible,
+            guard: ({ event }) => event.resultat.estEligible,
             actions: assign({
-              resultatEligibilite: (_, event) => event.resultat,
+              resultatEligibilite: ({ event }) => event.resultat,
             }),
           },
           {
             target: 'ineligible',
             actions: assign({
-              resultatEligibilite: (_, event) => event.resultat,
+              resultatEligibilite: ({ event }) => event.resultat,
             }),
           },
         ],
@@ -165,7 +167,7 @@ export const allocationsChomageMachine = createMachine({
         CONTROLE_REUSSI: {
           target: 'allocationActive',
           actions: assign({
-            controleCount: (context) => context.controleCount + 1,
+            controleCount: ({ context }) => context.controleCount + 1,
             obligationsRespectees: true,
           }),
         },

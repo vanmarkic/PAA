@@ -36,21 +36,23 @@ interface ConsultationMedecinContext {
   tiersPayantApplique: boolean;
 }
 
+type ConsultationMedecinEvents =
+  | { type: 'DEMARRER_DEMANDE'; patient: Patient }
+  | { type: 'PRENDRE_RDV'; consultation: Consultation }
+  | { type: 'RDV_CONFIRME' }
+  | { type: 'CONSULTATION_EFFECTUEE' }
+  | { type: 'REMBOURSEMENT_CALCULE'; resultat: ResultatRemboursement }
+  | { type: 'TIERS_PAYANT_ACTIVE' }
+  | { type: 'PAIEMENT_DIRECT' }
+  | { type: 'REINITIALISER' };
+
 export const consultationMedecinMachine = createMachine({
   id: 'consultationMedecin',
   initial: 'inactif',
 
-  schema: {
-    context: {} as ConsultationMedecinContext,
-    events: {} as
-      | { type: 'DEMARRER_DEMANDE'; patient: Patient }
-      | { type: 'PRENDRE_RDV'; consultation: Consultation }
-      | { type: 'RDV_CONFIRME' }
-      | { type: 'CONSULTATION_EFFECTUEE' }
-      | { type: 'REMBOURSEMENT_CALCULE'; resultat: ResultatRemboursement }
-      | { type: 'TIERS_PAYANT_ACTIVE' }
-      | { type: 'PAIEMENT_DIRECT' }
-      | { type: 'REINITIALISER' }
+  types: {} as {
+    context: ConsultationMedecinContext;
+    events: ConsultationMedecinEvents;
   },
 
   context: {
@@ -67,7 +69,7 @@ export const consultationMedecinMachine = createMachine({
         DEMARRER_DEMANDE: {
           target: 'verificationCouverture',
           actions: assign({
-            patient: (_, event) => event.patient,
+            patient: ({ event }) => event.patient,
           }),
         },
       },
@@ -82,7 +84,7 @@ export const consultationMedecinMachine = createMachine({
         PRENDRE_RDV: {
           target: 'priseRendezVous',
           actions: assign({
-            consultation: (_, event) => event.consultation,
+            consultation: ({ event }) => event.consultation,
           }),
         },
       },
@@ -124,15 +126,15 @@ export const consultationMedecinMachine = createMachine({
         REMBOURSEMENT_CALCULE: [
           {
             target: 'tiersPayant',
-            cond: (context) => context.patient?.mutuelleSouscrite === true,
+            guard: ({ context }) => context.patient?.mutuelleSouscrite === true,
             actions: assign({
-              resultatRemboursement: (_, event) => event.resultat,
+              resultatRemboursement: ({ event }) => event.resultat,
             }),
           },
           {
             target: 'paiementDirect',
             actions: assign({
-              resultatRemboursement: (_, event) => event.resultat,
+              resultatRemboursement: ({ event }) => event.resultat,
             }),
           },
         ],
