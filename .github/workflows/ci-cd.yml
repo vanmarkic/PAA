@@ -76,13 +76,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
+          path: ./artifacts
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -90,7 +88,7 @@ jobs:
       - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/'
+          path: './artifacts/docs'
 
       - name: Deploy to GitHub Pages
         id: deployment
