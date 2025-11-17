@@ -16,6 +16,20 @@ import { Engine } from 'json-rules-engine';
 import { User, EligibilityCheck } from '../domain/types';
 import { AGR_LEGAL_FRAMEWORK, AGR_KEY_ARTICLES, AGR_CONDITIONS_2025 } from '../legal-sources/belgianLegalSources';
 
+/**
+ * AGR Rules Version Metadata
+ * This version MUST match the specification version in features/benefits/income-guarantee.feature
+ */
+export const AGR_RULES_METADATA = {
+  implementsSpecification: '2025.1.0',
+  implementationVersion: '2025.1.0',
+  implementationStatus: 'complete' as const,
+  lastSyncedWith: 'features/benefits/income-guarantee.feature',
+  generatedFrom: 'features/benefits/income-guarantee.feature@2025.1.0',
+  divergences: [] as string[],
+  effectiveDate: '2025-02-01',
+};
+
 // Constants from Belgian social law
 // Source: ONEM - Mise à jour 01.02.2025
 const MINIMUM_GUARANTEED_INCOME = 1650; // EUR per month (approximation pour calcul simplifié)

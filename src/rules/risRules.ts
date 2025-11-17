@@ -16,6 +16,20 @@ import { RISUser, RISEligibilityResult, RIS_AMOUNTS_2024, RIS_CONSTANTS, RISCate
 import { RIS_LEGAL_FRAMEWORK, RIS_KEY_ARTICLES } from '../legal-sources/belgianLegalSources';
 
 /**
+ * RIS Rules Version Metadata
+ * This version MUST match the specification version in features/benefits/ris.feature
+ */
+export const RIS_RULES_METADATA = {
+  implementsSpecification: '2024.1.0',
+  implementationVersion: '2024.1.0',
+  implementationStatus: 'complete' as const,
+  lastSyncedWith: 'features/benefits/ris.feature',
+  generatedFrom: 'features/benefits/ris.feature@2024.1.0',
+  divergences: [] as string[],
+  effectiveDate: '2024-01-01',
+};
+
+/**
  * Create the RIS eligibility rules engine
  */
 function createRISEngine(): Engine {
