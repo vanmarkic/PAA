@@ -605,5 +605,164 @@ export const OFFICIAL_LEGAL_DATABASES = {
     name: 'SPF Sécurité Sociale',
     url: 'https://socialsecurity.belgium.be',
     description: 'Service Public Fédéral Sécurité Sociale'
+  },
+  officeEtrangers: {
+    name: 'Office des Étrangers',
+    url: 'https://dofi.ibz.be',
+    description: 'Service Public Fédéral Intérieur - Immigration'
+  },
+  cgra: {
+    name: 'CGRA - Commissariat général aux réfugiés et apatrides',
+    url: 'https://www.cgra.be',
+    description: 'Autorité compétente pour l\'asile et la protection internationale'
+  },
+  cce: {
+    name: 'CCE - Conseil du Contentieux des Étrangers',
+    url: 'https://www.rvv-cce.be',
+    description: 'Juridiction administrative pour les recours en matière d\'immigration'
   }
+};
+
+/**
+ * FOREIGNERS' LAW - Loi sur les Étrangers
+ * Cadre juridique pour l'immigration et le séjour
+ */
+export const FOREIGNERS_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Accès au territoire, séjour, établissement et éloignement des étrangers',
+
+  primaryLegislation: {
+    type: 'loi',
+    title: 'Loi sur l\'accès au territoire, le séjour, l\'établissement et l\'éloignement des étrangers',
+    date: '1980-12-15',
+    publication: {
+      date: '1980-12-31',
+      reference: 'Moniteur Belge 1980-12-31'
+    },
+    articles: ['9', '9bis', '9ter', '10', '10bis', '40', '40bis', '40ter', '48/3', '48/4', '48/5'],
+    officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1980121530&table_name=loi',
+    lastAmended: '2024',
+    authority: 'Office des Étrangers - Service Public Fédéral Intérieur'
+  },
+
+  implementingLegislation: [
+    {
+      type: 'arrete_royal',
+      title: 'Arrêté royal sur l\'accès au territoire, le séjour, l\'établissement et l\'éloignement des étrangers',
+      date: '1981-10-08',
+      publication: {
+        date: '1981-10-27',
+        reference: 'Moniteur Belge 1981-10-27'
+      },
+      officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1981100831&table_name=loi',
+      authority: 'Office des Étrangers'
+    },
+    {
+      type: 'loi',
+      title: 'Code de la nationalité belge',
+      date: '1984-06-28',
+      publication: {
+        date: '1984-07-12',
+        reference: 'Moniteur Belge 1984-07-12'
+      },
+      articles: ['11bis', '12bis', '12bis/1', '19', '23'],
+      officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1984062835&table_name=loi',
+      lastAmended: '2023',
+      authority: 'Service Public Fédéral Justice'
+    }
+  ],
+
+  notes: [
+    'Directive 2003/86/CE relative au droit au regroupement familial',
+    'Directive 2011/95/UE concernant la protection internationale',
+    'Directive 2013/32/UE relative aux procédures d\'asile',
+    'Règlement Dublin III (UE) n° 604/2013',
+    'Convention de Genève de 1951 relative au statut des réfugiés'
+  ]
+};
+
+/**
+ * ASYLUM - Protection Internationale
+ * Cadre juridique pour l'asile et la protection subsidiaire
+ */
+export const ASYLUM_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Protection internationale - Asile et protection subsidiaire',
+
+  primaryLegislation: {
+    type: 'loi',
+    title: 'Loi sur la protection internationale (Articles 48/3 à 48/5 de la loi du 15 décembre 1980)',
+    date: '1980-12-15',
+    publication: {
+      date: '1980-12-31',
+      reference: 'Moniteur Belge 1980-12-31'
+    },
+    articles: ['48/3', '48/4', '48/5', '48/5-1', '48/6', '48/7'],
+    officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1980121530&table_name=loi',
+    lastAmended: '2024',
+    authority: 'Commissariat général aux réfugiés et aux apatrides (CGRA)'
+  },
+
+  implementingLegislation: [
+    {
+      type: 'arrete_royal',
+      title: 'Arrêté royal fixant la procédure devant le CGRA',
+      date: '2003-11-11',
+      publication: {
+        date: '2003-11-27',
+        reference: 'Moniteur Belge 2003-11-27'
+      },
+      officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2003111137&table_name=loi',
+      authority: 'CGRA'
+    }
+  ],
+
+  notes: [
+    'Convention de Genève du 28 juillet 1951',
+    'Protocole de New York du 31 janvier 1967',
+    'Directive 2011/95/UE (Directive Qualification)',
+    'Directive 2013/32/UE (Directive Procédures)',
+    'Règlement Dublin III (UE) n° 604/2013'
+  ]
+};
+
+/**
+ * CCE - Conseil du Contentieux des Étrangers
+ * Cadre juridique pour les recours en matière d'immigration
+ */
+export const CCE_LEGAL_FRAMEWORK: BenefitLegalFramework = {
+  benefitName: 'Recours devant le Conseil du Contentieux des Étrangers',
+
+  primaryLegislation: {
+    type: 'loi',
+    title: 'Loi réformant le Conseil d\'État et créant un Conseil du Contentieux des Étrangers',
+    date: '2006-09-15',
+    publication: {
+      date: '2006-10-06',
+      reference: 'Moniteur Belge 2006-10-06'
+    },
+    articles: ['39/1', '39/2', '39/56', '39/57', '39/76', '39/82'],
+    officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2006091550&table_name=loi',
+    lastAmended: '2023',
+    authority: 'Conseil du Contentieux des Étrangers'
+  },
+
+  implementingLegislation: [
+    {
+      type: 'arrete_royal',
+      title: 'Arrêté royal fixant la procédure devant le CCE',
+      date: '2006-11-21',
+      publication: {
+        date: '2006-12-01',
+        reference: 'Moniteur Belge 2006-12-01'
+      },
+      officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2006112150&table_name=loi',
+      authority: 'CCE'
+    }
+  ],
+
+  notes: [
+    'Recours de pleine juridiction pour l\'asile',
+    'Recours en annulation pour les autres décisions',
+    'Procédure en extrême urgence possible',
+    'Délai de recours: 30 jours (10 jours en détention)'
+  ]
 };
