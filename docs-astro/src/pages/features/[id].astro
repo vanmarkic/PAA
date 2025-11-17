@@ -67,9 +67,9 @@ function getStepColor(keyword: string) {
     <!-- Breadcrumb -->
     <nav class="mb-8">
       <ol class="flex items-center space-x-2 text-sm text-gray-500">
-        <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+        <li><a href={getUrl('')} class="hover:text-gray-700">Accueil</a></li>
         <li>/</li>
-        <li><a href="/features" class="hover:text-gray-700">Fonctionnalités</a></li>
+        <li><a href={getUrl('features')} class="hover:text-gray-700">Fonctionnalités</a></li>
         <li>/</li>
         <li><a href={getUrl(`features/category/${feature.category}`)} class="hover:text-gray-700">
           {categories[feature.category]?.name}
