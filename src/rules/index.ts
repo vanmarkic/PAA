@@ -16,8 +16,10 @@ export * from './agrRules';
 // SOCIAL BENEFITS RULES
 // ============================================================================
 
-export * from './allocationsFamilialesRules';
+// Export everything except BelgianRegion from allocationsFamilialesRules
+export { checkFamilyAllowancesEligibility, calculateFamilyAllowanceAmount, calculateTotalFamilyAllowances, FAMILY_ALLOWANCES_RULES_JSON } from './allocationsFamilialesRules';
 export * from './allocationsChomageRules';
+// Export everything including BelgianRegion from primeNaissanceRules
 export * from './primeNaissanceRules';
 export * from './allocationHandicapesRules';
 export * from './grapaRules';
@@ -140,9 +142,9 @@ import { AGR_RULES_JSON } from './agrRules';
 import { FAMILY_ALLOWANCES_RULES_JSON } from './allocationsFamilialesRules';
 import { UNEMPLOYMENT_RULES_JSON } from './allocationsChomageRules';
 import { BIRTH_ALLOWANCE_RULES_JSON } from './primeNaissanceRules';
-import { DISABILITY_ALLOWANCE_RULES_JSON } from './allocationHandicapesRules';
+import { HANDICAP_RULES_JSON } from './allocationHandicapesRules';
 import { GRAPA_RULES_JSON } from './grapaRules';
-import { HOUSING_ALLOWANCE_RULES_JSON } from './aideLogementRules';
+import { HOUSING_AID_RULES_JSON } from './aideLogementRules';
 
 /**
  * Registry of all available rules with their JSON exports
@@ -178,7 +180,7 @@ export const RULES_REGISTRY = {
   allocationHandicapes: {
     id: 'allocationHandicapes',
     name: 'Allocation pour Personnes Handicapées',
-    rulesJson: DISABILITY_ALLOWANCE_RULES_JSON,
+    rulesJson: HANDICAP_RULES_JSON,
   },
   grapa: {
     id: 'grapa',
@@ -188,7 +190,7 @@ export const RULES_REGISTRY = {
   aideLogement: {
     id: 'aideLogement',
     name: 'Aide au Logement',
-    rulesJson: HOUSING_ALLOWANCE_RULES_JSON,
+    rulesJson: HOUSING_AID_RULES_JSON,
   },
 } as const;
 

@@ -33,11 +33,44 @@ export interface Benefit {
 }
 
 export type BenefitType =
+  // Social Integration
   | 'agr' // Allocation de Garantie de Revenus
   | 'ris' // Revenu d'Intégration Sociale
-  | 'unemployment'
-  | 'family-allowance'
-  | 'housing-allowance';
+  | 'grapa' // Garantie de Revenus aux Personnes Âgées
+  | 'aide-sociale' // Aide Sociale CPAS
+  | 'aide-personnes-agees' // Aide aux Personnes Âgées
+  // Employment
+  | 'unemployment' // Allocations de Chômage
+  | 'professional-training' // Formation Professionnelle
+  | 'professional-integration' // Insertion Professionnelle
+  | 'time-credit' // Crédit-temps
+  // Family & Child
+  | 'family-allowance' // Allocations Familiales
+  | 'birth-allowance' // Prime de Naissance
+  | 'maternity-leave' // Congé Maternité
+  | 'parental-leave' // Congé Parental
+  | 'childcare' // Garde d'Enfants
+  // Housing & Energy
+  | 'housing-allowance' // Aide au Logement (legacy)
+  | 'aide-logement' // Aide au Logement
+  | 'logement-social' // Logement Social
+  | 'allocation-chauffage' // Allocation Chauffage
+  | 'tarif-social-energie' // Tarif Social Énergie
+  | 'prime-renovation' // Prime Rénovation
+  | 'garantie-locative' // Garantie Locative
+  // Tax
+  | 'childcare-deduction' // Déduction Frais de Garde
+  | 'housing-deduction' // Déduction Habitation
+  | 'tax-credit' // Crédit d'Impôt
+  | 'mortgage-deduction' // Déduction Emprunt Hypothécaire
+  | 'isolation-deduction' // Déduction Isolation
+  | 'marital-quotient' // Quotient Conjugal
+  // Healthcare & Disability
+  | 'disability-allowance' // Allocations Handicapés
+  | 'health-insurance' // Assurance Maladie
+  | 'medical-card' // Carte Médicale
+  | 'mental-health-care' // Soins Santé Mentale
+  | 'sick-leave'; // Congé Maladie
 
 export interface Condition {
   field: string;
@@ -157,6 +190,18 @@ export interface EligibilityCheck {
   reason?: string;
   calculatedAmount?: number;
   optimizationSuggestion?: string;
+  // Additional optional properties
+  obligations?: string[];
+  notes?: string[];
+  breakdown?: {
+    baseAmount?: number;
+    supplements?: Record<string, number>;
+    deductions?: Record<string, number>;
+    total?: number;
+  };
+  category?: string;
+  duration?: string;
+  nextSteps?: string[];
 }
 
 // Ambiguity Resolution Types
