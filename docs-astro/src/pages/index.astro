@@ -167,6 +167,19 @@ const categoryStats = categories.map((cat: string) => ({
             <div class="text-sm">
               <span class="font-medium text-gray-900">{rulesMetadata.statistics?.uniqueFacts?.length || 0}</span>
               <span class="text-gray-600"> critères uniques</span>
+            </div>
+            <div class="text-sm">
+              <span class="font-medium text-gray-900">{rulesMetadata.statistics?.uniqueOperators?.length || 0}</span>
+              <span class="text-gray-600"> opérateurs</span>
+            </div>
+          </div>
+          <a href="/rules" class="inline-block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+            Explorer les Règles
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Featured Workflows -->
     <div class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
@@ -178,15 +191,14 @@ const categoryStats = categories.map((cat: string) => ({
                 {machine.category}
               </span>
             </div>
-            <div class="text-sm">
-              <span class="font-medium text-gray-900">{rulesMetadata.statistics?.uniqueOperators?.length || 0}</span>
-              <span class="text-gray-600"> opérateurs</span>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
+            <p class="text-gray-600 text-sm mb-4">{machine.description || 'Workflow administratif belge'}</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <span class="mr-4">{machine.states?.length || 0} états</span>
+              <span>{machine.events?.length || 0} événements</span>
             </div>
-          </div>
-          <a href="/rules" class="inline-block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-            Explorer les Règles
           </a>
-        </div>
+        ))}
       </div>
     </div>
 
