@@ -3,7 +3,7 @@
  */
 
 import { FastifyInstance } from 'fastify';
-import { authenticate, authorize } from '../../middleware/auth';
+import { authenticate } from '../../middleware/auth';
 import * as risController from '../controllers/risController';
 
 export default async function risRoutes(server: FastifyInstance) {

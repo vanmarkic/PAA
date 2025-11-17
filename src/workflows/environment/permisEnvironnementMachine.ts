@@ -22,7 +22,7 @@ interface PermisEnvironnementContext {
 }
 
 export const permisEnvironnementMachine = createMachine({
-  id: 'permisEnvironnement',
+  id: 'permisEnvironnementBase',
   initial: 'inactif',
 
   schemas: {
