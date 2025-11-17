@@ -37,9 +37,9 @@ export default defineConfig({
   // Shared settings for all projects
   use: {
     // Base URL for tests - supports local development and deployed versions
-    // Local: http://localhost:5173 (Vite dev server)
+    // Local: http://localhost:4321 (Astro preview server, local build without /PAA base)
     // Deployed: Set PLAYWRIGHT_FRONTEND_URL environment variable
-    baseURL: process.env.PLAYWRIGHT_FRONTEND_URL || 'http://localhost:5173',
+    baseURL: process.env.PLAYWRIGHT_FRONTEND_URL || 'http://localhost:4321',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -85,8 +85,8 @@ export default defineConfig({
 
   // Run local dev server before starting tests (only when not in CI and no custom URL)
   webServer: process.env.CI || process.env.PLAYWRIGHT_FRONTEND_URL ? undefined : {
-    command: 'cd frontend && npm run dev',
-    url: 'http://localhost:5173',
+    command: 'npm run astro:preview:local',
+    url: 'http://localhost:4321',
     reuseExistingServer: true,
     timeout: 120 * 1000,
     stdout: 'pipe',

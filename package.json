@@ -33,6 +33,7 @@
     "astro:dev": "cd docs-astro && npm run dev",
     "astro:build": "cd docs-astro && npm run build",
     "astro:preview": "cd docs-astro && npm run preview",
+    "astro:preview:local": "cd docs-astro && npm run preview:local",
     "docs:astro": "npm run astro:build",
     "test": "jest",
     "test:watch": "jest --watch",
