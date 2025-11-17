@@ -13,7 +13,7 @@ describe('Mermaid Syntax Validation', () => {
   const markdownFiles = [
     'ARCHITECTURE.md',
     'docs/state-machines-visualization.md',
-    'docs/index.html',
+    // 'docs/index.html', // Removed - file no longer exists (moved to Astro)
   ];
 
   /**
