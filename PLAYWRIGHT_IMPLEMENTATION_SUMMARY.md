@@ -2,7 +2,18 @@
 
 ## Overview
 
-Comprehensive Playwright E2E test suite implemented for the PAA React frontend application with **290 tests** across **5 test files** running on **5 different browsers/viewports**.
+Comprehensive Playwright E2E test suite implemented for the PAA Astro SSG application with **290 tests** across **5 test files** running on **5 different browsers/viewports**.
+
+## Migration to Astro SSG (React → Astro)
+
+Previously, this test suite targeted a dedicated React SPA frontend served on port 5173. The architecture has been simplified through migration to **Astro Static Site Generation (SSG)**, which provides the same application features with significantly improved performance and no redundant deployments:
+
+- **Previous Architecture**: React SPA frontend (`/frontend` directory) running on port 5173, separate from API
+- **Current Architecture**: Astro SSG application served as static files from the main application (port 4321/PAA)
+- **Frontend Directory**: Removed `/frontend` directory (redundant with Astro integration)
+- **Performance Improvement**: Static HTML generation eliminates client-side rendering overhead; React islands hydrate only where needed
+- **Deployment**: Single-artifact deployment vs. two separate services
+- **Test Target**: Tests now target Astro SSG application with embedded React interactive components (islands)
 
 ## Requirements Met ✅
 
@@ -20,7 +31,7 @@ Comprehensive Playwright E2E test suite implemented for the PAA React frontend a
 ## Files Created
 
 ### Configuration
-- ✅ `playwright.frontend.config.ts` - Playwright configuration for frontend tests
+- ✅ `playwright.frontend.config.ts` - Playwright configuration for Astro SSG tests (targets http://localhost:4321/PAA)
 - ✅ `package.json` - Added 8 new test scripts
 
 ### Test Suites (5 Files, 290 Tests)
@@ -120,14 +131,14 @@ tests/e2e/frontend/
 ## NPM Scripts Added
 
 ```json
-"test:frontend": "Run all frontend E2E tests"
+"test:frontend": "Run all Astro SSG E2E tests"
 "test:frontend:ui": "Run in interactive UI mode"
 "test:frontend:headed": "Run with visible browser"
 "test:frontend:mobile": "Run mobile tests only"
 "test:frontend:desktop": "Run desktop tests only"
 "test:frontend:debug": "Run with Playwright Inspector"
 "test:frontend:report": "View HTML test report"
-"test:e2e": "Run all E2E tests (docs + frontend)"
+"test:e2e": "Run all E2E tests (docs + Astro SSG)"
 ```
 
 ## Key Features
@@ -216,8 +227,15 @@ tests/e2e/frontend/
 ## Running Tests
 
 ### Local Development
+
+First, ensure Astro SSG application is running:
 ```bash
-# Run all frontend tests
+npm start  # Starts Astro SSG on http://localhost:4321/PAA
+```
+
+Then run tests:
+```bash
+# Run all Astro SSG tests
 npm run test:frontend
 
 # Run with UI (interactive)
@@ -239,7 +257,7 @@ npm run test:frontend:mobile
 npm run test:frontend:debug
 ```
 
-### Against Deployed Version
+### Against Deployed Astro SSG Application
 ```bash
 # Staging
 PLAYWRIGHT_FRONTEND_URL=https://staging.paa.example.com npm run test:frontend
@@ -247,6 +265,8 @@ PLAYWRIGHT_FRONTEND_URL=https://staging.paa.example.com npm run test:frontend
 # Production
 PLAYWRIGHT_FRONTEND_URL=https://paa.example.com npm run test:frontend
 ```
+
+The `PLAYWRIGHT_FRONTEND_URL` environment variable points to the Astro SSG application (no longer a separate React frontend).
 
 ## Dependencies Added
 
@@ -261,6 +281,7 @@ PLAYWRIGHT_FRONTEND_URL=https://paa.example.com npm run test:frontend
 - ✅ **DRY Principle**: Shared utilities and helpers
 - ✅ **Documentation**: Comprehensive guides and examples
 - ✅ **Best Practices**: Waits, retries, error handling
+- ✅ **Astro Compatibility**: Tests target Astro SSG with React islands for interactive components
 
 ## Test Execution Time
 
@@ -299,6 +320,7 @@ PLAYWRIGHT_FRONTEND_URL=https://paa.example.com npm run test:frontend
 
 ---
 
-**Implementation Date**: 2025-01-17
+**Initial Implementation**: 2025-01-17
+**Astro SSG Migration**: 2025-01-17
 **Playwright Version**: 1.56.1
-**Status**: ✅ Complete and Ready to Use
+**Status**: ✅ Migrated to Astro SSG - Complete and Ready to Use

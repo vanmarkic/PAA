@@ -1,15 +1,17 @@
 # E2E Testing Guide - PAA Frontend
 
-Comprehensive Playwright E2E testing suite for the PAA (Plateforme d'Aide Administrative) React frontend application.
+Comprehensive Playwright E2E testing suite for the PAA (Plateforme d'Aide Administrative) Astro SSG application.
 
 ## Overview
 
-This test suite provides end-to-end testing for the PAA React frontend, covering:
+This test suite provides end-to-end testing for the PAA Astro SSG application, covering:
 
 - **User Journey Tests**: Realistic scenarios simulating social workers and citizens
 - **Visual Regression**: Component and page snapshots to detect visual changes
 - **Responsive Layout**: Testing across desktop, tablet, and mobile viewports
 - **UI Bug Detection**: Console errors, layout shifts, and accessibility issues
+
+> **Note**: Tests were migrated from React SPA to Astro SSG. All tests target the same user-facing UI and functionality, just now delivered as a static site generator instead of a single-page application. Test scenarios, coverage, and assertions remain unchanged.
 
 ## Test Structure
 
@@ -112,9 +114,9 @@ npx playwright test tests/e2e/frontend/user-journeys/social-worker-journey.spec.
 
 ### Local Development (Default)
 
-By default, tests run against `http://localhost:5173` (Vite dev server).
+By default, tests run against `http://localhost:4321/PAA` (Astro preview server).
 
-The config will automatically start the Vite dev server if it's not running:
+The config will automatically start the Astro preview server if it's not running:
 
 ```bash
 npm run test:frontend
@@ -363,7 +365,7 @@ Key settings:
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
-    baseURL: process.env.PLAYWRIGHT_FRONTEND_URL || 'http://localhost:5173',
+    baseURL: process.env.PLAYWRIGHT_FRONTEND_URL || 'http://localhost:4321/PAA',
     screenshot: 'on',
     trace: 'on-first-retry',
     video: 'retain-on-failure',
@@ -382,7 +384,7 @@ Key settings:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `PLAYWRIGHT_FRONTEND_URL` | Base URL for tests | `http://localhost:5173` |
+| `PLAYWRIGHT_FRONTEND_URL` | Base URL for tests | `http://localhost:4321/PAA` |
 | `CI` | CI environment flag | `false` |
 
 ## Continuous Integration
@@ -409,8 +411,8 @@ jobs:
       - name: Install Playwright browsers
         run: npm run playwright:install
 
-      - name: Build frontend
-        run: cd frontend && npm run build
+      - name: Build Astro application
+        run: npm run build
 
       - name: Run E2E tests
         run: npm run test:frontend
@@ -449,16 +451,17 @@ ls -la playwright.frontend.config.ts
 ls -la tests/e2e/frontend/
 ```
 
-### Vite Dev Server Not Starting
+### Astro Preview Server Not Starting
 
-**Issue**: "TimeoutError: Waiting for http://localhost:5173 failed"
+**Issue**: "TimeoutError: Waiting for http://localhost:4321/PAA failed"
 
 **Solution**:
 ```bash
-# Start Vite manually first
-cd frontend && npm run dev
+# Build Astro and start preview server manually first
+npm run build
+npm run preview
 
-# Then run tests
+# Then run tests in another terminal
 npm run test:frontend
 ```
 
