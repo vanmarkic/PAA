@@ -80,9 +80,73 @@ jobs:
             docs-astro/dist/
           retention-days: 1
 
-  # Job 2: Deploy to GitHub Pages (only on master/main)
-  deploy:
+  # Job 2: Test Documentation with Playwright
+  test-docs:
     needs: test-and-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: ./artifacts
+
+      - name: Copy built docs to expected location
+        run: |
+          mkdir -p docs-astro/dist
+          cp -r artifacts/docs-astro/dist/* docs-astro/dist/ || echo "Build artifacts not found in expected location"
+
+      - name: Install Astro dependencies (for preview server)
+        working-directory: ./docs-astro
+        run: npm ci
+
+      - name: Run Playwright smoke tests
+        env:
+          PLAYWRIGHT_BASE_URL: http://localhost:4321
+        run: npm run test:docs:smoke
+        continue-on-error: false
+
+      - name: Run Playwright visual regression tests
+        env:
+          PLAYWRIGHT_BASE_URL: http://localhost:4321
+        run: npm run test:docs:visual
+        continue-on-error: true
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Upload snapshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-snapshots
+          path: tests/e2e/docs/__snapshots__/
+          retention-days: 7
+
+  # Job 3: Deploy to GitHub Pages (only on master/main)
+  deploy:
+    needs: [test-and-build, test-docs]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
 
