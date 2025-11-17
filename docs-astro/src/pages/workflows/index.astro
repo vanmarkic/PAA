@@ -35,7 +35,7 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
       <p class="text-xl text-gray-600">
         {filteredMachines.length} workflows disponibles
         {selectedCategory && (
-          <a href="/workflows" class="ml-2 text-purple-600 hover:text-purple-700">
+          <a href={`${import.meta.env.BASE_URL}workflows`} class="ml-2 text-purple-600 hover:text-purple-700">
             (voir tous)
           </a>
         )}
@@ -47,14 +47,14 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
       <div class="flex items-center justify-between mb-4">
         <h2 class="font-semibold text-gray-900">Filtrer par catégorie</h2>
         {selectedCategory && (
-          <a href="/workflows" class="text-sm text-purple-600 hover:text-purple-700">
+          <a href={`${import.meta.env.BASE_URL}workflows`} class="text-sm text-purple-600 hover:text-purple-700">
             Effacer le filtre
           </a>
         )}
       </div>
       <div class="flex flex-wrap gap-2">
         <a
-          href="/workflows"
+          href={`${import.meta.env.BASE_URL}workflows`}
           class={`px-4 py-2 rounded-lg transition-colors ${
             !selectedCategory
               ? 'bg-purple-100 text-purple-700 border-2 border-purple-500'
@@ -67,7 +67,7 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
           const count = machines.filter((m: any) => m.category === cat).length;
           return (
             <a
-              href={`/workflows?category=${cat}`}
+              href={`${import.meta.env.BASE_URL}workflows?category=${cat}`}
               class={`px-4 py-2 rounded-lg transition-colors ${
                 selectedCategory === cat
                   ? 'bg-purple-100 text-purple-700 border-2 border-purple-500'
@@ -96,7 +96,7 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categoryMachines.map((machine: any) => (
             <a
-              href={`/workflows/${machine.id}`}
+              href={`${import.meta.env.BASE_URL}workflows/${machine.id}`}
               class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all"
             >
               <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
@@ -136,10 +136,10 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
         Utilisez notre assistant intelligent ou notre outil de comparaison pour trouver le workflow qui correspond à vos besoins.
       </p>
       <div class="flex justify-center gap-4">
-        <a href="/wizard" class="inline-block px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        <a href={`${import.meta.env.BASE_URL}wizard`} class="inline-block px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
           Assistant de Recherche
         </a>
-        <a href="/comparison" class="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-800 transition-colors">
+        <a href={`${import.meta.env.BASE_URL}comparison`} class="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-800 transition-colors">
           Comparer des Workflows
         </a>
       </div>

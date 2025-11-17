@@ -13,6 +13,7 @@ interface Machine {
 
 interface WorkflowWizardProps {
   machines: Machine[];
+  baseUrl?: string;
 }
 
 type Step = 'category' | 'situation' | 'urgency' | 'results';
@@ -30,7 +31,7 @@ const categoryMapping: Record<string, string[]> = {
   'immigration': ['Immigration', 'Séjour', 'Naturalisation']
 };
 
-export default function WorkflowWizard({ machines }: WorkflowWizardProps) {
+export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWizardProps) {
   const [currentStep, setCurrentStep] = useState<Step>('category');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedSituation, setSelectedSituation] = useState('');
@@ -255,7 +256,7 @@ export default function WorkflowWizard({ machines }: WorkflowWizardProps) {
               {results.map(machine => (
                 <a
                   key={machine.id}
-                  href={`/workflows/${machine.id}`}
+                  href={`${baseUrl}workflows/${machine.id}`}
                   className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-purple-500 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start justify-between">
@@ -296,7 +297,7 @@ export default function WorkflowWizard({ machines }: WorkflowWizardProps) {
               Nouvelle Recherche
             </button>
             <a
-              href="/benefits"
+              href={`${baseUrl}benefits`}
               className="px-6 py-3 bg-white text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50 transition-colors"
             >
               Voir Toutes les Prestations
