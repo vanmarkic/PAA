@@ -17,6 +17,18 @@ The platform aims to:
 - Beneficiaries (often with limited literacy)
 - Automated systems (optimization algorithms)
 
+## 📚 Live Documentation
+
+Interactive documentation for all workflows is available at:
+
+**https://vanmarkic.github.io/PAA/**
+
+Features:
+- Browse 131+ Belgian administrative workflows
+- Filter by category (e.g., `/PAA/workflows?category=propriete-intellectuelle`)
+- Interactive workflow visualization
+- Search and comparison tools
+
 ## 🏗️ Architecture Decision: Why This Hybrid Approach?
 
 After analyzing the requirements, we chose a **hybrid architecture** combining:
