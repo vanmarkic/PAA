@@ -1,0 +1,147 @@
+---
+import MainLayout from '../layouts/Layout.astro';
+import ComparisonTool from '../components/ComparisonTool.tsx';
+import { loadMachinesMetadata } from '../lib/machines';
+
+// Load machines data at build time
+const metadata = await loadMachinesMetadata();
+const { machines } = metadata;
+
+// Get workflow IDs from query params if any
+const url = new URL(Astro.request.url);
+const workflowIds = url.searchParams.get('workflows')?.split(',') || [];
+---
+
+<MainLayout title="Comparaison de Workflows - PAA" description="Comparez les workflows administratifs belges">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Outil de Comparaison</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Comparez jusqu'à 4 workflows côte à côte pour comprendre leurs différences et similitudes.
+      </p>
+    </div>
+
+    <!-- Static Instructions -->
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+        <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        Comment utiliser l'outil de comparaison
+      </h2>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700">
+        <li>Sélectionnez jusqu'à 4 workflows dans la liste ci-dessous</li>
+        <li>Les workflows sélectionnés apparaîtront dans le tableau de comparaison</li>
+        <li>Comparez les états, événements et caractéristiques de chaque workflow</li>
+        <li>Utilisez les filtres pour affiner votre recherche</li>
+      </ol>
+    </div>
+
+    <!-- React Island for Interactive Comparison -->
+    <ComparisonTool
+      machines={machines}
+      preselectedIds={workflowIds}
+      client:load
+    />
+
+    <!-- Static Benefits Comparison Table -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Comparaison Rapide des Prestations Principales</h2>
+      <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Prestation
+              </th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Montant Max
+              </th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Conditions
+              </th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Délai
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">RIS (Revenu d'Intégration)</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">1.450€/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-900">Résidence, ressources insuffisantes</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">30 jours</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">Allocations Familiales</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">368€/enfant</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-900">Enfant à charge, domicilié en Belgique</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">2 mois</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">Allocation de Chômage</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">1.800€/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-900">Perte d'emploi involontaire, stages</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">3 semaines</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">Prime Énergie</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">7.000€</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-900">Travaux éligibles, factures conformes</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">4 mois</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Export Options -->
+    <div class="mt-8 flex justify-center gap-4">
+      <button onclick="window.print()" class="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+        </svg>
+        Imprimer
+      </button>
+      <button class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        Exporter PDF
+      </button>
+    </div>
+  </div>
+</MainLayout>

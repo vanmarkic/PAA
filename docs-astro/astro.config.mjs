@@ -1,29 +1,52 @@
 import { defineConfig } from 'astro/config';
-import preact from '@astrojs/preact';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
+// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    preact({
-      compat: true, // Enable preact/compat for React libs
-    })
-  ],
-
+  // Set output to static for SSG (Static Site Generation)
   output: 'static',
 
-  // GitHub Pages deployment at /PAA (only in production builds)
+  // GitHub Pages deployment configuration
+  // Base path: /PAA for GitHub Pages (only in production builds)
   base: process.env.NODE_ENV === 'production' ? '/PAA' : '/',
+
+  // Site URL for production
   site: 'https://vanmarkic.github.io',
 
+  // Server configuration for development
   server: {
     port: 4444,
     host: true
   },
 
+  // Build configuration
   build: {
+    // Directory for the built files
+    assets: 'assets',
+    // Inline small CSS for better performance
     inlineStylesheets: 'auto',
   },
 
+  // Integrations
+  integrations: [
+    react(),
+    tailwind({
+      // Tailwind v4 configuration
+      applyBaseStyles: false, // We'll handle base styles ourselves for v4
+    }),
+  ],
+
+  // Vite configuration
   vite: {
+    optimizeDeps: {
+      include: ['react', 'react-dom'],
+    },
+
+    ssr: {
+      noExternal: ['@radix-ui/*'],
+    },
+
     server: {
       fs: {
         // Allow serving files from the parent project
@@ -35,21 +58,29 @@ export default defineConfig({
       rollupOptions: {
         output: {
           manualChunks(id) {
-            // Split by machine category
-            if (id.includes('/workflows/')) {
-              const match = id.match(/\/workflows\/([^/]+)\//);
-              if (match) {
-                return `machines-${match[1]}`;
-              }
-              return 'machines-general';
+            // Separate Radix UI components
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
             }
 
-            // Separate vendor chunks
-            if (id.includes('@statelyai/inspect')) {
-              return 'stately-inspector';
+            // Separate React ecosystem
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
             }
+
+            // XState and state management
             if (id.includes('xstate')) {
               return 'xstate-core';
+            }
+
+            // Chart libraries
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
+
+            // Other UI libraries
+            if (id.includes('lucide-react') || id.includes('sonner') || id.includes('cmdk')) {
+              return 'ui-libs';
             }
           }
         }
@@ -58,21 +89,11 @@ export default defineConfig({
 
     resolve: {
       alias: {
-        '@workflows': '/src/workflows',
+        '@components': './src/components',
+        '@layouts': './src/layouts',
         '@lib': './src/lib',
-        '@components': './src/components'
-      },
-      // Dedupe xstate to use the version from docs-astro's node_modules
-      dedupe: ['xstate'],
-      // Preserve symlinks to false ensures modules are resolved from the project root
-      preserveSymlinks: false
-    },
-
-    // Optimize deps to pre-bundle xstate and ensure it's resolved correctly
-    optimizeDeps: {
-      include: ['xstate'],
-      // Exclude the workflow files from optimization to avoid issues
-      exclude: ['@workflows']
+        '@utils': './src/utils'
+      }
     }
   }
 });

@@ -1,0 +1,444 @@
+---
+import MachineLayout from '../../layouts/MachineLayout.astro';
+import CategoryBadge from '../../components/CategoryBadge.astro';
+import InteractiveMachine from '../../components/InteractiveMachine.preact.tsx';
+import { loadMachinesMetadata } from '../../lib/machines';
+import type { MachineMeta } from '../../lib/machines';
+
+export async function getStaticPaths() {
+  const metadata = await loadMachinesMetadata();
+
+  return metadata.machines.map(machine => ({
+    params: { id: machine.id },
+    props: { machine }
+  }));
+}
+
+interface Props {
+  machine: MachineMeta;
+}
+
+const { machine } = Astro.props;
+---
+
+<MachineLayout
+  title={`${machine.name} - PAA`}
+  description={machine.description}
+>
+  <article class="machine-detail">
+    <header>
+      <h1>{machine.name}</h1>
+      <CategoryBadge category={machine.category} />
+    </header>
+
+    {machine.description && (
+      <p class="description">{machine.description}</p>
+    )}
+
+    <div class="metadata-grid">
+      <div class="metadata-card">
+        <strong>Machine ID</strong>
+        <code>{machine.id}</code>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Initial State</strong>
+        <code>{machine.initial}</code>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Total States</strong>
+        <span>{machine.states.length}</span>
+      </div>
+
+      <div class="metadata-card">
+        <strong>Total Events</strong>
+        <span>{machine.events.length}</span>
+      </div>
+    </div>
+
+    <section class="states-section">
+      <h2>States ({machine.states.length})</h2>
+      <div class="badge-grid">
+        {machine.states.map(state => (
+          <span class="badge">{state}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="events-section">
+      <h2>Events ({machine.events.length})</h2>
+      <div class="badge-grid">
+        {machine.events.map(event => (
+          <span class="badge event-badge">{event}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- Interactive Machine -->
+    <section class="diagram-section">
+      <h2>Interactive State Machine</h2>
+      <p class="section-description">
+        Click on events to trigger state transitions and see the machine in action.
+      </p>
+      <InteractiveMachine
+        machineId={machine.id}
+        machineName={machine.name}
+        client:visible
+      />
+    </section>
+  </article>
+</MachineLayout>
+
+<style>
+  .machine-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .metadata-card {
+    background: #f7f7f9;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .metadata-card strong {
+    display: block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .metadata-card code {
+    background: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+
+  .event-badge {
+    background: var(--secondary);
+  }
+
+  .diagram-placeholder {
+    background: #f7f7f9;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-light);
+  }
+
+  /* Stately Inspector Styles */
+  :global(.stately-inspector-container) {
+    min-height: 200px;
+  }
+
+  :global(.inspector-wrapper) {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.stately-inspector-iframe) {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+  }
+
+  :global(.machine-meta) {
+    padding: 0.75rem 1rem;
+    background: #f7f7f9;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #666;
+  }
+
+  :global(.skeleton) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #999;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  :global(.error) {
+    background: #fee;
+    border: 2px solid #fcc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: #c33;
+  }
+
+  :global(.error summary) {
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  /* Interactive Machine Styles */
+  .section-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  :global(.interactive-machine-container) {
+    min-height: 200px;
+  }
+
+  :global(.machine-interactive) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.diagram-panel) {
+    grid-column: 1 / -1;
+    background: #f7f7f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  :global(.diagram-panel h3) {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.mermaid-wrapper) {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.mermaid-container) {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global(.mermaid-container svg) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  :global(.diagram-loading) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
+  :global(.current-state-panel),
+  :global(.events-panel),
+  :global(.states-panel),
+  :global(.history-panel) {
+    background: #f7f7f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  :global(.current-state-panel) {
+    grid-column: 1 / -1;
+  }
+
+  :global(.current-state-panel h3),
+  :global(.events-panel h3),
+  :global(.states-panel h3),
+  :global(.history-panel h3) {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.state-display) {
+    margin: 1rem 0;
+  }
+
+  :global(.state-badge) {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    color: #666;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  :global(.state-badge.active) {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+
+  :global(.control-buttons) {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  :global(.reset-btn),
+  :global(.export-btn),
+  :global(.event-btn) {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  :global(.reset-btn) {
+    background: #f44336;
+    color: white;
+  }
+
+  :global(.reset-btn:hover) {
+    background: #d32f2f;
+    transform: translateY(-2px);
+  }
+
+  :global(.export-btn) {
+    background: #4caf50;
+    color: white;
+  }
+
+  :global(.export-btn:hover) {
+    background: #388e3c;
+    transform: translateY(-2px);
+  }
+
+  :global(.event-btn) {
+    background: var(--primary);
+    color: white;
+  }
+
+  :global(.event-btn:hover) {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  :global(.event-buttons) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.no-events) {
+    color: #999;
+    font-style: italic;
+  }
+
+  :global(.states-grid) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.history-panel) {
+    grid-column: 1 / -1;
+  }
+
+  :global(.history-list) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  :global(.history-item) {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    :global(.machine-interactive) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

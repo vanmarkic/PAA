@@ -1,0 +1,132 @@
+{
+  "common": {
+    "loading": "Bezig met laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "submit": "Verzenden",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "close": "Sluiten",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "search": "Zoeken",
+    "filter": "Filteren",
+    "clear": "Wissen",
+    "yes": "Ja",
+    "no": "Nee"
+  },
+  "header": {
+    "title": "PAA - Platform voor Administratieve Hulp",
+    "subtitle": "Demonstratiesysteem voor het coderen van Belgische administratieve logica"
+  },
+  "navigation": {
+    "home": "Home",
+    "benefits": "Uitkeringen",
+    "workflows": "Workflows",
+    "rules": "Bedrijfsregels",
+    "documentation": "Documentatie",
+    "settings": "Instellingen",
+    "language": "Taal",
+    "theme": "Thema",
+    "darkMode": "Donkere modus",
+    "lightMode": "Lichte modus",
+    "systemTheme": "Systeemthema"
+  },
+  "api": {
+    "status": "API Status",
+    "checking": "Verbinding maken...",
+    "connected": "API verbonden",
+    "error": "API niet beschikbaar"
+  },
+  "features": {
+    "eligibility": {
+      "title": "Geschiktheidscontrole",
+      "description": "Bereken geschiktheid voor sociale uitkeringen"
+    },
+    "conversion": {
+      "title": "Conversie van wettelijke teksten",
+      "description": "Converteer juridische teksten naar eenvoudige taal"
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Visualiseer processen en toestandsmachines"
+    },
+    "rules": {
+      "title": "Bedrijfsregels",
+      "description": "Verken Gherkin en JSON regels"
+    },
+    "documentation": {
+      "title": "Documentatie",
+      "description": "Gebruikershandleiding en technische referentie"
+    }
+  },
+  "benefits": {
+    "AGR": "Inkomensgarantie-uitkering",
+    "RIS": "Leefloon",
+    "GRAPA": "Inkomensgarantie voor Ouderen",
+    "CPAS": "Openbaar Centrum voor Maatschappelijk Welzijn (OCMW)",
+    "allocationsFamiliales": "Kinderbijslag",
+    "chomage": "Werkloosheidsuitkering",
+    "handicap": "Uitkeringen voor Personen met een Handicap",
+    "pension": "Pensioen",
+    "mutuelle": "Ziekenfonds",
+    "maternite": "Moederschapsverlof",
+    "parental": "Ouderschapsverlof",
+    "creditTemps": "Tijdskrediet"
+  },
+  "legal": {
+    "references": "Wettelijke referenties",
+    "law": "Wet",
+    "royalDecree": "Koninklijk besluit",
+    "ministerialDecree": "Ministerieel besluit",
+    "code": "Wetboek",
+    "ordinance": "Ordonnantie",
+    "decree": "Decreet",
+    "articles": "Artikelen",
+    "lastAmended": "Laatst gewijzigd",
+    "authority": "Verantwoordelijke autoriteit",
+    "monitorBelge": "Belgisch Staatsblad",
+    "officialUrl": "Officiële URL"
+  },
+  "forms": {
+    "personalInfo": "Persoonlijke informatie",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "birthDate": "Geboortedatum",
+    "nationalNumber": "Rijksregisternummer",
+    "address": "Adres",
+    "city": "Stad",
+    "postalCode": "Postcode",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "employment": "Arbeidssituatie",
+    "income": "Inkomen",
+    "familySituation": "Gezinssituatie",
+    "married": "Getrouwd",
+    "single": "Alleenstaand",
+    "divorced": "Gescheiden",
+    "widowed": "Weduwe/Weduwnaar",
+    "cohabiting": "Samenwonend",
+    "children": "Kinderen",
+    "dependents": "Ten laste"
+  },
+  "status": {
+    "pending": "In afwachting",
+    "processing": "In verwerking",
+    "approved": "Goedgekeurd",
+    "rejected": "Afgewezen",
+    "completed": "Voltooid",
+    "failed": "Mislukt"
+  },
+  "errors": {
+    "genericError": "Er is een fout opgetreden",
+    "networkError": "Verbindingsfout",
+    "validationError": "Validatiefout",
+    "notFound": "Niet gevonden",
+    "unauthorized": "Niet geautoriseerd",
+    "serverError": "Serverfout"
+  }
+}

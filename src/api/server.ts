@@ -18,6 +18,7 @@ import { closeQueue } from '../queue/conversionQueue';
 // Import routes
 import risRoutes from './routes/risRoutes';
 import authRoutes from './routes/authRoutes';
+import workflowRoutes from './routes/workflowRoutes';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-in-production';
 const PORT = parseInt(process.env.PORT || '3000');
@@ -116,6 +117,7 @@ export async function createServer() {
   // Register routes
   await server.register(authRoutes, { prefix: '/api/auth' });
   await server.register(risRoutes, { prefix: '/api/ris' });
+  await server.register(workflowRoutes, { prefix: '/api/workflows' });
 
   // Error handler
   server.setErrorHandler((error, request, reply) => {

@@ -1,0 +1,251 @@
+---
+import MainLayout from '../layouts/Layout.astro';
+import { loadMachinesMetadata } from '../lib/machines';
+
+// Load machines data at build time
+const metadata = await loadMachinesMetadata();
+
+// Sample code snippets
+const integrationExample = `// Fetch workflow data
+const response = await fetch('/api/workflows/ris');
+const workflow = await response.json();
+
+// Initialize state machine
+const machine = createMachine({
+  id: workflow.id,
+  initial: workflow.initial,
+  states: workflow.states,
+  // ...
+});`;
+
+const rulesExample = `{
+  "conditions": {
+    "all": [
+      { "fact": "age", "operator": "greaterThanInclusive", "value": 18 },
+      { "fact": "residence", "operator": "equal", "value": "BE" },
+      { "fact": "income", "operator": "lessThan", "value": 1450 }
+    ]
+  },
+  "event": {
+    "type": "eligible",
+    "params": { "benefit": "RIS" }
+  }
+}`;
+---
+
+<MainLayout title="Documentation Développeur - PAA" description="Documentation technique pour intégrer les workflows PAA">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Documentation Développeur</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Intégrez les workflows administratifs belges dans vos applications avec notre API et nos outils.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      <a href="#api" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+        <svg class="w-8 h-8 text-purple-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <h3 class="font-semibold text-gray-900">API REST</h3>
+        <p class="text-sm text-gray-600 mt-1">Endpoints et exemples</p>
+      </a>
+
+      <a href="#xstate" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+        <svg class="w-8 h-8 text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+        </svg>
+        <h3 class="font-semibold text-gray-900">XState</h3>
+        <p class="text-sm text-gray-600 mt-1">State machines</p>
+      </a>
+
+      <a href="#rules" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+        <svg class="w-8 h-8 text-green-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+        </svg>
+        <h3 class="font-semibold text-gray-900">Rules Engine</h3>
+        <p class="text-sm text-gray-600 mt-1">Règles métier</p>
+      </a>
+
+      <a href="https://github.com/vanmarkic/PAA" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+        <svg class="w-8 h-8 text-gray-700 mb-3" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        <h3 class="font-semibold text-gray-900">GitHub</h3>
+        <p class="text-sm text-gray-600 mt-1">Code source</p>
+      </a>
+    </div>
+
+    <!-- API Documentation -->
+    <section id="api" class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">API REST</h2>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Endpoints Principaux</h3>
+
+        <div class="space-y-4">
+          <div class="border-l-4 border-green-500 pl-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">GET</span>
+              <code class="text-gray-900">/api/workflows</code>
+            </div>
+            <p class="text-sm text-gray-600">Liste tous les workflows disponibles</p>
+          </div>
+
+          <div class="border-l-4 border-green-500 pl-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">GET</span>
+              <code class="text-gray-900">/api/workflows/:id</code>
+            </div>
+            <p class="text-sm text-gray-600">Détails d'un workflow spécifique</p>
+          </div>
+
+          <div class="border-l-4 border-blue-500 pl-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">POST</span>
+              <code class="text-gray-900">/api/eligibility/check</code>
+            </div>
+            <p class="text-sm text-gray-600">Vérifier l'éligibilité à une prestation</p>
+          </div>
+
+          <div class="border-l-4 border-blue-500 pl-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">POST</span>
+              <code class="text-gray-900">/api/conversion/legal-text</code>
+            </div>
+            <p class="text-sm text-gray-600">Convertir un texte légal en langage clair</p>
+          </div>
+        </div>
+
+        <h3 class="text-lg font-semibold text-gray-900 mt-8 mb-4">Exemple d'Intégration</h3>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{integrationExample}</code></pre>
+      </div>
+    </section>
+
+    <!-- XState Documentation -->
+    <section id="xstate" class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">State Machines avec XState</h2>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <p class="text-gray-600 mb-4">
+          Tous les workflows sont implémentés comme des machines d'état XState, garantissant des transitions prévisibles et une logique métier robuste.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Structure d'une Machine</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>États</strong>: Chaque étape du processus administratif</li>
+          <li><strong>Événements</strong>: Actions qui déclenchent des transitions</li>
+          <li><strong>Guards</strong>: Conditions pour les transitions</li>
+          <li><strong>Actions</strong>: Effets de bord lors des transitions</li>
+        </ul>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-purple-50 p-4 rounded-lg">
+            <div class="text-3xl font-bold text-purple-600">{metadata.totalMachines}</div>
+            <div class="text-sm text-gray-700">Machines disponibles</div>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-lg">
+            <div class="text-3xl font-bold text-blue-600">
+              {metadata.machines.reduce((sum: number, m: any) => sum + (m.states?.length || 0), 0)}
+            </div>
+            <div class="text-sm text-gray-700">États totaux</div>
+          </div>
+          <div class="bg-green-50 p-4 rounded-lg">
+            <div class="text-3xl font-bold text-green-600">
+              {metadata.machines.reduce((sum: number, m: any) => sum + (m.events?.length || 0), 0)}
+            </div>
+            <div class="text-sm text-gray-700">Événements totaux</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rules Engine Documentation -->
+    <section id="rules" class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Moteur de Règles</h2>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <p class="text-gray-600 mb-4">
+          Les règles d'éligibilité sont définies en JSON et évaluées dynamiquement par json-rules-engine.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Format des Règles</h3>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{rulesExample}</code></pre>
+
+        <h3 class="text-lg font-semibold text-gray-900 mt-6 mb-4">Types de Conditions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2">Conditions Simples</h4>
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Âge minimum/maximum</li>
+              <li>Résidence en Belgique</li>
+              <li>Seuils de revenus</li>
+              <li>Situation familiale</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2">Conditions Complexes</h4>
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Combinaisons AND/OR</li>
+              <li>Règles temporelles</li>
+              <li>Calculs dynamiques</li>
+              <li>Dépendances entre prestations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Guide d'Installation</h2>
+      <div class="bg-gray-900 text-gray-100 rounded-lg p-6">
+        <pre><code># Clone the repository
+git clone https://github.com/vanmarkic/PAA.git
+cd PAA
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+
+# Start Docker services (PostgreSQL, Redis)
+npm run docker:up
+
+# Run migrations
+npm run migration:run
+
+# Start development server
+npm run dev:api
+
+# API available at http://localhost:3000</code></pre>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Ressources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="https://github.com/vanmarkic/PAA" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 mb-2">Code Source</h3>
+          <p class="text-sm text-gray-600">Repository GitHub avec exemples et documentation complète</p>
+        </a>
+
+        <a href="/api/docs" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 mb-2">Swagger/OpenAPI</h3>
+          <p class="text-sm text-gray-600">Documentation interactive de l'API</p>
+        </a>
+
+        <a href="https://xstate.js.org" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 mb-2">XState Docs</h3>
+          <p class="text-sm text-gray-600">Documentation officielle XState</p>
+        </a>
+
+        <a href="#contact" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 mb-2">Support Technique</h3>
+          <p class="text-sm text-gray-600">Contactez notre équipe pour de l'aide</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>

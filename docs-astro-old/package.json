@@ -1,0 +1,28 @@
+{
+  "name": "docs-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm run prepare:metadata && astro dev",
+    "build": "npm run prepare:metadata && astro build",
+    "preview": "astro preview",
+    "prepare:metadata": "cd .. && npm run docs:metadata && cp docs/machines-metadata.json docs-astro/public/",
+    "check": "astro check",
+    "clean": "rm -rf dist .astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^4.1.3",
+    "@statelyai/inspect": "^0.4.0",
+    "astro": "^5.15.8",
+    "mermaid": "^11.12.1",
+    "preact": "^10.27.2",
+    "xstate": "^5.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitest/ui": "^4.0.9",
+    "vitest": "^4.0.9"
+  }
+}

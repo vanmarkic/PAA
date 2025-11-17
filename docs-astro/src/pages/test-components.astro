@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TestDesignSystem from '../components/TestDesignSystem';
+---
+
+<BaseLayout title="Component Test - PAA Design System">
+  <main class="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100">
+    <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12 mb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold">Component Integration Test</h1>
+        <p class="text-purple-100 mt-2">
+          Testing React components with Figmapaa design system in Astro
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <TestDesignSystem client:load />
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,355 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Alert, AlertDescription, AlertTitle } from '../components/ui/alert';
+---
+
+<BaseLayout title="PAA Design System">
+  <main class="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100">
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold mb-4">PAA Design System</h1>
+        <p class="text-xl text-purple-100">
+          Complete design system ported from Figmapaa with OKLCH color palette
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Color Palette Section -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">OKLCH Color Palette</h2>
+
+        <div class="space-y-8">
+          <!-- Purple Brand Colors -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Purple Brand Theme</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-50 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 50</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-100 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 100</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-200 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 200</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-300 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 300</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-400 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 400</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-500 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 500</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-600 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 600</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-700 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 700</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-800 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 800</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-purple-900 rounded-lg border"></div>
+                <p class="mt-2 text-sm text-gray-600">Purple 900</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gradient Examples -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Brand Gradients</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="h-24 bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg"></div>
+              <div class="h-24 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg"></div>
+              <div class="h-24 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg"></div>
+            </div>
+          </div>
+
+          <!-- Semantic Colors -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Semantic Colors</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-full h-20 bg-green-500 rounded-lg"></div>
+                <p class="mt-2 text-sm text-gray-600">Success</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-blue-500 rounded-lg"></div>
+                <p class="mt-2 text-sm text-gray-600">Info</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-orange-500 rounded-lg"></div>
+                <p class="mt-2 text-sm text-gray-600">Warning</p>
+              </div>
+              <div class="text-center">
+                <div class="w-full h-20 bg-red-500 rounded-lg"></div>
+                <p class="mt-2 text-sm text-gray-600">Error</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Component Library -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">React Component Library</h2>
+        <p class="text-gray-600 mb-8">
+          All components are React islands that can be used in Astro pages with client:load directive.
+        </p>
+
+        <!-- Available Components List -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-purple-200">
+          <h3 class="text-lg font-semibold mb-4">Available Radix UI Components</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <Badge className="bg-purple-100 text-purple-700">Accordion</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Alert Dialog</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Alert</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Aspect Ratio</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Avatar</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Badge</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Breadcrumb</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Button</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Calendar</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Card</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Carousel</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Chart</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Checkbox</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Collapsible</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Command</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Context Menu</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Dialog</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Drawer</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Dropdown Menu</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Form</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Hover Card</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Input OTP</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Input</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Label</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Menubar</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Navigation Menu</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Pagination</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Popover</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Progress</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Radio Group</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Resizable</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Scroll Area</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Select</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Separator</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Sheet</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Sidebar</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Skeleton</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Slider</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Sonner</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Switch</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Table</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Tabs</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Textarea</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Toggle Group</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Toggle</Badge>
+            <Badge className="bg-purple-100 text-purple-700">Tooltip</Badge>
+          </div>
+        </div>
+      </section>
+
+      <!-- Component Examples -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Component Examples</h2>
+
+        <div class="space-y-8">
+          <!-- Buttons -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button client:load>Default Button</Button>
+              <Button client:load variant="secondary">Secondary</Button>
+              <Button client:load variant="outline">Outline</Button>
+              <Button client:load variant="ghost">Ghost</Button>
+              <Button client:load variant="link">Link</Button>
+              <Button client:load variant="destructive">Destructive</Button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card client:load>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                  <CardDescription>Card description with supporting text</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>This is the card content area where you can place any content.</p>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline">Action</Button>
+                </CardFooter>
+              </Card>
+
+              <Card client:load className="border-purple-200">
+                <CardHeader>
+                  <CardTitle className="text-purple-700">Purple Themed Card</CardTitle>
+                  <CardDescription>With purple border accent</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Content with the purple brand theme applied.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <!-- Alerts -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Alerts</h3>
+            <div class="space-y-4">
+              <Alert client:load>
+                <AlertTitle>Default Alert</AlertTitle>
+                <AlertDescription>
+                  This is a default alert with important information.
+                </AlertDescription>
+              </Alert>
+
+              <Alert client:load className="border-green-200 bg-green-50">
+                <AlertTitle className="text-green-800">Success Alert</AlertTitle>
+                <AlertDescription className="text-green-700">
+                  Operation completed successfully!
+                </AlertDescription>
+              </Alert>
+
+              <Alert client:load className="border-red-200 bg-red-50">
+                <AlertTitle className="text-red-800">Error Alert</AlertTitle>
+                <AlertDescription className="text-red-700">
+                  An error occurred during the operation.
+                </AlertDescription>
+              </Alert>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Badges</h3>
+            <div class="flex flex-wrap gap-2">
+              <Badge client:load>Default</Badge>
+              <Badge client:load variant="secondary">Secondary</Badge>
+              <Badge client:load variant="outline">Outline</Badge>
+              <Badge client:load variant="destructive">Destructive</Badge>
+              <Badge client:load className="bg-purple-500 text-white">Purple</Badge>
+              <Badge client:load className="bg-green-500 text-white">Success</Badge>
+              <Badge client:load className="bg-blue-500 text-white">Info</Badge>
+              <Badge client:load className="bg-orange-500 text-white">Warning</Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage Instructions -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Usage Instructions</h2>
+
+        <Card client:load>
+          <CardHeader>
+            <CardTitle>How to Use Components in Astro</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <h4 class="font-semibold mb-2">1. Import the component:</h4>
+              <pre class="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
+                <code>{`import { Button } from '../components/ui/button';`}</code>
+              </pre>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-2">2. Use with client directive for interactivity:</h4>
+              <pre class="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
+                <code>{`<Button client:load>Click me</Button>`}</code>
+              </pre>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-2">3. Available client directives:</h4>
+              <ul class="list-disc list-inside space-y-1 text-gray-700">
+                <li><code class="bg-gray-100 px-1">client:load</code> - Load and hydrate immediately</li>
+                <li><code class="bg-gray-100 px-1">client:idle</code> - Load when main thread is idle</li>
+                <li><code class="bg-gray-100 px-1">client:visible</code> - Load when component is visible</li>
+                <li><code class="bg-gray-100 px-1">client:only="react"</code> - Skip SSR, render only on client</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <!-- Design Tokens -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Design Tokens</h2>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <h3 class="text-lg font-semibold mb-4">CSS Variables</h3>
+          <p class="text-gray-600 mb-4">
+            All design tokens are available as CSS variables for consistent theming:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-medium mb-2">Colors</h4>
+              <ul class="text-sm text-gray-700 space-y-1 font-mono">
+                <li>--background</li>
+                <li>--foreground</li>
+                <li>--primary</li>
+                <li>--secondary</li>
+                <li>--accent</li>
+                <li>--muted</li>
+                <li>--destructive</li>
+                <li>--border</li>
+                <li>--ring</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-medium mb-2">Typography</h4>
+              <ul class="text-sm text-gray-700 space-y-1 font-mono">
+                <li>--font-size: 16px</li>
+                <li>--font-weight-normal: 400</li>
+                <li>--font-weight-medium: 500</li>
+                <li>--text-xs through --text-4xl</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tailwind v4 Features -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Tailwind v4 Features</h2>
+
+        <Alert client:load className="border-blue-200 bg-blue-50">
+          <AlertTitle className="text-blue-800">Using Tailwind v4 Beta</AlertTitle>
+          <AlertDescription className="text-blue-700">
+            This design system is built with Tailwind CSS v4 beta, featuring:
+            <ul class="mt-2 list-disc list-inside">
+              <li>Native OKLCH color support</li>
+              <li>Improved performance</li>
+              <li>CSS custom properties for all utilities</li>
+              <li>Enhanced gradient capabilities</li>
+            </ul>
+          </AlertDescription>
+        </Alert>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
