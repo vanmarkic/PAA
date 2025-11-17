@@ -1,10 +1,15 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 import { loadMachinesMetadata } from '../lib/machines';
+import { loadRulesMetadata } from '../lib/rules';
 
 // Load machines data at build time
 const metadata = await loadMachinesMetadata();
 const { machines, categories, totalMachines } = metadata;
+
+// Load rules data at build time
+const rulesMetadata = await loadRulesMetadata();
+const totalRules = rulesMetadata.totalRules;
 
 // Calculate stats
 const totalStates = machines.reduce((sum: number, m: any) => sum + (m.states?.length || 0), 0);
@@ -54,7 +59,7 @@ const categoryStats = categories.map((cat: string) => ({
     </div>
 
     <!-- Stats Dashboard -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
       <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
         <div class="flex items-center justify-between mb-2">
           <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,6 +68,16 @@ const categoryStats = categories.map((cat: string) => ({
         </div>
         <div class="text-3xl font-bold text-gray-900 mb-1">{totalMachines}</div>
         <div class="text-sm text-gray-600">Workflows</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between mb-2">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </div>
+        <div class="text-3xl font-bold text-gray-900 mb-1">{totalRules}</div>
+        <div class="text-sm text-gray-600">Règles Métier</div>
       </div>
 
       <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
@@ -109,25 +124,59 @@ const categoryStats = categories.map((cat: string) => ({
       </div>
     </div>
 
-    <!-- Featured Workflows -->
-    <div class="mb-12">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {machines.slice(0, 6).map((machine: any) => (
-          <a href={`/workflows/${machine.id}`} class="bg-white rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all p-6">
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
-                {machine.category}
-              </span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
-            <p class="text-gray-600 text-sm mb-4">{machine.description || 'Workflow administratif belge'}</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <span class="mr-4">{machine.states?.length || 0} états</span>
-              <span>{machine.events?.length || 0} événements</span>
-            </div>
+    <!-- Quick Navigation -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Featured Workflows -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
+        <div class="space-y-4">
+          {machines.slice(0, 3).map((machine: any) => (
+            <a href={`/workflows/${machine.id}`} class="block bg-white rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all p-4">
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">{machine.name}</h3>
+                <span class="inline-block px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
+                  {machine.category}
+                </span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">{machine.description || 'Workflow administratif belge'}</p>
+              <div class="flex items-center text-sm text-gray-500">
+                <span class="mr-4">{machine.states?.length || 0} états</span>
+                <span>{machine.events?.length || 0} événements</span>
+              </div>
+            </a>
+          ))}
+          <a href="/workflows" class="block text-center py-2 text-purple-600 hover:text-purple-700 font-medium">
+            Voir tous les workflows →
           </a>
-        ))}
+        </div>
+      </div>
+
+      <!-- Rules Section -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Règles Métier</h2>
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <div class="mb-4">
+            <div class="text-3xl font-bold text-gray-900">{totalRules}</div>
+            <div class="text-gray-600">Règles d'éligibilité et de calcul</div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Explorez les règles métier qui définissent l'éligibilité aux prestations sociales,
+            les calculs de montants, et les conditions d'accès.
+          </p>
+          <div class="grid grid-cols-2 gap-2 mb-4">
+            <div class="text-sm">
+              <span class="font-medium text-gray-900">{rulesMetadata.statistics?.uniqueFacts?.length || 0}</span>
+              <span class="text-gray-600"> critères uniques</span>
+            </div>
+            <div class="text-sm">
+              <span class="font-medium text-gray-900">{rulesMetadata.statistics?.uniqueOperators?.length || 0}</span>
+              <span class="text-gray-600"> opérateurs</span>
+            </div>
+          </div>
+          <a href="/rules" class="inline-block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+            Explorer les Règles
+          </a>
+        </div>
       </div>
     </div>
 

@@ -1,0 +1,507 @@
+---
+import MainLayout from '../../layouts/Layout.astro';
+import { loadRulesMetadata, getRuleById, getAllRules, formatOperator, getOperatorColor, getPriorityColor, getPriorityLabel, CATEGORY_NAMES, getBenefitDisplayName } from '../../lib/rules';
+import { getRelatedWorkflowsForRule, getRelatedFeaturesForRule } from '../../lib/cross-references';
+
+// This function generates all the static paths for each rule
+export async function getStaticPaths() {
+  const metadata = await loadRulesMetadata();
+  const allRules = getAllRules(metadata);
+
+  return allRules.map(rule => ({
+    params: { id: rule.id },
+    props: { rule, metadata }
+  }));
+}
+
+const { rule, metadata } = Astro.props;
+
+// Find related rules (same benefit type or category)
+const allRules = getAllRules(metadata);
+const relatedRules = allRules
+  .filter(r =>
+    (r.benefitType === rule.benefitType || r.category === rule.category) &&
+    r.id !== rule.id
+  )
+  .slice(0, 4);
+
+// Get related workflows and features using cross-references
+const relatedWorkflows = await getRelatedWorkflowsForRule(rule.id);
+const relatedFeatures = await getRelatedFeaturesForRule(rule.id);
+
+// Format condition for display
+function formatConditionValue(value: any): string {
+  if (typeof value === 'boolean') return value ? 'vrai' : 'faux';
+  if (typeof value === 'number') return value.toString();
+  if (typeof value === 'string') return value;
+  return JSON.stringify(value);
+}
+
+// Get a readable explanation for a condition
+function explainCondition(condition: any): string {
+  const fact = condition.fact;
+  const operator = formatOperator(condition.operator);
+  const value = formatConditionValue(condition.value);
+
+  // Create human-readable explanations for common facts
+  const factExplanations: Record<string, string> = {
+    'age': 'Âge',
+    'employmentStatus': 'Statut d\'emploi',
+    'hasRightsMaintenance': 'Maintien des droits',
+    'monthlySalaryGross': 'Salaire mensuel brut',
+    'currentBenefits': 'Prestations actuelles',
+    'residencyStatus': 'Statut de résidence',
+    'patrimonyValue': 'Valeur du patrimoine',
+    'income': 'Revenu',
+    'workingHoursPerWeek': 'Heures de travail par semaine',
+    'numberOfChildren': 'Nombre d\'enfants',
+    'isStudent': 'Est étudiant',
+    'hasDisability': 'A un handicap',
+    'meetsBasicConditions': 'Remplit les conditions de base'
+  };
+
+  const factName = factExplanations[fact] || fact;
+
+  return `${factName} ${operator} ${value}`;
+}
+
+// Create a visual representation of the logic tree
+function getLogicTreeIcon(type: 'all' | 'any'): string {
+  return type === 'all' ? 'ET' : 'OU';
+}
+---
+
+<MainLayout
+  title={`${rule.description} - Règle PAA`}
+  description={`Documentation de la règle ${rule.description} dans le système PAA belge`}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="mb-8">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+        <li>/</li>
+        <li><a href="/rules" class="hover:text-gray-700">Règles</a></li>
+        <li>/</li>
+        <li class="text-gray-900">{rule.id}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-start justify-between">
+        <div>
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{rule.description}</h1>
+          <p class="text-lg text-gray-600 mb-4">
+            Règle métier pour {getBenefitDisplayName(rule.benefitType || 'général')}
+          </p>
+          <div class="flex items-center gap-4">
+            <span class="inline-block px-4 py-2 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+              {CATEGORY_NAMES[rule.category] || rule.category}
+            </span>
+            <span class={`inline-block px-4 py-2 text-sm font-medium rounded-full bg-${getPriorityColor(rule.priority)}-100 text-${getPriorityColor(rule.priority)}-700`}>
+              Priorité: {rule.priority} - {getPriorityLabel(rule.priority)}
+            </span>
+            {rule.benefitType && (
+              <span class="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
+                {rule.benefitType}
+              </span>
+            )}
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <button onclick="window.print()" class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+            Imprimer
+          </button>
+          <button id="copy-rule" class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+            Copier JSON
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rule Details -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- Conditions Section -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Conditions</h2>
+
+          {rule.conditions.all && rule.conditions.all.length > 0 && (
+            <div class="mb-6">
+              <div class="flex items-center mb-3">
+                <span class="inline-block px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+                  {getLogicTreeIcon('all')} - Toutes ces conditions doivent être vraies
+                </span>
+              </div>
+              <div class="space-y-3 pl-4">
+                {rule.conditions.all.map((cond, index) => (
+                  <div class="flex items-start">
+                    <span class="flex-shrink-0 w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
+                      {index + 1}
+                    </span>
+                    <div class="ml-3 flex-1">
+                      <div class="bg-gray-50 rounded-lg p-3">
+                        <div class="font-medium text-gray-900">{explainCondition(cond)}</div>
+                        <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+                          <div>
+                            <span class="text-gray-500">Critère:</span>
+                            <code class="ml-1 px-1 py-0.5 bg-white rounded text-xs">{cond.fact}</code>
+                          </div>
+                          <div>
+                            <span class="text-gray-500">Opérateur:</span>
+                            <span class={`ml-1 px-2 py-0.5 bg-${getOperatorColor(cond.operator)}-100 text-${getOperatorColor(cond.operator)}-700 rounded text-xs`}>
+                              {formatOperator(cond.operator)}
+                            </span>
+                          </div>
+                          <div>
+                            <span class="text-gray-500">Valeur:</span>
+                            <code class="ml-1 px-1 py-0.5 bg-white rounded text-xs">{formatConditionValue(cond.value)}</code>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {rule.conditions.any && rule.conditions.any.length > 0 && (
+            <div>
+              <div class="flex items-center mb-3">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
+                  {getLogicTreeIcon('any')} - Au moins une de ces conditions doit être vraie
+                </span>
+              </div>
+              <div class="space-y-3 pl-4">
+                {rule.conditions.any.map((cond, index) => (
+                  <div class="flex items-start">
+                    <span class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
+                      {index + 1}
+                    </span>
+                    <div class="ml-3 flex-1">
+                      <div class="bg-gray-50 rounded-lg p-3">
+                        <div class="font-medium text-gray-900">{explainCondition(cond)}</div>
+                        <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+                          <div>
+                            <span class="text-gray-500">Critère:</span>
+                            <code class="ml-1 px-1 py-0.5 bg-white rounded text-xs">{cond.fact}</code>
+                          </div>
+                          <div>
+                            <span class="text-gray-500">Opérateur:</span>
+                            <span class={`ml-1 px-2 py-0.5 bg-${getOperatorColor(cond.operator)}-100 text-${getOperatorColor(cond.operator)}-700 rounded text-xs`}>
+                              {formatOperator(cond.operator)}
+                            </span>
+                          </div>
+                          <div>
+                            <span class="text-gray-500">Valeur:</span>
+                            <code class="ml-1 px-1 py-0.5 bg-white rounded text-xs">{formatConditionValue(cond.value)}</code>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {!rule.conditions.all && !rule.conditions.any && (
+            <p class="text-gray-500 italic">Aucune condition définie</p>
+          )}
+        </div>
+
+        <!-- Event/Outcome Section -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Résultat</h2>
+          <div class="space-y-4">
+            <div>
+              <span class="text-gray-600 font-medium">Type d'événement:</span>
+              <code class="ml-2 px-3 py-1 bg-purple-100 text-purple-700 rounded text-sm">{rule.event.type}</code>
+            </div>
+
+            {rule.event.params && (
+              <div>
+                <span class="text-gray-600 font-medium">Paramètres:</span>
+                <div class="mt-2 bg-gray-50 rounded-lg p-3">
+                  <pre class="text-sm text-gray-700">{JSON.stringify(rule.event.params, null, 2)}</pre>
+                </div>
+              </div>
+            )}
+
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h3 class="font-medium text-blue-900 mb-2">Interprétation</h3>
+              <p class="text-blue-700 text-sm">
+                {rule.event.type.includes('eligible') ? (
+                  <>Cette règle détermine l'éligibilité pour la prestation. Si toutes les conditions sont remplies, le demandeur est éligible.</>
+                ) : rule.event.type.includes('ineligible') ? (
+                  <>Cette règle identifie les cas d'inéligibilité. Si les conditions sont remplies, le demandeur n'est pas éligible.</>
+                ) : (
+                  <>Cette règle déclenche l'événement <code>{rule.event.type}</code> lorsque les conditions sont remplies.</>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Logic Tree -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Arbre Logique</h2>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <div class="flex items-center justify-center">
+              <div class="text-center">
+                <div class="inline-block px-4 py-2 bg-purple-600 text-white rounded-lg font-medium">
+                  Règle: {rule.id}
+                </div>
+
+                {(rule.conditions.all || rule.conditions.any) && (
+                  <div class="mt-4">
+                    <svg class="w-px h-8 bg-gray-400 mx-auto"></svg>
+
+                    {rule.conditions.all && (
+                      <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                        ET ({rule.conditions.all.length} conditions)
+                      </div>
+                    )}
+
+                    {rule.conditions.any && (
+                      <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                        OU ({rule.conditions.any.length} conditions)
+                      </div>
+                    )}
+
+                    <svg class="w-px h-8 bg-gray-400 mx-auto mt-4"></svg>
+
+                    <div class="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-lg">
+                      → {rule.event.type}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Metadata -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Métadonnées</h3>
+          <dl class="space-y-3">
+            <div>
+              <dt class="text-sm font-medium text-gray-500">ID de la règle</dt>
+              <dd class="mt-1 text-sm text-gray-900 font-mono">{rule.id}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-500">Fichier source</dt>
+              <dd class="mt-1 text-sm text-gray-900">{rule.fileName}.ts</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-500">Catégorie</dt>
+              <dd class="mt-1 text-sm text-gray-900">{CATEGORY_NAMES[rule.category] || rule.category}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-500">Type de prestation</dt>
+              <dd class="mt-1 text-sm text-gray-900">{rule.benefitType || 'Général'}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-500">Priorité</dt>
+              <dd class="mt-1">
+                <span class={`px-2 py-1 text-xs font-medium rounded-full bg-${getPriorityColor(rule.priority)}-100 text-${getPriorityColor(rule.priority)}-700`}>
+                  {rule.priority} - {getPriorityLabel(rule.priority)}
+                </span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Actions Rapides</h3>
+          <div class="space-y-3">
+            <button id="test-rule" class="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+              Tester cette règle
+            </button>
+            <button id="view-source" class="w-full px-4 py-2 bg-white text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50">
+              Voir le code source
+            </button>
+            <button id="export-rule" class="w-full px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
+              Exporter en JSON
+            </button>
+          </div>
+        </div>
+
+        <!-- Facts Used -->
+        {(rule.conditions.all?.length > 0 || rule.conditions.any?.length > 0) && (
+          <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Critères Utilisés</h3>
+            <div class="flex flex-wrap gap-2">
+              {[
+                ...(rule.conditions.all?.map(c => c.fact) || []),
+                ...(rule.conditions.any?.map(c => c.fact) || [])
+              ].filter((v, i, a) => a.indexOf(v) === i).map(fact => (
+                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                  {fact}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Related Workflows -->
+    {relatedWorkflows.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">
+          <span class="inline-flex items-center">
+            <svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+            Workflows Utilisant Cette Règle
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {relatedWorkflows.slice(0, 4).map((workflow: any) => (
+            <a href={`/workflows/${workflow.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-gray-900">{workflow.name}</h3>
+                <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded">
+                  Workflow
+                </span>
+              </div>
+              <p class="text-gray-600 text-sm mb-3">
+                {workflow.description || 'Workflow administratif'}
+              </p>
+              <div class="flex items-center text-sm text-gray-500">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                Score: {workflow.matchScore}
+              </div>
+              {workflow.matchReasons && (
+                <div class="mt-2 text-xs text-gray-400">
+                  {workflow.matchReasons.slice(0, 2).join(' • ')}
+                </div>
+              )}
+            </a>
+          ))}
+        </div>
+        {relatedWorkflows.length > 4 && (
+          <div class="mt-4 text-center">
+            <a href="/workflows" class="text-sm text-purple-600 hover:text-purple-700">
+              Voir tous les workflows →
+            </a>
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Related Features -->
+    {relatedFeatures.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">
+          <span class="inline-flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Spécifications Décrivant Cette Règle
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {relatedFeatures.slice(0, 4).map((feature: any) => (
+            <a href={`/features/${feature.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-green-500 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-gray-900">{feature.name}</h3>
+                <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">
+                  Feature
+                </span>
+              </div>
+              <p class="text-gray-600 text-sm mb-3">
+                {feature.description || 'Spécification comportementale'}
+              </p>
+              <div class="flex items-center text-sm text-gray-500">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                Score: {feature.matchScore}
+              </div>
+              {feature.matchReasons && (
+                <div class="mt-2 text-xs text-gray-400">
+                  {feature.matchReasons.slice(0, 2).join(' • ')}
+                </div>
+              )}
+            </a>
+          ))}
+        </div>
+        {relatedFeatures.length > 4 && (
+          <div class="mt-4 text-center">
+            <a href="/features" class="text-sm text-green-600 hover:text-green-700">
+              Voir toutes les spécifications →
+            </a>
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Related Rules -->
+    {relatedRules.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">
+          <span class="inline-flex items-center">
+            <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+            Règles Connexes
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {relatedRules.map((related) => (
+            <a href={`/rules/${related.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg transition-all">
+              <h3 class="font-semibold text-gray-900 mb-2">{related.description}</h3>
+              <p class="text-gray-600 text-sm mb-3">{related.benefitType || 'Général'}</p>
+              <div class="flex items-center text-sm text-gray-500">
+                <span class="mr-3">P{related.priority}</span>
+                <span>{related.event.type}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <script define:vars={{ rule }}>
+    // Copy rule JSON to clipboard
+    document.getElementById('copy-rule')?.addEventListener('click', () => {
+      const ruleJson = JSON.stringify(rule, null, 2);
+      navigator.clipboard.writeText(ruleJson).then(() => {
+        alert('Règle copiée dans le presse-papiers!');
+      });
+    });
+
+    // Export rule as JSON file
+    document.getElementById('export-rule')?.addEventListener('click', () => {
+      const ruleJson = JSON.stringify(rule, null, 2);
+      const blob = new Blob([ruleJson], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `rule-${rule.id}.json`;
+      a.click();
+    });
+
+    // Test rule (placeholder)
+    document.getElementById('test-rule')?.addEventListener('click', () => {
+      alert('Interface de test à venir. Cette fonctionnalité permettra de tester la règle avec différentes valeurs d\'entrée.');
+    });
+
+    // View source (placeholder)
+    document.getElementById('view-source')?.addEventListener('click', () => {
+      alert(`Code source dans: src/rules/${rule.fileName}.ts`);
+    });
+  </script>
+</MainLayout>
