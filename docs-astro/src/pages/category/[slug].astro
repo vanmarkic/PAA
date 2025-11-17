@@ -2,6 +2,7 @@
 import MachineLayout from '../../layouts/MachineLayout.astro';
 import CategoryBadge from '../../components/CategoryBadge.astro';
 import { loadMachinesMetadata, getMachinesByCategory } from '../../lib/machines';
+import { getUrl } from '../../lib/utils';
 import type { MachineMeta } from '../../lib/machines';
 
 export async function getStaticPaths() {
@@ -40,7 +41,7 @@ const { category, machines, allCategories } = Astro.props;
 
   <div class="machines-grid">
     {machines.map(machine => (
-      <a href={`${import.meta.env.BASE_URL}/machine/${machine.id}`} class="machine-card">
+      <a href={getUrl(`machine/${machine.id}`)} class="machine-card">
         <h3>{machine.name}</h3>
         <p>{machine.description || 'No description available'}</p>
         <div class="machine-stats">

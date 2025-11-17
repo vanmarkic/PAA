@@ -98,5 +98,9 @@ export function getUrl(path: string): string {
   
   // In build/SSG, use import.meta.env.BASE_URL which includes the /PAA path in production
   const baseUrl = import.meta.env.BASE_URL || '/';
-  return `${baseUrl}${cleanPath}`.replace(/\/+/g, '/');
+  // Ensure baseUrl ends with / for proper concatenation
+  const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  // Combine and remove duplicate slashes
+  const fullPath = `${normalizedBase}${cleanPath}`;
+  return fullPath.replace(/\/+/g, '/');
 }
