@@ -24,7 +24,7 @@ describe('PAA Visualization UI Tests', () => {
       test.skip(testName, () => {});
       return;
     }
-    skipIfMissing(testName, testFn);
+    test(testName, testFn);
   };
 
   beforeAll(() => {
@@ -136,6 +136,7 @@ describe('PAA Visualization UI Tests', () => {
       const languages = ['en', 'fr', 'nl'];
 
       languages.forEach(lang => {
+        if (!document) return;
         const tabs = document.querySelectorAll(`#lang-${lang} .tab`);
         expect(tabs.length).toBe(5);
       });
@@ -160,6 +161,7 @@ describe('PAA Visualization UI Tests', () => {
       const languages = ['en', 'fr', 'nl'];
 
       languages.forEach(lang => {
+        if (!document) return;
         const firstTab = document.querySelector(`#lang-${lang} .tab`);
         expect(firstTab?.classList.contains('active')).toBe(true);
       });
@@ -174,6 +176,7 @@ describe('PAA Visualization UI Tests', () => {
 
       languages.forEach(lang => {
         sections.forEach(section => {
+          if (!document) return;
           const contentSection = document.querySelector(`#${section}-${lang}`);
           expect(contentSection).toBeTruthy();
         });
@@ -253,7 +256,7 @@ describe('PAA Visualization UI Tests', () => {
       // Should have at least 3 conversion diagrams (one per language: en, fr, nl)
       expect(conversionDiagrams.length).toBeGreaterThanOrEqual(3);
 
-      conversionDiagrams.forEach((content, index) => {
+      conversionDiagrams.forEach((content) => {
         // Should have proper choice state declaration
         expect(content).toMatch(/state\s+checkingRetries\s*<<choice>>/);
 

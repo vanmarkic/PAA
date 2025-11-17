@@ -37,7 +37,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install root dependencies
         run: npm ci
 
       - name: Run linter (if configured)
@@ -53,8 +53,23 @@ jobs:
       - name: Generate documentation metadata
         run: npm run docs:metadata
 
-      - name: Generate visualization documentation
-        run: npm run docs:generate
+      - name: Cache Astro dependencies
+        uses: actions/cache@v4
+        with:
+          path: ./docs-astro/node_modules
+          key: ${{ runner.os }}-astro-${{ hashFiles('docs-astro/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-astro-
+
+      - name: Install Astro dependencies
+        working-directory: ./docs-astro
+        run: npm ci
+
+      - name: Build Astro documentation site
+        working-directory: ./docs-astro
+        env:
+          NODE_ENV: production
+        run: npm run build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -62,7 +77,7 @@ jobs:
           name: build-artifacts
           path: |
             dist/
-            docs/
+            docs-astro/dist/
           retention-days: 1
 
   # Job 2: Deploy to GitHub Pages (only on master/main)
@@ -88,7 +103,7 @@ jobs:
       - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './artifacts/docs'
+          path: './artifacts/docs-astro/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
