@@ -9,15 +9,15 @@ export default defineConfig({
   output: 'static',
 
   // GitHub Pages deployment configuration
-  // Base path: /PAA for GitHub Pages (only in production builds)
-  base: process.env.NODE_ENV === 'production' ? '/PAA' : '/',
+  // Base path: /PAA for GitHub Pages (only when E2E_TEST is not set)
+  base: process.env.E2E_TEST ? '/' : '/PAA',
 
   // Site URL for production
   site: 'https://vanmarkic.github.io',
 
   // Server configuration for development
   server: {
-    port: 4444,
+    port: 4321,
     host: true
   },
 

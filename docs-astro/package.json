@@ -6,7 +6,9 @@
     "dev": "npm run prepare:metadata && astro dev",
     "start": "astro dev",
     "build": "npm run prepare:metadata && astro build",
+    "build:local": "npm run prepare:metadata && E2E_TEST=true astro build",
     "preview": "astro preview",
+    "preview:local": "npm run build:local && astro preview",
     "astro": "astro",
     "clean": "rm -rf dist .astro node_modules",
     "prepare:metadata": "cd .. && npx ts-node scripts/generateMachinesMetadata.ts && cp docs/machines-metadata.json docs-astro/public/ && node scripts/generate-features-metadata-standalone.js"
