@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { getUrl } from '../lib/utils';
 
 interface Machine {
   id: string;
