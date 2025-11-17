@@ -24,9 +24,9 @@
   },
   "navigation": {
     "home": "Accueil",
-    "benefits": "Prestations",
-    "workflows": "Workflows",
-    "rules": "Règles métier",
+    "benefits": "Prestations sociales",
+    "procedures": "Procédures",
+    "rules": "Règles d'éligibilité",
     "documentation": "Documentation",
     "settings": "Paramètres",
     "language": "Langue",
@@ -43,20 +43,20 @@
   },
   "features": {
     "eligibility": {
-      "title": "Vérification d'éligibilité",
-      "description": "Calculer l'éligibilité aux prestations sociales"
+      "title": "Évaluation des droits",
+      "description": "Évaluer l'admissibilité aux prestations sociales"
     },
-    "conversion": {
-      "title": "Conversion de textes légaux",
-      "description": "Convertir des textes juridiques en langage simple"
+    "simplification": {
+      "title": "Simplification de textes légaux",
+      "description": "Traduire des textes juridiques en langage simple"
     },
-    "workflows": {
-      "title": "Workflows",
-      "description": "Visualiser les processus et machines d'état"
+    "procedures": {
+      "title": "Procédures administratives",
+      "description": "Visualiser les procédures et automates de processus"
     },
     "rules": {
-      "title": "Règles métier",
-      "description": "Explorer les règles Gherkin et JSON"
+      "title": "Règles d'éligibilité",
+      "description": "Explorer les critères d'attribution et règles métier"
     },
     "documentation": {
       "title": "Documentation",
@@ -115,7 +115,8 @@
   },
   "status": {
     "pending": "En attente",
-    "processing": "En traitement",
+    "underReview": "En examen",
+    "processing": "En cours d'évaluation",
     "approved": "Approuvé",
     "rejected": "Rejeté",
     "completed": "Terminé",

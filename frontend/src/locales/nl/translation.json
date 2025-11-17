@@ -24,9 +24,9 @@
   },
   "navigation": {
     "home": "Home",
-    "benefits": "Uitkeringen",
-    "workflows": "Workflows",
-    "rules": "Bedrijfsregels",
+    "benefits": "Sociale uitkeringen",
+    "procedures": "Procedures",
+    "rules": "Geschiktheidsregels",
     "documentation": "Documentatie",
     "settings": "Instellingen",
     "language": "Taal",
@@ -43,20 +43,20 @@
   },
   "features": {
     "eligibility": {
-      "title": "Geschiktheidscontrole",
-      "description": "Bereken geschiktheid voor sociale uitkeringen"
+      "title": "Rechtenbeoordeling",
+      "description": "Beoordeel geschiktheid voor sociale uitkeringen"
     },
-    "conversion": {
-      "title": "Conversie van wettelijke teksten",
-      "description": "Converteer juridische teksten naar eenvoudige taal"
+    "simplification": {
+      "title": "Vereenvoudiging van wetteksten",
+      "description": "Vertaal juridische teksten naar eenvoudige taal"
     },
-    "workflows": {
-      "title": "Workflows",
-      "description": "Visualiseer processen en toestandsmachines"
+    "procedures": {
+      "title": "Administratieve procedures",
+      "description": "Visualiseer procedures en procesautomaten"
     },
     "rules": {
-      "title": "Bedrijfsregels",
-      "description": "Verken Gherkin en JSON regels"
+      "title": "Geschiktheidsregels",
+      "description": "Verken toekenningscriteria en zakelijke regels"
     },
     "documentation": {
       "title": "Documentatie",
@@ -115,7 +115,8 @@
   },
   "status": {
     "pending": "In afwachting",
-    "processing": "In verwerking",
+    "underReview": "In behandeling",
+    "processing": "In beoordeling",
     "approved": "Goedgekeurd",
     "rejected": "Afgewezen",
     "completed": "Voltooid",

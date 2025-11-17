@@ -1,0 +1,133 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "clear": "Löschen",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "header": {
+    "title": "PAA - Plattform für Verwaltungshilfe",
+    "subtitle": "Demonstrationssystem zur Kodierung der belgischen Verwaltungslogik"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "benefits": "Sozialleistungen",
+    "procedures": "Verfahren",
+    "rules": "Zulassungsregeln",
+    "documentation": "Dokumentation",
+    "settings": "Einstellungen",
+    "language": "Sprache",
+    "theme": "Design",
+    "darkMode": "Dunkler Modus",
+    "lightMode": "Heller Modus",
+    "systemTheme": "Systemdesign"
+  },
+  "api": {
+    "status": "API-Status",
+    "checking": "Verbindung wird hergestellt...",
+    "connected": "API verbunden",
+    "error": "API nicht verfügbar"
+  },
+  "features": {
+    "eligibility": {
+      "title": "Leistungsbewertung",
+      "description": "Anspruch auf Sozialleistungen bewerten"
+    },
+    "simplification": {
+      "title": "Vereinfachung von Rechtstexten",
+      "description": "Rechtstexte in einfache Sprache übersetzen"
+    },
+    "procedures": {
+      "title": "Verwaltungsverfahren",
+      "description": "Verfahren und Prozessautomaten visualisieren"
+    },
+    "rules": {
+      "title": "Zulassungsregeln",
+      "description": "Leistungskriterien und Geschäftsregeln erkunden"
+    },
+    "documentation": {
+      "title": "Dokumentation",
+      "description": "Benutzerhandbuch und technische Referenz"
+    }
+  },
+  "benefits": {
+    "AGR": "Einkommensgarantie-Zuschuss",
+    "RIS": "Eingliederungseinkommen",
+    "GRAPA": "Einkommensgarantie für ältere Menschen",
+    "CPAS": "Öffentliches Sozialhilfezentrum (ÖSHZ)",
+    "allocationsFamiliales": "Familienbeihilfen",
+    "chomage": "Arbeitslosengeld",
+    "handicap": "Behindertenbeihilfen",
+    "pension": "Rente",
+    "mutuelle": "Krankenkasse",
+    "maternite": "Mutterschaftsurlaub",
+    "parental": "Elternurlaub",
+    "creditTemps": "Zeitkredit"
+  },
+  "legal": {
+    "references": "Rechtsgrundlagen",
+    "law": "Gesetz",
+    "royalDecree": "Königlicher Erlass",
+    "ministerialDecree": "Ministerieller Erlass",
+    "code": "Gesetzbuch",
+    "ordinance": "Verordnung",
+    "decree": "Dekret",
+    "articles": "Artikel",
+    "lastAmended": "Zuletzt geändert",
+    "authority": "Zuständige Behörde",
+    "monitorBelge": "Belgisches Staatsblatt",
+    "officialUrl": "Offizielle URL"
+  },
+  "forms": {
+    "personalInfo": "Persönliche Informationen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "birthDate": "Geburtsdatum",
+    "nationalNumber": "Nationalregisternummer",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "employment": "Beschäftigungssituation",
+    "income": "Einkommen",
+    "familySituation": "Familiensituation",
+    "married": "Verheiratet",
+    "single": "Alleinstehend",
+    "divorced": "Geschieden",
+    "widowed": "Verwitwet",
+    "cohabiting": "Zusammenlebend",
+    "children": "Kinder",
+    "dependents": "Unterhaltsberechtigte"
+  },
+  "status": {
+    "pending": "Ausstehend",
+    "underReview": "In Prüfung",
+    "processing": "In Bearbeitung",
+    "approved": "Genehmigt",
+    "rejected": "Abgelehnt",
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen"
+  },
+  "errors": {
+    "genericError": "Ein Fehler ist aufgetreten",
+    "networkError": "Verbindungsfehler",
+    "validationError": "Validierungsfehler",
+    "notFound": "Nicht gefunden",
+    "unauthorized": "Nicht autorisiert",
+    "serverError": "Serverfehler"
+  }
+}
