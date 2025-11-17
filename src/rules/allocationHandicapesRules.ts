@@ -1,32 +1,130 @@
 /**
- * Business Rules for Allocation pour Personnes Handicapées
+ * Business Rules for Allocations pour Personnes Handicapées
  *
- * Implements eligibility rules for Belgian disability allowance.
+ * Implements ARR (Allocation de Remplacement de Revenus) and AI (Allocation d'Intégration)
+ * Based on DG Handicap evaluation system with autonomy points (7-18)
  *
  * BASE JURIDIQUE:
  * - Loi du 27 février 1987 relative aux allocations aux personnes handicapées
- *   https://www.ejustice.just.fgov.be
- * - Service Public Fédéral Sécurité Sociale
- * - Évaluation médicale par ARR (Administration des Relations de Reclassement)
+ *   https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1987022737&table_name=loi
+ * - Arrêté royal du 6 juillet 1987 relatif à l'allocation de remplacement de revenus et à l'allocation d'intégration
+ *   https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1987070637&table_name=loi
+ * - Autorité: Direction générale Personnes handicapées (DG Handicap) - SPF Sécurité Sociale
+ * - Dernière indexation: janvier 2024
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck, LegalReference } from '../domain/types';
 
-// Constants from disability allowance law
-const MIN_AUTONOMY_POINTS = 9; // Minimum points for category 4
-const MAX_AUTONOMY_POINTS = 18; // Maximum points
-const CATEGORY_1_POINTS = 18; // Category 1: 18 points
-const CATEGORY_2_POINTS = 15; // Category 2: 15-17 points
-const CATEGORY_3_POINTS = 12; // Category 3: 12-14 points
-const CATEGORY_4_POINTS = 9; // Category 4: 9-11 points
+// Constants from Belgian disability law - 2024 indexed values
+// Source: DG Handicap - Montants indexés au 01.01.2024
+export const ARR_AMOUNTS_2024 = {
+  // Allocation de Remplacement de Revenus - Catégories
+  categories: {
+    A: {
+      name: 'Personne isolée',
+      annualAmount: 10567.43,
+      monthlyAmount: 880.62,
+      description: 'Personne handicapée vivant seule',
+    },
+    B: {
+      name: 'Personne cohabitante',
+      annualAmount: 15851.18,
+      monthlyAmount: 1320.93,
+      description: 'Personne vivant avec d\'autres personnes (sauf famille)',
+    },
+    C: {
+      name: 'Personne avec famille à charge',
+      annualAmount: 21421.87,
+      monthlyAmount: 1785.16,
+      description: 'Personne avec conjoint, partenaire ou enfant(s) à charge',
+    },
+  },
+  ageLimit: 65,
+  minimumDisabilityPercentage: 66,
+  incomeCeiling: {
+    categoryA: 880.62 * 12,
+    categoryB: 1320.93 * 12,
+    categoryC: 1785.16 * 12,
+  },
+};
 
-// Example amounts (to be updated with official 2024 amounts)
-const ALLOCATION_AMOUNTS_2024 = {
-  category1: 1500, // Monthly amount for category 1
-  category2: 1200, // Monthly amount for category 2
-  category3: 900, // Monthly amount for category 3
-  category4: 600, // Monthly amount for category 4
+export const AI_AMOUNTS_2024 = {
+  // Allocation d'Intégration - Catégories selon points d'autonomie
+  categories: {
+    I: {
+      autonomyPoints: { min: 7, max: 8 },
+      annualAmount: 1423.66,
+      monthlyAmount: 118.64,
+      description: 'Difficultés légères dans les activités quotidiennes',
+    },
+    II: {
+      autonomyPoints: { min: 9, max: 11 },
+      annualAmount: 5128.21,
+      monthlyAmount: 427.35,
+      description: 'Difficultés modérées dans les activités quotidiennes',
+    },
+    III: {
+      autonomyPoints: { min: 12, max: 14 },
+      annualAmount: 8155.74,
+      monthlyAmount: 679.65,
+      description: 'Difficultés importantes dans les activités quotidiennes',
+    },
+    IV: {
+      autonomyPoints: { min: 15, max: 16 },
+      annualAmount: 11852.46,
+      monthlyAmount: 987.71,
+      description: 'Difficultés très importantes dans les activités quotidiennes',
+    },
+    V: {
+      autonomyPoints: { min: 17, max: 18 },
+      annualAmount: 13437.21,
+      monthlyAmount: 1119.77,
+      description: 'Difficultés extrêmes - besoin d\'aide constante',
+    },
+  },
+  noAgeLimit: true, // Pas de limite d'âge pour l'AI
+  minimumPoints: 7,
+  maximumPoints: 18,
+};
+
+// Medical evaluation criteria
+export const AUTONOMY_EVALUATION_CRITERIA = {
+  activities: [
+    { name: 'Se déplacer', maxPoints: 3 },
+    { name: 'Préparer et manger', maxPoints: 3 },
+    { name: 'Hygiène personnelle', maxPoints: 3 },
+    { name: 'S\'habiller', maxPoints: 3 },
+    { name: 'Dangers et surveillance', maxPoints: 3 },
+    { name: 'Communication', maxPoints: 3 },
+  ],
+  totalMaxPoints: 18,
+  evaluationFrequency: 'Tous les 2-5 ans selon situation',
+  evaluationAuthority: 'Médecin évaluateur DG Handicap',
+};
+
+// Income exemptions
+export const INCOME_EXEMPTIONS = {
+  workIncome: {
+    exemptionRate: 0.5, // 50% des revenus professionnels exemptés
+    maxExemption: 7030.52, // Maximum annuel exempté
+    description: 'Encouragement à l\'activité professionnelle',
+  },
+  otherIncome: {
+    fullyExempt: ['allocations familiales', 'pension alimentaire enfants'],
+    partiallyExempt: ['rente accident travail', 'indemnités maladie'],
+  },
+};
+
+// Legal framework references
+export const HANDICAP_LEGAL_FRAMEWORK: LegalReference = {
+  type: 'loi',
+  title: 'Loi relative aux allocations aux personnes handicapées',
+  date: '1987-02-27',
+  officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1987022737&table_name=loi',
+  articles: ['2', '4', '6', '7', '8'],
+  lastAmended: '2024-01',
+  authority: 'Direction générale Personnes handicapées - SPF Sécurité Sociale',
 };
 
 /**
@@ -35,203 +133,144 @@ const ALLOCATION_AMOUNTS_2024 = {
 function createDisabilityAllowanceEngine(): Engine {
   const engine = new Engine();
 
-  // Rule 1: Minimum autonomy points required
+  // Rule 1: Age limit for ARR
   engine.addRule({
     conditions: {
-      any: [
+      all: [
         {
-          fact: 'autonomyPoints',
-          operator: 'lessThan',
-          value: MIN_AUTONOMY_POINTS,
+          fact: 'benefitType',
+          operator: 'equal',
+          value: 'ARR',
+        },
+        {
+          fact: 'age',
+          operator: 'greaterThan',
+          value: ARR_AMOUNTS_2024.ageLimit,
         },
       ],
     },
     event: {
-      type: 'disability-allowance-ineligible',
+      type: 'arr-ineligible',
       params: {
-        reason: `points d'autonomie insuffisants (${MIN_AUTONOMY_POINTS} points minimum requis)`,
+        reason: `Âge supérieur à ${ARR_AMOUNTS_2024.ageLimit} ans - pas d'ARR après l'âge de la pension`,
         priority: 10,
       },
     },
     priority: 10,
   });
 
-  // Rule 2: Medical evaluation required
-  engine.addRule({
-    conditions: {
-      any: [
-        {
-          fact: 'hasMedicalEvaluation',
-          operator: 'equal',
-          value: false,
-        },
-      ],
-    },
-    event: {
-      type: 'disability-allowance-ineligible',
-      params: {
-        reason: 'évaluation médicale requise',
-        priority: 10,
-      },
-    },
-    priority: 10,
-  });
-
-  // Rule 3: Residency requirement
-  engine.addRule({
-    conditions: {
-      any: [
-        {
-          fact: 'residencyStatus',
-          operator: 'equal',
-          value: 'no-valid-status',
-        },
-      ],
-    },
-    event: {
-      type: 'disability-allowance-ineligible',
-      params: {
-        reason: 'pas de résidence valide en Belgique',
-        priority: 10,
-      },
-    },
-    priority: 10,
-  });
-
-  // Rule 4: Category 1 eligibility (18 points)
+  // Rule 2: Minimum disability percentage for ARR
   engine.addRule({
     conditions: {
       all: [
         {
-          fact: 'autonomyPoints',
+          fact: 'benefitType',
           operator: 'equal',
-          value: CATEGORY_1_POINTS,
+          value: 'ARR',
         },
         {
-          fact: 'hasMedicalEvaluation',
-          operator: 'equal',
-          value: true,
-        },
-        {
-          fact: 'residencyStatus',
-          operator: 'notIn',
-          value: ['no-valid-status'],
+          fact: 'disabilityPercentage',
+          operator: 'lessThan',
+          value: ARR_AMOUNTS_2024.minimumDisabilityPercentage,
         },
       ],
     },
     event: {
-      type: 'disability-allowance-eligible-category1',
+      type: 'arr-ineligible',
       params: {
-        message: 'Éligible pour allocation catégorie 1',
-        category: 1,
+        reason: `Taux d'incapacité inférieur à ${ARR_AMOUNTS_2024.minimumDisabilityPercentage}%`,
+        priority: 9,
+      },
+    },
+    priority: 9,
+  });
+
+  // Rule 3: ARR eligible
+  engine.addRule({
+    conditions: {
+      all: [
+        {
+          fact: 'benefitType',
+          operator: 'equal',
+          value: 'ARR',
+        },
+        {
+          fact: 'age',
+          operator: 'lessThanInclusive',
+          value: ARR_AMOUNTS_2024.ageLimit,
+        },
+        {
+          fact: 'disabilityPercentage',
+          operator: 'greaterThanInclusive',
+          value: ARR_AMOUNTS_2024.minimumDisabilityPercentage,
+        },
+        {
+          fact: 'isResident',
+          operator: 'equal',
+          value: true,
+        },
+      ],
+    },
+    event: {
+      type: 'arr-eligible',
+      params: {
+        message: 'Éligible à l\'ARR',
       },
     },
     priority: 5,
   });
 
-  // Rule 5: Category 2 eligibility (15-17 points)
+  // Rule 4: Minimum autonomy points for AI
   engine.addRule({
     conditions: {
       all: [
         {
-          fact: 'autonomyPoints',
-          operator: 'greaterThanInclusive',
-          value: CATEGORY_2_POINTS,
+          fact: 'benefitType',
+          operator: 'equal',
+          value: 'AI',
         },
         {
           fact: 'autonomyPoints',
           operator: 'lessThan',
-          value: CATEGORY_1_POINTS,
-        },
-        {
-          fact: 'hasMedicalEvaluation',
-          operator: 'equal',
-          value: true,
-        },
-        {
-          fact: 'residencyStatus',
-          operator: 'notIn',
-          value: ['no-valid-status'],
+          value: AI_AMOUNTS_2024.minimumPoints,
         },
       ],
     },
     event: {
-      type: 'disability-allowance-eligible-category2',
+      type: 'ai-ineligible',
       params: {
-        message: 'Éligible pour allocation catégorie 2',
-        category: 2,
+        reason: `Points d'autonomie insuffisants (minimum ${AI_AMOUNTS_2024.minimumPoints} requis)`,
+        priority: 9,
       },
     },
-    priority: 5,
+    priority: 9,
   });
 
-  // Rule 6: Category 3 eligibility (12-14 points)
+  // Rule 5: AI eligible
   engine.addRule({
     conditions: {
       all: [
         {
+          fact: 'benefitType',
+          operator: 'equal',
+          value: 'AI',
+        },
+        {
           fact: 'autonomyPoints',
           operator: 'greaterThanInclusive',
-          value: CATEGORY_3_POINTS,
+          value: AI_AMOUNTS_2024.minimumPoints,
         },
         {
-          fact: 'autonomyPoints',
-          operator: 'lessThan',
-          value: CATEGORY_2_POINTS,
-        },
-        {
-          fact: 'hasMedicalEvaluation',
+          fact: 'isResident',
           operator: 'equal',
           value: true,
-        },
-        {
-          fact: 'residencyStatus',
-          operator: 'notIn',
-          value: ['no-valid-status'],
         },
       ],
     },
     event: {
-      type: 'disability-allowance-eligible-category3',
+      type: 'ai-eligible',
       params: {
-        message: 'Éligible pour allocation catégorie 3',
-        category: 3,
-      },
-    },
-    priority: 5,
-  });
-
-  // Rule 7: Category 4 eligibility (9-11 points)
-  engine.addRule({
-    conditions: {
-      all: [
-        {
-          fact: 'autonomyPoints',
-          operator: 'greaterThanInclusive',
-          value: CATEGORY_4_POINTS,
-        },
-        {
-          fact: 'autonomyPoints',
-          operator: 'lessThan',
-          value: CATEGORY_3_POINTS,
-        },
-        {
-          fact: 'hasMedicalEvaluation',
-          operator: 'equal',
-          value: true,
-        },
-        {
-          fact: 'residencyStatus',
-          operator: 'notIn',
-          value: ['no-valid-status'],
-        },
-      ],
-    },
-    event: {
-      type: 'disability-allowance-eligible-category4',
-      params: {
-        message: 'Éligible pour allocation catégorie 4',
-        category: 4,
+        message: 'Éligible à l\'AI',
       },
     },
     priority: 5,
@@ -246,139 +285,288 @@ function createDisabilityAllowanceEngine(): Engine {
 const disabilityAllowanceEngineInstance = createDisabilityAllowanceEngine();
 
 /**
- * Calculate disability allowance amount based on category and income
+ * Determine AI category based on autonomy points
  */
-export function calculateDisabilityAllowanceAmount(
-  category: 1 | 2 | 3 | 4,
-  monthlyIncome: number = 0
-): number {
-  const baseAmount = ALLOCATION_AMOUNTS_2024[`category${category}` as keyof typeof ALLOCATION_AMOUNTS_2024];
-
-  // Income reduction (simplified: 50% of income above threshold)
-  const incomeThreshold = 500; // Example threshold
-  let reduction = 0;
-
-  if (monthlyIncome > incomeThreshold) {
-    reduction = (monthlyIncome - incomeThreshold) * 0.5;
-  }
-
-  const netAmount = Math.max(0, baseAmount - reduction);
-
-  return Math.round(netAmount * 100) / 100;
-}
-
-/**
- * Determine category from autonomy points
- */
-export function determineCategory(autonomyPoints: number): 1 | 2 | 3 | 4 | null {
-  if (autonomyPoints === CATEGORY_1_POINTS) return 1;
-  if (autonomyPoints >= CATEGORY_2_POINTS && autonomyPoints < CATEGORY_1_POINTS) return 2;
-  if (autonomyPoints >= CATEGORY_3_POINTS && autonomyPoints < CATEGORY_2_POINTS) return 3;
-  if (autonomyPoints >= CATEGORY_4_POINTS && autonomyPoints < CATEGORY_3_POINTS) return 4;
+export function determineAICategory(autonomyPoints: number): string | null {
+  if (autonomyPoints < 7) return null;
+  if (autonomyPoints <= 8) return 'I';
+  if (autonomyPoints <= 11) return 'II';
+  if (autonomyPoints <= 14) return 'III';
+  if (autonomyPoints <= 16) return 'IV';
+  if (autonomyPoints <= 18) return 'V';
   return null;
 }
 
 /**
- * Check Disability Allowance eligibility
+ * Calculate ARR amount based on category and income
+ */
+export function calculateARRAmount(
+  category: 'A' | 'B' | 'C',
+  monthlyIncome: number,
+  hasWorkIncome: boolean = false,
+  workIncomeAmount: number = 0
+): number {
+  const baseAmount = ARR_AMOUNTS_2024.categories[category].monthlyAmount;
+
+  // Apply work income exemption if applicable
+  let countableIncome = monthlyIncome;
+  if (hasWorkIncome && workIncomeAmount > 0) {
+    const exemptedAmount = Math.min(
+      workIncomeAmount * INCOME_EXEMPTIONS.workIncome.exemptionRate,
+      INCOME_EXEMPTIONS.workIncome.maxExemption / 12
+    );
+    countableIncome = monthlyIncome - exemptedAmount;
+  }
+
+  // ARR = base amount - countable income
+  const arrAmount = Math.max(0, baseAmount - countableIncome);
+
+  return Math.round(arrAmount * 100) / 100;
+}
+
+/**
+ * Calculate AI amount based on category
+ */
+export function calculateAIAmount(category: string): number {
+  const categoryData = AI_AMOUNTS_2024.categories[category as keyof typeof AI_AMOUNTS_2024.categories];
+  return categoryData ? categoryData.monthlyAmount : 0;
+}
+
+/**
+ * Interface for disability user evaluation
+ */
+export interface DisabilityUser extends User {
+  age: number;
+  disabilityPercentage?: number;
+  autonomyPoints?: number;
+  householdSituation: 'isolated' | 'cohabitant' | 'family';
+  monthlyIncome: number;
+  hasWorkIncome?: boolean;
+  workIncomeAmount?: number;
+  isResident: boolean;
+  hasDisabilityRecognition: boolean;
+}
+
+/**
+ * Check eligibility for disability allocations
  */
 export async function checkDisabilityAllowanceEligibility(
-  autonomyPoints: number,
-  hasMedicalEvaluation: boolean,
-  residencyStatus: string,
-  monthlyIncome: number = 0
-): Promise<EligibilityCheck & { category?: 1 | 2 | 3 | 4 }> {
+  user: DisabilityUser,
+  benefitType: 'ARR' | 'AI'
+): Promise<EligibilityCheck> {
   const facts = {
-    autonomyPoints,
-    hasMedicalEvaluation,
-    residencyStatus,
-    monthlyIncome,
+    benefitType,
+    age: user.age,
+    disabilityPercentage: user.disabilityPercentage || 0,
+    autonomyPoints: user.autonomyPoints || 0,
+    isResident: user.isResident,
+    monthlyIncome: user.monthlyIncome,
   };
 
   try {
     const results = await disabilityAllowanceEngineInstance.run(facts);
 
-    const ineligibleEvent = results.events.find((e) => e.type === 'disability-allowance-ineligible');
-    const eligibleEvent = results.events.find((e) => e.type.startsWith('disability-allowance-eligible'));
+    if (benefitType === 'ARR') {
+      const eligibleEvent = results.events.find((e) => e.type === 'arr-eligible');
+      const ineligibleEvent = results.events.find((e) => e.type === 'arr-ineligible');
 
-    if (ineligibleEvent) {
-      return {
-        benefitType: 'family-allowance', // Using as placeholder, should add 'disability-allowance' to BenefitType
-        isEligible: false,
-        reason: ineligibleEvent.params?.reason,
-      };
+      if (eligibleEvent) {
+        const category = user.householdSituation === 'isolated' ? 'A' :
+                        user.householdSituation === 'cohabitant' ? 'B' : 'C';
+        const amount = calculateARRAmount(
+          category,
+          user.monthlyIncome,
+          user.hasWorkIncome,
+          user.workIncomeAmount
+        );
+
+        return {
+          benefitType: 'family-allowance', // Using as placeholder
+          isEligible: true,
+          calculatedAmount: amount,
+          optimizationSuggestion: `ARR Catégorie ${category}: ${ARR_AMOUNTS_2024.categories[category].description}`,
+        };
+      }
+
+      if (ineligibleEvent) {
+        return {
+          benefitType: 'family-allowance',
+          isEligible: false,
+          reason: ineligibleEvent.params?.reason,
+        };
+      }
     }
 
-    if (eligibleEvent) {
-      const category = eligibleEvent.params?.category as 1 | 2 | 3 | 4;
-      const amount = calculateDisabilityAllowanceAmount(category, monthlyIncome);
-      return {
-        benefitType: 'family-allowance', // Using as placeholder
-        isEligible: true,
-        calculatedAmount: amount,
-        category,
-      };
+    if (benefitType === 'AI') {
+      const eligibleEvent = results.events.find((e) => e.type === 'ai-eligible');
+      const ineligibleEvent = results.events.find((e) => e.type === 'ai-ineligible');
+
+      if (eligibleEvent && user.autonomyPoints) {
+        const category = determineAICategory(user.autonomyPoints);
+        if (category) {
+          const amount = calculateAIAmount(category);
+          const categoryData = AI_AMOUNTS_2024.categories[category as keyof typeof AI_AMOUNTS_2024.categories];
+
+          return {
+            benefitType: 'family-allowance',
+            isEligible: true,
+            calculatedAmount: amount,
+            optimizationSuggestion: `AI Catégorie ${category}: ${categoryData.description}`,
+          };
+        }
+      }
+
+      if (ineligibleEvent) {
+        return {
+          benefitType: 'family-allowance',
+          isEligible: false,
+          reason: ineligibleEvent.params?.reason,
+        };
+      }
     }
 
     return {
-      benefitType: 'family-allowance', // Using as placeholder
+      benefitType: 'family-allowance',
       isEligible: false,
-      reason: 'conditions non remplies',
+      reason: 'Conditions non remplies',
     };
   } catch (error) {
-    throw new Error(`Error checking Disability Allowance eligibility: ${error}`);
+    throw new Error(`Error checking disability eligibility: ${error}`);
   }
+}
+
+/**
+ * Calculate combined ARR + AI for eligible persons
+ */
+export function calculateCombinedAllocations(user: DisabilityUser): {
+  arr: number;
+  ai: number;
+  total: number;
+  details: string;
+} {
+  let arrAmount = 0;
+  let aiAmount = 0;
+
+  // Calculate ARR if eligible
+  if (user.age <= ARR_AMOUNTS_2024.ageLimit &&
+      user.disabilityPercentage &&
+      user.disabilityPercentage >= ARR_AMOUNTS_2024.minimumDisabilityPercentage) {
+    const category = user.householdSituation === 'isolated' ? 'A' :
+                    user.householdSituation === 'cohabitant' ? 'B' : 'C';
+    arrAmount = calculateARRAmount(
+      category,
+      user.monthlyIncome,
+      user.hasWorkIncome,
+      user.workIncomeAmount
+    );
+  }
+
+  // Calculate AI if eligible
+  if (user.autonomyPoints && user.autonomyPoints >= AI_AMOUNTS_2024.minimumPoints) {
+    const category = determineAICategory(user.autonomyPoints);
+    if (category) {
+      aiAmount = calculateAIAmount(category);
+    }
+  }
+
+  return {
+    arr: arrAmount,
+    ai: aiAmount,
+    total: arrAmount + aiAmount,
+    details: `ARR: ${arrAmount}€/mois, AI: ${aiAmount}€/mois`,
+  };
 }
 
 /**
  * Export rules in JSON format for transparency
  */
-export const DISABILITY_ALLOWANCE_RULES_JSON = {
+export const HANDICAP_RULES_JSON = {
   legalFramework: {
     primaryLegislation: {
-      title: 'Loi du 27 février 1987 relative aux allocations aux personnes handicapées',
-      date: '1987-02-27',
-      officialUrl: 'https://www.ejustice.just.fgov.be',
-      authority: 'Service Public Fédéral Sécurité Sociale',
+      title: HANDICAP_LEGAL_FRAMEWORK.title,
+      date: HANDICAP_LEGAL_FRAMEWORK.date,
+      officialUrl: HANDICAP_LEGAL_FRAMEWORK.officialUrl,
+      authority: HANDICAP_LEGAL_FRAMEWORK.authority,
+      articles: HANDICAP_LEGAL_FRAMEWORK.articles,
+      lastAmended: HANDICAP_LEGAL_FRAMEWORK.lastAmended,
+    },
+    implementingDecrees: [
+      {
+        title: 'Arrêté royal relatif à l\'allocation de remplacement de revenus et à l\'allocation d\'intégration',
+        date: '1987-07-06',
+        officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1987070637&table_name=loi',
+      },
+    ],
+    notes: [
+      'Les montants sont indexés annuellement selon l\'indice des prix à la consommation',
+      'L\'évaluation médicale est effectuée par les médecins de la DG Handicap',
+      'Les allocations sont cumulables entre elles (ARR + AI)',
+      'Révision possible en cas d\'aggravation du handicap',
+    ],
+  },
+  arrRules: {
+    eligibility: {
+      ageLimit: ARR_AMOUNTS_2024.ageLimit,
+      minimumDisability: `${ARR_AMOUNTS_2024.minimumDisabilityPercentage}%`,
+      residency: 'Résidence effective en Belgique requise',
+    },
+    categories: ARR_AMOUNTS_2024.categories,
+    incomeExemptions: INCOME_EXEMPTIONS,
+    calculation: 'ARR = Montant de base catégorie - Revenus comptables',
+  },
+  aiRules: {
+    eligibility: {
+      minimumPoints: AI_AMOUNTS_2024.minimumPoints,
+      maximumPoints: AI_AMOUNTS_2024.maximumPoints,
+      noAgeLimit: 'Pas de limite d\'âge pour l\'AI',
+      residency: 'Résidence effective en Belgique requise',
+    },
+    categories: AI_AMOUNTS_2024.categories,
+    evaluationCriteria: AUTONOMY_EVALUATION_CRITERIA,
+    calculation: 'AI basée uniquement sur les points d\'autonomie',
+  },
+  socialAdvantages: {
+    automatic: [
+      'Tarif social énergie (gaz et électricité)',
+      'Carte de stationnement pour personnes handicapées',
+      'Réduction transports publics (carte accompagnateur gratuit)',
+      'Exonération précompte immobilier (selon région)',
+      'Tarif téléphonique social',
+      'BIM (Bénéficiaire Intervention Majorée) automatique',
+    ],
+    onRequest: [
+      'Allocations familiales majorées',
+      'Prime d\'adaptation du logement',
+      'Aide matérielle (voiturette, prothèses)',
+      'Carte européenne de stationnement',
+    ],
+  },
+  procedureAndObligations: {
+    application: {
+      platform: 'https://handicap.belgium.be',
+      documents: [
+        'Formulaire de demande en ligne',
+        'Documents médicaux récents',
+        'Preuves de revenus',
+        'Composition de ménage',
+      ],
+      processingTime: '6 mois maximum',
+      appeal: 'Tribunal du travail compétent',
+    },
+    obligations: [
+      'Déclarer tout changement de situation dans les 30 jours',
+      'Déclarer revenus professionnels immédiatement',
+      'Déclarer changement état civil (mariage, divorce, cohabitation)',
+      'Se soumettre aux contrôles médicaux si demandé',
+      'Résider en Belgique minimum 8 mois par an',
+    ],
+    sanctions: {
+      falseDeclaration: 'Récupération des montants + sanctions pénales possibles',
+      nonDeclaration: 'Suspension ou réduction des allocations',
+      absenceControle: 'Suspension jusqu\'à régularisation',
     },
   },
-  amounts: ALLOCATION_AMOUNTS_2024,
-  rules: [
-    {
-      id: 'disability-allowance-autonomy-points',
-      description: `Points d'autonomie doivent être entre ${MIN_AUTONOMY_POINTS} et ${MAX_AUTONOMY_POINTS}`,
-      condition: `autonomyPoints >= ${MIN_AUTONOMY_POINTS} AND autonomyPoints <= ${MAX_AUTONOMY_POINTS}`,
-      priority: 10,
-      legalBasis: {
-        loi: 'Loi du 27 février 1987',
-        url: 'https://www.ejustice.just.fgov.be',
-      },
-    },
-    {
-      id: 'disability-allowance-medical-evaluation',
-      description: 'Évaluation médicale par ARR requise',
-      condition: 'hasMedicalEvaluation == true',
-      priority: 10,
-      legalBasis: {
-        loi: 'Loi du 27 février 1987',
-        url: 'https://www.ejustice.just.fgov.be',
-      },
-    },
-    {
-      id: 'disability-allowance-residency-requirement',
-      description: 'Résidence valide en Belgique requise',
-      condition: 'residencyStatus != no-valid-status',
-      priority: 10,
-      legalBasis: {
-        loi: 'Loi du 27 février 1987',
-        url: 'https://www.ejustice.just.fgov.be',
-      },
-    },
-  ],
-  categories: {
-    category1: { points: CATEGORY_1_POINTS, description: '18 points' },
-    category2: { points: `${CATEGORY_2_POINTS}-17`, description: '15-17 points' },
-    category3: { points: `${CATEGORY_3_POINTS}-14`, description: '12-14 points' },
-    category4: { points: `${CATEGORY_4_POINTS}-11`, description: '9-11 points' },
-  },
+  lastUpdate: '2024-01-01',
+  source: 'DG Handicap - SPF Sécurité Sociale',
 };
 
