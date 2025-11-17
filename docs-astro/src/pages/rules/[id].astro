@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/Layout.astro';
 import { loadRulesMetadata, getRuleById, getAllRules, formatOperator, getOperatorColor, getPriorityColor, getPriorityLabel, CATEGORY_NAMES, getBenefitDisplayName } from '../../lib/rules';
 import { getRelatedWorkflowsForRule, getRelatedFeaturesForRule } from '../../lib/cross-references';
+import { getUrl } from '../../lib/utils';
 
 // This function generates all the static paths for each rule
 export async function getStaticPaths() {
@@ -366,7 +367,7 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {relatedWorkflows.slice(0, 4).map((workflow: any) => (
-            <a href={`/workflows/${workflow.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`workflows/${workflow.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
               <div class="flex items-start justify-between mb-3">
                 <h3 class="font-semibold text-gray-900">{workflow.name}</h3>
                 <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded">
@@ -460,7 +461,7 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {relatedRules.map((related) => (
-            <a href={`/rules/${related.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`rules/${related.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg transition-all">
               <h3 class="font-semibold text-gray-900 mb-2">{related.description}</h3>
               <p class="text-gray-600 text-sm mb-3">{related.benefitType || 'Général'}</p>
               <div class="flex items-center text-sm text-gray-500">

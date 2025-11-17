@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 import { loadRulesMetadata, getCategoryStats, getRulesByCategory, getAllRules, CATEGORY_NAMES, CATEGORY_ICONS, getPriorityColor, getPriorityLabel, formatOperator } from '../lib/rules';
+import { getUrl } from '../lib/utils';
 
 // Load rules data at build time
 const metadata = await loadRulesMetadata();
@@ -122,7 +123,7 @@ const featuredRules = allRules
                   </div>
                 )}
               </div>
-              <a href={`/rules/${rule.id}`} class="mt-4 inline-block text-purple-600 hover:text-purple-700 font-medium text-sm">
+              <a href={getUrl(`rules/${rule.id}`)} class="mt-4 inline-block text-purple-600 hover:text-purple-700 font-medium text-sm">
                 Voir les détails →
               </a>
             </div>
@@ -204,7 +205,7 @@ const featuredRules = allRules
             <!-- Sample rules from this category -->
             {category.rules.slice(0, 3).map(rule => (
               <div class="border-t pt-3 mt-3">
-                <a href={`/rules/${rule.id}`} class="block text-sm text-gray-700 hover:text-purple-600 transition-colors">
+                <a href={getUrl(`rules/${rule.id}`)} class="block text-sm text-gray-700 hover:text-purple-600 transition-colors">
                   → {rule.description}
                 </a>
               </div>

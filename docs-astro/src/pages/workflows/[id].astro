@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/Layout.astro';
 import { loadMachinesMetadata } from '../../lib/machines';
 import { getRelatedFeatures, getRelatedRules } from '../../lib/cross-references';
+import { getUrl } from '../../lib/utils';
 
 // This function generates all the static paths for each workflow
 export async function getStaticPaths() {
@@ -194,7 +195,7 @@ const relatedRules = await getRelatedRules(machine.id);
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {relatedWorkflows.map((related: any) => (
-            <a href={`/workflows/${related.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`workflows/${related.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
               <h3 class="font-semibold text-gray-900 mb-2">{related.name}</h3>
               <p class="text-gray-600 text-sm mb-3">{related.description || 'Workflow administratif'}</p>
               <div class="flex items-center text-sm text-gray-500">
@@ -267,7 +268,7 @@ const relatedRules = await getRelatedRules(machine.id);
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {relatedRules.slice(0, 4).map((rule: any) => (
-            <a href={`/rules/${rule.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`rules/${rule.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg transition-all">
               <div class="flex items-start justify-between mb-3">
                 <h3 class="font-semibold text-gray-900">{rule.name}</h3>
                 <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
