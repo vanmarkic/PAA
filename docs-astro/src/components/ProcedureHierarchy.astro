@@ -1,0 +1,250 @@
+---
+import { getUrl } from '../lib/utils';
+
+interface Props {
+  procedureId: string;
+  procedureName: string;
+  relatedRules: Array<{
+    id: string;
+    name: string;
+    description?: string;
+    matchScore?: number;
+  }>;
+  relatedFeatures: Array<{
+    id: string;
+    name: string;
+    description?: string;
+    matchScore?: number;
+  }>;
+  contextTypes?: string[];
+}
+
+const { procedureId, procedureName, relatedRules, relatedFeatures, contextTypes = [] } = Astro.props;
+
+// Extract data types from procedure name and context if not provided
+const inferredTypes = contextTypes.length > 0 ? contextTypes : [
+  'User Data',
+  'Application State',
+  'Processing Status',
+  'Validation Results'
+];
+---
+
+<div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8 mb-12">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+    <svg class="w-6 h-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+    </svg>
+    Architecture de la Procédure
+  </h2>
+
+  <!-- Main Procedure Box -->
+  <div class="relative">
+    <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg p-6 shadow-lg">
+      <div class="flex items-start justify-between">
+        <div>
+          <div class="text-xs font-medium text-purple-200 mb-1 flex items-center group relative">
+            COMMENT (HOW)
+            <button type="button" class="ml-1 hover:text-white transition-colors" data-tooltip="how">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <div class="tooltip-content hidden absolute left-0 top-6 bg-gray-900 text-white text-xs rounded-lg p-3 w-64 z-20" id="tooltip-how">
+              Les procédures définissent COMMENT le processus s'exécute - le flux étape par étape, les transitions et la logique d'orchestration.
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">{procedureName}</h3>
+          <p class="text-purple-100 text-sm">Procédure administrative / Process Automata</p>
+        </div>
+        <div class="bg-purple-800 bg-opacity-50 rounded-lg px-4 py-2">
+          <div class="text-xs text-purple-200">ID</div>
+          <div class="font-mono text-sm">{procedureId}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connection Lines -->
+    <div class="flex justify-around mt-4">
+      <div class="w-px h-12 bg-gradient-to-b from-purple-600 to-transparent relative left-1/4"></div>
+      <div class="w-px h-12 bg-gradient-to-b from-purple-600 to-transparent"></div>
+      <div class="w-px h-12 bg-gradient-to-b from-purple-600 to-transparent relative right-1/4"></div>
+    </div>
+
+    <!-- Three Connected Boxes -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
+
+      <!-- Rules Box (WHEN) -->
+      <div class="bg-white rounded-lg border-2 border-blue-200 p-5 shadow-md hover:shadow-lg transition-shadow">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs font-medium text-blue-600 flex items-center group relative">
+            QUAND (WHEN)
+            <button type="button" class="ml-1 hover:text-blue-800 transition-colors" data-tooltip="when">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <div class="tooltip-content hidden absolute left-0 top-6 bg-gray-900 text-white text-xs rounded-lg p-3 w-64 z-20" id="tooltip-when">
+              Les règles définissent QUAND certaines conditions sont remplies - critères d'éligibilité, validations et garde-fous.
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-gray-900 mb-3">Règles d'Éligibilité</h4>
+        {relatedRules.length > 0 ? (
+          <div class="space-y-2">
+            {relatedRules.slice(0, 3).map((rule) => (
+              <a href={getUrl(`rules/${rule.id}`)}
+                 class="block p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors">
+                <div class="text-sm font-medium text-gray-900">{rule.name}</div>
+                {rule.matchScore && (
+                  <div class="text-xs text-gray-500 mt-1">Score: {rule.matchScore}</div>
+                )}
+              </a>
+            ))}
+            {relatedRules.length > 3 && (
+              <a href={getUrl('rules')} class="text-xs text-blue-600 hover:text-blue-700 block mt-2">
+                +{relatedRules.length - 3} autres règles →
+              </a>
+            )}
+          </div>
+        ) : (
+          <p class="text-sm text-gray-500 italic">Aucune règle liée identifiée</p>
+        )}
+      </div>
+
+      <!-- Types Box (WHAT data) -->
+      <div class="bg-white rounded-lg border-2 border-green-200 p-5 shadow-md hover:shadow-lg transition-shadow">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs font-medium text-green-600 flex items-center group relative">
+            QUOI (WHAT)
+            <button type="button" class="ml-1 hover:text-green-800 transition-colors" data-tooltip="what">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <div class="tooltip-content hidden absolute left-0 top-6 bg-gray-900 text-white text-xs rounded-lg p-3 w-64 z-20" id="tooltip-what-data">
+              Les types définissent QUELLES données sont manipulées - structures de données, modèles et informations traitées.
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-gray-900 mb-3">Types de Données</h4>
+        <div class="space-y-2">
+          {inferredTypes.slice(0, 4).map((type) => (
+            <div class="p-2 bg-green-50 rounded">
+              <div class="text-sm font-medium text-gray-900 flex items-center">
+                <svg class="w-3 h-3 text-green-600 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                {type}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Features Box (WHAT should happen) -->
+      <div class="bg-white rounded-lg border-2 border-orange-200 p-5 shadow-md hover:shadow-lg transition-shadow">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs font-medium text-orange-600 flex items-center group relative">
+            CE QUI DOIT ARRIVER
+            <button type="button" class="ml-1 hover:text-orange-800 transition-colors" data-tooltip="what-should">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <div class="tooltip-content hidden absolute left-0 top-6 bg-gray-900 text-white text-xs rounded-lg p-3 w-64 z-20" id="tooltip-what-should">
+              Les spécifications définissent CE QUI DOIT SE PASSER - comportements attendus, scénarios et critères d'acceptation.
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-gray-900 mb-3">Spécifications</h4>
+        {relatedFeatures.length > 0 ? (
+          <div class="space-y-2">
+            {relatedFeatures.slice(0, 3).map((feature) => (
+              <a href={getUrl(`features/${feature.id}`)}
+                 class="block p-2 bg-orange-50 rounded hover:bg-orange-100 transition-colors">
+                <div class="text-sm font-medium text-gray-900">{feature.name}</div>
+                {feature.matchScore && (
+                  <div class="text-xs text-gray-500 mt-1">Score: {feature.matchScore}</div>
+                )}
+              </a>
+            ))}
+            {relatedFeatures.length > 3 && (
+              <a href={getUrl('features')} class="text-xs text-orange-600 hover:text-orange-700 block mt-2">
+                +{relatedFeatures.length - 3} autres spécifications →
+              </a>
+            )}
+          </div>
+        ) : (
+          <p class="text-sm text-gray-500 italic">Aucune spécification liée</p>
+        )}
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+      <h5 class="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Légende</h5>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-600">
+        <div class="flex items-start">
+          <span class="font-semibold text-purple-600 mr-2">HOW:</span>
+          <span>La procédure définit comment le processus s'exécute</span>
+        </div>
+        <div class="flex items-start">
+          <span class="font-semibold text-blue-600 mr-2">WHEN:</span>
+          <span>Les règles déterminent quand les conditions sont remplies</span>
+        </div>
+        <div class="flex items-start">
+          <span class="font-semibold text-green-600 mr-2">WHAT:</span>
+          <span>Les données et résultats attendus du processus</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Tooltip interactions
+  document.addEventListener('DOMContentLoaded', () => {
+    const tooltipButtons = document.querySelectorAll('[data-tooltip]');
+
+    tooltipButtons.forEach(button => {
+      const tooltipId = `tooltip-${button.getAttribute('data-tooltip')}`;
+      const tooltip = document.getElementById(tooltipId);
+
+      if (tooltip) {
+        button.addEventListener('mouseenter', () => {
+          tooltip.classList.remove('hidden');
+        });
+
+        button.addEventListener('mouseleave', () => {
+          tooltip.classList.add('hidden');
+        });
+
+        // For mobile - toggle on click
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          tooltip.classList.toggle('hidden');
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  .tooltip-content {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+</style>

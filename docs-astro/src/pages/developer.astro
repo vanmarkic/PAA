@@ -7,15 +7,15 @@ import { getUrl } from '../lib/utils';
 const metadata = await loadMachinesMetadata();
 
 // Sample code snippets
-const integrationExample = `// Fetch workflow data
+const integrationExample = `// Récupérer les données d'une procédure
 const response = await fetch('/api/workflows/ris');
-const workflow = await response.json();
+const procedure = await response.json();
 
-// Initialize state machine
+// Initialiser la machine d'état
 const machine = createMachine({
-  id: workflow.id,
-  initial: workflow.initial,
-  states: workflow.states,
+  id: procedure.id,
+  initial: procedure.initial,
+  states: procedure.states,
   // ...
 });`;
 
@@ -34,13 +34,13 @@ const rulesExample = `{
 }`;
 ---
 
-<MainLayout title="Documentation Développeur - PAA" description="Documentation technique pour intégrer les workflows PAA">
+<MainLayout title="Documentation Développeur - PAA" description="Documentation technique pour intégrer les procédures PAA">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Header -->
     <div class="text-center mb-16">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Documentation Développeur</h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Intégrez les workflows administratifs belges dans vos applications avec notre API et nos outils.
+        Intégrez les procédures administratives belges dans vos applications avec notre API et nos outils.
       </p>
     </div>
 
@@ -67,7 +67,7 @@ const rulesExample = `{
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
         </svg>
         <h3 class="font-semibold text-gray-900">Rules Engine</h3>
-        <p class="text-sm text-gray-600 mt-1">Règles métier</p>
+        <p class="text-sm text-gray-600 mt-1">Règles d'éligibilité</p>
       </a>
 
       <a href="https://github.com/vanmarkic/PAA" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
@@ -91,7 +91,7 @@ const rulesExample = `{
               <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">GET</span>
               <code class="text-gray-900">/api/workflows</code>
             </div>
-            <p class="text-sm text-gray-600">Liste tous les workflows disponibles</p>
+            <p class="text-sm text-gray-600">Liste toutes les procédures disponibles</p>
           </div>
 
           <div class="border-l-4 border-green-500 pl-4">
@@ -99,7 +99,7 @@ const rulesExample = `{
               <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">GET</span>
               <code class="text-gray-900">/api/workflows/:id</code>
             </div>
-            <p class="text-sm text-gray-600">Détails d'un workflow spécifique</p>
+            <p class="text-sm text-gray-600">Détails d'une procédure spécifique</p>
           </div>
 
           <div class="border-l-4 border-blue-500 pl-4">
@@ -115,7 +115,7 @@ const rulesExample = `{
               <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">POST</span>
               <code class="text-gray-900">/api/conversion/legal-text</code>
             </div>
-            <p class="text-sm text-gray-600">Convertir un texte légal en langage clair</p>
+            <p class="text-sm text-gray-600">Simplifier un texte légal en langage clair</p>
           </div>
         </div>
 
@@ -129,7 +129,7 @@ const rulesExample = `{
       <h2 class="text-2xl font-bold text-gray-900 mb-6">State Machines avec XState</h2>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <p class="text-gray-600 mb-4">
-          Tous les workflows sont implémentés comme des machines d'état XState, garantissant des transitions prévisibles et une logique métier robuste.
+          Toutes les procédures sont implémentées comme des machines d'état XState, garantissant des transitions prévisibles et une logique d'éligibilité robuste.
         </p>
 
         <h3 class="text-lg font-semibold text-gray-900 mb-4">Structure d'une Machine</h3>

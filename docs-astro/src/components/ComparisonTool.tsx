@@ -51,7 +51,7 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
         return prev.filter(id => id !== machineId);
       }
       if (prev.length >= 4) {
-        alert('Vous pouvez comparer jusqu\'à 4 workflows maximum');
+        alert('Vous pouvez comparer jusqu\'à 4 procédures maximum');
         return prev;
       }
       return [...prev, machineId];
@@ -70,7 +70,7 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
     <div>
       {/* Selection Panel */}
       <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Sélectionner des Workflows</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Sélectionner des Procédures</h3>
 
         {/* Filters */}
         <div className="flex gap-4 mb-4">
@@ -121,7 +121,7 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
         {/* Selection Status */}
         <div className="mt-4 flex items-center justify-between">
           <span className="text-sm text-gray-600">
-            {selectedMachines.length}/4 workflows sélectionnés
+            {selectedMachines.length}/4 procédures sélectionnées
           </span>
           {selectedMachines.length > 0 && (
             <button
@@ -287,7 +287,7 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
           <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
-          <p className="text-gray-500">Sélectionnez des workflows à comparer</p>
+          <p className="text-gray-500">Sélectionnez des procédures à comparer</p>
         </div>
       )}
     </div>

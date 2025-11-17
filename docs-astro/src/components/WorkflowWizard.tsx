@@ -249,7 +249,7 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
       {currentStep === 'results' && (
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Workflows Recommandés
+            Procédures Recommandées
           </h2>
 
           {results.length > 0 ? (
@@ -264,7 +264,7 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-900 mb-1">{machine.name}</h3>
                       <p className="text-sm text-gray-600 mb-2">
-                        {machine.description || machine.plainLanguage || 'Workflow administratif belge'}
+                        {machine.description || machine.plainLanguage || 'Procédure administrative belge'}
                       </p>
                       <div className="flex items-center gap-4 text-xs text-gray-500">
                         <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
@@ -284,7 +284,7 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
           ) : (
             <div className="bg-gray-50 rounded-lg p-8 text-center mb-6">
               <p className="text-gray-600">
-                Aucun workflow ne correspond exactement à vos critères.
+                Aucune procédure ne correspond exactement à vos critères.
                 Essayez d'élargir votre recherche ou consultez toutes les catégories.
               </p>
             </div>

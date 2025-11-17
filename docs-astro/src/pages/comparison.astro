@@ -12,13 +12,13 @@ const url = new URL(Astro.request.url);
 const workflowIds = url.searchParams.get('workflows')?.split(',') || [];
 ---
 
-<MainLayout title="Comparaison de Workflows - PAA" description="Comparez les workflows administratifs belges">
+<MainLayout title="Comparaison de Procédures - PAA" description="Comparez les procédures administratives belges">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Header -->
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Outil de Comparaison</h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Comparez jusqu'à 4 workflows côte à côte pour comprendre leurs différences et similitudes.
+        Comparez jusqu'à 4 procédures côte à côte pour comprendre leurs différences et similitudes.
       </p>
     </div>
 
@@ -31,9 +31,9 @@ const workflowIds = url.searchParams.get('workflows')?.split(',') || [];
         Comment utiliser l'outil de comparaison
       </h2>
       <ol class="list-decimal list-inside space-y-2 text-gray-700">
-        <li>Sélectionnez jusqu'à 4 workflows dans la liste ci-dessous</li>
-        <li>Les workflows sélectionnés apparaîtront dans le tableau de comparaison</li>
-        <li>Comparez les états, événements et caractéristiques de chaque workflow</li>
+        <li>Sélectionnez jusqu'à 4 procédures dans la liste ci-dessous</li>
+        <li>Les procédures sélectionnées apparaîtront dans le tableau de comparaison</li>
+        <li>Comparez les états, événements et caractéristiques de chaque procédure</li>
         <li>Utilisez les filtres pour affiner votre recherche</li>
       </ol>
     </div>

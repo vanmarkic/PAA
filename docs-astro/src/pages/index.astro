@@ -41,7 +41,7 @@ const categoryStats = categories.map((cat: string) => ({
         Naviguer les Prestations Sociales Belges en Toute Confiance
       </h1>
       <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-        Documentation interactive pour {totalMachines} processus administratifs. Trouvez rapidement les workflows,
+        Documentation interactive pour {totalMachines} processus administratifs. Trouvez rapidement les procédures,
         explorez les règles d'éligibilité et comprenez les processus de prestations sociales.
       </p>
 
@@ -68,7 +68,7 @@ const categoryStats = categories.map((cat: string) => ({
           </svg>
         </div>
         <div class="text-3xl font-bold text-gray-900 mb-1">{totalMachines}</div>
-        <div class="text-sm text-gray-600">Workflows</div>
+        <div class="text-sm text-gray-600">Procédures</div>
       </div>
 
       <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
@@ -78,7 +78,7 @@ const categoryStats = categories.map((cat: string) => ({
           </svg>
         </div>
         <div class="text-3xl font-bold text-gray-900 mb-1">{totalRules}</div>
-        <div class="text-sm text-gray-600">Règles Métier</div>
+        <div class="text-sm text-gray-600">Règles d'éligibilité</div>
       </div>
 
       <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
@@ -119,7 +119,7 @@ const categoryStats = categories.map((cat: string) => ({
         {categoryStats.map((cat: any) => (
           <a href={getUrl(`workflows?category=${cat.id}`)} class="bg-white p-4 rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-md transition-all">
             <div class="text-lg font-semibold text-gray-900">{cat.name}</div>
-            <div class="text-sm text-gray-600">{cat.count} workflows</div>
+            <div class="text-sm text-gray-600">{cat.count} procédures</div>
           </a>
         ))}
       </div>
@@ -129,7 +129,7 @@ const categoryStats = categories.map((cat: string) => ({
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
       <!-- Featured Workflows -->
       <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Procédures Populaires</h2>
         <div class="space-y-4">
           {machines.slice(0, 3).map((machine: any) => (
             <a href={getUrl(`workflows/${machine.id}`)} class="block bg-white rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all p-4">
@@ -139,7 +139,7 @@ const categoryStats = categories.map((cat: string) => ({
                   {machine.category}
                 </span>
               </div>
-              <p class="text-gray-600 text-sm mb-2">{machine.description || 'Workflow administratif belge'}</p>
+              <p class="text-gray-600 text-sm mb-2">{machine.description || 'Procédure administrative belge'}</p>
               <div class="flex items-center text-sm text-gray-500">
                 <span class="mr-4">{machine.states?.length || 0} états</span>
                 <span>{machine.events?.length || 0} événements</span>
@@ -147,21 +147,21 @@ const categoryStats = categories.map((cat: string) => ({
             </a>
           ))}
           <a href={getUrl('workflows')} class="block text-center py-2 text-purple-600 hover:text-purple-700 font-medium">
-            Voir tous les workflows →
+            Voir toutes les procédures →
           </a>
         </div>
       </div>
 
       <!-- Rules Section -->
       <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Règles Métier</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Règles d'éligibilité</h2>
         <div class="bg-white rounded-lg border border-gray-200 p-6">
           <div class="mb-4">
             <div class="text-3xl font-bold text-gray-900">{totalRules}</div>
             <div class="text-gray-600">Règles d'éligibilité et de calcul</div>
           </div>
           <p class="text-gray-600 mb-4">
-            Explorez les règles métier qui définissent l'éligibilité aux prestations sociales,
+            Explorez les règles d'éligibilité qui définissent l'accès aux prestations sociales,
             les calculs de montants, et les conditions d'accès.
           </p>
           <div class="grid grid-cols-2 gap-2 mb-4">
@@ -183,7 +183,7 @@ const categoryStats = categories.map((cat: string) => ({
 
     <!-- Featured Workflows -->
     <div class="mb-12">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Procédures Populaires</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {machines.slice(0, 6).map((machine: any) => (
           <a href={getUrl(`workflows/${machine.id}`)} class="bg-white rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all p-6">
@@ -193,7 +193,7 @@ const categoryStats = categories.map((cat: string) => ({
               </span>
             </div>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
-            <p class="text-gray-600 text-sm mb-4">{machine.description || 'Workflow administratif belge'}</p>
+            <p class="text-gray-600 text-sm mb-4">{machine.description || 'Procédure administrative belge'}</p>
             <div class="flex items-center text-sm text-gray-500">
               <span class="mr-4">{machine.states?.length || 0} états</span>
               <span>{machine.events?.length || 0} événements</span>
@@ -207,7 +207,7 @@ const categoryStats = categories.map((cat: string) => ({
     <div class="bg-gradient-to-r from-purple-500 to-purple-700 rounded-xl p-8 text-center text-white">
       <h2 class="text-3xl font-bold mb-4">Besoin d'Aide?</h2>
       <p class="mb-6 max-w-2xl mx-auto">
-        Utilisez notre assistant intelligent pour trouver rapidement la prestation ou le workflow dont vous avez besoin.
+        Utilisez notre assistant intelligent pour trouver rapidement la prestation ou la procédure dont vous avez besoin.
       </p>
       <a href={getUrl('wizard')} class="inline-block px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
         Démarrer l'Assistant
