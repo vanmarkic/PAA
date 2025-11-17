@@ -144,6 +144,95 @@ This demonstrates:
 npm run build
 ```
 
+## 🖥️ Frontend Application
+
+The PAA project includes a modern React-based frontend application with a comprehensive UI for interacting with the system.
+
+### Frontend Features
+
+- **React 18** with TypeScript for type-safe development
+- **Vite** for lightning-fast development and optimized builds
+- **Radix UI** components for accessibility
+- **Tailwind CSS** for styling
+- **Dark mode** support
+- **Responsive design** for mobile, tablet, and desktop
+- **Multi-language support** (FR, NL, DE)
+
+### Running the Full Stack
+
+#### Prerequisites
+
+- Node.js 18+ and npm 9+
+- Docker and Docker Compose (for PostgreSQL and Redis)
+
+#### 1. Start Backend Services
+
+```bash
+# Start database and cache services
+npm run docker:up
+
+# In a separate terminal, start the API server
+npm run dev:api
+
+# The API will be available at http://localhost:3000
+# API documentation at http://localhost:3000/docs
+```
+
+#### 2. Start Frontend Application
+
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies (first time only)
+npm install
+
+# Copy environment configuration
+cp .env.example .env.local
+
+# Start development server
+npm run dev
+
+# The frontend will be available at http://localhost:5173
+```
+
+#### 3. Access the Application
+
+- **Frontend UI**: http://localhost:5173
+- **API Documentation**: http://localhost:3000/docs
+- **Database Admin**: http://localhost:5050 (pgAdmin)
+- **Redis Admin**: http://localhost:8081 (Redis Commander)
+
+### Frontend Production Build
+
+```bash
+cd frontend
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+
+# Build outputs to frontend/dist/
+```
+
+#### Production Build Details
+
+- **Bundle size**: ~73 KB gzipped total
+- **Code splitting** for optimal loading
+- **Lazy loading** of components
+- **Source maps** for debugging
+- **Environment-specific configuration**
+
+### Development Workflow
+
+1. **Backend Development**: The main PAA backend provides APIs and business logic
+2. **Frontend Development**: The React frontend provides the user interface
+3. **Integration**: Frontend proxies API calls to the backend during development
+
+For detailed frontend documentation, see [frontend/README.md](frontend/README.md).
+
 ## 📋 Key Features Demonstrated
 
 ### 1. Business Rules in Gherkin

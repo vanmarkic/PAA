@@ -1,0 +1,132 @@
+{
+  "common": {
+    "loading": "Chargement en cours...",
+    "error": "Erreur",
+    "success": "Succès",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "clear": "Effacer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "header": {
+    "title": "PAA - Plateforme d'Aide Administrative",
+    "subtitle": "Système de démonstration pour l'encodage de la logique administrative belge"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "benefits": "Prestations",
+    "workflows": "Workflows",
+    "rules": "Règles métier",
+    "documentation": "Documentation",
+    "settings": "Paramètres",
+    "language": "Langue",
+    "theme": "Thème",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "systemTheme": "Thème système"
+  },
+  "api": {
+    "status": "État de l'API",
+    "checking": "Connexion en cours...",
+    "connected": "API connectée",
+    "error": "API non disponible"
+  },
+  "features": {
+    "eligibility": {
+      "title": "Vérification d'éligibilité",
+      "description": "Calculer l'éligibilité aux prestations sociales"
+    },
+    "conversion": {
+      "title": "Conversion de textes légaux",
+      "description": "Convertir des textes juridiques en langage simple"
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Visualiser les processus et machines d'état"
+    },
+    "rules": {
+      "title": "Règles métier",
+      "description": "Explorer les règles Gherkin et JSON"
+    },
+    "documentation": {
+      "title": "Documentation",
+      "description": "Guide d'utilisation et référence technique"
+    }
+  },
+  "benefits": {
+    "AGR": "Allocation de Garantie de Revenus",
+    "RIS": "Revenu d'Intégration Sociale",
+    "GRAPA": "Garantie de Revenus aux Personnes Âgées",
+    "CPAS": "Centre Public d'Action Sociale",
+    "allocationsFamiliales": "Allocations Familiales",
+    "chomage": "Allocations de Chômage",
+    "handicap": "Allocations aux Personnes Handicapées",
+    "pension": "Pension",
+    "mutuelle": "Mutuelle",
+    "maternite": "Congé de Maternité",
+    "parental": "Congé Parental",
+    "creditTemps": "Crédit-Temps"
+  },
+  "legal": {
+    "references": "Références légales",
+    "law": "Loi",
+    "royalDecree": "Arrêté royal",
+    "ministerialDecree": "Arrêté ministériel",
+    "code": "Code",
+    "ordinance": "Ordonnance",
+    "decree": "Décret",
+    "articles": "Articles",
+    "lastAmended": "Dernière modification",
+    "authority": "Autorité responsable",
+    "monitorBelge": "Moniteur Belge",
+    "officialUrl": "URL officielle"
+  },
+  "forms": {
+    "personalInfo": "Informations personnelles",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "birthDate": "Date de naissance",
+    "nationalNumber": "Numéro national",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code postal",
+    "email": "Email",
+    "phone": "Téléphone",
+    "employment": "Situation professionnelle",
+    "income": "Revenus",
+    "familySituation": "Situation familiale",
+    "married": "Marié(e)",
+    "single": "Célibataire",
+    "divorced": "Divorcé(e)",
+    "widowed": "Veuf/Veuve",
+    "cohabiting": "Cohabitant(e)",
+    "children": "Enfants",
+    "dependents": "Personnes à charge"
+  },
+  "status": {
+    "pending": "En attente",
+    "processing": "En traitement",
+    "approved": "Approuvé",
+    "rejected": "Rejeté",
+    "completed": "Terminé",
+    "failed": "Échoué"
+  },
+  "errors": {
+    "genericError": "Une erreur s'est produite",
+    "networkError": "Erreur de connexion",
+    "validationError": "Erreur de validation",
+    "notFound": "Non trouvé",
+    "unauthorized": "Non autorisé",
+    "serverError": "Erreur serveur"
+  }
+}

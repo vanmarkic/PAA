@@ -1,28 +1,145 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import StatsOverview from '../components/StatsOverview.astro';
-import SearchFilter from '../components/SearchFilter.preact.tsx';
+import MainLayout from '../layouts/MainLayout.astro';
 import { loadMachinesMetadata } from '../lib/machines';
 
+// Load machines data at build time
 const metadata = await loadMachinesMetadata();
+const { machines, categories, totalMachines } = metadata;
+
+// Calculate stats
+const totalStates = machines.reduce((sum: number, m: any) => sum + (m.states?.length || 0), 0);
+const totalEvents = machines.reduce((sum: number, m: any) => sum + (m.events?.length || 0), 0);
+
+// Group machines by category
+const machinesByCategory = machines.reduce((acc: any, machine: any) => {
+  if (!acc[machine.category]) {
+    acc[machine.category] = [];
+  }
+  acc[machine.category].push(machine);
+  return acc;
+}, {});
+
+// Category counts
+const categoryStats = categories.map((cat: string) => ({
+  id: cat,
+  name: cat.charAt(0).toUpperCase() + cat.slice(1),
+  count: machinesByCategory[cat]?.length || 0
+}));
 ---
 
-<BaseLayout title={`PAA - ${metadata.totalMachines} State Machines`}>
-  <header>
-    <h1>🇧🇪 PAA - {metadata.totalMachines} State Machines</h1>
-    <p class="subtitle">Comprehensive Belgian Administrative Workflows</p>
-  </header>
+<MainLayout title="PAA - Plateforme d'Aide Administrative" description="Documentation interactive pour 109 processus administratifs belges">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold text-gray-900 mb-4">
+        Naviguer les Prestations Sociales Belges en Toute Confiance
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Documentation interactive pour {totalMachines} processus administratifs. Trouvez rapidement les workflows,
+        explorez les règles d'éligibilité et comprenez les processus de prestations sociales.
+      </p>
 
-  <StatsOverview
-    stats={metadata.statistics}
-    totalMachines={metadata.totalMachines}
-    totalCategories={metadata.categories.length}
-  />
+      <!-- Role-Based Navigation -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="/wizard" class="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-lg hover:shadow-lg transition-all">
+          Trouver une Prestation
+        </a>
+        <a href="/benefits" class="px-6 py-3 bg-white text-purple-600 border-2 border-purple-500 rounded-lg hover:bg-purple-50 transition-all">
+          Guide des Prestations
+        </a>
+        <a href="/developer" class="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+          Documentation Dev
+        </a>
+      </div>
+    </div>
 
-  <SearchFilter
-    machines={metadata.machines}
-    categories={metadata.categories}
-    baseUrl={import.meta.env.BASE_URL}
-    client:load
-  />
-</BaseLayout>
+    <!-- Stats Dashboard -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between mb-2">
+          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <div class="text-3xl font-bold text-gray-900 mb-1">{totalMachines}</div>
+        <div class="text-sm text-gray-600">Workflows</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between mb-2">
+          <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+          </svg>
+        </div>
+        <div class="text-3xl font-bold text-gray-900 mb-1">{categories.length}</div>
+        <div class="text-sm text-gray-600">Catégories</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between mb-2">
+          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <div class="text-3xl font-bold text-gray-900 mb-1">{totalStates.toLocaleString()}</div>
+        <div class="text-sm text-gray-600">États Totaux</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between mb-2">
+          <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+        </div>
+        <div class="text-3xl font-bold text-gray-900 mb-1">{totalEvents.toLocaleString()}</div>
+        <div class="text-sm text-gray-600">Événements Totaux</div>
+      </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Explorer par Catégorie</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {categoryStats.map((cat: any) => (
+          <a href={`/workflows?category=${cat.id}`} class="bg-white p-4 rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-md transition-all">
+            <div class="text-lg font-semibold text-gray-900">{cat.name}</div>
+            <div class="text-sm text-gray-600">{cat.count} workflows</div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Featured Workflows -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflows Populaires</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {machines.slice(0, 6).map((machine: any) => (
+          <a href={`/workflows/${machine.id}`} class="bg-white rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all p-6">
+            <div class="mb-4">
+              <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
+                {machine.category}
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
+            <p class="text-gray-600 text-sm mb-4">{machine.description || 'Workflow administratif belge'}</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <span class="mr-4">{machine.states?.length || 0} états</span>
+              <span>{machine.events?.length || 0} événements</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-purple-500 to-purple-700 rounded-xl p-8 text-center text-white">
+      <h2 class="text-3xl font-bold mb-4">Besoin d'Aide?</h2>
+      <p class="mb-6 max-w-2xl mx-auto">
+        Utilisez notre assistant intelligent pour trouver rapidement la prestation ou le workflow dont vous avez besoin.
+      </p>
+      <a href="/wizard" class="inline-block px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        Démarrer l'Assistant
+      </a>
+    </div>
+  </div>
+</MainLayout>

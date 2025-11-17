@@ -1,0 +1,132 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "header": {
+    "title": "PAA - Administrative Assistance Platform",
+    "subtitle": "Demonstration system for encoding Belgian administrative logic"
+  },
+  "navigation": {
+    "home": "Home",
+    "benefits": "Benefits",
+    "workflows": "Workflows",
+    "rules": "Business Rules",
+    "documentation": "Documentation",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "systemTheme": "System theme"
+  },
+  "api": {
+    "status": "API Status",
+    "checking": "Connecting...",
+    "connected": "API connected",
+    "error": "API unavailable"
+  },
+  "features": {
+    "eligibility": {
+      "title": "Eligibility Check",
+      "description": "Calculate eligibility for social benefits"
+    },
+    "conversion": {
+      "title": "Legal Text Conversion",
+      "description": "Convert legal texts to simple language"
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Visualize processes and state machines"
+    },
+    "rules": {
+      "title": "Business Rules",
+      "description": "Explore Gherkin and JSON rules"
+    },
+    "documentation": {
+      "title": "Documentation",
+      "description": "User guide and technical reference"
+    }
+  },
+  "benefits": {
+    "AGR": "Income Guarantee Allowance",
+    "RIS": "Social Integration Income",
+    "GRAPA": "Income Guarantee for the Elderly",
+    "CPAS": "Public Center for Social Welfare",
+    "allocationsFamiliales": "Family Allowances",
+    "chomage": "Unemployment Benefits",
+    "handicap": "Disability Benefits",
+    "pension": "Pension",
+    "mutuelle": "Health Insurance",
+    "maternite": "Maternity Leave",
+    "parental": "Parental Leave",
+    "creditTemps": "Time Credit"
+  },
+  "legal": {
+    "references": "Legal References",
+    "law": "Law",
+    "royalDecree": "Royal Decree",
+    "ministerialDecree": "Ministerial Decree",
+    "code": "Code",
+    "ordinance": "Ordinance",
+    "decree": "Decree",
+    "articles": "Articles",
+    "lastAmended": "Last amended",
+    "authority": "Responsible authority",
+    "monitorBelge": "Belgian Official Gazette",
+    "officialUrl": "Official URL"
+  },
+  "forms": {
+    "personalInfo": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthDate": "Date of Birth",
+    "nationalNumber": "National Number",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "email": "Email",
+    "phone": "Phone",
+    "employment": "Employment Situation",
+    "income": "Income",
+    "familySituation": "Family Situation",
+    "married": "Married",
+    "single": "Single",
+    "divorced": "Divorced",
+    "widowed": "Widowed",
+    "cohabiting": "Cohabiting",
+    "children": "Children",
+    "dependents": "Dependents"
+  },
+  "status": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "errors": {
+    "genericError": "An error occurred",
+    "networkError": "Connection error",
+    "validationError": "Validation error",
+    "notFound": "Not found",
+    "unauthorized": "Unauthorized",
+    "serverError": "Server error"
+  }
+}

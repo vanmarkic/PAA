@@ -18,14 +18,16 @@ export type AuditAction =
   | 'state-transition'
   | 'rule-evaluation'
   | 'login'
-  | 'logout';
+  | 'logout'
+  | 'workflow-eligibility-check';
 
 export type ResourceType =
   | 'user'
   | 'ris-application'
   | 'agr-check'
   | 'conversion'
-  | 'rule';
+  | 'rule'
+  | 'workflow';
 
 @Entity('audit_logs')
 export class AuditLog {
