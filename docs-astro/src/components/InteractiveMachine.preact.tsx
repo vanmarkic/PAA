@@ -6,7 +6,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { AnyStateMachine, AnyActorRef } from 'xstate';
 import { createActor } from 'xstate';
-import { createBrowserInspector } from '@statelyai/inspect';
 
 interface Props {
   machineId: string;
@@ -15,7 +14,8 @@ interface Props {
 
 export default function InteractiveMachine({ machineId, machineName }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const mermaidRef = useRef<HTMLDivElement>(null);
+  const actorRef = useRef<AnyActorRef | null>(null); // Track actor for cleanup
   const [isVisible, setIsVisible] = useState(false);
   const [machine, setMachine] = useState<AnyStateMachine | null>(null);
   const [actor, setActor] = useState<AnyActorRef | null>(null);
@@ -24,7 +24,7 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [stateHistory, setStateHistory] = useState<string[]>([]);
-  const [inspectorReady, setInspectorReady] = useState(false);
+  const [mermaidCode, setMermaidCode] = useState<string>('');
 
   // Intersection Observer - load when scrolled into view
   useEffect(() => {
@@ -44,59 +44,69 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
     return () => observer.disconnect();
   }, []);
 
-  // Load machine and start actor when visible
+  // Load machine and render Mermaid diagram
   useEffect(() => {
     if (!isVisible) return;
 
-    // Wait for iframe to be ready
-    if (!iframeRef.current) {
-      console.log('[InteractiveMachine] Waiting for iframe...');
-      return;
-    }
+    let isCancelled = false;
 
     async function loadAndStartMachine() {
       setIsLoading(true);
+      setError(null);
 
       try {
         // Load the machine
         const { loadMachine } = await import('../lib/machine-loader');
         const loadedMachine = await loadMachine(machineId);
+        
+        if (isCancelled) return;
+        
         setMachine(loadedMachine);
 
-        // Create browser inspector with iframe
-        const { inspect } = createBrowserInspector({
-          iframe: iframeRef.current!,
-          autoStart: true,
-        });
+        // Generate Mermaid diagram
+        const { xstateToMermaid } = await import('../lib/xstate-to-mermaid');
+        const mermaid = xstateToMermaid(loadedMachine);
+        setMermaidCode(mermaid);
 
-        setInspectorReady(true);
-
-        // Create and start actor with inspector
-        const newActor = createActor(loadedMachine, {
-          inspect, // This sends all state changes to the Stately Inspector!
-        });
+        // Create and start actor
+        const newActor = createActor(loadedMachine);
 
         // Subscribe to state changes
         newActor.subscribe((snapshot) => {
-          const state = snapshot.value as string;
-          setCurrentState(state);
-          setStateHistory(prev => [...prev, state].slice(-10)); // Keep last 10 states
+          if (isCancelled) return;
+          
+          // Handle both string and object state values
+          const stateValue = snapshot.value;
+          const stateString = typeof stateValue === 'string' 
+            ? stateValue 
+            : JSON.stringify(stateValue);
+          setCurrentState(stateString);
+          setStateHistory(prev => [...prev, stateString].slice(-10)); // Keep last 10 states
 
           // Get available events for current state
-          const events = Object.keys((loadedMachine.states as any)[state]?.on || {});
+          // Handle hierarchical states (object values)
+          const stateKey = typeof stateValue === 'string' 
+            ? stateValue 
+            : Object.keys(stateValue)[0];
+          const stateConfig = (loadedMachine.states as any)[stateKey];
+          const events = stateConfig?.on ? Object.keys(stateConfig.on) : [];
           setAvailableEvents(events);
         });
 
         newActor.start();
+        actorRef.current = newActor;
         setActor(newActor);
 
-        console.log('Machine started with inspector:', loadedMachine.id);
+        console.log('Machine started:', loadedMachine.id);
 
       } catch (err) {
+        if (isCancelled) return;
         console.error('Failed to load machine:', err);
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
-        setIsLoading(false);
+        if (!isCancelled) {
+          setIsLoading(false);
+        }
       }
     }
 
@@ -104,44 +114,127 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
 
     // Cleanup
     return () => {
-      if (actor) {
-        actor.stop();
+      isCancelled = true;
+      if (actorRef.current) {
+        actorRef.current.stop();
+        actorRef.current = null;
+        setActor(null);
       }
     };
   }, [isVisible, machineId]);
 
+  // Initialize Mermaid once
+  useEffect(() => {
+    let isCancelled = false;
+
+    async function initMermaid() {
+      try {
+        const mermaid = await import('mermaid');
+        mermaid.default.initialize({ 
+          startOnLoad: false,
+          theme: 'default',
+          securityLevel: 'loose',
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+          }
+        });
+      } catch (err) {
+        console.error('Failed to initialize Mermaid:', err);
+      }
+    }
+
+    initMermaid();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  // Render Mermaid diagram
+  useEffect(() => {
+    if (!mermaidCode || !mermaidRef.current || !isVisible) return;
+
+    let isCancelled = false;
+
+    async function renderMermaid() {
+      try {
+        const mermaid = await import('mermaid');
+
+        if (isCancelled || !mermaidRef.current) return;
+
+        // Clear previous content
+        mermaidRef.current.innerHTML = '';
+        
+        // Create a unique ID for this diagram
+        const diagramId = `mermaid-${machineId}-${Date.now()}`;
+        
+        // Render the diagram
+        const { svg } = await mermaid.default.render(diagramId, mermaidCode);
+        
+        if (isCancelled || !mermaidRef.current) return;
+        
+        mermaidRef.current.innerHTML = svg;
+      } catch (err) {
+        console.error('Failed to render Mermaid diagram:', err);
+        if (mermaidRef.current && !isCancelled) {
+          mermaidRef.current.innerHTML = `<p style="color: #c33; padding: 1rem;">Failed to render diagram: ${err instanceof Error ? err.message : 'Unknown error'}</p>`;
+        }
+      }
+    }
+
+    renderMermaid();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [mermaidCode, machineId, isVisible]);
+
   // Send event to actor
   const sendEvent = (eventName: string) => {
     if (actor) {
-      actor.send({ type: eventName });
-      console.log(`Sent event: ${eventName}`);
+      try {
+        actor.send({ type: eventName });
+        console.log(`Sent event: ${eventName}`);
+      } catch (err) {
+        console.error('Error sending event:', err);
+        setError(`Failed to send event ${eventName}: ${err instanceof Error ? err.message : 'Unknown error'}`);
+      }
     }
   };
 
   // Reset machine to initial state
   const resetMachine = () => {
-    if (machine && iframeRef.current) {
-      actor?.stop();
+    if (machine) {
+      // Stop the current actor
+      if (actorRef.current) {
+        actorRef.current.stop();
+        actorRef.current = null;
+      }
 
-      // Recreate inspector
-      const { inspect } = createBrowserInspector({
-        iframe: iframeRef.current!,
-        autoStart: true,
-      });
-
-      const newActor = createActor(machine, {
-        inspect,
-      });
+      // Create a fresh actor
+      const newActor = createActor(machine);
 
       newActor.subscribe((snapshot) => {
-        const state = snapshot.value as string;
-        setCurrentState(state);
-        setStateHistory(prev => [...prev, state].slice(-10));
-        const events = Object.keys((machine.states as any)[state]?.on || {});
+        // Handle both string and object state values
+        const stateValue = snapshot.value;
+        const stateString = typeof stateValue === 'string' 
+          ? stateValue 
+          : JSON.stringify(stateValue);
+        setCurrentState(stateString);
+        setStateHistory(prev => [...prev, stateString].slice(-10));
+        
+        // Handle hierarchical states (object values)
+        const stateKey = typeof stateValue === 'string' 
+          ? stateValue 
+          : Object.keys(stateValue)[0];
+        const stateConfig = (machine.states as any)[stateKey];
+        const events = stateConfig?.on ? Object.keys(stateConfig.on) : [];
         setAvailableEvents(events);
       });
 
       newActor.start();
+      actorRef.current = newActor;
       setActor(newActor);
       setStateHistory([]);
     }
@@ -172,28 +265,48 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
         <div className="error">
           <p><strong>Failed to load machine:</strong></p>
           <p>{error}</p>
+          <button 
+            onClick={() => {
+            setError(null);
+            setIsLoading(false);
+            setActor(null);
+            actorRef.current = null;
+            setMachine(null);
+            setMermaidCode('');
+            // Trigger re-initialization by toggling visibility
+            setIsVisible(false);
+            setTimeout(() => setIsVisible(true), 100);
+            }}
+            className="retry-btn"
+            style={{
+              marginTop: '1rem',
+              padding: '0.5rem 1rem',
+              background: '#4caf50',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: '500'
+            }}
+          >
+            🔄 Retry
+          </button>
         </div>
       )}
 
       {isVisible && !error && (
         <div className="machine-interactive">
-          {/* Stately Inspector Visualization - Always render iframe */}
-          <div className="inspector-panel">
-            <h3>State Diagram (Live)</h3>
-            <div className="inspector-wrapper">
-              <iframe
-                ref={iframeRef}
-                className="stately-inspector-iframe"
-                title={`Inspector for ${machineName}`}
-                sandbox="allow-scripts allow-same-origin allow-popups"
-                allow="accelerometer 'none'; camera 'none'; geolocation 'none'; microphone 'none'; payment 'none'"
-              />
-              {(isLoading || !inspectorReady) && (
-                <div className="inspector-loading">
-                  <p>
-                    {isLoading ? 'Loading machine...' : 'Starting Stately Inspector...'}
-                  </p>
+          {/* Mermaid Diagram Visualization */}
+          <div className="diagram-panel">
+            <h3>State Diagram</h3>
+            <div className="mermaid-wrapper">
+              {isLoading && (
+                <div className="diagram-loading">
+                  <p>Loading diagram...</p>
                 </div>
+              )}
+              {!isLoading && mermaidCode && (
+                <div ref={mermaidRef} className="mermaid-container" />
               )}
             </div>
           </div>
