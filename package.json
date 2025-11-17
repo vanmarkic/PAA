@@ -22,6 +22,8 @@
     "docs:metadata": "ts-node scripts/generateMachinesMetadata.ts",
     "docs:build": "npm run docs:metadata && npm run docs:generate",
     "docs:serve": "cd docs && python3 -m http.server 8010 || python -m http.server 8010 || npx http-server -p 8010",
+    "check:versions": "ts-node scripts/checkVersionCompliance.ts",
+    "check:versions:strict": "ts-node scripts/checkVersionCompliance.ts --strict",
     "astro:dev": "cd docs-astro && npm run dev",
     "astro:build": "cd docs-astro && npm run build",
     "astro:preview": "cd docs-astro && npm run preview",
