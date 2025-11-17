@@ -1,0 +1,204 @@
+---
+import MainLayout from '../layouts/Layout.astro';
+import MetadataDisplay from '../components/MetadataDisplay.astro';
+
+// Example metadata and related entities for demonstration
+const exampleMetadata = {
+  category: 'social-benefits',
+  version: '2.1.0',
+  lastUpdated: new Date('2024-01-15'),
+  versionHistory: [
+    {
+      version: '2.1.0',
+      extractionDate: new Date('2024-01-15'),
+      status: 'active',
+      changeLog: 'Mise à jour des montants pour 2024',
+      lastLegislativeUpdate: new Date('2024-01-01')
+    },
+    {
+      version: '2.0.0',
+      extractionDate: new Date('2023-07-01'),
+      status: 'archived',
+      changeLog: 'Refonte complète des conditions d\'éligibilité',
+      lastLegislativeUpdate: new Date('2023-07-01')
+    },
+    {
+      version: '1.0.0',
+      extractionDate: new Date('2023-01-01'),
+      status: 'archived',
+      changeLog: 'Version initiale',
+      lastLegislativeUpdate: new Date('2023-01-01')
+    }
+  ],
+  auditInfo: {
+    lastChecked: new Date('2024-01-20'),
+    checkedBy: 'Jean Dupont',
+    status: 'Conforme'
+  }
+};
+
+const exampleLegalMetadata = {
+  machineId: 'ris-workflow',
+  nameFr: 'Revenu d\'Intégration Sociale',
+  nameNl: 'Leefloon',
+  category: 'social-benefits',
+  currentVersion: {
+    version: '2.1.0',
+    extractionDate: new Date('2024-01-15'),
+    lastLegislativeUpdate: new Date('2024-01-01'),
+    nextReviewDate: new Date('2024-07-01'),
+    status: 'active',
+    sources: [
+      {
+        title: 'Loi concernant le droit à l\'intégration sociale',
+        referenceNumber: 'Loi du 26 mai 2002',
+        authority: 'federal',
+        region: 'Belgique',
+        publicationDate: new Date('2002-05-26'),
+        effectiveDate: new Date('2002-10-01'),
+        officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi',
+        backupUrl: 'https://www.mi-is.be/fr/reglementations/loi-du-26-mai-2002-concernant-le-droit-lintegration-sociale'
+      },
+      {
+        title: 'Arrêté royal portant règlement général du droit à l\'intégration sociale',
+        referenceNumber: 'AR du 11 juillet 2002',
+        authority: 'federal',
+        region: 'Belgique',
+        publicationDate: new Date('2002-07-31'),
+        effectiveDate: new Date('2002-10-01'),
+        officialUrl: 'https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002071136&table_name=loi'
+      }
+    ],
+    amounts: {
+      'Isolé': 1115.67,
+      'Cohabitant': 743.78,
+      'Famille monoparentale': 1506.79
+    },
+    changeLog: 'Mise à jour des montants au 1er janvier 2024'
+  },
+  contactEmail: 'info@mi-is.be',
+  contactPhone: '+32 2 508 85 85',
+  lastLegalValidation: {
+    date: new Date('2024-01-10'),
+    validatorName: 'Marie Lambert',
+    validatorRole: 'Juriste - SPF Intégration Sociale'
+  }
+};
+
+const dataFreshness = {
+  status: 'current' as const,
+  label: 'Données à jour',
+  color: 'green',
+  daysOld: 5
+};
+
+const relatedEntities = {
+  procedures: [
+    { id: 'cpas-application', name: 'Demande CPAS', description: 'Procédure de demande au CPAS', matchScore: 95 },
+    { id: 'agr-workflow', name: 'AGR Workflow', description: 'Allocation de garantie de revenus', matchScore: 85 },
+    { id: 'social-audit', name: 'Enquête sociale', description: 'Procédure d\'enquête sociale', matchScore: 75 }
+  ],
+  rules: [
+    { id: 'ris-basic-eligibility', description: 'Conditions de base RIS', matchScore: 100 },
+    { id: 'ris-amount-calculation', description: 'Calcul du montant RIS', matchScore: 95 },
+    { id: 'ris-residence-check', description: 'Vérification de résidence', matchScore: 90 },
+    { id: 'ris-income-evaluation', description: 'Évaluation des revenus', matchScore: 85 }
+  ],
+  features: [
+    { id: 'ris-eligibility', name: 'Éligibilité RIS', matchScore: 100 },
+    { id: 'ris-calculation', name: 'Calcul RIS', matchScore: 90 },
+    { id: 'ris-payment', name: 'Paiement RIS', matchScore: 80 }
+  ],
+  parentProcedures: [
+    { id: 'social-benefits-master', name: 'Prestations sociales', description: 'Procédure principale des prestations sociales' }
+  ],
+  childProcedures: [
+    { id: 'ris-payment', name: 'Paiement RIS', description: 'Procédure de paiement' },
+    { id: 'ris-review', name: 'Révision RIS', description: 'Procédure de révision périodique' }
+  ],
+  siblingProcedures: [
+    { id: 'agr-workflow', name: 'AGR Workflow', description: 'Allocation de garantie de revenus' },
+    { id: 'grapa-workflow', name: 'GRAPA Workflow', description: 'Garantie de revenus aux personnes âgées' }
+  ]
+};
+---
+
+<MainLayout
+  title="Exemple de Métadonnées - PAA Documentation"
+  description="Démonstration du composant MetadataDisplay"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Exemple d'Affichage des Métadonnées
+      </h1>
+      <p class="text-lg text-gray-600">
+        Cette page démontre le composant MetadataDisplay avec des données d'exemple
+        pour le workflow RIS (Revenu d'Intégration Sociale).
+      </p>
+    </div>
+
+    <!-- Metadata Display Component -->
+    <MetadataDisplay
+      entityType="procedure"
+      entityId="ris-workflow"
+      metadata={exampleMetadata}
+      legalMetadata={exampleLegalMetadata}
+      dataFreshness={dataFreshness}
+      relatedEntities={relatedEntities}
+    />
+
+    <!-- Usage Instructions -->
+    <div class="mt-12 bg-gray-50 rounded-lg p-6">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">
+        Comment utiliser le composant MetadataDisplay
+      </h2>
+
+      <div class="prose prose-gray max-w-none">
+        <h3>Import du composant:</h3>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{`import MetadataDisplay from '../components/MetadataDisplay.astro';`}</code></pre>
+
+        <h3>Utilisation dans une page:</h3>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{`<MetadataDisplay
+  entityType="procedure"
+  entityId="ris-workflow"
+  metadata={metadata}
+  legalMetadata={legalMetadata}
+  dataFreshness={dataFreshness}
+  relatedEntities={relatedEntities}
+/>`}</code></pre>
+
+        <h3>Props disponibles:</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>entityType</strong>: Type d'entité ('procedure' | 'rule' | 'feature')</li>
+          <li><strong>entityId</strong>: Identifiant unique de l'entité</li>
+          <li><strong>metadata</strong>: Métadonnées générales (version, catégorie, etc.)</li>
+          <li><strong>legalMetadata</strong>: Métadonnées légales (sources, validation, etc.)</li>
+          <li><strong>dataFreshness</strong>: État de fraîcheur des données</li>
+          <li><strong>relatedEntities</strong>: Entités liées (procédures, règles, features)</li>
+        </ul>
+
+        <h3>Fonctionnalités principales:</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Badge de fraîcheur des données avec indicateur visuel coloré</li>
+          <li>Sources légales cliquables avec liens officiels</li>
+          <li>Timeline des versions avec historique complet</li>
+          <li>Hiérarchie des procédures (parent/enfant/similaire)</li>
+          <li>Entités liées interactives avec scores de correspondance</li>
+          <li>Informations d'audit et de validation juridique</li>
+          <li>Export des métadonnées en JSON</li>
+          <li>Support d'impression optimisé</li>
+        </ul>
+
+        <h3>Intégration avec le machineMetadataHelper:</h3>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{`// Charger les métadonnées légales depuis le helper
+import { getMachineLegalMetadata, getDataFreshnessBadge } from '../utils/machineMetadataHelper';
+import { getMachineLegalMetadata as getLegal } from '../domain/legalMetadata';
+
+const legalMetadata = getLegal(machine.id);
+const dataFreshness = getDataFreshnessBadge(machine.id);`}</code></pre>
+      </div>
+    </div>
+  </div>
+</MainLayout>

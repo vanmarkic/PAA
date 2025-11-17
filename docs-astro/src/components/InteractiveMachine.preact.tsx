@@ -55,13 +55,21 @@ export default function InteractiveMachine({ machineId, machineName }: Props) {
       setError(null);
 
       try {
-        // Load the machine
-        const { loadMachine } = await import('../lib/machine-loader');
-        const loadedMachine = await loadMachine(machineId);
-        
+        // For interactive component, we need actual XState machines
+        // This component is only used in dev mode where we have access to the actual files
+        // In production, the ProcedureDiagram component is used instead
+        if (typeof window === 'undefined') {
+          throw new Error('Interactive machine requires client-side rendering');
+        }
+
+        // Try loading from metadata for display purposes
+        const { loadMachineMetadata } = await import('../lib/machine-loader-safe');
+        const machineData = await loadMachineMetadata(machineId);
+
         if (isCancelled) return;
-        
-        setMachine(loadedMachine);
+
+        // For now, show error since we can't run the actual machine without XState imports
+        throw new Error('Interactive machine execution is not available in this environment. Use the diagram view instead.');
 
         // Generate Mermaid diagram
         const { xstateToMermaid } = await import('../lib/xstate-to-mermaid');

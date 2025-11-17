@@ -1,9 +1,17 @@
 /**
  * Data loader for machine metadata
- * Loads the generated machines-metadata.json
+ * Uses build-time metadata from the integration
  */
 
-import metadata from '../../public/machines-metadata.json';
+import { getMachinesMetadata as getIntegrationMetadata } from '../../integrations/metadata-integration';
+
+// Try to load from JSON as fallback (for backward compatibility)
+let fallbackMetadata: any = null;
+try {
+  fallbackMetadata = await import('../../public/machines-metadata.json');
+} catch (e) {
+  // JSON file might not exist if using integration
+}
 
 export interface MachineMeta {
   id: string;
@@ -13,6 +21,18 @@ export interface MachineMeta {
   states: string[];
   events: string[];
   initial: string;
+  // Extended fields from integration
+  legalMetadata?: any;
+  dataFreshness?: {
+    status: 'current' | 'needs-review' | 'outdated' | 'unknown';
+    label: string;
+    daysOld: number;
+  };
+  parentMachines?: string[];
+  childMachines?: string[];
+  siblingMachines?: string[];
+  version?: string;
+  lastModified?: string;
 }
 
 export interface MachinesMetadata {
@@ -25,15 +45,44 @@ export interface MachinesMetadata {
     totalEvents: number;
     averageStatesPerMachine: string;
     averageEventsPerMachine: string;
+    legalCompliance?: {
+      upToDate: number;
+      needsReview: number;
+      outdated: number;
+      missingMetadata: number;
+    };
   };
 }
 
 /**
- * Load machines metadata from JSON
+ * Load machines metadata from build-time integration or JSON fallback
  */
 export async function loadMachinesMetadata(): Promise<MachinesMetadata> {
-  // Use static import at build time
-  return metadata as MachinesMetadata;
+  // Try to get metadata from the integration first
+  const integrationMetadata = getIntegrationMetadata();
+
+  if (integrationMetadata) {
+    return integrationMetadata as MachinesMetadata;
+  }
+
+  // Fallback to JSON file if integration metadata not available
+  if (fallbackMetadata) {
+    return fallbackMetadata.default || fallbackMetadata;
+  }
+
+  // Return empty metadata if nothing available
+  return {
+    generated: new Date().toISOString(),
+    totalMachines: 0,
+    categories: [],
+    machines: [],
+    statistics: {
+      totalStates: 0,
+      totalEvents: 0,
+      averageStatesPerMachine: '0',
+      averageEventsPerMachine: '0',
+    },
+  };
 }
 
 /**

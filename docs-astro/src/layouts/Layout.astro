@@ -10,8 +10,8 @@ export interface Props {
 
 const {
   title,
-  description = 'PAA - Belgian Administrative Platform for Social Benefits and Legal Procedures',
-  keywords = 'Belgium, social benefits, AGR, RIS, CPAS, administrative procedures, legal documentation'
+  description = 'PAA - Plateforme Administrative Belge pour les Prestations Sociales et Procédures Légales',
+  keywords = 'Belgique, prestations sociales, AGR, RIS, CPAS, procédures administratives, documentation légale'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -73,13 +73,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 API
               </a>
               <a href={getUrl('workflows')} class="transition-colors hover:text-foreground/80">
-                Workflows
-              </a>
-              <a href={getUrl('features')} class="transition-colors hover:text-foreground/80">
-                Features
+                Procédures
               </a>
               <a href={getUrl('rules')} class="transition-colors hover:text-foreground/80">
-                Règles
+                Règles d'éligibilité
+              </a>
+              <a href={getUrl('features')} class="transition-colors hover:text-foreground/80 text-sm opacity-75">
+                Index Features
               </a>
             </nav>
           </div>

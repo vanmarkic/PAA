@@ -1,0 +1,113 @@
+---
+/**
+ * Procedure Diagram Component
+ * Displays a Mermaid state diagram for XState machines
+ * Uses lazy loading and React islands for interactivity
+ */
+import ProcedureDiagramViewer from './ProcedureDiagramViewer.tsx';
+
+interface Props {
+  machineId: string;
+  machineName?: string;
+  className?: string;
+}
+
+const { machineId, machineName = machineId, className = '' } = Astro.props;
+---
+
+<div class={`procedure-diagram-container ${className}`}>
+  <!-- Lazy-loaded interactive diagram viewer -->
+  <ProcedureDiagramViewer
+    client:visible
+    machineId={machineId}
+    machineName={machineName}
+  />
+
+  <!-- Legend (static content) -->
+  <div class="diagram-legend mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+    <h3 class="text-sm font-semibold text-gray-900 mb-4">Légende du Diagramme</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">État Initial</div>
+          <div class="text-xs text-gray-600">Point de départ du processus</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">État Standard</div>
+          <div class="text-xs text-gray-600">État intermédiaire du processus</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">État Final (Succès)</div>
+          <div class="text-xs text-gray-600">Processus terminé avec succès</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M15 9l-6 6M9 9l6 6" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">État Final (Échec)</div>
+          <div class="text-xs text-gray-600">Processus terminé en erreur</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">Transition</div>
+          <div class="text-xs text-gray-600">Changement d'état avec événement</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <svg class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">Condition (Guard)</div>
+          <div class="text-xs text-gray-600">Validation requise pour la transition</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .procedure-diagram-container {
+    position: relative;
+    min-height: 400px;
+  }
+</style>

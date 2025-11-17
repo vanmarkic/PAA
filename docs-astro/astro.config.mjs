@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import metadataIntegration from './integrations/metadata-integration';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,16 +36,21 @@ export default defineConfig({
       // Tailwind v4 configuration
       applyBaseStyles: false, // We'll handle base styles ourselves for v4
     }),
+    metadataIntegration({
+      writeFiles: true, // Write JSON files for backward compatibility
+      outputDir: 'public',
+      includeLegalMetadata: true,
+    }),
   ],
 
   // Vite configuration
   vite: {
     optimizeDeps: {
-      include: ['react', 'react-dom'],
+      include: ['react', 'react-dom', 'xstate', 'mermaid'],
     },
 
     ssr: {
-      noExternal: ['@radix-ui/*'],
+      noExternal: ['@radix-ui/*', 'xstate'],
     },
 
     server: {

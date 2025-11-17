@@ -1,10 +1,13 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 import { loadRulesMetadata, getCategoryStats, getRulesByCategory, getAllRules, CATEGORY_NAMES, CATEGORY_ICONS, getPriorityColor, getPriorityLabel, formatOperator } from '../lib/rules';
+import { loadFeaturesMetadata } from '../lib/features';
+import { getRelatedFeaturesForRule } from '../lib/cross-references';
 import { getUrl } from '../lib/utils';
 
-// Load rules data at build time
+// Load rules and features data at build time
 const metadata = await loadRulesMetadata();
+const featuresMetadata = await loadFeaturesMetadata();
 
 // Get category statistics
 const categoryStats = metadata.categories.map(cat => ({
@@ -22,17 +25,26 @@ const allRules = getAllRules(metadata);
 const topFacts = metadata.statistics?.uniqueFacts?.slice(0, 10) || [];
 const topOperators = metadata.statistics?.uniqueOperators?.slice(0, 8) || [];
 
-// Featured rules (high priority rules)
-const featuredRules = allRules
-  .filter(r => r.priority >= 9)
-  .slice(0, 6);
+// Featured rules (high priority rules) with their associated features
+const featuredRules = await Promise.all(
+  allRules
+    .filter(r => r.priority >= 9)
+    .slice(0, 6)
+    .map(async (rule) => {
+      const relatedFeatures = await getRelatedFeaturesForRule(rule.id);
+      const associatedFeature = relatedFeatures && relatedFeatures.length > 0
+        ? featuresMetadata.features.find(f => f.id === relatedFeatures[0].id)
+        : null;
+      return { ...rule, associatedFeature };
+    })
+);
 ---
 
-<MainLayout title="Règles Métier - PAA" description="Exploration des règles métier du système PAA">
+<MainLayout title="Règles d'éligibilité - PAA" description="Exploration des règles d'éligibilité du système PAA">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Header -->
     <div class="text-center mb-16">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Règles Métier</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Règles d'éligibilité</h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
         Découvrez les règles d'éligibilité et de calcul pour toutes les prestations sociales belges.
         {metadata.totalRules} règles actives dans {metadata.categories.length} catégories.
@@ -122,9 +134,17 @@ const featuredRules = allRules
                     <span class="font-medium">Conditions (OU):</span> {rule.conditions.any.length}
                   </div>
                 )}
+                {rule.associatedFeature && (
+                  <div class="text-sm text-green-600 flex items-center mt-2">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="font-medium">Spécification Gherkin disponible</span>
+                  </div>
+                )}
               </div>
               <a href={getUrl(`rules/${rule.id}`)} class="mt-4 inline-block text-purple-600 hover:text-purple-700 font-medium text-sm">
-                Voir les détails →
+                Voir règle et spécification →
               </a>
             </div>
           ))}
@@ -256,9 +276,9 @@ const featuredRules = allRules
 
     <!-- Visual Rule Complexity Indicator -->
     <div class="bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">Comprendre les Règles Métier</h2>
+      <h2 class="text-3xl font-bold mb-4">Comprendre les Règles d'éligibilité</h2>
       <p class="mb-6 text-purple-100">
-        Les règles métier définissent l'éligibilité et les calculs pour chaque prestation sociale.
+        Les règles d'éligibilité définissent l'éligibilité et les calculs pour chaque prestation sociale.
         Chaque règle combine des conditions (critères) avec des opérateurs logiques pour déterminer
         si un demandeur est éligible ou non.
       </p>
