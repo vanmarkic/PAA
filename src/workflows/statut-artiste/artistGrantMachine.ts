@@ -93,7 +93,14 @@ export const artistGrantMachine = createMachine({
                 projectDuration: 0,
                 status: 'draft',
               },
-            }),
+              evaluation: {
+                artisticQuality: 0,
+                feasibility: 0,
+                impact: 0,
+                innovation: 0,
+                totalScore: 0,
+              },
+            } as any),
           }),
         },
       },
@@ -291,7 +298,7 @@ export const artistGrantMachine = createMachine({
               target: 'awaitingDisbursement',
               actions: assign({
                 disbursements: ({ context }: { context: any }) =>
-                  context.disbursements.map((d, i) =>
+                  context.disbursements.map((d: any, i: number) =>
                     i === 0 ? { ...d, status: 'paid' as const } : d
                   ),
               }),
@@ -378,7 +385,7 @@ export const artistGrantMachine = createMachine({
           target: 'completed',
           actions: assign({
             disbursements: ({ context }: { context: any }) =>
-              context.disbursements.map((d) => ({ ...d, status: 'paid' as const })),
+              context.disbursements.map((d: any) => ({ ...d, status: 'paid' as const })),
             grant: ({ context }: { context: any }) => ({
               ...context.grant,
               application: {

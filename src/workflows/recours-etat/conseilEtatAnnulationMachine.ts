@@ -130,14 +130,15 @@ export const conseilEtatAnnulationMachine = createMachine({
         PAY_FEES: {
           target: 'checkingAdmissibility',
           actions: assign({
-            application: ({ context }) => ({
-              ...context.application!,
-              filingFee: {
-                ...context.application!.filingFee,
-                paid: true,
-                paymentDate: new Date(),
-              },
-            }),
+            application: ({ context }: { context: any }) =>
+              context.application ? {
+                ...context.application,
+                filingFee: {
+                  ...context.application.filingFee,
+                  paid: true,
+                  paymentDate: new Date(),
+                },
+              } : null,
           }),
         },
         TIMEOUT: {

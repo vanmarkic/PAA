@@ -182,7 +182,8 @@ export const artistStatusMachine = createMachine({
             guard: ({ event }: { event: any }) => event.decision?.approved === true,
             actions: assign({
               commissionDecision: ({ event }: { event: any }) => event.decision,
-              currentStatus: 'professionnel',
+              currentStatus: ({ context, event }: { context: any; event: any }) =>
+                event.decision?.statusType || 'professionnel' as ArtistStatus,
             }),
           },
           {

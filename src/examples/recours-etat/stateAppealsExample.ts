@@ -117,7 +117,7 @@ async function example1_ConseilEtatAnnulation() {
     },
     legalGrounds: [
       {
-        type: 'violation-of-law',
+        type: 'illegality',
         description: 'Violation du CoBAT - critères non respectés',
         legalReferences: []
       },
@@ -198,10 +198,9 @@ async function example1_ConseilEtatAnnulation() {
   console.log('\\nStarting Council of State Workflow...');
   const service = interpret(conseilEtatAnnulationMachine);
 
-  service.onTransition((state) => {
-    if (state.changed) {
-      console.log(`State: ${state.value} - ${state.meta?.[`${state.value}`]?.description || ''}`);
-    }
+  service.subscribe((state) => {
+    const meta = state.getMeta();
+    console.log(`State: ${state.value} - ${meta?.description || ''}`);
   });
 
   service.start();
@@ -283,10 +282,9 @@ async function example2_OmbudsmanComplaint() {
   console.log('\\nStarting Ombudsman Workflow...');
   const ombudsmanService = interpret(ombudsmanMachine);
 
-  ombudsmanService.onTransition((state) => {
-    if (state.changed) {
-      console.log(`State: ${state.value} - ${state.meta?.[`${state.value}`]?.description || ''}`);
-    }
+  ombudsmanService.subscribe((state) => {
+    const meta = state.getMeta();
+    console.log(`State: ${state.value} - ${meta?.description || ''}`);
   });
 
   ombudsmanService.start();
@@ -420,10 +418,9 @@ async function example3_TaxAppeal() {
   console.log('\\nStarting Tax Appeal Workflow...');
   const taxService = interpret(taxAppealMachine);
 
-  taxService.onTransition((state) => {
-    if (state.changed) {
-      console.log(`State: ${state.value} - ${state.meta?.[`${state.value}`]?.description || ''}`);
-    }
+  taxService.subscribe((state) => {
+    const meta = state.getMeta();
+    console.log(`State: ${state.value} - ${meta?.description || ''}`);
   });
 
   taxService.start();

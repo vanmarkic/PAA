@@ -66,8 +66,8 @@ export const primeEnergieMachine = createMachine({
     request: null,
     eligibilityResult: null,
     documents: {
-      submitted: [],
-      required: [],
+      submitted: [] as string[],
+      required: [] as string[],
       validated: false,
     },
     technicalControl: {
@@ -82,7 +82,7 @@ export const primeEnergieMachine = createMachine({
     },
     auditRequired: false,
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -104,29 +104,32 @@ export const primeEnergieMachine = createMachine({
 
     checkingEligibility: {
       entry: assign({
-        auditRequired: ({ context }) => {
-          // Audit required for major renovations > 25000€
-          return context.request?.estimatedCost ? context.request.estimatedCost > 25000 : false;
+        auditRequired: ({ context }: any) => {
+          const ctx = context as EnergySubsidyContext;
+          return (ctx.request?.estimatedCost ?? 0) > 25000;
         },
-      }),
+      } as any),
       on: {
         ELIGIBILITY_CHECKED: [
           {
             target: 'documentSubmission',
             guard: ({ event }) => event.result.isEligible === true,
             actions: assign({
-              eligibilityResult: ({ event }) => event.result,
-              documents: ({ event }) => ({
+              eligibilityResult: ({ event }: any) => event.result,
+              documents: ({ event }: any) => ({
                 submitted: [],
                 required: event.result.requiredDocuments || [],
                 validated: false,
               }),
-              technicalControl: ({ context }) => ({
-                ...context.technicalControl,
-                required: context.request?.type === 'panneaux-solaires' ||
-                         context.request?.type === 'pompe-chaleur',
-              }),
-            }),
+              technicalControl: ({ context }: any) => {
+                const ctx = context as EnergySubsidyContext;
+                return {
+                  ...ctx.technicalControl,
+                  required: ctx.request?.type === 'panneaux-solaires' ||
+                           ctx.request?.type === 'pompe-chaleur',
+                };
+              },
+            } as any),
           },
           {
             target: 'ineligible',
@@ -294,20 +297,26 @@ export const primeEnergieMachine = createMachine({
 
     subsidyCalculation: {
       entry: assign({
-        payment: ({ context }) => ({
-          ...context.payment,
-          amount: context.eligibilityResult?.subsidyAmount || 0,
-        }),
-      }),
+        payment: ({ context }: any) => {
+          const ctx = context as EnergySubsidyContext;
+          return {
+            ...ctx.payment,
+            amount: ctx.eligibilityResult?.subsidyAmount || 0,
+          };
+        },
+      } as any),
       on: {
         CALCULATE_SUBSIDY: {
           target: 'payment',
           actions: assign({
-            payment: ({ context, event }) => ({
-              ...context.payment,
-              amount: event.amount,
-            }),
-          }),
+            payment: ({ context, event }: any) => {
+              const ctx = context as EnergySubsidyContext;
+              return {
+                ...ctx.payment,
+                amount: event.amount,
+              };
+            },
+          } as any),
         },
       },
       meta: {

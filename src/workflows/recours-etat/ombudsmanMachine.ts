@@ -126,7 +126,7 @@ export const ombudsmanMachine = createMachine({
         COMPLAINT_RECEIVED: [
           {
             target: 'investigating',
-            guard: ({ context }) => {
+            guard: ({ context }: { context: any }) => {
               // Check if complaint is admissible
               return !!(
                 context.complaint?.complainant?.firstName ||
@@ -173,10 +173,10 @@ export const ombudsmanMachine = createMachine({
             INFORMATION_RECEIVED: {
               target: 'analyzingCase',
               actions: assign({
-                investigationNotes: ({ context, event }) => [
+                investigationNotes: ({ context, event }: { context: any; event: any }) => [
                   ...context.investigationNotes,
                   event.notes,
-                ],
+                ] as string[],
               }),
             },
           },

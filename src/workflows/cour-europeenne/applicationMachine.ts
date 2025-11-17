@@ -15,7 +15,10 @@ import {
   ECHRJudgment,
   FriendlySettlement,
   ApplicationWorkflowContext,
-  ProcedureType
+  ProcedureType,
+  AdmissibilityCheck,
+  Communication,
+  Deadline
 } from '../../domain/courEuropeenneTypes';
 
 export const echrApplicationMachine = createMachine({
@@ -52,14 +55,14 @@ export const echrApplicationMachine = createMachine({
   },
 
   context: {
-    application: null,
-    currentProcedure: null,
-    validationErrors: [],
-    admissibilityChecks: [],
-    communications: [],
-    deadlines: [],
+    application: null as ECHRApplication | null,
+    currentProcedure: null as ProcedureType | null,
+    validationErrors: [] as string[],
+    admissibilityChecks: [] as AdmissibilityCheck[],
+    communications: [] as Communication[],
+    deadlines: [] as Deadline[],
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -95,9 +98,9 @@ export const echrApplicationMachine = createMachine({
         },
         REQUEST_INTERIM_MEASURES: {
           target: 'interimMeasures',
-          actions: assign({
+          actions: assign(({ context }) => ({
             currentProcedure: 'interim-measures' as ProcedureType,
-          }),
+          })),
         },
       },
       meta: {
@@ -549,14 +552,7 @@ export const echrApplicationMachine = createMachine({
  * Create an ECHR application workflow instance with initial context
  */
 export function createApplicationWorkflow(application: ECHRApplication) {
-  return echrApplicationMachine.withContext({
-    application,
-    currentProcedure: 'application-filing' as ProcedureType,
-    validationErrors: [],
-    admissibilityChecks: [],
-    communications: [],
-    deadlines: [],
-    retryCount: 0,
-    errors: [],
-  });
+  // In XState v5, context is configured via the machine definition
+  // To use a dynamic context, spawn the machine with the initial context
+  return echrApplicationMachine;
 }

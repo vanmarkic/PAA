@@ -55,11 +55,11 @@ export const assembleeGeneraleMachine = createMachine({
   context: {
     assemblee: null,
     convocationSent: false,
-    documentsAttached: [],
+    documentsAttached: [] as string[],
     quorumInfo: null,
-    decisions: [],
+    decisions: [] as Decision[],
     pvReady: false,
-    errors: [],
+    errors: [] as string[],
     retryCount: 0,
   },
 

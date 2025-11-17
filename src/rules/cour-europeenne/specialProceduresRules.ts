@@ -699,11 +699,11 @@ export async function checkGrandChamberEligibility(
   const rejectEvents = results.events.filter((e: any) => e.type === 'reject-referral');
 
   if (rejectEvents.length > 0) {
-    return { accept: false, reason: rejectEvents[0].params.reason };
+    return { accept: false, reason: rejectEvents[0]?.params?.reason ?? 'Referral rejected' };
   }
 
   if (acceptEvents.length > 0) {
-    return { accept: true, reason: acceptEvents[0].params.reason };
+    return { accept: true, reason: acceptEvents[0]?.params?.reason ?? 'Referral accepted' };
   }
 
   return { accept: false, reason: 'Does not meet criteria for Grand Chamber referral' };
@@ -731,11 +731,11 @@ export async function checkRevisionEligibility(
   const rejectEvents = results.events.filter((e: any) => e.type === 'reject-revision');
 
   if (rejectEvents.length > 0) {
-    return { accept: false, reason: rejectEvents[0].params.reason };
+    return { accept: false, reason: rejectEvents[0]?.params?.reason ?? 'Revision rejected' };
   }
 
   if (acceptEvents.length > 0) {
-    return { accept: true, reason: acceptEvents[0].params.reason };
+    return { accept: true, reason: acceptEvents[0]?.params?.reason ?? 'Revision accepted' };
   }
 
   return { accept: false, reason: 'Revision criteria not met' };
@@ -761,14 +761,14 @@ export async function checkThirdPartyIntervention(
   const refuseEvents = results.events.filter((e: any) => e.type === 'refuse-intervention');
 
   if (refuseEvents.length > 0) {
-    return { grant: false, reason: refuseEvents[0].params.reason };
+    return { grant: false, reason: refuseEvents[0]?.params?.reason ?? 'Intervention refused' };
   }
 
   if (grantEvents.length > 0) {
     return {
       grant: true,
-      scope: grantEvents[0].params.scope,
-      reason: grantEvents[0].params.reason,
+      scope: grantEvents[0]?.params?.scope,
+      reason: grantEvents[0]?.params?.reason ?? 'Intervention granted',
     };
   }
 
@@ -796,14 +796,14 @@ export async function checkLegalAidEligibility(
   const refuseEvents = results.events.filter((e: any) => e.type === 'refuse-legal-aid');
 
   if (refuseEvents.length > 0) {
-    return { grant: false, reason: refuseEvents[0].params.reason };
+    return { grant: false, reason: refuseEvents[0]?.params?.reason ?? 'Legal aid refused' };
   }
 
   if (grantEvents.length > 0) {
     return {
       grant: true,
-      coverage: grantEvents[0].params.coverage,
-      reason: grantEvents[0].params.reason,
+      coverage: grantEvents[0]?.params?.coverage,
+      reason: grantEvents[0]?.params?.reason ?? 'Legal aid granted',
     };
   }
 
