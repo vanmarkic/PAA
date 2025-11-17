@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "clean": "rm -rf dist .astro node_modules",
-    "prepare:metadata": "cd .. && npx ts-node scripts/generateMachinesMetadata.ts && cp docs/machines-metadata.json docs-astro/public/"
+    "prepare:metadata": "cd .. && npx ts-node scripts/generateMachinesMetadata.ts && cp docs/machines-metadata.json docs-astro/public/ && node scripts/generate-features-metadata-standalone.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",

@@ -1,0 +1,273 @@
+---
+import MainLayout from '../../../layouts/Layout.astro';
+import { loadFeaturesMetadata, getFeaturesByCategory, getCategoryStats } from '../../../lib/features';
+
+// Generate static paths for all categories
+export async function getStaticPaths() {
+  const metadata = await loadFeaturesMetadata();
+  const categories = metadata.categories || [];
+
+  return categories.map(category => ({
+    params: { slug: category },
+    props: { category }
+  }));
+}
+
+const { category } = Astro.props;
+const metadata = await loadFeaturesMetadata();
+const categoryFeatures = getFeaturesByCategory(metadata, category);
+const categoryStats = getCategoryStats(metadata, category);
+
+// Pretty category names
+const categoryNames: Record<string, string> = {
+  'benefits': 'Prestations Sociales',
+  'conversion': 'Conversion de Textes',
+  'tax': 'Fiscalité',
+  'droits-civils': 'Droits Civils',
+  'etrangers': 'Droit des Étrangers',
+  'recours-etat': 'Recours État',
+  'copropriete': 'Copropriété',
+  'cour-europeenne': 'Cour Européenne',
+  'democratie': 'Démocratie',
+  'ecologie': 'Écologie',
+  'immobilier': 'Immobilier',
+  'propriete-intellectuelle': 'Propriété Intellectuelle',
+  'statut-artiste': 'Statut d\'Artiste'
+};
+
+const categoryName = categoryNames[category] || category
+  .split('-')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+
+// Category descriptions
+const categoryDescriptions: Record<string, string> = {
+  'benefits': 'Toutes les aides et prestations sociales disponibles en Belgique',
+  'tax': 'Déductions fiscales, crédits d\'impôt et avantages fiscaux',
+  'droits-civils': 'Procédures civiles, état civil et droits fondamentaux',
+  'etrangers': 'Séjour, visa, asile et naturalisation',
+  'copropriete': 'Gestion et administration des immeubles en copropriété',
+  'immobilier': 'Acquisition, location et logement social',
+  'propriete-intellectuelle': 'Brevets, marques, droits d\'auteur et protection IP'
+};
+
+const categoryDescription = categoryDescriptions[category] || `Spécifications Gherkin pour ${categoryName}`;
+
+// Category colors
+const categoryColors: Record<string, string> = {
+  'benefits': 'purple',
+  'tax': 'blue',
+  'droits-civils': 'green',
+  'etrangers': 'orange',
+  'copropriete': 'red',
+  'immobilier': 'yellow',
+  'propriete-intellectuelle': 'indigo'
+};
+
+const categoryColor = categoryColors[category] || 'purple';
+---
+
+<MainLayout
+  title={`${categoryName} - Fonctionnalités Gherkin PAA`}
+  description={categoryDescription}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="mb-8">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+        <li>/</li>
+        <li><a href="/features" class="hover:text-gray-700">Fonctionnalités</a></li>
+        <li>/</li>
+        <li class="text-gray-900">{categoryName}</li>
+      </ol>
+    </nav>
+
+    <!-- Header with Category Info -->
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{categoryName}</h1>
+      <p class="text-lg text-gray-600 mb-6">{categoryDescription}</p>
+
+      <!-- Category Statistics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class={`bg-gradient-to-br from-${categoryColor}-500 to-${categoryColor}-700 rounded-lg p-4 text-white`}>
+          <div class="text-2xl font-bold">{categoryStats.count}</div>
+          <div class="text-sm opacity-90">Fonctionnalités</div>
+        </div>
+        <div class="bg-white rounded-lg border border-gray-200 p-4">
+          <div class="text-2xl font-bold text-gray-900">{categoryStats.totalScenarios}</div>
+          <div class="text-sm text-gray-600">Scénarios</div>
+        </div>
+        <div class="bg-white rounded-lg border border-gray-200 p-4">
+          <div class="text-2xl font-bold text-gray-900">{categoryStats.totalSteps}</div>
+          <div class="text-sm text-gray-600">Étapes</div>
+        </div>
+        <div class="bg-white rounded-lg border border-gray-200 p-4">
+          <div class="text-2xl font-bold text-gray-900">{categoryStats.totalExamples}</div>
+          <div class="text-sm text-gray-600">Exemples</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search and Sort -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex-1">
+          <input
+            type="text"
+            id="search"
+            placeholder="Rechercher dans cette catégorie..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+          />
+        </div>
+        <div class="md:w-48">
+          <select
+            id="sort"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+          >
+            <option value="name">Nom (A-Z)</option>
+            <option value="scenarios">Scénarios (plus au moins)</option>
+            <option value="recent">Plus récents</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tags Cloud (if tags exist in this category) -->
+    {categoryStats.tags && categoryStats.tags.length > 0 && (
+      <div class="bg-gray-50 rounded-lg p-6 mb-8">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Tags Populaires</h2>
+        <div class="flex flex-wrap gap-2">
+          {categoryStats.tags.slice(0, 20).map(tag => (
+            <span class="inline-block px-3 py-1 bg-white border border-gray-300 text-gray-700 text-sm rounded-full hover:bg-purple-50 hover:border-purple-300 cursor-pointer">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="features-grid">
+      {categoryFeatures.map((feature) => (
+        <div class="feature-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg hover:border-purple-500 transition-all" data-name={feature.name.toLowerCase()}>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              {feature.name}
+            </h3>
+            <p class="text-sm text-gray-600 line-clamp-3">
+              {feature.description || 'Spécification comportementale BDD'}
+            </p>
+          </div>
+
+          <div class="space-y-3 mb-4">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">Scénarios</span>
+              <span class="font-medium text-gray-900">{feature.scenarios.length}</span>
+            </div>
+            {feature.metadata.version && (
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Version</span>
+                <span class="font-medium text-gray-900">{feature.metadata.version}</span>
+              </div>
+            )}
+            {feature.metadata.effectiveDate && (
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Date d'effet</span>
+                <span class="font-medium text-gray-900">{feature.metadata.effectiveDate}</span>
+              </div>
+            )}
+          </div>
+
+          {feature.tags && feature.tags.length > 0 && (
+            <div class="flex flex-wrap gap-1 mb-4">
+              {feature.tags.slice(0, 3).map(tag => (
+                <span class="inline-block px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded">
+                  {tag}
+                </span>
+              ))}
+              {feature.tags.length > 3 && (
+                <span class="inline-block px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded">
+                  +{feature.tags.length - 3}
+                </span>
+              )}
+            </div>
+          )}
+
+          <a
+            href={`/features/${feature.id}`}
+            class={`block text-center px-4 py-2 bg-${categoryColor}-600 text-white rounded hover:bg-${categoryColor}-700 transition-colors`}
+          >
+            Voir les détails →
+          </a>
+        </div>
+      ))}
+    </div>
+
+    {categoryFeatures.length === 0 && (
+      <div class="text-center py-12">
+        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <p class="text-gray-500">Aucune fonctionnalité trouvée dans cette catégorie.</p>
+      </div>
+    )}
+
+    <!-- Navigation to Other Categories -->
+    <div class="mt-12 pt-12 border-t border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900 mb-6">Autres Catégories</h2>
+      <div class="flex flex-wrap gap-3">
+        {metadata.categories
+          .filter(cat => cat !== category)
+          .map(cat => (
+            <a
+              href={`/features/category/${cat}`}
+              class="inline-block px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-purple-50 hover:border-purple-300 transition-colors"
+            >
+              {categoryNames[cat] || cat}
+            </a>
+          ))}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Client-side search and sort functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search') as HTMLInputElement;
+      const sortSelect = document.getElementById('sort') as HTMLSelectElement;
+      const featuresGrid = document.getElementById('features-grid');
+      const featureCards = Array.from(document.querySelectorAll('.feature-card')) as HTMLElement[];
+
+      function filterAndSort() {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
+        const sortBy = sortSelect?.value || 'name';
+
+        // Filter cards
+        let visibleCards = featureCards.filter(card => {
+          const name = card.dataset.name || '';
+          const matches = !searchTerm || name.includes(searchTerm);
+          card.style.display = matches ? '' : 'none';
+          return matches;
+        });
+
+        // Sort cards (if needed - sorting already done server-side for name)
+        if (sortBy === 'name' && featuresGrid) {
+          visibleCards.sort((a, b) => {
+            const nameA = a.dataset.name || '';
+            const nameB = b.dataset.name || '';
+            return nameA.localeCompare(nameB);
+          });
+
+          // Re-append cards in sorted order
+          visibleCards.forEach(card => {
+            featuresGrid.appendChild(card);
+          });
+        }
+      }
+
+      searchInput?.addEventListener('input', filterAndSort);
+      sortSelect?.addEventListener('change', filterAndSort);
+    });
+  </script>
+</MainLayout>

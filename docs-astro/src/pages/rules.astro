@@ -1,0 +1,323 @@
+---
+import MainLayout from '../layouts/Layout.astro';
+import { loadRulesMetadata, getCategoryStats, getRulesByCategory, getAllRules, CATEGORY_NAMES, CATEGORY_ICONS, getPriorityColor, getPriorityLabel, formatOperator } from '../lib/rules';
+
+// Load rules data at build time
+const metadata = await loadRulesMetadata();
+
+// Get category statistics
+const categoryStats = metadata.categories.map(cat => ({
+  id: cat,
+  name: CATEGORY_NAMES[cat] || cat,
+  icon: CATEGORY_ICONS[cat] || 'folder',
+  stats: getCategoryStats(metadata, cat),
+  rules: getRulesByCategory(metadata, cat)
+}));
+
+// Get all rules
+const allRules = getAllRules(metadata);
+
+// Calculate overall statistics (with fallbacks if statistics is not present)
+const topFacts = metadata.statistics?.uniqueFacts?.slice(0, 10) || [];
+const topOperators = metadata.statistics?.uniqueOperators?.slice(0, 8) || [];
+
+// Featured rules (high priority rules)
+const featuredRules = allRules
+  .filter(r => r.priority >= 9)
+  .slice(0, 6);
+---
+
+<MainLayout title="Règles Métier - PAA" description="Exploration des règles métier du système PAA">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Règles Métier</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Découvrez les règles d'éligibilité et de calcul pour toutes les prestations sociales belges.
+        {metadata.totalRules} règles actives dans {metadata.categories.length} catégories.
+      </p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div class="text-3xl font-bold text-purple-600">{metadata.totalRules}</div>
+        <div class="text-gray-600">Règles Totales</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div class="text-3xl font-bold text-blue-600">{metadata.categories.length}</div>
+        <div class="text-gray-600">Catégories</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div class="text-3xl font-bold text-green-600">{metadata.statistics?.uniqueFacts?.length || 0}</div>
+        <div class="text-gray-600">Critères Uniques</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div class="text-3xl font-bold text-orange-600">{metadata.statistics?.averageConditionsPerRule || '0'}</div>
+        <div class="text-gray-600">Conditions/Règle</div>
+      </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-12">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">Rechercher et Filtrer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Rechercher par description..."
+          class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+        <select
+          id="category-filter"
+          class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+        >
+          <option value="">Toutes les catégories</option>
+          {metadata.categories.map(cat => (
+            <option value={cat}>{CATEGORY_NAMES[cat] || cat}</option>
+          ))}
+        </select>
+        <select
+          id="priority-filter"
+          class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+        >
+          <option value="">Toutes les priorités</option>
+          <option value="9">Critique (≥ 9)</option>
+          <option value="7">Haute (≥ 7)</option>
+          <option value="5">Moyenne (≥ 5)</option>
+          <option value="0">Toutes</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Featured Rules -->
+    {featuredRules.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Règles Critiques</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredRules.map(rule => (
+            <div class="bg-white rounded-lg border-2 border-red-200 p-6 hover:shadow-lg transition-shadow">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-lg font-semibold text-gray-900">{rule.description}</h3>
+                <span class={`px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-700`}>
+                  P{rule.priority}
+                </span>
+              </div>
+              <div class="space-y-2">
+                <div class="text-sm text-gray-600">
+                  <span class="font-medium">Type:</span> {rule.benefitType || 'général'}
+                </div>
+                <div class="text-sm text-gray-600">
+                  <span class="font-medium">Événement:</span>
+                  <code class="px-1 py-0.5 bg-gray-100 text-xs rounded">{rule.event.type}</code>
+                </div>
+                {rule.conditions.all && (
+                  <div class="text-sm text-gray-600">
+                    <span class="font-medium">Conditions (ET):</span> {rule.conditions.all.length}
+                  </div>
+                )}
+                {rule.conditions.any && (
+                  <div class="text-sm text-gray-600">
+                    <span class="font-medium">Conditions (OU):</span> {rule.conditions.any.length}
+                  </div>
+                )}
+              </div>
+              <a href={`/rules/${rule.id}`} class="mt-4 inline-block text-purple-600 hover:text-purple-700 font-medium text-sm">
+                Voir les détails →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Categories Grid -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Règles par Catégorie</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categoryStats.map(category => (
+          <div class="category-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow" data-category={category.id}>
+            <div class="flex items-start mb-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center">
+                {category.icon === 'users' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                  </svg>
+                )}
+                {category.icon === 'home' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                  </svg>
+                )}
+                {category.icon === 'briefcase' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                )}
+                {category.icon === 'heart' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                )}
+                {category.icon === 'clock' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                )}
+                {category.icon === 'calculator' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                  </svg>
+                )}
+                {(category.icon === 'book' || category.icon === 'education') && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                )}
+                {(category.icon === 'medical' || category.icon === 'sante') && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13H5v-2h14v2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5v14h-2V5h2z"></path>
+                  </svg>
+                )}
+                {(category.icon === 'hand' || category.icon === 'handicap') && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path>
+                  </svg>
+                )}
+                {(category.icon === 'folder' || category.icon === 'autre') && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                  </svg>
+                )}
+              </div>
+              <div class="ml-4 flex-1">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{category.name}</h3>
+                <div class="space-y-1">
+                  <div class="text-purple-600 font-medium">{category.stats.count} règles</div>
+                  <div class="text-sm text-gray-600">{category.stats.totalConditions} conditions</div>
+                  <div class="text-sm text-gray-600">{category.stats.uniqueFacts.length} critères uniques</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample rules from this category -->
+            {category.rules.slice(0, 3).map(rule => (
+              <div class="border-t pt-3 mt-3">
+                <a href={`/rules/${rule.id}`} class="block text-sm text-gray-700 hover:text-purple-600 transition-colors">
+                  → {rule.description}
+                </a>
+              </div>
+            ))}
+
+            {category.rules.length > 3 && (
+              <div class="mt-4 pt-4 border-t">
+                <button
+                  class="show-category-rules text-sm font-medium text-purple-600 hover:text-purple-700"
+                  data-category={category.id}
+                >
+                  Voir toutes les {category.stats.count} règles →
+                </button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Operators and Facts Overview -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Common Operators -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Opérateurs Utilisés</h3>
+        <div class="space-y-2">
+          {topOperators.map(op => (
+            <div class="flex items-center justify-between">
+              <code class="px-2 py-1 bg-gray-100 text-sm rounded">{op}</code>
+              <span class="text-gray-600">{formatOperator(op)}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Top Facts -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Critères Fréquents</h3>
+        <div class="flex flex-wrap gap-2">
+          {topFacts.map(fact => (
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+              {fact}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Rule Complexity Indicator -->
+    <div class="bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl p-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">Comprendre les Règles Métier</h2>
+      <p class="mb-6 text-purple-100">
+        Les règles métier définissent l'éligibilité et les calculs pour chaque prestation sociale.
+        Chaque règle combine des conditions (critères) avec des opérateurs logiques pour déterminer
+        si un demandeur est éligible ou non.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#" id="show-rule-guide" class="inline-block px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
+          Guide des Règles
+        </a>
+        <a href="/api" class="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+          API Documentation
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for filtering and interaction -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      const categoryFilter = document.getElementById('category-filter');
+      const priorityFilter = document.getElementById('priority-filter');
+      const categoryCards = document.querySelectorAll('.category-card');
+
+      // Search and filter functionality
+      function filterCategories() {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
+        const selectedCategory = categoryFilter?.value || '';
+
+        categoryCards.forEach(card => {
+          const category = card.dataset.category;
+          const text = card.textContent?.toLowerCase() || '';
+
+          const matchesSearch = !searchTerm || text.includes(searchTerm);
+          const matchesCategory = !selectedCategory || category === selectedCategory;
+
+          if (matchesSearch && matchesCategory) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      searchInput?.addEventListener('input', filterCategories);
+      categoryFilter?.addEventListener('change', filterCategories);
+
+      // Handle category rule expansion
+      document.querySelectorAll('.show-category-rules').forEach(button => {
+        button.addEventListener('click', (e) => {
+          const category = e.target.dataset.category;
+          // In a real implementation, this would expand to show all rules
+          // or navigate to a filtered view
+          window.location.href = `/rules?category=${category}`;
+        });
+      });
+
+      // Show rule guide modal (placeholder)
+      document.getElementById('show-rule-guide')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Guide des règles: Les règles utilisent des conditions AND (toutes doivent être vraies) ou OR (au moins une doit être vraie) pour déterminer l\'éligibilité.');
+      });
+    });
+  </script>
+</MainLayout>

@@ -1,0 +1,439 @@
+---
+/**
+ * Rules Explorer Component
+ * Displays business rules from the generated metadata
+ */
+
+import { loadRulesMetadata, getRuleFilesByCategory, formatOperator, getPriorityColor, getPriorityLabel, getBenefitDisplayName } from '../lib/rules';
+
+const metadata = await loadRulesMetadata();
+const categories = metadata.categories;
+
+// Get sample rules for display
+const selectedCategory = 'social-benefits';
+const categoryFiles = getRuleFilesByCategory(metadata, selectedCategory);
+---
+
+<div class="rules-explorer">
+  <div class="explorer-header">
+    <h2>Business Rules Explorer</h2>
+    <p class="text-gray-600">
+      {metadata.totalRules} règles dans {metadata.totalFiles} fichiers
+    </p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>📊 Total des Règles</h3>
+      <p class="stat-value">{metadata.statistics.totalRules}</p>
+    </div>
+    <div class="stat-card">
+      <h3>📁 Fichiers de Règles</h3>
+      <p class="stat-value">{metadata.statistics.totalRuleFiles}</p>
+    </div>
+    <div class="stat-card">
+      <h3>📚 Catégories</h3>
+      <p class="stat-value">{metadata.categories.length}</p>
+    </div>
+    <div class="stat-card">
+      <h3>⚖️ Couverture Légale</h3>
+      <p class="stat-value">{metadata.coverage.percentageWithLegalBasis}</p>
+    </div>
+  </div>
+
+  <div class="categories-section">
+    <h3>Règles par Catégorie</h3>
+    <div class="category-tabs">
+      {categories.map(category => (
+        <button class="category-tab" data-category={category}>
+          {category.replace('-', ' ')}
+          <span class="badge">{metadata.statistics.rulesPerCategory[category] || 0}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="rules-list">
+    <h3>Règles: {selectedCategory.replace('-', ' ')}</h3>
+    {categoryFiles.map(file => (
+      <div class="rule-file">
+        <div class="file-header">
+          <h4>{getBenefitDisplayName(file.benefitType || file.fileName)}</h4>
+          <div class="file-meta">
+            {file.metadata && (
+              <span class="version-badge">v{file.metadata.implementationVersion}</span>
+            )}
+            {file.legalFramework && (
+              <span class="legal-badge" title={file.legalFramework.primaryLegislation?.title}>
+                ⚖️ Base légale
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div class="rules-container">
+          {file.rules.map(rule => (
+            <div class="rule-card">
+              <div class="rule-header">
+                <span class="rule-name">{rule.name}</span>
+                <span class={`priority-badge priority-${getPriorityColor(rule.priority)}`}>
+                  {getPriorityLabel(rule.priority)}
+                </span>
+              </div>
+
+              <p class="rule-description">{rule.description}</p>
+
+              <div class="rule-conditions">
+                {rule.conditions.all && (
+                  <div class="condition-group">
+                    <span class="condition-type">Toutes les conditions:</span>
+                    {rule.conditions.all.map(condition => (
+                      <div class="condition">
+                        <code>{condition.fact}</code>
+                        <span class="operator">{formatOperator(condition.operator)}</span>
+                        <code>{JSON.stringify(condition.value)}</code>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {rule.conditions.any && (
+                  <div class="condition-group">
+                    <span class="condition-type">Une des conditions:</span>
+                    {rule.conditions.any.map(condition => (
+                      <div class="condition">
+                        <code>{condition.fact}</code>
+                        <span class="operator">{formatOperator(condition.operator)}</span>
+                        <code>{JSON.stringify(condition.value)}</code>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div class="rule-event">
+                <span class="event-label">Résultat:</span>
+                <code class="event-type">{rule.event.type}</code>
+              </div>
+
+              {rule.facts && rule.facts.length > 0 && (
+                <div class="rule-facts">
+                  <span class="facts-label">Données requises:</span>
+                  {rule.facts.map(fact => (
+                    <span class="fact-badge">{fact}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="common-facts">
+    <h3>Facts les plus utilisés</h3>
+    <div class="facts-list">
+      {metadata.statistics.commonFacts.slice(0, 5).map(({ fact, count }) => (
+        <div class="fact-item">
+          <span class="fact-name">{fact}</span>
+          <span class="fact-count">{count} utilisations</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .rules-explorer {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .explorer-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 1rem;
+  }
+
+  .explorer-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-card h3 {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+
+  .categories-section {
+    margin-bottom: 2rem;
+  }
+
+  .category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .category-tab {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .category-tab:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+  }
+
+  .badge {
+    background: #ef4444;
+    color: white;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .rules-list {
+    margin-top: 2rem;
+  }
+
+  .rule-file {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .file-header {
+    padding: 1rem 1.5rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .file-header h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .file-meta {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .version-badge {
+    padding: 0.25rem 0.75rem;
+    background: #3b82f6;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .legal-badge {
+    padding: 0.25rem 0.75rem;
+    background: #10b981;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .rules-container {
+    padding: 1.5rem;
+  }
+
+  .rule-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .rule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .rule-name {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .priority-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .priority-red {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .priority-orange {
+    background: #fed7aa;
+    color: #c2410c;
+  }
+
+  .priority-yellow {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .priority-green {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .rule-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .rule-conditions {
+    margin-bottom: 1rem;
+  }
+
+  .condition-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .condition-type {
+    display: block;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+
+  .condition {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+  }
+
+  .operator {
+    padding: 0.125rem 0.375rem;
+    background: #e5e7eb;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  code {
+    padding: 0.125rem 0.375rem;
+    background: #f3f4f6;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875rem;
+  }
+
+  .rule-event {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .event-type {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+
+  .rule-facts {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .facts-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .fact-badge {
+    padding: 0.25rem 0.5rem;
+    background: #f3e8ff;
+    color: #6b21a8;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .common-facts {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+  }
+
+  .facts-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .fact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #f9fafb;
+    border-radius: 0.25rem;
+  }
+
+  .fact-name {
+    font-weight: 500;
+  }
+
+  .fact-count {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+</style>
