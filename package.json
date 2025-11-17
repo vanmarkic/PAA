@@ -63,6 +63,7 @@
     "jest-environment-jsdom": "^30.2.0",
     "jsdom": "^25.0.1",
     "pino-pretty": "^13.1.2",
+    "playwright": "^1.56.1",
     "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
