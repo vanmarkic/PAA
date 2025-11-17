@@ -295,19 +295,211 @@ export const RIS_TYPES_METADATA = {
 };
 ```
 
+## Automated Monitoring & Updates 🤖
+
+The PAA system includes **fully automated legal source monitoring** with **AI-powered updates** using Claude.
+
+### How It Works
+
+```mermaid
+graph LR
+    A[Monitor Belgian Sources] --> B{Changes Detected?}
+    B -->|Yes| C[Claude AI Rewrites Features]
+    C --> D[Claude AI Updates Rules]
+    D --> E[Version Compliance Check]
+    E --> F[Create PR]
+    B -->|No| G[No Action]
+```
+
+### Weekly Monitoring
+
+Every Monday at 9:00 AM (UTC), GitHub Actions automatically:
+
+1. **Scans Belgian legal sources**:
+   - SPF Intégration Sociale (RIS)
+   - ONEM (AGR, unemployment)
+   - SPF Sécurité Sociale (GRAPA)
+   - ejustice.just.fgov.be (legal texts)
+
+2. **Detects changes**:
+   - Amount indexation
+   - New legal texts
+   - Modified articles
+   - Effective date changes
+
+3. **Uses Claude AI** to rewrite (if `ANTHROPIC_API_KEY` is set):
+   - Features files with new versions and amounts
+   - Rules files to match specifications
+   - Maintains legal accuracy and version compliance
+
+4. **Creates Pull Request**:
+   - With detailed change report
+   - Version bumped correctly
+   - Ready for human review
+
+### Commands
+
+#### Monitor Legal Sources
+
+```bash
+# Run monitoring scan
+npm run monitor:legal
+
+# Show monitoring state (tracked amounts, history)
+npm run monitor:legal:state
+```
+
+#### Automated Updates with AI
+
+```bash
+# Full automation (monitor → AI rewrite → commit → PR)
+npm run auto-update
+
+# Preview changes without committing
+npm run auto-update:dry-run
+
+# Monitor and update manually (no AI)
+npm run monitor:legal
+# Review changes, then update files manually
+```
+
+### Configuration
+
+#### GitHub Secrets
+
+Set these in your repository settings:
+
+```
+ANTHROPIC_API_KEY = sk-ant-api03-...
+```
+
+Without this secret, the system will:
+- ✅ Still monitor legal sources
+- ✅ Create GitHub issues when changes detected
+- ❌ NOT automatically rewrite features/rules
+
+#### Environment Variables
+
+```bash
+# Local development
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+export CLAUDE_MODEL="claude-3-5-sonnet-20241022"
+
+# Run automated update
+npm run auto-update
+```
+
+### Workflow Example
+
+**Scenario: RIS amounts increase by 2% (indexation)**
+
+1. **Monday 9:00 AM**: GitHub Action runs
+2. **Monitor**: Detects new amounts on SPF website
+3. **AI Rewrite**:
+   - Feature file: Updates amounts, bumps version to 2024.2.0
+   - Rules file: Updates `RIS_AMOUNTS_2024`, bumps version to 2024.2.0
+4. **Compliance**: Runs `npm run check:versions` → ✅ Compliant
+5. **PR Created**: `[Auto-Update] Legal changes detected - 2024-07-15`
+6. **Human Review**: Legal expert reviews and approves
+7. **Merge**: Changes go live
+
+### Monitoring State
+
+The system maintains state in `.monitoring-state.json`:
+
+```json
+{
+  "lastScanDate": "2024-11-17T09:00:00.000Z",
+  "knownAmounts": {
+    "ris": {
+      "isolé": 1229.12,
+      "cohabitant": 819.41,
+      "familleMonoparentale": 1638.82
+    }
+  },
+  "scanHistory": [...]
+}
+```
+
+This enables:
+- Change detection (compare current vs known amounts)
+- Scan history tracking
+- Confidence scoring
+
+### Safety Features
+
+1. **Human Review Required**:
+   - All AI changes go through PR review
+   - Never auto-merges
+   - Compliance checks must pass
+
+2. **Confidence Scoring**:
+   - AI results rated: high/medium/low
+   - Low confidence = requires manual review flag
+
+3. **Validation**:
+   - Gherkin syntax validation
+   - TypeScript type checking
+   - Version compliance verification
+
+4. **Dry-Run Mode**:
+   - Preview changes before committing
+   - Test automation locally
+
+### Customization
+
+#### Add New Benefits to Monitor
+
+Edit `src/utils/legalSourceMonitor.ts`:
+
+```typescript
+const LEGAL_SOURCES = {
+  // ... existing
+  grapa: {
+    sourceId: 'grapa-spf',
+    sourceName: 'SPF Sécurité Sociale - GRAPA',
+    sourceUrl: 'https://www.socialsecurity.belgium.be/...',
+    checkInterval: 'monthly',
+  },
+};
+```
+
+#### Customize AI Prompts
+
+Edit `src/ai/claudeIntegration.ts`:
+
+- `generateFeatureRewritePrompt()` - Feature file updates
+- `generateRulesRewritePrompt()` - Rules file updates
+
+#### Change Schedule
+
+Edit `.github/workflows/legal-source-monitoring.yml`:
+
+```yaml
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9 AM
+    # Change to: '0 9 1 * *' for monthly (1st of month)
+```
+
+### Limitations & Future Work
+
+**Current Limitations**:
+- Web scraping placeholders (needs implementation for actual source parsing)
+- Only monitors predefined sources
+- Requires GitHub CLI (`gh`) for PR creation
+
+**Planned Enhancements**:
+1. Real web scraping implementation (Cheerio/Playwright)
+2. Multi-language support (FR/NL/DE) for legal sources
+3. Email notifications for detected changes
+4. Automatic test generation for new scenarios
+
 ## Future Enhancements
 
 ### Planned Features
 
-1. **Automatic Rule Generation**
-   ```bash
-   npm run sync:rules -- --benefit=ris
-   # Reads features/benefits/ris.feature
-   # Generates src/rules/risRules.ts
-   # Updates version automatically
-   ```
-
-2. **Version Migration Tool**
+1. **Version Migration Tool**
    ```bash
    npm run migrate:version -- --benefit=ris --from=2024.1.0 --to=2024.2.0
    # Shows diff
@@ -315,7 +507,7 @@ export const RIS_TYPES_METADATA = {
    # Runs compliance check
    ```
 
-3. **Legal Changelog Generator**
+2. **Legal Changelog Generator**
    ```bash
    npm run changelog:legal
    # Generates LEGAL_CHANGELOG.md
