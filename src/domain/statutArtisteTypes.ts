@@ -524,16 +524,16 @@ export function isEligibleForArtistStatus(artist: Artist): ArtistStatusEligibili
     result.isEligible = true;
     result.statusType = determineStatusType(artist);
     result.category = artist.artistProfile.category;
-    result.recommendations.push("Vous êtes éligible au statut d'artiste complet");
+    result.recommendations?.push("Vous êtes éligible au statut d'artiste complet");
   } else {
     if (!daysMet) {
-      result.missingConditions.push(`Jours prestés insuffisants (${artist.professionalActivity.daysWorkedArtistic}/${daysRequired})`);
+      result.missingConditions?.push(`Jours prestés insuffisants (${artist.professionalActivity.daysWorkedArtistic}/${daysRequired})`);
     }
     if (!incomeMet) {
-      result.missingConditions.push(`Revenus artistiques insuffisants (${artist.financials.annualIncomeArtistic}€/${ARTIST_STATUS_CONSTANTS.MINIMUM_ARTISTIC_INCOME}€)`);
+      result.missingConditions?.push(`Revenus artistiques insuffisants (${artist.financials.annualIncomeArtistic}€/${ARTIST_STATUS_CONSTANTS.MINIMUM_ARTISTIC_INCOME}€)`);
     }
     if (!ceilingMet) {
-      result.missingConditions.push(`Revenus non-artistiques trop élevés (max ${ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME}€)`);
+      result.missingConditions?.push(`Revenus non-artistiques trop élevés (max ${ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME}€)`);
     }
   }
 

@@ -197,7 +197,7 @@ export const healthMachine = createMachine({
         fs.writeFileSync(fullPath, content);
       }
 
-      const machineFiles = findMachineFiles(fixturesDir);
+      const _machineFiles = findMachineFiles(fixturesDir);
 
       // Devrait trouver les 3 fichiers *Machine.ts (même si nommés différemment dans le test)
       // En réalité, on cherche les fichiers qui se terminent par Machine.ts

@@ -257,11 +257,11 @@ export const trademarkRegistrationMachine = createMachine({
         MARK_REGISTERED: {
           target: 'registered',
           actions: assign({
-            registrationCertificate: ({ event }: { event: any }) => event.certificate,
-            application: ({ context }: { context: any }) => ({
+            registrationCertificate: ({ event }: { event: any }) => event?.certificate,
+            application: ({ context, event }: { context: any; event: any }) => ({
               ...context.application,
               registrationDate: new Date(),
-              registrationNumber: event.certificate.number,
+              registrationNumber: event?.certificate?.number,
               status: 'enregistre',
               expiryDate: new Date(Date.now() + IP_CONSTANTS.TRADEMARK_TERM * 365 * 24 * 60 * 60 * 1000),
             }),
@@ -291,7 +291,7 @@ export const trademarkRegistrationMachine = createMachine({
       on: {
         REQUEST_RENEWAL: {
           target: 'renewalProcedure',
-          guard: ({ context }) => {
+          guard: ({ context }: { context: any }) => {
             const expiryDate = context.application?.expiryDate;
             if (!expiryDate) return false;
             const monthsUntilExpiry = (expiryDate.getTime() - Date.now()) / (30 * 24 * 60 * 60 * 1000);

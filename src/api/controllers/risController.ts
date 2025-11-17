@@ -230,7 +230,7 @@ export async function updateApplication(
   const changes: Array<{ field: string; oldValue: any; newValue: any }> = [];
 
   // Update fields
-  const { expectedVersion, ...updates } = request.body;
+  const { expectedVersion: _expectedVersion, ...updates } = request.body;
   Object.keys(updates).forEach((key) => {
     const oldValue = (application as any)[key];
     const newValue = (updates as any)[key];

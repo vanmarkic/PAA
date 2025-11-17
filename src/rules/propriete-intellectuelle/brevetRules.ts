@@ -207,16 +207,16 @@ export async function checkPatentEligibility(application: Partial<PatentApplicat
   issues?: string[];
 }> {
   const facts = {
-    hasAbsoluteNovelty: application.hasNovelty || false,
-    priorArtExists: application.priorArtFound || false,
-    hasInventiveStep: application.hasInventiveStep || false,
-    isObviousToSkilledPerson: application.isObvious || false,
-    hasIndustrialApplication: application.industriallyApplicable || false,
-    subjectMatter: application.subjectMatterType || 'technical',
-    hasPriorityClaim: !!application.priorityDate,
-    monthsSincePriorityDate: application.monthsSincePriority || 0,
+    hasAbsoluteNovelty: (application as any).hasNovelty ?? false,
+    priorArtExists: (application as any).priorArtFound ?? false,
+    hasInventiveStep: (application as any).hasInventiveStep ?? false,
+    isObviousToSkilledPerson: (application as any).isObvious ?? false,
+    hasIndustrialApplication: (application as any).industriallyApplicable ?? false,
+    subjectMatter: (application as any).subjectMatterType ?? 'technical',
+    hasPriorityClaim: !!(application as any).priorityDate,
+    monthsSincePriorityDate: (application as any).monthsSincePriority ?? 0,
     isPCTApplication: application.type === 'brevet-pct',
-    monthsSincePCTFiling: application.monthsSincePCT || 0,
+    monthsSincePCTFiling: (application as any).monthsSincePCT ?? 0,
   };
 
   const results = await patentEngineInstance.run(facts);

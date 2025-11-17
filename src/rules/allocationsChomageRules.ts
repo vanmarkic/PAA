@@ -518,7 +518,7 @@ export async function checkUnemploymentEligibility(user: UnemploymentUser): Prom
         ];
 
         // Calculate maximum duration based on 2024 reform
-        let maxDuration = `${TOTAL_DURATION_MONTHS} mois maximum`;
+        const maxDuration = `${TOTAL_DURATION_MONTHS} mois maximum`;
         let phaseInfo = '';
 
         if ((user.unemploymentDurationMonths || 0) <= PHASE_1_DURATION_MONTHS) {

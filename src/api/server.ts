@@ -12,9 +12,8 @@ import swagger from '@fastify/swagger';
 import swaggerUi from '@fastify/swagger-ui';
 
 import { initializeDatabase, closeDatabase } from '../database/data-source';
-import { closeCacheConnections, redisClient } from '../cache/cacheService';
+import { closeCacheConnections } from '../cache/cacheService';
 import { closeQueue } from '../queue/conversionQueue';
-import { authenticate } from '../middleware/auth';
 
 // Import routes
 import risRoutes from './routes/risRoutes';

@@ -128,7 +128,7 @@ describe('Mermaid Syntax Validation', () => {
         const blocks = extractMermaidBlocks(filePath);
         const stateDiagramBlocks = blocks.filter(({ block }) => block.includes('stateDiagram'));
 
-        stateDiagramBlocks.forEach(({ block, lineStart }, index) => {
+        stateDiagramBlocks.forEach(({ block }) => {
           expect(block).not.toMatch(/<br\s*\/?>/);
         });
       });
@@ -180,7 +180,7 @@ describe('Mermaid Syntax Validation', () => {
         block.includes('stateDiagram')
       );
 
-      stateDiagramBlocks.forEach(({ block, lineStart }) => {
+      stateDiagramBlocks.forEach(({ block }) => {
         // If we see conditional transition naming, we should have choice state
         if (block.includes('_less_') || block.includes('_greater_')) {
           expect(block).toMatch(/state\s+\w+\s*<<choice>>/);
@@ -196,7 +196,7 @@ describe('Mermaid Syntax Validation', () => {
         }
 
         const blocks = extractMermaidBlocks(filePath);
-        blocks.forEach(({ block }, index) => {
+        blocks.forEach(({ block }) => {
           if (block.includes('stateDiagram')) {
             expect(block).toMatch(/stateDiagram-v2/);
           }

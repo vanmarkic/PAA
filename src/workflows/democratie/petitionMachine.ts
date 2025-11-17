@@ -59,19 +59,19 @@ export const petitionMachine = createMachine({
   },
 
   context: {
-    petition: null,
-    organizer: null,
-    signatures: [],
+    petition: null as Petition | null,
+    organizer: null as DemocraticCitizen | null,
+    signatures: [] as SignaturePetition[],
     verifiedSignatures: 0,
     rejectedSignatures: 0,
-    authorityResponse: null,
-    verificationQueue: [],
+    authorityResponse: null as ReponsePetition | null,
+    verificationQueue: [] as SignaturePetition[],
     verificationBatch: 100,
-    errors: [],
+    errors: [] as string[],
     retryCount: 0,
     maxRetries: 3,
     thresholdReached: false,
-    submissionReference: null,
+    submissionReference: null as string | null,
   },
 
   states: {
@@ -111,12 +111,12 @@ export const petitionMachine = createMachine({
       on: {
         OPEN_FOR_SIGNATURES: {
           target: 'collecting',
-          actions: assign({
-            petition: ({ context }) => ({
-              ...context.petition!,
+          actions: assign(({ context }) => ({
+            petition: context.petition ? {
+              ...context.petition,
               statut: 'ouverte' as const,
-            }),
-          }),
+            } : null,
+          })),
         },
       },
 
@@ -278,12 +278,12 @@ export const petitionMachine = createMachine({
     },
 
     thresholdReached: {
-      entry: assign({
-        petition: ({ context }) => ({
-          ...context.petition!,
+      entry: assign(({ context }) => ({
+        petition: context.petition ? {
+          ...context.petition,
           statut: 'fermee' as const,
-        }),
-      }),
+        } : null,
+      })),
 
       on: {
         SUBMIT_TO_AUTHORITY: {
@@ -300,13 +300,13 @@ export const petitionMachine = createMachine({
       on: {
         SUBMISSION_CONFIRMED: {
           target: 'submitted',
-          actions: assign({
-            submissionReference: ({ event }) => event.reference,
-            petition: ({ context }) => ({
-              ...context.petition!,
+          actions: assign(({ context, event }) => ({
+            submissionReference: event.reference,
+            petition: context.petition ? {
+              ...context.petition,
               statut: 'examinee' as const,
-            }),
-          }),
+            } : null,
+          })),
         },
         RETRY: {
           target: 'thresholdReached',
@@ -326,14 +326,14 @@ export const petitionMachine = createMachine({
       on: {
         AUTHORITY_RESPONSE: {
           target: 'responded',
-          actions: assign({
-            authorityResponse: ({ event }) => event.response,
-            petition: ({ context, event }) => ({
-              ...context.petition!,
-              statut: event.response.decision === 'acceptee' ? 'acceptee' : 'rejetee' as const,
+          actions: assign(({ context, event }) => ({
+            authorityResponse: event.response,
+            petition: context.petition ? {
+              ...context.petition,
+              statut: event.response.decision === 'acceptee' ? 'acceptee' : ('rejetee' as const),
               reponseAutorite: event.response,
-            }),
-          }),
+            } : null,
+          })),
         },
       },
 
@@ -385,12 +385,12 @@ export const petitionMachine = createMachine({
     },
 
     expired: {
-      entry: assign({
-        petition: ({ context }) => ({
-          ...context.petition!,
+      entry: assign(({ context }) => ({
+        petition: context.petition ? {
+          ...context.petition,
           statut: 'fermee' as const,
-        }),
-      }),
+        } : null,
+      })),
 
       on: {
         ARCHIVE: {

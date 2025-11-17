@@ -303,12 +303,12 @@ async function exampleResidencePermit() {
 
   // Test workflow
   printSubHeader('Testing Workflow State Machine');
-  const service = interpret(residencePermitMachine).onTransition((state) => {
-    if (state.changed) {
-      console.log(`  State: ${colors.cyan}${state.value}${colors.reset}`);
-      if (state.context.currentStep) {
-        console.log(`  Step: ${state.context.currentStep}`);
-      }
+  const service = interpret(residencePermitMachine);
+
+  service.subscribe((state) => {
+    console.log(`  State: ${colors.cyan}${state.value}${colors.reset}`);
+    if (state.context.currentStep) {
+      console.log(`  Step: ${state.context.currentStep}`);
     }
   });
 
@@ -327,11 +327,19 @@ async function exampleFamilyReunification() {
   const application: FamilyReunificationApplication = {
     sponsor: euCitizenProfile,
     applicant: {
-      ...euCitizenProfile.familyMembers[0],
       id: 'family-001',
-      currentResidenceStatus: 'no-status' as ResidenceStatus,
+      firstName: 'Carlos',
+      lastName: 'Rodriguez',
+      dateOfBirth: new Date('1983-08-22'),
+      nationality: 'third-country' as Nationality,
+      countryOfOrigin: 'Peru',
       gender: 'M',
+      currentResidenceStatus: 'no-status' as ResidenceStatus,
+      dateOfEntry: new Date('2024-06-15'),
+      purposeOfStay: 'Family reunification with EU citizen spouse',
       currentAddress: euCitizenProfile.currentAddress,
+      maritalStatus: 'married',
+      familyMembers: [],
       employmentStatus: 'unemployed',
       monthlyIncome: 0,
       hasFinancialSupport: true,
@@ -447,12 +455,12 @@ async function exampleAsylumApplication() {
 
   // Test asylum workflow
   printSubHeader('Testing Asylum Workflow');
-  const asylumService = interpret(asylumApplicationMachine).onTransition((state) => {
-    if (state.changed) {
-      console.log(`  State: ${colors.cyan}${state.value}${colors.reset}`);
-      if (state.context.currentPhase) {
-        console.log(`  Phase: ${state.context.currentPhase}`);
-      }
+  const asylumService = interpret(asylumApplicationMachine);
+
+  asylumService.subscribe((state) => {
+    console.log(`  State: ${colors.cyan}${state.value}${colors.reset}`);
+    if (state.context.currentPhase) {
+      console.log(`  Phase: ${state.context.currentPhase}`);
     }
   });
 

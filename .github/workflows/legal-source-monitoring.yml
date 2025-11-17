@@ -1,0 +1,135 @@
+name: Legal Source Monitoring
+
+on:
+  # Run every Monday at 9:00 AM (UTC)
+  schedule:
+    - cron: '0 9 * * 1'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    name: Monitor Belgian Legal Sources
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run legal source monitoring
+        id: monitor
+        continue-on-error: true
+        run: |
+          npm run monitor:legal -- --github > monitoring-report.txt 2>&1
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+
+      - name: Auto-update with Claude AI
+        id: auto_update
+        if: steps.monitor.outputs.exit_code == '1'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: claude-3-5-sonnet-20241022
+        continue-on-error: true
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "⚠️ ANTHROPIC_API_KEY not set - skipping AI updates"
+            echo "ai_enabled=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "🤖 Running AI-powered automatic updates..."
+          npm run auto-update -- --create-pr > auto-update.log 2>&1
+          echo "ai_enabled=true" >> $GITHUB_OUTPUT
+
+      - name: Extract issue body
+        if: steps.monitor.outputs.exit_code == '1'
+        id: extract
+        run: |
+          # Extract content between markers
+          sed -n '/<!-- GITHUB_ISSUE_START -->/,/<!-- GITHUB_ISSUE_END -->/p' monitoring-report.txt | \
+            sed '1d;$d' > issue-body.txt
+
+          # Set multiline output
+          {
+            echo 'issue_body<<EOF'
+            cat issue-body.txt
+            echo EOF
+          } >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Issue
+        if: steps.monitor.outputs.exit_code == '1' && steps.auto_update.outputs.ai_enabled != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = `${{ steps.extract.outputs.issue_body }}`;
+
+            // Add note about AI automation
+            const note = '\n\n---\n\n' +
+              '**Note**: Automatic AI updates were not enabled for this run. ' +
+              'Set the `ANTHROPIC_API_KEY` secret to enable automatic feature/rules updates.\n';
+
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔍 Changements détectés dans les sources légales - ${new Date().toISOString().split('T')[0]}`,
+              body: issueBody + note,
+              labels: ['legal-update', 'monitoring', 'automated', 'needs-manual-update']
+            });
+
+            console.log(`Issue créée: ${issue.data.html_url}`);
+
+      - name: Upload monitoring report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring-report
+          path: monitoring-report.txt
+          retention-days: 90
+
+      - name: Post summary
+        if: always()
+        run: |
+          if [ "${{ steps.monitor.outputs.exit_code }}" == "1" ]; then
+            echo "⚠️ **Des changements ont été détectés dans les sources légales**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Un issue GitHub a été créé automatiquement avec les détails." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ **Aucun changement détecté dans les sources légales**" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  version-compliance:
+    name: Check Version Compliance
+    runs-on: ubuntu-latest
+    needs: monitor
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check version compliance
+        run: npm run check:versions:strict
+
+      - name: Post compliance summary
+        if: always()
+        run: |
+          echo "## 📋 Version Compliance" >> $GITHUB_STEP_SUMMARY
+          npm run check:versions >> $GITHUB_STEP_SUMMARY 2>&1 || true

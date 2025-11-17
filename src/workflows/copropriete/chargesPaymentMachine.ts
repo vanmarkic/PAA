@@ -52,17 +52,17 @@ export const chargesPaymentMachine = createMachine({
   },
 
   context: {
-    coproprietaire: null,
-    appelFonds: null,
+    coproprietaire: null as Coproprietaire | null,
+    appelFonds: null as AppelFonds | null,
     montantDu: 0,
     montantPaye: 0,
     joursRetard: 0,
-    rappelsEnvoyes: [],
+    rappelsEnvoyes: [] as Rappel[],
     fraisSupplementaires: 0,
     interets: 0,
-    status: 'a_jour',
+    status: 'a_jour' as PaiementStatus,
     actionJudiciaire: false,
-    errors: [],
+    errors: [] as string[],
     retryCount: 0,
   },
 
@@ -129,7 +129,7 @@ export const chargesPaymentMachine = createMachine({
           actions: assign({
             joursRetard: ({ context }) => {
               const aujourdhui = new Date();
-              const echeance = context.appelFonds?.dateEcheance || new Date();
+              const echeance = context.appelFonds && context.appelFonds.dateEcheance ? context.appelFonds.dateEcheance : new Date();
               return Math.floor((aujourdhui.getTime() - echeance.getTime()) / (1000 * 60 * 60 * 24));
             },
           }),

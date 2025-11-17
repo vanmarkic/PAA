@@ -197,19 +197,18 @@ async function main() {
   // ============================================================================
   printSection('🔄 EXAMPLE 5: Environmental Permit Workflow');
 
-  const permitService = interpret(permisEnvironnementMachine)
-    .onTransition((state) => {
-      if (state.changed) {
-        const stateName = typeof state.value === 'string'
-          ? state.value
-          : Object.keys(state.value)[0];
-        const meta = state.meta[`permisEnvironnement.${stateName}`];
-        console.log(`  State: ${colors.cyan}${stateName}${colors.reset}`);
-        if (meta?.description) {
-          console.log(`  Description: ${meta.description}`);
-        }
-      }
-    });
+  const permitService = interpret(permisEnvironnementMachine);
+
+  permitService.subscribe((state) => {
+    const stateName = typeof state.value === 'string'
+      ? state.value
+      : Object.keys(state.value)[0];
+    const meta = state.getMeta();
+    console.log(`  State: ${colors.cyan}${stateName}${colors.reset}`);
+    if (meta?.description) {
+      console.log(`  Description: ${meta.description}`);
+    }
+  });
 
   permitService.start();
 
@@ -243,19 +242,18 @@ async function main() {
   // ============================================================================
   printSection('⚡ EXAMPLE 6: Energy Subsidy Workflow');
 
-  const subsidyService = interpret(primeEnergieMachine)
-    .onTransition((state) => {
-      if (state.changed) {
-        const stateName = typeof state.value === 'string'
-          ? state.value
-          : Object.keys(state.value)[0];
-        const meta = state.meta[`primeEnergie.${stateName}`];
-        console.log(`  State: ${colors.cyan}${stateName}${colors.reset}`);
-        if (meta?.description) {
-          console.log(`  Description: ${meta.description}`);
-        }
-      }
-    });
+  const subsidyService = interpret(primeEnergieMachine);
+
+  subsidyService.subscribe((state) => {
+    const stateName = typeof state.value === 'string'
+      ? state.value
+      : Object.keys(state.value)[0];
+    const meta = state.getMeta();
+    console.log(`  State: ${colors.cyan}${stateName}${colors.reset}`);
+    if (meta?.description) {
+      console.log(`  Description: ${meta.description}`);
+    }
+  });
 
   subsidyService.start();
 

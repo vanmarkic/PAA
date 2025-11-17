@@ -1,5 +1,12 @@
 # language: fr
+# @specification-version:2024.1.0
+# @effective-date:2024-01-01
+# @legal-basis:Loi du 26 mai 2002 concernant le droit à l'intégration sociale
+# @legal-url:https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi
+# @implemented-by:src/rules/risRules.ts
+
 Fonctionnalité: Revenu d'Intégration Sociale (RIS)
+  Version: 2024.1.0
   En tant que personne sans ressources suffisantes
   Je veux savoir si j'ai droit au RIS
   Afin de subvenir à mes besoins de base

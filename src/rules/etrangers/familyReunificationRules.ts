@@ -289,14 +289,14 @@ export async function checkFamilyReunificationEligibility(
     : false;
 
   const facts = {
-    sponsorIncome: sponsor.monthlyIncome || 0,
+    sponsorIncome: sponsor.monthlyIncome ?? 0,
     isRefugee,
     relationship,
     bothOver21: calculateAge(sponsor.dateOfBirth) >= 21 && calculateAge(applicant.dateOfBirth) >= 21,
     marriageRecognized: application.proofOfRelationship.includes('marriage-certificate'),
     childAge,
     hasParentalAuthority: application.proofOfRelationship.includes('birth-certificate'),
-    isFinanciallyDependent: applicant.monthlyIncome === 0 || applicant.monthlyIncome < 500,
+    isFinanciallyDependent: (applicant.monthlyIncome ?? 0) === 0 || (applicant.monthlyIncome ?? 0) < 500,
     hasProofOfSupport: application.proofOfRelationship.includes('financial-support'),
     sponsorIsBelgianOrEU: sponsor.nationality === 'belgian' || sponsor.nationality === 'eu-citizen',
     hasAdequateHousing: application.housingProof.rooms >= 2 && application.housingProof.surface >= 50,
