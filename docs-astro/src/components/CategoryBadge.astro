@@ -6,7 +6,7 @@ interface Props {
 const { category } = Astro.props;
 ---
 
-<a href={`${import.meta.env.BASE_URL}category/${category}`} class="category-badge">
+<a href={`${import.meta.env.BASE_URL}/category/${category}`} class="category-badge">
   {category}
 </a>
 
