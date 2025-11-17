@@ -1,7 +1,7 @@
 ---
 import MachineLayout from '../../layouts/MachineLayout.astro';
 import CategoryBadge from '../../components/CategoryBadge.astro';
-import InteractiveMachine from '../../components/InteractiveMachine.preact.tsx';
+// import InteractiveMachine from '../../components/InteractiveMachine.preact.tsx';
 import { loadMachinesMetadata } from '../../lib/machines';
 import type { MachineMeta } from '../../lib/machines';
 
@@ -76,6 +76,7 @@ const { machine } = Astro.props;
     </section>
 
     <!-- Interactive Machine -->
+    <!-- TODO: Re-implement with React SSR-compatible component
     <section class="diagram-section">
       <h2>Interactive State Machine</h2>
       <p class="section-description">
@@ -87,6 +88,7 @@ const { machine } = Astro.props;
         client:visible
       />
     </section>
+    -->
   </article>
 </MachineLayout>
 

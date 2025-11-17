@@ -1,5 +1,5 @@
 {
-  "generated": "2025-11-17T11:39:44.694Z",
+  "generated": "2025-11-17T11:53:51.682Z",
   "totalMachines": 131,
   "categories": [
     "agriculture",
@@ -1087,7 +1087,7 @@
       "initial": "demandeCertificat"
     },
     {
-      "id": "permisEnvironnement",
+      "id": "permisEnvironnementBase",
       "name": "Permis d'Environnement",
       "category": "environment",
       "description": "",
@@ -5304,6 +5304,7 @@
         "idle",
         "START_GRANT_APPLICATION",
         "application",
+        "evaluation",
         "drafting",
         "SUBMIT_PROJECT",
         "SAVE_DRAFT",
@@ -5312,7 +5313,6 @@
         "after",
         "underEvaluation",
         "JURY_EVALUATION",
-        "evaluation",
         "evaluated",
         "funding",
         "approved",
