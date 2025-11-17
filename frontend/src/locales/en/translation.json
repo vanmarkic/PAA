@@ -24,9 +24,9 @@
   },
   "navigation": {
     "home": "Home",
-    "benefits": "Benefits",
-    "workflows": "Workflows",
-    "rules": "Business Rules",
+    "benefits": "Social Benefits",
+    "procedures": "Procedures",
+    "rules": "Eligibility Rules",
     "documentation": "Documentation",
     "settings": "Settings",
     "language": "Language",
@@ -43,20 +43,20 @@
   },
   "features": {
     "eligibility": {
-      "title": "Eligibility Check",
-      "description": "Calculate eligibility for social benefits"
+      "title": "Entitlement Assessment",
+      "description": "Assess eligibility for social benefits"
     },
-    "conversion": {
-      "title": "Legal Text Conversion",
-      "description": "Convert legal texts to simple language"
+    "simplification": {
+      "title": "Legal Text Simplification",
+      "description": "Translate legal texts to plain language"
     },
-    "workflows": {
-      "title": "Workflows",
-      "description": "Visualize processes and state machines"
+    "procedures": {
+      "title": "Administrative Procedures",
+      "description": "Visualize procedures and process automata"
     },
     "rules": {
-      "title": "Business Rules",
-      "description": "Explore Gherkin and JSON rules"
+      "title": "Eligibility Rules",
+      "description": "Explore benefit criteria and business rules"
     },
     "documentation": {
       "title": "Documentation",
@@ -115,7 +115,8 @@
   },
   "status": {
     "pending": "Pending",
-    "processing": "Processing",
+    "underReview": "Under Review",
+    "processing": "Being Evaluated",
     "approved": "Approved",
     "rejected": "Rejected",
     "completed": "Completed",

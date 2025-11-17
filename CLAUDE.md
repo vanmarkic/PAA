@@ -41,37 +41,40 @@ npm run migration:revert   # Revert last migration
 ```bash
 npm run example:agr                # AGR eligibility check examples
 npm run example:ris                # RIS eligibility check examples
-npm run example:ris:workflow       # RIS workflow state machine demo
-npm run example:conversion         # Legal text conversion pipeline demo
+npm run example:ris:workflow       # RIS procedure state machine demo
+npm run example:conversion         # Legal text simplification pipeline demo
 ```
 
 ### Documentation Generation
 ```bash
 npm run docs:generate      # Generate visualization documentation
-npm run docs:metadata      # Generate machine metadata for all workflows
+npm run docs:metadata      # Generate machine metadata for all procedures
 ```
 
 ## Hybrid Architecture
 
 This codebase uses a **hybrid approach** combining multiple tools, each serving a specific purpose:
 
-### 1. Gherkin/Cucumber - Business Rules Specification
-- **Purpose**: Human-readable specifications for legal rules
+### 1. Gherkin/Cucumber - Eligibility Rules Specification
+- **Purpose**: Human-readable specifications for eligibility criteria
 - **Location**: `features/` directory
 - **Why**: Legal experts and social workers can validate rules without reading code
+- **User-facing terminology**: "Eligibility Rules"/"Règles d'éligibilité"/"Geschiktheidsregels"/"Zulassungsregeln"
 - **Example**: `features/benefits/income-guarantee.feature`, `features/benefits/ris.feature`
 
-### 2. XState - Workflow State Machines
-- **Purpose**: Visual, predictable workflow orchestration
-- **Location**: `src/workflows/` directory
-- **Why**: Complex multi-step processes (legal text conversion, application workflows) need explicit state management
-- **Key machine**: `src/workflows/conversionMachine.ts` - demonstrates the legal text conversion pipeline
-- **Pattern**: All workflows follow similar structure with states, transitions, guards, and meta descriptions
+### 2. XState - Administrative Procedure State Machines (Procédures)
+- **Purpose**: Visual, predictable procedure orchestration
+- **Location**: `src/workflows/` directory (legacy naming; contains administrative procedures)
+- **Why**: Complex multi-step administrative processes (legal text simplification, application procedures) need explicit state management
+- **Key machine**: `src/workflows/conversionMachine.ts` - demonstrates the legal text simplification pipeline
+- **Pattern**: All procedures follow similar structure with states, transitions, guards, and meta descriptions
+- **User-facing terminology**: "Procédures" (FR), "Procedures" (NL), "Verfahren" (DE), "Procedures" (EN)
 
-### 3. json-rules-engine - Runtime Rule Evaluation
-- **Purpose**: Dynamic, database-driven business rules
+### 3. json-rules-engine - Runtime Eligibility Rule Evaluation
+- **Purpose**: Dynamic, database-driven eligibility rules
 - **Location**: `src/rules/` directory
 - **Why**: Rules can be updated without deployment, stored in database, and audited
+- **User-facing terminology**: "Eligibility Rules"/"Règles d'éligibilité" instead of "Business Rules"/"Règles métier"
 - **Examples**: `src/rules/agrRules.ts`, `src/rules/risRules.ts`
 
 ### 4. TypeScript - Type-Safe Implementation
@@ -87,11 +90,11 @@ This codebase uses a **hybrid approach** combining multiple tools, each serving 
 - **Entities**: `src/database/entities/` - TypeORM database entities
 - **Ubiquitous language**: Use French terminology for Belgian legal concepts (AGR, RIS, CPAS, etc.)
 
-### State Machine Workflow Pattern
-All workflows in `src/workflows/` follow this structure:
+### State Machine Procedure Pattern
+All administrative procedures in `src/workflows/` follow this structure:
 ```typescript
 - idle state (starting point)
-- Processing states (business logic execution)
+- Processing states (business logic execution - user-facing: "Under Review"/"En examen")
 - Validation/retry logic with max attempts
 - completed (final success state)
 - failed (final error state requiring human intervention)
@@ -99,8 +102,8 @@ All workflows in `src/workflows/` follow this structure:
 
 Each state includes:
 - `meta.description` - What the state does
-- Transition guards - Conditional logic
-- Actions using `assign()` - Context updates
+- Transition guards - Conditional logic (user-facing: "Conditions"/"Conditions")
+- Actions using `assign()` - Context updates (user-facing: "Steps"/"Étapes")
 
 ### API Architecture (Fastify)
 - **Server**: `src/api/server.ts` - Main Fastify application
@@ -119,9 +122,9 @@ Each state includes:
 ## Key Technical Decisions
 
 ### Why This Hybrid Approach?
-- **Gherkin** defines **what** rules are (readable by legal experts)
-- **XState** defines **how** processes flow (visual workflows with state)
-- **json-rules-engine** defines **when** conditions apply (runtime evaluation)
+- **Gherkin** defines **what** eligibility rules are (readable by legal experts)
+- **XState** defines **how** administrative procedures flow (visual process automata with explicit state)
+- **json-rules-engine** defines **when** conditions apply (runtime evaluation of eligibility)
 - **TypeScript** provides **implementation** safety (type guarantees)
 
 ### XState Machine Patterns
@@ -194,11 +197,11 @@ Start infrastructure: `npm run docker:up`
 5. Add example in `src/examples/[benefit-name]Example.ts`
 6. Add API routes/controllers if exposing via REST API
 
-### Adding a New Workflow State Machine
-1. Create machine file in `src/workflows/`
-2. Define context type and event types
+### Adding a New Administrative Procedure State Machine
+1. Create machine file in `src/workflows/` (directory name is legacy; contains procedures)
+2. Define context type and event types (context = "Application Data"/"Données de demande" for users)
 3. Implement states with meta descriptions
-4. Add guards for conditional transitions
+4. Add guards for conditional transitions (guards = "Conditions"/"Conditions" for users)
 5. Include retry logic for resilient processing
 6. Add final states (completed/failed)
 7. Test with example script
@@ -221,9 +224,9 @@ Never use auto-sync in production.
 ## Project Structure Logic
 
 - `src/domain/` - Pure domain models, no dependencies
-- `src/workflows/` - XState machines, self-contained workflow logic
+- `src/workflows/` - XState machines, self-contained procedure logic (user-facing: "Procédures")
 - `src/rules/` - json-rules-engine rules, declarative conditions
-- `src/services/` - Orchestration layer, combines workflows + rules
+- `src/services/` - Orchestration layer, combines procedures + eligibility rules
 - `src/api/` - HTTP layer, Fastify routes/controllers
 - `src/database/` - Data persistence, TypeORM entities/migrations
 - `src/cache/` - Redis caching layer
@@ -232,11 +235,31 @@ Never use auto-sync in production.
 - `features/` - Gherkin BDD scenarios
 - `scripts/` - Build/generation tools
 
-## Multi-Language Support
+## Multi-Language Support & Terminology
 
-Belgian administrative context requires trilingual support:
-- French (FR) - Primary language for Wallonia
-- Dutch (NL) - Flemish region
-- German (DE) - Small eastern region
+Belgian administrative context requires support for all three official languages plus English:
+- **French (FR)** - Primary language for Wallonia and Brussels
+- **Dutch (NL)** - Primary language for Flanders
+- **German (DE)** - Official language for German-speaking community (Ostbelgien)
+- **English (EN)** - Technical documentation and international context
+
+### Improved Terminology (Self-Explanatory)
+
+User-facing terminology has been improved for clarity across all languages:
+
+| Concept | Technical Term | User-Facing Term (EN/FR/NL/DE) |
+|---------|----------------|-------------------------------|
+| Workflow | workflow | Procedures / Procédures / Procedures / Verfahren |
+| State Machine | state machine | Process Automata / Automates de processus / Procesautomaten / Prozessautomaten |
+| Conversion | conversion | Simplification / Simplification / Vereenvoudiging / Vereinfachung |
+| Business Rules | business rules | Eligibility Rules / Règles d'éligibilité / Geschiktheidsregels / Zulassungsregeln |
+| Context | context | Application Data / Données de demande / Aanvraaggegevens / Antragsdaten |
+| Guard | guard | Condition / Condition / Voorwaarde / Bedingung |
+| Action | action | Step / Étape / Stap / Schritt |
+| Processing | processing | Under Review / En examen / In behandeling / In Prüfung |
+
+**Note**: Technical code maintains library-specific terminology (XState context, guards, actions) for compatibility, but user-facing interfaces use the improved terminology above.
+
+See `docs/TERMINOLOGY_MAPPING.md` for complete terminology reference.
 
 Legal sources and conversions must maintain semantic accuracy across all languages.

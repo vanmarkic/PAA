@@ -6,6 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationFR from './locales/fr/translation.json';
 import translationNL from './locales/nl/translation.json';
 import translationEN from './locales/en/translation.json';
+import translationDE from './locales/de/translation.json';
 
 const resources = {
   fr: {
@@ -16,6 +17,9 @@ const resources = {
   },
   en: {
     translation: translationEN
+  },
+  de: {
+    translation: translationDE
   }
 };
 
@@ -40,8 +44,8 @@ i18n
       escapeValue: false // React already escapes values
     },
 
-    // Belgian-specific language settings
-    supportedLngs: ['fr', 'nl', 'en'],
+    // Belgian-specific language settings (FR, NL, DE official languages + EN for international)
+    supportedLngs: ['fr', 'nl', 'de', 'en'],
 
     // Language naming for display
     lng: 'fr', // Default to French
