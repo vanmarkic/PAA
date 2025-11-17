@@ -81,3 +81,22 @@ export function getBaseUrl(): string {
   }
   return import.meta.env.SITE || 'http://localhost:4444';
 }
+
+/**
+ * Get properly formatted URL with base path for internal links
+ * This ensures URLs work correctly on GitHub Pages with /PAA base path
+ */
+export function getUrl(path: string): string {
+  // Remove leading slash if present
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  
+  // In browser, use the current base path
+  if (isBrowser()) {
+    const base = document.querySelector('base')?.href || window.location.origin;
+    return new URL(cleanPath, base).pathname;
+  }
+  
+  // In build/SSG, use import.meta.env.BASE_URL which includes the /PAA path in production
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  return `${baseUrl}${cleanPath}`.replace(/\/+/g, '/');
+}
