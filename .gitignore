@@ -36,3 +36,4 @@ docs/machines-metadata.json
 
 # Monitoring state
 .monitoring-state.json
+playwright-report-frontend/
