@@ -71,7 +71,7 @@ function getStepColor(keyword: string) {
         <li>/</li>
         <li><a href="/features" class="hover:text-gray-700">Fonctionnalités</a></li>
         <li>/</li>
-        <li><a href={`/features/category/${feature.category}`} class="hover:text-gray-700">
+        <li><a href={getUrl(`features/category/${feature.category}`)} class="hover:text-gray-700">
           {categories[feature.category]?.name}
         </a></li>
         <li>/</li>
@@ -394,7 +394,7 @@ function getStepColor(keyword: string) {
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {relatedFeatures.map((related: any) => (
-            <a href={`/features/${related.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-green-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`features/${related.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-green-500 hover:shadow-lg transition-all">
               <h3 class="font-semibold text-gray-900 mb-2">{related.name}</h3>
               <p class="text-gray-600 text-sm mb-3">
                 {related.description || 'Spécification comportementale BDD'}

@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 import { loadFeaturesMetadata } from '../lib/features';
+import { getUrl } from '../lib/utils';
 
 // Load features data at build time
 const metadata = await loadFeaturesMetadata();
@@ -129,7 +130,7 @@ const featuredFeatures = features
                 </span>
               </div>
               <a
-                href={`/features/${feature.id}`}
+                href={getUrl(`features/${feature.id}`)}
                 class="block text-center px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
               >
                 Voir la spécification →
@@ -146,7 +147,7 @@ const featuredFeatures = features
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Object.entries(categories).map(([key, category]) => (
           <a
-            href={`/features/category/${key}`}
+            href={getUrl(`features/category/${key}`)}
             class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all group"
           >
             <div class="flex items-start mb-4">

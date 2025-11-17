@@ -414,7 +414,7 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {relatedFeatures.slice(0, 4).map((feature: any) => (
-            <a href={`/features/${feature.id}`} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-green-500 hover:shadow-lg transition-all">
+            <a href={getUrl(`features/${feature.id}`)} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-green-500 hover:shadow-lg transition-all">
               <div class="flex items-start justify-between mb-3">
                 <h3 class="font-semibold text-gray-900">{feature.name}</h3>
                 <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">

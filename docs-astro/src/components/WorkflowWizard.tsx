@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getUrl } from '../lib/utils';
 
 interface Machine {
   id: string;
@@ -256,7 +257,7 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
               {results.map(machine => (
                 <a
                   key={machine.id}
-                  href={`${baseUrl}workflows/${machine.id}`}
+                  href={getUrl(`workflows/${machine.id}`)}
                   className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-purple-500 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start justify-between">
