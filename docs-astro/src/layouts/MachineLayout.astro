@@ -11,7 +11,7 @@ const { title, description } = Astro.props;
 
 <BaseLayout title={title} description={description}>
   <nav class="breadcrumb">
-    <a href="/">Home</a>
+    <a href={import.meta.env.BASE_URL}>Home</a>
     <span>/</span>
     <span>{title}</span>
   </nav>

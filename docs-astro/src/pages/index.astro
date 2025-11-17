@@ -22,6 +22,7 @@ const metadata = await loadMachinesMetadata();
   <SearchFilter
     machines={metadata.machines}
     categories={metadata.categories}
+    baseUrl={import.meta.env.BASE_URL}
     client:load
   />
 </BaseLayout>

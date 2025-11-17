@@ -17,9 +17,10 @@ interface Machine {
 interface Props {
   machines: Machine[];
   categories: string[];
+  baseUrl?: string;
 }
 
-export default function SearchFilter({ machines, categories }: Props) {
+export default function SearchFilter({ machines, categories, baseUrl = '/' }: Props) {
   const [search, setSearch] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
 
@@ -96,7 +97,7 @@ export default function SearchFilter({ machines, categories }: Props) {
           </div>
         ) : (
           filtered.map(machine => (
-            <a key={machine.id} href={`/machine/${machine.id}`} className="machine-card">
+            <a key={machine.id} href={`${baseUrl}machine/${machine.id}`} className="machine-card">
               <div className="machine-card-header">
                 <h3>{machine.name}</h3>
                 <span className="category-tag">{machine.category}</span>
