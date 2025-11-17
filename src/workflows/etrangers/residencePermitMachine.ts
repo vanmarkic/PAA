@@ -57,11 +57,11 @@ export const residencePermitMachine = createMachine({
     application: null,
     result: null,
     currentStep: '',
-    documentsSubmitted: [],
+    documentsSubmitted: [] as string[],
     residenceControlPassed: false,
     paymentCompleted: false,
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -240,7 +240,7 @@ export const residencePermitMachine = createMachine({
             target: 'approved',
             guard: ({ event }: { event: any }) => event.approved === true,
             actions: assign({
-              result: ({ event }: { event: any }) => ({
+              result: ({ event }: any) => ({
                 success: true,
                 decision: 'approved',
                 referenceNumber: generateReferenceNumber(),
@@ -254,12 +254,12 @@ export const residencePermitMachine = createMachine({
                 ],
               }),
               currentStep: 'Application approved',
-            }),
+            } as any),
           },
           {
             target: 'rejected',
             actions: assign({
-              result: ({ event }: { event: any }) => ({
+              result: ({ event }: any) => ({
                 success: false,
                 decision: 'rejected',
                 reasons: [event.reason],
@@ -273,7 +273,7 @@ export const residencePermitMachine = createMachine({
                 ],
               }),
               currentStep: 'Application rejected',
-            }),
+            } as any),
           },
         ],
       },

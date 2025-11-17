@@ -382,14 +382,17 @@ async function exampleCheckPaiementStatus() {
 function exampleAGWorkflow() {
   console.log('\n=== Exemple: Workflow Assemblée Générale ===\n');
 
-  const agService = interpret(assembleeGeneraleMachine)
-    .onTransition(state => {
-      console.log(`État: ${state.value}`);
-      if (state.meta[`assembleeGenerale.${state.value}`]) {
-        console.log(`  Description: ${state.meta[`assembleeGenerale.${state.value}`].description}`);
-      }
-    })
-    .start();
+  const agService = interpret(assembleeGeneraleMachine);
+
+  agService.subscribe(state => {
+    console.log(`État: ${state.value}`);
+    const meta = state.getMeta();
+    if (meta && meta.description) {
+      console.log(`  Description: ${meta.description}`);
+    }
+  });
+
+  agService.start();
 
   // Planifier AG
   const ag: AssembleeGenerale = {
@@ -473,14 +476,17 @@ function exampleAGWorkflow() {
 function examplePaymentWorkflow() {
   console.log('\n=== Exemple: Workflow Paiement Charges ===\n');
 
-  const paymentService = interpret(chargesPaymentMachine)
-    .onTransition(state => {
-      console.log(`État: ${state.value}`);
-      if (state.meta[`chargesPayment.${state.value}`]) {
-        console.log(`  Description: ${state.meta[`chargesPayment.${state.value}`].description}`);
-      }
-    })
-    .start();
+  const paymentService = interpret(chargesPaymentMachine);
+
+  paymentService.subscribe(state => {
+    console.log(`État: ${state.value}`);
+    const meta = state.getMeta();
+    if (meta && meta.description) {
+      console.log(`  Description: ${meta.description}`);
+    }
+  });
+
+  paymentService.start();
 
   const copro = createSampleCoproprietaires()[1]; // Sophie Martin avec retard
   const budget = {

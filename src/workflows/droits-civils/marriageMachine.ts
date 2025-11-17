@@ -59,17 +59,17 @@ export const marriageMachine = createMachine({
   },
 
   context: {
-    procedure: null,
-    validationResult: null,
-    documents: [],
-    bannsPublishedDate: null,
-    parquetApproval: null,
-    oppositions: [],
-    ceremonyDate: null,
+    procedure: null as MarriageProcedure | null,
+    validationResult: null as ValidationResult | null,
+    documents: [] as RequiredDocument[],
+    bannsPublishedDate: null as Date | null,
+    parquetApproval: null as boolean | null,
+    oppositions: [] as Opposition[],
+    ceremonyDate: null as Date | null,
     marriageRegistered: false,
-    status: 'draft',
+    status: 'draft' as RequestStatus,
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -184,9 +184,9 @@ export const marriageMachine = createMachine({
       after: {
         150000: { // 5 months maximum for parquet review
           target: 'bannsPublication',
-          actions: assign({
+          actions: assign(({ context }) => ({
             parquetApproval: true, // Silence vaut acceptation
-          }),
+          })),
         },
       },
       meta: {

@@ -205,16 +205,16 @@ export const taxAppealMachine = createMachine({
             JUDGMENT_RENDERED: [
               {
                 target: 'judgmentFavorable',
-                guard: ({ event }) => event.decision === 'favorable',
+                guard: ({ event }: { event: any }) => event.decision === 'favorable',
                 actions: assign({
-                  judicialDecision: 'favorable',
+                  judicialDecision: ({ event }: { event: any }) => event.decision as any,
                 }),
               },
               {
                 target: 'judgmentUnfavorable',
-                guard: ({ event }) => event.decision === 'unfavorable',
+                guard: ({ event }: { event: any }) => event.decision === 'unfavorable',
                 actions: assign({
-                  judicialDecision: 'unfavorable',
+                  judicialDecision: ({ event }: { event: any }) => event.decision as any,
                 }),
               },
             ],

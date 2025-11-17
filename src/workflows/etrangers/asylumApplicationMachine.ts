@@ -92,7 +92,7 @@ export const asylumApplicationMachine = createMachine({
     accommodation: null,
     legalAid: null,
     retryCount: 0,
-    notifications: [],
+    notifications: [] as Notification[],
     currentPhase: '',
   },
 

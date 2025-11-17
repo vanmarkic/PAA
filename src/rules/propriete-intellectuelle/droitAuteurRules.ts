@@ -196,18 +196,18 @@ export async function checkCopyrightProtection(work: Partial<CopyrightRegistrati
   restrictions?: string[];
 }> {
   const facts = {
-    hasOriginalExpression: work.hasOriginalExpression !== false,
-    isCreativeWork: work.isCreative !== false,
-    isFixedInTangibleForm: work.isFixed !== false,
-    isPureIdea: work.isPureIdea || false,
-    isEmployeeWork: work.createdByEmployee || false,
-    hasContractualTransfer: work.hasTransferAgreement || false,
+    hasOriginalExpression: (work as any).hasOriginalExpression !== false,
+    isCreativeWork: (work as any).isCreative !== false,
+    isFixedInTangibleForm: (work as any).isFixed !== false,
+    isPureIdea: (work as any).isPureIdea ?? false,
+    isEmployeeWork: (work as any).createdByEmployee ?? false,
+    hasContractualTransfer: (work as any).hasTransferAgreement ?? false,
     isDatabase: work.type === 'base-donnees',
-    hasSubstantialInvestment: work.substantialInvestment || false,
+    hasSubstantialInvestment: (work as any).substantialInvestment ?? false,
     isSoftware: work.type === 'logiciel',
-    hasOriginalCode: work.hasOriginalCode !== false,
-    isCollaborativeWork: work.isCollaborative || false,
-    numberOfAuthors: work.numberOfAuthors || 1,
+    hasOriginalCode: (work as any).hasOriginalCode !== false,
+    isCollaborativeWork: (work as any).isCollaborative ?? false,
+    numberOfAuthors: (work as any).numberOfAuthors ?? 1,
   };
 
   const results = await copyrightEngineInstance.run(facts);
@@ -235,7 +235,7 @@ export async function checkCopyrightProtection(work: Partial<CopyrightRegistrati
     'Droit de suite (arts visuels)',
   ];
 
-  let duration = calculateCopyrightDuration(work.type || 'oeuvre-litteraire', work.authorDeathDate);
+  const duration = calculateCopyrightDuration(work.type ?? 'oeuvre-litteraire', (work as any).authorDeathDate);
 
   return {
     isProtected: true,

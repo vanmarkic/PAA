@@ -311,7 +311,10 @@ function createAdmissibilityEngine(): Engine {
         {
           fact: 'violationDate',
           operator: 'lessThan',
-          path: '$.stateRatificationDate',
+          value: (fact: any) => {
+            // Get stateRatificationDate from context if available
+            return fact.stateRatificationDate || new Date('1950-11-04'); // ECHR entry into force
+          },
         },
       ],
     },
@@ -498,9 +501,9 @@ function hasNonPecuniaryDamage(application: ECHRApplication): boolean {
  */
 function raisesImportantPrinciple(application: ECHRApplication): boolean {
   // Check for systemic issues, pilot judgment potential, or novel legal questions
-  return application.priorityRequested &&
-         (application.priorityReason?.includes('systemic') ||
-          application.priorityReason?.includes('principle'));
+  return !!(application.priorityRequested &&
+           (application.priorityReason?.includes('systemic') ||
+            application.priorityReason?.includes('principle')));
 }
 
 /**

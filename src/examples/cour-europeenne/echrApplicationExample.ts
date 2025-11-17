@@ -231,15 +231,14 @@ async function exampleFairTrialApplication() {
 
   // Start workflow
   console.log('\n3. Starting Application Workflow:');
-  const service = interpret(echrApplicationMachine)
-    .onTransition((state) => {
-      if (state.changed) {
-        console.log(`   → State: ${state.value}`);
-        if (state.context.errors.length > 0) {
-          console.log(`     Errors: ${state.context.errors.join(', ')}`);
-        }
-      }
-    });
+  const service = interpret(echrApplicationMachine);
+
+  service.subscribe((state) => {
+    console.log(`   → State: ${state.value}`);
+    if (state.context.errors.length > 0) {
+      console.log(`     Errors: ${state.context.errors.join(', ')}`);
+    }
+  });
 
   service.start();
   service.send({ type: 'START_APPLICATION', application });

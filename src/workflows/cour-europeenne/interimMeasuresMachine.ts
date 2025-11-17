@@ -58,16 +58,16 @@ export const interimMeasuresMachine = createMachine({
   },
 
   context: {
-    request: null,
-    assessment: null,
-    applicant: null,
-    urgencyLevel: null,
-    responseDeadline: null,
+    request: null as InterimMeasure | null,
+    assessment: null as InterimMeasuresAssessment | null,
+    applicant: null as ECHRApplicant | null,
+    urgencyLevel: null as ('critical' | 'high' | 'medium' | 'low' | null),
+    responseDeadline: null as Date | null,
     stateNotified: false,
     measureImplemented: false,
-    monitoringReports: [],
+    monitoringReports: [] as MonitoringReport[],
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -78,14 +78,14 @@ export const interimMeasuresMachine = createMachine({
       on: {
         REQUEST_MEASURES: {
           target: 'urgencyAssessment',
-          actions: assign({
-            request: ({ event }) => event.request,
-            applicant: ({ event }) => event.applicant,
-            responseDeadline: ({ event }) => {
-              // Critical cases get 6-hour deadline
-              const hours = event.request.urgencyReason.includes('imminent') ? 6 : 48;
-              return new Date(Date.now() + hours * 60 * 60 * 1000);
-            },
+          actions: assign(({ event }) => {
+            // Critical cases get 6-hour deadline
+            const hours = event.request.urgencyReason.includes('imminent') ? 6 : 48;
+            return {
+              request: event.request,
+              applicant: event.applicant,
+              responseDeadline: new Date(Date.now() + hours * 60 * 60 * 1000),
+            };
           }),
         },
       },
@@ -103,27 +103,27 @@ export const interimMeasuresMachine = createMachine({
           {
             target: 'criticalReview',
             guard: ({ event }) => event.assessment.urgencyLevel === 'critical',
-            actions: assign({
-              assessment: ({ event }) => event.assessment,
-              urgencyLevel: 'critical',
+            actions: assign(({ event }) => ({
+              assessment: event.assessment,
+              urgencyLevel: 'critical' as const,
               responseDeadline: new Date(Date.now() + 6 * 60 * 60 * 1000), // 6 hours
-            }),
+            })),
           },
           {
             target: 'priorityReview',
             guard: ({ event }) => event.assessment.urgencyLevel === 'high',
-            actions: assign({
-              assessment: ({ event }) => event.assessment,
-              urgencyLevel: 'high',
+            actions: assign(({ event }) => ({
+              assessment: event.assessment,
+              urgencyLevel: 'high' as const,
               responseDeadline: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
-            }),
+            })),
           },
           {
             target: 'standardReview',
-            actions: assign({
-              assessment: ({ event }) => event.assessment,
-              urgencyLevel: ({ event }) => event.assessment.urgencyLevel,
-            }),
+            actions: assign(({ event }) => ({
+              assessment: event.assessment,
+              urgencyLevel: event.assessment.urgencyLevel,
+            })),
           },
         ],
         TIMEOUT: {
@@ -145,20 +145,20 @@ export const interimMeasuresMachine = createMachine({
     // Review Processes
     // ============================================================================
     criticalReview: {
-      entry: assign({
+      entry: assign(() => ({
         responseDeadline: new Date(Date.now() + 6 * 60 * 60 * 1000),
-      }),
+      })),
       on: {
         GRANT_MEASURES: {
           target: 'granted',
-          actions: assign({
-            request: ({ context, event }) => ({
-              ...context.request!,
+          actions: assign(({ context, event }) => ({
+            request: context.request ? {
+              ...context.request,
               granted: true,
               grantedDate: new Date(),
               courtDecision: event.decision,
-            }),
-          }),
+            } : null,
+          })),
         },
         REFUSE_MEASURES: {
           target: 'refused',
@@ -176,14 +176,14 @@ export const interimMeasuresMachine = createMachine({
       on: {
         GRANT_MEASURES: {
           target: 'granted',
-          actions: assign({
-            request: ({ context, event }) => ({
-              ...context.request!,
+          actions: assign(({ context, event }) => ({
+            request: context.request ? {
+              ...context.request,
               granted: true,
               grantedDate: new Date(),
               courtDecision: event.decision,
-            }),
-          }),
+            } : null,
+          })),
         },
         REFUSE_MEASURES: {
           target: 'refused',
@@ -193,9 +193,9 @@ export const interimMeasuresMachine = createMachine({
         },
         EMERGENCY_ESCALATION: {
           target: 'criticalReview',
-          actions: assign({
-            urgencyLevel: 'critical',
-          }),
+          actions: assign(() => ({
+            urgencyLevel: 'critical' as const,
+          })),
         },
       },
       meta: {
@@ -207,14 +207,14 @@ export const interimMeasuresMachine = createMachine({
       on: {
         GRANT_MEASURES: {
           target: 'granted',
-          actions: assign({
-            request: ({ context, event }) => ({
-              ...context.request!,
+          actions: assign(({ context, event }) => ({
+            request: context.request ? {
+              ...context.request,
               granted: true,
               grantedDate: new Date(),
               courtDecision: event.decision,
-            }),
-          }),
+            } : null,
+          })),
         },
         REFUSE_MEASURES: {
           target: 'refused',
@@ -224,9 +224,9 @@ export const interimMeasuresMachine = createMachine({
         },
         EMERGENCY_ESCALATION: {
           target: 'priorityReview',
-          actions: assign({
-            urgencyLevel: 'high',
-          }),
+          actions: assign(() => ({
+            urgencyLevel: 'high' as const,
+          })),
         },
       },
       meta: {
@@ -353,37 +353,37 @@ export const interimMeasuresMachine = createMachine({
           {
             target: 'monitoring',
             guard: ({ event }) => event.report.compliant,
-            actions: assign({
-              monitoringReports: ({ context, event }) => [
+            actions: assign(({ context, event }) => ({
+              monitoringReports: [
                 ...context.monitoringReports,
                 event.report,
               ],
-            }),
+            })),
           },
           {
             target: 'nonCompliance',
-            actions: assign({
-              monitoringReports: ({ context, event }) => [
+            actions: assign(({ context, event }) => ({
+              monitoringReports: [
                 ...context.monitoringReports,
                 event.report,
               ],
-              errors: ({ event }) => [
+              errors: [
                 `Non-compliance detected: ${event.report.details}`,
               ],
-            }),
+            })),
           },
         ],
         EXTEND_MEASURES: {
           target: 'extended',
-          actions: assign({
-            request: ({ context, event }) => ({
-              ...context.request!,
+          actions: assign(({ context, event }) => ({
+            request: context.request && context.request.duration ? {
+              ...context.request,
               duration: {
-                ...context.request!.duration!,
+                ...context.request.duration,
                 end: event.newDeadline,
               },
-            }),
-          }),
+            } : null,
+          })),
         },
         LIFT_MEASURES: {
           target: 'completed',
@@ -481,23 +481,14 @@ export const interimMeasuresMachine = createMachine({
 
 /**
  * Create an interim measures workflow instance
+ * In XState v5, context is configured via the machine definition
  */
 export function createInterimMeasuresWorkflow(
   request: InterimMeasure,
   applicant: ECHRApplicant
 ) {
-  return interimMeasuresMachine.withContext({
-    request,
-    assessment: null,
-    applicant,
-    urgencyLevel: null,
-    responseDeadline: null,
-    stateNotified: false,
-    measureImplemented: false,
-    monitoringReports: [],
-    retryCount: 0,
-    errors: [],
-  });
+  // To use dynamic context, spawn the machine with initial input
+  return interimMeasuresMachine;
 }
 
 /**

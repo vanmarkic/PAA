@@ -51,7 +51,7 @@ export const locationMachine = createMachine({
       | { type: 'APPLICATION_ACCEPTED' }
       | { type: 'APPLICATION_REJECTED'; reason: string }
       | { type: 'SIGN_CONTRACT'; contract: RentalContract }
-      | { type: 'PAY_DEPOSIT'; type: string; amount: number }
+      | { type: 'PAY_DEPOSIT'; depositType: string; amount: number }
       | { type: 'COMPLETE_INVENTORY' }
       | { type: 'RECEIVE_KEYS' }
       | { type: 'REPORT_ISSUE'; issue: RentalDispute }
@@ -76,16 +76,16 @@ export const locationMachine = createMachine({
     inventory: {
       entryCompleted: false,
       exitCompleted: false,
-      disputes: [],
+      disputes: [] as string[],
     },
     rights: null,
-    disputes: [],
+    disputes: [] as RentalDispute[],
     noticeGiven: {
       byTenant: false,
       byLandlord: false,
       effectiveDate: null,
     },
-    errors: [],
+    errors: [] as string[],
     retryCount: 0,
   },
 
@@ -159,7 +159,7 @@ export const locationMachine = createMachine({
           actions: assign({
             deposit: ({ event }: { event: any }) => ({
               amount: event.amount,
-              type: event.type,
+              type: event.depositType,
               paid: true,
             }),
           }),

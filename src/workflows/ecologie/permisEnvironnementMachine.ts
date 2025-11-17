@@ -76,7 +76,7 @@ export const permisEnvironnementMachine = createMachine({
       result: 'pending',
     },
     retryCount: 0,
-    errors: [],
+    errors: [] as string[],
   },
 
   states: {
@@ -98,15 +98,11 @@ export const permisEnvironnementMachine = createMachine({
 
     classification: {
       entry: assign({
-        classification: ({ context }) => {
-          // Simplified classification logic
-          // In real implementation, this would call the rules engine
-          if (context.application?.type === 'environmental-permits') {
-            return 'classe-1' as PermitType;
-          }
-          return 'classe-2' as PermitType;
+        classification: ({ context }: any) => {
+          const app = (context as PermitContext).application;
+          return app?.type === 'environmental-permits' ? 'classe-1' : 'classe-2';
         },
-      }),
+      } as any),
       always: [
         {
           target: 'impactAssessment',
@@ -333,13 +329,19 @@ export const permisEnvironnementMachine = createMachine({
     approved: {
       type: 'final',
       entry: assign({
-        application: ({ context }) => ({
-          ...context.application!,
-          status: 'approved',
-          decisionDate: new Date(),
-          validUntil: context.decision.validUntil,
-        }),
-      }),
+        application: ({ context }: any) => {
+          const ctx = context as PermitContext;
+          if (!ctx.application) {
+            throw new Error('Application must exist in approved state');
+          }
+          return {
+            ...ctx.application,
+            status: 'approved',
+            decisionDate: new Date(),
+            validUntil: ctx.decision.validUntil,
+          };
+        },
+      } as any),
       meta: {
         description: 'Permis d\'environnement approuvé',
       },

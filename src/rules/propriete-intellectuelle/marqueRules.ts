@@ -225,21 +225,21 @@ export async function checkTrademarkEligibility(application: Partial<TrademarkAp
   risks?: string[];
 }> {
   const facts = {
-    hasDistinctiveCharacter: application.hasDistinctiveCharacter !== false,
-    isDescriptive: application.isDescriptive || false,
-    isGeneric: application.isGeneric || false,
-    isUsualInTrade: application.isUsualInTrade || false,
-    hasIdenticalPriorMark: application.hasIdenticalConflict || false,
-    hasSimilarPriorMark: application.hasSimilarConflict || false,
-    againstPublicOrder: application.againstPublicOrder || false,
-    againstMorality: application.againstMorality || false,
-    isMisleading: application.isMisleading || false,
-    isDeceptive: application.isDeceptive || false,
+    hasDistinctiveCharacter: (application as any).hasDistinctiveCharacter !== false,
+    isDescriptive: (application as any).isDescriptive ?? false,
+    isGeneric: (application as any).isGeneric ?? false,
+    isUsualInTrade: (application as any).isUsualInTrade ?? false,
+    hasIdenticalPriorMark: (application as any).hasIdenticalConflict ?? false,
+    hasSimilarPriorMark: (application as any).hasSimilarConflict ?? false,
+    againstPublicOrder: (application as any).againstPublicOrder ?? false,
+    againstMorality: (application as any).againstMorality ?? false,
+    isMisleading: (application as any).isMisleading ?? false,
+    isDeceptive: (application as any).isDeceptive ?? false,
     isPublished: application.status === 'publie',
-    monthsSincePublication: application.monthsSincePublication || 0,
+    monthsSincePublication: (application as any).monthsSincePublication ?? 0,
     isRegistered: application.status === 'enregistre',
-    yearsSinceRegistration: application.yearsSinceRegistration || 0,
-    hasGenuineUse: application.hasGenuineUse !== false,
+    yearsSinceRegistration: (application as any).yearsSinceRegistration ?? 0,
+    hasGenuineUse: (application as any).hasGenuineUse !== false,
   };
 
   const results = await trademarkEngineInstance.run(facts);

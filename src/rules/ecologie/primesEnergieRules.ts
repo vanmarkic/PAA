@@ -242,8 +242,13 @@ export function calculateSolarSubsidy(
   // Calculate base subsidy
   let subsidy = eligiblePower * constants.subsidy_per_kwc * incomeCategory.multiplier;
 
-  // Apply regional bonus
-  const regionalBonus = ECOLOGIE_CONSTANTS.REGIONAL_BONUSES[region]?.solar_bonus || 1;
+  // Apply regional bonus (default to 1 if region not found)
+  let regionalBonus = 1;
+  if (region === 'wallonie') {
+    regionalBonus = ECOLOGIE_CONSTANTS.REGIONAL_BONUSES.wallonie.solar_bonus;
+  } else if (region === 'flandre') {
+    regionalBonus = ECOLOGIE_CONSTANTS.REGIONAL_BONUSES.flandre.solar_bonus;
+  }
   subsidy *= regionalBonus;
 
   // Apply maximum cap
@@ -313,7 +318,7 @@ export async function checkEnergySubsidyEligibility(
     }
 
     let subsidyAmount = 0;
-    let details: string[] = [];
+    const details: string[] = [];
 
     // Calculate specific subsidy based on type
     switch (request.type) {
@@ -365,8 +370,8 @@ export async function checkEnergySubsidyEligibility(
 
     // Check subsidy cap
     const subsidyCap = results.events.find(e => e.type === 'subsidy-cap');
-    if (subsidyCap && subsidyAmount > subsidyCap.params?.maxCumulativeSubsidy) {
-      subsidyAmount = subsidyCap.params.maxCumulativeSubsidy;
+    if (subsidyCap && subsidyAmount > (subsidyCap.params?.maxCumulativeSubsidy ?? 15000)) {
+      subsidyAmount = subsidyCap.params?.maxCumulativeSubsidy ?? 15000;
       details.push(`Plafond cumulatif appliqué: ${subsidyAmount}€`);
     }
 

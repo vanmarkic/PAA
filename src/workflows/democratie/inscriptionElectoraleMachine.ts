@@ -52,13 +52,13 @@ export const inscriptionElectoraleMachine = createMachine({
   },
 
   context: {
-    citizen: null,
-    demande: null,
-    inscription: null,
-    eligibilityResult: null,
-    documents: [],
+    citizen: null as DemocraticCitizen | null,
+    demande: null as DemandeInscription | null,
+    inscription: null as InscriptionElectorale | null,
+    eligibilityResult: null as EligibilityResult | null,
+    documents: [] as DocumentElectoral[],
     verificationAttempts: 0,
-    errors: [],
+    errors: [] as string[],
     retryCount: 0,
     maxRetries: 3,
   },
@@ -105,7 +105,7 @@ export const inscriptionElectoraleMachine = createMachine({
           {
             target: 'blockedByFines',
             guard: ({ event }) =>
-              event.result.restrictions.some(r => r.raison?.includes('amendes')),
+              event.result.restrictions.some((r: any) => r.raison?.includes('amendes')),
             actions: assign({
               eligibilityResult: ({ event }) => event.result,
             }),
@@ -126,17 +126,17 @@ export const inscriptionElectoraleMachine = createMachine({
     },
 
     automaticRegistration: {
-      entry: assign({
-        inscription: ({ context }) => ({
-          citoyenId: context.citizen!.id,
+      entry: assign(({ context }) => ({
+        inscription: context.citizen ? {
+          citoyenId: context.citizen.id,
           typeElection: 'elections-federales' as ElectoralRight,
-          commune: context.citizen!.residenceLegale.commune,
-          bureauVote: `${context.citizen!.residenceLegale.commune}-BV001`,
-          numeroElecteur: generateElectoralNumber(context.citizen!),
+          commune: context.citizen.residenceLegale.commune,
+          bureauVote: `${context.citizen.residenceLegale.commune}-BV001`,
+          numeroElecteur: generateElectoralNumber(context.citizen),
           dateInscription: new Date(),
           statut: 'active' as const,
-        }),
-      }),
+        } : null,
+      })),
 
       on: {
         SEND_CONVOCATION: {
@@ -236,15 +236,15 @@ export const inscriptionElectoraleMachine = createMachine({
           on: {
             UPDATE_ADDRESS: {
               target: 'verifyingResidence',
-              actions: assign({
-                citizen: ({ context, event }) => ({
-                  ...context.citizen!,
+              actions: assign(({ context, event }) => ({
+                citizen: context.citizen ? {
+                  ...context.citizen,
                   residenceLegale: {
-                    ...context.citizen!.residenceLegale,
+                    ...context.citizen.residenceLegale,
                     commune: event.newAddress,
                   },
-                }),
-              }),
+                } : null,
+              })),
             },
             CANCEL: {
               target: '#inscriptionElectorale.cancelled',
@@ -257,17 +257,17 @@ export const inscriptionElectoraleMachine = createMachine({
         },
 
         approved: {
-          entry: assign({
-            inscription: ({ context }) => ({
-              citoyenId: context.citizen!.id,
-              typeElection: context.eligibilityResult!.droitsActifs[0],
-              commune: context.citizen!.residenceLegale.commune,
-              bureauVote: `${context.citizen!.residenceLegale.commune}-BV001`,
-              numeroElecteur: generateElectoralNumber(context.citizen!),
+          entry: assign(({ context }) => ({
+            inscription: context.citizen && context.eligibilityResult ? {
+              citoyenId: context.citizen.id,
+              typeElection: context.eligibilityResult.droitsActifs[0],
+              commune: context.citizen.residenceLegale.commune,
+              bureauVote: `${context.citizen.residenceLegale.commune}-BV001`,
+              numeroElecteur: generateElectoralNumber(context.citizen),
               dateInscription: new Date(),
               statut: 'active' as const,
-            }),
-          }),
+            } : null,
+          })),
 
           on: {
             SEND_CONVOCATION: {
@@ -286,15 +286,15 @@ export const inscriptionElectoraleMachine = createMachine({
       on: {
         PAY_FINE: {
           target: 'checkingEligibility',
-          actions: assign({
-            citizen: ({ context, event }) => ({
-              ...context.citizen!,
-              sanctionsElectorales: context.citizen!.sanctionsElectorales.filter(
-                s => s.type !== 'amende' || (s.montantEuros && s.montantEuros > event.amount)
+          actions: assign(({ context, event }) => ({
+            citizen: context.citizen ? {
+              ...context.citizen,
+              sanctionsElectorales: context.citizen.sanctionsElectorales.filter(
+                (s: any) => s.type !== 'amende' || (s.montantEuros && s.montantEuros > event.amount)
               ),
-            }),
+            } : null,
             errors: [],
-          }),
+          })),
         },
         CANCEL: {
           target: 'cancelled',
@@ -330,25 +330,25 @@ export const inscriptionElectoraleMachine = createMachine({
       on: {
         UPDATE_ADDRESS: {
           target: 'updatingRegistration',
-          actions: assign({
-            citizen: ({ context, event }) => ({
-              ...context.citizen!,
+          actions: assign(({ context, event }) => ({
+            citizen: context.citizen ? {
+              ...context.citizen,
               residenceLegale: {
-                ...context.citizen!.residenceLegale,
+                ...context.citizen.residenceLegale,
                 commune: event.newAddress,
               },
-            }),
-          }),
+            } : null,
+          })),
         },
         SUSPEND_RIGHTS: {
           target: 'suspended',
-          actions: assign({
-            inscription: ({ context, event }) => ({
-              ...context.inscription!,
+          actions: assign(({ context, event }) => ({
+            inscription: context.inscription ? {
+              ...context.inscription,
               statut: 'suspendue' as const,
               motifRadiation: event.reason,
-            }),
-          }),
+            } : null,
+          })),
         },
       },
 
@@ -361,13 +361,13 @@ export const inscriptionElectoraleMachine = createMachine({
       on: {
         RESIDENCE_VERIFIED: {
           target: 'active',
-          actions: assign({
-            inscription: ({ context }) => ({
-              ...context.inscription!,
-              commune: context.citizen!.residenceLegale.commune,
-              bureauVote: `${context.citizen!.residenceLegale.commune}-BV001`,
-            }),
-          }),
+          actions: assign(({ context }) => ({
+            inscription: context.inscription && context.citizen ? {
+              ...context.inscription,
+              commune: context.citizen.residenceLegale.commune,
+              bureauVote: `${context.citizen.residenceLegale.commune}-BV001`,
+            } : null,
+          })),
         },
       },
 
@@ -380,25 +380,25 @@ export const inscriptionElectoraleMachine = createMachine({
       on: {
         RESTORE_RIGHTS: {
           target: 'active',
-          actions: assign({
-            inscription: ({ context }) => ({
-              ...context.inscription!,
+          actions: assign(({ context }) => ({
+            inscription: context.inscription ? {
+              ...context.inscription,
               statut: 'active' as const,
               motifRadiation: undefined,
-            }),
-          }),
+            } : null,
+          })),
         },
         PAY_FINE: {
           target: 'active',
           guard: ({ context }) =>
             context.inscription?.motifRadiation?.includes('amendes') || false,
-          actions: assign({
-            inscription: ({ context }) => ({
-              ...context.inscription!,
+          actions: assign(({ context }) => ({
+            inscription: context.inscription ? {
+              ...context.inscription,
               statut: 'active' as const,
               motifRadiation: undefined,
-            }),
-          }),
+            } : null,
+          })),
         },
       },
 

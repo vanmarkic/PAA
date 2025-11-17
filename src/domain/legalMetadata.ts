@@ -73,6 +73,58 @@ export interface LegislationVersion {
 }
 
 /**
+ * Article légal avec numéro et contenu
+ */
+export interface LegalArticle {
+  number: string;
+  title: string;
+  content: string;
+}
+
+/**
+ * Section de texte légal
+ */
+export interface LegalSection {
+  title: string;
+  content: string;
+}
+
+/**
+ * Framework légal complet avec législation primaire et secondaire
+ */
+export interface LegalFramework {
+  primaryLegislation: {
+    title: string;
+    date: string;
+    officialUrl: string;
+    authority: string;
+    lastAmended: string;
+    articles?: LegalArticle[];
+  };
+  implementingLegislation?: Array<{
+    title: string;
+    date: string;
+    officialUrl: string;
+    authority: string;
+  }>;
+  notes?: string;
+}
+
+/**
+ * Référence légale unique
+ */
+export interface LegalReference {
+  title: string;
+  date: string;
+  officialUrl: string;
+  authority: string;
+  lastAmended: string;
+  type: 'loi' | 'arrete_royal' | 'arrete_ministeriel' | 'code' | 'ordonnance' | 'decret';
+  publicationDate?: string;
+  sections?: LegalSection[];
+}
+
+/**
  * Métadonnées complètes d'une machine
  */
 export interface MachineLegalMetadata {
