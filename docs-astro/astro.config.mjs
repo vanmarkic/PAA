@@ -61,7 +61,18 @@ export default defineConfig({
         '@workflows': '/src/workflows',
         '@lib': './src/lib',
         '@components': './src/components'
-      }
+      },
+      // Dedupe xstate to use the version from docs-astro's node_modules
+      dedupe: ['xstate'],
+      // Preserve symlinks to false ensures modules are resolved from the project root
+      preserveSymlinks: false
+    },
+
+    // Optimize deps to pre-bundle xstate and ensure it's resolved correctly
+    optimizeDeps: {
+      include: ['xstate'],
+      // Exclude the workflow files from optimization to avoid issues
+      exclude: ['@workflows']
     }
   }
 });
