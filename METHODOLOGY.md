@@ -11,24 +11,24 @@ This document describes the systematic methodology used to extend the PAA (Plate
 
 The RIS benefit implementation serves as the canonical pattern, consisting of:
 
-1. **Gherkin Feature File** (`features/benefits/ris.feature`)
+1. **Gherkin Feature File** (`specifications-metier/benefits/ris.feature`)
    - French language scenarios
    - Business-readable specifications
    - Test cases with examples
    - Legal context and requirements
 
-2. **Domain Types** (`src/domain/risTypes.ts`)
+2. **Domain Types** (`src/modele-metier/risTypes.ts`)
    - TypeScript interfaces for domain entities
    - Type definitions for categories, statuses
    - Constants for amounts, thresholds, rates
 
-3. **Business Rules** (`src/rules/risRules.ts`)
+3. **Business Rules** (`src/regles-eligibilite/risRules.ts`)
    - json-rules-engine implementation
    - Legal references with official URLs
    - Calculation functions
    - Singleton engine pattern for performance
 
-4. **Workflow State Machine** (`src/workflows/risMachine.ts`)
+4. **Workflow State Machine** (`src/processus-administratifs/risMachine.ts`)
    - XState machine for application workflow
    - States: idle → checking → eligible/ineligible → active
    - Context management with TypeScript
@@ -102,10 +102,10 @@ The RIS benefit implementation serves as the canonical pattern, consisting of:
 For each domain `{domain}` and procedure `{procedure}`:
 
 ```
-features/{domain}/{procedure}.feature          # Gherkin scenarios
-src/domain/{domain}Types.ts                    # Domain types
-src/rules/{domain}/{procedure}Rules.ts         # Business rules
-src/workflows/{domain}/{procedure}Machine.ts   # State machine
+specifications-metier/{domain}/{procedure}.feature          # Gherkin scenarios
+src/modele-metier/{domain}Types.ts                    # Domain types
+src/regles-eligibilite/{domain}/{procedure}Rules.ts         # Business rules
+src/processus-administratifs/{domain}/{procedure}Machine.ts   # State machine
 src/examples/{domain}/{procedure}Example.ts    # Usage examples
 src/api/routes/{domain}Routes.ts               # API endpoints
 src/api/controllers/{domain}Controller.ts      # Request handlers
@@ -190,7 +190,7 @@ export const {DOMAIN}_CONSTANTS = {
  */
 
 import { Engine } from 'json-rules-engine';
-import { {Domain}User, {Domain}Result } from '../domain/{domain}Types';
+import { {Domain}User, {Domain}Result } from '../modele-metier/{domain}Types';
 
 function create{Domain}Engine(): Engine {
   const engine = new Engine();
@@ -246,7 +246,7 @@ export async function check{Domain}Eligibility(
  */
 
 import { createMachine, assign } from 'xstate';
-import { {Domain}User, {Domain}Result } from '../domain/{domain}Types';
+import { {Domain}User, {Domain}Result } from '../modele-metier/{domain}Types';
 
 interface {Domain}Context {
   user: {Domain}User | null;

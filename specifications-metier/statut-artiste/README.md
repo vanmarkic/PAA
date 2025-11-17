@@ -7,7 +7,7 @@ Le domaine **Statut d'Artiste** implémente 50 procédures administratives compl
 ## Structure de l'implémentation
 
 ### 1. Features (Gherkin/Cucumber)
-- **Localisation**: `/features/statut-artiste/`
+- **Localisation**: `/specifications-metier/statut-artiste/`
 - **Fichiers principaux**:
   - `artist-status-eligibility.feature` - Éligibilité au statut
   - `artist-unemployment.feature` - Chômage artistique
@@ -18,7 +18,7 @@ Le domaine **Statut d'Artiste** implémente 50 procédures administratives compl
   - `artist-social-security.feature` - Sécurité sociale
 
 ### 2. Domain Types
-- **Fichier**: `/src/domain/statutArtisteTypes.ts`
+- **Fichier**: `/src/modele-metier/statutArtisteTypes.ts`
 - **Types principaux**:
   ```typescript
   - Artist (profil complet)
@@ -32,14 +32,14 @@ Le domaine **Statut d'Artiste** implémente 50 procédures administratives compl
   ```
 
 ### 3. Business Rules
-- **Localisation**: `/src/rules/statut-artiste/`
+- **Localisation**: `/src/regles-eligibilite/statut-artiste/`
 - **Moteurs de règles**:
   - `artistStatusRules.ts` - Éligibilité statut
   - `artistUnemploymentRules.ts` - Chômage
   - Plus de règles pour fiscalité, subventions, etc.
 
 ### 4. State Machines (Workflows)
-- **Localisation**: `/src/workflows/statut-artiste/`
+- **Localisation**: `/src/processus-administratifs/statut-artiste/`
 - **Machines principales**:
   - `artistStatusMachine.ts` - Workflow demande de statut
   - `artistGrantMachine.ts` - Workflow demande de bourse
@@ -171,7 +171,7 @@ Le domaine **Statut d'Artiste** implémente 50 procédures administratives compl
 ### Tests
 ```bash
 # Exécuter les tests Cucumber pour le statut d'artiste
-npm run cucumber -- features/statut-artiste
+npm run cucumber -- specifications-metier/statut-artiste
 
 # Tests unitaires des règles
 npm test -- statut-artiste
@@ -182,8 +182,8 @@ npm run typecheck
 
 ### Exemples d'utilisation
 ```typescript
-import { checkArtistStatusEligibility } from './src/rules/statut-artiste/artistStatusRules';
-import { Artist } from './src/domain/statutArtisteTypes';
+import { checkArtistStatusEligibility } from './src/regles-eligibilite/statut-artiste/artistStatusRules';
+import { Artist } from './src/modele-metier/statutArtisteTypes';
 
 const artist: Artist = {
   // ... données de l'artiste
@@ -194,7 +194,7 @@ const eligibility = await checkArtistStatusEligibility(artist);
 
 ### Workflow State Machine
 ```typescript
-import { artistStatusMachine } from './src/workflows/statut-artiste/artistStatusMachine';
+import { artistStatusMachine } from './src/processus-administratifs/statut-artiste/artistStatusMachine';
 import { interpret } from 'xstate';
 
 const service = interpret(artistStatusMachine);
@@ -224,9 +224,9 @@ service.send('START_APPLICATION', { applicant: artist });
 ## Maintenance et Évolution
 
 ### Ajout de Nouvelles Procédures
-1. Ajouter feature Gherkin dans `/features/statut-artiste/`
+1. Ajouter feature Gherkin dans `/specifications-metier/statut-artiste/`
 2. Étendre types dans `statutArtisteTypes.ts`
-3. Créer règles dans `/src/rules/statut-artiste/`
+3. Créer règles dans `/src/regles-eligibilite/statut-artiste/`
 4. Implémenter workflow si nécessaire
 5. Mettre à jour documentation
 

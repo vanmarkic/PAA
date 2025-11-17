@@ -13,7 +13,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 // Constants for tax year 2024
 const CHILDCARE_CONSTANTS_2024 = {

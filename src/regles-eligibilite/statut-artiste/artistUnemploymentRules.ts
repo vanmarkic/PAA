@@ -8,7 +8,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { Artist, ArtistUnemployment, ARTIST_STATUS_CONSTANTS } from '../../domain/statutArtisteTypes';
+import { Artist, ArtistUnemployment, ARTIST_STATUS_CONSTANTS } from '../modele-metier/statutArtisteTypes';
 
 function createUnemploymentEngine(): Engine {
   const engine = new Engine();

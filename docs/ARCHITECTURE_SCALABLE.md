@@ -282,7 +282,7 @@ const results = await checkRISEligibilityBatch({
 
 ### 7. Singleton du Moteur de Règles
 
-**Localisation:** `src/rules/agrRules.ts`, `src/rules/risRules.ts`
+**Localisation:** `src/regles-eligibilite/agrRules.ts`, `src/regles-eligibilite/risRules.ts`
 
 **Amélioration:**
 ```typescript

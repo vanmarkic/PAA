@@ -20,26 +20,26 @@ import {
   AsylumApplication,
   Nationality,
   ResidenceStatus,
-} from '../../domain/etrangersTypes';
+} from '../modele-metier/etrangersTypes';
 
 import {
   checkResidencePermitEligibility,
   RESIDENCE_PERMIT_RULES_JSON,
-} from '../../rules/etrangers/residencePermitRules';
+} from '../regles-eligibilite/etrangers/residencePermitRules';
 
 import {
   checkFamilyReunificationEligibility,
   FAMILY_REUNIFICATION_RULES_JSON,
-} from '../../rules/etrangers/familyReunificationRules';
+} from '../regles-eligibilite/etrangers/familyReunificationRules';
 
 import {
   checkAsylumEligibility,
   ASYLUM_RULES_JSON,
-} from '../../rules/etrangers/asylumRules';
+} from '../regles-eligibilite/etrangers/asylumRules';
 
 import { interpret } from 'xstate';
-import { residencePermitMachine } from '../../workflows/etrangers/residencePermitMachine';
-import { asylumApplicationMachine } from '../../workflows/etrangers/asylumApplicationMachine';
+import { residencePermitMachine } from '../processus-administratifs/etrangers/residencePermitMachine';
+import { asylumApplicationMachine } from '../processus-administratifs/etrangers/asylumApplicationMachine';
 
 // ANSI color codes for better console output
 const colors = {

@@ -9,7 +9,7 @@
  * - 20% reduction in processing time (21s → 17s per document)
  */
 
-import { LegalText, ConvertedText, ConversionLevel, Ambiguity, Example } from '../domain/types';
+import { LegalText, ConvertedText, ConversionLevel, Ambiguity, Example } from '../modele-metier/types';
 
 /**
  * Mock LLM interface - in production, this would call Claude API

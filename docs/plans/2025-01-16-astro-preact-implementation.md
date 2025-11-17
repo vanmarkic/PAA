@@ -148,7 +148,7 @@ export default defineConfig({
         output: {
           manualChunks(id) {
             // Split by machine category
-            if (id.includes('/workflows/')) {
+            if (id.includes('/processus-administratifs/')) {
               const match = id.match(/\/workflows\/([^/]+)\//);
               if (match) {
                 return `machines-${match[1]}`;
@@ -192,7 +192,7 @@ Replace entire file with:
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@workflows/*": ["../src/workflows/*"],
+      "@processus-administratifs/*": ["../src/processus-administratifs/*"],
       "@components/*": ["src/components/*"],
       "@lib/*": ["src/lib/*"]
     }
@@ -464,12 +464,12 @@ import type { AnyStateMachine } from 'xstate';
 
 /**
  * Dynamically import an XState machine by ID
- * Maps machine IDs to their file paths in ../src/workflows/
+ * Maps machine IDs to their file paths in ../src/processus-administratifs/
  */
 export async function loadMachine(machineId: string): Promise<AnyStateMachine> {
   // Use Vite's glob import for all machine files
   const machines = import.meta.glob<{ [key: string]: AnyStateMachine }>(
-    '../../src/workflows/**/*Machine.ts',
+    '../../src/processus-administratifs/**/*Machine.ts',
     { eager: false }
   );
 
@@ -529,7 +529,7 @@ export async function loadMachines(
  * Check if a machine file exists
  */
 export function machineExists(machineId: string): boolean {
-  const machines = import.meta.glob('../../src/workflows/**/*Machine.ts');
+  const machines = import.meta.glob('../../src/processus-administratifs/**/*Machine.ts');
   return Object.keys(machines).some(path => {
     const filename = path.split('/').pop()?.replace('.ts', '');
     return filename === `${machineId}Machine` || filename === machineId;
@@ -1511,7 +1511,7 @@ export default function StatelyInspector({ machineId, machineName }: Props) {
             <summary>Troubleshooting</summary>
             <ul>
               <li>Machine ID: {machineId}</li>
-              <li>Expected file: src/workflows/**/{machineId}Machine.ts</li>
+              <li>Expected file: src/processus-administratifs/**/{machineId}Machine.ts</li>
             </ul>
           </details>
         </div>
@@ -2049,11 +2049,11 @@ git commit -m "chore: add root scripts for Astro site management"
 ## Task 17: Create GitHub Actions Workflow
 
 **Files:**
-- Create: `.github/workflows/deploy-astro-docs.yml`
+- Create: `.github/processus-administratifs/deploy-astro-docs.yml`
 
 **Step 1: Write deployment workflow**
 
-Create `.github/workflows/deploy-astro-docs.yml`:
+Create `.github/processus-administratifs/deploy-astro-docs.yml`:
 
 ```yaml
 name: Deploy Astro Docs
@@ -2062,7 +2062,7 @@ on:
   push:
     branches: [main, master]
     paths:
-      - 'src/workflows/**'
+      - 'src/processus-administratifs/**'
       - 'docs-astro/**'
       - 'scripts/generateMachinesMetadata.ts'
   workflow_dispatch:
@@ -2109,7 +2109,7 @@ jobs:
 **Step 2: Commit workflow**
 
 ```bash
-git add .github/workflows/deploy-astro-docs.yml
+git add .github/processus-administratifs/deploy-astro-docs.yml
 git commit -m "ci: add GitHub Actions workflow for Astro docs deployment"
 ```
 

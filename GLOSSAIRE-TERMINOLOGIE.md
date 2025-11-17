@@ -45,9 +45,9 @@ Ce document définit la terminologie officielle du projet PAA, remplaçant les t
 ### Avant (Anglais)
 ```
 src/
-├── rules/
-├── workflows/
-├── domain/
+├── regles-eligibilite/
+├── processus-administratifs/
+├── modele-metier/
 ├── services/
 ├── api/
 │   └── controllers/
@@ -56,7 +56,7 @@ src/
 ├── queue/
 └── utils/
 
-features/
+specifications-metier/
 ```
 
 ### Après (Français Explicite)
@@ -139,10 +139,10 @@ Encapsuler les bibliothèques externes avec des noms français :
 
 ### 🔴 Phase 1 - URGENT (Semaine 1)
 Changements structurels critiques :
-1. `rules/` → `regles-eligibilite/`
-2. `workflows/` → `processus-administratifs/`
-3. `features/` → `specifications-metier/`
-4. `domain/` → `modele-metier/`
+1. `regles-eligibilite/` → `regles-eligibilite/`
+2. `processus-administratifs/` → `processus-administratifs/`
+3. `specifications-metier/` → `specifications-metier/`
+4. `modele-metier/` → `modele-metier/`
 
 ### 🟡 Phase 2 - MOYEN (Semaines 2-3)
 Changements architecturaux :
@@ -163,7 +163,7 @@ Changements d'infrastructure :
 
 **Avant:**
 ```typescript
-// src/rules/risRules.ts
+// src/regles-eligibilite/risRules.ts
 export class RISRuleEngine {
   checkEligibility(user: User): boolean {
     // ...
@@ -185,7 +185,7 @@ export class EvaluateurEligibiliteRIS {
 
 **Avant:**
 ```typescript
-// src/workflows/conversionMachine.ts
+// src/processus-administratifs/conversionMachine.ts
 export const conversionMachine = createMachine({
   id: 'conversion',
   initial: 'idle',
@@ -207,7 +207,7 @@ export const automateConversionTexteLegal = createMachine({
 
 **Avant:**
 ```gherkin
-# features/benefits/ris.feature
+# specifications-metier/benefits/ris.feature
 Feature: RIS eligibility check
 ```
 

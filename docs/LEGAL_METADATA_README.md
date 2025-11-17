@@ -44,7 +44,7 @@
 ```
 PAA/
 ├── src/
-│   ├── domain/
+│   ├── modele-metier/
 │   │   ├── legalMetadata.ts          # ⭐ Registre central (2,100+ lignes)
 │   │   ├── belgianRightsTypes.ts     # Types pour toutes les machines
 │   │   └── risTypes.ts               # Types RIS
@@ -52,7 +52,7 @@ PAA/
 │   ├── utils/
 │   │   └── machineMetadataHelper.ts  # ⭐ Fonctions utilitaires (450+ lignes)
 │   │
-│   ├── workflows/
+│   ├── processus-administratifs/
 │   │   ├── index.ts                  # Export de toutes les machines
 │   │   ├── allocationsChomage.ts     # Exemple de machine
 │   │   ├── grapa.ts                  # Exemple de machine
@@ -100,7 +100,7 @@ Toutes les machines référencent des sources authentiques:
 ### 1. Vérifier si les données sont à jour
 
 ```typescript
-import { isMachineDataCurrent } from './domain/legalMetadata';
+import { isMachineDataCurrent } from './modele-metier/legalMetadata';
 
 const { isCurrent, daysOld, needsReview } = isMachineDataCurrent('grapa');
 
@@ -112,7 +112,7 @@ console.log(`Révision nécessaire: ${needsReview}`);
 ### 2. Obtenir les métadonnées complètes
 
 ```typescript
-import { getMachineLegalMetadata } from './domain/legalMetadata';
+import { getMachineLegalMetadata } from './modele-metier/legalMetadata';
 
 const metadata = getMachineLegalMetadata('allocationsChomage');
 
@@ -138,7 +138,7 @@ if (warning) {
 ### 4. Afficher les sources officielles
 
 ```typescript
-import { getMachineSources } from './domain/legalMetadata';
+import { getMachineSources } from './modele-metier/legalMetadata';
 
 const sources = getMachineSources('grapa');
 
@@ -151,7 +151,7 @@ sources.forEach(source => {
 ### 5. Créer un rapport d'audit
 
 ```typescript
-import { generateAuditReport } from './domain/legalMetadata';
+import { generateAuditReport } from './modele-metier/legalMetadata';
 
 const report = generateAuditReport();
 
@@ -232,7 +232,7 @@ Voici un exemple pour la machine **GRAPA**:
 
 ```typescript
 import { createMachine, assign } from 'xstate';
-import { getMachineLegalMetadata, isMachineDataCurrent } from '../domain/legalMetadata';
+import { getMachineLegalMetadata, isMachineDataCurrent } from '../modele-metier/legalMetadata';
 
 export const myMachine = createMachine({
   id: 'myMachine',
@@ -343,9 +343,9 @@ export const myMachine = createMachine({
 - 📋 **Ce README**: `docs/LEGAL_METADATA_README.md`
 
 ### Code source
-- 🗄️ **Registre central**: `src/domain/legalMetadata.ts`
+- 🗄️ **Registre central**: `src/modele-metier/legalMetadata.ts`
 - 🔧 **Utilitaires**: `src/utils/machineMetadataHelper.ts`
-- 🏗️ **Types**: `src/domain/belgianRightsTypes.ts`
+- 🏗️ **Types**: `src/modele-metier/belgianRightsTypes.ts`
 
 ### Exemples pratiques
 

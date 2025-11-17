@@ -13,7 +13,7 @@ import {
   UrgenceLevel,
   DecisionType,
   COPROPRIETE_CONSTANTS
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 
 /**
  * Create travaux validation engine

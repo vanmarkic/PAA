@@ -20,7 +20,7 @@ import {
   AdmissibilityIssue,
   APPEAL_DEADLINES,
   FILING_FEES
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 /**
  * Create rules engine for Council of State procedures

@@ -16,7 +16,7 @@ import {
   CivilRightsRequest,
   ValidationResult,
   CIVIL_RIGHTS_CONSTANTS
-} from '../../domain/droitsCivilsTypes';
+} from '../modele-metier/droitsCivilsTypes';
 
 /**
  * Create the identity document rules engine

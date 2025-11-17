@@ -3,8 +3,8 @@
  * (without XState complexity for POC purposes)
  */
 
-import { RISUser, PIISContract, RISEligibilityResult } from '../domain/risTypes';
-import { checkRISEligibility } from '../rules/risRules';
+import { RISUser, PIISContract, RISEligibilityResult } from '../modele-metier/risTypes';
+import { checkRISEligibility } from '../regles-eligibilite/risRules';
 
 /**
  * Simple state machine representation showing the workflow

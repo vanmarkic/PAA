@@ -6,7 +6,7 @@
  */
 
 import { createMachine, assign } from 'xstate';
-import { RISUser, RISEligibilityResult, PIISContract } from '../domain/risTypes';
+import { RISUser, RISEligibilityResult, PIISContract } from '../modele-metier/risTypes';
 
 interface RISApplicationContext {
   user: RISUser | null;

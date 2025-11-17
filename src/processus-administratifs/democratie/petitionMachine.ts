@@ -13,7 +13,7 @@ import {
   DemocraticCitizen,
   PetitionType,
   DEMOCRATIE_CONSTANTS,
-} from '../../domain/democratieTypes';
+} from '../modele-metier/democratieTypes';
 
 interface PetitionContext {
   petition: Petition | null;

@@ -17,7 +17,7 @@ Ce système permet de générer automatiquement des visualisations Mermaid pour 
 ### 1. Parsing automatique
 
 Le script `generateVisualizationDocs.ts` :
-- Scanne récursivement tous les fichiers `*Machine.ts` dans `src/workflows/`
+- Scanne récursivement tous les fichiers `*Machine.ts` dans `src/processus-administratifs/`
 - Parse chaque machine pour extraire :
   - ID et nom
   - États (states)
@@ -68,7 +68,7 @@ PAA/
 ├── scripts/
 │   └── generateVisualizationDocs.ts    # Script de génération
 ├── src/
-│   └── workflows/                      # 109 machines source
+│   └── processus-administratifs/                      # 109 machines source
 │       ├── risMachine.ts
 │       ├── conversionMachine.ts
 │       ├── health/                     # 11 machines santé
@@ -141,7 +141,7 @@ console.log(`
 
 ## Intégration CI/CD
 
-Ajouter dans `.github/workflows/docs.yml` :
+Ajouter dans `.github/processus-administratifs/docs.yml` :
 
 ```yaml
 name: Generate Documentation
@@ -150,7 +150,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - 'src/workflows/**/*.ts'
+      - 'src/processus-administratifs/**/*.ts'
 
 jobs:
   generate-docs:
@@ -172,7 +172,7 @@ Cela mettra automatiquement à jour la documentation sur GitHub Pages à chaque 
 
 Pour ajouter une nouvelle machine et qu'elle apparaisse automatiquement :
 
-1. Créer le fichier `src/workflows/[categorie]/maMachine.ts`
+1. Créer le fichier `src/processus-administratifs/[categorie]/maMachine.ts`
 2. Suivre la structure XState standard
 3. Ajouter des métadonnées dans les commentaires JSDoc
 4. Exécuter `npm run docs:generate`

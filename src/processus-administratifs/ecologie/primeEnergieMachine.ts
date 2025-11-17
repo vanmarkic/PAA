@@ -11,7 +11,7 @@ import {
   EnergySubsidyRequest,
   EcologieEligibilityResult,
   Region,
-} from '../../domain/ecologieTypes';
+} from '../modele-metier/ecologieTypes';
 
 interface EnergySubsidyContext {
   request: EnergySubsidyRequest | null;

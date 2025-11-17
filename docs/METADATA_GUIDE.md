@@ -32,7 +32,7 @@ Avec métadonnées:
 
 ## 🗂️ Structure des métadonnées
 
-### Fichier principal: `src/domain/legalMetadata.ts`
+### Fichier principal: `src/modele-metier/legalMetadata.ts`
 
 Ce fichier contient:
 
@@ -78,7 +78,7 @@ Ce fichier contient:
 ### 1. Obtenir les métadonnées d'une machine
 
 ```typescript
-import { getMachineLegalMetadata } from '../domain/legalMetadata';
+import { getMachineLegalMetadata } from '../modele-metier/legalMetadata';
 
 const metadata = getMachineLegalMetadata('allocationsChomage');
 console.log(metadata.currentVersion.sources);
@@ -87,7 +87,7 @@ console.log(metadata.currentVersion.sources);
 ### 2. Vérifier si les données sont à jour
 
 ```typescript
-import { isMachineDataCurrent } from '../domain/legalMetadata';
+import { isMachineDataCurrent } from '../modele-metier/legalMetadata';
 
 const { isCurrent, daysOld, needsReview } = isMachineDataCurrent('grapa');
 
@@ -259,7 +259,7 @@ En cas de:
 
 Pour toute question sur les métadonnées légales:
 - Consulter ce guide
-- Vérifier le code dans `src/domain/legalMetadata.ts`
+- Vérifier le code dans `src/modele-metier/legalMetadata.ts`
 - Utiliser les utilitaires dans `src/utils/machineMetadataHelper.ts`
 
 ## 📝 Exemples d'intégration
@@ -302,7 +302,7 @@ function AllocationCard({ machineId }) {
 ### Validation avant calcul
 
 ```typescript
-import { isMachineDataCurrent } from './domain/legalMetadata';
+import { isMachineDataCurrent } from './modele-metier/legalMetadata';
 
 function calculateRIS(userId: string) {
   const { isCurrent, needsReview } = isMachineDataCurrent('risApplication');

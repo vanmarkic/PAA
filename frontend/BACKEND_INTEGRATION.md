@@ -46,16 +46,16 @@ interface LegalReference {
 ### 1. Workflows/Machines
 
 #### GET /api/workflows
-**Purpose**: Fetch all workflows/state machines
+**Purpose**: Fetch all processus-administratifs/state machines
 **Response**: `Machine[]`
 **Used by**: Home.tsx, ComparisonTool.tsx, BenefitsGuide.tsx
 
-#### GET /api/workflows/:id
+#### GET /api/processus-administratifs/:id
 **Purpose**: Get detailed information about a specific workflow
 **Response**: `Machine`
 **Used by**: MachineDetail.tsx
 
-#### GET /api/workflows/search
+#### GET /api/processus-administratifs/search
 **Purpose**: Search workflows by keyword, category, or complexity
 **Query params**:
 - `q`: search query

@@ -17,11 +17,11 @@ import {
   ViolationType,
   ApplicationType,
   AdmissibilityAssessment
-} from '../../domain/courEuropeenneTypes';
-import { echrApplicationMachine } from '../../workflows/cour-europeenne/applicationMachine';
-import { checkAdmissibility, quickAdmissibilityCheck } from '../../rules/cour-europeenne/admissibilityRules';
-import { checkInterimMeasuresEligibility } from '../../rules/cour-europeenne/interimMeasuresRules';
-import { assessUrgency } from '../../workflows/cour-europeenne/interimMeasuresMachine';
+} from '../modele-metier/courEuropeenneTypes';
+import { echrApplicationMachine } from '../processus-administratifs/cour-europeenne/applicationMachine';
+import { checkAdmissibility, quickAdmissibilityCheck } from '../regles-eligibilite/cour-europeenne/admissibilityRules';
+import { checkInterimMeasuresEligibility } from '../regles-eligibilite/cour-europeenne/interimMeasuresRules';
+import { assessUrgency } from '../processus-administratifs/cour-europeenne/interimMeasuresMachine';
 
 /**
  * Example 1: Standard Individual Application - Article 6 Violation

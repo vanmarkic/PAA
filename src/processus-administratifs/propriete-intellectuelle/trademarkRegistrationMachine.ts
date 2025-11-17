@@ -6,7 +6,7 @@
  */
 
 import { createMachine, assign } from 'xstate';
-import { TrademarkApplication, TrademarkStatus, IP_CONSTANTS } from '../../domain/proprieteIntellectuelleTypes';
+import { TrademarkApplication, TrademarkStatus, IP_CONSTANTS } from '../modele-metier/proprieteIntellectuelleTypes';
 
 interface TrademarkContext {
   application: TrademarkApplication | null;

@@ -13,7 +13,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## 🏥 Nouvelles Machines - Santé (`src/workflows/health/`)
+## 🏥 Nouvelles Machines - Santé (`src/processus-administratifs/health/`)
 
 ### 1. `consultationMedecin.ts`
 **Description**: Consultation médicale généraliste ou spécialiste avec remboursement mutuelle
@@ -66,7 +66,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## ⚖️ Nouvelles Machines - Justice (`src/workflows/justice/`)
+## ⚖️ Nouvelles Machines - Justice (`src/processus-administratifs/justice/`)
 
 ### 4. `procedureDivorceMachine.ts`
 **Description**: Procédure de divorce complète (consentement mutuel ou contentieux)
@@ -90,7 +90,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## 🌱 Nouvelles Machines - Environnement (`src/workflows/environment/`)
+## 🌱 Nouvelles Machines - Environnement (`src/processus-administratifs/environment/`)
 
 ### 5. `permisEnvironnementMachine.ts`
 **Description**: Demande permis d'environnement pour activité industrielle/commerciale
@@ -114,7 +114,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## 💼 Nouvelles Machines - Commerce (`src/workflows/commerce/`)
+## 💼 Nouvelles Machines - Commerce (`src/processus-administratifs/commerce/`)
 
 ### 6. `creationEntrepriseMachine.ts`
 **Description**: Création complète d'une entreprise (SRL, SA, indépendant...)
@@ -141,7 +141,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## 🛡️ Nouvelles Machines - Protection Consommateur (`src/workflows/consumer/`)
+## 🛡️ Nouvelles Machines - Protection Consommateur (`src/processus-administratifs/consumer/`)
 
 ### 7. `reclamationConsommationMachine.ts`
 **Description**: Procédure de réclamation consommateur
@@ -158,7 +158,7 @@ Ce document décrit les nouvelles machines, meta machines et tests sémantiques 
 
 ---
 
-## 🌟 META MACHINES - Parcours Citoyens Complets (`src/workflows/meta/`)
+## 🌟 META MACHINES - Parcours Citoyens Complets (`src/processus-administratifs/meta/`)
 
 Les meta machines orchestrent plusieurs démarches administratives pour représenter un parcours de vie complet du point de vue du citoyen.
 
@@ -429,7 +429,7 @@ test('Taux de remboursement médecin généraliste: 75% (tarif conventionné)', 
 ### Machines Individuelles
 
 ```typescript
-import { consultationMedecinMachine } from './workflows/health/consultationMedecin';
+import { consultationMedecinMachine } from './processus-administratifs/health/consultationMedecin';
 import { createActor } from 'xstate';
 
 const actor = createActor(consultationMedecinMachine);
@@ -450,7 +450,7 @@ actor.send({
 ### Meta Machines
 
 ```typescript
-import { parcoursNaissanceEnfantMachine } from './workflows/meta/parcoursNaissanceEnfantMachine';
+import { parcoursNaissanceEnfantMachine } from './processus-administratifs/meta/parcoursNaissanceEnfantMachine';
 import { createActor } from 'xstate';
 
 const actor = createActor(parcoursNaissanceEnfantMachine);

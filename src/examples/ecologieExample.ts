@@ -10,19 +10,19 @@ import {
   checkEnvironmentalPermitEligibility,
   calculateFinancialGuarantee,
   determineMonitoringFrequency,
-} from '../rules/ecologie/permisEnvironnementRules';
+} from '../regles-eligibilite/ecologie/permisEnvironnementRules';
 import {
   checkEnergySubsidyEligibility,
   calculateSolarSubsidy,
   calculateInsulationSubsidy,
-} from '../rules/ecologie/primesEnergieRules';
+} from '../regles-eligibilite/ecologie/primesEnergieRules';
 import {
   checkWastePermitEligibility,
   calculateWasteTax,
   calculateCompostingSubsidy,
-} from '../rules/ecologie/gestionDechetsRules';
-import { permisEnvironnementMachine } from '../workflows/ecologie/permisEnvironnementMachine';
-import { primeEnergieMachine } from '../workflows/ecologie/primeEnergieMachine';
+} from '../regles-eligibilite/ecologie/gestionDechetsRules';
+import { permisEnvironnementMachine } from '../processus-administratifs/ecologie/permisEnvironnementMachine';
+import { primeEnergieMachine } from '../processus-administratifs/ecologie/primeEnergieMachine';
 import {
   getImplementationStatistics,
   getProceduresByCategory,

@@ -3,8 +3,8 @@
  */
 
 import { createActor } from 'xstate';
-import { conversionMachine } from '../workflows/conversionMachine';
-import { LegalText } from '../domain/types';
+import { conversionMachine } from '../processus-administratifs/conversionMachine';
+import { LegalText } from '../modele-metier/types';
 
 function runConversionWorkflowExample() {
   console.log('=== Legal Text Conversion Workflow Example ===\n');

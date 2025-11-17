@@ -9,7 +9,7 @@ import { createMachine, assign } from 'xstate';
 import {
   TaxAppealProcedure,
   AppealStatus,
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 interface TaxAppealContext {
   appeal: TaxAppealProcedure | null;

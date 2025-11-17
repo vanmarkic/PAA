@@ -7,7 +7,7 @@
  */
 
 import { createMachine, assign } from 'xstate';
-import { Artist, ArtistStatusEligibility, ArtistStatus } from '../../domain/statutArtisteTypes';
+import { Artist, ArtistStatusEligibility, ArtistStatus } from '../modele-metier/statutArtisteTypes';
 
 interface ArtistStatusContext {
   applicant: Artist | null;

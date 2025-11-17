@@ -11,7 +11,7 @@ import {
   InterimMeasuresAssessment,
   ECHRApplicant,
   Evidence
-} from '../../domain/courEuropeenneTypes';
+} from '../modele-metier/courEuropeenneTypes';
 
 interface InterimMeasuresContext {
   request: InterimMeasure | null;

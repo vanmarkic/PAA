@@ -10,7 +10,7 @@ import {
   OmbudsmanComplaint,
   Appellant,
   PublicAuthority,
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 interface OmbudsmanContext {
   complaint: OmbudsmanComplaint | null;

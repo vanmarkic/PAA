@@ -189,7 +189,7 @@ Un rapport HTML est généré dans `coverage/lcov-report/index.html`.
 Ces tests s'exécutent automatiquement dans la CI :
 
 ```yaml
-# .github/workflows/test.yml
+# .github/processus-administratifs/test.yml
 - name: Run visualization tests
   run: npm run test:visualization
 

@@ -12,7 +12,7 @@ import {
   AdmissibilityCheck,
   AdmissibilityIssue,
   ConseilEtatAnnulationProcedure,
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 interface ConseilEtatContext {
   application: ConseilEtatAnnulationProcedure | null;

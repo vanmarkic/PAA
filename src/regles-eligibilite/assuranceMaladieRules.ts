@@ -13,7 +13,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck, LegalReference } from '../domain/types';
+import { EligibilityCheck, LegalReference } from '../modele-metier/types';
 
 // INAMI 2024 reimbursement rates
 export const REIMBURSEMENT_RATES_2024 = {

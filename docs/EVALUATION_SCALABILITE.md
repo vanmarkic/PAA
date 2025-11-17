@@ -49,7 +49,7 @@ Le projet PAA est un **proof of concept bien architecturé** utilisant TypeScrip
 
 **Code actuel (exemple RIS):**
 ```typescript
-// src/workflows/risMachine.ts
+// src/processus-administratifs/risMachine.ts
 const risMachine = createMachine({
   context: {
     user: RISUser,              // UN SEUL utilisateur
@@ -84,7 +84,7 @@ const risMachine = createMachine({
 | **Administrateur Système** | Gérer utilisateurs, audits, configurations | Accès complet, logs d'audit |
 
 **Code actuel:**
-- ❌ Aucune notion de rôle dans `src/domain/types.ts`
+- ❌ Aucune notion de rôle dans `src/modele-metier/types.ts`
 - ❌ Pas de middleware d'authentification
 - ❌ Pas de filtre par permission dans les règles
 
@@ -99,7 +99,7 @@ const risMachine = createMachine({
 
 **Audit actuel:**
 ```typescript
-// src/domain/types.ts
+// src/modele-metier/types.ts
 interface ConvertedText {
   validatedAt: Date;
   validatedBy?: string;    // ⚠️ Présent mais jamais utilisé
@@ -148,7 +148,7 @@ interface ConvertedText {
 
 **Nouveau modèle de données:**
 ```typescript
-// src/domain/types.ts (à modifier)
+// src/modele-metier/types.ts (à modifier)
 interface User {
   id: string;                          // UUID
   organizationId: string;              // CPAS de Bruxelles, CPAS de Liège, etc.
@@ -215,7 +215,7 @@ export async function authorizeAction(
 
 **Nouveau modèle:**
 ```typescript
-// src/domain/auditTypes.ts (nouveau fichier)
+// src/modele-metier/auditTypes.ts (nouveau fichier)
 interface AuditLog {
   id: string;
   timestamp: Date;
@@ -240,7 +240,7 @@ interface AuditLog {
 
 **Intégration avec XState:**
 ```typescript
-// src/workflows/risMachine.ts (à modifier)
+// src/processus-administratifs/risMachine.ts (à modifier)
 const risMachine = createMachine({
   context: {...},
   entry: ['logStateEntry'],          // Action XState
@@ -345,7 +345,7 @@ export async function updateRISApplication(
 
 **Code actuel (conversion de texte légal):**
 ```typescript
-// src/workflows/conversionMachine.ts
+// src/processus-administratifs/conversionMachine.ts
 idle
   → extractingStructure          // 2-5 secondes (appel LLM)
     → identifyingConcepts        // 1-3 secondes (appel LLM)
@@ -433,7 +433,7 @@ Architecture actuelle:
 
 **Code actuel:**
 ```typescript
-// src/rules/risRules.ts
+// src/regles-eligibilite/risRules.ts
 export async function checkRISEligibility(user: RISUser): Promise<RISEligibilityResult> {
   const engine = new Engine();        // ❌ Recréé à CHAQUE appel!
 
@@ -462,7 +462,7 @@ export async function checkRISEligibility(user: RISUser): Promise<RISEligibility
 
 **Refactoring du pipeline de conversion:**
 ```typescript
-// src/workflows/conversionMachine.ts (à modifier)
+// src/processus-administratifs/conversionMachine.ts (à modifier)
 
 // AVANT (séquentiel):
 idle
@@ -667,7 +667,7 @@ export async function convertLegalTextCached(legalText: LegalText): Promise<Conv
 
 **Optimisation du moteur de règles:**
 ```typescript
-// src/rules/risRules.ts (à modifier)
+// src/regles-eligibilite/risRules.ts (à modifier)
 
 // AVANT:
 export async function checkRISEligibility(user: RISUser): Promise<RISEligibilityResult> {
@@ -809,7 +809,7 @@ FAIBLE   ✅ P5: Logging        ✅ P6: Tests E2E     ⚪ P7: Documentation
 **Impact:** Réduction de 80% du temps de traitement
 
 ```typescript
-// src/rules/risRules.ts
+// src/regles-eligibilite/risRules.ts
 const risEngine = new Engine();  // Instance globale
 // Initialiser une seule fois au démarrage
 ```
@@ -999,8 +999,8 @@ const [structure, concepts, vocab] = await Promise.all([...]);
 
 - Architecture actuelle: `/home/user/PAA/ARCHITECTURE.md`
 - Documentation complète: `/home/user/PAA/README.md`
-- Machines d'état: `/home/user/PAA/src/workflows/`
-- Règles métier: `/home/user/PAA/src/rules/`
+- Machines d'état: `/home/user/PAA/src/processus-administratifs/`
+- Règles métier: `/home/user/PAA/src/regles-eligibilite/`
 
 ### B. Technologies Recommandées
 

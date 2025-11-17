@@ -11,7 +11,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { PatentApplication, PatentStatus, PatentType, IP_CONSTANTS } from '../../domain/proprieteIntellectuelleTypes';
+import { PatentApplication, PatentStatus, PatentType, IP_CONSTANTS } from '../modele-metier/proprieteIntellectuelleTypes';
 
 /**
  * Create patent eligibility rules engine

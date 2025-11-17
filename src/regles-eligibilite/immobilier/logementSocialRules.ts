@@ -16,7 +16,7 @@ import {
   SocialRentCalculation,
   BelgianRegion,
   IMMOBILIER_CONSTANTS,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 /**
  * Create the social housing eligibility engine

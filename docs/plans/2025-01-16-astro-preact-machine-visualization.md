@@ -217,7 +217,7 @@ export default function SearchFilter({ machines, categories }: Props) {
 ```typescript
 export async function loadMachine(machineId: string): Promise<AnyStateMachine> {
   // Use Vite's glob import
-  const machines = import.meta.glob('/src/workflows/**/*Machine.ts');
+  const machines = import.meta.glob('/src/processus-administratifs/**/*Machine.ts');
 
   // Find matching file
   const machinePath = Object.keys(machines).find(path =>
@@ -282,7 +282,7 @@ export async function loadMachine(machineId: string): Promise<AnyStateMachine> {
 // astro.config.mjs
 manualChunks(id) {
   // Split by machine category
-  if (id.includes('/workflows/')) {
+  if (id.includes('/processus-administratifs/')) {
     const match = id.match(/\/workflows\/([^/]+)\//);
     if (match) return `machines-${match[1]}`;
     return 'machines-general';

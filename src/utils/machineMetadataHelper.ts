@@ -9,7 +9,7 @@ import {
   getMachineSources,
   generateAuditReport,
   LegalSource,
-} from '../domain/legalMetadata';
+} from '../modele-metier/legalMetadata';
 
 /**
  * Génère un badge de fraîcheur des données

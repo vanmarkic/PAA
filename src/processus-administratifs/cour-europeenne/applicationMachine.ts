@@ -19,7 +19,7 @@ import {
   AdmissibilityCheck,
   Communication,
   Deadline
-} from '../../domain/courEuropeenneTypes';
+} from '../modele-metier/courEuropeenneTypes';
 
 export const echrApplicationMachine = createMachine({
   id: 'echrApplication',

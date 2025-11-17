@@ -3,8 +3,8 @@
  */
 
 import { createActor } from 'xstate';
-import { risApplicationMachine } from '../workflows/risMachine';
-import { RISUser, PIISContract } from '../domain/risTypes';
+import { risApplicationMachine } from '../processus-administratifs/risMachine';
+import { RISUser, PIISContract } from '../modele-metier/risTypes';
 
 function runRISWorkflowExample() {
   console.log('=== RIS Application Workflow Example ===\n');

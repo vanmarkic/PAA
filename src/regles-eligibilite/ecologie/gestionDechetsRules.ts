@@ -20,7 +20,7 @@ import {
   Region,
   ECOLOGIE_CONSTANTS,
   ECOLOGIE_LEGAL_REFERENCES,
-} from '../../domain/ecologieTypes';
+} from '../modele-metier/ecologieTypes';
 
 interface WasteManagementFacts {
   wasteType: WasteCategory;

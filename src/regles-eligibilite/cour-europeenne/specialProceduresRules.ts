@@ -19,7 +19,7 @@ import {
   ThirdPartyIntervention,
   AdvisoryOpinion,
   ECHR_DEADLINES
-} from '../../domain/courEuropeenneTypes';
+} from '../modele-metier/courEuropeenneTypes';
 
 // ============================================================================
 // GRAND CHAMBER REFERRAL RULES

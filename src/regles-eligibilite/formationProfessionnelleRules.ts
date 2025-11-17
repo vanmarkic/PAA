@@ -13,7 +13,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck } from '../modele-metier/types';
 
 // Constants from Belgian professional training regulations - Updated 2024
 const MIN_AGE = 18; // Âge minimum (sauf exceptions)

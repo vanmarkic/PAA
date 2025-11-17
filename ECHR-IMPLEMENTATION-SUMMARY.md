@@ -17,7 +17,7 @@ Successfully implemented a comprehensive European Court of Human Rights domain f
 
 ```
 PAA/
-├── features/cour-europeenne/
+├── specifications-metier/cour-europeenne/
 │   ├── application-individuelle.feature   # Individual applications
 │   ├── mesures-provisoires.feature       # Interim measures (Rule 39)
 │   ├── reglement-amiable.feature         # Friendly settlement
@@ -27,15 +27,15 @@ PAA/
 │   ├── avis-consultatif.feature         # Advisory opinions
 │   └── arret-pilote.feature             # Pilot judgments
 │
-├── src/domain/
+├── src/modele-metier/
 │   └── courEuropeenneTypes.ts           # All ECHR domain types
 │
-├── src/rules/cour-europeenne/
+├── src/regles-eligibilite/cour-europeenne/
 │   ├── admissibilityRules.ts            # Admissibility criteria engine
 │   ├── interimMeasuresRules.ts          # Rule 39 urgency assessment
 │   └── specialProceduresRules.ts        # 6 specialized rule engines
 │
-├── src/workflows/cour-europeenne/
+├── src/processus-administratifs/cour-europeenne/
 │   ├── applicationMachine.ts            # Complete application lifecycle
 │   └── interimMeasuresMachine.ts        # Interim measures workflow
 │
@@ -166,7 +166,7 @@ PAA/
 
 ### 1. Check Admissibility
 ```typescript
-import { checkAdmissibility } from './rules/cour-europeenne/admissibilityRules';
+import { checkAdmissibility } from './regles-eligibilite/cour-europeenne/admissibilityRules';
 
 const assessment = await checkAdmissibility(application);
 // Returns: admissible/inadmissible with detailed reasons
@@ -174,7 +174,7 @@ const assessment = await checkAdmissibility(application);
 
 ### 2. Request Interim Measures
 ```typescript
-import { assessUrgency } from './workflows/cour-europeenne/interimMeasuresMachine';
+import { assessUrgency } from './processus-administratifs/cour-europeenne/interimMeasuresMachine';
 
 const urgency = assessUrgency(interimMeasuresRequest);
 // Returns: critical/high/medium/low with recommendations
@@ -182,7 +182,7 @@ const urgency = assessUrgency(interimMeasuresRequest);
 
 ### 3. Evaluate Grand Chamber Referral
 ```typescript
-import { checkGrandChamberEligibility } from './rules/cour-europeenne/specialProceduresRules';
+import { checkGrandChamberEligibility } from './regles-eligibilite/cour-europeenne/specialProceduresRules';
 
 const eligibility = await checkGrandChamberEligibility(judgment, application);
 // Returns: accept/reject with reasoning

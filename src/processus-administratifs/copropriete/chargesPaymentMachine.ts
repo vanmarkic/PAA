@@ -12,7 +12,7 @@ import {
   DetailAppelFonds,
   Rappel,
   PaiementStatus
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 
 interface ChargesPaymentContext {
   coproprietaire: Coproprietaire | null;

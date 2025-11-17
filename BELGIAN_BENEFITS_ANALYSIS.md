@@ -12,9 +12,9 @@
 
 ## 1. RIS (Revenu d'Intégration Sociale)
 **Status**: ✓ Feature file exists
-- **Feature File**: `/home/user/PAA/features/benefits/ris.feature`
-- **Rule File**: `/home/user/PAA/src/rules/risRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/risMachine.ts`
+- **Feature File**: `/home/user/PAA/specifications-metier/benefits/ris.feature`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/risRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/risMachine.ts`
 - **What it does**: Minimum income safety net for people without sufficient resources
 - **Key Criteria**: 
   - Age ≥18, Belgian resident (or equivalent status)
@@ -26,8 +26,8 @@
 
 ## 2. AGR (Allocation de Garantie de Revenus)
 **Status**: ✓ Feature file exists
-- **Feature File**: `/home/user/PAA/features/benefits/income-guarantee.feature`
-- **Rule File**: `/home/user/PAA/src/rules/agrRules.ts`
+- **Feature File**: `/home/user/PAA/specifications-metier/benefits/income-guarantee.feature`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/agrRules.ts`
 - **Workflow**: No dedicated machine yet
 - **What it does**: Guarantees minimum income for part-time workers with benefit rights
 - **Key Criteria**:
@@ -44,7 +44,7 @@
 
 ## 3. Allocations de Chômage (Unemployment Benefits)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/allocationsChomageRules.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/allocationsChomageRules.ts`
 - **Workflow**: No machine yet
 - **What it does**: Compensation for involuntary unemployment, replaces AGR as primary safety net
 - **Key Criteria**:
@@ -59,8 +59,8 @@
 
 ## 4. Allocations Familiales (Family Allowances)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/allocationsFamilialesRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/education/allocationEtudesMachine.ts` (related)
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/allocationsFamilialesRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/education/allocationEtudesMachine.ts` (related)
 - **What it does**: Regular allowances per child for families - regionalized since 2020
 - **Key Criteria**:
   - Children aged 0-18 (unconditional)
@@ -73,8 +73,8 @@
 
 ## 5. GRAPA (Garantie de Revenus aux Personnes Âgées)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/grapaRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/pension/grapaMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/grapaRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/pension/grapaMachine.ts`
 - **What it does**: Guaranteed minimum income for elderly (65+), top-up to retirement pensions
 - **Key Criteria**:
   - Age ≥65
@@ -87,8 +87,8 @@
 
 ## 6. Allocations pour Personnes Handicapées (Disability Allowance)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/allocationHandicapesRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/handicap/allocationIntegrationMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/allocationHandicapesRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/handicap/allocationIntegrationMachine.ts`
 - **What it does**: Monthly allowance for people with disabilities affecting autonomy
 - **Key Criteria**:
   - Medical evaluation: Minimum 9 autonomy points (categories 1-4)
@@ -101,8 +101,8 @@
 
 ## 7. Allocations d'Études (Study Allowances)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/allocationsEtudesRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/education/allocationEtudesMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/allocationsEtudesRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/education/allocationEtudesMachine.ts`
 - **What it does**: Financial aid for students in secondary or higher education
 - **Key Criteria**:
   - Enrolled full-time in approved education program
@@ -115,8 +115,8 @@
 
 ## 8. Congé Maternité (Maternity Leave)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/congeMaterniteRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/family/congeParentalMachine.ts` (related)
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/congeMaterniteRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/family/congeParentalMachine.ts` (related)
 - **What it does**: Paid leave for pregnant women and new mothers
 - **Key Criteria**:
   - Pregnancy (from 6 weeks before due date)
@@ -129,8 +129,8 @@
 
 ## 9. Pension de Retraite (Retirement Pension)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/pensionRetraiteRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/pension/pensionAnticipeeMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/pensionRetraiteRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/pension/pensionAnticipeeMachine.ts`
 - **What it does**: Regular pension income after retirement
 - **Key Criteria**:
   - Age 62-67 (depending on career start and contributions)
@@ -143,7 +143,7 @@
 
 ## 10. Aide au Logement (Housing Allowance)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/aideLogementRules.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/aideLogementRules.ts`
 - **Workflow**: No machine yet
 - **What it does**: Help with housing costs (rent or mortgage) - REGIONAL (Brussels-focused)
 - **Key Criteria** (Brussels example):
@@ -162,8 +162,8 @@
 
 ## 11. Logement Social (Social Housing)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/logementSocialRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/housing/agenceImmobiliereSocialeMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/logementSocialRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/housing/agenceImmobiliereSocialeMachine.ts`
 - **What it does**: Access to affordable public or subsidized housing
 - **Key Criteria**:
   - Insufficient housing or inadequate conditions
@@ -175,8 +175,8 @@
 
 ## 12. Accident du Travail (Workplace Accidents)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/accidentTravailRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/health/accidentTravailMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/accidentTravailRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/health/accidentTravailMachine.ts`
 - **What it does**: Compensation for work-related injuries and medical costs
 - **Key Criteria**:
   - Accident occurs during/for work
@@ -190,8 +190,8 @@
 
 ## 13. Chèques Repas (Meal Vouchers / Luncheon Vouchers)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/chequesRepasRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/chequesRepasMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/chequesRepasRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/chequesRepasMachine.ts`
 - **What it does**: Employer-subsidized meal coupons for employees to purchase food
 - **Key Criteria**:
   - Employee (excluding management in some cases)
@@ -204,7 +204,7 @@
 
 ## 14. Prime de Naissance (Birth Allowance)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/primeNaissanceRules.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/primeNaissanceRules.ts`
 - **Workflow**: No machine yet
 - **What it does**: One-time payment for each child birth
 - **Key Criteria**:
@@ -217,7 +217,7 @@
 
 ## 15. Aide aux Personnes Âgées (Elderly Assistance)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/aidePersonnesAgeesRules.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/aidePersonnesAgeesRules.ts`
 - **Workflow**: No machine yet
 - **What it does**: Various support services for seniors 65+ (personal care, household help)
 - **Key Criteria**:
@@ -235,8 +235,8 @@
 
 ## 16. Congé Parental (Parental Leave)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/congeParentalRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/family/congeParentalMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/congeParentalRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/family/congeParentalMachine.ts`
 - **What it does**: Paid or unpaid leave for either parent after child birth
 - **Key Criteria**:
   - Newborn (up to age 12-14 months typically)
@@ -248,8 +248,8 @@
 
 ## 17. Maladie Professionnelle (Occupational Diseases)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/maladieProfessionnelleRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/health/maladieProfessionnelleMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/maladieProfessionnelleRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/health/maladieProfessionnelleMachine.ts`
 - **What it does**: Compensation for work-related health conditions (asbestos, silicosis, etc.)
 - **Key Criteria**:
   - List of recognized occupational diseases (60+ diseases)
@@ -261,7 +261,7 @@
 
 ## 18. Crédit Temps (Time Credit)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/creditTempsRules.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/creditTempsRules.ts`
 - **Workflow**: No machine yet
 - **What it does**: Allow employees to reduce working hours with partial income replacement
 - **Key Criteria**:
@@ -275,8 +275,8 @@
 
 ## 19. Aide Alimentaire (Food Assistance)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/aideAlimentaireRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/aideAlimentaireMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/aideAlimentaireRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/aideAlimentaireMachine.ts`
 - **What it does**: Emergency food aid for people in extreme poverty
 - **Key Criteria**:
   - RIS recipient or extremely low income
@@ -291,8 +291,8 @@
 
 ## 20. Écochèque (Eco-Cheque/Green Vouchers)
 **Status**: Rule file exists, NO feature file
-- **Rule File**: `/home/user/PAA/src/rules/ecoChequeRules.ts`
-- **Workflow**: `/home/user/PAA/src/workflows/ecoChequeMachine.ts`
+- **Rule File**: `/home/user/PAA/src/regles-eligibilite/ecoChequeRules.ts`
+- **Workflow**: `/home/user/PAA/src/processus-administratifs/ecoChequeMachine.ts`
 - **What it does**: Employer-provided vouchers for eco-friendly products/services
 - **Key Criteria**:
   - Employee (similar to meal vouchers)
@@ -336,10 +336,10 @@
 
 ## File Locations Pattern
 ```
-Rule File:     /home/user/PAA/src/rules/[benefitName]Rules.ts
-Machine:       /home/user/PAA/src/workflows/[benefitName]Machine.ts (or subdirectory)
-Feature File:  /home/user/PAA/features/benefits/[benefit-name].feature (TO CREATE)
-Types:         /home/user/PAA/src/domain/[benefitName]Types.ts (optional)
+Rule File:     /home/user/PAA/src/regles-eligibilite/[benefitName]Rules.ts
+Machine:       /home/user/PAA/src/processus-administratifs/[benefitName]Machine.ts (or subdirectory)
+Feature File:  /home/user/PAA/specifications-metier/benefits/[benefit-name].feature (TO CREATE)
+Types:         /home/user/PAA/src/modele-metier/[benefitName]Types.ts (optional)
 Examples:      /home/user/PAA/src/examples/[benefitName]Example.ts (optional)
 ```
 

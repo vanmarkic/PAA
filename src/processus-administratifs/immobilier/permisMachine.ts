@@ -10,7 +10,7 @@ import {
   UrbanPermit,
   UrbanPermitStatus,
   BelgianRegion,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 interface PermitContext {
   permit: UrbanPermit | null;

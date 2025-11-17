@@ -15,7 +15,7 @@ import {
   InterimMeasuresAssessment,
   ECHRApplication,
   ViolationType
-} from '../../domain/courEuropeenneTypes';
+} from '../modele-metier/courEuropeenneTypes';
 
 /**
  * Create the interim measures eligibility rules engine

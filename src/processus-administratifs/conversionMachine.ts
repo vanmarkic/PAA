@@ -11,7 +11,7 @@
  */
 
 import { createMachine, assign } from 'xstate';
-import { ConversionContext, ConversionLevel } from '../domain/types';
+import { ConversionContext, ConversionLevel } from '../modele-metier/types';
 
 export const conversionMachine = createMachine({
   id: 'legalConversion',

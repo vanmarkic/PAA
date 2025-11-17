@@ -6,7 +6,7 @@
  */
 
 import { createMachine, assign } from 'xstate';
-import { PatentApplication, PatentStatus, IP_CONSTANTS } from '../../domain/proprieteIntellectuelleTypes';
+import { PatentApplication, PatentStatus, IP_CONSTANTS } from '../modele-metier/proprieteIntellectuelleTypes';
 
 interface PatentApplicationContext {
   application: PatentApplication | null;

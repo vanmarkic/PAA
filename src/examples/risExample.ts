@@ -2,8 +2,8 @@
  * Example demonstrating RIS eligibility checking
  */
 
-import { RISUser } from '../domain/risTypes';
-import { checkRISEligibility, determineOptimalCategory, compareWithOtherBenefits } from '../rules/risRules';
+import { RISUser } from '../modele-metier/risTypes';
+import { checkRISEligibility, determineOptimalCategory, compareWithOtherBenefits } from '../regles-eligibilite/risRules';
 
 async function runRISExample() {
   console.log('=== RIS Eligibility Check Examples ===\n');

@@ -16,7 +16,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 // Types spécifiques pour l'aide sociale
 export type AideSocialeType =

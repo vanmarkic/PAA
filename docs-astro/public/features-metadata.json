@@ -686,7 +686,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/aide-logement.feature",
+      "filePath": "specifications-metier/benefits/aide-logement.feature",
       "language": "fr"
     },
     {
@@ -1262,7 +1262,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/aide-sociale.feature",
+      "filePath": "specifications-metier/benefits/aide-sociale.feature",
       "language": "fr"
     },
     {
@@ -1932,7 +1932,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/allocation-chauffage.feature",
+      "filePath": "specifications-metier/benefits/allocation-chauffage.feature",
       "language": "fr"
     },
     {
@@ -1946,7 +1946,7 @@
         "effectiveDate": "2025-02-01",
         "legalBasis": "Arrêté royal du 25 novembre 1991 portant réglementation du chômage",
         "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1991112550&table_name=loi",
-        "implementedBy": "src/rules/agrRules.ts"
+        "implementedBy": "src/regles-eligibilite/agrRules.ts"
       },
       "background": {
         "steps": [
@@ -2175,7 +2175,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/benefits/income-guarantee.feature",
+      "filePath": "specifications-metier/benefits/income-guarantee.feature",
       "language": "fr"
     },
     {
@@ -2836,7 +2836,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/aide-personnes-agees.feature",
+      "filePath": "specifications-metier/benefits/aide-personnes-agees.feature",
       "language": "fr"
     },
     {
@@ -3429,7 +3429,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/allocations-chomage.feature",
+      "filePath": "specifications-metier/benefits/allocations-chomage.feature",
       "language": "fr"
     },
     {
@@ -4133,7 +4133,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/allocations-familiales.feature",
+      "filePath": "specifications-metier/benefits/allocations-familiales.feature",
       "language": "fr"
     },
     {
@@ -4651,7 +4651,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/allocations-handicapes.feature",
+      "filePath": "specifications-metier/benefits/allocations-handicapes.feature",
       "language": "fr"
     },
     {
@@ -5160,7 +5160,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/assurance-maladie.feature",
+      "filePath": "specifications-metier/benefits/assurance-maladie.feature",
       "language": "fr"
     },
     {
@@ -5649,7 +5649,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/carte-medicale.feature",
+      "filePath": "specifications-metier/benefits/carte-medicale.feature",
       "language": "fr"
     },
     {
@@ -6284,7 +6284,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/conge-maternite.feature",
+      "filePath": "specifications-metier/benefits/conge-maternite.feature",
       "language": "fr"
     },
     {
@@ -6770,7 +6770,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/conge-maladie.feature",
+      "filePath": "specifications-metier/benefits/conge-maladie.feature",
       "language": "fr"
     },
     {
@@ -7450,7 +7450,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/conge-parental.feature",
+      "filePath": "specifications-metier/benefits/conge-parental.feature",
       "language": "fr"
     },
     {
@@ -8139,7 +8139,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/credit-temps.feature",
+      "filePath": "specifications-metier/benefits/credit-temps.feature",
       "language": "fr"
     },
     {
@@ -8772,7 +8772,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/formation-professionnelle.feature",
+      "filePath": "specifications-metier/benefits/formation-professionnelle.feature",
       "language": "fr"
     },
     {
@@ -9457,7 +9457,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/grapa.feature",
+      "filePath": "specifications-metier/benefits/grapa.feature",
       "language": "fr"
     },
     {
@@ -10153,7 +10153,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/garantie-locative.feature",
+      "filePath": "specifications-metier/benefits/garantie-locative.feature",
       "language": "fr"
     },
     {
@@ -10777,7 +10777,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/garde-enfants.feature",
+      "filePath": "specifications-metier/benefits/garde-enfants.feature",
       "language": "fr"
     },
     {
@@ -11482,7 +11482,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/insertion-professionnelle.feature",
+      "filePath": "specifications-metier/benefits/insertion-professionnelle.feature",
       "language": "fr"
     },
     {
@@ -12202,7 +12202,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/logement-social.feature",
+      "filePath": "specifications-metier/benefits/logement-social.feature",
       "language": "fr"
     },
     {
@@ -12868,7 +12868,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/prime-naissance.feature",
+      "filePath": "specifications-metier/benefits/prime-naissance.feature",
       "language": "fr"
     },
     {
@@ -13527,7 +13527,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/prime-renovation.feature",
+      "filePath": "specifications-metier/benefits/prime-renovation.feature",
       "language": "fr"
     },
     {
@@ -13541,7 +13541,7 @@
         "effectiveDate": "2024-01-01",
         "legalBasis": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
         "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi",
-        "implementedBy": "src/rules/risRules.ts"
+        "implementedBy": "src/regles-eligibilite/risRules.ts"
       },
       "background": {
         "steps": [
@@ -14039,7 +14039,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/ris.feature",
+      "filePath": "specifications-metier/benefits/ris.feature",
       "language": "fr"
     },
     {
@@ -14520,7 +14520,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/soins-sante-mentale.feature",
+      "filePath": "specifications-metier/benefits/soins-sante-mentale.feature",
       "language": "fr"
     },
     {
@@ -15166,7 +15166,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/benefits/tarif-social-energie.feature",
+      "filePath": "specifications-metier/benefits/tarif-social-energie.feature",
       "language": "fr"
     },
     {
@@ -15408,7 +15408,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/conversion/legal-text-conversion.feature",
+      "filePath": "specifications-metier/conversion/legal-text-conversion.feature",
       "language": "fr"
     },
     {
@@ -15491,7 +15491,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/29-accessibilite-pmr.feature",
+      "filePath": "specifications-metier/copropriete/29-accessibilite-pmr.feature",
       "language": "fr"
     },
     {
@@ -15574,7 +15574,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/41-local-velos.feature",
+      "filePath": "specifications-metier/copropriete/41-local-velos.feature",
       "language": "fr"
     },
     {
@@ -15673,7 +15673,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/22-appel-fonds-extraordinaire.feature",
+      "filePath": "specifications-metier/copropriete/22-appel-fonds-extraordinaire.feature",
       "language": "fr"
     },
     {
@@ -15764,7 +15764,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/15-ag-extraordinaire.feature",
+      "filePath": "specifications-metier/copropriete/15-ag-extraordinaire.feature",
       "language": "fr"
     },
     {
@@ -15851,7 +15851,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/13-assurance-immeuble.feature",
+      "filePath": "specifications-metier/copropriete/13-assurance-immeuble.feature",
       "language": "fr"
     },
     {
@@ -15934,7 +15934,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/36-audit-technique.feature",
+      "filePath": "specifications-metier/copropriete/36-audit-technique.feature",
       "language": "fr"
     },
     {
@@ -16076,7 +16076,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/copropriete/02-calcul-quorum.feature",
+      "filePath": "specifications-metier/copropriete/02-calcul-quorum.feature",
       "language": "fr"
     },
     {
@@ -16186,7 +16186,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/05-calcul-charges.feature",
+      "filePath": "specifications-metier/copropriete/05-calcul-charges.feature",
       "language": "fr"
     },
     {
@@ -16273,7 +16273,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/14-commissaire-comptes.feature",
+      "filePath": "specifications-metier/copropriete/14-commissaire-comptes.feature",
       "language": "fr"
     },
     {
@@ -16376,7 +16376,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/07-conseil-copropriete.feature",
+      "filePath": "specifications-metier/copropriete/07-conseil-copropriete.feature",
       "language": "fr"
     },
     {
@@ -16475,7 +16475,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/08-fonds-reserve.feature",
+      "filePath": "specifications-metier/copropriete/08-fonds-reserve.feature",
       "language": "fr"
     },
     {
@@ -16554,7 +16554,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/39-controle-acces.feature",
+      "filePath": "specifications-metier/copropriete/39-controle-acces.feature",
       "language": "fr"
     },
     {
@@ -16655,7 +16655,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/01-convocation-ag-ordinaire.feature",
+      "filePath": "specifications-metier/copropriete/01-convocation-ag-ordinaire.feature",
       "language": "fr"
     },
     {
@@ -16746,7 +16746,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/33-copropriete-forcee.feature",
+      "filePath": "specifications-metier/copropriete/33-copropriete-forcee.feature",
       "language": "fr"
     },
     {
@@ -16829,7 +16829,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/30-copropriete-horizontale.feature",
+      "filePath": "specifications-metier/copropriete/30-copropriete-horizontale.feature",
       "language": "fr"
     },
     {
@@ -16943,7 +16943,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/04-designation-syndic.feature",
+      "filePath": "specifications-metier/copropriete/04-designation-syndic.feature",
       "language": "fr"
     },
     {
@@ -17030,7 +17030,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/34-destruction-immeuble.feature",
+      "filePath": "specifications-metier/copropriete/34-destruction-immeuble.feature",
       "language": "fr"
     },
     {
@@ -17117,7 +17117,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/24-division-lot.feature",
+      "filePath": "specifications-metier/copropriete/24-division-lot.feature",
       "language": "fr"
     },
     {
@@ -17208,7 +17208,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/32-droit-preemption.feature",
+      "filePath": "specifications-metier/copropriete/32-droit-preemption.feature",
       "language": "fr"
     },
     {
@@ -17303,7 +17303,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/21-budget-previsionnel.feature",
+      "filePath": "specifications-metier/copropriete/21-budget-previsionnel.feature",
       "language": "fr"
     },
     {
@@ -17382,7 +17382,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/35-expropriation.feature",
+      "filePath": "specifications-metier/copropriete/35-expropriation.feature",
       "language": "fr"
     },
     {
@@ -17465,7 +17465,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/45-cave-grenier.feature",
+      "filePath": "specifications-metier/copropriete/45-cave-grenier.feature",
       "language": "fr"
     },
     {
@@ -17552,7 +17552,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/44-chauffage-collectif.feature",
+      "filePath": "specifications-metier/copropriete/44-chauffage-collectif.feature",
       "language": "fr"
     },
     {
@@ -17635,7 +17635,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/49-balcon-fleuri.feature",
+      "filePath": "specifications-metier/copropriete/49-balcon-fleuri.feature",
       "language": "fr"
     },
     {
@@ -17714,7 +17714,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/47-demenagement.feature",
+      "filePath": "specifications-metier/copropriete/47-demenagement.feature",
       "language": "fr"
     },
     {
@@ -17805,7 +17805,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/10-litige-impayes.feature",
+      "filePath": "specifications-metier/copropriete/10-litige-impayes.feature",
       "language": "fr"
     },
     {
@@ -17896,7 +17896,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/12-parties-communes.feature",
+      "filePath": "specifications-metier/copropriete/12-parties-communes.feature",
       "language": "fr"
     },
     {
@@ -18006,7 +18006,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/09-procuration-vote.feature",
+      "filePath": "specifications-metier/copropriete/09-procuration-vote.feature",
       "language": "fr"
     },
     {
@@ -18089,7 +18089,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/25-servitude.feature",
+      "filePath": "specifications-metier/copropriete/25-servitude.feature",
       "language": "fr"
     },
     {
@@ -18204,7 +18204,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/06-travaux-urgents.feature",
+      "filePath": "specifications-metier/copropriete/06-travaux-urgents.feature",
       "language": "fr"
     },
     {
@@ -18283,7 +18283,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/19-troubles-voisinage.feature",
+      "filePath": "specifications-metier/copropriete/19-troubles-voisinage.feature",
       "language": "fr"
     },
     {
@@ -18366,7 +18366,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/31-vice-cache.feature",
+      "filePath": "specifications-metier/copropriete/31-vice-cache.feature",
       "language": "fr"
     },
     {
@@ -18449,7 +18449,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/48-stationnement.feature",
+      "filePath": "specifications-metier/copropriete/48-stationnement.feature",
       "language": "fr"
     },
     {
@@ -18532,7 +18532,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/40-piscine-collective.feature",
+      "filePath": "specifications-metier/copropriete/40-piscine-collective.feature",
       "language": "fr"
     },
     {
@@ -18615,7 +18615,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/50-succession-deces.feature",
+      "filePath": "specifications-metier/copropriete/50-succession-deces.feature",
       "language": "fr"
     },
     {
@@ -18694,7 +18694,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/43-terrasse-privative.feature",
+      "filePath": "specifications-metier/copropriete/43-terrasse-privative.feature",
       "language": "fr"
     },
     {
@@ -18781,7 +18781,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/42-compteurs-individualises.feature",
+      "filePath": "specifications-metier/copropriete/42-compteurs-individualises.feature",
       "language": "fr"
     },
     {
@@ -18868,7 +18868,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/46-telecommunication.feature",
+      "filePath": "specifications-metier/copropriete/46-telecommunication.feature",
       "language": "fr"
     },
     {
@@ -18959,7 +18959,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/23-location-partie-commune.feature",
+      "filePath": "specifications-metier/copropriete/23-location-partie-commune.feature",
       "language": "fr"
     },
     {
@@ -19050,7 +19050,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/20-acte-base-modification.feature",
+      "filePath": "specifications-metier/copropriete/20-acte-base-modification.feature",
       "language": "fr"
     },
     {
@@ -19145,7 +19145,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/17-mutation-lot.feature",
+      "filePath": "specifications-metier/copropriete/17-mutation-lot.feature",
       "language": "fr"
     },
     {
@@ -19236,7 +19236,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/26-petite-copropriete.feature",
+      "filePath": "specifications-metier/copropriete/26-petite-copropriete.feature",
       "language": "fr"
     },
     {
@@ -19339,7 +19339,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/11-reglement-ordre-interieur.feature",
+      "filePath": "specifications-metier/copropriete/11-reglement-ordre-interieur.feature",
       "language": "fr"
     },
     {
@@ -19418,7 +19418,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/18-securite-incendie.feature",
+      "filePath": "specifications-metier/copropriete/18-securite-incendie.feature",
       "language": "fr"
     },
     {
@@ -19497,7 +19497,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/37-gardiennage.feature",
+      "filePath": "specifications-metier/copropriete/37-gardiennage.feature",
       "language": "fr"
     },
     {
@@ -19580,7 +19580,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/38-videoprotection.feature",
+      "filePath": "specifications-metier/copropriete/38-videoprotection.feature",
       "language": "fr"
     },
     {
@@ -19659,7 +19659,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/27-registre-copropriete.feature",
+      "filePath": "specifications-metier/copropriete/27-registre-copropriete.feature",
       "language": "fr"
     },
     {
@@ -19750,7 +19750,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/28-energie-verte.feature",
+      "filePath": "specifications-metier/copropriete/28-energie-verte.feature",
       "language": "fr"
     },
     {
@@ -19869,7 +19869,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/16-travaux-amelioration.feature",
+      "filePath": "specifications-metier/copropriete/16-travaux-amelioration.feature",
       "language": "fr"
     },
     {
@@ -19975,7 +19975,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/copropriete/03-vote-resolution.feature",
+      "filePath": "specifications-metier/copropriete/03-vote-resolution.feature",
       "language": "fr"
     },
     {
@@ -20120,7 +20120,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/cour-europeenne/avis-consultatif.feature",
+      "filePath": "specifications-metier/cour-europeenne/avis-consultatif.feature",
       "language": "fr"
     },
     {
@@ -20273,7 +20273,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/cour-europeenne/revision.feature",
+      "filePath": "specifications-metier/cour-europeenne/revision.feature",
       "language": "fr"
     },
     {
@@ -20566,7 +20566,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/cour-europeenne/mesures-provisoires.feature",
+      "filePath": "specifications-metier/cour-europeenne/mesures-provisoires.feature",
       "language": "fr"
     },
     {
@@ -20850,7 +20850,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/cour-europeenne/arret-pilote.feature",
+      "filePath": "specifications-metier/cour-europeenne/arret-pilote.feature",
       "language": "fr"
     },
     {
@@ -21134,7 +21134,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/cour-europeenne/grande-chambre.feature",
+      "filePath": "specifications-metier/cour-europeenne/grande-chambre.feature",
       "language": "fr"
     },
     {
@@ -21427,7 +21427,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/cour-europeenne/reglement-amiable.feature",
+      "filePath": "specifications-metier/cour-europeenne/reglement-amiable.feature",
       "language": "fr"
     },
     {
@@ -21940,7 +21940,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/cour-europeenne/application-individuelle.feature",
+      "filePath": "specifications-metier/cour-europeenne/application-individuelle.feature",
       "language": "fr"
     },
     {
@@ -22277,7 +22277,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/cour-europeenne/satisfaction-equitable.feature",
+      "filePath": "specifications-metier/cour-europeenne/satisfaction-equitable.feature",
       "language": "fr"
     },
     {
@@ -22795,7 +22795,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/democratie/inscription-electorale.feature",
+      "filePath": "specifications-metier/democratie/inscription-electorale.feature",
       "language": "fr"
     },
     {
@@ -23038,7 +23038,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/democratie/conseil-communal.feature",
+      "filePath": "specifications-metier/democratie/conseil-communal.feature",
       "language": "fr"
     },
     {
@@ -23555,7 +23555,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/democratie/petitions.feature",
+      "filePath": "specifications-metier/democratie/petitions.feature",
       "language": "fr"
     },
     {
@@ -24051,7 +24051,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/democratie/referendum.feature",
+      "filePath": "specifications-metier/democratie/referendum.feature",
       "language": "fr"
     },
     {
@@ -24388,7 +24388,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/droits-civils/acte-naissance.feature",
+      "filePath": "specifications-metier/droits-civils/acte-naissance.feature",
       "language": "fr"
     },
     {
@@ -24792,7 +24792,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/droits-civils/carte-identite.feature",
+      "filePath": "specifications-metier/droits-civils/carte-identite.feature",
       "language": "fr"
     },
     {
@@ -25161,7 +25161,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/droits-civils/rgpd-privacy.feature",
+      "filePath": "specifications-metier/droits-civils/rgpd-privacy.feature",
       "language": "fr"
     },
     {
@@ -25532,7 +25532,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/droits-civils/mariage.feature",
+      "filePath": "specifications-metier/droits-civils/mariage.feature",
       "language": "fr"
     },
     {
@@ -25862,7 +25862,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/droits-civils/succession.feature",
+      "filePath": "specifications-metier/droits-civils/succession.feature",
       "language": "fr"
     },
     {
@@ -26175,7 +26175,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/ecologie/gestion-eau.feature",
+      "filePath": "specifications-metier/ecologie/gestion-eau.feature",
       "language": "fr"
     },
     {
@@ -26456,7 +26456,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/ecologie/gestion-dechets.feature",
+      "filePath": "specifications-metier/ecologie/gestion-dechets.feature",
       "language": "fr"
     },
     {
@@ -26743,7 +26743,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/ecologie/permis-environnement.feature",
+      "filePath": "specifications-metier/ecologie/permis-environnement.feature",
       "language": "fr"
     },
     {
@@ -27044,7 +27044,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/ecologie/primes-energie.feature",
+      "filePath": "specifications-metier/ecologie/primes-energie.feature",
       "language": "fr"
     },
     {
@@ -27345,7 +27345,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/ecologie/biodiversite-nature.feature",
+      "filePath": "specifications-metier/ecologie/biodiversite-nature.feature",
       "language": "fr"
     },
     {
@@ -27954,7 +27954,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/asylum/asylum-protection.feature",
+      "filePath": "specifications-metier/etrangers/asylum/asylum-protection.feature",
       "language": "fr"
     },
     {
@@ -28480,7 +28480,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/visa/visa-application.feature",
+      "filePath": "specifications-metier/etrangers/visa/visa-application.feature",
       "language": "fr"
     },
     {
@@ -29073,7 +29073,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/naturalization/naturalization-citizenship.feature",
+      "filePath": "specifications-metier/etrangers/naturalization/naturalization-citizenship.feature",
       "language": "fr"
     },
     {
@@ -29542,7 +29542,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/residence/residence-permit.feature",
+      "filePath": "specifications-metier/etrangers/residence/residence-permit.feature",
       "language": "fr"
     },
     {
@@ -30199,7 +30199,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/work-study/work-study-permits.feature",
+      "filePath": "specifications-metier/etrangers/work-study/work-study-permits.feature",
       "language": "fr"
     },
     {
@@ -30816,7 +30816,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/appeals/appeals-recourse.feature",
+      "filePath": "specifications-metier/etrangers/appeals/appeals-recourse.feature",
       "language": "fr"
     },
     {
@@ -31343,7 +31343,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/etrangers/family/family-reunification.feature",
+      "filePath": "specifications-metier/etrangers/family/family-reunification.feature",
       "language": "fr"
     },
     {
@@ -31828,7 +31828,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/immobilier/acquisition.feature",
+      "filePath": "specifications-metier/immobilier/acquisition.feature",
       "language": "fr"
     },
     {
@@ -32297,7 +32297,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/immobilier/location.feature",
+      "filePath": "specifications-metier/immobilier/location.feature",
       "language": "fr"
     },
     {
@@ -32777,7 +32777,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/immobilier/logement-social.feature",
+      "filePath": "specifications-metier/immobilier/logement-social.feature",
       "language": "fr"
     },
     {
@@ -33250,7 +33250,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/immobilier/urbanisme.feature",
+      "filePath": "specifications-metier/immobilier/urbanisme.feature",
       "language": "fr"
     },
     {
@@ -33769,7 +33769,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/immobilier/renovation.feature",
+      "filePath": "specifications-metier/immobilier/renovation.feature",
       "language": "fr"
     },
     {
@@ -33866,7 +33866,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/accord-coexistence-marques.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/accord-coexistence-marques.feature",
       "language": "fr"
     },
     {
@@ -33963,7 +33963,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/nda-confidentialite.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/nda-confidentialite.feature",
       "language": "fr"
     },
     {
@@ -34132,7 +34132,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/contrefacon-brevet.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/contrefacon-brevet.feature",
       "language": "fr"
     },
     {
@@ -34221,7 +34221,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/arbitrage-ompi.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/arbitrage-ompi.feature",
       "language": "fr"
     },
     {
@@ -34326,7 +34326,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/audit-propriete-intellectuelle.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/audit-propriete-intellectuelle.feature",
       "language": "fr"
     },
     {
@@ -34411,7 +34411,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/certification-origine-blockchain.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/certification-origine-blockchain.feature",
       "language": "fr"
     },
     {
@@ -34500,7 +34500,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/cession-droits-auteur.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/cession-droits-auteur.feature",
       "language": "fr"
     },
     {
@@ -34597,7 +34597,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/consortium-recherche.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/consortium-recherche.feature",
       "language": "fr"
     },
     {
@@ -34682,7 +34682,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/crowdfunding-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/crowdfunding-ip.feature",
       "language": "fr"
     },
     {
@@ -34791,7 +34791,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/declaration-invention-salarie.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/declaration-invention-salarie.feature",
       "language": "fr"
     },
     {
@@ -35196,7 +35196,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/depot-brevet-belge.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/depot-brevet-belge.feature",
       "language": "fr"
     },
     {
@@ -35359,7 +35359,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/depot-dessin-modele.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/depot-dessin-modele.feature",
       "language": "fr"
     },
     {
@@ -35582,7 +35582,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/propriete-intellectuelle/depot-marque-benelux.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/depot-marque-benelux.feature",
       "language": "fr"
     },
     {
@@ -35675,7 +35675,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/depot-collectif-marque.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/depot-collectif-marque.feature",
       "language": "fr"
     },
     {
@@ -35760,7 +35760,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/escrow-code-source.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/escrow-code-source.feature",
       "language": "fr"
     },
     {
@@ -35953,7 +35953,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/examen-brevet.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/examen-brevet.feature",
       "language": "fr"
     },
     {
@@ -36046,7 +36046,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/expertise-judiciaire-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/expertise-judiciaire-ip.feature",
       "language": "fr"
     },
     {
@@ -36143,7 +36143,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/franchise-marque.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/franchise-marque.feature",
       "language": "fr"
     },
     {
@@ -36220,7 +36220,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/importation-parallele.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/importation-parallele.feature",
       "language": "fr"
     },
     {
@@ -36317,7 +36317,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/gestion-portefeuille-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/gestion-portefeuille-ip.feature",
       "language": "fr"
     },
     {
@@ -36406,7 +36406,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/open-source-proprietary.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/open-source-proprietary.feature",
       "language": "fr"
     },
     {
@@ -36491,7 +36491,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/brexit-impact-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/brexit-impact-ip.feature",
       "language": "fr"
     },
     {
@@ -36584,7 +36584,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/impression-3d-contrefacon.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/impression-3d-contrefacon.feature",
       "language": "fr"
     },
     {
@@ -36673,7 +36673,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/incubation-startup-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/incubation-startup-ip.feature",
       "language": "fr"
     },
     {
@@ -36846,7 +36846,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/licence-exploitation.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/licence-exploitation.feature",
       "language": "fr"
     },
     {
@@ -36987,7 +36987,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/litige-nom-domaine.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/litige-nom-domaine.feature",
       "language": "fr"
     },
     {
@@ -37076,7 +37076,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/mediation-propriete-intellectuelle.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/mediation-propriete-intellectuelle.feature",
       "language": "fr"
     },
     {
@@ -37161,7 +37161,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/nft-propriete-intellectuelle.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/nft-propriete-intellectuelle.feature",
       "language": "fr"
     },
     {
@@ -37330,7 +37330,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/opposition-marque.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/opposition-marque.feature",
       "language": "fr"
     },
     {
@@ -37411,7 +37411,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/partenariat-recherche-universite.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/partenariat-recherche-universite.feature",
       "language": "fr"
     },
     {
@@ -37496,7 +37496,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/green-tech-brevet-accelere.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/green-tech-brevet-accelere.feature",
       "language": "fr"
     },
     {
@@ -37585,7 +37585,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/invalidation-brevet.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/invalidation-brevet.feature",
       "language": "fr"
     },
     {
@@ -37682,7 +37682,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/indication-geographique.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/indication-geographique.feature",
       "language": "fr"
     },
     {
@@ -37779,7 +37779,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/obtention-vegetale.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/obtention-vegetale.feature",
       "language": "fr"
     },
     {
@@ -37880,7 +37880,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/depot-topographie-semiconducteur.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/depot-topographie-semiconducteur.feature",
       "language": "fr"
     },
     {
@@ -38021,7 +38021,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/secret-affaires.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/secret-affaires.feature",
       "language": "fr"
     },
     {
@@ -38118,7 +38118,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/protection-donnees-ia.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/protection-donnees-ia.feature",
       "language": "fr"
     },
     {
@@ -38215,7 +38215,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/protection-logiciel.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/protection-logiciel.feature",
       "language": "fr"
     },
     {
@@ -38416,7 +38416,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/protection-droit-auteur.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/protection-droit-auteur.feature",
       "language": "fr"
     },
     {
@@ -38497,7 +38497,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/radiation-marque-non-usage.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/radiation-marque-non-usage.feature",
       "language": "fr"
     },
     {
@@ -38630,7 +38630,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/recherche-anteriorites.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/recherche-anteriorites.feature",
       "language": "fr"
     },
     {
@@ -38723,7 +38723,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/recours-office-action.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/recours-office-action.feature",
       "language": "fr"
     },
     {
@@ -38816,7 +38816,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/renouvellement-marque.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/renouvellement-marque.feature",
       "language": "fr"
     },
     {
@@ -38909,7 +38909,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/restauration-droits.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/restauration-droits.feature",
       "language": "fr"
     },
     {
@@ -39002,7 +39002,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/saisie-douaniere.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/saisie-douaniere.feature",
       "language": "fr"
     },
     {
@@ -39083,7 +39083,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/blockchain-smart-contracts-ip.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/blockchain-smart-contracts-ip.feature",
       "language": "fr"
     },
     {
@@ -39176,7 +39176,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/strategie-depot-international.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/strategie-depot-international.feature",
       "language": "fr"
     },
     {
@@ -39253,7 +39253,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/surveillance-marques.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/surveillance-marques.feature",
       "language": "fr"
     },
     {
@@ -39390,7 +39390,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/transfert-technologie.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/transfert-technologie.feature",
       "language": "fr"
     },
     {
@@ -39491,7 +39491,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/propriete-intellectuelle/valorisation-brevet.feature",
+      "filePath": "specifications-metier/propriete-intellectuelle/valorisation-brevet.feature",
       "language": "fr"
     },
     {
@@ -39963,7 +39963,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/recours-etat/acces-documents.feature",
+      "filePath": "specifications-metier/recours-etat/acces-documents.feature",
       "language": "fr"
     },
     {
@@ -40465,7 +40465,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/recours-etat/mediateur-ombudsman.feature",
+      "filePath": "specifications-metier/recours-etat/mediateur-ombudsman.feature",
       "language": "fr"
     },
     {
@@ -40930,7 +40930,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/recours-etat/recours-administratif.feature",
+      "filePath": "specifications-metier/recours-etat/recours-administratif.feature",
       "language": "fr"
     },
     {
@@ -41373,7 +41373,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/recours-etat/conseil-etat-annulation.feature",
+      "filePath": "specifications-metier/recours-etat/conseil-etat-annulation.feature",
       "language": "fr"
     },
     {
@@ -41841,7 +41841,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/recours-etat/recours-fiscal.feature",
+      "filePath": "specifications-metier/recours-etat/recours-fiscal.feature",
       "language": "fr"
     },
     {
@@ -42105,7 +42105,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/statut-artiste/artist-grants.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-grants.feature",
       "language": "fr"
     },
     {
@@ -42374,7 +42374,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/statut-artiste/artist-unemployment.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-unemployment.feature",
       "language": "fr"
     },
     {
@@ -42569,7 +42569,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/statut-artiste/artist-commission.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-commission.feature",
       "language": "fr"
     },
     {
@@ -42882,7 +42882,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/statut-artiste/artist-copyright.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-copyright.feature",
       "language": "fr"
     },
     {
@@ -43391,7 +43391,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/statut-artiste/artist-status-eligibility.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-status-eligibility.feature",
       "language": "fr"
     },
     {
@@ -43664,7 +43664,7 @@
           "isOutline": true
         }
       ],
-      "filePath": "features/statut-artiste/artist-tax-regime.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-tax-regime.feature",
       "language": "fr"
     },
     {
@@ -43871,7 +43871,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/statut-artiste/artist-social-security.feature",
+      "filePath": "specifications-metier/statut-artiste/artist-social-security.feature",
       "language": "fr"
     },
     {
@@ -44400,7 +44400,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/credit-impot.feature",
+      "filePath": "specifications-metier/tax/credit-impot.feature",
       "language": "fr"
     },
     {
@@ -44937,7 +44937,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/deduction-emprunt-hypothecaire.feature",
+      "filePath": "specifications-metier/tax/deduction-emprunt-hypothecaire.feature",
       "language": "fr"
     },
     {
@@ -45466,7 +45466,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/deduction-frais-garde.feature",
+      "filePath": "specifications-metier/tax/deduction-frais-garde.feature",
       "language": "fr"
     },
     {
@@ -46043,7 +46043,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/deduction-habitation.feature",
+      "filePath": "specifications-metier/tax/deduction-habitation.feature",
       "language": "fr"
     },
     {
@@ -46590,7 +46590,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/deduction-isolation.feature",
+      "filePath": "specifications-metier/tax/deduction-isolation.feature",
       "language": "fr"
     },
     {
@@ -47171,7 +47171,7 @@
           "isOutline": false
         }
       ],
-      "filePath": "features/tax/quotient-conjugal.feature",
+      "filePath": "specifications-metier/tax/quotient-conjugal.feature",
       "language": "fr"
     }
   ],

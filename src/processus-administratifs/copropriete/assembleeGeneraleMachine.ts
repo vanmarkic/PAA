@@ -14,7 +14,7 @@ import {
   Presence,
   ProcesVerbal,
   PointOrdreJour
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 
 interface AGContext {
   assemblee: AssembleeGenerale | null;

@@ -145,7 +145,7 @@ function generateRulesFile(machineName: string, category: string): string {
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 /**
  * Create the ${className} eligibility rules engine

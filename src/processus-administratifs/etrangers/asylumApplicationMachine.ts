@@ -18,7 +18,7 @@ import {
   AsylumStatus,
   ProcedureResult,
   Notification,
-} from '../../domain/etrangersTypes';
+} from '../modele-metier/etrangersTypes';
 
 interface AsylumContext {
   applicant: ForeignerProfile | null;

@@ -20,7 +20,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 // Types spécifiques pour l'APA
 export type APACategory = 1 | 2 | 3 | 4 | 5;

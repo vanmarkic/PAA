@@ -2,8 +2,8 @@
  * Example demonstrating AGR eligibility checking
  */
 
-import { User } from '../domain/types';
-import { checkAGREligibility } from '../rules/agrRules';
+import { User } from '../modele-metier/types';
+import { checkAGREligibility } from '../regles-eligibilite/agrRules';
 
 async function runAGRExample() {
   console.log('=== AGR Eligibility Check Examples ===\n');

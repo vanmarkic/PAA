@@ -10,7 +10,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { TrademarkApplication, TrademarkType, TrademarkStatus, IP_CONSTANTS } from '../../domain/proprieteIntellectuelleTypes';
+import { TrademarkApplication, TrademarkType, TrademarkStatus, IP_CONSTANTS } from '../modele-metier/proprieteIntellectuelleTypes';
 
 /**
  * Create trademark eligibility rules engine

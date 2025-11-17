@@ -8,7 +8,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 /**
  * Create the ProtectionEnfance eligibility rules engine

@@ -16,20 +16,20 @@ import {
   Lot,
   Syndic,
   COPROPRIETE_CONSTANTS
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 import {
   calculateQuorum,
   validateVote,
   checkConvocationValidity
-} from '../../rules/copropriete/assembleeGeneraleRules';
+} from '../regles-eligibilite/copropriete/assembleeGeneraleRules';
 import {
   calculateCharges,
   calculateInterets,
   checkPaiementStatus,
   generateAppelFonds
-} from '../../rules/copropriete/chargesRules';
-import { assembleeGeneraleMachine } from '../../workflows/copropriete/assembleeGeneraleMachine';
-import { chargesPaymentMachine } from '../../workflows/copropriete/chargesPaymentMachine';
+} from '../regles-eligibilite/copropriete/chargesRules';
+import { assembleeGeneraleMachine } from '../processus-administratifs/copropriete/assembleeGeneraleMachine';
+import { chargesPaymentMachine } from '../processus-administratifs/copropriete/chargesPaymentMachine';
 
 /**
  * Example 1: Create a copropriété with sample data

@@ -3,7 +3,7 @@
  * Sources juridiques belges pour les procédures démocratiques
  */
 
-import { LegalFramework, LegalReference } from '../domain/legalMetadata';
+import { LegalFramework, LegalReference } from '../modele-metier/legalMetadata';
 
 /**
  * Code électoral belge - Primary electoral legislation

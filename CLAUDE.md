@@ -6,6 +6,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **PAA (Plateforme d'Aide Administrative)** is a proof-of-concept demonstrating how to encode complex Belgian social/legal business logic into maintainable, executable code. The system converts legal text to common language and calculates benefit eligibility for social services.
 
+## Project Terminology
+
+This project uses French terminology for all business-domain directories and concepts to better align with Belgian administrative language and make the codebase more accessible to French-speaking domain experts. See `GLOSSAIRE-TERMINOLOGIE.md` for the complete terminology reference.
+
+Key directory mappings:
+- Business specifications: `specifications-metier/` (formerly features/)
+- Eligibility rules: `regles-eligibilite/` (formerly rules/)
+- Administrative processes: `processus-administratifs/` (formerly workflows/)
+- Business model: `modele-metier/` (formerly domain/)
+
 ## Essential Commands
 
 ### Development
@@ -41,54 +51,58 @@ npm run migration:revert   # Revert last migration
 ```bash
 npm run example:agr                # AGR eligibility check examples
 npm run example:ris                # RIS eligibility check examples
-npm run example:ris:workflow       # RIS workflow state machine demo
+npm run example:ris:processus      # RIS administrative process state machine demo
 npm run example:conversion         # Legal text conversion pipeline demo
 ```
 
 ### Documentation Generation
 ```bash
 npm run docs:generate      # Generate visualization documentation
-npm run docs:metadata      # Generate machine metadata for all workflows
+npm run docs:metadata      # Generate machine metadata for all administrative processes
 ```
 
 ## Hybrid Architecture
 
-This codebase uses a **hybrid approach** combining multiple tools, each serving a specific purpose:
+This codebase uses a **hybrid approach** combining multiple tools, each serving a specific purpose. The French terminology reflects the business domain while technical implementation remains in English:
 
-### 1. Gherkin/Cucumber - Business Rules Specification
+### 1. Gherkin/Cucumber - Business Specifications (Spécifications Métier)
 - **Purpose**: Human-readable specifications for legal rules
-- **Location**: `features/` directory
+- **Location**: `specifications-metier/` directory
 - **Why**: Legal experts and social workers can validate rules without reading code
-- **Example**: `features/benefits/income-guarantee.feature`, `features/benefits/ris.feature`
+- **Example**: `specifications-metier/prestations/allocation-garantie-revenus.feature`, `specifications-metier/prestations/revenu-integration-sociale.feature`
+- **Naming convention**: French for business concepts, reflecting actual administrative terminology
 
-### 2. XState - Workflow State Machines
-- **Purpose**: Visual, predictable workflow orchestration
-- **Location**: `src/workflows/` directory
+### 2. XState - Administrative Processes (Processus Administratifs)
+- **Purpose**: Visual, predictable workflow orchestration for administrative procedures
+- **Location**: `src/processus-administratifs/` directory
 - **Why**: Complex multi-step processes (legal text conversion, application workflows) need explicit state management
-- **Key machine**: `src/workflows/conversionMachine.ts` - demonstrates the legal text conversion pipeline
-- **Pattern**: All workflows follow similar structure with states, transitions, guards, and meta descriptions
+- **Key machine**: `src/processus-administratifs/conversionMachine.ts` - demonstrates the legal text conversion pipeline
+- **Pattern**: All processes follow similar structure with states, transitions, guards, and meta descriptions
+- **Naming rationale**: "Processus administratifs" better captures the bureaucratic workflows than generic "workflows"
 
-### 3. json-rules-engine - Runtime Rule Evaluation
-- **Purpose**: Dynamic, database-driven business rules
-- **Location**: `src/rules/` directory
+### 3. json-rules-engine - Eligibility Rules (Règles d'Éligibilité)
+- **Purpose**: Dynamic, database-driven business rules for benefit eligibility
+- **Location**: `src/regles-eligibilite/` directory
 - **Why**: Rules can be updated without deployment, stored in database, and audited
-- **Examples**: `src/rules/agrRules.ts`, `src/rules/risRules.ts`
+- **Examples**: `src/regles-eligibilite/agrRules.ts`, `src/regles-eligibilite/risRules.ts`
+- **Naming rationale**: "Règles d'éligibilité" precisely describes the eligibility determination logic
 
-### 4. TypeScript - Type-Safe Implementation
+### 4. TypeScript - Type-Safe Implementation with Business Model (Modèle Métier)
 - **Purpose**: Compile-time safety for critical calculations
-- **Core types**: `src/domain/types.ts` - Contains all domain models (User, Benefit, LegalText, etc.)
+- **Core types**: `src/modele-metier/types.ts` - Contains all domain models (User, Benefit, LegalText, etc.)
 - **Why**: Prevent errors in money/date calculations, enable refactoring confidence
+- **Naming rationale**: "Modèle métier" represents the business domain model in DDD terms
 
 ## Architecture Patterns
 
 ### Domain-Driven Design (DDD)
-- **Domain models**: `src/domain/` - Pure business entities and types
+- **Domain models**: `src/modele-metier/` - Pure business entities and types
 - **Services**: `src/services/` - Business logic orchestration
 - **Entities**: `src/database/entities/` - TypeORM database entities
 - **Ubiquitous language**: Use French terminology for Belgian legal concepts (AGR, RIS, CPAS, etc.)
 
-### State Machine Workflow Pattern
-All workflows in `src/workflows/` follow this structure:
+### State Machine Process Pattern
+All administrative processes in `src/processus-administratifs/` follow this structure:
 ```typescript
 - idle state (starting point)
 - Processing states (business logic execution)
@@ -119,13 +133,13 @@ Each state includes:
 ## Key Technical Decisions
 
 ### Why This Hybrid Approach?
-- **Gherkin** defines **what** rules are (readable by legal experts)
-- **XState** defines **how** processes flow (visual workflows with state)
-- **json-rules-engine** defines **when** conditions apply (runtime evaluation)
-- **TypeScript** provides **implementation** safety (type guarantees)
+- **Gherkin** (specifications-metier) defines **what** rules are (readable by legal experts)
+- **XState** (processus-administratifs) defines **how** processes flow (visual workflows with state)
+- **json-rules-engine** (regles-eligibilite) defines **when** conditions apply (runtime evaluation)
+- **TypeScript** (modele-metier) provides **implementation** safety (type guarantees)
 
 ### XState Machine Patterns
-When working with state machines:
+When working with state machines in `processus-administratifs`:
 1. Keep states focused - one responsibility per state
 2. Always handle error states and timeouts
 3. Use guards for conditional transitions
@@ -134,14 +148,14 @@ When working with state machines:
 6. Include final states (completed/failed)
 
 ### Legal Text Handling
-- All legal references use `LegalReference` type from `src/domain/types.ts`
+- All legal references use `LegalReference` type from `src/modele-metier/types.ts`
 - Belgian legal sources: `src/legal-sources/belgianLegalSources.ts` (FR), `belgianLegalSources.nl.ts` (NL)
-- Metadata tracking: `src/domain/legalMetadata.ts`
+- Metadata tracking: `src/modele-metier/legalMetadata.ts`
 - Multi-language support: FR (primary), NL, DE
 
 ### Testing Philosophy
 - Jest for unit/integration tests
-- Cucumber for BDD scenarios matching business rules
+- Cucumber for BDD scenarios matching business specifications
 - Test files in `src/__tests__/` directory
 - Semantic validation tests: `src/__tests__/semantic/`
 - Visualization tests: `src/__tests__/visualization/`
@@ -169,7 +183,7 @@ Required for production:
 - Benefits have complex eligibility rules based on employment status, income, family situation
 - Rules change frequently - must be versioned and auditable
 
-### Workflow Machine Metadata
+### Process Machine Metadata
 - Generate metadata for visualization: `npm run docs:metadata`
 - Metadata helper: `src/utils/machineMetadataHelper.ts`
 - Used for automatic documentation and UI generation
@@ -187,15 +201,15 @@ Start infrastructure: `npm run docker:up`
 ## Common Development Workflows
 
 ### Adding a New Benefit Type
-1. Add benefit type to `BenefitType` enum in `src/domain/types.ts`
-2. Create Gherkin scenarios in `features/benefits/[benefit-name].feature`
-3. Implement rules in `src/rules/[benefit-name]Rules.ts`
-4. If workflow needed, create state machine in `src/workflows/[benefit-name]Machine.ts`
+1. Add benefit type to `BenefitType` enum in `src/modele-metier/types.ts`
+2. Create Gherkin scenarios in `specifications-metier/prestations/[benefit-name].feature`
+3. Implement rules in `src/regles-eligibilite/[benefit-name]Rules.ts`
+4. If process needed, create state machine in `src/processus-administratifs/[benefit-name]Machine.ts`
 5. Add example in `src/examples/[benefit-name]Example.ts`
 6. Add API routes/controllers if exposing via REST API
 
-### Adding a New Workflow State Machine
-1. Create machine file in `src/workflows/`
+### Adding a New Administrative Process State Machine
+1. Create machine file in `src/processus-administratifs/`
 2. Define context type and event types
 3. Implement states with meta descriptions
 4. Add guards for conditional transitions
@@ -220,16 +234,16 @@ Never use auto-sync in production.
 
 ## Project Structure Logic
 
-- `src/domain/` - Pure domain models, no dependencies
-- `src/workflows/` - XState machines, self-contained workflow logic
-- `src/rules/` - json-rules-engine rules, declarative conditions
-- `src/services/` - Orchestration layer, combines workflows + rules
+- `src/modele-metier/` - Pure business models, no dependencies (Domain layer)
+- `src/processus-administratifs/` - XState machines, self-contained administrative process logic
+- `src/regles-eligibilite/` - json-rules-engine eligibility rules, declarative conditions
+- `src/services/` - Orchestration layer, combines processes + rules
 - `src/api/` - HTTP layer, Fastify routes/controllers
 - `src/database/` - Data persistence, TypeORM entities/migrations
 - `src/cache/` - Redis caching layer
 - `src/queue/` - Async job processing
 - `src/utils/` - Shared utilities (audit, logging, helpers)
-- `features/` - Gherkin BDD scenarios
+- `specifications-metier/` - Gherkin BDD business specifications
 - `scripts/` - Build/generation tools
 
 ## Multi-Language Support
@@ -240,3 +254,13 @@ Belgian administrative context requires trilingual support:
 - German (DE) - Small eastern region
 
 Legal sources and conversions must maintain semantic accuracy across all languages.
+
+## Terminology Reference
+
+For a complete glossary of French business terminology used in this codebase, see `GLOSSAIRE-TERMINOLOGIE.md`. This includes:
+- Directory naming conventions
+- Business domain concepts
+- Administrative process terminology
+- Translations and explanations
+
+The use of French terminology for business-domain directories and files helps bridge the gap between technical implementation and Belgian administrative reality, making the codebase more accessible to domain experts while maintaining English for technical implementation details.

@@ -16,7 +16,7 @@ import {
   DecisionType,
   QuorumInfo,
   COPROPRIETE_CONSTANTS
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 
 /**
  * Create rules engine for AG validation

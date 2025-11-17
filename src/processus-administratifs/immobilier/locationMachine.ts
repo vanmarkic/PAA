@@ -11,7 +11,7 @@ import {
   TenantRights,
   RentalDispute,
   RentalApplicationState,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 interface LocationContext {
   tenantId: string | null;

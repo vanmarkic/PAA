@@ -12,7 +12,7 @@ import {
   MortgageCapacity,
   AcquisitionStatus,
   CompromisVente,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 interface AcquisitionContext {
   buyer: PropertyBuyer | null;

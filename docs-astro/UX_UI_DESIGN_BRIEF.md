@@ -369,8 +369,8 @@ This design brief outlines a comprehensive UX/UI improvement strategy for the PA
 | **RIS** | Basic income benefit | For people with no resources (1070€ for single person) |
 
 **Files You'll Encounter:**
-- `features/*.feature` - Gherkin scenarios (human-readable rules in French)
-- `src/workflows/*Machine.ts` - State machine definitions (TypeScript code)
+- `specifications-metier/*.feature` - Gherkin scenarios (human-readable rules in French)
+- `src/processus-administratifs/*Machine.ts` - State machine definitions (TypeScript code)
 - `docs-astro/` - The documentation website we're redesigning
 - `docs/machines-metadata.json` - Generated data file with all 109 machines
 
@@ -1778,7 +1778,7 @@ useEffect(() => {
 6. **Related Gherkin Files:**
    ```typescript
    // Map machine ID to feature file
-   const featureFile = `features/${category}/${id}.feature`
+   const featureFile = `specifications-metier/${category}/${id}.feature`
    const hasGherkin = fs.existsSync(featureFile)
    ```
 
@@ -1806,7 +1806,7 @@ useEffect(() => {
   "dependencies": ["incomeCalculationMachine"],
   "dependents": ["socialBenefitsWorkflow"],
   "keywords": ["ris", "revenu", "integration", "sociale", "cpas"],
-  "gherkinFile": "features/social/ris.feature",
+  "gherkinFile": "specifications-metier/social/ris.feature",
   "lastModified": "2025-01-15T10:30:00Z",
   "version": "2.1.0"
 }

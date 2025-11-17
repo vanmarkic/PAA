@@ -15,7 +15,7 @@ import {
   PrivacyRightType,
   ValidationResult,
   CIVIL_RIGHTS_CONSTANTS
-} from '../../domain/droitsCivilsTypes';
+} from '../modele-metier/droitsCivilsTypes';
 
 /**
  * Create the GDPR privacy rules engine

@@ -22,7 +22,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../modele-metier/types';
 
 // ============================================================================
 // REGIONAL CONSTANTS 2024-2025

@@ -5,10 +5,10 @@
  * SCALABILITY IMPROVEMENT: Process 100,000 users in < 1 minute
  */
 
-import { RISUser, RISEligibilityResult } from '../domain/risTypes';
-import { User, EligibilityCheck } from '../domain/types';
-import { checkRISEligibility } from '../rules/risRules';
-import { checkAGREligibility } from '../rules/agrRules';
+import { RISUser, RISEligibilityResult } from '../modele-metier/risTypes';
+import { User, EligibilityCheck } from '../modele-metier/types';
+import { checkRISEligibility } from '../regles-eligibilite/risRules';
+import { checkAGREligibility } from '../regles-eligibilite/agrRules';
 import { getCached } from '../cache/cacheService';
 import crypto from 'crypto';
 

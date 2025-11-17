@@ -22,7 +22,7 @@ npm install
 npm run example:agr
 ```
 
-This demonstrates the **AGR (Allocation de Garantie de Revenus)** eligibility checker based on the rules defined in `features/benefits/income-guarantee.feature`.
+This demonstrates the **AGR (Allocation de Garantie de Revenus)** eligibility checker based on the rules defined in `specifications-metier/benefits/income-guarantee.feature`.
 
 ### Example Output:
 
@@ -42,24 +42,24 @@ Result: {
 ## Key Files to Explore
 
 ### 1. Business Rules (Gherkin)
-`features/benefits/income-guarantee.feature`
+`specifications-metier/benefits/income-guarantee.feature`
 - Human-readable specification
 - Becomes automated tests
 - Validated by legal experts
 
 ### 2. Domain Models
-`src/domain/types.ts`
+`src/modele-metier/types.ts`
 - TypeScript types for all business entities
 - Strong typing prevents errors
 
 ### 3. Rules Engine
-`src/rules/agrRules.ts`
+`src/regles-eligibilite/agrRules.ts`
 - Implements the Gherkin specs
 - Uses json-rules-engine for runtime evaluation
 - Rules can be stored in database
 
 ### 4. Workflow State Machine
-`src/workflows/conversionMachine.ts`
+`src/processus-administratifs/conversionMachine.ts`
 - XState machine for legal text conversion
 - Shows the 6-step pipeline
 - Built-in retry logic
@@ -122,7 +122,7 @@ This becomes:
 
 1. **Write the spec:**
 ```gherkin
-# features/benefits/ris.feature
+# specifications-metier/benefits/ris.feature
 Fonctionnalité: Revenu d'Intégration Sociale
   Scénario: Personne isolée
     Étant donné que je suis isolé
@@ -134,13 +134,13 @@ Fonctionnalité: Revenu d'Intégration Sociale
 
 2. **Add the type:**
 ```typescript
-// src/domain/types.ts
+// src/modele-metier/types.ts
 export type BenefitType = 'agr' | 'ris' | ...
 ```
 
 3. **Implement the rules:**
 ```typescript
-// src/rules/risRules.ts
+// src/regles-eligibilite/risRules.ts
 export function createRISEngine(): Engine { /* ... */ }
 ```
 
@@ -187,7 +187,7 @@ From the architecture documents, this approach enables:
 Read:
 - `README.md` - Full architecture explanation
 - `ARCHITECTURE.md` - Diagrams and design patterns
-- Feature files in `features/` - Business rule specifications
+- Feature files in `specifications-metier/` - Business rule specifications
 
 ---
 

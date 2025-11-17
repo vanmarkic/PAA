@@ -4,6 +4,8 @@
 
 This is a proof-of-concept demonstrating how to encode complex Belgian social/legal business logic into maintainable, executable code. The POC addresses the core challenge: **converting legal text to common language** and **calculating benefit eligibility** for the Plateforme d'Aide Administrative.
 
+> 📖 **Note:** Ce projet utilise une terminologie française explicite pour améliorer la compréhension et la maintenabilité. Consultez le [GLOSSAIRE-TERMINOLOGIE.md](GLOSSAIRE-TERMINOLOGIE.md) pour les conventions de nommage.
+
 ## 🧠 Business Context
 
 The platform aims to:
@@ -12,35 +14,35 @@ The platform aims to:
 - Provide conversational assistance (WhatsApp bot)
 - Calculate eligibility and benefit amounts
 
-**Key Challenge:** Legal rules are complex, change frequently, and must be understandable by:
+**Key Challenge:** Legal regles-eligibilite are complex, change frequently, and must be understandable by:
 - Social workers
 - Beneficiaries (often with limited literacy)
 - Automated systems (optimization algorithms)
 
 ## 📚 Live Documentation
 
-Interactive documentation for all workflows is available at:
+Interactive documentation for all processus-administratifs is available at:
 
 **https://vanmarkic.github.io/PAA/**
 
 Features:
-- Browse 131+ Belgian administrative workflows
-- Filter by category (e.g., `/PAA/workflows?category=propriete-intellectuelle`)
-- Interactive workflow visualization
+- Browse 131+ Belgian administrative processus
+- Filter by category (e.g., `/PAA/processus-administratifs?category=propriete-intellectuelle`)
+- Interactive processus-administratifs visualization
 - Search and comparison tools
 
 ## 🏗️ Architecture Decision: Why This Hybrid Approach?
 
 After analyzing the requirements, we chose a **hybrid architecture** combining:
 
-### 1. **Gherkin/Cucumber** - For Business Rules Specification
+### 1. **Gherkin/Cucumber** - For Specifications-Metier Definition
 
 **Why:**
 - ✅ **Human-readable** by non-technical stakeholders (legal experts, social workers)
 - ✅ **Living documentation** that stays in sync with code
 - ✅ **Executable specifications** that can be validated
 - ✅ **Testable** - scenarios become automated tests
-- ✅ **Versioned** - track rule changes over time
+- ✅ **Versioned** - track regles-eligibilite changes over time
 
 **Example:**
 ```gherkin
@@ -53,10 +55,10 @@ Scénario: Travailleur à temps partiel avec maintien des droits éligible
   Et le montant de l'allocation devrait être 360€
 ```
 
-### 2. **XState** - For Workflow State Machines
+### 2. **XState** - For Processus-Administratifs State Machines
 
 **Why:**
-- ✅ **Visual representation** of complex workflows
+- ✅ **Visual representation** of complex processus-administratifs
 - ✅ **Predictable state transitions** (no hidden states)
 - ✅ **Built-in retry logic** and error handling
 - ✅ **Auditable** - track exactly where in the process something failed
@@ -91,31 +93,32 @@ idle → extractingStructure → identifyingConcepts → mappingVocabulary
 
 ```
 PAA/
-├── features/                    # Gherkin business rules (human-readable)
+├── specifications-metier/                     # Gherkin specifications-metier (human-readable)
 │   ├── benefits/
-│   │   └── income-guarantee.feature    # AGR eligibility rules
+│   │   └── income-guarantee.feature          # AGR regles-eligibilite
 │   └── conversion/
 │       └── legal-text-conversion.feature
 │
 ├── src/
-│   ├── domain/                  # Core business entities
-│   │   └── types.ts            # User, Benefit, LegalText, etc.
+│   ├── modele-metier/                        # Core business entities
+│   │   └── types.ts                          # User, Benefit, LegalText, etc.
 │   │
-│   ├── workflows/               # XState state machines
-│   │   └── conversionMachine.ts    # Legal text conversion workflow
+│   ├── processus-administratifs/             # XState state machines
+│   │   └── conversionMachine.ts              # Legal text conversion processus
 │   │
-│   ├── rules/                   # Business rules implementation
-│   │   └── agrRules.ts         # AGR eligibility rules engine
+│   ├── regles-eligibilite/                   # Regles-eligibilite implementation
+│   │   └── agrRules.ts                       # AGR regles-eligibilite engine
 │   │
-│   ├── services/                # Business logic services
-│   │   └── conversionService.ts    # Legal text conversion service
+│   ├── services/                              # Business logic services
+│   │   └── conversionService.ts              # Legal text conversion service
 │   │
-│   └── examples/                # Runnable examples
-│       ├── agrExample.ts       # AGR eligibility examples
-│       └── conversionExample.ts    # Conversion workflow examples
+│   └── examples/                              # Runnable examples
+│       ├── agrExample.ts                     # AGR eligibility examples
+│       └── conversionExample.ts              # Conversion processus examples
 │
 ├── package.json
 ├── tsconfig.json
+├── GLOSSAIRE-TERMINOLOGIE.md
 └── README.md
 ```
 
@@ -140,7 +143,7 @@ This demonstrates:
 - ✗ Ineligible cases (salary too high, no rights maintenance, etc.)
 - Optimization hints based on working hours
 
-**Legal Text Conversion Workflow:**
+**Legal Text Conversion Processus:**
 ```bash
 npm run example:conversion
 ```
@@ -237,7 +240,7 @@ npm run preview
 - **Source maps** for debugging
 - **Environment-specific configuration**
 
-### Development Workflow
+### Development Processus
 
 1. **Backend Development**: The main PAA backend provides APIs and business logic
 2. **Frontend Development**: The React frontend provides the user interface
@@ -247,19 +250,19 @@ For detailed frontend documentation, see [frontend/README.md](frontend/README.md
 
 ## 📋 Key Features Demonstrated
 
-### 1. Business Rules in Gherkin
+### 1. Specifications-Metier in Gherkin
 
-See `features/benefits/income-guarantee.feature`
+See `specifications-metier/benefits/income-guarantee.feature`
 
 Benefits:
-- Legal experts can validate rules without reading code
-- Rules serve as automated tests
+- Legal experts can validate regles-eligibilite without reading code
+- Regles-eligibilite serve as automated tests
 - Changes are tracked in git with clear history
 - Scenarios cover edge cases explicitly
 
-### 2. State Machine Workflow
+### 2. State Machine Processus
 
-See `src/workflows/conversionMachine.ts`
+See `src/processus-administratifs/conversionMachine.ts`
 
 The conversion pipeline implements the architecture from the documentation:
 ```typescript
@@ -275,7 +278,7 @@ Visualization available via XState tools.
 
 ### 3. Rules Engine
 
-See `src/rules/agrRules.ts`
+See `src/regles-eligibilite/agrRules.ts`
 
 Rules are defined as JSON objects:
 ```typescript
@@ -295,11 +298,11 @@ Can be:
 - Stored in database
 - Updated without deployment
 - Versioned for legal compliance
-- Audited (which rules fired when)
+- Audited (which regles-eligibilite fired when)
 
 ### 4. Type Safety
 
-See `src/domain/types.ts`
+See `src/modele-metier/types.ts`
 
 Strong typing prevents errors:
 ```typescript
@@ -314,9 +317,9 @@ interface EligibilityCheck {
 ## 🎨 Design Patterns Used
 
 ### 1. **Domain-Driven Design (DDD)**
-- Clear domain models (`User`, `Benefit`, `LegalText`)
-- Ubiquitous language from business domain
-- Bounded contexts (rules, workflows, services)
+- Clear modele-metier models (`User`, `Benefit`, `LegalText`)
+- Ubiquitous language from business modele-metier
+- Bounded contexts (regles-eligibilite, processus-administratifs, services)
 
 ### 2. **State Pattern (XState)**
 - Explicit state machines
@@ -324,8 +327,8 @@ interface EligibilityCheck {
 - Predictable behavior
 
 ### 3. **Strategy Pattern (Rules Engine)**
-- Rules are strategies for eligibility determination
-- Can swap/add rules dynamically
+- Regles-eligibilite are strategies for eligibility determination
+- Can swap/add regles-eligibilite dynamically
 - Composition over inheritance
 
 ### 4. **Pipeline Pattern**
@@ -338,21 +341,21 @@ interface EligibilityCheck {
 ### Why NOT pure Cucumber?
 - ❌ Cucumber alone doesn't execute business logic
 - ❌ Step definitions still need implementation
-- ❌ Doesn't handle complex workflows well
+- ❌ Doesn't handle complex processus-administratifs well
 
 ### Why NOT pure XState?
-- ❌ State machines for business rules = verbose
+- ❌ State machines for regles-eligibilite = verbose
 - ❌ Hard for non-developers to validate
 - ❌ No natural representation of eligibility conditions
 
 ### Why NOT pure Rules Engine?
-- ❌ Doesn't handle workflows/pipelines well
+- ❌ Doesn't handle processus-administratifs/pipelines well
 - ❌ No visual representation
 - ❌ State transitions are awkward
 
 ### Why This Hybrid?
-- ✅ **Gherkin** for **what** the rules are (readable specs)
-- ✅ **XState** for **how** processes flow (visual workflows)
+- ✅ **Gherkin** for **what** the regles-eligibilite are (readable specs)
+- ✅ **XState** for **how** processes flow (visual processus-administratifs)
 - ✅ **Rules Engine** for **when** conditions apply (runtime evaluation)
 - ✅ **TypeScript** for **implementation** (type safety)
 
@@ -360,17 +363,17 @@ interface EligibilityCheck {
 
 | Concern | Tool | Why |
 |---------|------|-----|
-| Business rule specification | Gherkin | Human-readable by legal experts |
-| Workflow orchestration | XState | Visual, predictable state management |
-| Runtime rule evaluation | json-rules-engine | Dynamic, database-driven rules |
+| Specifications-metier definition | Gherkin | Human-readable by legal experts |
+| Processus-administratifs orchestration | XState | Visual, predictable state management |
+| Runtime règle-éligibilité evaluation | json-rules-engine | Dynamic, database-driven rules |
 | Type safety & implementation | TypeScript | Compile-time guarantees |
 | Data validation | Zod (planned) | Runtime schema validation |
 
 ## 🔮 Future Enhancements
 
 ### Phase 1 - Currently in POC
-- ✅ Basic AGR rules
-- ✅ Conversion workflow
+- ✅ Basic AGR regles-eligibilite
+- ✅ Conversion processus-administratifs
 - ✅ Type definitions
 
 ### Phase 2 - Next Steps
@@ -381,17 +384,17 @@ interface EligibilityCheck {
 - [ ] Create visual state machine diagrams
 
 ### Phase 3 - Production Ready
-- [ ] Store rules in PostgreSQL
-- [ ] Version rules with effective dates
+- [ ] Store regles-eligibilite in PostgreSQL
+- [ ] Version regles-eligibilite with effective dates
 - [ ] Audit trail for all eligibility checks
 - [ ] Multi-language support (FR/NL/DE)
-- [ ] Human-in-the-loop validation workflow
+- [ ] Human-in-the-loop validation processus
 
 ## 💡 How to Add New Rules
 
 ### 1. Define in Gherkin
 ```gherkin
-# features/benefits/new-benefit.feature
+# specifications-metier/benefits/new-benefit.feature
 Fonctionnalité: Nouveau Bénéfice
   Scénario: Cas d'éligibilité
     Étant donné que [conditions]
@@ -401,7 +404,7 @@ Fonctionnalité: Nouveau Bénéfice
 
 ### 2. Implement Rule
 ```typescript
-// src/rules/newBenefitRules.ts
+// src/regles-eligibilite/newBenefitRules.ts
 const rule: Rule = {
   conditions: { /* ... */ },
   event: { type: 'new-benefit-eligible' }
@@ -410,7 +413,7 @@ const rule: Rule = {
 
 ### 3. Add Types
 ```typescript
-// src/domain/types.ts
+// src/modele-metier/types.ts
 export type BenefitType = 'agr' | 'ris' | 'new-benefit';
 ```
 
@@ -421,7 +424,7 @@ npm run example:new-benefit
 
 ## 🎯 Best Practices
 
-### For Business Rules
+### For Business Regles-Eligibilite
 1. **One scenario per edge case** - Don't combine multiple cases
 2. **Use scenario outlines** for parametric testing
 3. **Write in French** for Belgian context (stakeholder language)
@@ -434,10 +437,10 @@ npm run example:new-benefit
 4. **Implement timeouts** for async operations
 
 ### For Rules Engine
-1. **Prioritize rules** - Explicit order when overlap exists
+1. **Prioritize regles-eligibilite** - Explicit order when overlap exists
 2. **Document facts** - What each fact represents
-3. **Test rule combinations** - Ensure no conflicts
-4. **Version rules** - Track changes over time
+3. **Test règle combinations** - Ensure no conflicts
+4. **Version regles-eligibilite** - Track changes over time
 
 ## 📚 Resources
 
@@ -450,10 +453,12 @@ npm run example:new-benefit
 
 This is a POC demonstrating architectural patterns. To extend:
 
-1. Add new `.feature` files for new business rules
-2. Implement corresponding rule engines
-3. Create examples demonstrating the functionality
-4. Update this README with new patterns
+1. Add new `.feature` files in `specifications-metier/` for new business regles-eligibilite
+2. Implement corresponding règle engines in `src/regles-eligibilite/`
+3. Create processus-administratifs state machines in `src/processus-administratifs/` if needed
+4. Create examples demonstrating the functionality
+5. Update this README with new patterns
+6. Refer to [GLOSSAIRE-TERMINOLOGIE.md](GLOSSAIRE-TERMINOLOGIE.md) for naming conventions
 
 ## 📄 License
 
@@ -464,9 +469,9 @@ ISC
 ## 🎓 Key Takeaways
 
 1. **No single tool solves everything** - Complex business logic needs a hybrid approach
-2. **Readability matters** - Legal rules must be validated by domain experts
+2. **Readability matters** - Legal regles-eligibilite must be validated by modele-metier experts
 3. **Type safety prevents errors** - Especially critical for money/date calculations
-4. **Workflows need visualization** - State machines make complex processes understandable
-5. **Flexibility is key** - Rules stored in DB can change without deployment
+4. **Processus-administratifs need visualization** - State machines make complex processes understandable
+5. **Flexibility is key** - Regles-eligibilite stored in DB can change without deployment
 
 **This POC proves the architecture is feasible and maintainable.**

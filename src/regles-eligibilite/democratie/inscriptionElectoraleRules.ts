@@ -18,7 +18,7 @@ import {
   EligibilityResult,
   DEMOCRATIE_CONSTANTS,
   isEligibleToVote,
-} from '../../domain/democratieTypes';
+} from '../modele-metier/democratieTypes';
 
 /**
  * Create the electoral registration rules engine

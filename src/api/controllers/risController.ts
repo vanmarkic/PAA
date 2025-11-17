@@ -6,8 +6,8 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { AppDataSource } from '../../database/data-source';
 import { RISApplication } from '../../database/entities/RISApplication';
-import { checkRISEligibility } from '../../rules/risRules';
-import { RISUser, RISCategory, ResidencyStatus } from '../../domain/risTypes';
+import { checkRISEligibility } from '../regles-eligibilite/risRules';
+import { RISUser, RISCategory, ResidencyStatus } from '../modele-metier/risTypes';
 import { createAuditLog } from '../../utils/auditService';
 import { AuthenticatedUser } from '../../middleware/auth';
 import { checkRISEligibilityBatch } from '../../batch/batchService';

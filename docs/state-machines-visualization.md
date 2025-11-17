@@ -213,10 +213,10 @@ stateDiagram-v2
 
 ## Implementation Files
 
-- RIS Machine: `/src/workflows/risMachine.ts`
-- Conversion Machine: `/src/workflows/conversionMachine.ts`
-- RIS Types: `/src/domain/risTypes.ts`
-- Conversion Types: `/src/domain/types.ts`
+- RIS Machine: `/src/processus-administratifs/risMachine.ts`
+- Conversion Machine: `/src/processus-administratifs/conversionMachine.ts`
+- RIS Types: `/src/modele-metier/risTypes.ts`
+- Conversion Types: `/src/modele-metier/types.ts`
 - RIS Examples: `/src/examples/risWorkflowExample.ts`, `/src/examples/risWorkflowSimple.ts`
 - Conversion Example: `/src/examples/conversionExample.ts`
 

@@ -7,7 +7,7 @@
 
 import Queue from 'bull';
 import { redisClient } from '../cache/cacheService';
-import { LegalText, ConvertedText } from '../domain/types';
+import { LegalText, ConvertedText } from '../modele-metier/types';
 
 export interface ConversionJob {
   legalText: LegalText;

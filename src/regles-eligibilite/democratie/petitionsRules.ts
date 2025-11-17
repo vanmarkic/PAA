@@ -18,7 +18,7 @@ import {
   ReponsePetition,
   DEMOCRATIE_CONSTANTS,
   canSignPetition,
-} from '../../domain/democratieTypes';
+} from '../modele-metier/democratieTypes';
 
 /**
  * Petition signature thresholds by level

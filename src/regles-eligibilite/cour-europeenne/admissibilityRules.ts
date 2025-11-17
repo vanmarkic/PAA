@@ -19,7 +19,7 @@ import {
   ECHR_DEADLINES,
   ECHR_THRESHOLDS,
   VictimStatus
-} from '../../domain/courEuropeenneTypes';
+} from '../modele-metier/courEuropeenneTypes';
 
 /**
  * Create the ECHR admissibility rules engine

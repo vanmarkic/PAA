@@ -20,7 +20,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck } from '../modele-metier/types';
 import { FAMILY_ALLOWANCES_LEGAL_FRAMEWORK, FAMILY_ALLOWANCES_AMOUNTS_2024 } from '../legal-sources/belgianLegalSources';
 
 // Regional types

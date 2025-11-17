@@ -150,26 +150,26 @@ sequenceDiagram
 
 1. **Specification**
    ```gherkin
-   # features/benefits/ris.feature
+   # specifications-metier/benefits/ris.feature
    Fonctionnalité: Revenu d'Intégration Sociale
    ```
 
 2. **Rules**
    ```typescript
-   // src/rules/risRules.ts
+   // src/regles-eligibilite/risRules.ts
    export function createRISEngine(): Engine
    ```
 
 3. **Types**
    ```typescript
-   // src/domain/types.ts
+   // src/modele-metier/types.ts
    export type BenefitType = 'agr' | 'ris' | ...
    ```
 
 ### Adding New Workflows (e.g., WhatsApp Bot)
 
 ```typescript
-// src/workflows/chatbotMachine.ts
+// src/processus-administratifs/chatbotMachine.ts
 export const chatbotMachine = createMachine({
   id: 'whatsappBot',
   initial: 'greeting',
@@ -186,10 +186,10 @@ export const chatbotMachine = createMachine({
 ### Adding Multi-Language Support
 
 ```typescript
-// src/domain/types.ts
+// src/modele-metier/types.ts
 export type Language = 'fr' | 'nl' | 'de';
 
-// src/rules/i18n.ts
+// src/regles-eligibilite/i18n.ts
 export const translations = {
   fr: { 'agr-eligible': 'Éligible pour AGR' },
   nl: { 'agr-eligible': 'In aanmerking voor AGR' },

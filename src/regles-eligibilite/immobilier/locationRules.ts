@@ -18,7 +18,7 @@ import {
   BelgianRegion,
   IMMOBILIER_CONSTANTS,
   RentalDispute,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 /**
  * Create the rental eligibility and compliance engine

@@ -12,7 +12,7 @@ import {
   RequestStatus,
   ValidationResult,
   RequiredDocument
-} from '../../domain/droitsCivilsTypes';
+} from '../modele-metier/droitsCivilsTypes';
 
 interface IdentityDocumentContext {
   applicant: PersonDetails | null;

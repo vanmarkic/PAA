@@ -13,7 +13,7 @@ import {
   DocumentElectoral,
   ElectoralRight,
   EligibilityResult,
-} from '../../domain/democratieTypes';
+} from '../modele-metier/democratieTypes';
 
 interface InscriptionContext {
   citizen: DemocraticCitizen | null;

@@ -18,7 +18,7 @@ import {
   RESIDENCE_PERMIT_FEES,
   PROCESSING_TIMES,
   RequirementCheck,
-} from '../../domain/etrangersTypes';
+} from '../modele-metier/etrangersTypes';
 
 /**
  * Create rules engine for residence permit eligibility

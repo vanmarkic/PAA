@@ -22,7 +22,7 @@ import {
   EligibilityResult,
   RequirementCheck,
   PROCESSING_TIMES,
-} from '../../domain/etrangersTypes';
+} from '../modele-metier/etrangersTypes';
 
 /**
  * Create rules engine for asylum procedures

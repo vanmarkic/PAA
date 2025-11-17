@@ -5,8 +5,8 @@
 
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { getAllWorkflowMetadata, getWorkflowMetadataById } from '../../utils/workflowMetadataExtractor';
-import { checkRISEligibility } from '../../rules/risRules';
-import { RISUser } from '../../domain/risTypes';
+import { checkRISEligibility } from '../regles-eligibilite/risRules';
+import { RISUser } from '../modele-metier/risTypes';
 import { createAuditLog } from '../../utils/auditService';
 import { AuthenticatedUser } from '../../middleware/auth';
 

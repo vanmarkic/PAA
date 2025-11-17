@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@workflows/*": ["../src/workflows/*"],
+      "@processus-administratifs/*": ["../src/processus-administratifs/*"],
       "@components/*": ["src/components/*"],
       "@lib/*": ["src/lib/*"]
     }

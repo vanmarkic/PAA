@@ -19,7 +19,7 @@ import {
   ArtistRulesResult,
   ArtistCategory,
   ArtistStatus
-} from '../../domain/statutArtisteTypes';
+} from '../modele-metier/statutArtisteTypes';
 
 /**
  * Create the Artist Status eligibility rules engine

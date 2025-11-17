@@ -22,7 +22,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck } from '../modele-metier/types';
 import { RENT_ALLOWANCE_LEGAL_FRAMEWORK } from '../legal-sources/belgianLegalSources';
 
 // ============================================================================

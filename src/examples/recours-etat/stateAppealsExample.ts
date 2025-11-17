@@ -15,14 +15,14 @@ import {
   calculateTotalFees,
   determineUrgencyLevel,
   getRequiredDocuments
-} from '../../rules/recours-etat/conseilEtatRules';
+} from '../regles-eligibilite/recours-etat/conseilEtatRules';
 
 import {
   checkAdministrativeAppealAdmissibility,
   recommendAppealProcedure,
   processOmbudsmanComplaint,
   calculateAdministrativeSilence
-} from '../../rules/recours-etat/administrativeAppealRules';
+} from '../regles-eligibilite/recours-etat/administrativeAppealRules';
 
 import {
   AppealApplication,
@@ -30,12 +30,12 @@ import {
   OmbudsmanComplaint,
   AccessToDocumentsRequest,
   TaxAppealProcedure
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 import { interpret } from 'xstate';
-import { conseilEtatAnnulationMachine } from '../../workflows/recours-etat/conseilEtatAnnulationMachine';
-import { ombudsmanMachine } from '../../workflows/recours-etat/ombudsmanMachine';
-import { taxAppealMachine } from '../../workflows/recours-etat/taxAppealMachine';
+import { conseilEtatAnnulationMachine } from '../processus-administratifs/recours-etat/conseilEtatAnnulationMachine';
+import { ombudsmanMachine } from '../processus-administratifs/recours-etat/ombudsmanMachine';
+import { taxAppealMachine } from '../processus-administratifs/recours-etat/taxAppealMachine';
 
 // ============================================================================
 // EXAMPLE 1: Council of State Annulment Appeal

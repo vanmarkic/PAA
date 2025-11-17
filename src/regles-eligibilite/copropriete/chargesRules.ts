@@ -14,7 +14,7 @@ import {
   Budget,
   AppelFonds,
   COPROPRIETE_CONSTANTS
-} from '../../domain/coproprieteTypes';
+} from '../modele-metier/coproprieteTypes';
 
 /**
  * Create charges calculation engine

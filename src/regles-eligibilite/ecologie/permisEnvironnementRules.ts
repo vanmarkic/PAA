@@ -20,7 +20,7 @@ import {
   EmissionPermit,
   ECOLOGIE_CONSTANTS,
   ECOLOGIE_LEGAL_REFERENCES,
-} from '../../domain/ecologieTypes';
+} from '../modele-metier/ecologieTypes';
 
 interface PermitApplication {
   facilityType: string;

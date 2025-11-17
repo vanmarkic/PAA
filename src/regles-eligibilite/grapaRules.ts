@@ -15,7 +15,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck } from '../modele-metier/types';
 import { GRAPA_LEGAL_FRAMEWORK, GRAPA_AMOUNTS_2024 } from '../legal-sources/belgianLegalSources';
 
 // Constants from GRAPA law 2024

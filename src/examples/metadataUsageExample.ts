@@ -10,7 +10,7 @@ import {
   isMachineDataCurrent,
   getMachineSources,
   generateAuditReport,
-} from '../domain/legalMetadata';
+} from '../modele-metier/legalMetadata';
 
 import {
   getDataFreshnessBadge,

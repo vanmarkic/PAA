@@ -20,7 +20,7 @@ import {
   AccessToDocumentsRequest,
   ProcedureRecommendation,
   APPEAL_DEADLINES,
-} from '../../domain/recoursEtatTypes';
+} from '../modele-metier/recoursEtatTypes';
 
 /**
  * Create rules engine for administrative appeals

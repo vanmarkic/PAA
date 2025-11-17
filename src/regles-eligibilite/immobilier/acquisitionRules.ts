@@ -20,7 +20,7 @@ import {
   RegistrationFeesCalculation,
   CompromisVente,
   IMMOBILIER_CONSTANTS,
-} from '../../domain/immobilierTypes';
+} from '../modele-metier/immobilierTypes';
 
 /**
  * Create the property acquisition eligibility engine

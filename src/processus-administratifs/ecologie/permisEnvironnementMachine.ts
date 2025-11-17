@@ -11,7 +11,7 @@ import {
   Region,
   EcologieApplication,
   EcologieEligibilityResult,
-} from '../../domain/ecologieTypes';
+} from '../modele-metier/ecologieTypes';
 
 interface PermitContext {
   application: EcologieApplication | null;

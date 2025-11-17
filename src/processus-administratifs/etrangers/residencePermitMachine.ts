@@ -13,7 +13,7 @@ import {
   ApplicationStatus,
   ResidenceCardType,
   RESIDENCE_PERMIT_FEES,
-} from '../../domain/etrangersTypes';
+} from '../modele-metier/etrangersTypes';
 
 interface ResidencePermitContext {
   applicant: ForeignerProfile | null;

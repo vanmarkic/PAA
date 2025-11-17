@@ -3,7 +3,7 @@
 # @effective-date:2025-02-01
 # @legal-basis:Arrêté royal du 25 novembre 1991 portant réglementation du chômage
 # @legal-url:https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1991112550&table_name=loi
-# @implemented-by:src/rules/agrRules.ts
+# @implemented-by:src/regles-eligibilite/agrRules.ts
 
 Fonctionnalité: Allocation de Garantie de Revenus (AGR)
   Version: 2025.1.0

@@ -78,7 +78,7 @@ The site is automatically deployed to GitHub Pages when:
 - Code is pushed to the `main` branch
 - Manual deployment is triggered from GitHub Actions tab
 
-The deployment workflow (`.github/workflows/deploy-docs.yml`):
+The deployment workflow (`.github/processus-administratifs/deploy-docs.yml`):
 1. Checks out the repository
 2. Installs dependencies for both root and docs-astro
 3. Builds TypeScript (required for metadata generation)
@@ -126,7 +126,7 @@ cp docs/machines-metadata.json docs-astro/public/
 
 ### Adding New Workflows
 
-1. Create new XState machine in `src/workflows/*Machine.ts`
+1. Create new XState machine in `src/processus-administratifs/*Machine.ts`
 2. Follow naming convention: `*Machine.ts`
 3. Include JSDoc comments for documentation:
    ```typescript

@@ -45,7 +45,7 @@ Features (Gherkin specification) - UPDATED FIRST
 
 ### 1. Features (Gherkin Specifications)
 
-**Location**: `features/benefits/`
+**Location**: `specifications-metier/benefits/`
 
 **Metadata Format**:
 ```gherkin
@@ -54,7 +54,7 @@ Features (Gherkin specification) - UPDATED FIRST
 # @effective-date:2024-01-01
 # @legal-basis:Loi du 26 mai 2002 concernant le droit à l'intégration sociale
 # @legal-url:https://www.ejustice.just.fgov.be/...
-# @implemented-by:src/rules/risRules.ts
+# @implemented-by:src/regles-eligibilite/risRules.ts
 
 Fonctionnalité: Revenu d'Intégration Sociale (RIS)
   Version: 2024.1.0
@@ -69,7 +69,7 @@ Fonctionnalité: Revenu d'Intégration Sociale (RIS)
 
 ### 2. Rules (json-rules-engine)
 
-**Location**: `src/rules/`
+**Location**: `src/regles-eligibilite/`
 
 **Metadata Format**:
 ```typescript
@@ -77,8 +77,8 @@ export const RIS_RULES_METADATA = {
   implementsSpecification: '2024.1.0',  // MUST match feature version
   implementationVersion: '2024.1.0',
   implementationStatus: 'complete',     // 'complete' | 'partial' | 'outdated'
-  lastSyncedWith: 'features/benefits/ris.feature',
-  generatedFrom: 'features/benefits/ris.feature@2024.1.0',
+  lastSyncedWith: 'specifications-metier/benefits/ris.feature',
+  generatedFrom: 'specifications-metier/benefits/ris.feature@2024.1.0',
   divergences: [],                      // Any known differences
   effectiveDate: '2024-01-01',
 };
@@ -90,7 +90,7 @@ export const RIS_RULES_METADATA = {
 
 ### 3. Types (TypeScript)
 
-**Location**: `src/domain/`
+**Location**: `src/modele-metier/`
 
 **Metadata Format**:
 ```typescript
@@ -108,7 +108,7 @@ export const RIS_TYPES_METADATA = {
 
 ### 4. State Machines (XState)
 
-**Location**: `src/workflows/`
+**Location**: `src/processus-administratifs/`
 
 **Metadata Format**:
 ```typescript
@@ -270,7 +270,7 @@ The version compliance checker handles these aliases automatically.
 ### "Rules version outdated"
 ```bash
 # Update the rules file to match feature version
-# Edit src/rules/risRules.ts
+# Edit src/regles-eligibilite/risRules.ts
 export const RIS_RULES_METADATA = {
   implementsSpecification: '2024.2.0',  // ← Update this
   implementationVersion: '2024.2.0',     // ← And this
@@ -281,7 +281,7 @@ export const RIS_RULES_METADATA = {
 ### "Feature file not found"
 ```bash
 # Ensure feature file exists in correct location
-ls features/benefits/*.feature
+ls specifications-metier/benefits/*.feature
 
 # Check if benefit needs an alias in src/utils/versionCompliance.ts
 ```
@@ -376,7 +376,7 @@ ANTHROPIC_API_KEY = sk-ant-api03-...
 Without this secret, the system will:
 - ✅ Still monitor legal sources
 - ✅ Create GitHub issues when changes detected
-- ❌ NOT automatically rewrite features/rules
+- ❌ NOT automatically rewrite specifications-metier/rules
 
 #### Environment Variables
 
@@ -473,7 +473,7 @@ Edit `src/ai/claudeIntegration.ts`:
 
 #### Change Schedule
 
-Edit `.github/workflows/legal-source-monitoring.yml`:
+Edit `.github/processus-administratifs/legal-source-monitoring.yml`:
 
 ```yaml
 on:
@@ -518,4 +518,4 @@ on:
 
 - [CLAUDE.md](../CLAUDE.md) - Main project documentation
 - [Hybrid Architecture](../CLAUDE.md#hybrid-architecture) - Why we use this approach
-- [Legal Metadata](../src/domain/legalMetadata.ts) - Legal reference tracking
+- [Legal Metadata](../src/modele-metier/legalMetadata.ts) - Legal reference tracking

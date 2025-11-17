@@ -8,8 +8,8 @@
 
 import { describe, test, expect } from '@jest/globals';
 import { createActor } from 'xstate';
-import { allocationsChomageMachine } from '../../workflows/allocationsChomage';
-import { consultationMedecinMachine } from '../../workflows/health/consultationMedecin';
+import { allocationsChomageMachine } from '../processus-administratifs/allocationsChomage';
+import { consultationMedecinMachine } from '../processus-administratifs/health/consultationMedecin';
 
 describe('Validation Sémantique - Allocations de Chômage', () => {
   describe('Conformité à l\'Arrêté Royal du 25 novembre 1991', () => {
