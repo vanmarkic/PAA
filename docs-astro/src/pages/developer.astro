@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 import { loadMachinesMetadata } from '../lib/machines';
+import { getUrl } from '../lib/utils';
 
 // Load machines data at build time
 const metadata = await loadMachinesMetadata();
@@ -231,7 +232,7 @@ npm run dev:api
           <p class="text-sm text-gray-600">Repository GitHub avec exemples et documentation complète</p>
         </a>
 
-        <a href="/api/docs" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
+        <a href={getUrl('api/docs')} class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-md transition-all">
           <h3 class="font-semibold text-gray-900 mb-2">Swagger/OpenAPI</h3>
           <p class="text-sm text-gray-600">Documentation interactive de l'API</p>
         </a>

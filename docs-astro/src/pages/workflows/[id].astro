@@ -34,9 +34,9 @@ const relatedRules = await getRelatedRules(machine.id);
     <!-- Breadcrumb -->
     <nav class="mb-8">
       <ol class="flex items-center space-x-2 text-sm text-gray-500">
-        <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+        <li><a href={getUrl('')} class="hover:text-gray-700">Accueil</a></li>
         <li>/</li>
-        <li><a href="/workflows" class="hover:text-gray-700">Workflows</a></li>
+        <li><a href={getUrl('workflows')} class="hover:text-gray-700">Workflows</a></li>
         <li>/</li>
         <li class="text-gray-900">{machine.name}</li>
       </ol>
@@ -247,7 +247,7 @@ const relatedRules = await getRelatedRules(machine.id);
         </div>
         {relatedFeatures.length > 4 && (
           <div class="mt-4 text-center">
-            <a href="/features" class="text-sm text-green-600 hover:text-green-700">
+            <a href={getUrl('features')} class="text-sm text-green-600 hover:text-green-700">
               Voir toutes les spécifications →
             </a>
           </div>
@@ -294,7 +294,7 @@ const relatedRules = await getRelatedRules(machine.id);
         </div>
         {relatedRules.length > 4 && (
           <div class="mt-4 text-center">
-            <a href="/rules" class="text-sm text-blue-600 hover:text-blue-700">
+            <a href={getUrl('rules')} class="text-sm text-blue-600 hover:text-blue-700">
               Voir toutes les règles →
             </a>
           </div>

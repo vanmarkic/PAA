@@ -326,7 +326,7 @@ function getStepColor(keyword: string) {
         </div>
         {relatedWorkflows.length > 4 && (
           <div class="mt-4 text-center">
-            <a href="/workflows" class="text-sm text-purple-600 hover:text-purple-700">
+            <a href={getUrl('workflows')} class="text-sm text-purple-600 hover:text-purple-700">
               Voir tous les workflows →
             </a>
           </div>
@@ -373,7 +373,7 @@ function getStepColor(keyword: string) {
         </div>
         {relatedRules.length > 4 && (
           <div class="mt-4 text-center">
-            <a href="/rules" class="text-sm text-blue-600 hover:text-blue-700">
+            <a href={getUrl('rules')} class="text-sm text-blue-600 hover:text-blue-700">
               Voir toutes les règles →
             </a>
           </div>

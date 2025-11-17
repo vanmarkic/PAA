@@ -146,7 +146,7 @@ const categoryStats = categories.map((cat: string) => ({
               </div>
             </a>
           ))}
-          <a href="/workflows" class="block text-center py-2 text-purple-600 hover:text-purple-700 font-medium">
+          <a href={getUrl('workflows')} class="block text-center py-2 text-purple-600 hover:text-purple-700 font-medium">
             Voir tous les workflows →
           </a>
         </div>
@@ -174,7 +174,7 @@ const categoryStats = categories.map((cat: string) => ({
               <span class="text-gray-600"> opérateurs</span>
             </div>
           </div>
-          <a href="/rules" class="inline-block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+          <a href={getUrl('rules')} class="inline-block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
             Explorer les Règles
           </a>
         </div>
