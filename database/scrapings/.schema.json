@@ -1,0 +1,40 @@
+{
+  "_comment": "Example scraping metadata structure",
+  "_schema": {
+    "scrapeId": "string (scrape-YYYY-MM-DD-NNN)",
+    "lawId": "string",
+    "scrapeDate": "YYYY-MM-DD",
+    "scrapeTime": "ISO 8601 timestamp",
+    
+    "changeDetection": {
+      "detectedChanges": "boolean",
+      "hash": "string (SHA-256)",
+      "previousHash": "string | null",
+      "hashAlgorithm": "string (sha256)"
+    },
+    
+    "changeSummary": {
+      "generatedBy": "string (claude model)",
+      "generatedAt": "ISO 8601 timestamp",
+      "changeType": "amounts_updated | conditions_updated | new_article | removed_article | major_reform | minor_update",
+      "summary": "string (French summary)",
+      "changes": "object (detailed changes)",
+      "affectedArticles": "string[]",
+      "impact": "low | medium | high"
+    },
+    
+    "generation": {
+      "generated": "boolean",
+      "generatedAt": "ISO 8601 timestamp | null",
+      "files": {
+        "feature": "string (path)",
+        "rules": "string (path)",
+        "workflow": "string (path)"
+      },
+      "pipelineVersion": "string"
+    },
+    
+    "parentScrapeId": "string | null"
+  }
+}
+

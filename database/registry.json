@@ -1,0 +1,3702 @@
+{
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2025-11-18T16:16:57.036Z",
+  "description": "Central registry for Belgian legal sources and topics",
+  "laws": {
+    "_comment": "All laws tracked in the system. Key = lawId (e.g., 'loi-2002-05-26')",
+    "_schema": {
+      "lawId": "string (kebab-case)",
+      "title": "string",
+      "lawDate": "YYYY-MM-DD",
+      "url": "string (official URL)",
+      "authority": "string",
+      "topics": "string[] (topic IDs)",
+      "type": "primary | implementing | amendment | indexation",
+      "isShared": "boolean (affects multiple topics)",
+      "fileLocation": "string (relative path)",
+      "currentVersion": "string (scrape-YYYY-MM-DD-NNN)",
+      "lastScraped": "YYYY-MM-DD",
+      "nextScrapeScheduled": "YYYY-MM-DD",
+      "scrapingFrequency": "weekly | monthly",
+      "scrapings": "string[] (scrape IDs)"
+    },
+    "loi-2002-05-26": {
+      "lawId": "loi-2002-05-26",
+      "title": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+      "lawDate": "2002-05-26",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi",
+      "authority": "Service Public Fédéral Sécurité Sociale",
+      "topics": [
+        "ris"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/ris/laws/loi-2002-05-26",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "arrete-2002-07-11": {
+      "lawId": "arrete-2002-07-11",
+      "title": "Arrêté royal du 11 juillet 2002 portant règlement général en matière de droit à l'intégration sociale",
+      "lawDate": "2002-07-11",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&table_name=loi&cn=2002071138",
+      "authority": "Service Public Fédéral Sécurité Sociale",
+      "topics": [
+        "ris"
+      ],
+      "type": "implementing",
+      "isShared": false,
+      "fileLocation": "features/benefits/ris/laws/arrete-2002-07-11",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "loi-1971-08-02": {
+      "lawId": "loi-1971-08-02",
+      "title": "Loi du 2 août 1971 organisant un régime de liaison à l'indice des prix à la consommation",
+      "lawDate": "1971-08-02",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1971080201&table_name=loi",
+      "authority": "SPF Économie",
+      "topics": [
+        "grapa"
+      ],
+      "type": "indexation",
+      "isShared": false,
+      "fileLocation": "features/benefits/grapa/laws/loi-1971-08-02",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "arrete-1991-11-25": {
+      "lawId": "arrete-1991-11-25",
+      "title": "Arrêté royal portant réglementation du chômage",
+      "lawDate": "1991-11-25",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1991112550&table_name=loi",
+      "authority": "Office National de l'Emploi (ONEM)",
+      "topics": [
+        "agr"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/agr/laws/arrete-1991-11-25",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-abattement-succession": {
+      "lawId": "placeholder-abattement-succession",
+      "title": "[Placeholder] Loi pour Abattement succession",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "abattement-succession"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/abattement-succession/laws/placeholder-abattement-succession",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-abonnement-social-transport": {
+      "lawId": "placeholder-abonnement-social-transport",
+      "title": "[Placeholder] Loi pour Abonnement social transport",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "abonnement-social-transport"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/abonnement-social-transport/laws/placeholder-abonnement-social-transport",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-accident-travail": {
+      "lawId": "placeholder-accident-travail",
+      "title": "[Placeholder] Loi pour Accident du travail",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "accident-travail"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/accident-travail/laws/placeholder-accident-travail",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-accompagnement-social": {
+      "lawId": "placeholder-accompagnement-social",
+      "title": "[Placeholder] Loi pour Accompagnement social",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "accompagnement-social"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/accompagnement-social/laws/placeholder-accompagnement-social",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-alimentaire": {
+      "lawId": "placeholder-aide-alimentaire",
+      "title": "[Placeholder] Loi pour Aide alimentaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-alimentaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-alimentaire/laws/placeholder-aide-alimentaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-juridique": {
+      "lawId": "placeholder-aide-juridique",
+      "title": "[Placeholder] Loi pour Aide juridique",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-juridique"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-juridique/laws/placeholder-aide-juridique",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-logement": {
+      "lawId": "placeholder-aide-logement",
+      "title": "[Placeholder] Loi pour Aide au logement",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-logement"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-logement/laws/placeholder-aide-logement",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-menagere": {
+      "lawId": "placeholder-aide-menagere",
+      "title": "[Placeholder] Loi pour Aide ménagère",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-menagere"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-menagere/laws/placeholder-aide-menagere",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-mobilite": {
+      "lawId": "placeholder-aide-mobilite",
+      "title": "[Placeholder] Loi pour Aide mobilité",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-mobilite"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-mobilite/laws/placeholder-aide-mobilite",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-personnes-agees": {
+      "lawId": "placeholder-aide-personnes-agees",
+      "title": "[Placeholder] Loi pour Aide aux personnes âgées",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-personnes-agees"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-personnes-agees/laws/placeholder-aide-personnes-agees",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-sans-abri": {
+      "lawId": "placeholder-aide-sans-abri",
+      "title": "[Placeholder] Loi pour Aide sans-abri",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-sans-abri"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-sans-abri/laws/placeholder-aide-sans-abri",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-sociale": {
+      "lawId": "placeholder-aide-sociale",
+      "title": "[Placeholder] Loi pour Aide sociale CPAS",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-sociale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-sociale/laws/placeholder-aide-sociale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-aide-victimes": {
+      "lawId": "placeholder-aide-victimes",
+      "title": "[Placeholder] Loi pour Aide victimes",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "aide-victimes"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/aide-victimes/laws/placeholder-aide-victimes",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocation-chauffage": {
+      "lawId": "placeholder-allocation-chauffage",
+      "title": "[Placeholder] Loi pour Allocation chauffage",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocation-chauffage"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocation-chauffage/laws/placeholder-allocation-chauffage",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocation-handicapes": {
+      "lawId": "placeholder-allocation-handicapes",
+      "title": "[Placeholder] Loi pour Allocations handicapés",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocation-handicapes"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocation-handicapes/laws/placeholder-allocation-handicapes",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocation-integration": {
+      "lawId": "placeholder-allocation-integration",
+      "title": "[Placeholder] Loi pour Allocation d'intégration",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocation-integration"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocation-integration/laws/placeholder-allocation-integration",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocations-chomage": {
+      "lawId": "placeholder-allocations-chomage",
+      "title": "[Placeholder] Loi pour Allocations de chômage",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocations-chomage"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocations-chomage/laws/placeholder-allocations-chomage",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocations-etudes": {
+      "lawId": "placeholder-allocations-etudes",
+      "title": "[Placeholder] Loi pour Allocations d'études",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocations-etudes"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocations-etudes/laws/placeholder-allocations-etudes",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-allocations-familiales": {
+      "lawId": "placeholder-allocations-familiales",
+      "title": "[Placeholder] Loi pour Allocations familiales",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "allocations-familiales"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/allocations-familiales/laws/placeholder-allocations-familiales",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-assurance-maladie": {
+      "lawId": "placeholder-assurance-maladie",
+      "title": "[Placeholder] Loi pour Assurance maladie",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "assurance-maladie"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/assurance-maladie/laws/placeholder-assurance-maladie",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-avantages-nature": {
+      "lawId": "placeholder-avantages-nature",
+      "title": "[Placeholder] Loi pour Avantages en nature",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "avantages-nature"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/avantages-nature/laws/placeholder-avantages-nature",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-banque-alimentaire": {
+      "lawId": "placeholder-banque-alimentaire",
+      "title": "[Placeholder] Loi pour Banque alimentaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "banque-alimentaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/banque-alimentaire/laws/placeholder-banque-alimentaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-bonus-logement": {
+      "lawId": "placeholder-bonus-logement",
+      "title": "[Placeholder] Loi pour Bonus logement",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "bonus-logement"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/bonus-logement/laws/placeholder-bonus-logement",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-bourse-etudes": {
+      "lawId": "placeholder-bourse-etudes",
+      "title": "[Placeholder] Loi pour Bourse d'études",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "bourse-etudes"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/bourse-etudes/laws/placeholder-bourse-etudes",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-budget-energetique": {
+      "lawId": "placeholder-budget-energetique",
+      "title": "[Placeholder] Loi pour Budget énergétique",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "budget-energetique"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/budget-energetique/laws/placeholder-budget-energetique",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-carte-medicale": {
+      "lawId": "placeholder-carte-medicale",
+      "title": "[Placeholder] Loi pour Carte médicale",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "carte-medicale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/carte-medicale/laws/placeholder-carte-medicale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-centre-accueil": {
+      "lawId": "placeholder-centre-accueil",
+      "title": "[Placeholder] Loi pour Centre d'accueil",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "centre-accueil"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/centre-accueil/laws/placeholder-centre-accueil",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-cheques-repas": {
+      "lawId": "placeholder-cheques-repas",
+      "title": "[Placeholder] Loi pour Chèques repas",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "cheques-repas"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/cheques-repas/laws/placeholder-cheques-repas",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-conge-maladie": {
+      "lawId": "placeholder-conge-maladie",
+      "title": "[Placeholder] Loi pour Congé maladie",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "conge-maladie"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/conge-maladie/laws/placeholder-conge-maladie",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-conge-maternite": {
+      "lawId": "placeholder-conge-maternite",
+      "title": "[Placeholder] Loi pour Congé maternité",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "conge-maternite"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/conge-maternite/laws/placeholder-conge-maternite",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-conge-parental": {
+      "lawId": "placeholder-conge-parental",
+      "title": "[Placeholder] Loi pour Congé parental",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "conge-parental"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/conge-parental/laws/placeholder-conge-parental",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-contrat-duree-determinee": {
+      "lawId": "placeholder-contrat-duree-determinee",
+      "title": "[Placeholder] Loi pour Contrat durée déterminée",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "contrat-duree-determinee"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/contrat-duree-determinee/laws/placeholder-contrat-duree-determinee",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-contrat-duree-indeterminee": {
+      "lawId": "placeholder-contrat-duree-indeterminee",
+      "title": "[Placeholder] Loi pour Contrat durée indéterminée",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "contrat-duree-indeterminee"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/contrat-duree-indeterminee/laws/placeholder-contrat-duree-indeterminee",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-contrat-travail": {
+      "lawId": "placeholder-contrat-travail",
+      "title": "[Placeholder] Loi pour Contrat de travail",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "contrat-travail"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/contrat-travail/laws/placeholder-contrat-travail",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-credit-impot-investissement-durable": {
+      "lawId": "placeholder-credit-impot-investissement-durable",
+      "title": "[Placeholder] Loi pour Crédit d'impôt investissement durable",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "credit-impot-investissement-durable"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/credit-impot-investissement-durable/laws/placeholder-credit-impot-investissement-durable",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-credit-impot": {
+      "lawId": "placeholder-credit-impot",
+      "title": "[Placeholder] Loi pour Crédit d'impôt",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "credit-impot"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/credit-impot/laws/placeholder-credit-impot",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-credit-impot-service-local": {
+      "lawId": "placeholder-credit-impot-service-local",
+      "title": "[Placeholder] Loi pour Crédit d'impôt service local",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "credit-impot-service-local"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/credit-impot-service-local/laws/placeholder-credit-impot-service-local",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-credit-temps": {
+      "lawId": "placeholder-credit-temps",
+      "title": "[Placeholder] Loi pour Crédit-temps",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "credit-temps"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/credit-temps/laws/placeholder-credit-temps",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-dons": {
+      "lawId": "placeholder-deduction-dons",
+      "title": "[Placeholder] Loi pour Déduction dons",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-dons"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-dons/laws/placeholder-deduction-dons",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-emprunt-hypothecaire": {
+      "lawId": "placeholder-deduction-emprunt-hypothecaire",
+      "title": "[Placeholder] Loi pour Déduction emprunt hypothécaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-emprunt-hypothecaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-emprunt-hypothecaire/laws/placeholder-deduction-emprunt-hypothecaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-frais-garde": {
+      "lawId": "placeholder-deduction-frais-garde",
+      "title": "[Placeholder] Loi pour Déduction frais de garde",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-frais-garde"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-frais-garde/laws/placeholder-deduction-frais-garde",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-habitation": {
+      "lawId": "placeholder-deduction-habitation",
+      "title": "[Placeholder] Loi pour Déduction habitation",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-habitation"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-habitation/laws/placeholder-deduction-habitation",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-investissement": {
+      "lawId": "placeholder-deduction-investissement",
+      "title": "[Placeholder] Loi pour Déduction investissement",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-investissement"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-investissement/laws/placeholder-deduction-investissement",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-isolation": {
+      "lawId": "placeholder-deduction-isolation",
+      "title": "[Placeholder] Loi pour Déduction isolation",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-isolation"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-isolation/laws/placeholder-deduction-isolation",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-deduction-vehicule-electrique": {
+      "lawId": "placeholder-deduction-vehicule-electrique",
+      "title": "[Placeholder] Loi pour Déduction véhicule électrique",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "deduction-vehicule-electrique"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/deduction-vehicule-electrique/laws/placeholder-deduction-vehicule-electrique",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-demission": {
+      "lawId": "placeholder-demission",
+      "title": "[Placeholder] Loi pour Démission",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "demission"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/demission/laws/placeholder-demission",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-discrimination-emploi": {
+      "lawId": "placeholder-discrimination-emploi",
+      "title": "[Placeholder] Loi pour Discrimination emploi",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "discrimination-emploi"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/discrimination-emploi/laws/placeholder-discrimination-emploi",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-droit-greve": {
+      "lawId": "placeholder-droit-greve",
+      "title": "[Placeholder] Loi pour Droit de grève",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "droit-greve"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/droit-greve/laws/placeholder-droit-greve",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-droits-donation-reduits": {
+      "lawId": "placeholder-droits-donation-reduits",
+      "title": "[Placeholder] Loi pour Droits donation réduits",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "droits-donation-reduits"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/droits-donation-reduits/laws/placeholder-droits-donation-reduits",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-eco-cheque": {
+      "lawId": "placeholder-eco-cheque",
+      "title": "[Placeholder] Loi pour Éco-chèque",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "eco-cheque"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/eco-cheque/laws/placeholder-eco-cheque",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-egalite-salariale": {
+      "lawId": "placeholder-egalite-salariale",
+      "title": "[Placeholder] Loi pour Égalité salariale",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "egalite-salariale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/egalite-salariale/laws/placeholder-egalite-salariale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-exoneration-plus-value": {
+      "lawId": "placeholder-exoneration-plus-value",
+      "title": "[Placeholder] Loi pour Exonération plus-value",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "exoneration-plus-value"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/exoneration-plus-value/laws/placeholder-exoneration-plus-value",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-exoneration-precompte": {
+      "lawId": "placeholder-exoneration-precompte",
+      "title": "[Placeholder] Loi pour Exonération précompte",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "exoneration-precompte"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/exoneration-precompte/laws/placeholder-exoneration-precompte",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-exoneration-revenus-mobiliers": {
+      "lawId": "placeholder-exoneration-revenus-mobiliers",
+      "title": "[Placeholder] Loi pour Exonération revenus mobiliers",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "exoneration-revenus-mobiliers"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/exoneration-revenus-mobiliers/laws/placeholder-exoneration-revenus-mobiliers",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-flexi-job": {
+      "lawId": "placeholder-flexi-job",
+      "title": "[Placeholder] Loi pour Flexi-job",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "flexi-job"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/flexi-job/laws/placeholder-flexi-job",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-fonds-creances": {
+      "lawId": "placeholder-fonds-creances",
+      "title": "[Placeholder] Loi pour Fonds créances",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "fonds-creances"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/fonds-creances/laws/placeholder-fonds-creances",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-fonds-securite-existence": {
+      "lawId": "placeholder-fonds-securite-existence",
+      "title": "[Placeholder] Loi pour Fonds de sécurité d'existence",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "fonds-securite-existence"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/fonds-securite-existence/laws/placeholder-fonds-securite-existence",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-formation-entreprise": {
+      "lawId": "placeholder-formation-entreprise",
+      "title": "[Placeholder] Loi pour Formation entreprise",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "formation-entreprise"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/formation-entreprise/laws/placeholder-formation-entreprise",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-formation-professionnelle": {
+      "lawId": "placeholder-formation-professionnelle",
+      "title": "[Placeholder] Loi pour Formation professionnelle",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "formation-professionnelle"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/formation-professionnelle/laws/placeholder-formation-professionnelle",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-frais-professionnels": {
+      "lawId": "placeholder-frais-professionnels",
+      "title": "[Placeholder] Loi pour Frais professionnels",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "frais-professionnels"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/frais-professionnels/laws/placeholder-frais-professionnels",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-garantie-locative": {
+      "lawId": "placeholder-garantie-locative",
+      "title": "[Placeholder] Loi pour Garantie locative",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "garantie-locative"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/garantie-locative/laws/placeholder-garantie-locative",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-garde-enfants": {
+      "lawId": "placeholder-garde-enfants",
+      "title": "[Placeholder] Loi pour Garde d'enfants",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "garde-enfants"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/garde-enfants/laws/placeholder-garde-enfants",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-grapa": {
+      "lawId": "placeholder-grapa",
+      "title": "[Placeholder] Loi pour Garantie de Revenus aux Personnes Âgées",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "grapa"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/grapa/laws/placeholder-grapa",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-harcelement-travail": {
+      "lawId": "placeholder-harcelement-travail",
+      "title": "[Placeholder] Loi pour Harcèlement au travail",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "harcelement-travail"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/harcelement-travail/laws/placeholder-harcelement-travail",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-horaire-flexible": {
+      "lawId": "placeholder-horaire-flexible",
+      "title": "[Placeholder] Loi pour Horaire flexible",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "horaire-flexible"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/horaire-flexible/laws/placeholder-horaire-flexible",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-inscription-ecole": {
+      "lawId": "placeholder-inscription-ecole",
+      "title": "[Placeholder] Loi pour Inscription école",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "inscription-ecole"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/inscription-ecole/laws/placeholder-inscription-ecole",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-insertion-professionnelle": {
+      "lawId": "placeholder-insertion-professionnelle",
+      "title": "[Placeholder] Loi pour Insertion professionnelle",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "insertion-professionnelle"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/insertion-professionnelle/laws/placeholder-insertion-professionnelle",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-licenciement": {
+      "lawId": "placeholder-licenciement",
+      "title": "[Placeholder] Loi pour Licenciement",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "licenciement"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/licenciement/laws/placeholder-licenciement",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-logement-social": {
+      "lawId": "placeholder-logement-social",
+      "title": "[Placeholder] Loi pour Logement social",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "logement-social"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/logement-social/laws/placeholder-logement-social",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-maladie-professionnelle": {
+      "lawId": "placeholder-maladie-professionnelle",
+      "title": "[Placeholder] Loi pour Maladie professionnelle",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "maladie-professionnelle"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/maladie-professionnelle/laws/placeholder-maladie-professionnelle",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-mediation-dettes": {
+      "lawId": "placeholder-mediation-dettes",
+      "title": "[Placeholder] Loi pour Médiation dettes",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "mediation-dettes"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/mediation-dettes/laws/placeholder-mediation-dettes",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-mediation-familiale": {
+      "lawId": "placeholder-mediation-familiale",
+      "title": "[Placeholder] Loi pour Médiation familiale",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "mediation-familiale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/mediation-familiale/laws/placeholder-mediation-familiale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-outplacement": {
+      "lawId": "placeholder-outplacement",
+      "title": "[Placeholder] Loi pour Outplacement",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "outplacement"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/outplacement/laws/placeholder-outplacement",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-pension-complementaire": {
+      "lawId": "placeholder-pension-complementaire",
+      "title": "[Placeholder] Loi pour Pension complémentaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "pension-complementaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/pension-complementaire/laws/placeholder-pension-complementaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-pension-retraite": {
+      "lawId": "placeholder-pension-retraite",
+      "title": "[Placeholder] Loi pour Pensions de retraite",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "pension-retraite"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/pension-retraite/laws/placeholder-pension-retraite",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-pension-survie": {
+      "lawId": "placeholder-pension-survie",
+      "title": "[Placeholder] Loi pour Pensions de survie",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "pension-survie"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/pension-survie/laws/placeholder-pension-survie",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-preavis": {
+      "lawId": "placeholder-preavis",
+      "title": "[Placeholder] Loi pour Préavis",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "preavis"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/preavis/laws/placeholder-preavis",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-prime-naissance": {
+      "lawId": "placeholder-prime-naissance",
+      "title": "[Placeholder] Loi pour Prime de naissance",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "prime-naissance"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/prime-naissance/laws/placeholder-prime-naissance",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-prime-renovation": {
+      "lawId": "placeholder-prime-renovation",
+      "title": "[Placeholder] Loi pour Prime rénovation",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "prime-renovation"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/prime-renovation/laws/placeholder-prime-renovation",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-protection-enfance": {
+      "lawId": "placeholder-protection-enfance",
+      "title": "[Placeholder] Loi pour Protection enfance",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "protection-enfance"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/protection-enfance/laws/placeholder-protection-enfance",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-protection-juridique": {
+      "lawId": "placeholder-protection-juridique",
+      "title": "[Placeholder] Loi pour Protection juridique",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "protection-juridique"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/protection-juridique/laws/placeholder-protection-juridique",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-quotient-conjugal": {
+      "lawId": "placeholder-quotient-conjugal",
+      "title": "[Placeholder] Loi pour Quotient conjugal",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "quotient-conjugal"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/quotient-conjugal/laws/placeholder-quotient-conjugal",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-reduction-epargne-pension": {
+      "lawId": "placeholder-reduction-epargne-pension",
+      "title": "[Placeholder] Loi pour Réduction épargne pension",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "reduction-epargne-pension"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/reduction-epargne-pension/laws/placeholder-reduction-epargne-pension",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-rente-alimentaire": {
+      "lawId": "placeholder-rente-alimentaire",
+      "title": "[Placeholder] Loi pour Rente alimentaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "rente-alimentaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/rente-alimentaire/laws/placeholder-rente-alimentaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-repas-domicile": {
+      "lawId": "placeholder-repas-domicile",
+      "title": "[Placeholder] Loi pour Repas à domicile",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "repas-domicile"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/repas-domicile/laws/placeholder-repas-domicile",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-repas-scolaires-gratuits": {
+      "lawId": "placeholder-repas-scolaires-gratuits",
+      "title": "[Placeholder] Loi pour Repas scolaires gratuits",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "repas-scolaires-gratuits"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/repas-scolaires-gratuits/laws/placeholder-repas-scolaires-gratuits",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-representation-syndicale": {
+      "lawId": "placeholder-representation-syndicale",
+      "title": "[Placeholder] Loi pour Représentation syndicale",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "representation-syndicale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/representation-syndicale/laws/placeholder-representation-syndicale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-restaurants-sociaux": {
+      "lawId": "placeholder-restaurants-sociaux",
+      "title": "[Placeholder] Loi pour Restaurants sociaux",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "restaurants-sociaux"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/restaurants-sociaux/laws/placeholder-restaurants-sociaux",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-revenu-cadastral-exoneration": {
+      "lawId": "placeholder-revenu-cadastral-exoneration",
+      "title": "[Placeholder] Loi pour Revenu cadastral exonération",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "revenu-cadastral-exoneration"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/revenu-cadastral-exoneration/laws/placeholder-revenu-cadastral-exoneration",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-service-public-emploi": {
+      "lawId": "placeholder-service-public-emploi",
+      "title": "[Placeholder] Loi pour Service public emploi",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "service-public-emploi"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/service-public-emploi/laws/placeholder-service-public-emploi",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-soins-sante-mentale": {
+      "lawId": "placeholder-soins-sante-mentale",
+      "title": "[Placeholder] Loi pour Soins santé mentale",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "soins-sante-mentale"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/soins-sante-mentale/laws/placeholder-soins-sante-mentale",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-stage": {
+      "lawId": "placeholder-stage",
+      "title": "[Placeholder] Loi pour Stage",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "stage"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/stage/laws/placeholder-stage",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-tarif-social-energie": {
+      "lawId": "placeholder-tarif-social-energie",
+      "title": "[Placeholder] Loi pour Tarif social énergie",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "tarif-social-energie"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/tarif-social-energie/laws/placeholder-tarif-social-energie",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-tele-assistance": {
+      "lawId": "placeholder-tele-assistance",
+      "title": "[Placeholder] Loi pour Télé-assistance",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "tele-assistance"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/tele-assistance/laws/placeholder-tele-assistance",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-teletravail": {
+      "lawId": "placeholder-teletravail",
+      "title": "[Placeholder] Loi pour Télétravail",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "teletravail"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/teletravail/laws/placeholder-teletravail",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-temps-partiel": {
+      "lawId": "placeholder-temps-partiel",
+      "title": "[Placeholder] Loi pour Temps partiel",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "temps-partiel"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/temps-partiel/laws/placeholder-temps-partiel",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-transport-scolaire": {
+      "lawId": "placeholder-transport-scolaire",
+      "title": "[Placeholder] Loi pour Transport scolaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "transport-scolaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/transport-scolaire/laws/placeholder-transport-scolaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-travail-etudiant": {
+      "lawId": "placeholder-travail-etudiant",
+      "title": "[Placeholder] Loi pour Travail étudiant",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "travail-etudiant"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/travail-etudiant/laws/placeholder-travail-etudiant",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-travail-interimaire": {
+      "lawId": "placeholder-travail-interimaire",
+      "title": "[Placeholder] Loi pour Travail intérimaire",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "travail-interimaire"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/travail-interimaire/laws/placeholder-travail-interimaire",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    },
+    "placeholder-tva-reduite": {
+      "lawId": "placeholder-tva-reduite",
+      "title": "[Placeholder] Loi pour TVA réduite",
+      "lawDate": "2025-11-18",
+      "url": "https://www.ejustice.just.fgov.be",
+      "authority": "À déterminer",
+      "topics": [
+        "tva-reduite"
+      ],
+      "type": "primary",
+      "isShared": false,
+      "fileLocation": "features/benefits/tva-reduite/laws/placeholder-tva-reduite",
+      "currentVersion": "scrape-2025-11-18-001",
+      "lastScraped": "2025-11-18",
+      "nextScrapeScheduled": "2025-12-18",
+      "scrapingFrequency": "monthly",
+      "scrapings": [
+        "scrape-2025-11-18-001"
+      ]
+    }
+  },
+  "topics": {
+    "_comment": "All benefit/service topics. Key = topicId (e.g., 'ris')",
+    "_schema": {
+      "topicId": "string (kebab-case)",
+      "name": "string",
+      "laws": "array of {lawId, type, currentVersion, fileLocation, isShared}",
+      "aggregatedCurrentVersion": "string (scrape-YYYY-MM-DD-NNN)",
+      "lastAggregated": "YYYY-MM-DD"
+    },
+    "ris": {
+      "topicId": "ris",
+      "name": "Revenu d'Intégration Sociale",
+      "laws": [
+        {
+          "lawId": "loi-2002-05-26",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/ris/laws/loi-2002-05-26",
+          "isShared": false
+        },
+        {
+          "lawId": "arrete-2002-07-11",
+          "type": "implementing",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/ris/laws/arrete-2002-07-11",
+          "isShared": false
+        },
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/laws/loi-1971-08-02",
+          "isShared": true
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "agr": {
+      "topicId": "agr",
+      "name": "Allocation de Garantie de Revenus",
+      "laws": [
+        {
+          "lawId": "arrete-1991-11-25",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/agr/laws/arrete-1991-11-25",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "grapa": {
+      "topicId": "grapa",
+      "name": "Garantie de Revenus aux Personnes Âgées",
+      "laws": [
+        {
+          "lawId": "placeholder-grapa",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/grapa/laws/placeholder-grapa",
+          "isShared": false
+        },
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/grapa/laws/loi-1971-08-02",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "pensions": {
+      "topicId": "pensions",
+      "name": "Pensions de retraite et de survie",
+      "laws": [
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/laws/loi-1971-08-02",
+          "isShared": true
+        },
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/laws/loi-1971-08-02",
+          "isShared": true
+        },
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/laws/loi-1971-08-02",
+          "isShared": true
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocations-familiales": {
+      "topicId": "allocations-familiales",
+      "name": "Allocations familiales",
+      "laws": [
+        {
+          "lawId": "placeholder-allocations-familiales",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocations-familiales/laws/placeholder-allocations-familiales",
+          "isShared": false
+        },
+        {
+          "lawId": "loi-1971-08-02",
+          "type": "indexation",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocations-familiales/laws/loi-1971-08-02",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "abattement-succession": {
+      "topicId": "abattement-succession",
+      "name": "Abattement succession",
+      "laws": [
+        {
+          "lawId": "placeholder-abattement-succession",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/abattement-succession/laws/placeholder-abattement-succession",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "abonnement-social-transport": {
+      "topicId": "abonnement-social-transport",
+      "name": "Abonnement social transport",
+      "laws": [
+        {
+          "lawId": "placeholder-abonnement-social-transport",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/abonnement-social-transport/laws/placeholder-abonnement-social-transport",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "accident-travail": {
+      "topicId": "accident-travail",
+      "name": "Accident du travail",
+      "laws": [
+        {
+          "lawId": "placeholder-accident-travail",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/accident-travail/laws/placeholder-accident-travail",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "accompagnement-social": {
+      "topicId": "accompagnement-social",
+      "name": "Accompagnement social",
+      "laws": [
+        {
+          "lawId": "placeholder-accompagnement-social",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/accompagnement-social/laws/placeholder-accompagnement-social",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-alimentaire": {
+      "topicId": "aide-alimentaire",
+      "name": "Aide alimentaire",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-alimentaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-alimentaire/laws/placeholder-aide-alimentaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-juridique": {
+      "topicId": "aide-juridique",
+      "name": "Aide juridique",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-juridique",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-juridique/laws/placeholder-aide-juridique",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-logement": {
+      "topicId": "aide-logement",
+      "name": "Aide au logement",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-logement",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-logement/laws/placeholder-aide-logement",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-menagere": {
+      "topicId": "aide-menagere",
+      "name": "Aide ménagère",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-menagere",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-menagere/laws/placeholder-aide-menagere",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-mobilite": {
+      "topicId": "aide-mobilite",
+      "name": "Aide mobilité",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-mobilite",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-mobilite/laws/placeholder-aide-mobilite",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-personnes-agees": {
+      "topicId": "aide-personnes-agees",
+      "name": "Aide aux personnes âgées",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-personnes-agees",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-personnes-agees/laws/placeholder-aide-personnes-agees",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-sans-abri": {
+      "topicId": "aide-sans-abri",
+      "name": "Aide sans-abri",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-sans-abri",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-sans-abri/laws/placeholder-aide-sans-abri",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-sociale": {
+      "topicId": "aide-sociale",
+      "name": "Aide sociale CPAS",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-sociale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-sociale/laws/placeholder-aide-sociale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "aide-victimes": {
+      "topicId": "aide-victimes",
+      "name": "Aide victimes",
+      "laws": [
+        {
+          "lawId": "placeholder-aide-victimes",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/aide-victimes/laws/placeholder-aide-victimes",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocation-chauffage": {
+      "topicId": "allocation-chauffage",
+      "name": "Allocation chauffage",
+      "laws": [
+        {
+          "lawId": "placeholder-allocation-chauffage",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocation-chauffage/laws/placeholder-allocation-chauffage",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocation-handicapes": {
+      "topicId": "allocation-handicapes",
+      "name": "Allocations handicapés",
+      "laws": [
+        {
+          "lawId": "placeholder-allocation-handicapes",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocation-handicapes/laws/placeholder-allocation-handicapes",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocation-integration": {
+      "topicId": "allocation-integration",
+      "name": "Allocation d'intégration",
+      "laws": [
+        {
+          "lawId": "placeholder-allocation-integration",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocation-integration/laws/placeholder-allocation-integration",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocations-chomage": {
+      "topicId": "allocations-chomage",
+      "name": "Allocations de chômage",
+      "laws": [
+        {
+          "lawId": "placeholder-allocations-chomage",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocations-chomage/laws/placeholder-allocations-chomage",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "allocations-etudes": {
+      "topicId": "allocations-etudes",
+      "name": "Allocations d'études",
+      "laws": [
+        {
+          "lawId": "placeholder-allocations-etudes",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/allocations-etudes/laws/placeholder-allocations-etudes",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "assurance-maladie": {
+      "topicId": "assurance-maladie",
+      "name": "Assurance maladie",
+      "laws": [
+        {
+          "lawId": "placeholder-assurance-maladie",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/assurance-maladie/laws/placeholder-assurance-maladie",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "avantages-nature": {
+      "topicId": "avantages-nature",
+      "name": "Avantages en nature",
+      "laws": [
+        {
+          "lawId": "placeholder-avantages-nature",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/avantages-nature/laws/placeholder-avantages-nature",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "banque-alimentaire": {
+      "topicId": "banque-alimentaire",
+      "name": "Banque alimentaire",
+      "laws": [
+        {
+          "lawId": "placeholder-banque-alimentaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/banque-alimentaire/laws/placeholder-banque-alimentaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "bonus-logement": {
+      "topicId": "bonus-logement",
+      "name": "Bonus logement",
+      "laws": [
+        {
+          "lawId": "placeholder-bonus-logement",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/bonus-logement/laws/placeholder-bonus-logement",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "bourse-etudes": {
+      "topicId": "bourse-etudes",
+      "name": "Bourse d'études",
+      "laws": [
+        {
+          "lawId": "placeholder-bourse-etudes",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/bourse-etudes/laws/placeholder-bourse-etudes",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "budget-energetique": {
+      "topicId": "budget-energetique",
+      "name": "Budget énergétique",
+      "laws": [
+        {
+          "lawId": "placeholder-budget-energetique",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/budget-energetique/laws/placeholder-budget-energetique",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "carte-medicale": {
+      "topicId": "carte-medicale",
+      "name": "Carte médicale",
+      "laws": [
+        {
+          "lawId": "placeholder-carte-medicale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/carte-medicale/laws/placeholder-carte-medicale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "centre-accueil": {
+      "topicId": "centre-accueil",
+      "name": "Centre d'accueil",
+      "laws": [
+        {
+          "lawId": "placeholder-centre-accueil",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/centre-accueil/laws/placeholder-centre-accueil",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "cheques-repas": {
+      "topicId": "cheques-repas",
+      "name": "Chèques repas",
+      "laws": [
+        {
+          "lawId": "placeholder-cheques-repas",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/cheques-repas/laws/placeholder-cheques-repas",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "conge-maladie": {
+      "topicId": "conge-maladie",
+      "name": "Congé maladie",
+      "laws": [
+        {
+          "lawId": "placeholder-conge-maladie",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/conge-maladie/laws/placeholder-conge-maladie",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "conge-maternite": {
+      "topicId": "conge-maternite",
+      "name": "Congé maternité",
+      "laws": [
+        {
+          "lawId": "placeholder-conge-maternite",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/conge-maternite/laws/placeholder-conge-maternite",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "conge-parental": {
+      "topicId": "conge-parental",
+      "name": "Congé parental",
+      "laws": [
+        {
+          "lawId": "placeholder-conge-parental",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/conge-parental/laws/placeholder-conge-parental",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "contrat-duree-determinee": {
+      "topicId": "contrat-duree-determinee",
+      "name": "Contrat durée déterminée",
+      "laws": [
+        {
+          "lawId": "placeholder-contrat-duree-determinee",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/contrat-duree-determinee/laws/placeholder-contrat-duree-determinee",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "contrat-duree-indeterminee": {
+      "topicId": "contrat-duree-indeterminee",
+      "name": "Contrat durée indéterminée",
+      "laws": [
+        {
+          "lawId": "placeholder-contrat-duree-indeterminee",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/contrat-duree-indeterminee/laws/placeholder-contrat-duree-indeterminee",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "contrat-travail": {
+      "topicId": "contrat-travail",
+      "name": "Contrat de travail",
+      "laws": [
+        {
+          "lawId": "placeholder-contrat-travail",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/contrat-travail/laws/placeholder-contrat-travail",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "credit-impot-investissement-durable": {
+      "topicId": "credit-impot-investissement-durable",
+      "name": "Crédit d'impôt investissement durable",
+      "laws": [
+        {
+          "lawId": "placeholder-credit-impot-investissement-durable",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/credit-impot-investissement-durable/laws/placeholder-credit-impot-investissement-durable",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "credit-impot": {
+      "topicId": "credit-impot",
+      "name": "Crédit d'impôt",
+      "laws": [
+        {
+          "lawId": "placeholder-credit-impot",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/credit-impot/laws/placeholder-credit-impot",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "credit-impot-service-local": {
+      "topicId": "credit-impot-service-local",
+      "name": "Crédit d'impôt service local",
+      "laws": [
+        {
+          "lawId": "placeholder-credit-impot-service-local",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/credit-impot-service-local/laws/placeholder-credit-impot-service-local",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "credit-temps": {
+      "topicId": "credit-temps",
+      "name": "Crédit-temps",
+      "laws": [
+        {
+          "lawId": "placeholder-credit-temps",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/credit-temps/laws/placeholder-credit-temps",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-dons": {
+      "topicId": "deduction-dons",
+      "name": "Déduction dons",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-dons",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-dons/laws/placeholder-deduction-dons",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-emprunt-hypothecaire": {
+      "topicId": "deduction-emprunt-hypothecaire",
+      "name": "Déduction emprunt hypothécaire",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-emprunt-hypothecaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-emprunt-hypothecaire/laws/placeholder-deduction-emprunt-hypothecaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-frais-garde": {
+      "topicId": "deduction-frais-garde",
+      "name": "Déduction frais de garde",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-frais-garde",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-frais-garde/laws/placeholder-deduction-frais-garde",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-habitation": {
+      "topicId": "deduction-habitation",
+      "name": "Déduction habitation",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-habitation",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-habitation/laws/placeholder-deduction-habitation",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-investissement": {
+      "topicId": "deduction-investissement",
+      "name": "Déduction investissement",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-investissement",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-investissement/laws/placeholder-deduction-investissement",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-isolation": {
+      "topicId": "deduction-isolation",
+      "name": "Déduction isolation",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-isolation",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-isolation/laws/placeholder-deduction-isolation",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "deduction-vehicule-electrique": {
+      "topicId": "deduction-vehicule-electrique",
+      "name": "Déduction véhicule électrique",
+      "laws": [
+        {
+          "lawId": "placeholder-deduction-vehicule-electrique",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/deduction-vehicule-electrique/laws/placeholder-deduction-vehicule-electrique",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "demission": {
+      "topicId": "demission",
+      "name": "Démission",
+      "laws": [
+        {
+          "lawId": "placeholder-demission",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/demission/laws/placeholder-demission",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "discrimination-emploi": {
+      "topicId": "discrimination-emploi",
+      "name": "Discrimination emploi",
+      "laws": [
+        {
+          "lawId": "placeholder-discrimination-emploi",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/discrimination-emploi/laws/placeholder-discrimination-emploi",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "droit-greve": {
+      "topicId": "droit-greve",
+      "name": "Droit de grève",
+      "laws": [
+        {
+          "lawId": "placeholder-droit-greve",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/droit-greve/laws/placeholder-droit-greve",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "droits-donation-reduits": {
+      "topicId": "droits-donation-reduits",
+      "name": "Droits donation réduits",
+      "laws": [
+        {
+          "lawId": "placeholder-droits-donation-reduits",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/droits-donation-reduits/laws/placeholder-droits-donation-reduits",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "eco-cheque": {
+      "topicId": "eco-cheque",
+      "name": "Éco-chèque",
+      "laws": [
+        {
+          "lawId": "placeholder-eco-cheque",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/eco-cheque/laws/placeholder-eco-cheque",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "egalite-salariale": {
+      "topicId": "egalite-salariale",
+      "name": "Égalité salariale",
+      "laws": [
+        {
+          "lawId": "placeholder-egalite-salariale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/egalite-salariale/laws/placeholder-egalite-salariale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "exoneration-plus-value": {
+      "topicId": "exoneration-plus-value",
+      "name": "Exonération plus-value",
+      "laws": [
+        {
+          "lawId": "placeholder-exoneration-plus-value",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/exoneration-plus-value/laws/placeholder-exoneration-plus-value",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "exoneration-precompte": {
+      "topicId": "exoneration-precompte",
+      "name": "Exonération précompte",
+      "laws": [
+        {
+          "lawId": "placeholder-exoneration-precompte",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/exoneration-precompte/laws/placeholder-exoneration-precompte",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "exoneration-revenus-mobiliers": {
+      "topicId": "exoneration-revenus-mobiliers",
+      "name": "Exonération revenus mobiliers",
+      "laws": [
+        {
+          "lawId": "placeholder-exoneration-revenus-mobiliers",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/exoneration-revenus-mobiliers/laws/placeholder-exoneration-revenus-mobiliers",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "flexi-job": {
+      "topicId": "flexi-job",
+      "name": "Flexi-job",
+      "laws": [
+        {
+          "lawId": "placeholder-flexi-job",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/flexi-job/laws/placeholder-flexi-job",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "fonds-creances": {
+      "topicId": "fonds-creances",
+      "name": "Fonds créances",
+      "laws": [
+        {
+          "lawId": "placeholder-fonds-creances",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/fonds-creances/laws/placeholder-fonds-creances",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "fonds-securite-existence": {
+      "topicId": "fonds-securite-existence",
+      "name": "Fonds de sécurité d'existence",
+      "laws": [
+        {
+          "lawId": "placeholder-fonds-securite-existence",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/fonds-securite-existence/laws/placeholder-fonds-securite-existence",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "formation-entreprise": {
+      "topicId": "formation-entreprise",
+      "name": "Formation entreprise",
+      "laws": [
+        {
+          "lawId": "placeholder-formation-entreprise",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/formation-entreprise/laws/placeholder-formation-entreprise",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "formation-professionnelle": {
+      "topicId": "formation-professionnelle",
+      "name": "Formation professionnelle",
+      "laws": [
+        {
+          "lawId": "placeholder-formation-professionnelle",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/formation-professionnelle/laws/placeholder-formation-professionnelle",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "frais-professionnels": {
+      "topicId": "frais-professionnels",
+      "name": "Frais professionnels",
+      "laws": [
+        {
+          "lawId": "placeholder-frais-professionnels",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/frais-professionnels/laws/placeholder-frais-professionnels",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "garantie-locative": {
+      "topicId": "garantie-locative",
+      "name": "Garantie locative",
+      "laws": [
+        {
+          "lawId": "placeholder-garantie-locative",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/garantie-locative/laws/placeholder-garantie-locative",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "garde-enfants": {
+      "topicId": "garde-enfants",
+      "name": "Garde d'enfants",
+      "laws": [
+        {
+          "lawId": "placeholder-garde-enfants",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/garde-enfants/laws/placeholder-garde-enfants",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "harcelement-travail": {
+      "topicId": "harcelement-travail",
+      "name": "Harcèlement au travail",
+      "laws": [
+        {
+          "lawId": "placeholder-harcelement-travail",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/harcelement-travail/laws/placeholder-harcelement-travail",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "horaire-flexible": {
+      "topicId": "horaire-flexible",
+      "name": "Horaire flexible",
+      "laws": [
+        {
+          "lawId": "placeholder-horaire-flexible",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/horaire-flexible/laws/placeholder-horaire-flexible",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "inscription-ecole": {
+      "topicId": "inscription-ecole",
+      "name": "Inscription école",
+      "laws": [
+        {
+          "lawId": "placeholder-inscription-ecole",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/inscription-ecole/laws/placeholder-inscription-ecole",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "insertion-professionnelle": {
+      "topicId": "insertion-professionnelle",
+      "name": "Insertion professionnelle",
+      "laws": [
+        {
+          "lawId": "placeholder-insertion-professionnelle",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/insertion-professionnelle/laws/placeholder-insertion-professionnelle",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "licenciement": {
+      "topicId": "licenciement",
+      "name": "Licenciement",
+      "laws": [
+        {
+          "lawId": "placeholder-licenciement",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/licenciement/laws/placeholder-licenciement",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "logement-social": {
+      "topicId": "logement-social",
+      "name": "Logement social",
+      "laws": [
+        {
+          "lawId": "placeholder-logement-social",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/logement-social/laws/placeholder-logement-social",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "maladie-professionnelle": {
+      "topicId": "maladie-professionnelle",
+      "name": "Maladie professionnelle",
+      "laws": [
+        {
+          "lawId": "placeholder-maladie-professionnelle",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/maladie-professionnelle/laws/placeholder-maladie-professionnelle",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "mediation-dettes": {
+      "topicId": "mediation-dettes",
+      "name": "Médiation dettes",
+      "laws": [
+        {
+          "lawId": "placeholder-mediation-dettes",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/mediation-dettes/laws/placeholder-mediation-dettes",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "mediation-familiale": {
+      "topicId": "mediation-familiale",
+      "name": "Médiation familiale",
+      "laws": [
+        {
+          "lawId": "placeholder-mediation-familiale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/mediation-familiale/laws/placeholder-mediation-familiale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "outplacement": {
+      "topicId": "outplacement",
+      "name": "Outplacement",
+      "laws": [
+        {
+          "lawId": "placeholder-outplacement",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/outplacement/laws/placeholder-outplacement",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "pension-complementaire": {
+      "topicId": "pension-complementaire",
+      "name": "Pension complémentaire",
+      "laws": [
+        {
+          "lawId": "placeholder-pension-complementaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/pension-complementaire/laws/placeholder-pension-complementaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "pension-retraite": {
+      "topicId": "pension-retraite",
+      "name": "Pensions de retraite",
+      "laws": [
+        {
+          "lawId": "placeholder-pension-retraite",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/pension-retraite/laws/placeholder-pension-retraite",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "pension-survie": {
+      "topicId": "pension-survie",
+      "name": "Pensions de survie",
+      "laws": [
+        {
+          "lawId": "placeholder-pension-survie",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/pension-survie/laws/placeholder-pension-survie",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "preavis": {
+      "topicId": "preavis",
+      "name": "Préavis",
+      "laws": [
+        {
+          "lawId": "placeholder-preavis",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/preavis/laws/placeholder-preavis",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "prime-naissance": {
+      "topicId": "prime-naissance",
+      "name": "Prime de naissance",
+      "laws": [
+        {
+          "lawId": "placeholder-prime-naissance",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/prime-naissance/laws/placeholder-prime-naissance",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "prime-renovation": {
+      "topicId": "prime-renovation",
+      "name": "Prime rénovation",
+      "laws": [
+        {
+          "lawId": "placeholder-prime-renovation",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/prime-renovation/laws/placeholder-prime-renovation",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "protection-enfance": {
+      "topicId": "protection-enfance",
+      "name": "Protection enfance",
+      "laws": [
+        {
+          "lawId": "placeholder-protection-enfance",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/protection-enfance/laws/placeholder-protection-enfance",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "protection-juridique": {
+      "topicId": "protection-juridique",
+      "name": "Protection juridique",
+      "laws": [
+        {
+          "lawId": "placeholder-protection-juridique",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/protection-juridique/laws/placeholder-protection-juridique",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "quotient-conjugal": {
+      "topicId": "quotient-conjugal",
+      "name": "Quotient conjugal",
+      "laws": [
+        {
+          "lawId": "placeholder-quotient-conjugal",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/quotient-conjugal/laws/placeholder-quotient-conjugal",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "reduction-epargne-pension": {
+      "topicId": "reduction-epargne-pension",
+      "name": "Réduction épargne pension",
+      "laws": [
+        {
+          "lawId": "placeholder-reduction-epargne-pension",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/reduction-epargne-pension/laws/placeholder-reduction-epargne-pension",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "rente-alimentaire": {
+      "topicId": "rente-alimentaire",
+      "name": "Rente alimentaire",
+      "laws": [
+        {
+          "lawId": "placeholder-rente-alimentaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/rente-alimentaire/laws/placeholder-rente-alimentaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "repas-domicile": {
+      "topicId": "repas-domicile",
+      "name": "Repas à domicile",
+      "laws": [
+        {
+          "lawId": "placeholder-repas-domicile",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/repas-domicile/laws/placeholder-repas-domicile",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "repas-scolaires-gratuits": {
+      "topicId": "repas-scolaires-gratuits",
+      "name": "Repas scolaires gratuits",
+      "laws": [
+        {
+          "lawId": "placeholder-repas-scolaires-gratuits",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/repas-scolaires-gratuits/laws/placeholder-repas-scolaires-gratuits",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "representation-syndicale": {
+      "topicId": "representation-syndicale",
+      "name": "Représentation syndicale",
+      "laws": [
+        {
+          "lawId": "placeholder-representation-syndicale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/representation-syndicale/laws/placeholder-representation-syndicale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "restaurants-sociaux": {
+      "topicId": "restaurants-sociaux",
+      "name": "Restaurants sociaux",
+      "laws": [
+        {
+          "lawId": "placeholder-restaurants-sociaux",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/restaurants-sociaux/laws/placeholder-restaurants-sociaux",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "revenu-cadastral-exoneration": {
+      "topicId": "revenu-cadastral-exoneration",
+      "name": "Revenu cadastral exonération",
+      "laws": [
+        {
+          "lawId": "placeholder-revenu-cadastral-exoneration",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/revenu-cadastral-exoneration/laws/placeholder-revenu-cadastral-exoneration",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "service-public-emploi": {
+      "topicId": "service-public-emploi",
+      "name": "Service public emploi",
+      "laws": [
+        {
+          "lawId": "placeholder-service-public-emploi",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/service-public-emploi/laws/placeholder-service-public-emploi",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "soins-sante-mentale": {
+      "topicId": "soins-sante-mentale",
+      "name": "Soins santé mentale",
+      "laws": [
+        {
+          "lawId": "placeholder-soins-sante-mentale",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/soins-sante-mentale/laws/placeholder-soins-sante-mentale",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "stage": {
+      "topicId": "stage",
+      "name": "Stage",
+      "laws": [
+        {
+          "lawId": "placeholder-stage",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/stage/laws/placeholder-stage",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "tarif-social-energie": {
+      "topicId": "tarif-social-energie",
+      "name": "Tarif social énergie",
+      "laws": [
+        {
+          "lawId": "placeholder-tarif-social-energie",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/tarif-social-energie/laws/placeholder-tarif-social-energie",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "tele-assistance": {
+      "topicId": "tele-assistance",
+      "name": "Télé-assistance",
+      "laws": [
+        {
+          "lawId": "placeholder-tele-assistance",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/tele-assistance/laws/placeholder-tele-assistance",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "teletravail": {
+      "topicId": "teletravail",
+      "name": "Télétravail",
+      "laws": [
+        {
+          "lawId": "placeholder-teletravail",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/teletravail/laws/placeholder-teletravail",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "temps-partiel": {
+      "topicId": "temps-partiel",
+      "name": "Temps partiel",
+      "laws": [
+        {
+          "lawId": "placeholder-temps-partiel",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/temps-partiel/laws/placeholder-temps-partiel",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "transport-scolaire": {
+      "topicId": "transport-scolaire",
+      "name": "Transport scolaire",
+      "laws": [
+        {
+          "lawId": "placeholder-transport-scolaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/transport-scolaire/laws/placeholder-transport-scolaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "travail-etudiant": {
+      "topicId": "travail-etudiant",
+      "name": "Travail étudiant",
+      "laws": [
+        {
+          "lawId": "placeholder-travail-etudiant",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/travail-etudiant/laws/placeholder-travail-etudiant",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "travail-interimaire": {
+      "topicId": "travail-interimaire",
+      "name": "Travail intérimaire",
+      "laws": [
+        {
+          "lawId": "placeholder-travail-interimaire",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/travail-interimaire/laws/placeholder-travail-interimaire",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    },
+    "tva-reduite": {
+      "topicId": "tva-reduite",
+      "name": "TVA réduite",
+      "laws": [
+        {
+          "lawId": "placeholder-tva-reduite",
+          "type": "primary",
+          "currentVersion": "scrape-2025-11-18-001",
+          "fileLocation": "features/benefits/tva-reduite/laws/placeholder-tva-reduite",
+          "isShared": false
+        }
+      ],
+      "aggregatedCurrentVersion": "scrape-2025-11-18-001",
+      "lastAggregated": "2025-11-18"
+    }
+  }
+}

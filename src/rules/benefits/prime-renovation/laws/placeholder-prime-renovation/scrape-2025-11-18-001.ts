@@ -1,0 +1,135 @@
+/**
+ * Business Rules for PrimeRenovation
+ *
+ * Implements eligibility rules for PrimeRenovation.
+ *
+ * BASE JURIDIQUE:
+ * - To be completed with specific legal references
+ */
+
+import { Engine } from 'json-rules-engine';
+import { EligibilityCheck } from '../domain/types';
+
+/**
+ * Create the PrimeRenovation eligibility rules engine
+ */
+function createPrimeRenovationEngine(): Engine {
+  const engine = new Engine();
+
+  // Rule 1: Basic eligibility check
+  engine.addRule({
+    conditions: {
+      all: [
+        {
+          fact: 'meetsBasicConditions',
+          operator: 'equal',
+          value: true,
+        },
+      ],
+    },
+    event: {
+      type: 'primeRenovation-eligible',
+      params: {
+        message: 'Éligible pour PrimeRenovation',
+      },
+    },
+    priority: 5,
+  });
+
+  // Rule 2: Ineligibility check
+  engine.addRule({
+    conditions: {
+      any: [
+        {
+          fact: 'meetsBasicConditions',
+          operator: 'equal',
+          value: false,
+        },
+      ],
+    },
+    event: {
+      type: 'primeRenovation-ineligible',
+      params: {
+        reason: 'conditions de base non remplies',
+        priority: 10,
+      },
+    },
+    priority: 10,
+  });
+
+  return engine;
+}
+
+/**
+ * Singleton instance of the PrimeRenovation rules engine
+ */
+const primeRenovationEngineInstance = createPrimeRenovationEngine();
+
+/**
+ * Calculate PrimeRenovation amount
+ */
+export function calculatePrimeRenovationAmount(
+  // Parameters to be defined based on specific requirements
+): number {
+  // Calculation logic to be implemented
+  return 0;
+}
+
+/**
+ * Check PrimeRenovation eligibility
+ */
+export async function checkPrimeRenovationEligibility(
+  // Parameters to be defined based on specific requirements
+): Promise<EligibilityCheck> {
+  const facts = {
+    // Facts to be defined
+  };
+
+  try {
+    const results = await primeRenovationEngineInstance.run(facts);
+
+    const ineligibleEvent = results.events.find((e) => e.type === 'primeRenovation-ineligible');
+    const eligibleEvent = results.events.find((e) => e.type === 'primeRenovation-eligible');
+
+    if (ineligibleEvent) {
+      return {
+        benefitType: 'housing-allowance', // To be updated with correct type
+        isEligible: false,
+        reason: ineligibleEvent.params?.reason,
+      };
+    }
+
+    if (eligibleEvent) {
+      return {
+        benefitType: 'housing-allowance', // To be updated with correct type
+        isEligible: true,
+        calculatedAmount: 0,
+      };
+    }
+
+    return {
+      benefitType: 'housing-allowance', // To be updated with correct type
+      isEligible: false,
+      reason: 'conditions non remplies',
+    };
+  } catch (error) {
+    throw new Error(`Error checking PrimeRenovation eligibility: ${error}`);
+  }
+}
+
+/**
+ * Export rules in JSON format for transparency
+ */
+export const PRIMERENOVATION_RULES_JSON = {
+  legalFramework: {
+    note: 'Base juridique à compléter',
+  },
+  rules: [
+    {
+      id: 'primeRenovation-basic-eligibility',
+      description: 'Conditions de base à définir',
+      condition: 'meetsBasicConditions == true',
+      priority: 5,
+    },
+  ],
+};
