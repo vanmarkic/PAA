@@ -49,10 +49,19 @@ export interface PipelineResult {
 }
 
 export class PipelineOrchestrator {
+  private config: ClaudeAPIConfig;
+  
   constructor(
     private claudeClient: ClaudeAPIClient,
-    private config: ClaudeAPIConfig
-  ) {}
+    config: ClaudeAPIConfig
+  ) {
+    // Ensure all required fields are set
+    this.config = {
+      apiKey: config.apiKey,
+      model: config.model || 'claude-opus-4-1',
+      maxTokens: config.maxTokens || 4096,
+    };
+  }
 
   /**
    * Complete pipeline: Legal Source → Feature → Rules → Machine → Lineage
@@ -200,7 +209,11 @@ Return JSON with: authority, title, officialUrl (if mentioned), publicationDate,
     const result = await generateFeatureFromLegalText(
       legalText,
       legalSource,
-      this.config
+      {
+        apiKey: this.config.apiKey,
+        model: this.config.model!,
+        maxTokens: this.config.maxTokens!,
+      }
     );
 
     if (!result.success || !result.newContent) {
@@ -224,7 +237,11 @@ Return JSON with: authority, title, officialUrl (if mentioned), publicationDate,
   }
 
   private async generateRules(feature: any): Promise<any> {
-    const result = await generateRulesFromFeature(feature, this.config);
+    const result = await generateRulesFromFeature(feature, {
+      apiKey: this.config.apiKey,
+      model: this.config.model!,
+      maxTokens: this.config.maxTokens!,
+    });
 
     if (!result.success || !result.newContent) {
       throw new Error(`Rules generation failed: ${result.error || 'Unknown error'}`);
@@ -246,7 +263,11 @@ Return JSON with: authority, title, officialUrl (if mentioned), publicationDate,
     rules: any,
     feature: any
   ): Promise<any | null> {
-    const result = await generateMachineFromRules(rules, feature, this.config);
+    const result = await generateMachineFromRules(rules, feature, {
+      apiKey: this.config.apiKey,
+      model: this.config.model!,
+      maxTokens: this.config.maxTokens!,
+    });
 
     if (!result || !result.success || !result.newContent) {
       return null;

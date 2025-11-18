@@ -23,7 +23,7 @@ export class ClaudeAPIClient {
 
   constructor(config: ClaudeAPIConfig) {
     this.config = {
-      model: config.model || 'claude-3-5-sonnet-20241022',
+      model: config.model || 'claude-opus-4-1',
       maxTokens: config.maxTokens || 4096,
       ...config,
     };

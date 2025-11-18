@@ -549,6 +549,29 @@ function getRulesPath(benefitId: string): string {
 }
 
 // ============================================================================
+// POST-PROCESSING (Strip Markdown Wrappers)
+// ============================================================================
+
+/**
+ * Strip markdown code block wrappers from generated content
+ * Safety net in case Claude still includes them despite instructions
+ */
+function stripMarkdownWrapper(content: string): string {
+  if (!content) return content;
+  
+  // Remove markdown code block wrappers at the start
+  let cleaned = content
+    .replace(/^```(?:gherkin|typescript|ts|javascript|js)?\n?/gm, '')
+    .replace(/\n?```\s*$/gm, '')
+    .trim();
+  
+  // Also handle cases where there might be language tags
+  cleaned = cleaned.replace(/^```[a-z]+\n/gm, '').replace(/\n```$/gm, '');
+  
+  return cleaned.trim();
+}
+
+// ============================================================================
 // INITIAL GENERATION FUNCTIONS (NEW)
 // ============================================================================
 
@@ -564,7 +587,10 @@ export async function generateFeatureFromLegalText(
 
   try {
     const prompt = generateFeatureGenerationPrompt(legalText, legalSource);
-    const featureContent = await callClaudeAPI(prompt, config);
+    const rawContent = await callClaudeAPI(prompt, config);
+    
+    // Strip markdown wrappers as safety net
+    const featureContent = stripMarkdownWrapper(rawContent);
     
     const validation = validateFeatureContent(featureContent, '1.0.0');
     
@@ -622,41 +648,42 @@ ${legalText}
    - @legal-url:${legalSource.officialUrl}
    - @effective-date:${legalSource.effectiveDate || new Date().toISOString().split('T')[0]}
 
-5. Follow this structure:
-\`\`\`gherkin
-# language: fr
-# @specification-version:1.0.0
-# @legal-basis:${legalSource.title}
-# @legal-url:${legalSource.officialUrl}
-# @effective-date:${legalSource.effectiveDate || new Date().toISOString().split('T')[0]}
+5. Follow this structure (return RAW content, NO markdown code blocks):
+   # language: fr
+   # @specification-version:1.0.0
+   # @legal-basis:${legalSource.title}
+   # @legal-url:${legalSource.officialUrl}
+   # @effective-date:${legalSource.effectiveDate || new Date().toISOString().split('T')[0]}
 
-Fonctionnalité: [Name]
-  En tant que [user]
-  Je veux [goal]
-  Afin de [benefit]
+   Fonctionnalité: [Name]
+     En tant que [user]
+     Je veux [goal]
+     Afin de [benefit]
 
-  Contexte:
-    Étant donné que [background]
+     Contexte:
+       Étant donné que [background]
 
-  Scénario: [Scenario name]
-    Étant donné que [condition]
-    Quand [action]
-    Alors [outcome]
-\`\`\`
+     Scénario: [Scenario name]
+       Étant donné que [condition]
+       Quand [action]
+       Alors [outcome]
 
 ## CRITICAL REQUIREMENTS
+- Return RAW file content, NO markdown code blocks (\`\`\`gherkin or \`\`\`)
+- Start directly with: # language: fr
 - Use French language
 - Include all eligibility conditions
 - Preserve all monetary amounts exactly
 - Maintain semantic accuracy
 - Valid Gherkin syntax
+- Do NOT wrap the content in markdown code blocks
 
-Return ONLY the feature file content, no explanation.`;
+Return ONLY the raw feature file content, no markdown, no explanation.`;
 }
 
 /**
  * Generate rules from feature (INITIAL GENERATION)
- * Follows conversionService.ts patterns
+ * Uses template-based approach: template provides structure, Claude fills in business logic
  */
 export async function generateRulesFromFeature(
   feature: {
@@ -667,21 +694,41 @@ export async function generateRulesFromFeature(
       specificationVersion: string;
       legalBasis?: string;
       legalUrl?: string;
+      authority?: string;
+      effectiveDate?: string;
     };
   },
   config: ClaudeAPIConfig
 ): Promise<AIRewriteResult> {
-  console.log(`🤖 Generating rules file from feature...`);
+  console.log(`🤖 Generating rules file from feature using template approach...`);
 
   try {
-    // Read example rules to show pattern
+    // Import template generator
+    const { generateRuleTemplate, extractTemplateContextFromFeature } = await import('./ruleTemplateGenerator');
+    
+    // Generate template structure
+    const featurePath = path.join(process.cwd(), 'features', 'benefits', `${feature.id}.feature`);
+    const templateContext = extractTemplateContextFromFeature(featurePath, feature.content);
+    
+    // Merge metadata from feature
+    templateContext.legalBasis = feature.metadata.legalBasis || templateContext.legalBasis;
+    templateContext.legalUrl = feature.metadata.legalUrl;
+    templateContext.authority = feature.metadata.authority;
+    templateContext.effectiveDate = feature.metadata.effectiveDate || templateContext.effectiveDate;
+    
+    const template = generateRuleTemplate(templateContext);
+    
+    // Read example rules to show business logic patterns
     const exampleRulesPath = path.join(process.cwd(), 'src', 'rules', 'risRules.ts');
     const exampleRules = fs.existsSync(exampleRulesPath)
-      ? fs.readFileSync(exampleRulesPath, 'utf-8').substring(0, 2000)
+      ? fs.readFileSync(exampleRulesPath, 'utf-8').substring(0, 3000)
       : '// Example rules pattern';
 
-    const prompt = generateRulesGenerationPrompt(feature, exampleRules);
-    const rulesContent = await callClaudeAPI(prompt, config);
+    const prompt = generateRulesGenerationPromptWithTemplate(feature, template, exampleRules);
+    const rawContent = await callClaudeAPI(prompt, config);
+    
+    // Strip markdown wrappers as safety net
+    const rulesContent = stripMarkdownWrapper(rawContent);
     
     const validation = validateRulesContent(
       rulesContent,
@@ -727,14 +774,10 @@ You are an expert TypeScript developer working on a Belgian social benefits syst
 Generate a rules implementation file that follows the conversionService.ts patterns.
 
 ## Feature Specification
-\`\`\`gherkin
 ${feature.content}
-\`\`\`
 
-## Example Rules Pattern (Follow This Structure)
-\`\`\`typescript
+## Example Rules Pattern (Follow This Structure - RAW TypeScript, NO markdown):
 ${exampleRules}
-\`\`\`
 
 ## Instructions
 1. Create rules file: src/rules/${feature.id}Rules.ts
@@ -743,7 +786,6 @@ ${exampleRules}
 4. Extract events from "Quand" steps
 5. Extract outcomes from "Alors" steps
 6. Add metadata:
-   \`\`\`typescript
    export const ${feature.id.toUpperCase()}_RULES_METADATA = {
      implementsSpecification: '${feature.metadata.specificationVersion}',
      implementationVersion: '${feature.metadata.specificationVersion}',
@@ -751,14 +793,11 @@ ${exampleRules}
      lastSyncedWith: 'features/benefits/${feature.id}.feature',
      generatedFrom: 'features/benefits/${feature.id}.feature@${feature.metadata.specificationVersion}',
    };
-   \`\`\`
 
 7. Include legal framework references:
-   \`\`\`typescript
    // BASE JURIDIQUE:
    // - ${feature.metadata.legalBasis || 'N/A'}
    //   ${feature.metadata.legalUrl || 'N/A'}
-   \`\`\`
 
 8. Use conversionService.ts patterns:
    - Extract structure
@@ -767,13 +806,74 @@ ${exampleRules}
    - Generate rules
 
 ## CRITICAL REQUIREMENTS
+- Return RAW TypeScript file content, NO markdown code blocks (\`\`\`typescript or \`\`\`)
+- Start directly with: import statements or comments
 - TypeScript must compile
 - Follow json-rules-engine patterns exactly
 - All amounts must match feature file
 - Version MUST be: ${feature.metadata.specificationVersion}
 - Include proper imports and exports
+- Do NOT wrap the content in markdown code blocks
 
-Return ONLY the TypeScript file content, no explanation.`;
+Return ONLY the raw TypeScript file content, no markdown, no explanation.`;
+}
+
+/**
+ * Generate rules generation prompt with template approach
+ * Template provides structure, Claude fills in business logic
+ */
+function generateRulesGenerationPromptWithTemplate(
+  feature: any,
+  template: string,
+  exampleRules: string
+): string {
+  return `# Task: Fill in Rule Template with Business Logic from Gherkin Feature
+
+You are an expert TypeScript developer working on a Belgian social benefits system.
+You will receive a TEMPLATE with the file structure already defined.
+Your task is to FILL IN the business logic based on the Gherkin feature scenarios.
+
+## Gherkin Feature Specification
+${feature.content}
+
+## Template Structure (DO NOT CHANGE - Only fill in TODO sections):
+${template}
+
+## Example Business Logic (See how rules are implemented):
+${exampleRules.substring(0, 2000)}
+
+## Your Task:
+1. **Keep the template structure EXACTLY as provided** (imports, metadata, function signatures, exports)
+2. **Fill in ONLY the TODO sections** with business logic:
+   - Replace "TODO: Claude will generate rules here" with actual engine.addRule() calls
+   - Extract conditions from "Étant donné" steps → map to json-rules-engine facts
+   - Extract events from "Quand" steps → map to event types
+   - Extract outcomes from "Alors" steps → map to event params
+   - Implement calculate${feature.id.charAt(0).toUpperCase() + feature.id.slice(1)}Amount() based on scenarios
+   - Implement check${feature.id.charAt(0).toUpperCase() + feature.id.slice(1)}Eligibility() facts mapping
+   - Populate _RULES_JSON export with actual rules
+
+3. **Follow json-rules-engine patterns**:
+   - Use \`conditions.all\` for AND logic
+   - Use \`conditions.any\` for OR logic
+   - Use appropriate operators: 'equal', 'lessThan', 'greaterThan', etc.
+   - Set priority (higher = checked first)
+   - Include meaningful event params (reason, amount, etc.)
+
+4. **Match amounts exactly** from Gherkin scenarios
+
+5. **Use proper TypeScript types** from domain/types.ts
+
+## CRITICAL REQUIREMENTS
+- Return COMPLETE file content (template + filled business logic)
+- NO markdown code blocks (\`\`\`typescript or \`\`\`)
+- Start directly with: /** (file header comment)
+- TypeScript must compile
+- All TODO comments must be replaced with actual implementation
+- Version MUST be: ${feature.metadata.specificationVersion}
+- Do NOT wrap the content in markdown code blocks
+
+Return ONLY the complete TypeScript file content, no markdown, no explanation.`;
 }
 
 /**
@@ -808,7 +908,10 @@ export async function generateMachineFromRules(
       : '// Example machine pattern';
 
     const prompt = generateMachineGenerationPrompt(rules, feature, exampleMachine);
-    const machineContent = await callClaudeAPI(prompt, config);
+    const rawContent = await callClaudeAPI(prompt, config);
+    
+    // Strip markdown wrappers as safety net
+    const machineContent = stripMarkdownWrapper(rawContent);
     
     const validation = validateMachineContent(machineContent);
     
@@ -856,18 +959,14 @@ You are an expert TypeScript/XState developer.
 Generate an XState state machine that orchestrates these rules.
 
 ## Rules
-\`\`\`typescript
 ${rules.content.substring(0, 1500)}
-\`\`\`
 
 ## Feature Context
 - Name: ${feature.name}
 - ID: ${feature.id}
 
-## Example Machine Pattern (Follow This Structure)
-\`\`\`typescript
+## Example Machine Pattern (Follow This Structure - RAW TypeScript, NO markdown):
 ${exampleMachine}
-\`\`\`
 
 ## Instructions
 1. Create machine file: src/workflows/${feature.id}Machine.ts
@@ -878,13 +977,16 @@ ${exampleMachine}
 6. Follow conversionMachine.ts patterns
 
 ## CRITICAL REQUIREMENTS
+- Return RAW TypeScript file content, NO markdown code blocks (\`\`\`typescript or \`\`\`)
+- Start directly with: import statements
 - Valid XState machine syntax
 - TypeScript must compile
 - States must be meaningful
 - Events must match rules
 - Include proper imports
+- Do NOT wrap the content in markdown code blocks
 
-Return ONLY the TypeScript file content, no explanation.`;
+Return ONLY the raw TypeScript file content, no markdown, no explanation.`;
 }
 
 function validateMachineContent(content: string): {
