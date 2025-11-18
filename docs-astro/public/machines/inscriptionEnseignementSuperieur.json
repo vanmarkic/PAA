@@ -1,0 +1,38 @@
+{
+  "id": "inscriptionEnseignementSuperieur",
+  "name": "Inscription Enseignement Supérieur",
+  "category": "education",
+  "description": "",
+  "states": [
+    "choixEtudes",
+    "CHOISIR_PROGRAMME",
+    "verificationAcces",
+    "VERIFIER_FINANCABILITE",
+    "evaluationFinancabilite",
+    "criteres",
+    "depotDossier",
+    "DEPOSER_DOSSIER",
+    "demandeBourse",
+    "DEMANDER_BOURSE",
+    "PAYER_MINERVAL",
+    "analyseBourse",
+    "BOURSE_ACCORDEE",
+    "montants",
+    "paiementMinerval",
+    "inscriptionDefinitive",
+    "INSCRIPTION_VALIDEE",
+    "refusInscription",
+    "termine"
+  ],
+  "events": [
+    "CHOISIR_PROGRAMME",
+    "VERIFIER_FINANCABILITE",
+    "DEPOSER_DOSSIER",
+    "DEMANDER_BOURSE",
+    "BOURSE_ACCORDEE",
+    "PAYER_MINERVAL",
+    "INSCRIPTION_VALIDEE"
+  ],
+  "initial": "choixEtudes",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

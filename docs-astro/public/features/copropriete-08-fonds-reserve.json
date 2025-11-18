@@ -1,0 +1,139 @@
+{
+  "id": "copropriete-08-fonds-reserve",
+  "name": "Constitution du Fonds de Réserve",
+  "description": "  En tant que copropriété\n  Je veux constituer un fonds de réserve\n  Afin de financer les gros travaux futurs",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la loi impose un fonds de réserve"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "d2a62982-bc01-4316-8c22-75a80b0ac1fb",
+      "name": "Calcul du montant obligatoire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le budget annuel est de 50000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le fonds de réserve actuel est de 2000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule le minimum légal"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le fonds doit atteindre 5% du budget"
+        },
+        {
+          "keyword": "Soit",
+          "text": "2500€ minimum"
+        },
+        {
+          "keyword": "Et",
+          "text": "une provision de 500€ est nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "1d8e0010-b56c-45ed-8e4f-07f11e0966d2",
+      "name": "Utilisation du fonds de réserve",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le fonds contient 15000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des travaux de toiture coûtent 12000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG vote aux 2/3 l'utilisation du fonds"
+        },
+        {
+          "keyword": "Alors",
+          "text": "12000€ peuvent être utilisés"
+        },
+        {
+          "keyword": "Et",
+          "text": "le fonds doit être reconstitué progressivement"
+        },
+        {
+          "keyword": "Et",
+          "text": "un plan sur 5 ans maximum est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0f463906-9843-4b3e-a5df-f52714f4e2ea",
+      "name": "Placement du fonds de réserve",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le fonds atteint 20000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG décide du placement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les options autorisées sont:",
+          "dataTable": {
+            "headers": [
+              "Type placement",
+              "Risque",
+              "Autorisé"
+            ],
+            "rows": [
+              {
+                "Type placement": "Compte épargne",
+                "Risque": "Faible",
+                "Autorisé": "Oui"
+              },
+              {
+                "Type placement": "Obligations d'État",
+                "Risque": "Faible",
+                "Autorisé": "Oui"
+              },
+              {
+                "Type placement": "Actions",
+                "Risque": "Élevé",
+                "Autorisé": "Non"
+              },
+              {
+                "Type placement": "Immobilier",
+                "Risque": "Moyen",
+                "Autorisé": "Non"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

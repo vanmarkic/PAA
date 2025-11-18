@@ -1,0 +1,150 @@
+{
+  "id": "copropriete-05-calcul-charges",
+  "name": "Calcul et Répartition des Charges",
+  "description": "  En tant que syndic\n  Je veux calculer les charges de copropriété\n  Afin d'établir les appels de fonds",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le budget annuel est de 50000€"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la copropriété compte 1000 millièmes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "fdbb3669-7e4f-4f6c-8520-d0422cfb42d4",
+      "name": "Calcul charges générales au prorata des millièmes",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un copropriétaire possède 85 millièmes"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les charges générales sont de 30000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule sa quote-part"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit payer 2550€ annuellement"
+        },
+        {
+          "keyword": "Et",
+          "text": "soit 212,50€ par mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5fc86919-7652-4058-8319-9fb48857c7ae",
+      "name": "Calcul charges spéciales ascenseur",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'entretien ascenseur coûte 3000€/an"
+        },
+        {
+          "keyword": "Et que",
+          "text": "seuls les étages 1 à 5 participent"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un copropriétaire du 3ème étage a 50 millièmes"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule sa participation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "sa quote-part est calculée selon la grille:",
+          "dataTable": {
+            "headers": [
+              "Étage",
+              "Coefficient"
+            ],
+            "rows": [
+              {
+                "Étage": "RDC",
+                "Coefficient": "0"
+              },
+              {
+                "Étage": "1",
+                "Coefficient": "0.5"
+              },
+              {
+                "Étage": "2",
+                "Coefficient": "1"
+              },
+              {
+                "Étage": "3",
+                "Coefficient": "1.5"
+              },
+              {
+                "Étage": "4",
+                "Coefficient": "2"
+              },
+              {
+                "Étage": "5",
+                "Coefficient": "2.5"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0f1bd806-a2f3-4d2c-bc1f-2f1f19bd1d01",
+      "name": "Charges impayées avec intérêts de retard",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un copropriétaire doit 1000€"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il a 60 jours de retard"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule les pénalités"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les intérêts sont de 8% annuel"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant total dû est 1013,15€"
+        },
+        {
+          "keyword": "Et",
+          "text": "des frais de rappel de 15€ s'ajoutent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

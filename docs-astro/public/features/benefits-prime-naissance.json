@@ -1,0 +1,767 @@
+{
+  "id": "benefits-prime-naissance",
+  "name": "Prime de Naissance",
+  "description": "  En tant que parent ou futur parent\n  Je veux savoir si j'ai droit à la prime de naissance\n  Afin de recevoir une aide financière unique à la naissance de mon enfant",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les montants de la prime de naissance 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Région",
+            "Premier enfant",
+            "Enfants suivants"
+          ],
+          "rows": [
+            {
+              "Région": "Bruxelles",
+              "Premier enfant": "1367.74€",
+              "Enfants suivants": "621.70€"
+            },
+            {
+              "Région": "Wallonie",
+              "Premier enfant": "1100€",
+              "Enfants suivants": "500€"
+            },
+            {
+              "Région": "Flandre",
+              "Premier enfant": "1269.25€",
+              "Enfants suivants": "1269.25€"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "la prime peut être demandée:",
+        "dataTable": {
+          "headers": [
+            "Période",
+            "Description"
+          ],
+          "rows": [
+            {
+              "Période": "À partir du 6ème mois de grossesse",
+              "Description": "Demande anticipée possible"
+            },
+            {
+              "Période": "Dans les 90 jours après la naissance",
+              "Description": "Délai normal de déclaration"
+            },
+            {
+              "Période": "Jusqu'à 5 ans après la naissance",
+              "Description": "Délai exceptionnel avec justification"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "a7e77204-082c-4327-8152-ac1c8ba92874",
+      "name": "Premier enfant à Bruxelles - demande anticipée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis enceinte de mon premier enfant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis au 7ème mois de grossesse"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance anticipée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 1367.74€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime sera versée au 6ème mois de grossesse"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir une attestation médicale de grossesse"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "afe239e1-b7e6-4b2f-8f48-487a44c729b5",
+      "name": "Deuxième enfant à Bruxelles - après naissance",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai déjà un enfant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon deuxième enfant est né il y a 30 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 621.70€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir l'acte de naissance"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "93593db4-e85a-4026-ad54-e69d48b71806",
+      "name": "Premier enfant en Wallonie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon premier enfant est né il y a 15 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 1100€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la caisse compétente devrait être \"AVIQ ou autre caisse wallonne\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "82753faa-baf1-4a6d-924b-aad636962639",
+      "name": "Troisième enfant en Wallonie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai déjà deux enfants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon troisième enfant est né il y a 45 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 500€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le paiement sera unique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "59534f3a-036e-4a52-945e-7aaedd26fb62",
+      "name": "Premier enfant en Flandre (Startbedrag)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon premier enfant est né il y a 10 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite en Flandre"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance (Startbedrag)"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 1269.25€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le système devrait être \"Groeipakket\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "34ec4f16-e1d9-4aad-a89c-962c9ef55ffc",
+      "name": "Jumeaux à Bruxelles",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je viens d'avoir des jumeaux"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ce sont mes premiers enfants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance pour naissance multiple"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 1367.74€ pour le premier jumeau"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 621.70€ pour le second jumeau"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant total devrait être 1989.44€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "19e5c7ab-81ba-46a1-8511-5fdb9bc0f5b3",
+      "name": "Adoption d'un enfant de 3 ans à Bruxelles",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'adopte un enfant de 3 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est mon premier enfant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'adoption est officiellement reconnue"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime d'adoption"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être 1367.74€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir le jugement d'adoption"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e9654107-07bd-40df-8424-923d7bc9fdc6",
+      "name": "Demande tardive après 90 jours",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant est né il y a 120 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas encore demandé la prime"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais encore être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être maintenu"
+        },
+        {
+          "keyword": "Mais",
+          "text": "je dois justifier le retard"
+        },
+        {
+          "keyword": "Et",
+          "text": "fournir une explication valable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d570e0b2-8255-4dbf-a7af-4deaa446a980",
+      "name": "Demande très tardive après 5 ans - non éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant est né il y a 6 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai jamais demandé la prime"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"délai de prescription de 5 ans dépassé\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "87c14b3e-87d3-4bc4-abfa-bc71faca88e0",
+      "name": "Enfant mort-né",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant est mort-né après 180 jours de grossesse"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être maintenu selon le rang"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir un certificat médical attestant de la durée de grossesse"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "1e890c1f-0561-4926-bcbf-0a5918529a6d",
+      "name": "Parent sans titre de séjour valide",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant est né il y a 20 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"pas de titre de séjour valide\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b2c0ffee-adaa-4a1e-883f-34368e1c6a7e",
+      "name": "Famille déménageant entre régions",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'étais enceinte et habitais à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai déménagé en Wallonie au 8ème mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon enfant est né en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'éligibilité dépend du domicile au moment de la naissance"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant sera selon le barème wallon (1100€ pour premier enfant)"
+        },
+        {
+          "keyword": "Et",
+          "text": "la caisse wallonne sera compétente"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "46329ba7-e70a-4437-9487-ccc7acc82f25",
+      "name": "Calcul prime selon région et rang",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant de rang <rang> est né"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite en/à <région>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant devrait être <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "rang",
+            "montant"
+          ],
+          "rows": [
+            {
+              "name": "06aece96-c733-4570-a1f7-7a965e96c313",
+              "values": {
+                "région": "Bruxelles",
+                "rang": "1",
+                "montant": "1367.74"
+              }
+            },
+            {
+              "name": "a37f3bf0-6175-427c-80f5-b83520331b85",
+              "values": {
+                "région": "Bruxelles",
+                "rang": "2",
+                "montant": "621.70"
+              }
+            },
+            {
+              "name": "f32d24b9-3090-480e-bda3-6f205d3729c5",
+              "values": {
+                "région": "Bruxelles",
+                "rang": "3",
+                "montant": "621.70"
+              }
+            },
+            {
+              "name": "fd693de2-d1f6-4da4-8672-f83370660fea",
+              "values": {
+                "région": "Wallonie",
+                "rang": "1",
+                "montant": "1100.00"
+              }
+            },
+            {
+              "name": "418ba3d9-9290-4598-b83f-65785e4886da",
+              "values": {
+                "région": "Wallonie",
+                "rang": "2",
+                "montant": "500.00"
+              }
+            },
+            {
+              "name": "8a121506-f1f2-4217-81dd-ba7fdaa2cb3a",
+              "values": {
+                "région": "Wallonie",
+                "rang": "4",
+                "montant": "500.00"
+              }
+            },
+            {
+              "name": "c53d85cf-faf8-4a84-81f2-52a1b107856f",
+              "values": {
+                "région": "Flandre",
+                "rang": "1",
+                "montant": "1269.25"
+              }
+            },
+            {
+              "name": "db8fa771-1730-43fe-a52b-a8ad3638297a",
+              "values": {
+                "région": "Flandre",
+                "rang": "2",
+                "montant": "1269.25"
+              }
+            },
+            {
+              "name": "51e429ac-7483-4aba-88d0-6517cf2e3faf",
+              "values": {
+                "région": "Flandre",
+                "rang": "5",
+                "montant": "1269.25"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "84e0c80a-ed12-4a85-85ec-4c3688d88153",
+      "name": "Documents requis pour la prime",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux demander la prime de naissance"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon enfant est né il y a 10 jours"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare mon dossier"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Document": "Acte de naissance",
+                "Description": "Document officiel de la commune"
+              },
+              {
+                "Document": "Carte d'identité des parents",
+                "Description": "Ou titre de séjour valide"
+              },
+              {
+                "Document": "Preuve de domicile",
+                "Description": "Composition de ménage ou facture"
+              },
+              {
+                "Document": "RIB ou numéro de compte",
+                "Description": "Pour le versement de la prime"
+              },
+              {
+                "Document": "Formulaire de demande",
+                "Description": "Complété et signé"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime sera versée dans les 2 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "413bbdcb-c7c7-47e1-b66d-271eaf556c5a",
+      "name": "Cumul avec autres aides",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je reçois déjà le RIS"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon enfant vient de naître"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'habite à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un titre de séjour valide"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime de naissance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime de naissance est cumulable avec le RIS"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de la prime n'affecte pas mon RIS"
+        },
+        {
+          "keyword": "Et",
+          "text": "je recevrai 1367.74€ (premier enfant) ou 621.70€ (suivants)"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.942Z"
+}

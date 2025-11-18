@@ -1,0 +1,827 @@
+{
+  "id": "benefits-allocation-chauffage",
+  "name": "Allocation Chauffage (Fonds Social Chauffage)",
+  "description": "  En tant que ménage à revenus modestes\n  Je veux savoir si j'ai droit à l'allocation chauffage\n  Afin de réduire mes frais de chauffage durant l'hiver",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les paramètres du Fonds Social Chauffage 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type de combustible",
+            "Montant/Conditions"
+          ],
+          "rows": [
+            {
+              "Type de combustible": "Gasoil de chauffage vrac",
+              "Montant/Conditions": "14 à 20 cents/litre (max 1500 litres)"
+            },
+            {
+              "Type de combustible": "Gasoil à la pompe (type c)",
+              "Montant/Conditions": "Forfait 210€ par ménage par période"
+            },
+            {
+              "Type de combustible": "Pétrole lampant à la pompe",
+              "Montant/Conditions": "Forfait 210€ par ménage par période"
+            },
+            {
+              "Type de combustible": "Gaz propane en vrac",
+              "Montant/Conditions": "14 à 20 cents/litre (max 1500 litres)"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "les plafonds de revenus 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Plafond annuel brut",
+            "Majoration par personne à charge"
+          ],
+          "rows": [
+            {
+              "Catégorie": "Ménage catégorie 1-2",
+              "Plafond annuel brut": "16,965.47€",
+              "Majoration par personne à charge": "3,140.77€"
+            },
+            {
+              "Catégorie": "Personne à charge",
+              "Plafond annuel brut": "Revenus nets < 3,980€",
+              "Majoration par personne à charge": "(hors allocations familiales)"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "la période de chauffe s'étend du 1er janvier au 31 décembre"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les catégories de bénéficiaires sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Description"
+          ],
+          "rows": [
+            {
+              "Catégorie": "1",
+              "Description": "Bénéficiaires d'intervention majorée (BIM)"
+            },
+            {
+              "Catégorie": "2",
+              "Description": "Ménages à revenus limités"
+            },
+            {
+              "Catégorie": "3",
+              "Description": "Personnes en médiation de dettes/règlement collectif"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "d474ebca-e116-4cb6-b5b3-32ec81348ee9",
+      "name": "Personne isolée BIM éligible à l'allocation forfaitaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je bénéficie de l'intervention majorée (BIM)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'achète du pétrole lampant à la pompe"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une facture de 180€ datée du 15 février 2024"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage au CPAS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible au forfait"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'allocation devrait être 210€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois introduire ma demande dans les 60 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie est \"catégorie 1 - BIM\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "092f7f17-2e10-4afd-a521-8474e229fbc8",
+      "name": "Famille avec livraison de gasoil éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en couple avec 2 enfants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "notre revenu annuel brut est de 20,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le plafond adapté est 16,965.47€ + (2 × 3,140.77€) = 23,247.01€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous avons une livraison de 1000 litres de gasoil"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le prix est de 0.95€/litre"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la facture date du 10 mars 2024"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous demandons l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous devrions être éligibles"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant devrait être entre 140€ et 200€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le calcul est \"1000 litres × 14-20 cents/litre\""
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie est \"catégorie 2 - revenus limités\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "50ee1240-78c4-4c9c-9435-67ec5a7157f8",
+      "name": "Ménage avec livraison dépassant le maximum",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu annuel brut est de 15,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une livraison de 2000 litres de gasoil"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la facture date du 20 janvier 2024"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "seuls 1500 litres sont pris en compte"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant maximum est 1500 × 0.20€ = 300€"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'excédent de 500 litres reste à ma charge"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "efb9c4bb-6b31-44ac-8fc9-a529a5a37864",
+      "name": "Personne en médiation de dettes éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en médiation de dettes judiciaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je ne peux pas payer ma facture de chauffage"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une attestation du médiateur"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai acheté du gasoil à la pompe pour 250€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation via mon médiateur"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant forfaitaire est 210€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie est \"catégorie 3 - médiation de dettes\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le médiateur peut introduire la demande pour moi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d5de339b-d4f2-4c25-9c0b-30581af5a2e4",
+      "name": "Revenus trop élevés pour l'allocation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en couple sans enfants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "notre revenu annuel brut est de 25,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le plafond est 16,965.47€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous ne sommes pas BIM"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous avons une facture de gasoil de 800€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous demandons l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous ne devrions pas être éligibles"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"revenus (25,000€) > plafond (16,965.47€)\""
+        },
+        {
+          "keyword": "Et",
+          "text": "nous pouvons vérifier le fonds énergie du CPAS"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "675c6c48-620c-41ff-b517-20762f3e7b56",
+      "name": "Demande hors délai",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis éligible au Fonds Social Chauffage"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma livraison de gasoil date du 1er janvier 2024"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes le 15 mars 2024"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le délai de 60 jours est dépassé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"délai de 60 jours dépassé\""
+        },
+        {
+          "keyword": "Et",
+          "text": "aucune exception n'est prévue sauf force majeure"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d2c28765-058a-4feb-b0ff-486b82291712",
+      "name": "Famille nombreuse avec majoration",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis parent isolé avec 4 enfants à charge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu annuel brut est de 25,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le plafond adapté est 16,965.47€ + (4 × 3,140.77€) = 29,528.55€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "chaque enfant a des revenus nets < 3,980€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une livraison de 1200 litres de gasoil"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant est calculé sur 1200 litres"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'allocation est entre 168€ et 240€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "52b3e2c6-6660-4e00-829c-d0c46f7d4f7c",
+      "name": "Propriétaire occupant éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire de ma maison"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je bénéficie du statut BIM"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une facture de gasoil de 1,200€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la livraison est de 1300 litres"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le statut de propriétaire n'est pas un obstacle"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant est calculé sur 1300 litres × 14-20 cents"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'allocation est entre 182€ et 260€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "bb787a13-e95a-4b96-b4fa-25d12a4036fe",
+      "name": "Chauffage collectif en immeuble",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je vis dans un immeuble avec chauffage collectif"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je bénéficie du statut BIM"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les charges de chauffage sont incluses dans mon loyer"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je peux prouver ma part des frais de chauffage"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mon éligibilité dépend de la situation"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir une attestation du syndic"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant dépend du type de combustible utilisé"
+        },
+        {
+          "keyword": "Et",
+          "text": "le CPAS évalue au cas par cas"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f30727cf-aa72-45a1-90c6-48e401ffc573",
+      "name": "Cumul avec d'autres aides",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je bénéficie du RIS à 1070.49€/mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis dans la catégorie 1 (BIM)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une facture de pétrole lampant de 200€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation chauffage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'allocation chauffage est cumulable avec le RIS"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant forfaitaire reste 210€"
+        },
+        {
+          "keyword": "Et",
+          "text": "aucune réduction n'est appliquée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2c6f262a-771d-429d-ae37-eb6262683e49",
+      "name": "Calcul allocation selon type et quantité",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis <situation>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu annuel est de <revenu>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'achète <quantité> de <combustible>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le prix unitaire est <prix>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "<condition_spéciale>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'éligibilité est <éligibilité>"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'allocation est <allocation>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "revenu",
+            "combustible",
+            "quantité",
+            "prix",
+            "condition_spéciale",
+            "éligibilité",
+            "allocation"
+          ],
+          "rows": [
+            {
+              "name": "4a8c09cd-573e-4164-8368-49b9228875ae",
+              "values": {
+                "situation": "personne BIM",
+                "revenu": "12000",
+                "combustible": "pétrole pompe",
+                "quantité": "200€ total",
+                "prix": "-",
+                "condition_spéciale": "forfait pompe",
+                "éligibilité": "oui",
+                "allocation": "210"
+              }
+            },
+            {
+              "name": "83f0179f-468d-4e20-89b8-049861e4bb54",
+              "values": {
+                "situation": "couple 1 enfant",
+                "revenu": "18000",
+                "combustible": "gasoil vrac",
+                "quantité": "800 litres",
+                "prix": "0.90",
+                "condition_spéciale": "dans plafonds",
+                "éligibilité": "oui",
+                "allocation": "112-160"
+              }
+            },
+            {
+              "name": "2d2378dd-cf7e-46ee-aac9-00995d7f400c",
+              "values": {
+                "situation": "personne isolée",
+                "revenu": "14000",
+                "combustible": "gasoil vrac",
+                "quantité": "1500 litres",
+                "prix": "0.95",
+                "condition_spéciale": "maximum litres",
+                "éligibilité": "oui",
+                "allocation": "210-300"
+              }
+            },
+            {
+              "name": "6bc58e99-cd84-480d-91fe-c6b238f1f3b3",
+              "values": {
+                "situation": "famille 3 enfants",
+                "revenu": "24000",
+                "combustible": "gasoil vrac",
+                "quantité": "1200 litres",
+                "prix": "0.92",
+                "condition_spéciale": "dans plafonds",
+                "éligibilité": "oui",
+                "allocation": "168-240"
+              }
+            },
+            {
+              "name": "108c85b6-a12f-4803-85e9-7ca43fd12be1",
+              "values": {
+                "situation": "couple",
+                "revenu": "30000",
+                "combustible": "gasoil vrac",
+                "quantité": "1000 litres",
+                "prix": "0.88",
+                "condition_spéciale": "hors plafonds",
+                "éligibilité": "non",
+                "allocation": "0"
+              }
+            },
+            {
+              "name": "69f6f806-b9df-4063-be94-69a891648f48",
+              "values": {
+                "situation": "médiation dettes",
+                "revenu": "-",
+                "combustible": "pétrole pompe",
+                "quantité": "180€ total",
+                "prix": "-",
+                "condition_spéciale": "catégorie 3",
+                "éligibilité": "oui",
+                "allocation": "210"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "7472bb65-812a-498f-8d2b-ddc174679273",
+      "name": "Procédure de demande au CPAS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis éligible au Fonds Social Chauffage"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'introduis ma demande au CPAS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir les documents suivants:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Obligatoire",
+              "Remarque"
+            ],
+            "rows": [
+              {
+                "Document": "Carte d'identité",
+                "Obligatoire": "Oui",
+                "Remarque": "Tous membres du ménage"
+              },
+              {
+                "Document": "Facture ou bon de livraison",
+                "Obligatoire": "Oui",
+                "Remarque": "Datée de moins de 60 jours"
+              },
+              {
+                "Document": "Preuve de paiement",
+                "Obligatoire": "Si disponible",
+                "Remarque": "Ticket, virement, etc."
+              },
+              {
+                "Document": "Composition de ménage",
+                "Obligatoire": "Oui",
+                "Remarque": "Récente (< 3 mois)"
+              },
+              {
+                "Document": "Preuve de revenus",
+                "Obligatoire": "Si catégorie 2",
+                "Remarque": "Fiches de paie, allocations"
+              },
+              {
+                "Document": "Attestation BIM",
+                "Obligatoire": "Si catégorie 1",
+                "Remarque": "De la mutuelle"
+              },
+              {
+                "Document": "Attestation médiateur",
+                "Obligatoire": "Si catégorie 3",
+                "Remarque": "Médiation de dettes"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le CPAS dispose de 30 jours pour traiter ma demande"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'allocation est versée sur mon compte bancaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "une seule allocation par ménage et par période"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux introduire une nouvelle demande pour chaque livraison"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "4898b67e-51d4-4dd4-9ca1-26d3abd01c80",
+      "name": "Contrôle et vérification",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu l'allocation chauffage"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le CPAS effectue un contrôle"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ils peuvent vérifier:",
+          "dataTable": {
+            "headers": [
+              "Élément vérifié",
+              "Méthode"
+            ],
+            "rows": [
+              {
+                "Élément vérifié": "Composition réelle du ménage",
+                "Méthode": "Visite à domicile"
+              },
+              {
+                "Élément vérifié": "Revenus déclarés",
+                "Méthode": "Flux BCSS"
+              },
+              {
+                "Élément vérifié": "Utilisation du combustible",
+                "Méthode": "Vérification installation"
+              },
+              {
+                "Élément vérifié": "Autres aides perçues",
+                "Méthode": "Base de données CPAS"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "en cas de fraude constatée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois rembourser l'allocation"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux être exclu pour les périodes suivantes"
+        },
+        {
+          "keyword": "Et",
+          "text": "des poursuites peuvent être engagées"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.940Z"
+}

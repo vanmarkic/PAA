@@ -1,0 +1,33 @@
+{
+  "id": "gardeEnfantsLitige",
+  "name": "Litige Garde des Enfants",
+  "category": "justice",
+  "description": "",
+  "states": [
+    "demande",
+    "DEPOSER_DEMANDE",
+    "tentativeMediation",
+    "MEDIATION_ACCEPTEE",
+    "MEDIATION_REFUSEE",
+    "seancesMediation",
+    "ACCORD_MEDIATION",
+    "EXPERTISE_ORDONNEE",
+    "expertisePsychologique",
+    "EXPERTISE_RENDUE",
+    "audienceTribunal",
+    "JUGEMENT",
+    "homologationAccord",
+    "decisionJugement"
+  ],
+  "events": [
+    "DEPOSER_DEMANDE",
+    "MEDIATION_ACCEPTEE",
+    "MEDIATION_REFUSEE",
+    "ACCORD_MEDIATION",
+    "EXPERTISE_ORDONNEE",
+    "EXPERTISE_RENDUE",
+    "JUGEMENT"
+  ],
+  "initial": "demande",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

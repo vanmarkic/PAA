@@ -1,0 +1,308 @@
+{
+  "id": "cour-europeenne-mesures-provisoires",
+  "name": "Mesures provisoires (Règle 39)",
+  "description": "  En tant que personne face à un danger imminent et irréversible\n  Je veux demander des mesures provisoires à la CEDH\n  Afin d'empêcher une violation grave de mes droits fondamentaux",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les mesures provisoires sont exceptionnelles"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "elles ne sont accordées que si le risque est imminent"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le préjudice serait irréversible"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "01d6d9f9-0e37-4a20-a46f-7ff04b7ef195",
+      "name": "Demande urgente d'empêcher une expulsion",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je dois être expulsé vers la Syrie demain"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je risque la torture ou la mort dans ce pays"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai des preuves de persécutions antérieures"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai été condamné à mort par contumace"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande des mesures provisoires d'urgence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la demande devrait être traitée immédiatement"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais fournir \"identité, date d'expulsion, preuves du risque\""
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour devrait suspendre l'expulsion si accordée"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'État devrait être notifié immédiatement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d45461e0-5caa-4b63-8f11-8cbe10a2c202",
+      "name": "Mesures provisoires pour traitement médical vital",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis détenu avec un cancer en phase terminale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les autorités refusent le traitement médical nécessaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon état se détériore rapidement"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le médecin confirme un risque vital imminent"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande des mesures provisoires médicales"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la demande devrait être prioritaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "inclure \"rapports médicaux, correspondances avec l'administration\""
+        },
+        {
+          "keyword": "Et",
+          "text": "demander l'accès immédiat aux soins"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour pourrait ordonner le transfert médical"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "026f9681-a7ef-40d9-8515-518611f25afe",
+      "name": "Refus de mesures provisoires - pas de risque imminent",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conteste une décision de justice"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la décision me cause un préjudice financier"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il n'y a pas de risque pour ma vie ou intégrité"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le préjudice pourrait être compensé financièrement"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande des mesures provisoires"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la demande devrait être refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif serait \"absence de risque imminent et irréversible\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais poursuivre la procédure normale"
+        },
+        {
+          "keyword": "Et",
+          "text": "demander une satisfaction équitable ultérieurement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f3010328-4a39-43cd-b6f8-36bed68af6d7",
+      "name": "Protection d'un témoin dans une affaire de violation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis témoin clé dans une affaire de torture"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai reçu des menaces de mort"
+        },
+        {
+          "keyword": "Et que",
+          "text": "deux autres témoins ont déjà disparu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la police refuse de me protéger"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande des mesures de protection"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la Cour devrait examiner le danger"
+        },
+        {
+          "keyword": "Et",
+          "text": "pourrait demander à l'État de garantir ma sécurité"
+        },
+        {
+          "keyword": "Et",
+          "text": "des mesures de protection devraient être mises en place"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon témoignage pourrait être recueilli sous protection"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "701965ff-3803-4955-8728-3bb14226de9b",
+      "name": "Évaluation de l'urgence selon le délai",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une mesure est prévue dans <delai>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le risque est de type \"<type_risque>\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "le préjudice serait \"<nature_prejudice>\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'évalue l'urgence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le niveau d'urgence devrait être \"<niveau>\""
+        },
+        {
+          "keyword": "Et",
+          "text": "la procédure devrait être \"<procedure>\""
+        },
+        {
+          "keyword": "Et",
+          "text": "la réponse attendue dans \"<reponse>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "delai",
+            "type_risque",
+            "nature_prejudice",
+            "niveau",
+            "procedure",
+            "reponse"
+          ],
+          "rows": [
+            {
+              "name": "083da3af-cf2d-4b3a-81e2-cdc87851f458",
+              "values": {
+                "delai": "24 heures",
+                "type_risque": "expulsion/torture",
+                "nature_prejudice": "irréversible",
+                "niveau": "critique",
+                "procedure": "ultra-prioritaire",
+                "reponse": "6 heures"
+              }
+            },
+            {
+              "name": "1872b493-5208-4e67-ab58-74014c22a16e",
+              "values": {
+                "delai": "48 heures",
+                "type_risque": "exécution",
+                "nature_prejudice": "irréversible",
+                "niveau": "critique",
+                "procedure": "ultra-prioritaire",
+                "reponse": "12 heures"
+              }
+            },
+            {
+              "name": "28cadde1-2b1b-4996-9bfc-7bf601121d64",
+              "values": {
+                "delai": "1 semaine",
+                "type_risque": "transfert prison",
+                "nature_prejudice": "potentiellement grave",
+                "niveau": "élevé",
+                "procedure": "prioritaire",
+                "reponse": "48 heures"
+              }
+            },
+            {
+              "name": "0c98d525-5010-4686-be3e-eee1e5790a12",
+              "values": {
+                "delai": "1 mois",
+                "type_risque": "démolition maison",
+                "nature_prejudice": "réparable",
+                "niveau": "modéré",
+                "procedure": "normale",
+                "reponse": "1 semaine"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

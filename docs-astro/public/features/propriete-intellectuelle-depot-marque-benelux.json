@@ -1,0 +1,260 @@
+{
+  "id": "propriete-intellectuelle-depot-marque-benelux",
+  "name": "Dépôt de marque Benelux",
+  "description": "  En tant qu'entreprise ou entrepreneur\n  Je veux déposer une marque Benelux\n  Afin de protéger mon identité commerciale en Belgique, Pays-Bas et Luxembourg",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les frais de marque Benelux 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type de frais",
+            "Montant"
+          ],
+          "rows": [
+            {
+              "Type de frais": "Dépôt base (3 classes)",
+              "Montant": "244€"
+            },
+            {
+              "Type de frais": "Classe supplémentaire",
+              "Montant": "37€"
+            },
+            {
+              "Type de frais": "Renouvellement",
+              "Montant": "268€"
+            },
+            {
+              "Type de frais": "Recherche d'antériorités",
+              "Montant": "150€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "b0b457f9-85dd-4451-9f86-a4abd8a60674",
+      "name": "Dépôt de marque verbale distinctive",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je souhaite protéger le nom \"INNOVATECH\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "la marque est distinctive pour des services informatiques"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai choisi les classes 9, 35 et 42"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "aucune marque identique n'existe dans ces classes"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je dépose ma demande auprès du BOIP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais payer 244€ de frais de base"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois un numéro de dépôt immédiat"
+        },
+        {
+          "keyword": "Et",
+          "text": "la marque sera publiée dans 2 semaines"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c9ec2b04-2d99-4330-882c-1a016623fa59",
+      "name": "Marque descriptive refusée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux déposer \"SUPER ORDINATEUR\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "ces termes décrivent directement les produits"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "ils manquent de caractère distinctif"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le BOIP examine ma demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"marque descriptive sans caractère distinctif\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux faire appel dans les 2 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "420e171b-ee4a-4326-92b3-1f1b41157c14",
+      "name": "Opposition par un tiers",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque a été publiée"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un concurrent a une marque antérieure similaire"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il dépose une opposition dans les 2 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la procédure d'opposition commence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois répondre dans le délai imparti"
+        },
+        {
+          "keyword": "Et",
+          "text": "une phase contradictoire s'engage"
+        },
+        {
+          "keyword": "Et",
+          "text": "le BOIP rendra une décision dans 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "fc9f3a95-0084-4c08-b9ae-04f11e10433c",
+      "name": "Renouvellement de marque après 10 ans",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque expire dans 6 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je souhaite la renouveler pour 10 ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renouvellement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois payer 268€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux le faire jusqu'à 6 mois après expiration"
+        },
+        {
+          "keyword": "Et",
+          "text": "une surtaxe s'applique après la date d'expiration"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ca3066c7-fc04-42f6-9b4d-7b129884ae23",
+      "name": "Calcul des frais selon nombre de classes",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je dépose une marque dans <nombre_classes> classes"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule les frais totaux"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant devrait être <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "nombre_classes",
+            "montant"
+          ],
+          "rows": [
+            {
+              "name": "05133a22-7e3e-45a5-adf3-bbbe1ce71542",
+              "values": {
+                "nombre_classes": "3",
+                "montant": "244"
+              }
+            },
+            {
+              "name": "9a9330e4-54cf-4ac1-99ca-37760de7d696",
+              "values": {
+                "nombre_classes": "4",
+                "montant": "281"
+              }
+            },
+            {
+              "name": "6d3d6793-c289-44a4-ac76-e787a35dab24",
+              "values": {
+                "nombre_classes": "5",
+                "montant": "318"
+              }
+            },
+            {
+              "name": "0150ba46-80a7-449d-bebc-ef2e0eb26eff",
+              "values": {
+                "nombre_classes": "10",
+                "montant": "503"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.952Z"
+}

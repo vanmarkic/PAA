@@ -1,0 +1,66 @@
+{
+  "id": "aideMenagere",
+  "name": "Aide Ménagère (Home Help) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for home help services,",
+  "states": [
+    "attente",
+    "DEMANDER_AIDE",
+    "evaluationBesoins",
+    "BESOINS_IDENTIFIES",
+    "elaborationPlan",
+    "ETABLIR_PLAN",
+    "attributionAide",
+    "DESIGNER_AIDE",
+    "serviceEnCours",
+    "INTERVENTION_EFFECTUEE",
+    "REEVALUER_BESOINS",
+    "SUSPENDRE_SERVICE",
+    "ARRETER_SERVICE",
+    "reevaluationBesoins",
+    "AJUSTER_PLAN",
+    "serviceSuspendu",
+    "REPRENDRE_SERVICE",
+    "serviceArrete",
+    "REINITIALISER"
+  ],
+  "events": [
+    "DEMANDER_AIDE",
+    "EVALUER_BESOINS",
+    "BESOINS_IDENTIFIES",
+    "ETABLIR_PLAN",
+    "DESIGNER_AIDE",
+    "COMMENCER_SERVICE",
+    "INTERVENTION_EFFECTUEE",
+    "REEVALUER_BESOINS",
+    "AJUSTER_PLAN",
+    "SUSPENDRE_SERVICE",
+    "REPRENDRE_SERVICE",
+    "ARRETER_SERVICE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Région Wallonne",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Aide à domicile",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.aviq.be/aide-domicile.html",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

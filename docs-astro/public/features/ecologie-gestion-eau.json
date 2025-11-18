@@ -1,0 +1,468 @@
+{
+  "id": "ecologie-gestion-eau",
+  "name": "Gestion de l'eau et autorisations hydrauliques",
+  "description": "  En tant qu'utilisateur d'eau ou gestionnaire\n  Je veux obtenir les autorisations nécessaires\n  Afin d'utiliser ou rejeter l'eau légalement",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les types d'autorisations eau sont:",
+        "dataTable": {
+          "headers": [
+            "Type",
+            "Seuil",
+            "Procédure",
+            "Redevance"
+          ],
+          "rows": [
+            {
+              "Type": "Captage souterrain",
+              "Seuil": "> 10 m³/jour",
+              "Procédure": "Permis",
+              "Redevance": "0.05€/m³"
+            },
+            {
+              "Type": "Captage surface",
+              "Seuil": "> 50 m³/jour",
+              "Procédure": "Autorisation",
+              "Redevance": "0.03€/m³"
+            },
+            {
+              "Type": "Rejet eaux usées",
+              "Seuil": "> 100 EH",
+              "Procédure": "Permis",
+              "Redevance": "2.5€/EH/an"
+            },
+            {
+              "Type": "Forage",
+              "Seuil": "> 30m profondeur",
+              "Procédure": "Déclaration",
+              "Redevance": "Forfait 500€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "ea9b19d3-cab9-4ad9-a73e-9fb044671381",
+      "name": "Permis captage eau souterraine pour industrie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une industrie agroalimentaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai besoin de 500 m³/jour d'eau souterraine"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la nappe est classée en bon état quantitatif"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en Wallonie"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis de captage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Exigence"
+            ],
+            "rows": [
+              {
+                "Document": "Étude hydrogéologique",
+                "Exigence": "Rayon impact 1km"
+              },
+              {
+                "Document": "Test de pompage 72h",
+                "Exigence": "Débit constant"
+              },
+              {
+                "Document": "Analyse qualité eau",
+                "Exigence": "Paramètres complets"
+              },
+              {
+                "Document": "Plan de monitoring piézométrique",
+                "Exigence": "4 piézomètres minimum"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la redevance annuelle sera 9125€ (500 × 365 × 0.05)"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois installer un compteur agréé"
+        },
+        {
+          "keyword": "Et",
+          "text": "déclarer mensuellement les volumes prélevés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "14997b7d-40ff-4415-a19a-ec1ab891845c",
+      "name": "Autorisation rejet station d'épuration communale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je gère une station d'épuration"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle traite 5000 équivalents-habitants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le rejet se fait en rivière classe 2"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'autorisation de rejet"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les normes de rejet sont:",
+          "dataTable": {
+            "headers": [
+              "Paramètre",
+              "Limite",
+              "Fréquence contrôle"
+            ],
+            "rows": [
+              {
+                "Paramètre": "DBO5",
+                "Limite": "25 mg/l",
+                "Fréquence contrôle": "Hebdomadaire"
+              },
+              {
+                "Paramètre": "DCO",
+                "Limite": "125 mg/l",
+                "Fréquence contrôle": "Hebdomadaire"
+              },
+              {
+                "Paramètre": "MES",
+                "Limite": "35 mg/l",
+                "Fréquence contrôle": "Hebdomadaire"
+              },
+              {
+                "Paramètre": "N total",
+                "Limite": "15 mg/l",
+                "Fréquence contrôle": "Mensuelle"
+              },
+              {
+                "Paramètre": "P total",
+                "Limite": "2 mg/l",
+                "Fréquence contrôle": "Mensuelle"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois faire un autocontrôle permanent"
+        },
+        {
+          "keyword": "Et",
+          "text": "transmettre les résultats trimestriellement"
+        },
+        {
+          "keyword": "Et",
+          "text": "la redevance sera 12500€/an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "153910ca-79db-4bde-919d-e50e3f7cd574",
+      "name": "Prime citerne eau de pluie particulier",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un particulier"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'installe une citerne de 10000 litres"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma maison a une toiture de 150 m²"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût d'installation est de 4000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime citerne"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible à la prime"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant sera 1000€ (maximum régional)"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois connecter minimum 2 points d'usage"
+        },
+        {
+          "keyword": "Et",
+          "text": "fournir la facture d'un installateur agréé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "9d467e87-e980-4c0e-8147-3651c04d92f9",
+      "name": "Permis modification cours d'eau non navigable",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux construire un pont privé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le cours d'eau est de 3ème catégorie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la largeur est de 4 mètres"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en zone agricole"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le permis de modification"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois:",
+          "dataTable": {
+            "headers": [
+              "Obligation",
+              "Détail"
+            ],
+            "rows": [
+              {
+                "Obligation": "Étude hydraulique",
+                "Détail": "Crue centennale"
+              },
+              {
+                "Obligation": "Compensation zone inondable",
+                "Détail": "Surface équivalente"
+              },
+              {
+                "Obligation": "Passage faune aquatique",
+                "Détail": "Hauteur min 30cm"
+              },
+              {
+                "Obligation": "Enquête publique",
+                "Détail": "30 jours"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "obtenir l'accord du gestionnaire de cours d'eau"
+        },
+        {
+          "keyword": "Et",
+          "text": "respecter la période de travaux (juillet-octobre)"
+        },
+        {
+          "keyword": "Et",
+          "text": "garantir le libre écoulement des eaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c6ae986a-ae12-4643-91b2-23a07f22f582",
+      "name": "Système d'épuration individuelle zone non-égouttée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma maison est en zone d'assainissement autonome"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle génère 5 équivalents-habitants"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "aucun égout n'est prévu avant 10 ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'installe un système d'épuration individuelle"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois installer:",
+          "dataTable": {
+            "headers": [
+              "Équipement",
+              "Capacité",
+              "Norme"
+            ],
+            "rows": [
+              {
+                "Équipement": "Fosse septique",
+                "Capacité": "3000 litres",
+                "Norme": "EN 12566-1"
+              },
+              {
+                "Équipement": "Station épuration",
+                "Capacité": "5 EH",
+                "Norme": "CE marquage"
+              },
+              {
+                "Équipement": "Regard de visite",
+                "Capacité": "Accessible",
+                "Norme": "Obligatoire"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime sera de 70% du coût (max 4000€)"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'entretien annuel est obligatoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois tenir un carnet d'entretien"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e87b1514-72a4-4741-98b2-53e8867af6fd",
+      "name": "Calcul redevance captage selon volume et usage",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je capte <volume> m³/an"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'usage est <usage>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en <region>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule ma redevance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant sera <redevance>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "volume",
+            "usage",
+            "region",
+            "redevance"
+          ],
+          "rows": [
+            {
+              "name": "addf0733-6239-45eb-ac8e-5ed867680637",
+              "values": {
+                "volume": "10000",
+                "usage": "domestique",
+                "region": "wallonie",
+                "redevance": "300"
+              }
+            },
+            {
+              "name": "4fbb89f8-ca2e-4618-9882-2b690e9eca16",
+              "values": {
+                "volume": "100000",
+                "usage": "industriel",
+                "region": "wallonie",
+                "redevance": "5000"
+              }
+            },
+            {
+              "name": "7368afd1-e7aa-461e-99bb-7d50220da6da",
+              "values": {
+                "volume": "50000",
+                "usage": "agricole",
+                "region": "flandre",
+                "redevance": "750"
+              }
+            },
+            {
+              "name": "cae20bfd-9e40-418b-ba5b-5d94a99084b5",
+              "values": {
+                "volume": "200000",
+                "usage": "potable",
+                "region": "bruxelles",
+                "redevance": "8000"
+              }
+            },
+            {
+              "name": "1c7a2322-4a48-4495-88c6-b80b174438a7",
+              "values": {
+                "volume": "5000",
+                "usage": "irrigation",
+                "region": "wallonie",
+                "redevance": "150"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.949Z"
+}

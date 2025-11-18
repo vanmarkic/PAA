@@ -1,0 +1,33 @@
+{
+  "id": "protectionDonneesPersonnellesRGPD",
+  "name": "Protection Données Personnelles - RGPD",
+  "category": "digital",
+  "description": "",
+  "states": [
+    "identificationTraitements",
+    "IDENTIFIER_TRAITEMENTS",
+    "registreActivitesTraitement",
+    "CREER_REGISTRE",
+    "analyseRisques",
+    "REALISER_AIPD",
+    "designationDPO",
+    "DESIGNER_DPO",
+    "obligatoire",
+    "politiqueConfidentialite",
+    "REDIGER_POLITIQUE",
+    "mesuresConformite",
+    "CONFORMITE_VALIDEE",
+    "conforme",
+    "droitsPersonnes"
+  ],
+  "events": [
+    "IDENTIFIER_TRAITEMENTS",
+    "CREER_REGISTRE",
+    "REALISER_AIPD",
+    "DESIGNER_DPO",
+    "REDIGER_POLITIQUE",
+    "CONFORMITE_VALIDEE"
+  ],
+  "initial": "identificationTraitements",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

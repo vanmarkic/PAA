@@ -1,0 +1,69 @@
+{
+  "id": "protectionEnfance",
+  "name": "Protection de l'Enfance (Child Protection) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for child protection services,",
+  "states": [
+    "attente",
+    "SIGNALEMENT_RECU",
+    "evaluationSignalement",
+    "EVALUATION_TERMINEE",
+    "analyseDanger",
+    "DANGER_IMMEDIAT",
+    "RISQUE_MODERE",
+    "PAS_DE_DANGER",
+    "signalementNonFonde",
+    "CLOTURER_DOSSIER",
+    "mesuresUrgence",
+    "PLACER_ENFANT",
+    "placementProtection",
+    "SUIVRE_FAMILLE",
+    "RETOUR_FAMILLE",
+    "aideEducative",
+    "suiviFamilial",
+    "SITUATION_AMELIOREE",
+    "evaluationProgression",
+    "retourProgessif",
+    "dossierCloture",
+    "REINITIALISER"
+  ],
+  "events": [
+    "SIGNALEMENT_RECU",
+    "EVALUER_SITUATION",
+    "EVALUATION_TERMINEE",
+    "DANGER_IMMEDIAT",
+    "RISQUE_MODERE",
+    "PAS_DE_DANGER",
+    "PLACER_ENFANT",
+    "AIDE_EDUCATIVE",
+    "SUIVRE_FAMILLE",
+    "SITUATION_AMELIOREE",
+    "RETOUR_FAMILLE",
+    "CLOTURER_DOSSIER",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Fédération Wallonie-Bruxelles",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Aide à la jeunesse",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.aidealajeunesse.cfwb.be",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "urgencesHospitalieres",
+  "name": "Urgences Hospitalières",
+  "category": "health",
+  "description": "",
+  "states": [
+    "arrivee",
+    "PATIENT_ARRIVE",
+    "triage",
+    "priseEnChargeImmediate",
+    "EXAMEN_MEDICAL",
+    "salleAttente",
+    "examenMedical",
+    "TRAITEMENT_ADMINISTRE",
+    "traitement",
+    "HOSPITALISER",
+    "AUTORISER_SORTIE",
+    "hospitalisation",
+    "sortie"
+  ],
+  "events": [
+    "PATIENT_ARRIVE",
+    "TRIAGE_EFFECTUE",
+    "EXAMEN_MEDICAL",
+    "TRAITEMENT_ADMINISTRE",
+    "HOSPITALISER",
+    "AUTORISER_SORTIE"
+  ],
+  "initial": "arrivee",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

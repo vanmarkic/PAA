@@ -1,0 +1,61 @@
+{
+  "id": "pensionSurvie",
+  "name": "Machine XState: Pension de survie",
+  "category": "pension",
+  "description": "Base légale: AR n°50 du 24 octobre 1967 - Loi du 30 mars 2018 (réforme pension de survie)",
+  "states": [
+    "verification",
+    "conditionsGenerales",
+    "exceptions_duree",
+    "reforme2018",
+    "SOUMETTRE_DEMANDE",
+    "evaluation",
+    "calculMontant",
+    "conditionsRevenus2024",
+    "enfantsACharge",
+    "decision",
+    "OCTROI",
+    "paiement",
+    "modalites",
+    "montantsMoyens2024",
+    "fiscalite",
+    "obligations",
+    "cumuls",
+    "avantagesLies",
+    "REVISION_REVENUS",
+    "refus",
+    "recours",
+    "alternatives"
+  ],
+  "events": [
+    "SOUMETTRE_DEMANDE",
+    "EVALUATION_COMPLETE",
+    "OCTROI",
+    "REFUS",
+    "REVISION_REVENUS"
+  ],
+  "initial": "verification",
+  "generated": "2025-11-18T10:17:36.939Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Service Fédéral des Pensions",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Pension de survie",
+        "publicationDate": "2023-12-20T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.sfpd.fgov.be/fr/pension-de-survie",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

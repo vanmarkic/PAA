@@ -1,0 +1,59 @@
+{
+  "id": "reductionEpargnePension",
+  "name": "Machine d'état XState pour la Réduction d'impôt épargne-pension",
+  "category": "general",
+  "description": "Cette machine d'état représente le flux de travail pour bénéficier d'une réduction",
+  "states": [
+    "inactif",
+    "DEMARRER_DEMANDE",
+    "verificationVersements",
+    "VERSEMENTS_VERIFIES",
+    "calculReduction",
+    "eligible",
+    "ATTESTATIONS_SOUMISES",
+    "nonEligible",
+    "REINITIALISER",
+    "validationAttestations",
+    "ATTESTATIONS_VALIDEES",
+    "ATTESTATIONS_INVALIDES",
+    "reductionApprouvee",
+    "REDUCTION_APPLIQUEE",
+    "active",
+    "NOUVELLE_ANNEE"
+  ],
+  "events": [
+    "DEMARRER_DEMANDE",
+    "VERSEMENTS_VERIFIES",
+    "REDUCTION_CALCULEE",
+    "ATTESTATIONS_SOUMISES",
+    "ATTESTATIONS_VALIDEES",
+    "ATTESTATIONS_INVALIDES",
+    "REDUCTION_APPLIQUEE",
+    "NOUVELLE_ANNEE",
+    "REINITIALISER"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.933Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Finances",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Épargne-pension - CIR92 Art. 145",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://finances.belgium.be/fr/particuliers/avantages_fiscaux/epargne-pension",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

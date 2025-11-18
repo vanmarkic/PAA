@@ -1,0 +1,63 @@
+{
+  "id": "protectionJuridique",
+  "name": "Protection Juridique (Legal Protection) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for legal protection services,",
+  "states": [
+    "attente",
+    "DEMANDER_PROTECTION",
+    "evaluationEligibilite",
+    "ELIGIBLE",
+    "NON_ELIGIBLE",
+    "nonEligible",
+    "REINITIALISER",
+    "designationAvocat",
+    "DESIGNER_AVOCAT",
+    "representationAttribuee",
+    "COMMENCER_PROCEDURE",
+    "procedureEnCours",
+    "JUGEMENT_RENDU",
+    "jugementRendu",
+    "APPEL_INTERJETE",
+    "DOSSIER_CLOTURE",
+    "procedureAppel",
+    "dossierCloture"
+  ],
+  "events": [
+    "DEMANDER_PROTECTION",
+    "EVALUER_ELIGIBILITE",
+    "ELIGIBLE",
+    "NON_ELIGIBLE",
+    "DESIGNER_AVOCAT",
+    "COMMENCER_PROCEDURE",
+    "PROCEDURE_EN_COURS",
+    "JUGEMENT_RENDU",
+    "APPEL_INTERJETE",
+    "DOSSIER_CLOTURE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Justice",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Aide juridique",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://justice.belgium.be/fr/themes_et_dossiers/acces_a_la_justice/aide_juridique",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

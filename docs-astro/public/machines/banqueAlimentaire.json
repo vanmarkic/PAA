@@ -1,0 +1,64 @@
+{
+  "id": "banqueAlimentaire",
+  "name": "Banque Alimentaire (Food Bank) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for accessing food bank services,",
+  "states": [
+    "attente",
+    "INSCRIRE_MEMBRE",
+    "verificationInscription",
+    "INSCRIPTION_VALIDEE",
+    "INSCRIPTION_REFUSEE",
+    "inscriptionRefusee",
+    "REINITIALISER",
+    "membreActif",
+    "DEMANDER_COLIS",
+    "RENOUVELER_INSCRIPTION",
+    "DESINSCRIRE",
+    "verificationQuota",
+    "QUOTA_OK",
+    "QUOTA_DEPASSE",
+    "attenteProchainQuota",
+    "VERIFIER_QUOTA",
+    "preparationColis",
+    "DISTRIBUER_COLIS",
+    "desinscrit"
+  ],
+  "events": [
+    "INSCRIRE_MEMBRE",
+    "INSCRIPTION_VALIDEE",
+    "INSCRIPTION_REFUSEE",
+    "DEMANDER_COLIS",
+    "VERIFIER_QUOTA",
+    "QUOTA_OK",
+    "QUOTA_DEPASSE",
+    "DISTRIBUER_COLIS",
+    "RENOUVELER_INSCRIPTION",
+    "DESINSCRIRE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Intégration Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Aide alimentaire",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/aide-alimentaire",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

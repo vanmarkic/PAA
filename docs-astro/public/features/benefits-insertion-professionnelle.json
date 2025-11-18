@@ -1,0 +1,771 @@
+{
+  "id": "benefits-insertion-professionnelle",
+  "name": "Insertion Professionnelle",
+  "description": "  En tant que personne éloignée du marché de l'emploi\n  Je veux bénéficier de mesures d'insertion professionnelle\n  Afin de retrouver un emploi durable et adapté à ma situation",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les dispositifs d'insertion professionnelle 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Dispositif",
+            "Description"
+          ],
+          "rows": [
+            {
+              "Dispositif": "Article 60§7",
+              "Description": "Emploi temporaire via CPAS"
+            },
+            {
+              "Dispositif": "Article 61",
+              "Description": "Mise à disposition économie sociale"
+            },
+            {
+              "Dispositif": "PTP (Programme de Transition Prof.)",
+              "Description": "Emploi subsidié 2 ans maximum"
+            },
+            {
+              "Dispositif": "SINE (Économie d'Insertion Sociale)",
+              "Description": "Emploi dans économie sociale"
+            },
+            {
+              "Dispositif": "Activa",
+              "Description": "Réduction ONSS pour employeurs"
+            },
+            {
+              "Dispositif": "Impulsion",
+              "Description": "Prime à l'embauche jeunes/longue durée"
+            },
+            {
+              "Dispositif": "Stage First",
+              "Description": "Stage d'insertion pour jeunes"
+            },
+            {
+              "Dispositif": "IBO/FPI",
+              "Description": "Formation professionnelle individuelle"
+            },
+            {
+              "Dispositif": "Titres-services",
+              "Description": "Emploi dans aide ménagère"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "615b4be6-b7a4-4b3e-9209-f642ed992a5e",
+      "name": "Bénéficiaire du RIS en Article 60§7",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis bénéficiaire du RIS depuis 6 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 35 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas travaillé depuis 2 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le CPAS propose un emploi Article 60§7"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'emploi est dans une administration communale"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'accepte cet emploi d'insertion"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je signe un contrat de travail avec le CPAS"
+        },
+        {
+          "keyword": "Et",
+          "text": "la durée est calculée pour \"reconstituer mes droits au chômage\""
+        },
+        {
+          "keyword": "Et",
+          "text": "mon salaire est au minimum \"le barème de la fonction\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie de tous les avantages sociaux"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai droit à un accompagnement social"
+        },
+        {
+          "keyword": "Et",
+          "text": "à la fin, j'ouvre mes droits aux allocations de chômage"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e7e8c2f4-8af7-41df-84c4-7baf2557b30d",
+      "name": "Chômeur longue durée en Programme de Transition Professionnelle",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis au chômage depuis 18 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 42 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un niveau de qualification faible"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un employeur du secteur non-marchand veut m'engager"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je suis engagé en PTP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'employeur reçoit une subvention salariale"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon contrat est à durée déterminée de \"24 mois maximum\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux bénéficier d'une formation complémentaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon salaire suit les barèmes du secteur"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai une priorité pour un CDI après le PTP"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "81e74206-c7e7-4ee2-ac7a-81b1577e6aa6",
+      "name": "Jeune peu qualifié en Stage First",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai 23 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai quitté l'école sans diplôme"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis inscrit chez Actiris depuis 3 mois"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise propose un Stage First"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le stage est dans le secteur de la logistique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je démarre le stage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la durée est de \"3 à 6 mois\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois une indemnité de stage de \"200€ par mois\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je maintiens mes allocations d'insertion"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'entreprise reçoit une prime de \"500€ par mois\""
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai 70% de chances d'être embauché après"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c4d3ac17-4421-42a2-a755-f7ea77ce697e",
+      "name": "Personne handicapée en entreprise de travail adapté",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une reconnaissance de handicap à 35%"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 30 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je cherche un emploi adapté"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise de travail adapté (ETA) recrute"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je suis embauché en ETA"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai un contrat de travail ordinaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon poste est adapté à mon handicap"
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie d'un encadrement spécialisé"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'entreprise reçoit des subsides spécifiques"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux évoluer vers l'emploi ordinaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "447e5c2d-7bc3-4ef8-832b-382626966407",
+      "name": "Mère isolée dans les titres-services",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis mère isolée avec 2 enfants"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 38 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas travaillé depuis 5 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise titres-services recrute"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je suis embauchée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai un contrat de travail standard"
+        },
+        {
+          "keyword": "Et",
+          "text": "je travaille minimum \"à mi-temps (19h/semaine)\""
+        },
+        {
+          "keyword": "Et",
+          "text": "mon salaire est au minimum \"11.99€ brut/heure\""
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai droit aux formations du Fonds de formation"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux obtenir un CDI après 3 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "mes horaires sont compatibles avec la vie familiale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "77bd7efe-f446-4e1d-b31b-8de1bbf09efb",
+      "name": "Emploi Activa pour chômeur de longue durée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis au chômage depuis 24 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 45 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un employeur privé veut m'engager"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'employeur demande l'avantage Activa"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je suis embauché avec la carte Activa"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'employeur bénéficie d'une réduction ONSS"
+        },
+        {
+          "keyword": "Et",
+          "text": "la réduction est de \"1000€ par mois pendant 30 mois\""
+        },
+        {
+          "keyword": "Et",
+          "text": "mon salaire est celui de la fonction"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai un contrat à durée indéterminée obligatoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie de tous les avantages du secteur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "af7c3498-17b9-4853-80a9-5134a5785e83",
+      "name": "Formation professionnelle individuelle en entreprise (FPI/IBO)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis demandeur d'emploi"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 28 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise accepte de me former"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la formation FPI dure 6 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est pour un poste de soudeur"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je commence la FPI"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je maintiens mes allocations de chômage"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois une prime de productivité progressive"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'entreprise ne paie pas de charges sociales"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai une garantie d'embauche en CDI après"
+        },
+        {
+          "keyword": "Et",
+          "text": "la durée maximale est de \"26 semaines\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e21a58f6-05a7-4beb-8b9e-6538e0857c58",
+      "name": "Économie sociale d'insertion (SINE)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis très éloigné de l'emploi"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 40 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai des problèmes sociaux multiples"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une initiative SINE me propose un emploi"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je suis engagé en SINE"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai un contrat de travail à durée indéterminée"
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie d'un accompagnement psychosocial"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon employeur reçoit une subvention importante"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux suivre des formations pendant mon temps de travail"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'objectif est ma réinsertion progressive"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "760a48a1-7873-4cba-8690-4874cc2a0de2",
+      "name": "Comparaison des dispositifs d'insertion",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis <profil>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je cherche un emploi depuis <duree_chomage>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon niveau de qualification est <qualification>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'examine les dispositifs disponibles"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le dispositif le plus adapté est <dispositif>"
+        },
+        {
+          "keyword": "Et",
+          "text": "la durée maximale est <duree_max>"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'avantage principal est <avantage>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "profil",
+            "duree_chomage",
+            "qualification",
+            "dispositif",
+            "duree_max",
+            "avantage"
+          ],
+          "rows": [
+            {
+              "name": "6dc92215-c4ba-478a-bbfa-9a239af6e35a",
+              "values": {
+                "profil": "bénéficiaire RIS",
+                "duree_chomage": "12 mois",
+                "qualification": "faible",
+                "dispositif": "Article 60",
+                "duree_max": "24 mois",
+                "avantage": "reconstitution droits chômage"
+              }
+            },
+            {
+              "name": "8dce5f7d-6d7a-497f-9555-8879c0abecb0",
+              "values": {
+                "profil": "jeune sans diplôme",
+                "duree_chomage": "3 mois",
+                "qualification": "aucune",
+                "dispositif": "Stage First",
+                "duree_max": "6 mois",
+                "avantage": "formation + indemnité"
+              }
+            },
+            {
+              "name": "10110bb1-e859-4a76-9525-2d0989eddc51",
+              "values": {
+                "profil": "chômeur longue durée",
+                "duree_chomage": "24 mois",
+                "qualification": "moyenne",
+                "dispositif": "Activa",
+                "duree_max": "illimitée",
+                "avantage": "CDI avec réduction ONSS"
+              }
+            },
+            {
+              "name": "5d877a3e-751d-414e-a0a5-bdec70dc6b04",
+              "values": {
+                "profil": "parent isolé",
+                "duree_chomage": "36 mois",
+                "qualification": "faible",
+                "dispositif": "Titres-serv.",
+                "duree_max": "illimitée",
+                "avantage": "horaires flexibles"
+              }
+            },
+            {
+              "name": "91117ce5-c7d7-46fc-9bdd-a0acb3e4f764",
+              "values": {
+                "profil": "personne handicapée",
+                "duree_chomage": "6 mois",
+                "qualification": "adaptée",
+                "dispositif": "ETA",
+                "duree_max": "illimitée",
+                "avantage": "environnement adapté"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "482c6d14-9663-4a7b-8472-5234e9069802",
+      "name": "Cumul avec d'autres aides sociales",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en insertion professionnelle Article 60"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 3 enfants à charge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon salaire est de 1400€ net"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mes autres droits"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je maintiens mes allocations familiales"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux demander une prime d'installation si je déménage"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai droit au tarif social pour l'énergie"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux obtenir une intervention dans les frais de garde"
+        },
+        {
+          "keyword": "Et",
+          "text": "je conserve ma carte médicale du CPAS pendant 1 an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e96f885a-5826-4d66-9ccd-33b18fc4dffb",
+      "name": "Transition vers l'emploi durable",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon contrat Article 60 se termine dans 3 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai acquis de l'expérience en administration"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai suivi des formations complémentaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare ma sortie du dispositif"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je bénéficie d'un accompagnement à la recherche d'emploi"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon CV est valorisé avec cette expérience"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ai droit à un bilan de compétences"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux postuler en interne à la commune"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'ouvre mes droits complets au chômage"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux accéder aux emplois ACS/APE"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b940fafa-c062-42ea-bbb4-1ec3f38810e1",
+      "name": "Échec d'insertion et nouvelle tentative",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon stage d'insertion a été interrompu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'était pour raisons médicales justifiées"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je souhaite reprendre un parcours d'insertion"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je me réinscris comme demandeur d'emploi"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux accéder à un nouveau dispositif"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon historique est pris en compte positivement"
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie d'un accompagnement renforcé"
+        },
+        {
+          "keyword": "Et",
+          "text": "la période d'interruption n'est pas pénalisante"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux choisir un autre secteur d'activité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5d85f97b-3dee-4bc9-83d9-67c5aaed5883",
+      "name": "Obligations pendant l'insertion professionnelle",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en parcours d'insertion"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je signe mon contrat d'insertion"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les horaires de travail"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois suivre les formations obligatoires"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois collaborer avec mon référent social"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois signaler tout changement de situation"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois participer aux évaluations régulières"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois chercher activement un emploi durable"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois respecter le règlement de travail"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.942Z"
+}

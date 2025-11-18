@@ -1,0 +1,150 @@
+{
+  "id": "copropriete-06-travaux-urgents",
+  "name": "Gestion des Travaux Urgents",
+  "description": "  En tant que syndic\n  Je veux gérer les travaux urgents\n  Afin de préserver l'immeuble et la sécurité",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "un problème urgent survient dans l'immeuble"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "e0f29743-6ff6-4dcf-850f-6421232ff849",
+      "name": "Fuite d'eau majeure nécessitant intervention immédiate",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une canalisation principale a éclaté"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'eau menace plusieurs appartements"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic est informé"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il peut engager les travaux immédiatement"
+        },
+        {
+          "keyword": "Et",
+          "text": "sans autorisation préalable de l'AG"
+        },
+        {
+          "keyword": "Et",
+          "text": "doit informer le conseil de copropriété sous 24h"
+        },
+        {
+          "keyword": "Et",
+          "text": "convoquer une AG extraordinaire sous 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "04a75724-a8d5-432a-8867-50d99b8e5a7c",
+      "name": "Plafond de dépense pour travaux urgents",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "des travaux urgents sont nécessaires"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le devis est de 8000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le plafond syndic est de 5000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic évalue la situation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit consulter le conseil de copropriété"
+        },
+        {
+          "keyword": "Et",
+          "text": "obtenir au moins 2 devis si possible"
+        },
+        {
+          "keyword": "Et",
+          "text": "peut dépasser si danger imminent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "52ae1122-1a23-41f9-bcf3-d004073adc06",
+      "name": "Travaux conservatoires après sinistre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un sinistre a endommagé le toit"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des mesures conservatoires sont nécessaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic agit"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit:",
+          "dataTable": {
+            "headers": [
+              "Action",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Action": "Sécuriser la zone",
+                "Délai": "Immédiat"
+              },
+              {
+                "Action": "Prévenir l'assurance",
+                "Délai": "24h"
+              },
+              {
+                "Action": "Faire établir devis",
+                "Délai": "48h"
+              },
+              {
+                "Action": "Informer copropriétaires",
+                "Délai": "72h"
+              },
+              {
+                "Action": "Convoquer AG si > 10% budget",
+                "Délai": "30 jours"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

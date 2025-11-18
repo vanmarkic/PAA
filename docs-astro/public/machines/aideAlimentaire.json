@@ -1,0 +1,58 @@
+{
+  "id": "aideAlimentaire",
+  "name": "Aide Alimentaire (Food Assistance) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for accessing food assistance programs,",
+  "states": [
+    "attente",
+    "DEMANDER_AIDE",
+    "evaluationBesoin",
+    "BESOIN_CONFIRME",
+    "BESOIN_NON_JUSTIFIE",
+    "aideApprouvee",
+    "DISTRIBUER_BONS",
+    "distributionBons",
+    "BONS_DISTRIBUES",
+    "aideActive",
+    "RENOUVELER_AIDE",
+    "CESSER_AIDE",
+    "refusee",
+    "REINITIALISER",
+    "terminee"
+  ],
+  "events": [
+    "DEMANDER_AIDE",
+    "EVALUER_BESOIN",
+    "BESOIN_CONFIRME",
+    "BESOIN_NON_JUSTIFIE",
+    "DISTRIBUER_BONS",
+    "BONS_DISTRIBUES",
+    "RENOUVELER_AIDE",
+    "CESSER_AIDE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Intégration Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Aide alimentaire",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/aide-alimentaire",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

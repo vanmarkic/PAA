@@ -1,0 +1,138 @@
+{
+  "id": "copropriete-01-convocation-ag-ordinaire",
+  "name": "Convocation Assemblée Générale Ordinaire",
+  "description": "  En tant que syndic\n  Je veux convoquer une assemblée générale ordinaire\n  Afin de respecter les obligations légales annuelles",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la copropriété \"Résidence Bellevue\" existe"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "elle compte 30 lots principaux"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le syndic est désigné"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "cb6ad6d7-368e-497d-a450-d982360aea01",
+      "name": "Convocation AG ordinaire dans les délais légaux",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la dernière AG date de plus de 11 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le syndic prépare la convocation 20 jours avant"
+        },
+        {
+          "keyword": "Quand",
+          "text": "il envoie la convocation avec l'ordre du jour"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la convocation est valide"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai légal de 15 jours est respecté"
+        },
+        {
+          "keyword": "Et",
+          "text": "tous les copropriétaires sont notifiés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5e31d676-ec6a-4628-919e-e20a1cb7872d",
+      "name": "Convocation AG avec documents obligatoires",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'AG ordinaire est prévue"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic prépare la convocation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les documents suivants sont joints:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Obligatoire"
+            ],
+            "rows": [
+              {
+                "Document": "Comptes annuels",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Budget prévisionnel",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Rapport du syndic",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Rapport du conseil",
+                "Obligatoire": "Non"
+              },
+              {
+                "Document": "Devis travaux",
+                "Obligatoire": "Non"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ca360a34-2955-4129-aebe-ff6b29d3d42a",
+      "name": "Convocation tardive invalide",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'AG est prévue dans 10 jours"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic envoie la convocation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la convocation est invalide"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"délai minimum de 15 jours non respecté\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

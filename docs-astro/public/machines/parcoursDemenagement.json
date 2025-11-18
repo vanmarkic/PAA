@@ -1,0 +1,40 @@
+{
+  "id": "parcoursDemenagement",
+  "name": "META MACHINE - Parcours Citoyen : Déménagement",
+  "category": "meta",
+  "description": "Toutes les démarches administratives lors d'un déménagement",
+  "states": [
+    "preparationDemenagement",
+    "DEMENAGEMENT_PLANIFIE",
+    "changementAdresseOfficiel",
+    "CHANGEMENT_ADRESSE_EFFECTUE",
+    "redirectionCourrier",
+    "COURRIER_REDIRIGE",
+    "tarifs",
+    "transfertEnergie",
+    "ENERGIE_TRANSFEREE",
+    "electriciteGaz",
+    "eau",
+    "transfertInternet",
+    "INTERNET_TRANSFERE",
+    "assuranceHabitation",
+    "ASSURANCE_MODIFIEE",
+    "types",
+    "notificationOrganismes",
+    "ORGANISMES_NOTIFIES",
+    "liste",
+    "demenagementComplete"
+  ],
+  "events": [
+    "DEMENAGEMENT_PLANIFIE",
+    "CHANGEMENT_ADRESSE_EFFECTUE",
+    "COURRIER_REDIRIGE",
+    "ENERGIE_TRANSFEREE",
+    "INTERNET_TRANSFERE",
+    "ASSURANCE_MODIFIEE",
+    "ORGANISMES_NOTIFIES",
+    "TOUTES_DEMARCHES_FAITES"
+  ],
+  "initial": "preparationDemenagement",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

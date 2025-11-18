@@ -1,0 +1,33 @@
+{
+  "id": "installationAlarmeHabitation",
+  "name": "Installation Alarme Habitation",
+  "category": "security",
+  "description": "",
+  "states": [
+    "evaluationBesoins",
+    "EVALUER",
+    "devisInstallation",
+    "DEVIS_ACCEPTE",
+    "cout",
+    "installation",
+    "INSTALLER",
+    "raccordementCentrale",
+    "RACCORDER_CENTRALE",
+    "declarationAssurance",
+    "DECLARER_ASSURANCE",
+    "systemeActif",
+    "SYSTEME_OPERATIONNEL",
+    "termine",
+    "obligationsLegales"
+  ],
+  "events": [
+    "EVALUER",
+    "DEVIS_ACCEPTE",
+    "INSTALLER",
+    "RACCORDER_CENTRALE",
+    "DECLARER_ASSURANCE",
+    "SYSTEME_OPERATIONNEL"
+  ],
+  "initial": "evaluationBesoins",
+  "generated": "2025-11-18T10:17:36.939Z"
+}

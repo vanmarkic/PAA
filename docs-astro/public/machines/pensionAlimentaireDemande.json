@@ -1,0 +1,28 @@
+{
+  "id": "pensionAlimentaireDemande",
+  "name": "Demande Pension Alimentaire",
+  "category": "justice",
+  "description": "",
+  "states": [
+    "demande",
+    "DEPOSER_DEMANDE",
+    "evaluationRessources",
+    "REVENUS_EVALUES",
+    "calculMontant",
+    "MONTANT_PROPOSE",
+    "audienceConciliation",
+    "ACCORD_PARTIES",
+    "JUGEMENT_RENDU",
+    "homologation",
+    "decisionJugement"
+  ],
+  "events": [
+    "DEPOSER_DEMANDE",
+    "REVENUS_EVALUES",
+    "MONTANT_PROPOSE",
+    "ACCORD_PARTIES",
+    "JUGEMENT_RENDU"
+  ],
+  "initial": "demande",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

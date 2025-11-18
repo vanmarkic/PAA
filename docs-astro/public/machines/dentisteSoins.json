@@ -1,0 +1,32 @@
+{
+  "id": "dentisteSoins",
+  "name": "Soins Dentaires",
+  "category": "health",
+  "description": "",
+  "states": [
+    "consultation",
+    "CONSULTER",
+    "remboursementConsultation",
+    "examenBuccal",
+    "DIAGNOSTIC_ETABLI",
+    "devis",
+    "DEVIS_PRESENTE",
+    "soins",
+    "SOINS_REALISES",
+    "soinsCouverts",
+    "calculRemboursement",
+    "REMBOURSEMENT_CALCULE",
+    "tauxRemboursement",
+    "termine",
+    "prevention"
+  ],
+  "events": [
+    "CONSULTER",
+    "DIAGNOSTIC_ETABLI",
+    "DEVIS_PRESENTE",
+    "SOINS_REALISES",
+    "REMBOURSEMENT_CALCULE"
+  ],
+  "initial": "consultation",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

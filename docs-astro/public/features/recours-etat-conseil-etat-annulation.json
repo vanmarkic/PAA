@@ -1,0 +1,496 @@
+{
+  "id": "recours-etat-conseil-etat-annulation",
+  "name": "Recours en annulation au Conseil d'État",
+  "description": "  En tant que citoyen ou personne morale\n  Je veux introduire un recours en annulation contre un acte administratif\n  Afin d'obtenir l'annulation d'une décision illégale",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le délai de recours est de 60 jours"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le droit de timbre est de 200€"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le Conseil d'État est compétent pour les actes administratifs"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'intérêt à agir doit être démontré"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "16987e62-1a83-43ac-9b96-fe678f90f6b6",
+      "name": "Recours dans les délais avec intérêt direct",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu une décision de refus de permis d'urbanisme"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la notification date du \"2024-01-15\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes le \"2024-02-20\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis propriétaire du terrain concerné"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un intérêt direct et personnel"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le recours devrait être admissible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai restant devrait être de 25 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais de procédure devraient être de 200€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais pouvoir demander la suspension en même temps"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c29ebefa-5a35-4ece-8659-2f77d7e492dc",
+      "name": "Recours avec demande de suspension en extrême urgence",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu un ordre de démolition"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'exécution est prévue dans 5 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la démolition causerait un préjudice grave et irréparable"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie les conditions d'extrême urgence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais pouvoir introduire un recours en extrême urgence"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être de 400€"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'audience devrait être fixée dans les 3 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois démontrer l'imminence du péril"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ba4947e1-d8dd-49b0-9e1b-69704606a971",
+      "name": "Recours hors délai",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu une décision défavorable"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la notification date du \"2024-01-01\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes le \"2024-04-15\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le recours ne devrait pas être admissible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"délai de recours dépassé (60 jours)\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais vérifier si un cas de force majeure s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b58eb96b-f56d-47cd-937b-85cd070add55",
+      "name": "Recours sans intérêt à agir",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une décision administrative a été prise"
+        },
+        {
+          "keyword": "Et que",
+          "text": "cette décision ne me concerne pas directement"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas d'intérêt personnel et actuel"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le recours ne devrait pas être admissible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"absence d'intérêt à agir\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais vérifier si une action collective est possible"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d7dc2e86-64ef-49fc-a076-90e96c038360",
+      "name": "Association avec intérêt collectif",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je représente une association environnementale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nos statuts prévoient la défense de l'environnement depuis plus de 3 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une décision autorise un projet polluant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ce projet affecte notre objet social"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie notre capacité à agir"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'association devrait avoir intérêt à agir"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous devrions fournir nos statuts publiés au Moniteur Belge"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous devrions prouver notre activité effective"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2e480983-8771-43b4-9dab-8c1e43e1d7ac",
+      "name": "Recours contre un règlement communal",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un règlement communal a été adopté"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ce règlement impose des taxes illégales"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis contribuable de la commune"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'introduis un recours en annulation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le délai devrait être de 60 jours à partir de la publication"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois attaquer le règlement dans son ensemble"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux demander la suspension si urgence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "72d0548f-6937-4733-bb9a-61222b9d869b",
+      "name": "Recours avec aide juridique",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mes revenus sont inférieurs au seuil"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je souhaite contester une décision administrative"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas les moyens de payer les frais"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'aide juridique"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais pouvoir bénéficier du pro deo"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais de procédure pourraient être réduits ou supprimés"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir une attestation de revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b81fa507-55a3-4424-9aa3-61a22ce7238f",
+      "name": "Calcul des délais selon le type de notification",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu une décision le <date_notification>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la notification s'est faite par <mode>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes le <date_actuelle>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule le délai de recours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le délai devrait <etre_expire>"
+        },
+        {
+          "keyword": "Et",
+          "text": "il devrait rester <jours_restants> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "date_notification",
+            "mode",
+            "date_actuelle",
+            "etre_expire",
+            "jours_restants"
+          ],
+          "rows": [
+            {
+              "name": "b1c77ab0-ba7b-46a4-b18c-3b8fdc8bed10",
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "recommandé",
+                "date_actuelle": "2024-02-15",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "name": "142120bf-35ea-41ab-a611-825afb88d6c5",
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "main propre",
+                "date_actuelle": "2024-02-15",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "name": "24db5f3e-b30a-421f-982f-cd9f0886c398",
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "publication",
+                "date_actuelle": "2024-03-15",
+                "etre_expire": "expirer",
+                "jours_restants": "0"
+              }
+            },
+            {
+              "name": "4019c6d7-7ca3-4dd2-8ff6-912d7cefc770",
+              "values": {
+                "date_notification": "2024-01-15",
+                "mode": "recommandé",
+                "date_actuelle": "2024-03-10",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "5"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "f8fca0f0-d763-42e5-b16b-f2ef0a83ca97",
+      "name": "Moyens d'annulation à invoquer",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conteste une décision administrative"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je rédige ma requête"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois invoquer au moins un des moyens suivants:",
+          "dataTable": {
+            "headers": [
+              "Moyen",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Moyen": "Incompétence",
+                "Description": "L'autorité n'avait pas le pouvoir de prendre l'acte"
+              },
+              {
+                "Moyen": "Vice de forme",
+                "Description": "Les formes substantielles n'ont pas été respectées"
+              },
+              {
+                "Moyen": "Violation de la loi",
+                "Description": "L'acte viole une norme supérieure"
+              },
+              {
+                "Moyen": "Détournement de pouvoir",
+                "Description": "L'acte poursuit un but autre que l'intérêt général"
+              },
+              {
+                "Moyen": "Erreur manifeste",
+                "Description": "Appréciation manifestement déraisonnable des faits"
+              },
+              {
+                "Moyen": "Défaut de motivation",
+                "Description": "L'acte n'est pas motivé formellement"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "chaque moyen doit être développé et étayé"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois citer les dispositions légales violées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6ce23707-6354-46a9-9740-f40154bb84f0",
+      "name": "Constitution du dossier administratif",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un recours est introduit"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'administration est notifiée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "elle doit transmettre le dossier administratif dans les 30 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "le dossier doit contenir toutes les pièces"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux demander des pièces manquantes"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'absence de transmission peut entraîner l'annulation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.954Z"
+}

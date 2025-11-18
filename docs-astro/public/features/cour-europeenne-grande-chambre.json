@@ -1,0 +1,299 @@
+{
+  "id": "cour-europeenne-grande-chambre",
+  "name": "Procédure devant la Grande Chambre",
+  "description": "  En tant que partie à une affaire CEDH\n  Je veux demander le renvoi devant la Grande Chambre\n  Afin d'obtenir un réexamen de l'affaire par la plus haute formation",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la Grande Chambre est composée de 17 juges"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "elle examine les affaires soulevant des questions graves"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le renvoi doit être demandé dans les 3 mois"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "1b750e01-3491-429e-b19f-1785dd85e8b2",
+      "name": "Demande de renvoi recevable dans le délai",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un arrêt de Chambre a été rendu le \"01/09/2024\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'arrêt soulève une question d'interprétation importante"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes le \"15/11/2024\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'affaire concerne un problème systémique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renvoi en Grande Chambre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la demande devrait être dans le délai de 3 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "le collège de 5 juges devrait examiner la demande"
+        },
+        {
+          "keyword": "Et",
+          "text": "les critères d'acceptation devraient être évalués"
+        },
+        {
+          "keyword": "Et",
+          "text": "la décision devrait être rendue sans motivation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "715ef86a-fec8-4d49-931a-ab6170a77c41",
+      "name": "Dessaisissement en faveur de la Grande Chambre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une Chambre examine mon affaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'affaire soulève une question grave d'interprétation"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il pourrait y avoir contradiction avec un arrêt antérieur"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les parties ne s'opposent pas au dessaisissement"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la Chambre propose le dessaisissement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la Grande Chambre devrait être saisie directement"
+        },
+        {
+          "keyword": "Et",
+          "text": "aucune demande de renvoi ne serait nécessaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'affaire serait réexaminée ab initio"
+        },
+        {
+          "keyword": "Et",
+          "text": "une audience publique pourrait être organisée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "584913dd-3028-48f2-a919-c4c971a9d84f",
+      "name": "Audience devant la Grande Chambre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon affaire est devant la Grande Chambre"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une audience est prévue le \"01/12/2024\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai préparé mes plaidoiries"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des tiers intervenants participent"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'audience se tient"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais disposer de 30 minutes de plaidoirie"
+        },
+        {
+          "keyword": "Et",
+          "text": "pouvoir répondre aux questions des juges"
+        },
+        {
+          "keyword": "Et",
+          "text": "les tiers intervenants auraient un temps limité"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'audience serait publique et retransmise"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "cbd1e5f7-0bd5-4fd8-a7dd-9e023c7647d1",
+      "name": "Arrêt définitif de la Grande Chambre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la Grande Chambre a délibéré"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle a trouvé une violation de l'article 6"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle accorde 50000 euros de satisfaction équitable"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'arrêt est prononcé publiquement"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'arrêt est rendu"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il devrait être définitif immédiatement"
+        },
+        {
+          "keyword": "Et",
+          "text": "aucun recours ne serait possible"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'État devrait l'exécuter dans les 3 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "le Comité des Ministres superviserait l'exécution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5f5e5eba-0d3f-4146-939b-a2e718e3cb03",
+      "name": "Évaluation des critères de renvoi",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un arrêt de Chambre concerne \"<question>\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'impact est \"<impact>\""
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il y a \"<contradiction>\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "le collège évalue la demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'acceptation devrait être \"<decision>\""
+        },
+        {
+          "keyword": "Et",
+          "text": "la raison principale serait \"<raison>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "question",
+            "impact",
+            "contradiction",
+            "decision",
+            "raison"
+          ],
+          "rows": [
+            {
+              "name": "5b125902-2330-4de7-8320-916f6190fc6c",
+              "values": {
+                "question": "interprétation nouvelle",
+                "impact": "systémique",
+                "contradiction": "aucune",
+                "decision": "acceptée",
+                "raison": "question grave d'interprétation"
+              }
+            },
+            {
+              "name": "6690474d-8e3c-468a-a9f4-a96593d5e525",
+              "values": {
+                "question": "application standard",
+                "impact": "individuel",
+                "contradiction": "aucune",
+                "decision": "refusée",
+                "raison": "pas de question grave"
+              }
+            },
+            {
+              "name": "7cf7eebe-d836-4da9-a762-e6cc305859b4",
+              "values": {
+                "question": "principe fondamental",
+                "impact": "général",
+                "contradiction": "arrêt antérieur",
+                "decision": "acceptée",
+                "raison": "risque de contradiction"
+              }
+            },
+            {
+              "name": "6b585235-824a-463a-992f-31889ab50497",
+              "values": {
+                "question": "procédure habituelle",
+                "impact": "limité",
+                "contradiction": "aucune",
+                "decision": "refusée",
+                "raison": "importance insuffisante"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.947Z"
+}

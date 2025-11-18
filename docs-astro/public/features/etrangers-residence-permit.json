@@ -1,0 +1,534 @@
+{
+  "id": "etrangers-residence-permit",
+  "name": "Permis de séjour - Procédures générales",
+  "description": "  En tant qu'étranger en Belgique\n  Je veux demander ou renouveler un permis de séjour\n  Afin de résider légalement sur le territoire belge",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les frais de carte de séjour 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type de carte",
+            "Nouveau",
+            "Renouvellement"
+          ],
+          "rows": [
+            {
+              "Type de carte": "Carte A",
+              "Nouveau": "180€",
+              "Renouvellement": "60€"
+            },
+            {
+              "Type de carte": "Carte B",
+              "Nouveau": "200€",
+              "Renouvellement": "200€"
+            },
+            {
+              "Type de carte": "Carte C",
+              "Nouveau": "215€",
+              "Renouvellement": "215€"
+            },
+            {
+              "Type de carte": "Carte D",
+              "Nouveau": "215€",
+              "Renouvellement": "215€"
+            },
+            {
+              "Type de carte": "Carte E",
+              "Nouveau": "60€",
+              "Renouvellement": "60€"
+            },
+            {
+              "Type de carte": "Carte F",
+              "Nouveau": "200€",
+              "Renouvellement": "200€"
+            },
+            {
+              "Type de carte": "Carte H",
+              "Nouveau": "350€",
+              "Renouvellement": "350€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "6916bfb0-2c19-4b65-b18c-134b1f1775fa",
+      "name": "Demande de première carte A (séjour temporaire)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un ressortissant de pays tiers"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un visa D valide pour études"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis inscrit dans une université belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une preuve de moyens de subsistance de 730€/mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une assurance maladie valide"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une adresse en Belgique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte A à la commune"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être recevable"
+        },
+        {
+          "keyword": "Et",
+          "text": "le type de carte devrait être \"A\""
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 180€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement devrait être environ 45 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f5fcd764-15a5-4bad-b99e-56754d2b1795",
+      "name": "Renouvellement de carte A",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une carte A qui expire dans 45 jours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis toujours étudiant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je progresse dans mes études"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai maintenu mes moyens de subsistance"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renouvellement de ma carte A"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 60€"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma nouvelle carte devrait être valide pour 1 an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "54123d0c-49d0-4d58-8554-6c246e1ade19",
+      "name": "Demande de carte B (séjour illimité)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une carte A depuis 5 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai eu un séjour ininterrompu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un emploi stable"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de condamnations pénales"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je parle français au niveau A2"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte B"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 200€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement devrait être environ 120 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "abbace70-166b-4a79-a09d-425d6997676a",
+      "name": "Demande de carte E (citoyen UE)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis citoyen de l'Union européenne"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un emploi en Belgique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je réside en Belgique depuis 3 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande mon enregistrement (carte E)"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être automatiquement acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 60€"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma carte devrait être valide pour 5 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "21821a5e-6e63-493b-ab8c-60a6c7faca9c",
+      "name": "Demande de carte F (membre de famille UE)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis conjoint d'un citoyen UE"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon conjoint a une carte E valide"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous vivons ensemble"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une preuve de notre mariage"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte F"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 200€"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma carte devrait être liée au statut de mon conjoint"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "88822312-7492-458a-8430-f7e9c40dd17f",
+      "name": "Demande de carte H (carte bleue européenne)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une offre d'emploi hautement qualifié"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le salaire annuel est de 58000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un diplôme universitaire reconnu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'employeur a fait une demande de permis unique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte bleue européenne"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais devraient être 350€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai devrait être environ 90 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma famille devrait pouvoir me rejoindre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "dba6555f-e122-4d4a-9413-a36832e74f42",
+      "name": "Refus pour séjour irrégulier",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon visa a expiré il y a 6 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de titre de séjour valide"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de circonstances exceptionnelles"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte de séjour"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être irrecevable"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais recevoir un ordre de quitter le territoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"séjour irrégulier - pas de titre valide\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "cf1970d8-53c6-4ac1-b5e6-c32c44ddb803",
+      "name": "Contrôle de résidence par l'agent de quartier",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai déposé une demande de carte A"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai déclaré mon adresse à la commune"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'agent de quartier fait le contrôle de résidence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il devrait vérifier ma présence effective"
+        },
+        {
+          "keyword": "Et",
+          "text": "il devrait faire maximum 2 visites"
+        },
+        {
+          "keyword": "Et",
+          "text": "si je suis absent aux 2 visites"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande pourrait être refusée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "68d109d1-4589-4bca-96f3-f081ec0e94be",
+      "name": "Calcul des frais selon le type de carte",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je demande une <type_carte>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est une <type_demande>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie les frais"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant devrait être <frais>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_carte",
+            "type_demande",
+            "frais"
+          ],
+          "rows": [
+            {
+              "name": "e200becf-0b0b-4e81-9564-b040345ea8b0",
+              "values": {
+                "type_carte": "Carte A",
+                "type_demande": "nouvelle",
+                "frais": "180"
+              }
+            },
+            {
+              "name": "226435f3-0e8b-48f1-a5a1-cd823cee078f",
+              "values": {
+                "type_carte": "Carte A",
+                "type_demande": "renouvellement",
+                "frais": "60"
+              }
+            },
+            {
+              "name": "77fc7de0-56f7-4158-95c7-7fa3f5ccdf3e",
+              "values": {
+                "type_carte": "Carte B",
+                "type_demande": "nouvelle",
+                "frais": "200"
+              }
+            },
+            {
+              "name": "ccaaa127-3ade-4ebd-9ad6-42e421b15e2b",
+              "values": {
+                "type_carte": "Carte C",
+                "type_demande": "nouvelle",
+                "frais": "215"
+              }
+            },
+            {
+              "name": "eefbb9fe-b636-48bc-b53e-4be5bc6419c9",
+              "values": {
+                "type_carte": "Carte E",
+                "type_demande": "nouvelle",
+                "frais": "60"
+              }
+            },
+            {
+              "name": "ab3db1cf-d6a6-4fbc-9723-7d28fa03ca08",
+              "values": {
+                "type_carte": "Carte F",
+                "type_demande": "nouvelle",
+                "frais": "200"
+              }
+            },
+            {
+              "name": "b1a4e38c-9b8c-4e2f-8a27-ac2fe035cc7b",
+              "values": {
+                "type_carte": "Carte H",
+                "type_demande": "nouvelle",
+                "frais": "350"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "018ee773-9de9-4176-9830-e7503a68937e",
+      "name": "Procédure accélérée moyennant supplément",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai besoin urgent de ma carte"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis éligible pour une carte A"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'accepte de payer le supplément"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la procédure accélérée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les frais supplémentaires devraient être 180€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai devrait être réduit à 15 jours ouvrables"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais avoir une attestation temporaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.950Z"
+}

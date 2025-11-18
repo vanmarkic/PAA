@@ -1,0 +1,154 @@
+{
+  "id": "cour-europeenne-avis-consultatif",
+  "name": "Avis consultatif (Protocole 16)",
+  "description": "  En tant que juridiction suprême nationale\n  Je veux demander un avis consultatif à la CEDH\n  Afin d'obtenir des orientations sur l'interprétation de la Convention",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le Protocole 16 permet les avis consultatifs"
+      },
+      {
+        "keyword": "Et que",
+        "text": "seules les plus hautes juridictions peuvent demander"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'État doit avoir ratifié le Protocole 16"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "fc9e7460-9bd5-4298-9e5f-3e5bf9a25cd3",
+      "name": "Demande d'avis sur une question de principe",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis la Cour de cassation belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la Belgique a ratifié le Protocole 16"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une affaire soulève une nouvelle question d'interprétation"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la question concerne l'article 8 et les données numériques"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un avis consultatif"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais exposer le contexte juridique et factuel"
+        },
+        {
+          "keyword": "Et",
+          "text": "formuler des questions précises"
+        },
+        {
+          "keyword": "Et",
+          "text": "expliquer la pertinence pour l'affaire pendante"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Grande Chambre devrait examiner la demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a720f93a-418a-4086-a8c7-ac228ba51102",
+      "name": "État n'ayant pas ratifié le Protocole",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une haute juridiction française"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la France n'a pas ratifié le Protocole 16"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une question importante sur la Convention"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je considère demander un avis"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure ne serait pas disponible"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais trancher selon ma propre interprétation"
+        },
+        {
+          "keyword": "Et",
+          "text": "attendre une éventuelle requête individuelle ultérieure"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "9bd87ff9-6f9f-4472-bdf6-2c1bad48a3c2",
+      "name": "Question trop abstraite refusée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une juridiction demande un avis général"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les questions sont hypothétiques"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elles ne sont pas liées à une affaire concrète"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elles ressemblent à une consultation académique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la CEDH examine la demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "elle devrait refuser de donner un avis"
+        },
+        {
+          "keyword": "Et",
+          "text": "expliquer que les questions sont trop abstraites"
+        },
+        {
+          "keyword": "Et",
+          "text": "rappeler le cadre du Protocole 16"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

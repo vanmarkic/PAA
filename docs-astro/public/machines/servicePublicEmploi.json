@@ -1,0 +1,66 @@
+{
+  "id": "servicePublicEmploi",
+  "name": "Service Public Emploi (Public Employment Service) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for public employment service registration,",
+  "states": [
+    "attente",
+    "INSCRIRE_DEMANDEUR",
+    "validationInscription",
+    "INSCRIPTION_VALIDEE",
+    "premierEntretien",
+    "DEFINIR_PROJET",
+    "demandeAllocations",
+    "ALLOCATIONS_ACCORDEES",
+    "ALLOCATIONS_REFUSEES",
+    "suiviActif",
+    "PROPOSER_OFFRES",
+    "ENTRETIEN_SUIVI",
+    "CONTROLE_RECHERCHE",
+    "EMPLOI_TROUVE",
+    "RADIATION",
+    "controleActivite",
+    "sortiePositive",
+    "REINITIALISER",
+    "inscriptionRadiee"
+  ],
+  "events": [
+    "INSCRIRE_DEMANDEUR",
+    "INSCRIPTION_VALIDEE",
+    "PREMIER_ENTRETIEN",
+    "DEFINIR_PROJET",
+    "PROPOSER_OFFRES",
+    "DEMANDER_ALLOCATIONS",
+    "ALLOCATIONS_ACCORDEES",
+    "ALLOCATIONS_REFUSEES",
+    "ENTRETIEN_SUIVI",
+    "CONTROLE_RECHERCHE",
+    "EMPLOI_TROUVE",
+    "RADIATION",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Le Forem",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Service public de l'emploi et de la formation",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.leforem.be",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

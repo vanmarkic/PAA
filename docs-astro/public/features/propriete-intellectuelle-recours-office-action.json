@@ -1,0 +1,101 @@
+{
+  "id": "propriete-intellectuelle-recours-office-action",
+  "name": "Recours contre décision de l'office",
+  "description": "  En tant que déposant\n  Je veux contester une décision de refus\n  Afin d'obtenir mon droit de propriété intellectuelle",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "un recours est possible"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le délai est généralement de 2 mois"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les frais de recours sont dus"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "ada4cada-f40d-4f6e-911d-daca267f2202",
+      "name": "Appel contre refus de brevet",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'OPRI a refusé mon brevet"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je conteste les motifs de refus"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je forme un recours dans les 2 mois"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois payer les frais de recours"
+        },
+        {
+          "keyword": "Et",
+          "text": "soumettre des arguments détaillés"
+        },
+        {
+          "keyword": "Et",
+          "text": "éventuellement modifier mes revendications"
+        },
+        {
+          "keyword": "Et",
+          "text": "une chambre de recours examine mon dossier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "30f9cbf5-008a-41b9-9d73-6027caa7d47b",
+      "name": "Recours contre refus de marque",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le BOIP refuse ma marque"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je pense que c'est une erreur"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais appel devant la Cour d'appel"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois être représenté par un avocat"
+        },
+        {
+          "keyword": "Et",
+          "text": "présenter des arguments juridiques"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour peut annuler la décision"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

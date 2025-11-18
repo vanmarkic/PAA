@@ -1,0 +1,146 @@
+{
+  "id": "propriete-intellectuelle-transfert-technologie",
+  "name": "Transfert de technologie",
+  "description": "  En tant qu'université, centre de recherche ou entreprise\n  Je veux transférer ma technologie\n  Afin de valoriser mes innovations",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le transfert peut prendre plusieurs formes"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la valorisation est encouragée fiscalement"
+      },
+      {
+        "keyword": "Et que",
+        "text": "des contrats spécifiques sont nécessaires"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "d45b8172-01e5-4f28-bcab-cddc905c2053",
+      "name": "Transfert université-entreprise via licence",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'université a développé une technologie"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un brevet a été déposé"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise est intéressée"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous négocions le transfert"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous établissons un contrat de licence"
+        },
+        {
+          "keyword": "Et",
+          "text": "définissons les redevances (3-5% typique)"
+        },
+        {
+          "keyword": "Et",
+          "text": "prévoyons un accompagnement technique"
+        },
+        {
+          "keyword": "Et",
+          "text": "respectons la réglementation des aides d'État"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e5bfb2a0-8097-4fea-ade9-0aaf918dea87",
+      "name": "Création de spin-off universitaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une équipe de recherche veut commercialiser"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'université accepte la création d'une spin-off"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous structurons l'opération"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'université apporte la PI en capital"
+        },
+        {
+          "keyword": "Et",
+          "text": "prend une participation minoritaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "les chercheurs deviennent entrepreneurs"
+        },
+        {
+          "keyword": "Et",
+          "text": "un pacte d'actionnaires est signé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3c30a83f-6952-44f6-91b4-ad3c4032ace5",
+      "name": "Joint venture pour co-développement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "deux entreprises ont des technologies complémentaires"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elles veulent co-développer un produit"
+        },
+        {
+          "keyword": "Quand",
+          "text": "elles créent une joint venture"
+        },
+        {
+          "keyword": "Alors",
+          "text": "chacune apporte sa technologie"
+        },
+        {
+          "keyword": "Et",
+          "text": "les nouvelles innovations sont co-détenues"
+        },
+        {
+          "keyword": "Et",
+          "text": "les revenus sont partagés selon l'accord"
+        },
+        {
+          "keyword": "Et",
+          "text": "une clause de sortie est prévue"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

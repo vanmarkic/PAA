@@ -1,0 +1,561 @@
+{
+  "id": "benefits-ris",
+  "name": "Revenu d'Intégration Sociale (RIS)",
+  "description": "  Version: 2024.1.0\n  En tant que personne sans ressources suffisantes\n  Je veux savoir si j'ai droit au RIS\n  Afin de subvenir à mes besoins de base",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les montants RIS 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Montant mensuel"
+          ],
+          "rows": [
+            {
+              "Catégorie": "Personne isolée",
+              "Montant mensuel": "1070.49€"
+            },
+            {
+              "Catégorie": "Personne cohabitante",
+              "Montant mensuel": "713.66€"
+            },
+            {
+              "Catégorie": "Famille monoparentale",
+              "Montant mensuel": "1450.52€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "34ed35a3-f8c1-428a-90ed-448a6b68e921",
+      "name": "Personne isolée sans revenus éligible au RIS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de patrimoine significatif"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant du RIS devrait être 1070.49€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie devrait être \"isolé\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ab11a791-9dc0-40cd-95b3-bdef01be3c0a",
+      "name": "Personne cohabitante éligible au RIS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis cohabitant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 30 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu mensuel est de 200€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le revenu du ménage est de 500€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant du RIS devrait être inférieur à 713.66€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie devrait être \"cohabitant\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "63544926-d8ad-4296-85c4-e77a14884221",
+      "name": "Parent isolé avec enfant à charge éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis parent isolé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 1 enfant à charge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 28 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu mensuel est de 400€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant du RIS devrait être calculé avec complément"
+        },
+        {
+          "keyword": "Et",
+          "text": "la catégorie devrait être \"famille monoparentale\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant total devrait être supérieur à 1000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0282fb3b-b60e-4fc3-b456-d2dccb2554e9",
+      "name": "Personne trop jeune pour le RIS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 17 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"âge minimum non atteint (18 ans requis)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2b256db9-34e0-40ca-bbb5-95a0a08b513d",
+      "name": "Personne sans titre de séjour valide",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de titre de séjour valide en Belgique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"pas de titre de séjour valide\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b44cbf34-8516-46f2-9bcf-5252f92e4150",
+      "name": "Patrimoine trop élevé pour le RIS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je possède un patrimoine mobilier de 15000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"patrimoine mobilier supérieur à 6200€\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "9d9395bd-667e-4b6e-b0af-ba4fbf1737f1",
+      "name": "Étudiant temps plein inéligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 20 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis étudiant temps plein"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité au RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"étudiant temps plein (sauf exceptions)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "845721ff-b567-4912-b99a-935fc2324173",
+      "name": "Cumul RIS et revenus professionnels partiels",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je bénéficie du RIS"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je commence à travailler avec un revenu de 400€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mon nouveau RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "une exonération devrait être appliquée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant exonéré devrait être environ 252€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le RIS restant devrait être calculé avec \"RIS - (revenu - exonération)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c0963800-9d0b-470a-bb11-363a7e8dd040",
+      "name": "Calcul RIS selon revenus et catégorie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis <catégorie>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu mensuel est de <revenu>€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mon RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant du RIS devrait être <ris_calculé>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "catégorie",
+            "revenu",
+            "ris_calculé"
+          ],
+          "rows": [
+            {
+              "name": "c9a5656b-f1ad-47bb-9f1b-85b8fb93d312",
+              "values": {
+                "catégorie": "une personne isolée",
+                "revenu": "0",
+                "ris_calculé": "1070.49"
+              }
+            },
+            {
+              "name": "d68fd9e6-9925-4c15-a7f1-5128dc64403c",
+              "values": {
+                "catégorie": "une personne isolée",
+                "revenu": "300",
+                "ris_calculé": "770.49"
+              }
+            },
+            {
+              "name": "8e8d31ce-6fe0-4349-95c9-e04bf1afaee4",
+              "values": {
+                "catégorie": "cohabitant",
+                "revenu": "0",
+                "ris_calculé": "713.66"
+              }
+            },
+            {
+              "name": "9a1965b0-1651-4bf3-82e6-a806bd546fd7",
+              "values": {
+                "catégorie": "cohabitant",
+                "revenu": "200",
+                "ris_calculé": "513.66"
+              }
+            },
+            {
+              "name": "a149a7bd-35a6-4423-8e57-908f269da1f6",
+              "values": {
+                "catégorie": "parent isolé",
+                "revenu": "0",
+                "ris_calculé": "1450.52"
+              }
+            },
+            {
+              "name": "3002b1e6-95a4-4d3b-a9b6-e4a9c57a95df",
+              "values": {
+                "catégorie": "parent isolé",
+                "revenu": "500",
+                "ris_calculé": "950.52"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "7bf37197-92bd-4330-86d2-360cd0c47b0c",
+      "name": "Obligations liées au RIS",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis éligible au RIS"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'accepte le RIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois signer un contrat PIIS (Projet Individualisé d'Intégration Sociale)"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois être disponible pour le marché de l'emploi"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois déclarer toute modification de ma situation"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois résider effectivement en Belgique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "721bc5d2-3655-4a11-9748-c900e906f27d",
+      "name": "Comparaison RIS vs chômage",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je pourrais avoir droit au chômage de 850€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je pourrais avoir droit au RIS de 1070.49€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je compare les deux options"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le système devrait suggérer \"demander le chômage d'abord\""
+        },
+        {
+          "keyword": "Et",
+          "text": "expliquer \"le RIS est subsidiaire - demandez d'abord les autres aides\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "specificationVersion": "2024.1.0",
+    "effectiveDate": "2024-01-01",
+    "legalBasis": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+    "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi",
+    "implementedBy": "src/rules/risRules.ts",
+    "language": "fr",
+    "version": "2024.1.0"
+  },
+  "generated": "2025-11-18T10:17:36.944Z",
+  "legalSources": {
+    "sources": [
+      {
+        "title": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+        "authority": "Source légale"
+      }
+    ]
+  }
+}

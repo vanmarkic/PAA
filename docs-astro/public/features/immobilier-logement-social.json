@@ -1,0 +1,913 @@
+{
+  "id": "immobilier-logement-social",
+  "name": "Logement Social et Habitations à Loyer Modéré",
+  "description": "  En tant que personne à revenus modestes\n  Je veux accéder à un logement social\n  Afin d'avoir un logement décent et abordable",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les plafonds de revenus 2024 pour le logement social sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Wallonie",
+            "Bruxelles",
+            "Flandre"
+          ],
+          "rows": [
+            {
+              "Catégorie": "Personne seule",
+              "Wallonie": "25300€",
+              "Bruxelles": "24229€",
+              "Flandre": "26184€"
+            },
+            {
+              "Catégorie": "Ménage 2 revenus",
+              "Wallonie": "30700€",
+              "Bruxelles": "26921€",
+              "Flandre": "39276€"
+            },
+            {
+              "Catégorie": "+ par enfant",
+              "Wallonie": "+2400€",
+              "Bruxelles": "+2692€",
+              "Flandre": "+3648€"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "les sociétés de logement social sont régionales"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "20e21980-6122-4020-bc6d-a506fd2a812f",
+      "name": "Demande d'inscription pour un logement social",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mes revenus annuels sont de 20000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis une personne seule"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je vis en Région Wallonne"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de propriété"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je m'inscris pour un logement social"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Document": "Composition de ménage",
+                "Description": "Commune - 3 mois max"
+              },
+              {
+                "Document": "Avertissement extrait de rôle",
+                "Description": "Dernière année"
+              },
+              {
+                "Document": "Attestation revenus",
+                "Description": "Tous les membres majeurs"
+              },
+              {
+                "Document": "Attestation non-propriété",
+                "Description": "SPF Finances"
+              },
+              {
+                "Document": "Certificat médical",
+                "Description": "Si priorité santé"
+              },
+              {
+                "Document": "Preuve de séparation",
+                "Description": "Si applicable"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois un numéro de candidature unique"
+        },
+        {
+          "keyword": "Et",
+          "text": "je suis inscrit sur liste d'attente avec points de priorité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "583c9252-7223-4f89-be39-d7a77f996df0",
+      "name": "Attribution des points de priorité logement social",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis candidat au logement social"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai différentes situations prioritaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "mon dossier est évalué"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les points sont attribués selon:",
+          "dataTable": {
+            "headers": [
+              "Situation",
+              "Points",
+              "Cumul"
+            ],
+            "rows": [
+              {
+                "Situation": "Sans-abri",
+                "Points": "20",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Logement insalubre",
+                "Points": "15",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Expulsion sans faute",
+                "Points": "10",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Handicap > 66%",
+                "Points": "10",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Famille monoparentale",
+                "Points": "8",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Plus de 65 ans",
+                "Points": "6",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Victime violence",
+                "Points": "10",
+                "Cumul": "Oui"
+              },
+              {
+                "Situation": "Ancienneté par année",
+                "Points": "2",
+                "Cumul": "Max 20"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "l'attribution suit l'ordre des points"
+        },
+        {
+          "keyword": "Et",
+          "text": "à points égaux, l'ancienneté prime"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c3e2f2c5-dfe4-4b7a-a876-80f19a890556",
+      "name": "Détermination du loyer dans le logement social",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai obtenu un logement social 2 chambres"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus annuels sont de 18000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le loyer de base est de 400€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en Wallonie"
+        },
+        {
+          "keyword": "Quand",
+          "text": "mon loyer social est calculé"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la formule comprend:",
+          "dataTable": {
+            "headers": [
+              "Élément",
+              "Calcul"
+            ],
+            "rows": [
+              {
+                "Élément": "Revenu de référence",
+                "Calcul": "18000€ / 12 = 1500€"
+              },
+              {
+                "Élément": "Taux d'effort",
+                "Calcul": "20% du revenu mensuel"
+              },
+              {
+                "Élément": "Loyer social",
+                "Calcul": "1500€ × 20% = 300€"
+              },
+              {
+                "Élément": "Minimum",
+                "Calcul": "126€ (plancher 2024)"
+              },
+              {
+                "Élément": "Maximum",
+                "Calcul": "400€ (loyer de base)"
+              },
+              {
+                "Élément": "Charges",
+                "Calcul": "50€ (forfait)"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le loyer total est 350€ charges comprises"
+        },
+        {
+          "keyword": "Et",
+          "text": "le loyer est révisé annuellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a81343cb-f8ad-4802-922f-fc7d2afd5c47",
+      "name": "Demande de mutation vers un autre logement social",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'occupe un logement social 1 chambre"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma famille s'est agrandie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai maintenant 2 enfants"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une mutation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les motifs valables sont:",
+          "dataTable": {
+            "headers": [
+              "Motif",
+              "Priorité",
+              "Documents"
+            ],
+            "rows": [
+              {
+                "Motif": "Sur/sous-occupation",
+                "Priorité": "Haute",
+                "Documents": "Composition ménage"
+              },
+              {
+                "Motif": "Raisons médicales",
+                "Priorité": "Haute",
+                "Documents": "Certificat médical"
+              },
+              {
+                "Motif": "Rapprochement travail",
+                "Priorité": "Moyenne",
+                "Documents": "Contrat de travail"
+              },
+              {
+                "Motif": "Problèmes voisinage",
+                "Priorité": "Moyenne",
+                "Documents": "Plaintes officielles"
+              },
+              {
+                "Motif": "Adaptation handicap",
+                "Priorité": "Haute",
+                "Documents": "Attestation handicap"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "je reste locataire pendant la procédure"
+        },
+        {
+          "keyword": "Et",
+          "text": "la mutation est prioritaire sur nouvelles candidatures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b62a3b58-0212-4480-ac54-e7eeb6fe8ed4",
+      "name": "Acquisition d'un logement social par le locataire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'occupe mon logement social depuis 5 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la société propose la vente"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le prix estimé est de 150000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je veux acheter mon logement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les conditions sont:",
+          "dataTable": {
+            "headers": [
+              "Condition",
+              "Détail"
+            ],
+            "rows": [
+              {
+                "Condition": "Ancienneté location",
+                "Détail": "Minimum 5 ans"
+              },
+              {
+                "Condition": "Revenus plafonds",
+                "Détail": "Ne pas dépasser 150% du plafond"
+              },
+              {
+                "Condition": "Prix de vente",
+                "Détail": "Estimation - 30% (avantage social)"
+              },
+              {
+                "Condition": "Financement",
+                "Détail": "Crédit social possible"
+              },
+              {
+                "Condition": "Clause de réméré",
+                "Détail": "10 ans non-revente"
+              },
+              {
+                "Condition": "Plus-value",
+                "Détail": "Partage si revente < 10 ans"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le prix d'achat est environ 105000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je bénéficie du taux réduit crédit social"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "4f53654d-b002-484a-819e-fe36ae453954",
+      "name": "Location via une Agence Immobilière Sociale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mes revenus sont de 22000€ annuels"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je cherche un logement abordable"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une AIS gère des biens privés"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je candidate auprès de l'AIS"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les avantages sont:",
+          "dataTable": {
+            "headers": [
+              "Aspect",
+              "Locataire",
+              "Propriétaire"
+            ],
+            "rows": [
+              {
+                "Aspect": "Loyer",
+                "Locataire": "-20% marché",
+                "Propriétaire": "Garanti"
+              },
+              {
+                "Aspect": "Garantie",
+                "Locataire": "2 mois max",
+                "Propriétaire": "AIS garantit"
+              },
+              {
+                "Aspect": "Accompagnement",
+                "Locataire": "Social inclus",
+                "Propriétaire": "Gestion complète"
+              },
+              {
+                "Aspect": "Entretien",
+                "Locataire": "Normal",
+                "Propriétaire": "AIS supervise"
+              },
+              {
+                "Aspect": "Fiscalité",
+                "Locataire": "-",
+                "Propriétaire": "Exonération précompte"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les revenus doivent être < plafonds sociaux + 20%"
+        },
+        {
+          "keyword": "Et",
+          "text": "le bail est de type classique 9 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e854f0f1-5b94-41ea-80d4-2e3d38829a4d",
+      "name": "Création d'un habitat groupé solidaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "5 familles veulent créer un habitat groupé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le projet inclut espaces communs"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous visons l'accessibilité financière"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous montons le projet"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les étapes sont:",
+          "dataTable": {
+            "headers": [
+              "Phase",
+              "Actions",
+              "Durée"
+            ],
+            "rows": [
+              {
+                "Phase": "Constitution groupe",
+                "Actions": "Charte, vision commune",
+                "Durée": "6 mois"
+              },
+              {
+                "Phase": "Forme juridique",
+                "Actions": "ASBL, coopérative, copropriété",
+                "Durée": "3 mois"
+              },
+              {
+                "Phase": "Recherche terrain",
+                "Actions": "Achat groupé ou CLT",
+                "Durée": "12 mois"
+              },
+              {
+                "Phase": "Financement",
+                "Actions": "Crédits + subsides",
+                "Durée": "6 mois"
+              },
+              {
+                "Phase": "Permis urbanisme",
+                "Actions": "Projet participatif",
+                "Durée": "9 mois"
+              },
+              {
+                "Phase": "Construction",
+                "Actions": "Eco-construction privilégiée",
+                "Durée": "18 mois"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "des subsides régionaux sont disponibles"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'accompagnement Habitat et Participation existe"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "12c602cc-6f9f-4e54-97fb-d010780a1b57",
+      "name": "Attribution d'un logement de transit d'urgence",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis en situation d'urgence"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai perdu mon logement suite à un sinistre"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai des enfants mineurs"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un logement de transit"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure est:",
+          "dataTable": {
+            "headers": [
+              "Étape",
+              "Responsable",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Étape": "Signalement urgence",
+                "Responsable": "CPAS/Police",
+                "Délai": "Immédiat"
+              },
+              {
+                "Étape": "Évaluation situation",
+                "Responsable": "Assistant social",
+                "Délai": "24h"
+              },
+              {
+                "Étape": "Décision attribution",
+                "Responsable": "Commission",
+                "Délai": "48h"
+              },
+              {
+                "Étape": "Installation",
+                "Responsable": "Service logement",
+                "Délai": "Immédiat"
+              },
+              {
+                "Étape": "Durée maximum",
+                "Responsable": "-",
+                "Délai": "6 mois renouvelable"
+              },
+              {
+                "Étape": "Loyer",
+                "Responsable": "Proportionnel revenus",
+                "Délai": "Max 20%"
+              },
+              {
+                "Étape": "Accompagnement",
+                "Responsable": "Obligatoire",
+                "Délai": "Hebdomadaire"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la recherche de logement définitif est obligatoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'aide sociale est coordonnée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "24f1cf66-e9a1-48e4-af70-8b1005f58b32",
+      "name": "Installation en habitat léger permanent",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux vivre en habitat léger (tiny house)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai trouvé un terrain en zone d'habitat"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare mon installation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les conditions sont:",
+          "dataTable": {
+            "headers": [
+              "Aspect",
+              "Exigence",
+              "Autorité"
+            ],
+            "rows": [
+              {
+                "Aspect": "Zone urbanisme",
+                "Exigence": "Habitat ou récréative",
+                "Autorité": "Commune"
+              },
+              {
+                "Aspect": "Permis urbanisme",
+                "Exigence": "Si > 6 mois même lieu",
+                "Autorité": "Commune"
+              },
+              {
+                "Aspect": "Raccordements",
+                "Exigence": "Eau, électricité, égouts",
+                "Autorité": "Gestionnaires"
+              },
+              {
+                "Aspect": "Domiciliation",
+                "Exigence": "Possible si conforme",
+                "Autorité": "Commune"
+              },
+              {
+                "Aspect": "Superficie min",
+                "Exigence": "Variable par commune",
+                "Autorité": "Plan secteur"
+              },
+              {
+                "Aspect": "Salubrité",
+                "Exigence": "Normes logement",
+                "Autorité": "Région"
+              },
+              {
+                "Aspect": "Taxe caravane",
+                "Exigence": "Si non-domicilié",
+                "Autorité": "Province"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "certaines communes ont des zones dédiées"
+        },
+        {
+          "keyword": "Et",
+          "text": "le Code wallon de l'habitation durable s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2656fe44-9664-43f2-a065-8c57909d1c92",
+      "name": "Travaux de rénovation dans un logement social",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon logement social nécessite rénovation"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la société programme des travaux"
+        },
+        {
+          "keyword": "Quand",
+          "text": "les travaux sont planifiés"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le processus est:",
+          "dataTable": {
+            "headers": [
+              "Phase",
+              "Droits locataire",
+              "Obligations"
+            ],
+            "rows": [
+              {
+                "Phase": "Information",
+                "Droits locataire": "Préavis 6 mois minimum",
+                "Obligations": "-"
+              },
+              {
+                "Phase": "Concertation",
+                "Droits locataire": "Participation aux réunions",
+                "Obligations": "Présence"
+              },
+              {
+                "Phase": "Travaux légers",
+                "Droits locataire": "Reste dans logement",
+                "Obligations": "Accès ouvriers"
+              },
+              {
+                "Phase": "Travaux lourds",
+                "Droits locataire": "Relogement temporaire",
+                "Obligations": "Déménagement"
+              },
+              {
+                "Phase": "Indemnisation",
+                "Droits locataire": "Si relogement nécessaire",
+                "Obligations": "Justificatifs"
+              },
+              {
+                "Phase": "Loyer",
+                "Droits locataire": "Maintenu ou réduit",
+                "Obligations": "Paiement"
+              },
+              {
+                "Phase": "Retour",
+                "Droits locataire": "Priorité absolue",
+                "Obligations": "Dans les délais"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le loyer n'augmente pas suite aux travaux obligatoires"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'amélioration énergétique est prioritaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a006b6ed-e8dd-46e3-a612-1a639b943edb",
+      "name": "Éligibilité au logement social par région",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mes revenus annuels sont <revenus>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon ménage compte <personnes> personne(s)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai <enfants> enfant(s)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en <region>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le plafond applicable est <plafond>€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je suis <eligibilite>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "region",
+            "revenus",
+            "personnes",
+            "enfants",
+            "plafond",
+            "eligibilite"
+          ],
+          "rows": [
+            {
+              "name": "5267eeda-345b-41f9-9946-ad8526c092fc",
+              "values": {
+                "region": "Wallonie",
+                "revenus": "20000",
+                "personnes": "1",
+                "enfants": "0",
+                "plafond": "25300",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "name": "499b341c-a765-437e-bd6d-6338e39505d6",
+              "values": {
+                "region": "Wallonie",
+                "revenus": "28000",
+                "personnes": "2",
+                "enfants": "1",
+                "plafond": "33100",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "name": "ebf910a4-f489-46db-a315-fe7caed53e83",
+              "values": {
+                "region": "Bruxelles",
+                "revenus": "25000",
+                "personnes": "1",
+                "enfants": "0",
+                "plafond": "24229",
+                "eligibilite": "non éligible"
+              }
+            },
+            {
+              "name": "decf6aa7-758d-4f93-b360-89d9e7d1ccf5",
+              "values": {
+                "region": "Flandre",
+                "revenus": "35000",
+                "personnes": "2",
+                "enfants": "2",
+                "plafond": "46572",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "name": "cbcbcc69-418e-41a8-a588-4bf1f71c0219",
+              "values": {
+                "region": "Wallonie",
+                "revenus": "35000",
+                "personnes": "2",
+                "enfants": "0",
+                "plafond": "30700",
+                "eligibilite": "non éligible"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.950Z"
+}

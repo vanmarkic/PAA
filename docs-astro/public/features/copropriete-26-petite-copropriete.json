@@ -1,0 +1,171 @@
+{
+  "id": "copropriete-26-petite-copropriete",
+  "name": "Régime Petite Copropriété",
+  "description": "  En tant que petite copropriété\n  Je veux appliquer le régime simplifié\n  Afin de réduire les contraintes administratives",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la copropriété compte moins de 20 lots"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "94c0cb11-7e08-4d0c-a525-8e8823266827",
+      "name": "Application régime simplifié",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la copropriété a 15 lots"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle opte pour le régime simplifié"
+        },
+        {
+          "keyword": "Quand",
+          "text": "les règles s'appliquent"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les simplifications sont:",
+          "dataTable": {
+            "headers": [
+              "Obligation",
+              "Régime normal",
+              "Régime simplifié"
+            ],
+            "rows": [
+              {
+                "Obligation": "AG ordinaire",
+                "Régime normal": "Annuelle",
+                "Régime simplifié": "Biannuelle possible"
+              },
+              {
+                "Obligation": "Conseil copropriété",
+                "Régime normal": "Obligatoire >20 lots",
+                "Régime simplifié": "Facultatif"
+              },
+              {
+                "Obligation": "Commissaire comptes",
+                "Régime normal": "Obligatoire >50 lots",
+                "Régime simplifié": "Facultatif"
+              },
+              {
+                "Obligation": "Comptabilité",
+                "Régime normal": "Double",
+                "Régime simplifié": "Simple autorisée"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "1f703139-55d3-434e-a291-d0c3349fcf44",
+      "name": "AG biannuelle petite copropriété",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'AG précédente date de 18 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le régime biannuel est adopté"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG est convoquée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "elle doit traiter:",
+          "dataTable": {
+            "headers": [
+              "Points",
+              "Période couverte"
+            ],
+            "rows": [
+              {
+                "Points": "Comptes",
+                "Période couverte": "2 exercices"
+              },
+              {
+                "Points": "Budget",
+                "Période couverte": "2 années à venir"
+              },
+              {
+                "Points": "Décharge syndic",
+                "Période couverte": "2 années"
+              },
+              {
+                "Points": "Travaux",
+                "Période couverte": "Plan bisannuel"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6834a7cc-1ec7-4960-85ef-93529c2dee14",
+      "name": "Décision sans AG physique",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une décision urgente est nécessaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "tous les copropriétaires sont d'accord"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la décision est prise par écrit"
+        },
+        {
+          "keyword": "Alors",
+          "text": "elle est valable si:",
+          "dataTable": {
+            "headers": [
+              "Condition",
+              "Requis"
+            ],
+            "rows": [
+              {
+                "Condition": "Accord écrit tous",
+                "Requis": "100%"
+              },
+              {
+                "Condition": "Conservation preuve",
+                "Requis": "5 ans"
+              },
+              {
+                "Condition": "Inscription registre",
+                "Requis": "Obligatoire"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

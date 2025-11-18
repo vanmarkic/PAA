@@ -1,0 +1,113 @@
+{
+  "id": "propriete-intellectuelle-audit-propriete-intellectuelle",
+  "name": "Audit de propriété intellectuelle",
+  "description": "  En tant qu'entreprise\n  Je veux auditer mon portefeuille IP\n  Afin d'optimiser ma stratégie et identifier les risques",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "un audit IP est recommandé annuellement"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "il couvre tous les actifs immatériels"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "il coûte typiquement 5000-20000€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "85d30b69-fd70-48ac-a4cd-98635bcc4708",
+      "name": "Audit complet du portefeuille IP",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je n'ai jamais fait d'audit IP"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai des brevets, marques et secrets d'affaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je lance un audit complet"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'auditeur inventorie tous les droits IP"
+        },
+        {
+          "keyword": "Et",
+          "text": "vérifie leur validité et les échéances"
+        },
+        {
+          "keyword": "Et",
+          "text": "évalue leur valeur économique"
+        },
+        {
+          "keyword": "Et",
+          "text": "identifie les lacunes de protection"
+        },
+        {
+          "keyword": "Et",
+          "text": "recommande des actions correctives"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "add903ce-f42d-47db-b326-caaa12991e74",
+      "name": "Audit pré-acquisition (due diligence)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux acquérir une entreprise"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la PI est un actif clé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'effectue la due diligence IP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je vérifie la titularité des droits"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'absence de litiges"
+        },
+        {
+          "keyword": "Et",
+          "text": "la liberté d'exploitation"
+        },
+        {
+          "keyword": "Et",
+          "text": "la validité des licences"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'évalue les risques cachés"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

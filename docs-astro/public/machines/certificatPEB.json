@@ -1,0 +1,28 @@
+{
+  "id": "certificatPEB",
+  "name": "Certificat PEB (Performance Énergétique Bâtiment)",
+  "category": "environment",
+  "description": "",
+  "states": [
+    "demandeCertificat",
+    "DEMANDER",
+    "designationCertificateur",
+    "CERTIFICATEUR_DESIGNE",
+    "visiteBatiment",
+    "VISITE_EFFECTUEE",
+    "calculPEB",
+    "CALCUL_REALISE",
+    "emissionCertificat",
+    "CERTIFICAT_EMIS",
+    "termine"
+  ],
+  "events": [
+    "DEMANDER",
+    "CERTIFICATEUR_DESIGNE",
+    "VISITE_EFFECTUEE",
+    "CALCUL_REALISE",
+    "CERTIFICAT_EMIS"
+  ],
+  "initial": "demandeCertificat",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

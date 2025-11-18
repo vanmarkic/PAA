@@ -1,0 +1,772 @@
+{
+  "id": "immobilier-acquisition",
+  "name": "Acquisition Immobilière en Belgique",
+  "description": "  En tant qu'acheteur potentiel\n  Je veux connaître les procédures d'acquisition immobilière\n  Afin de réaliser mon projet d'achat en respectant la législation belge",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les droits d'enregistrement en Région Wallonne sont de 12.5%"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les droits d'enregistrement en Région Flamande sont de 10%"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les droits d'enregistrement en Région Bruxelloise sont de 12.5%"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les frais de notaire sont environ 2-3% du prix d'achat"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'abattement fiscal pour habitation propre est de 20000€ en Wallonie"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "70a120e8-7ee0-4aa3-a5c3-687afa1e7978",
+      "name": "Calcul de la capacité d'emprunt pour acquisition",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un acheteur avec un revenu mensuel net de 3000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon partenaire a un revenu mensuel net de 2500€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous avons des charges mensuelles de 500€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le taux d'endettement maximum est de 33%"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule ma capacité d'emprunt sur 20 ans"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma capacité d'emprunt devrait être environ 250000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon apport personnel minimum devrait être 10% soit 25000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais totaux estimés devraient être environ 40000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "98d0d075-860c-464c-9927-62933c2a330c",
+      "name": "Soumission d'une offre d'achat conforme",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai trouvé un bien à 300000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux faire une offre à 285000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un apport de 30000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une préqualification bancaire"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je soumets mon offre d'achat"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'offre doit contenir les conditions suspensives suivantes:",
+          "dataTable": {
+            "headers": [
+              "Condition",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Condition": "Obtention du crédit hypothécaire",
+                "Délai": "60 jours"
+              },
+              {
+                "Condition": "Absence de servitudes cachées",
+                "Délai": "30 jours"
+              },
+              {
+                "Condition": "Conformité urbanistique",
+                "Délai": "45 jours"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le compromis de vente doit être signé dans les 15 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "un acompte de 10% doit être versé sur compte bloqué"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ea0e7b6f-2ab9-4a4f-ae5e-6c101a8e263f",
+      "name": "Demande de crédit hypothécaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'achète un bien de 250000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un apport de 25000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus mensuels nets sont de 3500€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai moins de 35 ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un crédit hypothécaire"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Document": "Fiches de salaire",
+                "Description": "3 derniers mois"
+              },
+              {
+                "Document": "Avertissement-extrait de rôle",
+                "Description": "2 dernières années"
+              },
+              {
+                "Document": "Compromis de vente",
+                "Description": "Signé par les parties"
+              },
+              {
+                "Document": "Expertise du bien",
+                "Description": "Rapport d'expert agréé"
+              },
+              {
+                "Document": "Attestation assurance",
+                "Description": "Solde restant dû"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le taux maximum sera plafonné selon la législation"
+        },
+        {
+          "keyword": "Et",
+          "text": "la quotité d'emprunt ne peut excéder 90% pour primo-accédant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ce6626b6-3fbf-4cfc-8efd-ea9290928682",
+      "name": "Vérification de la conformité urbanistique",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'achète un bien construit en 1985"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des travaux ont été effectués en 2010"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie la conformité urbanistique"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois obtenir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Source",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Document": "Permis d'urbanisme original",
+                "Source": "Commune",
+                "Délai": "30 jours"
+              },
+              {
+                "Document": "Permis pour les travaux de 2010",
+                "Source": "Commune",
+                "Délai": "30 jours"
+              },
+              {
+                "Document": "Certificat d'urbanisme n°1",
+                "Source": "Commune",
+                "Délai": "30 jours"
+              },
+              {
+                "Document": "Attestation du sol (Flandre)",
+                "Source": "OVAM",
+                "Délai": "60 jours"
+              },
+              {
+                "Document": "DIU (Déclaration d'Intention d'Urbanisme)",
+                "Source": "Vendeur",
+                "Délai": "Immédiat"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "si des infractions sont constatées"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux annuler la vente ou négocier une réduction"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2b97f195-8ed3-485f-aaff-7b771c6f0b83",
+      "name": "Réalisation de l'expertise obligatoire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la banque exige une expertise"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le bien est estimé à 280000€ par le vendeur"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'expert agréé effectue l'expertise"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'expertise doit évaluer:",
+          "dataTable": {
+            "headers": [
+              "Critère",
+              "Pondération"
+            ],
+            "rows": [
+              {
+                "Critère": "Localisation et environnement",
+                "Pondération": "30%"
+              },
+              {
+                "Critère": "État du bâtiment",
+                "Pondération": "25%"
+              },
+              {
+                "Critère": "Surface et agencement",
+                "Pondération": "20%"
+              },
+              {
+                "Critère": "Performance énergétique",
+                "Pondération": "15%"
+              },
+              {
+                "Critère": "Conformité légale",
+                "Pondération": "10%"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "si la valeur expertisée est inférieure de plus de 10%"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la banque peut refuser le crédit ou demander un apport supplémentaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d61203eb-c51b-4a14-aa8b-a58aeaa9e62c",
+      "name": "Signature de l'acte authentique chez le notaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "toutes les conditions suspensives sont levées"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le crédit est approuvé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la date de signature est fixée"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je signe l'acte authentique"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les frais suivants sont dus:",
+          "dataTable": {
+            "headers": [
+              "Frais",
+              "Montant/Taux",
+              "Base"
+            ],
+            "rows": [
+              {
+                "Frais": "Droits d'enregistrement",
+                "Montant/Taux": "12.5%",
+                "Base": "Prix de vente (Wallonie)"
+              },
+              {
+                "Frais": "Abattement habitation propre",
+                "Montant/Taux": "-20000€",
+                "Base": "Si conditions remplies"
+              },
+              {
+                "Frais": "Honoraires notaire",
+                "Montant/Taux": "1-2%",
+                "Base": "Barème légal"
+              },
+              {
+                "Frais": "Frais administratifs",
+                "Montant/Taux": "1500€",
+                "Base": "Forfait approximatif"
+              },
+              {
+                "Frais": "Inscription hypothécaire",
+                "Montant/Taux": "0.30%",
+                "Base": "Montant du crédit"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les clés sont remises après paiement intégral"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "fa1c97a9-e72f-4760-b1b8-fe6335525a0a",
+      "name": "Application des avantages primo-accédant",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis primo-accédant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'achète ma résidence principale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le bien est situé en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le prix est de 200000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mes avantages fiscaux"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je bénéficie de:",
+          "dataTable": {
+            "headers": [
+              "Avantage",
+              "Montant",
+              "Condition"
+            ],
+            "rows": [
+              {
+                "Avantage": "Abattement droits enregistrement",
+                "Montant": "20000€",
+                "Condition": "Habitation propre"
+              },
+              {
+                "Avantage": "Taux réduit crédit social",
+                "Montant": "-1%",
+                "Condition": "Revenus < plafonds"
+              },
+              {
+                "Avantage": "Prime acquisition Région",
+                "Montant": "750€",
+                "Condition": "Zone de pression immobilière"
+              },
+              {
+                "Avantage": "Chèque habitat (Flandre)",
+                "Montant": "160€/an",
+                "Condition": "Pendant 20 ans"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les droits d'enregistrement effectifs sont 10000€ au lieu de 25000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "136fcf43-9e3a-426e-8c5f-64de4e1649b8",
+      "name": "Acquisition d'un bien en viager",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le vendeur a 75 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le bien vaut 300000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je propose un viager occupé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je structure l'achat en viager"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montage comprend:",
+          "dataTable": {
+            "headers": [
+              "Élément",
+              "Montant",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Élément": "Bouquet",
+                "Montant": "60000€",
+                "Description": "Payé à la signature"
+              },
+              {
+                "Élément": "Rente mensuelle",
+                "Montant": "800€",
+                "Description": "Indexée annuellement"
+              },
+              {
+                "Élément": "Espérance de vie",
+                "Montant": "12 ans",
+                "Description": "Tables légales"
+              },
+              {
+                "Élément": "Droit d'usage",
+                "Montant": "Viager",
+                "Description": "Jusqu'au décès"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "un acte notarié spécifique doit être établi"
+        },
+        {
+          "keyword": "Et",
+          "text": "une inscription hypothécaire garantit la rente"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3b79eab8-eb54-47c6-a544-307dfe2196ca",
+      "name": "Acquisition d'un appartement en copropriété",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'achète un appartement de 80m²"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'immeuble compte 20 lots"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes millièmes sont 52/1000"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'acquiers en copropriété"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois vérifier:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Contenu vérifié"
+            ],
+            "rows": [
+              {
+                "Document": "Acte de base",
+                "Contenu vérifié": "Division et millièmes"
+              },
+              {
+                "Document": "Règlement de copropriété",
+                "Contenu vérifié": "Droits et obligations"
+              },
+              {
+                "Document": "PV des 3 dernières AG",
+                "Contenu vérifié": "Décisions et litiges"
+              },
+              {
+                "Document": "Décompte charges",
+                "Contenu vérifié": "Arriérés éventuels"
+              },
+              {
+                "Document": "Fonds de réserve",
+                "Contenu vérifié": "Part à reprendre"
+              },
+              {
+                "Document": "Travaux votés",
+                "Contenu vérifié": "Montants à prévoir"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois obtenir le certificat syndical avant signature"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3f35cbaf-20e4-421a-88eb-6a66f46ddbc6",
+      "name": "Activation des protections légales de l'acheteur",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai signé un compromis de vente"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je découvre un vice caché majeur"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le vice n'était pas apparent lors de la visite"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'active mes protections légales"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux:",
+          "dataTable": {
+            "headers": [
+              "Action",
+              "Base légale",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Action": "Annuler la vente",
+                "Base légale": "Code Civil art. 1641",
+                "Délai": "Avant acte"
+              },
+              {
+                "Action": "Demander réduction prix",
+                "Base légale": "Vice caché",
+                "Délai": "1 an découverte"
+              },
+              {
+                "Action": "Exiger réparation",
+                "Base légale": "Garantie décennale",
+                "Délai": "10 ans gros œuvre"
+              },
+              {
+                "Action": "Action en responsabilité",
+                "Base légale": "Dol du vendeur",
+                "Délai": "30 ans si fraude"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois notifier par recommandé dans les délais légaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5ab064e2-6ac8-4ea6-8abd-8aceedb5f8d8",
+      "name": "Calcul des frais d'acquisition par région",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'achète un bien de <prix>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le bien est situé en <région>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est <type_achat>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule les frais totaux"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les droits d'enregistrement sont <droits>€"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais de notaire sont environ <notaire>€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le total des frais est environ <total>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "prix",
+            "type_achat",
+            "droits",
+            "notaire",
+            "total"
+          ],
+          "rows": [
+            {
+              "name": "34d517e0-5c93-49c8-b383-6978d66ec2e9",
+              "values": {
+                "région": "Wallonie",
+                "prix": "200000",
+                "type_achat": "habitation propre",
+                "droits": "5000",
+                "notaire": "4000",
+                "total": "10500"
+              }
+            },
+            {
+              "name": "fff02dde-4bc6-479f-87fb-a2d4197dd599",
+              "values": {
+                "région": "Wallonie",
+                "prix": "200000",
+                "type_achat": "investissement",
+                "droits": "25000",
+                "notaire": "4000",
+                "total": "30500"
+              }
+            },
+            {
+              "name": "f74bf5e7-9e4c-494e-a924-daf9eb5e58e3",
+              "values": {
+                "région": "Flandre",
+                "prix": "200000",
+                "type_achat": "habitation propre",
+                "droits": "6000",
+                "notaire": "4000",
+                "total": "11500"
+              }
+            },
+            {
+              "name": "a304ff3f-14ef-4d9d-a5af-7f3db102c527",
+              "values": {
+                "région": "Bruxelles",
+                "prix": "200000",
+                "type_achat": "habitation propre",
+                "droits": "5000",
+                "notaire": "4000",
+                "total": "10500"
+              }
+            },
+            {
+              "name": "4bcc78f9-d877-4c55-981e-63f0406128ee",
+              "values": {
+                "région": "Wallonie",
+                "prix": "500000",
+                "type_achat": "habitation propre",
+                "droits": "42500",
+                "notaire": "8000",
+                "total": "52000"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.950Z"
+}

@@ -1,0 +1,170 @@
+{
+  "id": "copropriete-33-copropriete-forcee",
+  "name": "Copropriété Forcée",
+  "description": "  En tant que copropriété\n  Je veux gérer les situations de copropriété forcée\n  Afin de respecter les droits inaliénables",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "une situation de copropriété forcée existe"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "751d1a86-0f02-41d0-adb2-103b682fe5a5",
+      "name": "Mur mitoyen obligatoire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "deux propriétés sont contiguës"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un mur mitoyen les sépare"
+        },
+        {
+          "keyword": "Quand",
+          "text": "un propriétaire veut modifier le mur"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit:",
+          "dataTable": {
+            "headers": [
+              "Obligation",
+              "Détail"
+            ],
+            "rows": [
+              {
+                "Obligation": "Informer voisin",
+                "Détail": "Préalable écrit"
+              },
+              {
+                "Obligation": "Respecter structure",
+                "Détail": "Pas d'affaiblissement"
+              },
+              {
+                "Obligation": "Partager coûts entretien",
+                "Détail": "50%-50%"
+              },
+              {
+                "Obligation": "Expertise si désaccord",
+                "Détail": "Contradictoire"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "120af665-180d-4619-85ef-4dbb36928f4a",
+      "name": "Cour commune indivisible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une cour dessert 4 maisons"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle est indivisible par nature"
+        },
+        {
+          "keyword": "Quand",
+          "text": "un copropriétaire veut la modifier"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il faut:",
+          "dataTable": {
+            "headers": [
+              "Condition",
+              "Règle"
+            ],
+            "rows": [
+              {
+                "Condition": "Accord unanime",
+                "Règle": "Pour modification"
+              },
+              {
+                "Condition": "Maintien accès",
+                "Règle": "Obligatoire tous"
+              },
+              {
+                "Condition": "Charges entretien",
+                "Règle": "Quote-part égale"
+              },
+              {
+                "Condition": "Impossibilité vente",
+                "Règle": "Sauf ensemble"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "10e60c49-9889-490a-987a-f5f724d4b13f",
+      "name": "Passage nécessaire enclave",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une propriété est enclavée"
+        },
+        {
+          "keyword": "Et",
+          "text": "bénéficie d'un passage nécessaire"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le fonds servant veut modifier"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les règles sont:",
+          "dataTable": {
+            "headers": [
+              "Principe",
+              "Application"
+            ],
+            "rows": [
+              {
+                "Principe": "Maintien passage",
+                "Application": "Impératif"
+              },
+              {
+                "Principe": "Déplacement possible",
+                "Application": "Si équivalent"
+              },
+              {
+                "Principe": "Indemnité",
+                "Application": "Si aggravation"
+              },
+              {
+                "Principe": "Prescription",
+                "Application": "Imprescriptible"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "grapa",
+  "name": "Machine XState: GRAPA - Garantie de Revenus aux Personnes Âgées",
+  "category": "pension",
+  "description": "Base légale: Loi du 22 mars 2001 instituant la garantie de revenus aux personnes âgées",
+  "states": [
+    "verification",
+    "conditionsObligatoires",
+    "exceptions_residence",
+    "nature",
+    "demande",
+    "SOUMETTRE_DEMANDE",
+    "enqueteRessources",
+    "revenus_pris_en_compte",
+    "revenus_exclus",
+    "montantsPlafonds2024",
+    "isole",
+    "cohabitant",
+    "statuts",
+    "calculComplement",
+    "ENQUETE_TERMINEE",
+    "decision",
+    "DECISION_OCTROI",
+    "paiement",
+    "modalites",
+    "indexation",
+    "montants2024",
+    "fiscalite",
+    "obligations",
+    "controles",
+    "cumuls",
+    "avantagesLies",
+    "sanctions",
+    "refus",
+    "recours",
+    "alternatives"
+  ],
+  "events": [
+    "SOUMETTRE_DEMANDE",
+    "ENQUETE_TERMINEE",
+    "DECISION_OCTROI",
+    "DECISION_REFUS",
+    "REVISION_ANNUELLE"
+  ],
+  "initial": "verification",
+  "generated": "2025-11-18T10:17:36.939Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Sécurité Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Loi du 22 mars 2001 instaurant la garantie de revenus aux personnes âgées",
+        "publicationDate": "2001-04-26T00:00:00.000Z",
+        "effectiveDate": "2001-06-01T00:00:00.000Z",
+        "officialUrl": "https://www.ejustice.just.fgov.be/eli/loi/2001/03/22/2001022201/justel",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

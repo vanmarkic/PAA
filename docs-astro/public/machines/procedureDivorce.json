@@ -1,0 +1,41 @@
+{
+  "id": "procedureDivorce",
+  "name": "Procédure de Divorce",
+  "category": "justice",
+  "description": "",
+  "states": [
+    "inactif",
+    "DEMARRER_PROCEDURE",
+    "designationAvocats",
+    "AVOCATS_DESIGNES",
+    "tentativeMediation",
+    "MEDIATION_ACCEPTEE",
+    "MEDIATION_REFUSEE",
+    "mediation",
+    "ACCORD_TROUVE",
+    "DESACCORD",
+    "redactionConvention",
+    "REQUETE_DEPOSEE",
+    "depotRequete",
+    "AUDIENCE_FIXEE",
+    "audienceTribunal",
+    "JUGEMENT_RENDU",
+    "jugementDivorce",
+    "DIVORCE_PRONONCE",
+    "termine"
+  ],
+  "events": [
+    "DEMARRER_PROCEDURE",
+    "AVOCATS_DESIGNES",
+    "MEDIATION_ACCEPTEE",
+    "MEDIATION_REFUSEE",
+    "ACCORD_TROUVE",
+    "DESACCORD",
+    "REQUETE_DEPOSEE",
+    "AUDIENCE_FIXEE",
+    "JUGEMENT_RENDU",
+    "DIVORCE_PRONONCE"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

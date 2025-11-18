@@ -1,0 +1,31 @@
+{
+  "id": "logementInsalubre",
+  "name": "Logement Insalubre - Procédure",
+  "category": "housing",
+  "description": "",
+  "states": [
+    "signalement",
+    "SIGNALER",
+    "enregistrementPlainte",
+    "INSPECTION_PROGRAMMEE",
+    "inspectionTechnique",
+    "INSPECTION_EFFECTUEE",
+    "evaluationConformite",
+    "ARRETE_INSALUBRITE",
+    "arreteInsalubrite",
+    "TRAVAUX_REALISES",
+    "SANCTION_BAILLEUR",
+    "procedureSanction",
+    "leveeArrete"
+  ],
+  "events": [
+    "SIGNALER",
+    "INSPECTION_PROGRAMMEE",
+    "INSPECTION_EFFECTUEE",
+    "ARRETE_INSALUBRITE",
+    "TRAVAUX_REALISES",
+    "SANCTION_BAILLEUR"
+  ],
+  "initial": "signalement",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

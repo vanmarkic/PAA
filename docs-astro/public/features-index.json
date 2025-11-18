@@ -1,0 +1,456 @@
+{
+  "generated": "2025-11-18T10:17:36.955Z",
+  "total": 90,
+  "features": [
+    {
+      "id": "benefits-aide-logement",
+      "name": "Aide au Logement",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-aide-sociale",
+      "name": "Aide Sociale du CPAS",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-allocation-chauffage",
+      "name": "Allocation Chauffage (Fonds Social Chauffage)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-income-guarantee",
+      "name": "Allocation de Garantie de Revenus (AGR)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-aide-personnes-agees",
+      "name": "Allocation pour l'Aide aux Personnes Âgées (APA)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-allocations-chomage",
+      "name": "Allocations de Chômage",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-allocations-familiales",
+      "name": "Allocations Familiales",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-allocations-handicapes",
+      "name": "Allocations pour Personnes Handicapées",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-credit-temps",
+      "name": "Crédit-temps et Interruption de Carrière",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-formation-professionnelle",
+      "name": "Formation Professionnelle",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-garantie-locative",
+      "name": "Garantie Locative",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-insertion-professionnelle",
+      "name": "Insertion Professionnelle",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-logement-social",
+      "name": "Logement Social",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-prime-naissance",
+      "name": "Prime de Naissance",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-prime-renovation",
+      "name": "Prime Rénovation",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-ris",
+      "name": "Revenu d'Intégration Sociale (RIS)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-tarif-social-energie",
+      "name": "Tarif Social Énergie",
+      "category": "benefits"
+    },
+    {
+      "id": "conversion-legal-text-conversion",
+      "name": "Conversion de texte juridique en langage courant",
+      "category": "conversion"
+    },
+    {
+      "id": "copropriete-22-appel-fonds-extraordinaire",
+      "name": "Appel de Fonds Extraordinaire",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-02-calcul-quorum",
+      "name": "Calcul du Quorum pour Assemblée Générale",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-05-calcul-charges",
+      "name": "Calcul et Répartition des Charges",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-07-conseil-copropriete",
+      "name": "Conseil de Copropriété",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-08-fonds-reserve",
+      "name": "Constitution du Fonds de Réserve",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-01-convocation-ag-ordinaire",
+      "name": "Convocation Assemblée Générale Ordinaire",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-33-copropriete-forcee",
+      "name": "Copropriété Forcée",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-04-designation-syndic",
+      "name": "Désignation du Syndic",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-21-budget-previsionnel",
+      "name": "Établissement du Budget Prévisionnel",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-06-travaux-urgents",
+      "name": "Gestion des Travaux Urgents",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-17-mutation-lot",
+      "name": "Mutation d'un Lot",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-26-petite-copropriete",
+      "name": "Régime Petite Copropriété",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-27-registre-copropriete",
+      "name": "Tenue du Registre de Copropriété",
+      "category": "copropriete"
+    },
+    {
+      "id": "copropriete-03-vote-resolution",
+      "name": "Vote des Résolutions en Assemblée Générale",
+      "category": "copropriete"
+    },
+    {
+      "id": "cour-europeenne-avis-consultatif",
+      "name": "Avis consultatif (Protocole 16)",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-revision",
+      "name": "Demande de révision d'un arrêt CEDH",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-mesures-provisoires",
+      "name": "Mesures provisoires (Règle 39)",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-arret-pilote",
+      "name": "Procédure de l'arrêt pilote",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-grande-chambre",
+      "name": "Procédure devant la Grande Chambre",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-reglement-amiable",
+      "name": "Règlement amiable devant la CEDH",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-application-individuelle",
+      "name": "Requête individuelle devant la CEDH",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "cour-europeenne-satisfaction-equitable",
+      "name": "Satisfaction équitable (Article 41)",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "democratie-inscription-electorale",
+      "name": "Inscription sur les listes électorales",
+      "category": "democratie"
+    },
+    {
+      "id": "democratie-conseil-communal",
+      "name": "Participation au conseil communal",
+      "category": "democratie"
+    },
+    {
+      "id": "democratie-petitions",
+      "name": "Pétitions et initiatives citoyennes",
+      "category": "democratie"
+    },
+    {
+      "id": "democratie-referendum",
+      "name": "Référendums et consultations populaires",
+      "category": "democratie"
+    },
+    {
+      "id": "droits-civils-carte-identite",
+      "name": "Demande de Carte d'Identité Belge",
+      "category": "droits-civils"
+    },
+    {
+      "id": "ecologie-gestion-eau",
+      "name": "Gestion de l'eau et autorisations hydrauliques",
+      "category": "ecologie"
+    },
+    {
+      "id": "ecologie-gestion-dechets",
+      "name": "Gestion et traitement des déchets",
+      "category": "ecologie"
+    },
+    {
+      "id": "ecologie-permis-environnement",
+      "name": "Permis d'environnement",
+      "category": "ecologie"
+    },
+    {
+      "id": "ecologie-primes-energie",
+      "name": "Primes énergie et rénovation énergétique",
+      "category": "ecologie"
+    },
+    {
+      "id": "ecologie-biodiversite-nature",
+      "name": "Protection de la biodiversité et zones naturelles",
+      "category": "ecologie"
+    },
+    {
+      "id": "etrangers-visa-application",
+      "name": "Demandes de visa pour la Belgique",
+      "category": "etrangers"
+    },
+    {
+      "id": "etrangers-residence-permit",
+      "name": "Permis de séjour - Procédures générales",
+      "category": "etrangers"
+    },
+    {
+      "id": "immobilier-acquisition",
+      "name": "Acquisition Immobilière en Belgique",
+      "category": "immobilier"
+    },
+    {
+      "id": "immobilier-location",
+      "name": "Location et Droits des Locataires en Belgique",
+      "category": "immobilier"
+    },
+    {
+      "id": "immobilier-logement-social",
+      "name": "Logement Social et Habitations à Loyer Modéré",
+      "category": "immobilier"
+    },
+    {
+      "id": "immobilier-urbanisme",
+      "name": "Permis d'Urbanisme et Aménagement du Territoire",
+      "category": "immobilier"
+    },
+    {
+      "id": "immobilier-renovation",
+      "name": "Primes et Aides à la Rénovation Énergétique",
+      "category": "immobilier"
+    },
+    {
+      "id": "propriete-intellectuelle-accord-coexistence-marques",
+      "name": "Accord de coexistence de marques",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-nda-confidentialite",
+      "name": "Accord de confidentialité (NDA)",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-contrefacon-brevet",
+      "name": "Action en contrefaçon de brevet",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-audit-propriete-intellectuelle",
+      "name": "Audit de propriété intellectuelle",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-consortium-recherche",
+      "name": "Consortium de recherche et IP",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-depot-dessin-modele",
+      "name": "Dépôt de dessin ou modèle",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-depot-marque-benelux",
+      "name": "Dépôt de marque Benelux",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-examen-brevet",
+      "name": "Examen de brevet",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-franchise-marque",
+      "name": "Franchise de marque",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-gestion-portefeuille-ip",
+      "name": "Gestion de portefeuille IP",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-licence-exploitation",
+      "name": "Licence d'exploitation de propriété intellectuelle",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-litige-nom-domaine",
+      "name": "Litige de nom de domaine",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-opposition-marque",
+      "name": "Opposition à une marque",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-indication-geographique",
+      "name": "Protection d'indication géographique",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-obtention-vegetale",
+      "name": "Protection d'obtention végétale",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-depot-topographie-semiconducteur",
+      "name": "Protection de topographie de semiconducteur",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-secret-affaires",
+      "name": "Protection des secrets d'affaires",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-protection-logiciel",
+      "name": "Protection juridique du logiciel",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-protection-droit-auteur",
+      "name": "Protection par droit d'auteur",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-recherche-anteriorites",
+      "name": "Recherche d'antériorités",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-recours-office-action",
+      "name": "Recours contre décision de l'office",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-renouvellement-marque",
+      "name": "Renouvellement de marque",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-restauration-droits",
+      "name": "Restauration de droits IP perdus",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-transfert-technologie",
+      "name": "Transfert de technologie",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "propriete-intellectuelle-valorisation-brevet",
+      "name": "Valorisation de brevet",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "recours-etat-recours-administratif",
+      "name": "Recours administratifs préalables",
+      "category": "recours-etat"
+    },
+    {
+      "id": "recours-etat-conseil-etat-annulation",
+      "name": "Recours en annulation au Conseil d'État",
+      "category": "recours-etat"
+    },
+    {
+      "id": "recours-etat-recours-fiscal",
+      "name": "Recours en matière fiscale",
+      "category": "recours-etat"
+    },
+    {
+      "id": "statut-artiste-artist-grants",
+      "name": "Bourses et Subventions Artistiques",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "statut-artiste-artist-copyright",
+      "name": "Droits d'Auteur et Droits Voisins",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "statut-artiste-artist-status-eligibility",
+      "name": "Éligibilité au Statut d'Artiste",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "statut-artiste-artist-tax-regime",
+      "name": "Régime Fiscal des Artistes",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "tax-deduction-frais-garde",
+      "name": "Déduction des frais de garde d'enfants",
+      "category": "tax"
+    }
+  ]
+}

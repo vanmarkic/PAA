@@ -1,0 +1,109 @@
+{
+  "id": "propriete-intellectuelle-valorisation-brevet",
+  "name": "Valorisation de brevet",
+  "description": "  En tant que titulaire de brevet\n  Je veux valoriser mon portefeuille\n  Afin de générer des revenus ou obtenir des financements",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les brevets sont des actifs valorisables"
+      },
+      {
+        "keyword": "Et que",
+        "text": "plusieurs méthodes d'évaluation existent"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la valorisation impacte la fiscalité"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "83745b6f-def0-47d2-9ad1-aaa7557e1f65",
+      "name": "Évaluation pour cession de brevet",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux vendre mon brevet"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un acheteur potentiel est intéressé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais évaluer le brevet"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'expert utilise la méthode des revenus"
+        },
+        {
+          "keyword": "Et",
+          "text": "projette les redevances futures"
+        },
+        {
+          "keyword": "Et",
+          "text": "actualise les flux financiers"
+        },
+        {
+          "keyword": "Et",
+          "text": "propose une fourchette de valeur"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux négocier sur cette base"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a235ff4f-ce61-4180-a82f-ca7a43c86cad",
+      "name": "Nantissement de brevets pour crédit",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai besoin de financement"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un portefeuille de 10 brevets"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je propose un nantissement à la banque"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les brevets sont évalués"
+        },
+        {
+          "keyword": "Et",
+          "text": "inscrits au registre des gages"
+        },
+        {
+          "keyword": "Et",
+          "text": "la banque accorde 30-50% de la valeur"
+        },
+        {
+          "keyword": "Et",
+          "text": "je conserve l'exploitation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

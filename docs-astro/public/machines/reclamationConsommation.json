@@ -1,0 +1,36 @@
+{
+  "id": "reclamationConsommation",
+  "name": "Réclamation Consommation",
+  "category": "consumer",
+  "description": "",
+  "states": [
+    "inactif",
+    "DEPOSER_RECLAMATION",
+    "reclamationVendeur",
+    "REPONSE_VENDEUR_FAVORABLE",
+    "REPONSE_VENDEUR_DEFAVORABLE",
+    "contactServiceMediationConsommateur",
+    "SAISIR_MEDIATION",
+    "mediation",
+    "ACCORD_MEDIATION",
+    "ECHEC_MEDIATION",
+    "saisieJustice",
+    "SAISIR_TRIBUNAL",
+    "procedureJudiciaire",
+    "JUGEMENT_RENDU",
+    "resolu",
+    "termine"
+  ],
+  "events": [
+    "DEPOSER_RECLAMATION",
+    "REPONSE_VENDEUR_FAVORABLE",
+    "REPONSE_VENDEUR_DEFAVORABLE",
+    "SAISIR_MEDIATION",
+    "ACCORD_MEDIATION",
+    "ECHEC_MEDIATION",
+    "SAISIR_TRIBUNAL",
+    "JUGEMENT_RENDU"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.928Z"
+}

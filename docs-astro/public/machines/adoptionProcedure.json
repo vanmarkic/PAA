@@ -1,0 +1,39 @@
+{
+  "id": "adoptionProcedure",
+  "name": "Procédure d'Adoption",
+  "category": "justice",
+  "description": "",
+  "states": [
+    "informationPrealable",
+    "SEANCES_INFO",
+    "demandeAgrement",
+    "DEMANDE_AGREMENT",
+    "conditions",
+    "enqueteSocioPsychologique",
+    "ENQUETE_SOCIALE_PSYCHOLOGIQUE",
+    "decisionAgrement",
+    "AGREMENT_ACCORDE",
+    "apparentement",
+    "APPARENTEMENT_REALISE",
+    "periodePlacement",
+    "PLACEMENT_DEBUTE",
+    "requeteAdoption",
+    "REQUETE_ADOPTION",
+    "jugementAdoption",
+    "JUGEMENT_ADOPTION",
+    "effets",
+    "termine"
+  ],
+  "events": [
+    "SEANCES_INFO",
+    "DEMANDE_AGREMENT",
+    "ENQUETE_SOCIALE_PSYCHOLOGIQUE",
+    "AGREMENT_ACCORDE",
+    "APPARENTEMENT_REALISE",
+    "PLACEMENT_DEBUTE",
+    "REQUETE_ADOPTION",
+    "JUGEMENT_ADOPTION"
+  ],
+  "initial": "informationPrealable",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

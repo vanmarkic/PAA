@@ -1,0 +1,146 @@
+{
+  "id": "copropriete-04-designation-syndic",
+  "name": "Désignation du Syndic",
+  "description": "  En tant que copropriété\n  Je veux désigner un syndic\n  Afin d'assurer la gestion de l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le mandat du syndic actuel expire"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'AG doit désigner un nouveau syndic"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "0ed4b615-1f4a-4511-b4d8-6182bd21bc8a",
+      "name": "Désignation syndic professionnel",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "3 candidats syndics se présentent"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le candidat A propose 500€/mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le candidat B propose 450€/mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le candidat C propose 600€/mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG vote à la majorité des 2/3"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le candidat B obtient 680 millièmes"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic B est désigné"
+        },
+        {
+          "keyword": "Et",
+          "text": "son mandat est de 3 ans maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "858fd8a5-e479-4f3f-83e4-80c2b931ed68",
+      "name": "Validation des conditions IPI",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un syndic professionnel est candidat"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie ses qualifications"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit avoir:",
+          "dataTable": {
+            "headers": [
+              "Condition",
+              "Statut"
+            ],
+            "rows": [
+              {
+                "Condition": "Numéro IPI valide",
+                "Statut": "Obligatoire"
+              },
+              {
+                "Condition": "Assurance RC professionnelle",
+                "Statut": "Obligatoire"
+              },
+              {
+                "Condition": "Cautionnement",
+                "Statut": "Obligatoire"
+              },
+              {
+                "Condition": "Expérience minimum",
+                "Statut": "Recommandé"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f34e6a04-57d4-4ee5-8818-11ac50b3eea6",
+      "name": "Révocation du syndic pour faute grave",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le syndic a commis une faute grave"
+        },
+        {
+          "keyword": "Et que",
+          "text": "30% des copropriétaires demandent une AG extraordinaire"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG vote la révocation à la majorité absolue"
+        },
+        {
+          "keyword": "Et que",
+          "text": "550 millièmes votent pour la révocation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic est révoqué immédiatement"
+        },
+        {
+          "keyword": "Et",
+          "text": "un syndic provisoire doit être désigné"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

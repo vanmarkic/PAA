@@ -1,0 +1,155 @@
+{
+  "id": "copropriete-02-calcul-quorum",
+  "name": "Calcul du Quorum pour Assemblée Générale",
+  "description": "  En tant que président de séance\n  Je veux calculer le quorum atteint\n  Afin de valider les décisions de l'assemblée",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la copropriété totalise 1000 millièmes"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'assemblée générale est en cours"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "ac6f661a-a97a-4de9-b4a8-b1bf77c47086",
+      "name": "Quorum atteint pour décision majoritaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "520 millièmes sont présents"
+        },
+        {
+          "keyword": "Et que",
+          "text": "180 millièmes sont représentés"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule le quorum"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le quorum de 50% est atteint"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'assemblée peut délibérer valablement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "12e6cdd1-27be-4578-9b8e-accb190f8f17",
+      "name": "Quorum insuffisant première convocation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "seulement 400 millièmes sont présents ou représentés"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie le quorum pour une décision aux 2/3"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le quorum n'est pas atteint"
+        },
+        {
+          "keyword": "Et",
+          "text": "une seconde convocation est nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ffe3f24a-be55-458c-b5b1-224401333978",
+      "name": "Calcul quorum selon type de décision",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "<milliemes_presents> millièmes sont présents/représentés"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie le quorum pour <type_decision>"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le quorum est <resultat>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "milliemes_presents",
+            "type_decision",
+            "resultat"
+          ],
+          "rows": [
+            {
+              "name": "645e93d4-0c17-4f67-9aeb-68e8ba10d751",
+              "values": {
+                "milliemes_presents": "510",
+                "type_decision": "majorité simple",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "name": "f422d30f-8445-4470-a02b-0c3aa49585a6",
+              "values": {
+                "milliemes_presents": "490",
+                "type_decision": "majorité simple",
+                "resultat": "non atteint"
+              }
+            },
+            {
+              "name": "1d1a2d38-b8f4-43b8-bc2b-6cd1d095e3a8",
+              "values": {
+                "milliemes_presents": "667",
+                "type_decision": "deux tiers",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "name": "3e426cb3-b1b2-4732-aace-ff65fce35658",
+              "values": {
+                "milliemes_presents": "750",
+                "type_decision": "trois quarts",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "name": "9c7c760f-c792-4bef-9bcf-d8621ab4b5dd",
+              "values": {
+                "milliemes_presents": "800",
+                "type_decision": "quatre cinquièmes",
+                "resultat": "atteint"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

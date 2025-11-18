@@ -1,0 +1,415 @@
+{
+  "id": "ecologie-primes-energie",
+  "name": "Primes énergie et rénovation énergétique",
+  "description": "  En tant que propriétaire ou locataire\n  Je veux obtenir des primes pour améliorer la performance énergétique\n  Afin de réduire ma consommation et mes factures",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les montants des primes 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type installation",
+            "Prime base",
+            "Prime revenus modestes",
+            "Prime revenus précaires"
+          ],
+          "rows": [
+            {
+              "Type installation": "Panneaux solaires",
+              "Prime base": "250€/kWc",
+              "Prime revenus modestes": "375€/kWc",
+              "Prime revenus précaires": "500€/kWc"
+            },
+            {
+              "Type installation": "Pompe à chaleur",
+              "Prime base": "1500€",
+              "Prime revenus modestes": "2250€",
+              "Prime revenus précaires": "3000€"
+            },
+            {
+              "Type installation": "Isolation toiture",
+              "Prime base": "20€/m²",
+              "Prime revenus modestes": "30€/m²",
+              "Prime revenus précaires": "40€/m²"
+            },
+            {
+              "Type installation": "Isolation murs",
+              "Prime base": "25€/m²",
+              "Prime revenus modestes": "37€/m²",
+              "Prime revenus précaires": "50€/m²"
+            },
+            {
+              "Type installation": "Chaudière biomasse",
+              "Prime base": "2000€",
+              "Prime revenus modestes": "3000€",
+              "Prime revenus précaires": "4000€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "15eda0a2-2ec8-4973-9b2b-9b5e4e11163c",
+      "name": "Installation panneaux solaires pour famille revenus moyens",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire d'une maison unifamiliale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus annuels sont de 45000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'installe 6 kWc de panneaux solaires"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût total est de 8000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en Wallonie"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime panneaux solaires"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible à la prime de base"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de la prime sera 1500€ (6 × 250€)"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir la facture et l'attestation de conformité"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement est de 60 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f1676e82-4e2a-4266-81e2-ce495aac1a14",
+      "name": "Cumul de primes pour rénovation complète",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire d'une maison de 1975"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont considérés comme modestes (30000€/an)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je réalise une rénovation complète:",
+          "dataTable": {
+            "headers": [
+              "Travaux",
+              "Surface/Puissance",
+              "Coût"
+            ],
+            "rows": [
+              {
+                "Travaux": "Isolation toiture",
+                "Surface/Puissance": "120 m²",
+                "Coût": "4000€"
+              },
+              {
+                "Travaux": "Isolation murs",
+                "Surface/Puissance": "80 m²",
+                "Coût": "3500€"
+              },
+              {
+                "Travaux": "Pompe à chaleur",
+                "Surface/Puissance": "12 kW",
+                "Coût": "12000€"
+              },
+              {
+                "Travaux": "Panneaux solaires",
+                "Surface/Puissance": "4 kWc",
+                "Coût": "6000€"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande toutes les primes disponibles"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mes primes totales seront:",
+          "dataTable": {
+            "headers": [
+              "Type",
+              "Calcul",
+              "Montant"
+            ],
+            "rows": [
+              {
+                "Type": "Isolation toiture",
+                "Calcul": "120 × 30€",
+                "Montant": "3600€"
+              },
+              {
+                "Type": "Isolation murs",
+                "Calcul": "80 × 37€",
+                "Montant": "2960€"
+              },
+              {
+                "Type": "Pompe à chaleur",
+                "Calcul": "forfait",
+                "Montant": "2250€"
+              },
+              {
+                "Type": "Panneaux solaires",
+                "Calcul": "4 × 375€",
+                "Montant": "1500€"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le total des primes sera 10310€"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'audit énergétique préalable est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "676842a0-a877-48ec-af69-8149322efe96",
+      "name": "Bonus pour performance énergétique exceptionnelle",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma maison atteint le label PEB A après rénovation"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai réalisé un bouquet de travaux complet"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'amélioration énergétique est de plus de 50%"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le bonus performance"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je reçois un bonus de 25% sur toutes mes primes"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois fournir les certificats PEB avant/après"
+        },
+        {
+          "keyword": "Et",
+          "text": "un test d'étanchéité à l'air est requis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "60b48bb1-154b-4dc9-8966-bb0ab6ae2cf1",
+      "name": "Prime véhicule électrique entreprise",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une PME"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'achète 3 véhicules électriques utilitaires"
+        },
+        {
+          "keyword": "Et que",
+          "text": "chaque véhicule coûte 45000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime véhicule électrique"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je reçois 5000€ par véhicule"
+        },
+        {
+          "keyword": "Et",
+          "text": "le total de la prime sera 15000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois garder les véhicules minimum 3 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "installer des bornes de recharge est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c8e0238a-0b01-4fdd-af32-11037bc7b157",
+      "name": "Refus pour travaux non conformes",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai installé des panneaux solaires moi-même"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas de certification RESCERT"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'installation n'est pas aux normes"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande est refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"installation non conforme - pas de certification\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux régulariser et redemander dans 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "83b1d545-7f83-4be3-9e9c-02b449372265",
+      "name": "Calcul prime isolation selon revenus et surface",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mes revenus sont <revenus>€/an"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'isole <surface> m² de <type>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule ma prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la prime sera de <prime>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "revenus",
+            "surface",
+            "type",
+            "prime"
+          ],
+          "rows": [
+            {
+              "name": "56382329-1a9a-4cd3-b53a-435e766b7c61",
+              "values": {
+                "revenus": "25000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "4000"
+              }
+            },
+            {
+              "name": "081e9b4b-cb59-413c-b1a7-281fb7cf8caf",
+              "values": {
+                "revenus": "25000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "5000"
+              }
+            },
+            {
+              "name": "e4100590-4ce8-4f01-8660-e12cb9b00328",
+              "values": {
+                "revenus": "45000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "2000"
+              }
+            },
+            {
+              "name": "7f779620-8f15-41ac-a65b-57ece89f6c51",
+              "values": {
+                "revenus": "45000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "2500"
+              }
+            },
+            {
+              "name": "f59ec2f3-b245-4be6-915c-2ce6224687c6",
+              "values": {
+                "revenus": "70000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "2000"
+              }
+            },
+            {
+              "name": "e9715321-306c-4539-ba45-e225b253f7a9",
+              "values": {
+                "revenus": "70000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "2500"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.949Z"
+}

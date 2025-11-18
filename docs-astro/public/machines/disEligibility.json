@@ -1,0 +1,39 @@
+{
+  "id": "disEligibility",
+  "name": "Droit à l'Intégration Sociale (DIS) Eligibility",
+  "category": "general",
+  "description": "This state machine orchestrates the eligibility determination workflow",
+  "states": [
+    "idle",
+    "START_EVALUATION",
+    "checkingNationality",
+    "checkingResidence",
+    "checkingEuResidency",
+    "checkingAge",
+    "checkingResources",
+    "checkingResourceClaim",
+    "checkingOwnMeans",
+    "checkingWorkDisposition",
+    "eligible",
+    "RESET",
+    "ineligible"
+  ],
+  "events": [
+    "START_EVALUATION",
+    "NATIONALITY_VALID",
+    "NATIONALITY_INVALID",
+    "RESIDENCE_VALID",
+    "RESIDENCE_INVALID",
+    "AGE_VALID",
+    "AGE_INVALID",
+    "RESOURCES_INSUFFICIENT",
+    "RESOURCES_AVAILABLE",
+    "WORK_DISPOSITION_REQUIRED",
+    "WORK_DISPOSITION_EXEMPTED",
+    "DIS_ELIGIBLE",
+    "DIS_INELIGIBLE",
+    "RESET"
+  ],
+  "initial": "idle",
+  "generated": "2025-11-18T10:17:36.931Z"
+}

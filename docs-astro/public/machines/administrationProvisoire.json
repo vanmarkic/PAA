@@ -1,0 +1,37 @@
+{
+  "id": "administrationProvisoire",
+  "name": "Machine XState: Administration provisoire (mesure de protection)",
+  "category": "justice",
+  "description": "Base légale: Code civil - Articles 488bis et suivants",
+  "states": [
+    "evaluation",
+    "definition",
+    "conditions",
+    "procedure",
+    "requete",
+    "audition",
+    "expertise",
+    "expertise_psychiatrique",
+    "protection",
+    "types_mesures",
+    "administration_generale",
+    "administration_limitee",
+    "designation_administrateur",
+    "pouvoirs_administrateur",
+    "obligations_administrateur",
+    "remuneration",
+    "duree",
+    "controle",
+    "rejet",
+    "alternatives"
+  ],
+  "events": [
+    "DEMANDER_PROTECTION",
+    "AUDITION",
+    "EXPERTISE_MEDICALE",
+    "JUGEMENT_FAVORABLE",
+    "JUGEMENT_DEFAVORABLE"
+  ],
+  "initial": "evaluation",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

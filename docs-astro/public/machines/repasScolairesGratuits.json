@@ -1,0 +1,59 @@
+{
+  "id": "repasScolairesGratuits",
+  "name": "Repas Scolaires Gratuits (Free School Meals) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for applying for free school meals,",
+  "states": [
+    "attente",
+    "DEMANDER_AIDE",
+    "verificationJustificatifs",
+    "JUSTIFICATIFS_VALIDES",
+    "JUSTIFICATIFS_INVALIDES",
+    "justificatifsManquants",
+    "SOUMETTRE_JUSTIFICATIFS",
+    "REINITIALISER",
+    "verificationEligibilite",
+    "aideApprouvee",
+    "APPROUVER_AIDE",
+    "aideActive",
+    "RENOUVELER_DEMANDE",
+    "SUSPENDRE_AIDE",
+    "suspendue",
+    "nonEligible"
+  ],
+  "events": [
+    "DEMANDER_AIDE",
+    "SOUMETTRE_JUSTIFICATIFS",
+    "JUSTIFICATIFS_VALIDES",
+    "JUSTIFICATIFS_INVALIDES",
+    "ELIGIBILITE_VERIFIEE",
+    "APPROUVER_AIDE",
+    "RENOUVELER_DEMANDE",
+    "SUSPENDRE_AIDE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Fédération Wallonie-Bruxelles",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Repas scolaires gratuits",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.cfwb.be",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

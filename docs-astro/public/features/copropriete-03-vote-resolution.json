@@ -1,0 +1,114 @@
+{
+  "id": "copropriete-03-vote-resolution",
+  "name": "Vote des Résolutions en Assemblée Générale",
+  "description": "  En tant que copropriétaire\n  Je veux voter sur les résolutions proposées\n  Afin d'exercer mes droits dans la copropriété",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "l'AG est en cours avec quorum atteint"
+      },
+      {
+        "keyword": "Et que",
+        "text": "je possède 85 millièmes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "91f1c7be-6d3c-4561-9c52-656a9927c703",
+      "name": "Vote pour travaux d'entretien ordinaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "les travaux coûtent 5000€"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "ils nécessitent une majorité simple"
+        },
+        {
+          "keyword": "Quand",
+          "text": "520 millièmes votent pour et 300 contre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la résolution est adoptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "les travaux sont approuvés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "91c8012b-ca73-4bc6-834e-e1966c6a18e2",
+      "name": "Vote pour modification du règlement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la modification nécessite les 3/4 des voix"
+        },
+        {
+          "keyword": "Quand",
+          "text": "760 millièmes votent pour"
+        },
+        {
+          "keyword": "Et",
+          "text": "240 millièmes votent contre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la résolution est adoptée à 76%"
+        },
+        {
+          "keyword": "Et",
+          "text": "le règlement est modifié"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0a9df5a1-dcef-4e8c-b5b1-1597dad22747",
+      "name": "Rejet d'une résolution nécessitant l'unanimité",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la vente d'une partie commune nécessite l'unanimité"
+        },
+        {
+          "keyword": "Quand",
+          "text": "980 millièmes votent pour"
+        },
+        {
+          "keyword": "Et",
+          "text": "20 millièmes votent contre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la résolution est rejetée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"unanimité requise non atteinte\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

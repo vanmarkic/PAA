@@ -1,0 +1,63 @@
+{
+  "id": "mediationFamiliale",
+  "name": "Service de Médiation Familiale (Family Mediation Service) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for family mediation services,",
+  "states": [
+    "attente",
+    "DEMANDER_MEDIATION",
+    "seanceInformation",
+    "ACCEPTER_MEDIATION",
+    "REFUSER_MEDIATION",
+    "mediationRefusee",
+    "REINITIALISER",
+    "processusMediation",
+    "SEANCE_MEDIATION",
+    "ACCORD_PARTIEL",
+    "ACCORD_TOTAL",
+    "IMPASSE",
+    "redactionAccord",
+    "HOMOLOGUER_ACCORD",
+    "MEDIATION_TERMINEE",
+    "homologationAccord",
+    "mediationReussie",
+    "mediationEchouee"
+  ],
+  "events": [
+    "DEMANDER_MEDIATION",
+    "SEANCE_INFORMATION",
+    "ACCEPTER_MEDIATION",
+    "REFUSER_MEDIATION",
+    "SEANCE_MEDIATION",
+    "ACCORD_PARTIEL",
+    "ACCORD_TOTAL",
+    "IMPASSE",
+    "HOMOLOGUER_ACCORD",
+    "MEDIATION_TERMINEE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Justice",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Médiation familiale",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://justice.belgium.be/fr/themes_et_dossiers/famille/mediation_familiale",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

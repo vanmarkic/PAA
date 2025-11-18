@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-indication-geographique",
+  "name": "Protection d'indication géographique",
+  "description": "  En tant que groupement de producteurs\n  Je veux protéger une appellation d'origine\n  Afin de valoriser notre savoir-faire régional",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les AOP/IGP sont protégées au niveau européen"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la demande passe par l'autorité nationale"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la protection est illimitée"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "8c999e0e-fc06-4dc5-8daa-ed1a7c397be0",
+      "name": "Demande d'AOP pour produit agricole",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "nous produisons le \"Fromage de Herve\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "le lien au terroir est établi"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous avons un cahier des charges strict"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous déposons la demande d'AOP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'AFSCA examine la demande"
+        },
+        {
+          "keyword": "Et",
+          "text": "une enquête publique est organisée"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Commission européenne valide"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'AOP est protégée dans toute l'UE"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "414a5638-c1fd-4383-88ef-551340a522c4",
+      "name": "Opposition à une demande d'IGP",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une demande d'IGP est publiée"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle porte atteinte à nos droits"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous formons opposition dans les 3 mois"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous devons justifier notre intérêt légitime"
+        },
+        {
+          "keyword": "Et",
+          "text": "démontrer le préjudice"
+        },
+        {
+          "keyword": "Et",
+          "text": "proposer des modifications"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

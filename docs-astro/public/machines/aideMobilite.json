@@ -1,0 +1,63 @@
+{
+  "id": "aideMobilite",
+  "name": "Aide à la Mobilité (Mobility Assistance) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for mobility assistance services,",
+  "states": [
+    "attente",
+    "DEMANDER_AIDE",
+    "evaluationBesoin",
+    "BESOIN_VALIDE",
+    "BESOIN_REFUSE",
+    "demandeRefusee",
+    "REINITIALISER",
+    "attributionAide",
+    "ATTRIBUER_AIDE",
+    "aideActive",
+    "VERSER_MENSUALITE",
+    "VERIFIER_ELIGIBILITE",
+    "AIDE_TERMINEE",
+    "verificationEligibilite",
+    "TOUJOURS_ELIGIBLE",
+    "PLUS_ELIGIBLE",
+    "aideSuspendue",
+    "aideTerminee"
+  ],
+  "events": [
+    "DEMANDER_AIDE",
+    "EVALUER_BESOIN",
+    "BESOIN_VALIDE",
+    "BESOIN_REFUSE",
+    "ATTRIBUER_AIDE",
+    "VERSER_MENSUALITE",
+    "VERIFIER_ELIGIBILITE",
+    "TOUJOURS_ELIGIBLE",
+    "PLUS_ELIGIBLE",
+    "AIDE_TERMINEE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "DG Personnes handicapées",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Aide à la mobilité",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://handicap.belgium.be/fr/aides-techniques-et-adaptations/aides-a-la-mobilite.htm",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

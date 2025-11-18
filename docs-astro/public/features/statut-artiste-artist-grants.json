@@ -1,0 +1,317 @@
+{
+  "id": "statut-artiste-artist-grants",
+  "name": "Bourses et Subventions Artistiques",
+  "description": "  En tant qu'artiste créateur\n  Je veux accéder aux bourses disponibles\n  Afin de financer mes projets artistiques",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les bourses artistiques incluent:",
+        "dataTable": {
+          "headers": [
+            "Type de bourse",
+            "Montant max",
+            "Durée"
+          ],
+          "rows": [
+            {
+              "Type de bourse": "Bourse de création",
+              "Montant max": "25000€",
+              "Durée": "12 mois"
+            },
+            {
+              "Type de bourse": "Bourse de résidence",
+              "Montant max": "15000€",
+              "Durée": "6 mois"
+            },
+            {
+              "Type de bourse": "Bourse de recherche",
+              "Montant max": "20000€",
+              "Durée": "12 mois"
+            },
+            {
+              "Type de bourse": "Aide au projet",
+              "Montant max": "10000€",
+              "Durée": "Par projet"
+            },
+            {
+              "Type de bourse": "Bourse jeune talent",
+              "Montant max": "8000€",
+              "Durée": "12 mois"
+            },
+            {
+              "Type de bourse": "Subvention équipement",
+              "Montant max": "5000€",
+              "Durée": "Unique"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "a9f03e8e-fe7f-4ce8-be3c-6fcff23c310a",
+      "name": "Demande de bourse de création",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis chorégraphe"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un projet de création original"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon dossier est complet"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je soumets ma demande de bourse"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir un budget détaillé"
+        },
+        {
+          "keyword": "Et",
+          "text": "un calendrier de création"
+        },
+        {
+          "keyword": "Et",
+          "text": "des lettres de soutien professionnel"
+        },
+        {
+          "keyword": "Et",
+          "text": "la décision est rendue sous 60 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "721e7c06-96d6-48f0-a144-74296bc4422d",
+      "name": "Bourse de résidence artistique",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis plasticien"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis sélectionné pour une résidence"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la résidence dure 3 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la bourse de résidence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant couvre les frais de séjour"
+        },
+        {
+          "keyword": "Et",
+          "text": "les matériaux de création"
+        },
+        {
+          "keyword": "Et",
+          "text": "une allocation mensuelle de 2000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0545b51d-f82d-4d82-9f2a-3959ae027f2b",
+      "name": "Cumul de bourses",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je bénéficie d'une bourse de création"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux postuler pour une aide au projet"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie les règles de cumul"
+        },
+        {
+          "keyword": "Alors",
+          "text": "certains cumuls sont interdits"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois déclarer mes autres financements"
+        },
+        {
+          "keyword": "Et",
+          "text": "le total ne peut dépasser 30000€/an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3db4b55b-cbec-4dbd-a292-1f3d8926da0f",
+      "name": "Bourse jeune talent (moins de 30 ans)",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai 24 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est ma première demande"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un diplôme artistique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je postule pour la bourse jeune talent"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les critères sont assouplis"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'accompagnement est renforcé"
+        },
+        {
+          "keyword": "Et",
+          "text": "un mentor peut être assigné"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "bfe1eb74-a564-4d0e-a575-e58553d549a4",
+      "name": "Justification et rapport final",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu une bourse de 15000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le projet est terminé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je soumets mon rapport final"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir les justificatifs financiers"
+        },
+        {
+          "keyword": "Et",
+          "text": "un compte-rendu artistique"
+        },
+        {
+          "keyword": "Et",
+          "text": "des preuves de réalisation (photos, vidéos)"
+        },
+        {
+          "keyword": "Et",
+          "text": "le solde de 25% est versé après validation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0af812f5-e833-4fdc-b4bc-1d829557af9d",
+      "name": "Éligibilité selon profil",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis <profil>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon expérience est de <années> ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité aux bourses"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible à <bourses_possibles>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "profil",
+            "années",
+            "bourses_possibles"
+          ],
+          "rows": [
+            {
+              "name": "9a39ee0b-8ccf-4e33-8091-26134dc8d351",
+              "values": {
+                "profil": "artiste débutant",
+                "années": "1",
+                "bourses_possibles": "jeune talent, aide projet"
+              }
+            },
+            {
+              "name": "e0cb3eae-396e-40f0-a88a-6af1fd3bafcf",
+              "values": {
+                "profil": "artiste confirmé",
+                "années": "5",
+                "bourses_possibles": "création, résidence, recherche"
+              }
+            },
+            {
+              "name": "1752cd04-cc39-4ef4-95ef-6c36c91838b0",
+              "values": {
+                "profil": "artiste émergent",
+                "années": "3",
+                "bourses_possibles": "création, aide projet, équipement"
+              }
+            },
+            {
+              "name": "495d7269-ee99-47be-b71c-94436268837f",
+              "values": {
+                "profil": "collectif artistique",
+                "années": "2",
+                "bourses_possibles": "aide projet, subvention structure"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.954Z"
+}

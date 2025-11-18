@@ -1,0 +1,35 @@
+{
+  "id": "expulsionDomicile",
+  "name": "Expulsion du Domicile",
+  "category": "housing",
+  "description": "",
+  "states": [
+    "congeLocatif",
+    "DONNER_CONGE",
+    "delais",
+    "delaiPreavis",
+    "DELAI_EXPIRE",
+    "commandementQuitter",
+    "COMMANDEMENT_SIGNIFIE",
+    "procedureJudiciaireExpulsion",
+    "SAISIR_JUGE_PAIX",
+    "audienceJugePaix",
+    "JUGEMENT_EXPULSION",
+    "titreExecutoire",
+    "HUISSIER_MANDATE",
+    "executionExpulsion",
+    "EXPULSION_EXECUTEE",
+    "termine"
+  ],
+  "events": [
+    "DONNER_CONGE",
+    "DELAI_EXPIRE",
+    "COMMANDEMENT_SIGNIFIE",
+    "SAISIR_JUGE_PAIX",
+    "JUGEMENT_EXPULSION",
+    "HUISSIER_MANDATE",
+    "EXPULSION_EXECUTEE"
+  ],
+  "initial": "congeLocatif",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

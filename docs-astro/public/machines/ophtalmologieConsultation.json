@@ -1,0 +1,32 @@
+{
+  "id": "ophtalmologieConsultation",
+  "name": "Consultation Ophtalmologie",
+  "category": "health",
+  "description": "",
+  "states": [
+    "consultation",
+    "CONSULTER",
+    "examenOphtalmologique",
+    "EXAMEN_REALISE",
+    "prescriptionLunettes",
+    "PRESCRIPTION_ETABLIE",
+    "choixLunettes",
+    "CHOISIR_LUNETTES",
+    "interventionOptique",
+    "INTERVENTION_CALCULEE",
+    "remboursementLegal",
+    "verres",
+    "interventionComplementaire",
+    "coutMoyen",
+    "termine"
+  ],
+  "events": [
+    "CONSULTER",
+    "EXAMEN_REALISE",
+    "PRESCRIPTION_ETABLIE",
+    "CHOISIR_LUNETTES",
+    "INTERVENTION_CALCULEE"
+  ],
+  "initial": "consultation",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

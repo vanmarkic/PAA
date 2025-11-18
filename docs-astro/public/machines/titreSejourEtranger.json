@@ -1,0 +1,35 @@
+{
+  "id": "titreSejourEtranger",
+  "name": "Titre de Séjour Étranger",
+  "category": "immigration",
+  "description": "",
+  "states": [
+    "entreeTerritoire",
+    "ENTREE_BELGIQUE",
+    "declarationCommune",
+    "DECLARATION_COMMUNE",
+    "depotDemandeSejour",
+    "DEMANDE_OFFICE_ETRANGERS",
+    "instructionDemande",
+    "ATTESTATION_DELIVREE",
+    "decisionOE",
+    "delivranceCarte",
+    "CARTE_SEJOUR_DELIVREE",
+    "types",
+    "ordreQuitter",
+    "RECOURS_INTRODUIT",
+    "procedureRecours",
+    "termine"
+  ],
+  "events": [
+    "ENTREE_BELGIQUE",
+    "DECLARATION_COMMUNE",
+    "DEMANDE_OFFICE_ETRANGERS",
+    "ATTESTATION_DELIVREE",
+    "DECISION_OE",
+    "CARTE_SEJOUR_DELIVREE",
+    "RECOURS_INTRODUIT"
+  ],
+  "initial": "entreeTerritoire",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

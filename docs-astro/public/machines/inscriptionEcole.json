@@ -1,0 +1,62 @@
+{
+  "id": "inscriptionEcole",
+  "name": "Inscription École (School Enrollment) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for enrolling a child in school in Belgium,",
+  "states": [
+    "attente",
+    "COMMENCER_INSCRIPTION",
+    "selectionEcole",
+    "CHOISIR_ECOLE",
+    "ANNULER",
+    "verificationDocuments",
+    "SOUMETTRE_DOCUMENTS",
+    "validationDocuments",
+    "DOCUMENTS_VALIDES",
+    "DOCUMENTS_INCOMPLETS",
+    "verificationDisponibilite",
+    "PLACE_DISPONIBLE",
+    "PLACE_INDISPONIBLE",
+    "listeAttente",
+    "inscriptionConfirmee",
+    "REINITIALISER",
+    "annulee"
+  ],
+  "events": [
+    "COMMENCER_INSCRIPTION",
+    "CHOISIR_ECOLE",
+    "SOUMETTRE_DOCUMENTS",
+    "DOCUMENTS_VALIDES",
+    "DOCUMENTS_INCOMPLETS",
+    "VERIFIER_DISPONIBILITE",
+    "PLACE_DISPONIBLE",
+    "PLACE_INDISPONIBLE",
+    "CONFIRMER_INSCRIPTION",
+    "ANNULER",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.931Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Fédération Wallonie-Bruxelles",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Inscription scolaire",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.enseignement.be/index.php?page=26100",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

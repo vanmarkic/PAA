@@ -1,0 +1,42 @@
+{
+  "id": "reductionTransportPublic",
+  "name": "Machine XState: Réductions transport public",
+  "category": "mobility",
+  "description": "Base légale: Règlements SNCB, STIB, TEC, De Lijn",
+  "states": [
+    "information",
+    "reductions_principales",
+    "seniors_65plus",
+    "BIM",
+    "handicap",
+    "jeunes",
+    "chomage",
+    "support_mobib",
+    "verification",
+    "criteres",
+    "age_65plus",
+    "invalidite",
+    "taux",
+    "jeune",
+    "demande",
+    "procedures",
+    "SNCB_senior",
+    "SNCB_BIM",
+    "SNCB_invalidite",
+    "Omnipas_STIB",
+    "TEC_65plus",
+    "octroi",
+    "utilisation",
+    "validite",
+    "avantages_specifiques",
+    "restrictions"
+  ],
+  "events": [
+    "VERIFIER_ELIGIBILITE",
+    "ELIGIBLE",
+    "DEMANDER_CARTE",
+    "CARTE_OBTENUE"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.939Z"
+}

@@ -1,0 +1,884 @@
+{
+  "id": "benefits-prime-renovation",
+  "name": "Prime Rénovation",
+  "description": "  En tant que propriétaire ou locataire d'un logement\n  Je veux savoir si j'ai droit aux primes de rénovation\n  Afin d'améliorer la performance énergétique de mon habitation",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les systèmes de primes rénovation 2024-2025 sont:",
+        "dataTable": {
+          "headers": [
+            "Région",
+            "Système",
+            "Période validité",
+            "Changement majeur"
+          ],
+          "rows": [
+            {
+              "Région": "Wallonie",
+              "Système": "Prime Habitation",
+              "Période validité": "Jusqu'au 30/09/2026",
+              "Changement majeur": "Réduction 60% des montants"
+            },
+            {
+              "Région": "Bruxelles-Capitale",
+              "Système": "Renolution",
+              "Période validité": "Système suspendu 2025",
+              "Changement majeur": "Attente nouveau gouvernement"
+            },
+            {
+              "Région": "Flandres",
+              "Système": "MijnVerbouwPremie",
+              "Période validité": "En vigueur 2025",
+              "Changement majeur": "Fusion primes énergie + rénovation"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "les catégories de revenus en Wallonie sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Description",
+            "Plafond revenus",
+            "Taux intervention"
+          ],
+          "rows": [
+            {
+              "Catégorie": "R1",
+              "Description": "Revenus modestes",
+              "Plafond revenus": "< 24,700€",
+              "Taux intervention": "70% des coûts"
+            },
+            {
+              "Catégorie": "R2",
+              "Description": "Revenus bas",
+              "Plafond revenus": "24,700€ - 34,700€",
+              "Taux intervention": "70% des coûts"
+            },
+            {
+              "Catégorie": "R3",
+              "Description": "Revenus moyens bas",
+              "Plafond revenus": "34,700€ - 44,700€",
+              "Taux intervention": "50% des coûts"
+            },
+            {
+              "Catégorie": "R4",
+              "Description": "Revenus moyens",
+              "Plafond revenus": "44,700€ - 97,700€",
+              "Taux intervention": "50% des coûts"
+            },
+            {
+              "Catégorie": "R5",
+              "Description": "Revenus élevés",
+              "Plafond revenus": "> 97,700€",
+              "Taux intervention": "Non éligible"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'avantage fiscal fédéral 2024 est plafonné à 3,900€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "b3cdf380-99b6-441b-8ec8-332c527ecb3e",
+      "name": "Propriétaire wallon catégorie R1 isolation toiture",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus annuels sont de 20,000€ (catégorie R1)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma maison a plus de 15 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux isoler 100m² de toiture"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le devis est de 8,000€ HTVA"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime habitation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime de base est 20-120€/m² selon performance"
+        },
+        {
+          "keyword": "Et",
+          "text": "avec coefficient R1, la prime peut atteindre 70% du coût"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant estimé est 5,600€ maximum"
+        },
+        {
+          "keyword": "Et",
+          "text": "je n'ai pas besoin d'audit pour la toiture"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "616356ba-fe5f-477c-9020-5edc8d7eb509",
+      "name": "Couple wallon catégorie R3 rénovation globale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "nous sommes propriétaires en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nos revenus combinés sont de 40,000€ (catégorie R3)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous planifions une rénovation complète"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le devis total est de 50,000€"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un audit énergétique préalable coûte 700€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous demandons les primes"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous devons d'abord faire l'audit (obligatoire)"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'audit est subsidié à 90% (630€ de prime)"
+        },
+        {
+          "keyword": "Et",
+          "text": "les primes couvrent maximum 50% des travaux"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant total des primes est plafonné à 25,000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous devons suivre les recommandations de l'audit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d95bdba3-ec09-4e87-b114-0679298cba29",
+      "name": "Locataire avec accord propriétaire Wallonie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis locataire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai l'accord écrit du propriétaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux installer une ventilation double flux"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût est de 4,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont de 25,000€ (catégorie R2)"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible avec accord propriétaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime de base est 680-4,080€ pour double flux"
+        },
+        {
+          "keyword": "Et",
+          "text": "avec coefficient R2 (70%), la prime est 2,800€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le propriétaire doit maintenir le loyer 5 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a975c337-7327-44ea-b2f5-dbbb2561f6dd",
+      "name": "Propriétaire Bruxelles situation 2025",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire à Bruxelles"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai des travaux prévus en 2025"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le système Renolution est suspendu"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une facture finale datée de janvier 2025"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je veux demander une prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "aucune demande n'est possible actuellement"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois attendre la formation du gouvernement"
+        },
+        {
+          "keyword": "Et",
+          "text": "les travaux 2024 restent éligibles via Irisbox"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux contacter Homegrade pour information"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d0f3c9bf-4960-4bcd-bbbc-dbbf1900c8f0",
+      "name": "Propriétaire flamand MijnVerbouwPremie 2025",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Flandres"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont de 35,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux isoler les murs extérieurs (80m²)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le devis est de 12,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la performance atteint R ≥ 3"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande MijnVerbouwPremie"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible selon mes revenus"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime dépend de ma catégorie de revenus"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant est calculé par m²"
+        },
+        {
+          "keyword": "Et",
+          "text": "la demande se fait en ligne"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement est 3-4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "84eafc25-d1ac-466b-a4ac-4710fb197e81",
+      "name": "Revenus élevés Wallonie catégorie R5",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus annuels sont de 110,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en catégorie R5"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux rénover ma toiture"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité aux primes"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne suis plus éligible depuis 2025"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"catégorie R5 exclue du système\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux bénéficier de l'avantage fiscal fédéral uniquement"
+        },
+        {
+          "keyword": "Et",
+          "text": "la déduction fiscale maximum est 3,900€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8ce0b750-6de1-4814-aa64-65fc978ae5fb",
+      "name": "Pompe à chaleur en Wallonie catégorie R2",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont de 30,000€ (catégorie R2)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je remplace ma chaudière mazout"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'installe une pompe à chaleur air-eau"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût total est de 15,000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible à la prime pompe à chaleur"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime de base est réduite de 60% en 2025"
+        },
+        {
+          "keyword": "Et",
+          "text": "avec coefficient R2 (70%), le support reste significatif"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'économie d'énergie estimée est 50-70%"
+        },
+        {
+          "keyword": "Et",
+          "text": "un audit préalable est recommandé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0ef188dc-77de-42f5-9aea-27b323cf814c",
+      "name": "Châssis et vitrages en Wallonie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont de 28,000€ (catégorie R2)"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je remplace 10 châssis simple vitrage"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût est de 8,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les nouveaux châssis ont Uw ≤ 1.5 W/m²K"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime châssis"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la prime est fortement réduite en 2025"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant dépend de la performance Uw"
+        },
+        {
+          "keyword": "Et",
+          "text": "maximum 70% du coût peut être couvert"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois utiliser un entrepreneur agréé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c87c42f1-4e06-4c80-b096-c7d3eeb80dd1",
+      "name": "Avantage fiscal isolation toiture Wallonie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en Wallonie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai isolé ma toiture en 2024"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la facture est de 10,000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis dans la catégorie R4"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais ma déclaration fiscale 2025"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux déduire 30% des coûts"
+        },
+        {
+          "keyword": "Et",
+          "text": "la déduction maximum est 3,900€"
+        },
+        {
+          "keyword": "Et",
+          "text": "c'est cumulable avec les primes régionales"
+        },
+        {
+          "keyword": "Et",
+          "text": "la déduction totale est 3,000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "cet avantage est unique à la Wallonie"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "945f688c-e611-452e-879a-0c2263fe4c73",
+      "name": "Calcul primes selon région et travaux",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis propriétaire en <région>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus sont de <revenus>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je réalise <travaux>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le coût est de <coût>€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma catégorie est <catégorie>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la prime"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'éligibilité est <éligibilité>"
+        },
+        {
+          "keyword": "Et",
+          "text": "le taux d'intervention est <taux>%"
+        },
+        {
+          "keyword": "Et",
+          "text": "la prime estimée est <prime>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "revenus",
+            "travaux",
+            "coût",
+            "catégorie",
+            "éligibilité",
+            "taux",
+            "prime"
+          ],
+          "rows": [
+            {
+              "name": "fc7f76bd-393d-470b-b9ce-f808351859ab",
+              "values": {
+                "région": "Wallonie",
+                "revenus": "22000",
+                "travaux": "isolation toiture 100m²",
+                "coût": "8000",
+                "catégorie": "R1",
+                "éligibilité": "oui",
+                "taux": "70",
+                "prime": "5600"
+              }
+            },
+            {
+              "name": "91c9140d-acb5-4f00-ad78-e943530d4800",
+              "values": {
+                "région": "Wallonie",
+                "revenus": "35000",
+                "travaux": "pompe à chaleur",
+                "coût": "15000",
+                "catégorie": "R3",
+                "éligibilité": "oui",
+                "taux": "50",
+                "prime": "7500"
+              }
+            },
+            {
+              "name": "59f26c73-f72e-4c87-9fff-73a72990d560",
+              "values": {
+                "région": "Wallonie",
+                "revenus": "45000",
+                "travaux": "châssis double vitrage",
+                "coût": "6000",
+                "catégorie": "R4",
+                "éligibilité": "oui",
+                "taux": "50",
+                "prime": "3000"
+              }
+            },
+            {
+              "name": "81b53aa1-b122-492a-8225-3f5e4c07d8f2",
+              "values": {
+                "région": "Wallonie",
+                "revenus": "100000",
+                "travaux": "isolation murs",
+                "coût": "12000",
+                "catégorie": "R5",
+                "éligibilité": "non",
+                "taux": "0",
+                "prime": "0"
+              }
+            },
+            {
+              "name": "76757280-a0c5-4bea-91a2-67d2f31107b0",
+              "values": {
+                "région": "Flandres",
+                "revenus": "28000",
+                "travaux": "isolation murs 80m²",
+                "coût": "10000",
+                "catégorie": "-",
+                "éligibilité": "oui",
+                "taux": "var",
+                "prime": "4000"
+              }
+            },
+            {
+              "name": "b13614ec-bbc7-48ea-bc38-b3aef598d4f4",
+              "values": {
+                "région": "Flandres",
+                "revenus": "40000",
+                "travaux": "panneaux solaires",
+                "coût": "6000",
+                "catégorie": "-",
+                "éligibilité": "oui",
+                "taux": "var",
+                "prime": "1500"
+              }
+            },
+            {
+              "name": "b74f64b6-3c58-44f2-bd3d-8a60f9859f08",
+              "values": {
+                "région": "Bruxelles",
+                "revenus": "30000",
+                "travaux": "travaux 2025",
+                "coût": "10000",
+                "catégorie": "-",
+                "éligibilité": "non",
+                "taux": "0",
+                "prime": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "e3c4a717-81cd-4526-8622-e981bfd0ff00",
+      "name": "Conditions et obligations post-travaux",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai reçu une prime rénovation"
+        },
+        {
+          "keyword": "Quand",
+          "text": "les travaux sont terminés"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les obligations suivantes:",
+          "dataTable": {
+            "headers": [
+              "Obligation",
+              "Durée",
+              "Sanction si non-respect"
+            ],
+            "rows": [
+              {
+                "Obligation": "Maintenir la destination du bien",
+                "Durée": "5 ans",
+                "Sanction si non-respect": "Remboursement prime"
+              },
+              {
+                "Obligation": "Ne pas vendre (sauf exceptions)",
+                "Durée": "5 ans",
+                "Sanction si non-respect": "Remboursement proportionnel"
+              },
+              {
+                "Obligation": "Permettre les contrôles",
+                "Durée": "Permanent",
+                "Sanction si non-respect": "Suspension/remboursement"
+              },
+              {
+                "Obligation": "Conserver les factures",
+                "Durée": "10 ans",
+                "Sanction si non-respect": "Problème si contrôle fiscal"
+              },
+              {
+                "Obligation": "Respecter performances promises",
+                "Durée": "Permanent",
+                "Sanction si non-respect": "Remboursement si fraude"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "en cas de location:",
+          "dataTable": {
+            "headers": [
+              "Région",
+              "Obligation loyer"
+            ],
+            "rows": [
+              {
+                "Région": "Wallonie",
+                "Obligation loyer": "Pas d'augmentation pendant 5 ans"
+              },
+              {
+                "Région": "Flandres",
+                "Obligation loyer": "Grille de loyers maximums"
+              },
+              {
+                "Région": "Bruxelles",
+                "Obligation loyer": "Certificat PEB obligatoire"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f3238946-16ed-4e39-9fca-f573429fe59d",
+      "name": "Procédure et délais de demande",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux demander une prime rénovation"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare mon dossier"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure est:",
+          "dataTable": {
+            "headers": [
+              "Étape",
+              "Wallonie",
+              "Flandres",
+              "Bruxelles (suspendu)"
+            ],
+            "rows": [
+              {
+                "Étape": "Audit préalable",
+                "Wallonie": "Obligatoire sauf toit",
+                "Flandres": "Recommandé",
+                "Bruxelles (suspendu)": "Obligatoire"
+              },
+              {
+                "Étape": "Devis entrepreneurs",
+                "Wallonie": "Minimum 1",
+                "Flandres": "Minimum 1",
+                "Bruxelles (suspendu)": "Minimum 2"
+              },
+              {
+                "Étape": "Introduction demande",
+                "Wallonie": "Avant travaux",
+                "Flandres": "Après facture",
+                "Bruxelles (suspendu)": "Après travaux"
+              },
+              {
+                "Étape": "Délai traitement",
+                "Wallonie": "3-4 mois",
+                "Flandres": "3-4 mois",
+                "Bruxelles (suspendu)": "2-3 mois"
+              },
+              {
+                "Étape": "Paiement prime",
+                "Wallonie": "Après travaux",
+                "Flandres": "Direct",
+                "Bruxelles (suspendu)": "Direct"
+              },
+              {
+                "Étape": "Délai maximum travaux",
+                "Wallonie": "2 ans",
+                "Flandres": "1 an",
+                "Bruxelles (suspendu)": "2 ans"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les documents requis sont:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Obligatoire"
+            ],
+            "rows": [
+              {
+                "Document": "Titre de propriété",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Avertissement-extrait",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Devis détaillés",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Photos avant/après",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Factures finales",
+                "Obligatoire": "Oui"
+              },
+              {
+                "Document": "Attestation entrepreneur",
+                "Obligatoire": "Oui"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.944Z"
+}

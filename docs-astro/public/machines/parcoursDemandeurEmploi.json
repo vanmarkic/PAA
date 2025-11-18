@@ -1,0 +1,42 @@
+{
+  "id": "parcoursDemandeurEmploi",
+  "name": "META MACHINE - Parcours Citoyen : Perte d'Emploi et Recherche",
+  "category": "meta",
+  "description": "Orchestre toutes les démarches suite à une perte d'emploi",
+  "states": [
+    "perteEmploi",
+    "EMPLOI_PERDU",
+    "inscriptionONEM",
+    "ONEM_INSCRIT",
+    "inscriptionServiceEmploi",
+    "SERVICE_EMPLOI_INSCRIT",
+    "services",
+    "demandeAllocations",
+    "conditions",
+    "montants",
+    "rechercheEmploiActive",
+    "CV_REDIGE",
+    "FORMATION_CHOISIE",
+    "OFFRE_TROUVEE",
+    "verificationDroitRIS",
+    "RIS_DEMANDE",
+    "montantsRIS",
+    "demarchesCPAS",
+    "candidatureEnCours",
+    "EMPLOI_RETROUVE",
+    "emploiRetrouve"
+  ],
+  "events": [
+    "EMPLOI_PERDU",
+    "ONEM_INSCRIT",
+    "SERVICE_EMPLOI_INSCRIT",
+    "ALLOCATIONS_DEMANDEES",
+    "CV_REDIGE",
+    "FORMATION_CHOISIE",
+    "OFFRE_TROUVEE",
+    "EMPLOI_RETROUVE",
+    "RIS_DEMANDE"
+  ],
+  "initial": "perteEmploi",
+  "generated": "2025-11-18T10:17:36.939Z"
+}

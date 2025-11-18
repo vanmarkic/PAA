@@ -1,0 +1,28 @@
+{
+  "id": "agenceImmobiliereSociale",
+  "name": "Machine XState: Location via Agence Immobilière Sociale (AIS)",
+  "category": "housing",
+  "description": "Base légale: Code wallon du logement / Décret flamand / Ordonnance bruxelloise",
+  "states": [
+    "information",
+    "principe",
+    "differences_logement_social",
+    "plafonds_revenus_approximatifs",
+    "verification",
+    "conditions",
+    "inscription",
+    "proposition",
+    "location",
+    "refus"
+  ],
+  "events": [
+    "VERIFIER_ELIGIBILITE",
+    "ELIGIBLE",
+    "INELIGIBLE",
+    "INSCRIPTION",
+    "LOGEMENT_PROPOSE",
+    "ACCEPTER_LOGEMENT"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

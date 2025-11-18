@@ -1,0 +1,43 @@
+{
+  "id": "droitsSuccession",
+  "name": "Machine XState: Droits de succession",
+  "category": "fiscal",
+  "description": "Base légale: Code des droits de succession (régional)",
+  "states": [
+    "inventaire",
+    "actif",
+    "passif_deductible",
+    "passif_NON_deductible",
+    "calcul",
+    "delaiDeclaration",
+    "tauxWallonie2024",
+    "ligne_directe",
+    "entre_epoux",
+    "freres_soeurs",
+    "autres",
+    "tauxFlandre2024",
+    "tauxBruxelles2024",
+    "exonerations_reductions",
+    "habitation_familiale",
+    "declaration",
+    "ou",
+    "controles",
+    "sanctions_retard",
+    "paiement",
+    "modalites",
+    "consequences_non_paiement",
+    "echeancier",
+    "conditions",
+    "finalisation",
+    "effets",
+    "conseils"
+  ],
+  "events": [
+    "CALCULER_DROITS",
+    "DEPOSER_DECLARATION",
+    "PAYER_DROITS",
+    "DEMANDER_ECHEANCIER"
+  ],
+  "initial": "inventaire",
+  "generated": "2025-11-18T10:17:36.930Z"
+}

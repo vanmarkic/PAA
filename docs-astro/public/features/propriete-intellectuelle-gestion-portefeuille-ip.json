@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-gestion-portefeuille-ip",
+  "name": "Gestion de portefeuille IP",
+  "description": "  En tant qu'entreprise avec multiples droits IP\n  Je veux gérer efficacement mon portefeuille\n  Afin d'optimiser la valeur et réduire les coûts",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "un portefeuille IP nécessite gestion active"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les coûts annuels peuvent être élevés"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la stratégie doit s'aligner sur le business"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "78e2705c-26f5-425f-ba38-9e415fb9305a",
+      "name": "Revue annuelle du portefeuille",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai 50 brevets et 30 marques"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les coûts annuels dépassent 100000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'effectue la revue annuelle"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'évalue chaque droit selon sa valeur business"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'abandonne les droits non stratégiques"
+        },
+        {
+          "keyword": "Et",
+          "text": "je priorise les renouvellements"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'identifie les opportunités de licensing"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "bc271c36-27cb-4c71-82e4-f9c2a1642428",
+      "name": "Système de gestion des échéances",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai des centaines d'échéances"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les oublis peuvent être fatals"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'implémente un système de gestion"
+        },
+        {
+          "keyword": "Alors",
+          "text": "toutes les dates sont trackées"
+        },
+        {
+          "keyword": "Et",
+          "text": "des alertes sont envoyées 3 mois avant"
+        },
+        {
+          "keyword": "Et",
+          "text": "les décisions sont documentées"
+        },
+        {
+          "keyword": "Et",
+          "text": "les paiements sont automatisés si possible"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.952Z"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "legalConversion",
+  "name": "the Legal Text Conversion Pipeline",
+  "category": "general",
+  "description": "This state machine represents the workflow described in the architecture:",
+  "states": [
+    "idle",
+    "START_CONVERSION",
+    "extractingStructure",
+    "STRUCTURE_EXTRACTED",
+    "identifyingConcepts",
+    "CONCEPTS_IDENTIFIED",
+    "mappingVocabulary",
+    "TERMS_MAPPED",
+    "generatingVersions",
+    "VERSIONS_GENERATED",
+    "validating",
+    "VALIDATION_PASSED",
+    "VALIDATION_FAILED",
+    "checkingRetries",
+    "regeneratingWithConstraints",
+    "RETRY",
+    "completed",
+    "failed",
+    "RESET"
+  ],
+  "events": [
+    "START_CONVERSION",
+    "STRUCTURE_EXTRACTED",
+    "CONCEPTS_IDENTIFIED",
+    "TERMS_MAPPED",
+    "VERSIONS_GENERATED",
+    "VALIDATION_PASSED",
+    "VALIDATION_FAILED",
+    "RETRY",
+    "MAX_RETRIES_REACHED",
+    "RESET"
+  ],
+  "initial": "idle",
+  "generated": "2025-11-18T10:17:36.936Z"
+}

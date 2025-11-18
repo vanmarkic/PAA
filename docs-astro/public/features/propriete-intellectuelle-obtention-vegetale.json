@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-obtention-vegetale",
+  "name": "Protection d'obtention végétale",
+  "description": "  En tant qu'obtenteur de nouvelles variétés végétales\n  Je veux protéger mes créations\n  Afin de contrôler leur commercialisation pendant 25-30 ans",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la protection UPOV est disponible"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les tests DHS sont obligatoires"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la durée est de 25 ans (30 pour arbres/vignes)"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "b486c2cf-15b3-42de-ae44-02fceb6ee9b1",
+      "name": "Demande de certificat d'obtention végétale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé une nouvelle variété de tomate"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle est distincte, homogène et stable (DHS)"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle a une dénomination unique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je dépose ma demande à l'OCVV"
+        },
+        {
+          "keyword": "Alors",
+          "text": "des essais DHS sont organisés"
+        },
+        {
+          "keyword": "Et",
+          "text": "durent 2 cycles de végétation"
+        },
+        {
+          "keyword": "Et",
+          "text": "coûtent environ 3000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le certificat est délivré si conforme"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "22124c8a-cacc-4e6f-ae48-84cc99208533",
+      "name": "Protection provisoire pendant l'examen",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma demande est en cours d'examen"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des tiers commercialisent déjà"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je notifie mes droits provisoires"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux réclamer une indemnité"
+        },
+        {
+          "keyword": "Mais",
+          "text": "seulement après délivrance du certificat"
+        },
+        {
+          "keyword": "Et",
+          "text": "rétroactivement à la publication"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

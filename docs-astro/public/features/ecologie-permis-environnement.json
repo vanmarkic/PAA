@@ -1,0 +1,330 @@
+{
+  "id": "ecologie-permis-environnement",
+  "name": "Permis d'environnement",
+  "description": "  En tant qu'entreprise ou particulier\n  Je veux obtenir un permis d'environnement\n  Afin d'exploiter une installation classée légalement",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les classes d'installations sont définies selon l'impact:",
+        "dataTable": {
+          "headers": [
+            "Classe",
+            "Impact",
+            "Procédure",
+            "Délai"
+          ],
+          "rows": [
+            {
+              "Classe": "1",
+              "Impact": "Impact important",
+              "Procédure": "Permis complet",
+              "Délai": "90 jours"
+            },
+            {
+              "Classe": "2",
+              "Impact": "Impact modéré",
+              "Procédure": "Permis simplifié",
+              "Délai": "60 jours"
+            },
+            {
+              "Classe": "3",
+              "Impact": "Impact faible",
+              "Procédure": "Déclaration simple",
+              "Délai": "30 jours"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "4210a426-3f19-4eb2-bce2-79bac564ba77",
+      "name": "Installation industrielle classe 1 nécessitant permis complet",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une entreprise industrielle"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon installation a une puissance de 2000 kW"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'émets plus de 50 tonnes de CO2 par an"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis situé en Wallonie"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir une étude d'incidences complète"
+        },
+        {
+          "keyword": "Et",
+          "text": "une enquête publique doit être organisée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement sera de 90 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois appliquer les meilleures techniques disponibles (MTD)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "9199572e-7780-4178-bf2d-09483ba45e09",
+      "name": "PME classe 2 avec procédure simplifiée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une PME"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon installation a une puissance de 500 kW"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes émissions sont inférieures aux seuils IPPC"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis situé à Bruxelles"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir une notice d'évaluation"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement sera de 60 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois respecter les conditions sectorielles"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "fb360c08-6098-4f2c-a6f7-bed4bd13c476",
+      "name": "Artisan classe 3 avec simple déclaration",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un artisan"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon atelier fait moins de 100 m²"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'utilise moins de 50 kW de puissance"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'utilise pas de produits dangereux"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais ma déclaration environnementale"
+        },
+        {
+          "keyword": "Alors",
+          "text": "elle est automatiquement acceptée sous 30 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois un récépissé de déclaration"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois respecter les conditions générales d'exploitation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ae328e11-8066-48f4-b4ad-3efa6ec24c3a",
+      "name": "Installation Seveso seuil haut",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je stocke 500 tonnes de substances dangereuses"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je dépasse le seuil haut Seveso"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir un rapport de sécurité"
+        },
+        {
+          "keyword": "Et",
+          "text": "un plan d'urgence interne doit être établi"
+        },
+        {
+          "keyword": "Et",
+          "text": "une zone de protection doit être définie"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'inspection annuelle est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "95045c6f-ac4f-4618-8128-0fb2daa63cf6",
+      "name": "Refus pour non-conformité",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon installation est située en zone Natura 2000"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'étude d'incidences montre un impact majeur sur la biodiversité"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "aucune mesure compensatoire n'est suffisante"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande est refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif est \"impact inacceptable sur zone protégée\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux introduire un recours dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6e8ddcb2-e9aa-46f8-a77b-e791272e88e2",
+      "name": "Calcul des garanties financières selon la classe",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon installation est de classe <classe>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le risque est évalué comme <risque>"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule la garantie financière requise"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant sera de <garantie> euros"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "classe",
+            "risque",
+            "garantie"
+          ],
+          "rows": [
+            {
+              "name": "89b842ca-3791-43f3-9cf9-70bd37e72404",
+              "values": {
+                "classe": "1",
+                "risque": "élevé",
+                "garantie": "50000"
+              }
+            },
+            {
+              "name": "b6967404-3084-4fa9-93a6-60b22399b7a7",
+              "values": {
+                "classe": "1",
+                "risque": "modéré",
+                "garantie": "30000"
+              }
+            },
+            {
+              "name": "74643b63-f1b3-4a78-b137-1ed07df04916",
+              "values": {
+                "classe": "2",
+                "risque": "élevé",
+                "garantie": "20000"
+              }
+            },
+            {
+              "name": "18208e97-17e0-4042-a1d7-3350ee29f076",
+              "values": {
+                "classe": "2",
+                "risque": "modéré",
+                "garantie": "10000"
+              }
+            },
+            {
+              "name": "7c3085f3-96d9-4722-a0c2-88bb478b3583",
+              "values": {
+                "classe": "3",
+                "risque": "faible",
+                "garantie": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.949Z"
+}

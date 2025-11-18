@@ -1,0 +1,38 @@
+{
+  "id": "affiliationCaisseSociale",
+  "name": "Machine XState: Affiliation caisse sociale indépendant",
+  "category": "selfemployed",
+  "description": "Base légale: AR n°38 du 27 juillet 1967 organisant le statut social des indépendants",
+  "states": [
+    "information",
+    "obligation",
+    "statut_social",
+    "difference_BCE",
+    "choix_caisse",
+    "caisses_principales",
+    "services",
+    "couts_gestion",
+    "criteres_choix",
+    "affiliation",
+    "procedure",
+    "numero_ONSS",
+    "mutuelle",
+    "cotisations",
+    "cotisations_provisoires",
+    "montant_minimum_2024",
+    "cotisations_definitives",
+    "exemple",
+    "exonerations",
+    "defaut_paiement",
+    "plan_paiement",
+    "droits_acquis"
+  ],
+  "events": [
+    "DEMARRER_ACTIVITE",
+    "CHOISIR_CAISSE",
+    "AFFILIATION_COMPLETE",
+    "PREMIERE_COTISATION"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.939Z"
+}

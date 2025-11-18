@@ -1,0 +1,33 @@
+{
+  "id": "allocationEtudes",
+  "name": "Allocation d'Études (Bourse)",
+  "category": "education",
+  "description": "",
+  "states": [
+    "depotDemande",
+    "DEPOSER_DEMANDE",
+    "completudeDossier",
+    "COMPLETER_DOSSIER",
+    "calculPoints",
+    "CALCULER_POINTS",
+    "criteres",
+    "evaluationEligibilite",
+    "ALLOCATION_CALCULEE",
+    "decisionAllocation",
+    "DECISION_FAVORABLE",
+    "DECISION_DEFAVORABLE",
+    "allocationOctroyee",
+    "montants",
+    "refus"
+  ],
+  "events": [
+    "DEPOSER_DEMANDE",
+    "COMPLETER_DOSSIER",
+    "CALCULER_POINTS",
+    "ALLOCATION_CALCULEE",
+    "DECISION_FAVORABLE",
+    "DECISION_DEFAVORABLE"
+  ],
+  "initial": "depotDemande",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

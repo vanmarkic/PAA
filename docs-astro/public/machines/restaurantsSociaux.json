@@ -1,0 +1,59 @@
+{
+  "id": "restaurantsSociaux",
+  "name": "Restaurants Sociaux (Social Restaurants) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for accessing social restaurant services,",
+  "states": [
+    "attente",
+    "INSCRIRE_CLIENT",
+    "evaluationCategorie",
+    "CATEGORIE_ASSIGNEE",
+    "emissionCarte",
+    "CARTE_EMISE",
+    "carteActive",
+    "RECHARGER_CARTE",
+    "REVALUER_CATEGORIE",
+    "DESACTIVER_CARTE",
+    "rechargementCarte",
+    "repasServi",
+    "soldeInsuffisant",
+    "carteDesactivee",
+    "REINITIALISER"
+  ],
+  "events": [
+    "INSCRIRE_CLIENT",
+    "CATEGORIE_ASSIGNEE",
+    "EMETTRE_CARTE",
+    "CARTE_EMISE",
+    "RECHARGER_CARTE",
+    "CONSOMMER_REPAS",
+    "SOLDE_INSUFFISANT",
+    "REVALUER_CATEGORIE",
+    "DESACTIVER_CARTE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Intégration Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Restaurants sociaux",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/restaurants-sociaux",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

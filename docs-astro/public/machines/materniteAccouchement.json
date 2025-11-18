@@ -1,0 +1,33 @@
+{
+  "id": "materniteAccouchement",
+  "name": "Maternité et Accouchement",
+  "category": "health",
+  "description": "",
+  "states": [
+    "suiviPrenatal",
+    "GROSSESSE_CONFIRMEE",
+    "consultationsRegulieres",
+    "CONSULTATION_PRENATALE",
+    "TRAVAIL_DEBUTE",
+    "admissionMaternite",
+    "ADMISSION_MATERNITE",
+    "accouchement",
+    "ACCOUCHEMENT",
+    "sejourPostnatal",
+    "SURVEILLANCE_OK",
+    "sortieMaison",
+    "AUTORISER_SORTIE",
+    "termine"
+  ],
+  "events": [
+    "GROSSESSE_CONFIRMEE",
+    "CONSULTATION_PRENATALE",
+    "TRAVAIL_DEBUTE",
+    "ADMISSION_MATERNITE",
+    "ACCOUCHEMENT",
+    "SURVEILLANCE_OK",
+    "AUTORISER_SORTIE"
+  ],
+  "initial": "suiviPrenatal",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

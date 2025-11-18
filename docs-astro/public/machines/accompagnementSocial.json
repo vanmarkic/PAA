@@ -1,0 +1,65 @@
+{
+  "id": "accompagnementSocial",
+  "name": "Accompagnement Social (Social Support) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for social support services,",
+  "states": [
+    "attente",
+    "DEMANDER_ACCOMPAGNEMENT",
+    "evaluationSociale",
+    "EVALUATION_TERMINEE",
+    "elaborationPlan",
+    "ETABLIR_PLAN",
+    "validationPlan",
+    "PLAN_ACCEPTE",
+    "PLAN_REFUSE",
+    "accompagnementEnCours",
+    "RENDEZVOUS_EFFECTUE",
+    "OBJECTIF_ATTEINT",
+    "REEVALUER_SITUATION",
+    "ACCOMPAGNEMENT_TERMINE",
+    "SUSPENDRE_ACCOMPAGNEMENT",
+    "reevaluation",
+    "suspendu",
+    "REINITIALISER",
+    "accompagnementTermine"
+  ],
+  "events": [
+    "DEMANDER_ACCOMPAGNEMENT",
+    "REALISER_EVALUATION",
+    "EVALUATION_TERMINEE",
+    "ETABLIR_PLAN",
+    "PLAN_ACCEPTE",
+    "PLAN_REFUSE",
+    "RENDEZVOUS_EFFECTUE",
+    "OBJECTIF_ATTEINT",
+    "REEVALUER_SITUATION",
+    "SUSPENDRE_ACCOMPAGNEMENT",
+    "ACCOMPAGNEMENT_TERMINE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Intégration Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Accompagnement social - CPAS",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.mi-is.be/fr/cpas/accompagnement-social",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

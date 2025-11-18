@@ -1,0 +1,62 @@
+{
+  "id": "bonusLogement",
+  "name": "Machine d'état XState pour le Bonus logement",
+  "category": "general",
+  "description": "Cette machine d'état représente le flux de travail pour demander le bonus logement,",
+  "states": [
+    "inactif",
+    "DEMARRER_DEMANDE",
+    "verificationEligibilite",
+    "eligible",
+    "ACCEPTER_BONUS",
+    "REFUSER_BONUS",
+    "nonEligible",
+    "REINITIALISER",
+    "refuse",
+    "soumissionDocuments",
+    "DOCUMENTS_SOUMIS",
+    "validationDocuments",
+    "DOCUMENTS_VALIDES",
+    "DOCUMENTS_INVALIDES",
+    "bonusAccorde",
+    "BONUS_ACCORDE",
+    "actif",
+    "termine"
+  ],
+  "events": [
+    "DEMARRER_DEMANDE",
+    "ELIGIBILITE_VERIFIEE",
+    "ACCEPTER_BONUS",
+    "REFUSER_BONUS",
+    "DOCUMENTS_SOUMIS",
+    "DOCUMENTS_VALIDES",
+    "DOCUMENTS_INVALIDES",
+    "BONUS_ACCORDE",
+    "ANNEE_ECOULEE",
+    "REINITIALISER"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.934Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Région Flamande",
+        "authorityType": "VDAB",
+        "region": "flandre",
+        "title": "Woonbonus",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.wonenvlaanderen.be/woonbonus",
+        "language": "nl"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

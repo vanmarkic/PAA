@@ -1,0 +1,142 @@
+{
+  "id": "propriete-intellectuelle-recherche-anteriorites",
+  "name": "Recherche d'antériorités",
+  "description": "  En tant qu'innovateur ou entreprise\n  Je veux effectuer des recherches d'antériorités\n  Afin d'évaluer la brevetabilité ou la disponibilité d'une marque",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les bases de données sont accessibles"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les recherches peuvent être faites en ligne"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "une recherche professionnelle coûte 500-2000€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "77a5a22f-efb2-49e1-b5b7-14b63f40340d",
+      "name": "Recherche de brevets pour liberté d'exploitation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je développe un nouveau produit"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux éviter la contrefaçon"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'effectue une recherche FTO (Freedom to Operate)"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je consulte Espacenet et Google Patents"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'analyse les brevets en vigueur"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'identifie les risques potentiels"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux adapter ma conception si nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d69069ef-d956-485e-b67e-7751384d3f8e",
+      "name": "Recherche de marques similaires",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux déposer la marque \"ECOTEC\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "je dois vérifier sa disponibilité"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais une recherche d'antériorités"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je vérifie TMview et les registres nationaux"
+        },
+        {
+          "keyword": "Et",
+          "text": "je cherche les marques identiques et similaires"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'évalue le risque de confusion"
+        },
+        {
+          "keyword": "Et",
+          "text": "je vérifie aussi les noms commerciaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6239ba4d-da30-4ce6-9ac0-67410eecbdda",
+      "name": "Recherche de dessins et modèles",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé un nouveau design"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux vérifier sa nouveauté"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'effectue une recherche"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je consulte DesignView"
+        },
+        {
+          "keyword": "Et",
+          "text": "les catalogues commerciaux"
+        },
+        {
+          "keyword": "Et",
+          "text": "les salons professionnels antérieurs"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'évalue le caractère individuel"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

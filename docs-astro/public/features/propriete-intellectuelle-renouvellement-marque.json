@@ -1,0 +1,101 @@
+{
+  "id": "propriete-intellectuelle-renouvellement-marque",
+  "name": "Renouvellement de marque",
+  "description": "  En tant que titulaire de marque\n  Je veux renouveler mon enregistrement\n  Afin de maintenir mes droits exclusifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les marques durent 10 ans"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le renouvellement est indéfini"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les frais sont de 268€ pour le Benelux"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "fafacda6-1d90-438b-9446-014eef49bb14",
+      "name": "Renouvellement dans le délai normal",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque expire dans 3 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux la renouveler pour 10 ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renouvellement au BOIP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je paie 268€ pour 3 classes"
+        },
+        {
+          "keyword": "Et",
+          "text": "37€ par classe supplémentaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "le renouvellement prend effet à l'échéance"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois un certificat de renouvellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3938b9b7-2e67-4d47-9c0d-7a5f789e6193",
+      "name": "Renouvellement tardif avec surtaxe",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque a expiré il y a 2 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis dans le délai de grâce de 6 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renouvellement tardif"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je paie les frais normaux plus 25% de surtaxe"
+        },
+        {
+          "keyword": "Et",
+          "text": "mes droits sont restaurés rétroactivement"
+        },
+        {
+          "keyword": "Et",
+          "text": "les tiers de bonne foi sont protégés"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

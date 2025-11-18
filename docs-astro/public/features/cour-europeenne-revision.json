@@ -1,0 +1,162 @@
+{
+  "id": "cour-europeenne-revision",
+  "name": "Demande de révision d'un arrêt CEDH",
+  "description": "  En tant que partie à un arrêt définitif\n  Je veux demander la révision de l'arrêt\n  Afin de faire prendre en compte un fait nouveau décisif",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la révision est exceptionnelle (Règle 80)"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "un fait nouveau décisif doit être découvert"
+      },
+      {
+        "keyword": "Et que",
+        "text": "ce fait était inconnu lors de l'arrêt"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "fb8f3df9-2b38-4be1-823f-cbf85db9850c",
+      "name": "Découverte d'un document falsifié",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un arrêt a été rendu il y a 2 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un document clé était falsifié"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la falsification vient d'être prouvée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ce document était déterminant"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la révision"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais fournir la preuve de falsification"
+        },
+        {
+          "keyword": "Et",
+          "text": "expliquer pourquoi c'était impossible à découvrir avant"
+        },
+        {
+          "keyword": "Et",
+          "text": "démontrer l'impact sur l'arrêt"
+        },
+        {
+          "keyword": "Et",
+          "text": "respecter le délai de 6 mois depuis la découverte"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "db00d13f-bb43-4e4f-8fa3-8bdbebc2332a",
+      "name": "Témoin ayant menti sous serment",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un témoin clé a été condamné pour faux témoignage"
+        },
+        {
+          "keyword": "Et que",
+          "text": "son témoignage était crucial dans l'affaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la condamnation date d'il y a 3 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "cela change fondamentalement les faits"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je soumets la demande de révision"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais joindre le jugement pénal"
+        },
+        {
+          "keyword": "Et",
+          "text": "expliquer l'importance du témoignage"
+        },
+        {
+          "keyword": "Et",
+          "text": "démontrer qu'un arrêt différent aurait été rendu"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour devrait examiner la demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6a32b4f0-eb2f-4fbb-81d4-003f92b13e50",
+      "name": "Fait nouveau sans impact décisif",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un nouveau document a été trouvé"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il apporte des précisions mineures"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il ne change pas l'essence de l'affaire"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les violations resteraient établies"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'évalue la pertinence pour révision"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la demande ne devrait pas être recevable"
+        },
+        {
+          "keyword": "Et",
+          "text": "le fait ne serait pas considéré comme décisif"
+        },
+        {
+          "keyword": "Et",
+          "text": "la procédure normale resterait close"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

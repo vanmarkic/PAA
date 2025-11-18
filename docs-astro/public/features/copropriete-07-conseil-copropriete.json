@@ -1,0 +1,138 @@
+{
+  "id": "copropriete-07-conseil-copropriete",
+  "name": "Conseil de Copropriété",
+  "description": "  En tant que copropriété\n  Je veux élire et gérer un conseil de copropriété\n  Afin d'assister et contrôler le syndic",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la copropriété compte plus de 20 lots"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "2148e035-4c2a-4727-b7b5-b56bfdf6ac43",
+      "name": "Élection obligatoire du conseil",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la copropriété a 25 lots principaux"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "aucun conseil n'est en place"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG ordinaire se tient"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'élection du conseil est obligatoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "au moins 3 membres doivent être élus"
+        },
+        {
+          "keyword": "Et",
+          "text": "le mandat est de 3 ans maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c91e681a-8b1a-4795-bb9f-79312e4aff1c",
+      "name": "Missions du conseil de copropriété",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le conseil est élu"
+        },
+        {
+          "keyword": "Quand",
+          "text": "il exerce ses fonctions"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ses missions incluent:",
+          "dataTable": {
+            "headers": [
+              "Mission",
+              "Fréquence"
+            ],
+            "rows": [
+              {
+                "Mission": "Contrôler la gestion du syndic",
+                "Fréquence": "Continue"
+              },
+              {
+                "Mission": "Vérifier les comptes",
+                "Fréquence": "Trimestrielle"
+              },
+              {
+                "Mission": "Donner avis sur les travaux",
+                "Fréquence": "À la demande"
+              },
+              {
+                "Mission": "Assister aux AG",
+                "Fréquence": "Systématique"
+              },
+              {
+                "Mission": "Rapport annuel à l'AG",
+                "Fréquence": "Annuelle"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "10c1f220-7fe1-4a2a-9aaf-7a21f7955f83",
+      "name": "Réunion conseil avec le syndic",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le conseil demande une réunion"
+        },
+        {
+          "keyword": "Et que",
+          "text": "2 membres sur 3 le demandent"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la demande est formulée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic doit organiser la réunion sous 15 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "fournir les documents demandés"
+        },
+        {
+          "keyword": "Et",
+          "text": "un PV doit être rédigé"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

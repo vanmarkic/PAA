@@ -1,0 +1,58 @@
+{
+  "id": "accidentTravail",
+  "name": "Machine XState: Accident du travail",
+  "category": "health",
+  "description": "Base légale: Loi du 10 avril 1971 sur les accidents du travail",
+  "states": [
+    "declaration",
+    "definition_legale",
+    "types_accidents",
+    "delaiDeclaration",
+    "premiersGestes",
+    "DECLARER_ACCIDENT",
+    "expertise",
+    "indemnisation_temporaire",
+    "montants",
+    "plafonds2024",
+    "soins",
+    "obligations",
+    "indemnisation_permanente",
+    "tauxIPT",
+    "montantRente",
+    "indemnite_capital",
+    "droits_associes",
+    "cloture"
+  ],
+  "events": [
+    "DECLARER_ACCIDENT",
+    "EMPLOYEUR_DECLARE",
+    "MEDECIN_CONSTATE",
+    "INCAPACITE_TEMPORAIRE",
+    "INCAPACITE_PERMANENTE",
+    "GUERISON_SANS_SEQUELLES"
+  ],
+  "initial": "declaration",
+  "generated": "2025-11-18T10:17:36.937Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "FEDRIS",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Loi du 10 avril 1971 sur les accidents du travail",
+        "publicationDate": "1971-04-24T00:00:00.000Z",
+        "effectiveDate": "1971-07-01T00:00:00.000Z",
+        "officialUrl": "https://www.fedris.be/fr/professionnels-de-la-sante/accident-du-travail",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

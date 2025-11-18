@@ -1,0 +1,695 @@
+{
+  "id": "benefits-allocations-handicapes",
+  "name": "Allocations pour Personnes Handicapées",
+  "description": "  En tant que personne en situation de handicap\n  Je veux connaître mes droits aux allocations handicap (ARR et AI)\n  Afin d'obtenir une compensation financière pour ma perte d'autonomie",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les montants ARR 2024 (Allocation de Remplacement de Revenus) sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Montant annuel",
+            "Montant mensuel"
+          ],
+          "rows": [
+            {
+              "Catégorie": "Cat A (isolé)",
+              "Montant annuel": "10567.43€",
+              "Montant mensuel": "880.62€"
+            },
+            {
+              "Catégorie": "Cat B (cohabitant)",
+              "Montant annuel": "15851.18€",
+              "Montant mensuel": "1320.93€"
+            },
+            {
+              "Catégorie": "Cat C (famille à charge)",
+              "Montant annuel": "21421.87€",
+              "Montant mensuel": "1785.16€"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "les montants AI 2024 (Allocation d'Intégration) sont:",
+        "dataTable": {
+          "headers": [
+            "Catégorie",
+            "Points autonomie",
+            "Montant annuel",
+            "Montant mensuel"
+          ],
+          "rows": [
+            {
+              "Catégorie": "Cat I",
+              "Points autonomie": "7-8 points",
+              "Montant annuel": "1423.66€",
+              "Montant mensuel": "118.64€"
+            },
+            {
+              "Catégorie": "Cat II",
+              "Points autonomie": "9-11 points",
+              "Montant annuel": "5128.21€",
+              "Montant mensuel": "427.35€"
+            },
+            {
+              "Catégorie": "Cat III",
+              "Points autonomie": "12-14 points",
+              "Montant annuel": "8155.74€",
+              "Montant mensuel": "679.65€"
+            },
+            {
+              "Catégorie": "Cat IV",
+              "Points autonomie": "15-16 points",
+              "Montant annuel": "11852.46€",
+              "Montant mensuel": "987.71€"
+            },
+            {
+              "Catégorie": "Cat V",
+              "Points autonomie": "17-18 points",
+              "Montant annuel": "13437.21€",
+              "Montant mensuel": "1119.77€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "232ccd9e-60dc-4a20-aff8-73d536cbebda",
+      "name": "Personne isolée avec handicap catégorie III éligible",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne isolée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 35 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis Belge ou résident légal"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une évaluation médicale DG Handicap"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon score d'autonomie est de 13 points"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon revenu mensuel est de 400€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité aux allocations handicap"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais être éligible à l'AI catégorie III"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'AI devrait être 679.65€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux aussi prétendre à l'ARR catégorie A"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant combiné devrait prendre en compte mes revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f149bd26-92f1-4108-8bc4-c9cbf2dd4d5a",
+      "name": "Parent avec enfant handicapé demandant AI catégorie IV",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis parent d'un enfant handicapé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon enfant a 12 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous sommes résidents en Belgique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'évaluation médicale attribue 15 points d'autonomie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous avons une reconnaissance de handicap à 80%"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'allocation d'intégration"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'enfant devrait être éligible à l'AI catégorie IV"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'AI devrait être 987.71€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "la famille peut demander des allocations familiales majorées"
+        },
+        {
+          "keyword": "Et",
+          "text": "une carte de stationnement pour personne handicapée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0b9be641-8f97-49ec-866b-ad751f2db841",
+      "name": "Travailleur avec handicap cumulant salaire et ARR",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis travailleur à temps partiel"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai une reconnaissance de handicap"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 40 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en couple avec 1 enfant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon salaire mensuel est de 800€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai droit à l'ARR catégorie C"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mes allocations"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'ARR de base serait 1785.16€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "après déduction de mes revenus professionnels"
+        },
+        {
+          "keyword": "Et",
+          "text": "avec application de l'exonération partielle"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon ARR net devrait être calculé selon la formule officielle"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f853ed83-d59f-4e5c-9c0d-2d45ff25bdc7",
+      "name": "Personne âgée avec handicap tardif",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne de 67 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai développé un handicap après 65 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon score d'autonomie est de 10 points"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis isolé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie mon éligibilité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je ne suis pas éligible à l'ARR (limite d'âge 65 ans)"
+        },
+        {
+          "keyword": "Mais",
+          "text": "je suis éligible à l'AI catégorie II"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'AI devrait être 427.35€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux cumuler avec ma pension"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "468322a6-0df5-4add-9f1f-437fc069c588",
+      "name": "Jeune adulte handicapé sans revenus",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un jeune adulte de 21 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un handicap de naissance"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon score d'autonomie est de 18 points"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je vis chez mes parents"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai aucun revenu"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande les allocations"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je suis éligible à l'AI catégorie V (maximum)"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'AI devrait être 1119.77€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "je suis éligible à l'ARR catégorie B (cohabitant)"
+        },
+        {
+          "keyword": "Et",
+          "text": "le montant de l'ARR devrait être 1320.93€ par mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8f93b617-f297-4733-b231-2cae368b70ed",
+      "name": "Révision suite à aggravation du handicap",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je bénéficie de l'AI catégorie II"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon handicap s'est aggravé"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma nouvelle évaluation donne 16 points"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une révision"
+        },
+        {
+          "keyword": "Alors",
+          "text": "une nouvelle évaluation médicale est requise"
+        },
+        {
+          "keyword": "Et",
+          "text": "si confirmé, je passe en catégorie IV"
+        },
+        {
+          "keyword": "Et",
+          "text": "mon allocation passe de 427.35€ à 987.71€ par mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'augmentation est rétroactive à la date de demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5bf974c7-f52c-46ca-9378-c5049d10d843",
+      "name": "Cumul avec indemnités accident du travail",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je perçois une indemnité accident du travail"
+        },
+        {
+          "keyword": "Et que",
+          "text": "cette indemnité est de 600€ par mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 14 points d'autonomie (catégorie III)"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'AI"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'AI est cumulable avec l'indemnité accident"
+        },
+        {
+          "keyword": "Mais",
+          "text": "l'ARR sera réduite en fonction de l'indemnité"
+        },
+        {
+          "keyword": "Et",
+          "text": "un calcul complexe détermine le montant final"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "09febe65-216e-45c2-9316-175b3ddba52e",
+      "name": "Calcul AI selon points d'autonomie et revenus",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai <points> points d'autonomie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis dans la catégorie <categorie>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mes revenus mensuels sont de <revenus>€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mon AI"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant de base est <montant_base>€"
+        },
+        {
+          "keyword": "Et",
+          "text": "après déduction éventuelle, le montant net est <montant_net>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "points",
+            "categorie",
+            "revenus",
+            "montant_base",
+            "montant_net"
+          ],
+          "rows": [
+            {
+              "name": "373053d2-b8c1-4377-82e3-169a5e220151",
+              "values": {
+                "points": "7",
+                "categorie": "I",
+                "revenus": "0",
+                "montant_base": "118.64",
+                "montant_net": "118.64"
+              }
+            },
+            {
+              "name": "be550419-11be-4805-8ab2-135df875cc6b",
+              "values": {
+                "points": "10",
+                "categorie": "II",
+                "revenus": "200",
+                "montant_base": "427.35",
+                "montant_net": "427.35"
+              }
+            },
+            {
+              "name": "73eb226c-65ee-403f-b624-2fef95448fe5",
+              "values": {
+                "points": "13",
+                "categorie": "III",
+                "revenus": "500",
+                "montant_base": "679.65",
+                "montant_net": "679.65"
+              }
+            },
+            {
+              "name": "8a513fde-fbdd-489d-82d9-fdfc513ade69",
+              "values": {
+                "points": "15",
+                "categorie": "IV",
+                "revenus": "0",
+                "montant_base": "987.71",
+                "montant_net": "987.71"
+              }
+            },
+            {
+              "name": "ad8d1bff-bbd7-4536-9d74-123d52df143f",
+              "values": {
+                "points": "18",
+                "categorie": "V",
+                "revenus": "300",
+                "montant_base": "1119.77",
+                "montant_net": "1119.77"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "5bcc1ab0-d89e-44fd-8fd3-6d90b628ede0",
+      "name": "Procédure de demande et évaluation médicale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux demander les allocations handicap"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'introduis ma demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois remplir le formulaire en ligne sur handicap.belgium.be"
+        },
+        {
+          "keyword": "Et",
+          "text": "joindre les documents médicaux requis"
+        },
+        {
+          "keyword": "Et",
+          "text": "un médecin de la DG Handicap évalue mon dossier"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'évaluation porte sur 6 activités de la vie quotidienne:",
+          "dataTable": {
+            "headers": [
+              "Activité",
+              "Points max"
+            ],
+            "rows": [
+              {
+                "Activité": "Se déplacer",
+                "Points max": "3"
+              },
+              {
+                "Activité": "Préparer et manger",
+                "Points max": "3"
+              },
+              {
+                "Activité": "Hygiène personnelle",
+                "Points max": "3"
+              },
+              {
+                "Activité": "S'habiller",
+                "Points max": "3"
+              },
+              {
+                "Activité": "Dangers et surveillance",
+                "Points max": "3"
+              },
+              {
+                "Activité": "Communication",
+                "Points max": "3"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la décision est rendue dans les 6 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux contester via le tribunal du travail"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "7d2995fc-ae4c-4212-8d6c-769cd680b847",
+      "name": "Avantages sociaux liés au statut de handicap",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une reconnaissance de handicap"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je perçois l'AI ou l'ARR"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai droit aux avantages suivants:",
+          "dataTable": {
+            "headers": [
+              "Avantage",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Avantage": "Tarif social énergie",
+                "Description": "Réduction gaz et électricité"
+              },
+              {
+                "Avantage": "Carte de stationnement",
+                "Description": "Places réservées personnes handicapées"
+              },
+              {
+                "Avantage": "Réduction transports publics",
+                "Description": "Carte d'accompagnateur gratuit"
+              },
+              {
+                "Avantage": "Exonération précompte immobilier",
+                "Description": "Selon la région"
+              },
+              {
+                "Avantage": "Tarif téléphonique social",
+                "Description": "Réduction abonnement"
+              },
+              {
+                "Avantage": "BIM (intervention majorée)",
+                "Description": "Remboursements santé augmentés"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "ces avantages sont automatiques avec la reconnaissance"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "edc4286f-7e1d-493e-ab60-a2ecd9e89ca4",
+      "name": "Contrôle et obligations du bénéficiaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je perçois des allocations handicap"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les obligations suivantes:",
+          "dataTable": {
+            "headers": [
+              "Obligation",
+              "Détail"
+            ],
+            "rows": [
+              {
+                "Obligation": "Déclarer tout changement situation",
+                "Détail": "Dans les 30 jours"
+              },
+              {
+                "Obligation": "Déclarer revenus professionnels",
+                "Détail": "Immédiatement"
+              },
+              {
+                "Obligation": "Déclarer changement état civil",
+                "Détail": "Mariage, divorce, cohabitation"
+              },
+              {
+                "Obligation": "Se soumettre aux contrôles médicaux",
+                "Détail": "Si demandé par DG Handicap"
+              },
+              {
+                "Obligation": "Résider en Belgique",
+                "Détail": "Minimum 8 mois par an"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le non-respect peut entraîner suspension ou récupération"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.941Z"
+}

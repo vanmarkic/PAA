@@ -1,0 +1,65 @@
+{
+  "id": "tarifSocialEnergie",
+  "name": "Machine XState: Tarif social énergie (électricité et gaz)",
+  "category": "energy",
+  "description": "Base légale: AR du 29 mars 2012 fixant les règles de détermination du coût de l'application du tarif social",
+  "states": [
+    "information",
+    "definition",
+    "avantages",
+    "montants2024",
+    "verification",
+    "categories_automatiques",
+    "BIM",
+    "OMNIO",
+    "GRAPA",
+    "RIS",
+    "allocation_handicap",
+    "aide_sociale",
+    "enfants_charge",
+    "debiteur_energie",
+    "verification_automatique",
+    "octroi",
+    "application",
+    "facture",
+    "montant_tarif2024",
+    "electricite",
+    "gaz",
+    "duree",
+    "cumuls",
+    "reclamation",
+    "non_eligible",
+    "alternatives",
+    "economie_energie"
+  ],
+  "events": [
+    "VERIFIER_ELIGIBILITE",
+    "ELIGIBLE_AUTOMATIQUE",
+    "NON_ELIGIBLE",
+    "APPLIQUER_TARIF"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.929Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Économie",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Tarif social pour l'énergie",
+        "publicationDate": "2023-12-15T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://economie.fgov.be/fr/themes/energie/prix-de-lenergie/tarif-social-pour-lenergie",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

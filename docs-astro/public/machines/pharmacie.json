@@ -1,0 +1,28 @@
+{
+  "id": "pharmacie",
+  "name": "Pharmacie et Médicaments",
+  "category": "health",
+  "description": "",
+  "states": [
+    "inactif",
+    "PRESENTER_ORDONNANCE",
+    "validationOrdonnance",
+    "ORDONNANCE_VALIDE",
+    "verificationStock",
+    "MEDICAMENTS_DISPONIBLES",
+    "calculRemboursement",
+    "REMBOURSEMENT_CALCULE",
+    "delivrance",
+    "PAIEMENT_EFFECTUE",
+    "termine"
+  ],
+  "events": [
+    "PRESENTER_ORDONNANCE",
+    "ORDONNANCE_VALIDE",
+    "MEDICAMENTS_DISPONIBLES",
+    "REMBOURSEMENT_CALCULE",
+    "PAIEMENT_EFFECTUE"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

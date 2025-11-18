@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-protection-logiciel",
+  "name": "Protection juridique du logiciel",
+  "description": "  En tant que développeur ou éditeur\n  Je veux protéger mon logiciel\n  Afin d'empêcher la copie et le piratage",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le logiciel est protégé par droit d'auteur"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les brevets sont possibles si effet technique"
+      },
+      {
+        "keyword": "Et que",
+        "text": "plusieurs protections se cumulent"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "0deb264c-a6b9-48ae-925b-5bcb4ac60182",
+      "name": "Protection multiple d'un logiciel innovant",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai développé un logiciel avec algorithme novateur"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il produit un effet technique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'établis ma stratégie de protection"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je protège le code par droit d'auteur automatique"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux breveter la méthode technique"
+        },
+        {
+          "keyword": "Et",
+          "text": "protéger l'interface comme dessin"
+        },
+        {
+          "keyword": "Et",
+          "text": "garder les algorithmes clés secrets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "97bfe2b0-3f55-4fd5-b170-b9aa6d457d40",
+      "name": "Licence logiciel et protection",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je distribue mon logiciel"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux contrôler son usage"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je rédige la licence (EULA)"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'interdis la décompilation"
+        },
+        {
+          "keyword": "Et",
+          "text": "limite l'usage à un nombre de postes"
+        },
+        {
+          "keyword": "Et",
+          "text": "interdis la revente"
+        },
+        {
+          "keyword": "Et",
+          "text": "prévois des audits de conformité"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

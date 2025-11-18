@@ -1,0 +1,65 @@
+{
+  "id": "mediationDettes",
+  "name": "Médiation de Dettes (Debt Mediation) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for debt mediation services,",
+  "states": [
+    "attente",
+    "DEMANDER_MEDIATION",
+    "analyseDettes",
+    "DETTES_ANALYSEES",
+    "elaborationPlan",
+    "ETABLIR_PLAN",
+    "negociationCreanciers",
+    "CREANCIERS_ACCEPTENT",
+    "CREANCIERS_REFUSENT",
+    "homologationPlan",
+    "PLAN_HOMOLOGUE",
+    "planEnCours",
+    "MENSUALITE_PAYEE",
+    "MENSUALITE_IMPAYEE",
+    "PLAN_TERMINE",
+    "incidentPaiement",
+    "planReussi",
+    "REINITIALISER",
+    "echec"
+  ],
+  "events": [
+    "DEMANDER_MEDIATION",
+    "ANALYSER_DETTES",
+    "DETTES_ANALYSEES",
+    "ETABLIR_PLAN",
+    "NEGOCIER_CREANCIERS",
+    "CREANCIERS_ACCEPTENT",
+    "CREANCIERS_REFUSENT",
+    "PLAN_HOMOLOGUE",
+    "MENSUALITE_PAYEE",
+    "MENSUALITE_IMPAYEE",
+    "PLAN_TERMINE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Économie - Médiation de dettes",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Loi relative au règlement collectif de dettes",
+        "publicationDate": "1998-08-05T00:00:00.000Z",
+        "effectiveDate": "1999-01-01T00:00:00.000Z",
+        "officialUrl": "https://economie.fgov.be/fr/themes/financial-services/credit-et-endettement/mediation-de-dettes",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

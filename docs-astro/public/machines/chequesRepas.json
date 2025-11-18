@@ -1,0 +1,63 @@
+{
+  "id": "chequesRepas",
+  "name": "Machine d'état XState pour les Chèques repas",
+  "category": "general",
+  "description": "Cette machine d'état représente le flux de travail pour la gestion des chèques repas,",
+  "states": [
+    "inactif",
+    "INSCRIRE_EMPLOYEUR",
+    "inscriptionEnCours",
+    "INSCRIPTION_APPROUVEE",
+    "INSCRIPTION_REFUSEE",
+    "inscrit",
+    "AJOUTER_EMPLOYES",
+    "gestionEmployes",
+    "CALCULER_DISTRIBUTION",
+    "calculDistribution",
+    "DISTRIBUTION_CALCULEE",
+    "distributionPrete",
+    "VALIDER_DISTRIBUTION",
+    "distribution",
+    "CHEQUES_DISTRIBUES",
+    "actif",
+    "MOIS_SUIVANT",
+    "RESILIER",
+    "resilie"
+  ],
+  "events": [
+    "INSCRIRE_EMPLOYEUR",
+    "INSCRIPTION_APPROUVEE",
+    "INSCRIPTION_REFUSEE",
+    "AJOUTER_EMPLOYES",
+    "CALCULER_DISTRIBUTION",
+    "DISTRIBUTION_CALCULEE",
+    "VALIDER_DISTRIBUTION",
+    "CHEQUES_DISTRIBUES",
+    "MOIS_SUIVANT",
+    "RESILIER"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.935Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Finances",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Arrêté royal du 28 novembre 1969 - Chèques-repas",
+        "publicationDate": "1969-12-09T00:00:00.000Z",
+        "effectiveDate": "1969-12-01T00:00:00.000Z",
+        "officialUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1969112801",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

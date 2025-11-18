@@ -1,0 +1,308 @@
+{
+  "id": "cour-europeenne-reglement-amiable",
+  "name": "Règlement amiable devant la CEDH",
+  "description": "  En tant que partie à une procédure devant la CEDH\n  Je veux explorer la possibilité d'un règlement amiable\n  Afin de résoudre le litige sans jugement",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "l'article 39 de la Convention prévoit le règlement amiable"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la Cour se met à disposition des parties"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les négociations sont confidentielles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "4c685445-87f9-40a1-92e0-24e03cca3f84",
+      "name": "Proposition de règlement amiable par l'État",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma requête a été déclarée recevable"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'État reconnaît certaines défaillances"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il propose une compensation de 25000 euros"
+        },
+        {
+          "keyword": "Et",
+          "text": "des mesures pour éviter de futures violations"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'examine la proposition de règlement"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je devrais évaluer si elle couvre mon préjudice"
+        },
+        {
+          "keyword": "Et",
+          "text": "vérifier les garanties de non-répétition"
+        },
+        {
+          "keyword": "Et",
+          "text": "pouvoir négocier les termes"
+        },
+        {
+          "keyword": "Et",
+          "text": "avoir un délai de réflexion suffisant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "bb58da5e-1c90-4153-9621-957efa78eb77",
+      "name": "Négociation réussie avec engagement de réformes",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je dénonce des conditions de détention indignes"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'État accepte de reconnaître les violations"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il s'engage à rénover les prisons concernées"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il offre 15000 euros de compensation"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous finalisons le règlement amiable"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'accord devrait inclure un calendrier de réformes"
+        },
+        {
+          "keyword": "Et",
+          "text": "prévoir un mécanisme de suivi"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour devrait approuver l'accord"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'affaire serait rayée du rôle après exécution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "16ab28a7-fa29-40c8-9baf-f02e7054374e",
+      "name": "Échec des négociations - retour à la procédure",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "les négociations durent depuis 3 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'État refuse de reconnaître la violation"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il offre seulement 1000 euros sans admission"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est insuffisant par rapport au préjudice"
+        },
+        {
+          "keyword": "Quand",
+          "text": "les négociations échouent"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure contentieuse devrait reprendre"
+        },
+        {
+          "keyword": "Et",
+          "text": "la Cour devrait fixer un calendrier"
+        },
+        {
+          "keyword": "Et",
+          "text": "les éléments confidentiels resteraient protégés"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'affaire irait vers un jugement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a8857420-34eb-4d2c-97d8-5f967c937c8e",
+      "name": "Règlement incluant des mesures générales",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon cas révèle un problème systémique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "200 requêtes similaires sont pendantes"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'État propose une réforme législative"
+        },
+        {
+          "keyword": "Et",
+          "text": "une compensation pour tous les cas similaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous négocions un règlement pilote"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'accord devrait couvrir tous les cas similaires"
+        },
+        {
+          "keyword": "Et",
+          "text": "prévoir des mesures législatives précises"
+        },
+        {
+          "keyword": "Et",
+          "text": "établir un mécanisme d'indemnisation"
+        },
+        {
+          "keyword": "Et",
+          "text": "être soumis à la supervision du Comité des Ministres"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c88583f1-db5f-4ca1-b560-9ce7ae7fb13f",
+      "name": "Évaluation d'une offre de règlement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "on m'offre <montant> euros"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon préjudice est estimé à <prejudice> euros"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'État \"<reconnaissance>\""
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il propose \"<mesures>\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'évalue l'offre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'offre devrait être considérée comme \"<evaluation>\""
+        },
+        {
+          "keyword": "Et",
+          "text": "ma décision probable serait \"<decision>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "montant",
+            "prejudice",
+            "reconnaissance",
+            "mesures",
+            "evaluation",
+            "decision"
+          ],
+          "rows": [
+            {
+              "name": "585b4f38-1e33-48c6-8139-adf1e5110695",
+              "values": {
+                "montant": "20000",
+                "prejudice": "25000",
+                "reconnaissance": "reconnaît la violation",
+                "mesures": "réformes complètes",
+                "evaluation": "acceptable",
+                "decision": "accepter"
+              }
+            },
+            {
+              "name": "57ce3a31-3d11-4363-a479-48d614f0eb05",
+              "values": {
+                "montant": "5000",
+                "prejudice": "30000",
+                "reconnaissance": "nie la violation",
+                "mesures": "aucune",
+                "evaluation": "insuffisante",
+                "decision": "refuser"
+              }
+            },
+            {
+              "name": "6e4da52c-8d8e-45ff-aa9c-b94064f3ef2c",
+              "values": {
+                "montant": "30000",
+                "prejudice": "25000",
+                "reconnaissance": "reconnaît partiellement",
+                "mesures": "mesures limitées",
+                "evaluation": "correcte",
+                "decision": "négocier"
+              }
+            },
+            {
+              "name": "862422dd-2157-487e-bb38-cf815445e70f",
+              "values": {
+                "montant": "15000",
+                "prejudice": "15000",
+                "reconnaissance": "reconnaît totalement",
+                "mesures": "garanties non-répétition",
+                "evaluation": "bonne",
+                "decision": "accepter"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.947Z"
+}

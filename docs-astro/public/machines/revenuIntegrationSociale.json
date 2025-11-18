@@ -1,0 +1,38 @@
+{
+  "id": "revenuIntegrationSociale",
+  "name": "Machine XState: Revenu d'Intégration Sociale (RIS) - CPAS",
+  "category": "social",
+  "description": "Base légale: Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+  "states": [
+    "demande",
+    "conditions",
+    "exceptions_age",
+    "exceptions_disponibilite",
+    "enquete",
+    "verification",
+    "octroi",
+    "montants2024",
+    "cohabitant",
+    "isole",
+    "famille_a_charge",
+    "paiement",
+    "piis",
+    "obligation",
+    "contenu",
+    "revision",
+    "controles",
+    "sanctions",
+    "refus",
+    "recours",
+    "aide_equivalente"
+  ],
+  "events": [
+    "DEMANDER_RIS",
+    "ENQUETE_SOCIALE",
+    "DECISION_OCTROI",
+    "DECISION_REFUS",
+    "SIGNER_PIIS"
+  ],
+  "initial": "demande",
+  "generated": "2025-11-18T10:17:36.939Z"
+}

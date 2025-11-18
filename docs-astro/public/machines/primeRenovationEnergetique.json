@@ -1,0 +1,34 @@
+{
+  "id": "primeRenovationEnergetique",
+  "name": "Prime Rénovation Énergétique",
+  "category": "environment",
+  "description": "",
+  "states": [
+    "auditEnergetique",
+    "DEMANDER_AUDIT",
+    "realisationAudit",
+    "AUDIT_REALISE",
+    "depotDemande",
+    "DEMANDE_PRIME",
+    "analyseDemande",
+    "PRIME_ACCORDEE",
+    "realisationTravaux",
+    "TRAVAUX_REALISES",
+    "controle",
+    "CONTROLE_OK",
+    "paiement",
+    "PAIEMENT_EFFECTUE",
+    "termine"
+  ],
+  "events": [
+    "DEMANDER_AUDIT",
+    "AUDIT_REALISE",
+    "DEMANDE_PRIME",
+    "PRIME_ACCORDEE",
+    "TRAVAUX_REALISES",
+    "CONTROLE_OK",
+    "PAIEMENT_EFFECTUE"
+  ],
+  "initial": "auditEnergetique",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

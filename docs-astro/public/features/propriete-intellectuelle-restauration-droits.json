@@ -1,0 +1,101 @@
+{
+  "id": "propriete-intellectuelle-restauration-droits",
+  "name": "Restauration de droits IP perdus",
+  "description": "  En tant que titulaire négligent\n  Je veux restaurer mes droits expirés\n  Afin de récupérer ma protection IP",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "certains oublis peuvent être rattrapés"
+      },
+      {
+        "keyword": "Et que",
+        "text": "des délais de grâce existent"
+      },
+      {
+        "keyword": "Et que",
+        "text": "des surtaxes s'appliquent"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "7c856cd9-7991-4bd4-b56f-f89c9f56417a",
+      "name": "Restauration de brevet après non-paiement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai oublié de payer une annuité"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon brevet est déchu depuis 3 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la restauration"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois prouver le caractère non intentionnel"
+        },
+        {
+          "keyword": "Et",
+          "text": "payer l'annuité plus 50% de surtaxe"
+        },
+        {
+          "keyword": "Et",
+          "text": "soumettre la demande dans les 6 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "les droits des tiers sont préservés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d1811ff5-61c9-40be-a484-0b95f77656bf",
+      "name": "Poursuite de procédure après délai manqué",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai manqué un délai de réponse"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma demande est réputée retirée"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande la poursuite de procédure"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je paie la taxe de poursuite"
+        },
+        {
+          "keyword": "Et",
+          "text": "accomplis l'acte omis dans les 2 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "la procédure reprend son cours"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

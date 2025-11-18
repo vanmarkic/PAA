@@ -1,0 +1,666 @@
+{
+  "generated": "2025-11-18T10:17:36.955Z",
+  "total": 132,
+  "machines": [
+    {
+      "id": "aidesPACAgriculteur",
+      "name": "Aides PAC Agriculteur",
+      "category": "agriculture"
+    },
+    {
+      "id": "comptabiliteAnnuelle",
+      "name": "Comptes Annuels (dépôt BCE)",
+      "category": "commerce"
+    },
+    {
+      "id": "creationEntreprise",
+      "name": "Création d'Entreprise",
+      "category": "commerce"
+    },
+    {
+      "id": "declarationTVA",
+      "name": "Déclaration TVA",
+      "category": "commerce"
+    },
+    {
+      "id": "reglementCollectifDettes",
+      "name": "Machine XState: Règlement Collectif de Dettes (RCD)",
+      "category": "consumer"
+    },
+    {
+      "id": "reclamationConsommation",
+      "name": "Réclamation Consommation",
+      "category": "consumer"
+    },
+    {
+      "id": "assembleeGenerale",
+      "name": "Assemblée Générale Workflow",
+      "category": "copropriete"
+    },
+    {
+      "id": "chargesPayment",
+      "name": "Charges Payment Workflow",
+      "category": "copropriete"
+    },
+    {
+      "id": "echrApplication",
+      "name": "ECHR Individual Application Workflow",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "interimMeasures",
+      "name": "ECHR Rule 39 Interim Measures Workflow",
+      "category": "cour-europeenne"
+    },
+    {
+      "id": "subventionAssociationCulturelle",
+      "name": "Subvention Association Culturelle",
+      "category": "culture"
+    },
+    {
+      "id": "inscriptionElectorale",
+      "name": "Electoral Registration Workflow",
+      "category": "democratie"
+    },
+    {
+      "id": "petition",
+      "name": "Petition Lifecycle Workflow",
+      "category": "democratie"
+    },
+    {
+      "id": "protectionDonneesPersonnellesRGPD",
+      "name": "Protection Données Personnelles - RGPD",
+      "category": "digital"
+    },
+    {
+      "id": "identityDocument",
+      "name": "Identity Document Application Workflow",
+      "category": "droits-civils"
+    },
+    {
+      "id": "marriage",
+      "name": "Marriage Procedure Workflow",
+      "category": "droits-civils"
+    },
+    {
+      "id": "primeEnergie",
+      "name": "Energy Subsidy Application Workflow",
+      "category": "ecologie"
+    },
+    {
+      "id": "permisEnvironnement",
+      "name": "Environmental Permit Application Workflow",
+      "category": "ecologie"
+    },
+    {
+      "id": "allocationEtudes",
+      "name": "Allocation d'Études (Bourse)",
+      "category": "education"
+    },
+    {
+      "id": "inscriptionEnseignementSuperieur",
+      "name": "Inscription Enseignement Supérieur",
+      "category": "education"
+    },
+    {
+      "id": "compteurBudgetElectricite",
+      "name": "Machine XState: Compteur à budget électricité/gaz",
+      "category": "energy"
+    },
+    {
+      "id": "tarifSocialEnergie",
+      "name": "Machine XState: Tarif social énergie (électricité et gaz)",
+      "category": "energy"
+    },
+    {
+      "id": "certificatPEB",
+      "name": "Certificat PEB (Performance Énergétique Bâtiment)",
+      "category": "environment"
+    },
+    {
+      "id": "permisEnvironnementBase",
+      "name": "Permis d'Environnement",
+      "category": "environment"
+    },
+    {
+      "id": "primeRenovationEnergetique",
+      "name": "Prime Rénovation Énergétique",
+      "category": "environment"
+    },
+    {
+      "id": "asylumApplication",
+      "name": "Asylum Application Workflow in Belgium",
+      "category": "etrangers"
+    },
+    {
+      "id": "residencePermit",
+      "name": "Residence Permit Application Workflow",
+      "category": "etrangers"
+    },
+    {
+      "id": "congeParental",
+      "name": "Machine XState: Congé parental",
+      "category": "family"
+    },
+    {
+      "id": "reconnaissanceEnfant",
+      "name": "Machine XState: Reconnaissance d'enfant",
+      "category": "family"
+    },
+    {
+      "id": "droitsDonation",
+      "name": "Machine XState: Droits de donation",
+      "category": "fiscal"
+    },
+    {
+      "id": "droitsSuccession",
+      "name": "Machine XState: Droits de succession",
+      "category": "fiscal"
+    },
+    {
+      "id": "accompagnementSocial",
+      "name": "Accompagnement Social (Social Support) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "aideMobilite",
+      "name": "Aide à la Mobilité (Mobility Assistance) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "aideAlimentaire",
+      "name": "Aide Alimentaire (Food Assistance) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "aideSansAbri",
+      "name": "Aide aux Sans-Abri (Homeless Assistance) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "aideVictimes",
+      "name": "Aide aux Victimes (Victim Assistance) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "aideMenagere",
+      "name": "Aide Ménagère (Home Help) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "banqueAlimentaire",
+      "name": "Banque Alimentaire (Food Bank) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "budgetEnergetique",
+      "name": "Budget Énergétique (Energy Budget) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "centreAccueil",
+      "name": "Centre d'Accueil (Reception Center) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "disEligibility",
+      "name": "Droit à l'Intégration Sociale (DIS) Eligibility",
+      "category": "general"
+    },
+    {
+      "id": "fondsCreances",
+      "name": "Fonds de Créances (Claims Fund) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "formationProfessionnelle",
+      "name": "Formation Professionnelle (Professional Training) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "inscriptionEcole",
+      "name": "Inscription École (School Enrollment) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "insertionProfessionnelle",
+      "name": "Insertion Professionnelle (Professional Integration) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "logementSocial",
+      "name": "Logement Social (Social Housing) Application Workflow",
+      "category": "general"
+    },
+    {
+      "id": "abattementSuccession",
+      "name": "Machine d'état XState pour l'Abattement succession",
+      "category": "general"
+    },
+    {
+      "id": "exonerationPlusValue",
+      "name": "Machine d'état XState pour l'Exonération plus-value",
+      "category": "general"
+    },
+    {
+      "id": "exonerationPrecompte",
+      "name": "Machine d'état XState pour l'Exonération précompte immobilier",
+      "category": "general"
+    },
+    {
+      "id": "exonerationRevenusMobiliers",
+      "name": "Machine d'état XState pour l'Exonération revenus mobiliers",
+      "category": "general"
+    },
+    {
+      "id": "deductionDons",
+      "name": "Machine d'état XState pour la Déduction dons",
+      "category": "general"
+    },
+    {
+      "id": "deductionEmpruntHypothecaire",
+      "name": "Machine d'état XState pour la Déduction emprunt hypothécaire",
+      "category": "general"
+    },
+    {
+      "id": "deductionHabitation",
+      "name": "Machine d'état XState pour la Déduction fiscale habitation",
+      "category": "general"
+    },
+    {
+      "id": "deductionFraisGarde",
+      "name": "Machine d'état XState pour la Déduction frais de garde",
+      "category": "general"
+    },
+    {
+      "id": "deductionInvestissement",
+      "name": "Machine d'état XState pour la Déduction investissement",
+      "category": "general"
+    },
+    {
+      "id": "deductionIsolation",
+      "name": "Machine d'état XState pour la Déduction isolation",
+      "category": "general"
+    },
+    {
+      "id": "deductionVehiculeElectrique",
+      "name": "Machine d'état XState pour la Déduction véhicule électrique",
+      "category": "general"
+    },
+    {
+      "id": "primeRenovation",
+      "name": "Machine d'état XState pour la Prime rénovation",
+      "category": "general"
+    },
+    {
+      "id": "reductionEpargnePension",
+      "name": "Machine d'état XState pour la Réduction d'impôt épargne-pension",
+      "category": "general"
+    },
+    {
+      "id": "renteAlimentaire",
+      "name": "Machine d'état XState pour la Rente alimentaire",
+      "category": "general"
+    },
+    {
+      "id": "tvaReduite",
+      "name": "Machine d'état XState pour la TVA réduite",
+      "category": "general"
+    },
+    {
+      "id": "bonusLogement",
+      "name": "Machine d'état XState pour le Bonus logement",
+      "category": "general"
+    },
+    {
+      "id": "creditImpot",
+      "name": "Machine d'état XState pour le Crédit d'impôt",
+      "category": "general"
+    },
+    {
+      "id": "creditImpotInvestissementDurable",
+      "name": "Machine d'état XState pour le Crédit d'impôt investissement durable",
+      "category": "general"
+    },
+    {
+      "id": "creditImpotServiceLocal",
+      "name": "Machine d'état XState pour le Crédit d'impôt service local",
+      "category": "general"
+    },
+    {
+      "id": "quotientConjugal",
+      "name": "Machine d'état XState pour le Quotient conjugal",
+      "category": "general"
+    },
+    {
+      "id": "avantagesNature",
+      "name": "Machine d'état XState pour les Avantages de toute nature",
+      "category": "general"
+    },
+    {
+      "id": "chequesRepas",
+      "name": "Machine d'état XState pour les Chèques repas",
+      "category": "general"
+    },
+    {
+      "id": "droitsDonationReduits",
+      "name": "Machine d'état XState pour les Droits de donation réduits",
+      "category": "general"
+    },
+    {
+      "id": "ecoCheque",
+      "name": "Machine d'état XState pour les Éco-chèques",
+      "category": "general"
+    },
+    {
+      "id": "fraisProfessionnels",
+      "name": "Machine d'état XState pour les Frais professionnels",
+      "category": "general"
+    },
+    {
+      "id": "mediationDettes",
+      "name": "Médiation de Dettes (Debt Mediation) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "protectionEnfance",
+      "name": "Protection de l'Enfance (Child Protection) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "protectionJuridique",
+      "name": "Protection Juridique (Legal Protection) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "repasScolairesGratuits",
+      "name": "Repas Scolaires Gratuits (Free School Meals) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "restaurantsSociaux",
+      "name": "Restaurants Sociaux (Social Restaurants) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "risApplication",
+      "name": "RIS Application Workflow",
+      "category": "general"
+    },
+    {
+      "id": "mediationFamiliale",
+      "name": "Service de Médiation Familiale (Family Mediation Service) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "repasDomicile",
+      "name": "Service de Repas à Domicile (Meal Delivery Service) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "servicePublicEmploi",
+      "name": "Service Public Emploi (Public Employment Service) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "soinsSanteMentale",
+      "name": "Soins de Santé Mentale (Mental Health Care) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "teleAssistance",
+      "name": "Télé-Assistance (Tele-Assistance) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "legalConversion",
+      "name": "the Legal Text Conversion Pipeline",
+      "category": "general"
+    },
+    {
+      "id": "transportScolaire",
+      "name": "Transport Scolaire (School Transport) Workflow",
+      "category": "general"
+    },
+    {
+      "id": "allocationIntegration",
+      "name": "Machine XState: Allocation d'Intégration (AI)",
+      "category": "handicap"
+    },
+    {
+      "id": "allocationRemplacementRevenus",
+      "name": "Machine XState: Allocation de Remplacement de Revenus (ARR)",
+      "category": "handicap"
+    },
+    {
+      "id": "carteStationnementHandicap",
+      "name": "Machine XState: Demande de carte de stationnement pour personnes handicapées",
+      "category": "handicap"
+    },
+    {
+      "id": "chirurgieAmbulatoire",
+      "name": "Chirurgie Ambulatoire",
+      "category": "health"
+    },
+    {
+      "id": "ophtalmologieConsultation",
+      "name": "Consultation Ophtalmologie",
+      "category": "health"
+    },
+    {
+      "id": "hospitalisation",
+      "name": "Hospitalisation",
+      "category": "health"
+    },
+    {
+      "id": "kinesitherapie",
+      "name": "Kinésithérapie",
+      "category": "health"
+    },
+    {
+      "id": "accidentTravail",
+      "name": "Machine XState: Accident du travail",
+      "category": "health"
+    },
+    {
+      "id": "maladieProfessionnelle",
+      "name": "Machine XState: Maladie professionnelle",
+      "category": "health"
+    },
+    {
+      "id": "materniteAccouchement",
+      "name": "Maternité et Accouchement",
+      "category": "health"
+    },
+    {
+      "id": "pharmacie",
+      "name": "Pharmacie et Médicaments",
+      "category": "health"
+    },
+    {
+      "id": "dentisteSoins",
+      "name": "Soins Dentaires",
+      "category": "health"
+    },
+    {
+      "id": "urgencesHospitalieres",
+      "name": "Urgences Hospitalières",
+      "category": "health"
+    },
+    {
+      "id": "vaccinationEnfants",
+      "name": "Vaccination Enfants",
+      "category": "health"
+    },
+    {
+      "id": "expulsionDomicile",
+      "name": "Expulsion du Domicile",
+      "category": "housing"
+    },
+    {
+      "id": "logementInsalubre",
+      "name": "Logement Insalubre - Procédure",
+      "category": "housing"
+    },
+    {
+      "id": "agenceImmobiliereSociale",
+      "name": "Machine XState: Location via Agence Immobilière Sociale (AIS)",
+      "category": "housing"
+    },
+    {
+      "id": "regroupementFamilial",
+      "name": "Regroupement Familial",
+      "category": "immigration"
+    },
+    {
+      "id": "titreSejourEtranger",
+      "name": "Titre de Séjour Étranger",
+      "category": "immigration"
+    },
+    {
+      "id": "propertyAcquisition",
+      "name": "Property Acquisition Workflow",
+      "category": "immobilier"
+    },
+    {
+      "id": "rentalApplication",
+      "name": "Rental Application and Tenancy Workflow",
+      "category": "immobilier"
+    },
+    {
+      "id": "permitApplication",
+      "name": "Urban Planning Permit Application Workflow",
+      "category": "immobilier"
+    },
+    {
+      "id": "pensionAlimentaireDemande",
+      "name": "Demande Pension Alimentaire",
+      "category": "justice"
+    },
+    {
+      "id": "gardeEnfantsLitige",
+      "name": "Litige Garde des Enfants",
+      "category": "justice"
+    },
+    {
+      "id": "administrationProvisoire",
+      "name": "Machine XState: Administration provisoire (mesure de protection)",
+      "category": "justice"
+    },
+    {
+      "id": "adoptionProcedure",
+      "name": "Procédure d'Adoption",
+      "category": "justice"
+    },
+    {
+      "id": "procedureDivorce",
+      "name": "Procédure de Divorce",
+      "category": "justice"
+    },
+    {
+      "id": "parcoursCreationEntreprise",
+      "name": "META MACHINE - Parcours Citoyen : Création d'Entreprise",
+      "category": "meta"
+    },
+    {
+      "id": "parcoursDemenagement",
+      "name": "META MACHINE - Parcours Citoyen : Déménagement",
+      "category": "meta"
+    },
+    {
+      "id": "parcoursNaissanceEnfant",
+      "name": "META MACHINE - Parcours Citoyen : Naissance d'un Enfant",
+      "category": "meta"
+    },
+    {
+      "id": "parcoursDemandeurEmploi",
+      "name": "META MACHINE - Parcours Citoyen : Perte d'Emploi et Recherche",
+      "category": "meta"
+    },
+    {
+      "id": "reductionTransportPublic",
+      "name": "Machine XState: Réductions transport public",
+      "category": "mobility"
+    },
+    {
+      "id": "grapa",
+      "name": "Machine XState: GRAPA - Garantie de Revenus aux Personnes Âgées",
+      "category": "pension"
+    },
+    {
+      "id": "pensionAnticipee",
+      "name": "Machine XState: Pension anticipée (retraite avant âge légal)",
+      "category": "pension"
+    },
+    {
+      "id": "pensionSurvie",
+      "name": "Machine XState: Pension de survie",
+      "category": "pension"
+    },
+    {
+      "id": "patentApplication",
+      "name": "Patent Application Workflow",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "trademarkRegistration",
+      "name": "Trademark Registration Workflow",
+      "category": "propriete-intellectuelle"
+    },
+    {
+      "id": "conseilEtatAnnulation",
+      "name": "Council of State Annulment Procedure",
+      "category": "recours-etat"
+    },
+    {
+      "id": "ombudsmanProcedure",
+      "name": "Ombudsman/Mediator Procedures",
+      "category": "recours-etat"
+    },
+    {
+      "id": "taxAppeal",
+      "name": "Tax Appeal Procedures",
+      "category": "recours-etat"
+    },
+    {
+      "id": "installationAlarmeHabitation",
+      "name": "Installation Alarme Habitation",
+      "category": "security"
+    },
+    {
+      "id": "affiliationCaisseSociale",
+      "name": "Machine XState: Affiliation caisse sociale indépendant",
+      "category": "selfemployed"
+    },
+    {
+      "id": "cotisationsSocialesIndependant",
+      "name": "Machine XState: Cotisations sociales indépendant",
+      "category": "selfemployed"
+    },
+    {
+      "id": "revenuIntegrationSociale",
+      "name": "Machine XState: Revenu d'Intégration Sociale (RIS) - CPAS",
+      "category": "social"
+    },
+    {
+      "id": "artistGrant",
+      "name": "Artist Grant Application Workflow",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "artistStatus",
+      "name": "Artist Status Application Workflow",
+      "category": "statut-artiste"
+    },
+    {
+      "id": "permisConduire",
+      "name": "Permis de Conduire",
+      "category": "transport"
+    },
+    {
+      "id": "permisUrbanisme",
+      "name": "Machine XState: Permis d'urbanisme",
+      "category": "urbanisme"
+    }
+  ]
+}

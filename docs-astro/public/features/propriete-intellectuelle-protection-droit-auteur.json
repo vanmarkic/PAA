@@ -1,0 +1,212 @@
+{
+  "id": "propriete-intellectuelle-protection-droit-auteur",
+  "name": "Protection par droit d'auteur",
+  "description": "  En tant que créateur d'œuvre originale\n  Je veux protéger mes droits d'auteur\n  Afin de contrôler l'exploitation de mon œuvre pendant 70 ans après mon décès",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le droit d'auteur naît automatiquement"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "aucun dépôt n'est obligatoire en Belgique"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la protection dure 70 ans post mortem auctoris"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "4f33141a-ad58-4a05-b921-83d4f02363b1",
+      "name": "Protection automatique d'une œuvre littéraire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai écrit un roman original"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'œuvre présente une forme d'expression originale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai la preuve de la date de création"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je publie mon œuvre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mes droits d'auteur sont automatiquement protégés"
+        },
+        {
+          "keyword": "Et",
+          "text": "je détiens les droits moraux et patrimoniaux"
+        },
+        {
+          "keyword": "Et",
+          "text": "la protection dure jusqu'à 70 ans après mon décès"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "83595079-cebd-49fb-a7d5-a683cb93fcce",
+      "name": "Dépôt i-DEPOT pour preuve de création",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé une nouvelle œuvre musicale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux une preuve datée de création"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais un dépôt i-DEPOT au BOIP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je paie 45€ pour 5 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois une preuve horodatée"
+        },
+        {
+          "keyword": "Et",
+          "text": "cela facilite la preuve en cas de litige"
+        },
+        {
+          "keyword": "Mais",
+          "text": "cela ne crée pas le droit d'auteur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "082b4cf9-8f20-487d-a90f-140508d0292f",
+      "name": "Œuvre créée par un employé",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis salarié développeur"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai créé un logiciel dans le cadre de mon travail"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon contrat prévoit une cession des droits"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'œuvre est achevée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les droits patrimoniaux appartiennent à l'employeur"
+        },
+        {
+          "keyword": "Mais",
+          "text": "je conserve mes droits moraux"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois être cité comme auteur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "f56a302b-e09e-4028-b068-f3d14285d26c",
+      "name": "Œuvre de collaboration à plusieurs auteurs",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "nous sommes 3 co-auteurs d'une BD"
+        },
+        {
+          "keyword": "Et que",
+          "text": "chacun a contribué de manière créative"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'œuvre est publiée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous sommes tous titulaires des droits"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'exploitation nécessite l'accord de tous"
+        },
+        {
+          "keyword": "Et",
+          "text": "la protection dure 70 ans après le décès du dernier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8e6248c7-68fc-4434-982d-079e72ada318",
+      "name": "Protection d'une base de données",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé une base de données"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle présente une structure originale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai investi substantiellement dans sa constitution"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je revendique la protection"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai le droit d'auteur sur la structure"
+        },
+        {
+          "keyword": "Et",
+          "text": "le droit sui generis sur le contenu"
+        },
+        {
+          "keyword": "Et",
+          "text": "la protection sui generis dure 15 ans"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

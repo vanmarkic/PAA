@@ -1,0 +1,179 @@
+{
+  "id": "propriete-intellectuelle-opposition-marque",
+  "name": "Opposition à une marque",
+  "description": "  En tant que titulaire de marque antérieure\n  Je veux m'opposer à une nouvelle marque similaire\n  Afin de protéger mes droits exclusifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le délai d'opposition est de 2 mois"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les frais d'opposition sont de 1000€"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la procédure est contradictoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "feacdd5f-50b4-47c5-9e53-924f8da616b5",
+      "name": "Opposition fondée sur marque identique",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je possède la marque \"TECHPRO\" depuis 2020"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une nouvelle marque \"TECHPRO\" est publiée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les produits sont identiques ou similaires"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je dépose mon opposition dans les 2 mois"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mon opposition est recevable"
+        },
+        {
+          "keyword": "Et",
+          "text": "le déposant est notifié"
+        },
+        {
+          "keyword": "Et",
+          "text": "une phase contradictoire commence"
+        },
+        {
+          "keyword": "Et",
+          "text": "la décision intervient dans 6-12 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d0771da0-58d9-4ebd-87e1-3d3b549c03cc",
+      "name": "Opposition basée sur risque de confusion",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque est \"NOVATEL\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "la nouvelle marque est \"NOVOTEL\""
+        },
+        {
+          "keyword": "Et que",
+          "text": "les services sont similaires"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il existe un risque de confusion"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je forme opposition avec preuves d'usage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois prouver l'usage sérieux de ma marque"
+        },
+        {
+          "keyword": "Et",
+          "text": "démontrer le risque de confusion"
+        },
+        {
+          "keyword": "Et",
+          "text": "fournir une argumentation juridique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e1d78fb5-9ed3-42e0-a5f7-82116dcd1adc",
+      "name": "Défense contre une opposition",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une opposition est formée contre ma marque"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 2 mois pour répondre"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare ma défense"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux contester l'usage de la marque antérieure"
+        },
+        {
+          "keyword": "Et",
+          "text": "argumenter sur l'absence de similarité"
+        },
+        {
+          "keyword": "Et",
+          "text": "demander des preuves d'usage à l'opposant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8f4c54e8-ad55-4743-b06c-7d1711770464",
+      "name": "Règlement amiable pendant l'opposition",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une opposition est en cours"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les parties souhaitent négocier"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous demandons une suspension \"cooling-off\""
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure est suspendue 2 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous pouvons négocier un accord de coexistence"
+        },
+        {
+          "keyword": "Et",
+          "text": "éviter une décision défavorable"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.953Z"
+}

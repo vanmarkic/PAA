@@ -1,0 +1,199 @@
+{
+  "id": "propriete-intellectuelle-depot-dessin-modele",
+  "name": "Dépôt de dessin ou modèle",
+  "description": "  En tant que designer ou entreprise\n  Je veux protéger l'apparence de mes produits\n  Afin d'empêcher la copie pendant 25 ans maximum",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les frais de dépôt de dessin/modèle 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type",
+            "Montant"
+          ],
+          "rows": [
+            {
+              "Type": "Dépôt unique",
+              "Montant": "140€"
+            },
+            {
+              "Type": "Dépôt multiple",
+              "Montant": "366€"
+            },
+            {
+              "Type": "Publication",
+              "Montant": "127€"
+            },
+            {
+              "Type": "Renouvellement 1",
+              "Montant": "94€"
+            },
+            {
+              "Type": "Renouvellement 5",
+              "Montant": "198€"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "30906fc1-59a1-4bfb-b577-0586f6361609",
+      "name": "Dépôt de dessin nouveau et ayant caractère individuel",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé un nouveau design de chaise"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le design est nouveau (non divulgué)"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il a un caractère individuel"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai préparé 7 vues du produit"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je dépose ma demande au BOIP"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande est enregistrée"
+        },
+        {
+          "keyword": "Et",
+          "text": "je paie 140€ pour un dépôt unique"
+        },
+        {
+          "keyword": "Et",
+          "text": "la protection est valable 5 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux renouveler jusqu'à 25 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "3e413a5a-c514-4836-9fef-4c89ab80c9ba",
+      "name": "Dépôt multiple pour une collection",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai créé une collection de 10 designs"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "ils appartiennent à la même classe de Locarno"
+        },
+        {
+          "keyword": "Et que",
+          "text": "tous sont nouveaux et individuels"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je fais un dépôt multiple"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je paie 366€ pour l'ensemble"
+        },
+        {
+          "keyword": "Et",
+          "text": "tous les designs sont protégés"
+        },
+        {
+          "keyword": "Et",
+          "text": "c'est plus économique qu'un dépôt individuel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "28e1a4c1-4a47-4a43-9e88-025637c59a27",
+      "name": "Ajournement de publication pour confidentialité",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon design n'est pas encore sur le marché"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux garder la confidentialité"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'ajournement de publication"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la publication peut être différée jusqu'à 30 mois"
+        },
+        {
+          "keyword": "Et",
+          "text": "je paie les frais d'ajournement"
+        },
+        {
+          "keyword": "Et",
+          "text": "le design reste secret pendant cette période"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "131ccfc0-d396-4d63-bf81-6001e282b258",
+      "name": "Protection communautaire non enregistrée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai divulgué mon design dans l'UE"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas fait de dépôt formel"
+        },
+        {
+          "keyword": "Quand",
+          "text": "mon design est copié"
+        },
+        {
+          "keyword": "Alors",
+          "text": "j'ai une protection de 3 ans"
+        },
+        {
+          "keyword": "Mais",
+          "text": "seulement contre la copie intentionnelle"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois prouver la divulgation et la copie"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

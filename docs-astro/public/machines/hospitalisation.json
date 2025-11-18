@@ -1,0 +1,28 @@
+{
+  "id": "hospitalisation",
+  "name": "Hospitalisation",
+  "category": "health",
+  "description": "",
+  "states": [
+    "inactif",
+    "ADMISSION",
+    "admission",
+    "TRAITEMENT_DEBUTE",
+    "hospitalise",
+    "TRAITEMENT_TERMINE",
+    "facturation",
+    "FACTURE_GENEREE",
+    "remboursement",
+    "SORTIE",
+    "termine"
+  ],
+  "events": [
+    "ADMISSION",
+    "TRAITEMENT_DEBUTE",
+    "TRAITEMENT_TERMINE",
+    "FACTURE_GENEREE",
+    "SORTIE"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

@@ -1,0 +1,175 @@
+{
+  "id": "copropriete-27-registre-copropriete",
+  "name": "Tenue du Registre de Copropriété",
+  "description": "  En tant que syndic\n  Je veux tenir le registre de copropriété\n  Afin de documenter toutes les décisions et événements",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le registre est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "6fa74e3f-edaf-4634-9fb3-a3f8a95cc8f1",
+      "name": "Contenu obligatoire du registre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je constitue le registre"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie la complétude"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit contenir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Conservation"
+            ],
+            "rows": [
+              {
+                "Document": "Acte de base",
+                "Conservation": "Permanent"
+              },
+              {
+                "Document": "Règlement ordre intérieur",
+                "Conservation": "Version actuelle"
+              },
+              {
+                "Document": "PV assemblées générales",
+                "Conservation": "10 ans minimum"
+              },
+              {
+                "Document": "Contrats en cours",
+                "Conservation": "Durée + 5 ans"
+              },
+              {
+                "Document": "Plans techniques",
+                "Conservation": "Permanent"
+              },
+              {
+                "Document": "Décisions syndic",
+                "Conservation": "5 ans"
+              },
+              {
+                "Document": "Correspondances importantes",
+                "Conservation": "5 ans"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "7b82f3b3-4e38-49d5-81e4-c40038822b69",
+      "name": "Consultation du registre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un copropriétaire demande consultation"
+        },
+        {
+          "keyword": "Quand",
+          "text": "il formule sa demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic doit:",
+          "dataTable": {
+            "headers": [
+              "Action",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Action": "Fixer rendez-vous",
+                "Délai": "15 jours"
+              },
+              {
+                "Action": "Permettre consultation",
+                "Délai": "Sur place"
+              },
+              {
+                "Action": "Autoriser copies",
+                "Délai": "Aux frais demandeur"
+              },
+              {
+                "Action": "Respecter RGPD",
+                "Délai": "Données personnelles"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5e67df15-d6dc-421c-9498-c0e540169f25",
+      "name": "Transmission registre nouveau syndic",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un nouveau syndic est désigné"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la passation s'effectue"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la transmission comprend:",
+          "dataTable": {
+            "headers": [
+              "Élément",
+              "Format",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Élément": "Registre complet",
+                "Format": "Original",
+                "Délai": "30 jours"
+              },
+              {
+                "Élément": "Archives numériques",
+                "Format": "Fichiers",
+                "Délai": "30 jours"
+              },
+              {
+                "Élément": "Inventaire détaillé",
+                "Format": "Écrit signé",
+                "Délai": "Remise"
+              },
+              {
+                "Élément": "Clés et codes",
+                "Format": "Physique",
+                "Délai": "Immédiat"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

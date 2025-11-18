@@ -1,0 +1,65 @@
+{
+  "id": "soinsSanteMentale",
+  "name": "Soins de Santé Mentale (Mental Health Care) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for accessing mental health care services,",
+  "states": [
+    "attente",
+    "DEMANDER_SOINS",
+    "evaluationInitiale",
+    "EVALUATION_TERMINEE",
+    "CRISE_URGENCE",
+    "interventionCrise",
+    "CRISE_RESOLUE",
+    "elaborationPlanTraitement",
+    "ETABLIR_PLAN",
+    "traitementEnCours",
+    "SEANCE_EFFECTUEE",
+    "EVALUER_PROGRESSION",
+    "TRAITEMENT_TERMINE",
+    "evaluationProgression",
+    "AMELIORATION_OBSERVEE",
+    "AJUSTER_TRAITEMENT",
+    "traitementTermine",
+    "REINITIALISER"
+  ],
+  "events": [
+    "DEMANDER_SOINS",
+    "EVALUATION_PSYCHIATRIQUE",
+    "EVALUATION_TERMINEE",
+    "ETABLIR_PLAN",
+    "COMMENCER_TRAITEMENT",
+    "SEANCE_EFFECTUEE",
+    "EVALUER_PROGRESSION",
+    "AMELIORATION_OBSERVEE",
+    "AJUSTER_TRAITEMENT",
+    "TRAITEMENT_TERMINE",
+    "CRISE_URGENCE",
+    "CRISE_RESOLUE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Santé Publique",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Santé mentale",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.health.belgium.be/fr/sante/soins-de-sante/aide-aux-personnes/sante-mentale",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

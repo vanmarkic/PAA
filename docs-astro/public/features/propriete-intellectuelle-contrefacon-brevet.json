@@ -1,0 +1,179 @@
+{
+  "id": "propriete-intellectuelle-contrefacon-brevet",
+  "name": "Action en contrefaçon de brevet",
+  "description": "  En tant que titulaire de brevet\n  Je veux agir contre les contrefacteurs\n  Afin de faire cesser l'atteinte à mes droits et obtenir réparation",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la contrefaçon est un délit civil et pénal"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la prescription est de 5 ans"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les tribunaux de l'entreprise sont compétents"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "b1c83919-666b-4a13-9aa5-de5e55c439eb",
+      "name": "Saisie-contrefaçon avec huissier",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suspecte une contrefaçon"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai obtenu une ordonnance du président du tribunal"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un expert est désigné"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'huissier procède à la saisie-description"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les produits contrefaisants sont décrits"
+        },
+        {
+          "keyword": "Et",
+          "text": "des échantillons peuvent être prélevés"
+        },
+        {
+          "keyword": "Et",
+          "text": "les documents commerciaux sont saisis"
+        },
+        {
+          "keyword": "Et",
+          "text": "un PV détaillé est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8f5ffa41-f2c0-4258-8d40-acd93852b91e",
+      "name": "Action au fond avec expertise judiciaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai des preuves de contrefaçon"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'assigne le contrefacteur"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le tribunal examine l'affaire"
+        },
+        {
+          "keyword": "Alors",
+          "text": "une expertise technique est ordonnée"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'expert compare les revendications au produit"
+        },
+        {
+          "keyword": "Et",
+          "text": "je peux demander la cessation et des dommages"
+        },
+        {
+          "keyword": "Et",
+          "text": "la publication du jugement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5a5fb1af-240f-4d46-9525-bb0d743c49ce",
+      "name": "Calcul des dommages-intérêts",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "la contrefaçon est établie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai subi un préjudice"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le tribunal évalue les dommages"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il considère le manque à gagner"
+        },
+        {
+          "keyword": "Et",
+          "text": "les bénéfices illicites du contrefacteur"
+        },
+        {
+          "keyword": "Et",
+          "text": "le préjudice moral"
+        },
+        {
+          "keyword": "Et",
+          "text": "peut accorder jusqu'à 2x les bénéfices"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6794d8bf-fbb3-4081-8637-b416a8d28696",
+      "name": "Défense par invalidité du brevet",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis poursuivi en contrefaçon"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le brevet manque de nouveauté"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je forme une demande reconventionnelle"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je demande la nullité du brevet"
+        },
+        {
+          "keyword": "Et",
+          "text": "je produis les antériorités destructrices"
+        },
+        {
+          "keyword": "Et",
+          "text": "si le brevet est annulé, l'action échoue"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

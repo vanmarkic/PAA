@@ -1,0 +1,591 @@
+{
+  "id": "democratie-petitions",
+  "name": "Pétitions et initiatives citoyennes",
+  "description": "  En tant que citoyen engagé\n  Je veux créer et signer des pétitions\n  Afin de faire entendre ma voix démocratiquement",
+  "category": "democratie",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les seuils de signatures sont:",
+        "dataTable": {
+          "headers": [
+            "Niveau",
+            "Signatures requises",
+            "Délai"
+          ],
+          "rows": [
+            {
+              "Niveau": "Fédéral",
+              "Signatures requises": "25000",
+              "Délai": "12 mois"
+            },
+            {
+              "Niveau": "Régional",
+              "Signatures requises": "15000",
+              "Délai": "9 mois"
+            },
+            {
+              "Niveau": "Communal",
+              "Signatures requises": "100-5000",
+              "Délai": "6 mois"
+            },
+            {
+              "Niveau": "Européen",
+              "Signatures requises": "1000000",
+              "Délai": "12 mois"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "3fcbffe0-b91d-4e1b-965a-3b0b10aca50a",
+      "name": "Création d'une pétition communale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 21 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je réside à Liège"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux créer une pétition pour \"Plus de pistes cyclables\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "je soumets ma pétition communale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je fournis une description détaillée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je définis l'objectif à 500 signatures"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je fixe la date de clôture dans 6 mois"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la pétition devrait être enregistrée"
+        },
+        {
+          "keyword": "Et",
+          "text": "elle devrait recevoir un numéro d'enregistrement"
+        },
+        {
+          "keyword": "Et",
+          "text": "elle devrait être publiée sur la plateforme officielle"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais être désigné comme organisateur principal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "c52283c1-2047-45a9-9ffd-a086252fa132",
+      "name": "Signature d'une pétition avec vérification",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition \"Réduction de la vitesse en ville\" existe"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la pétition a déjà 1234 signatures vérifiées"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis un résident de la commune concernée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 18 ans ou plus"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je signe la pétition avec mon eID"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je confirme mon identité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma signature devrait être enregistrée"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma signature devrait être marquée \"à vérifier\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le système devrait vérifier mon éligibilité"
+        },
+        {
+          "keyword": "Et",
+          "text": "si je suis éligible, ma signature devient \"vérifiée\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le compteur devrait passer à 1235 signatures vérifiées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a8ce273b-c568-47c7-94ac-13b2dee83653",
+      "name": "Pétition atteignant le seuil requis",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition communale existe"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'objectif est de 500 signatures"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la pétition a actuellement 499 signatures vérifiées"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'ajoute ma signature vérifiée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le seuil devrait être atteint"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'organisateur devrait être notifié"
+        },
+        {
+          "keyword": "Et",
+          "text": "la commune devrait être notifiée automatiquement"
+        },
+        {
+          "keyword": "Et",
+          "text": "la pétition devrait passer au statut \"soumise aux autorités\""
+        },
+        {
+          "keyword": "Et",
+          "text": "un délai de réponse de 3 mois devrait commencer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "38cae466-6eac-4db8-a3ef-32f56f5626a9",
+      "name": "Initiative citoyenne européenne",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux lancer une initiative citoyenne européenne"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai formé un comité de 7 citoyens de pays différents"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le sujet concerne \"La protection des abeilles en Europe\""
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'enregistre l'initiative"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je fournis les traductions en FR, NL, DE et EN"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la Commission européenne valide la recevabilité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'initiative devrait être publiée"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous devrions avoir 12 mois pour collecter 1 million de signatures"
+        },
+        {
+          "keyword": "Et",
+          "text": "les signatures doivent venir d'au moins 7 pays membres"
+        },
+        {
+          "keyword": "Et",
+          "text": "chaque pays a un seuil minimum de signatures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b3459421-e179-497d-afa6-6f431c17cb49",
+      "name": "Tentative de double signature",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition \"Transport gratuit\" existe"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai déjà signé cette pétition il y a 2 semaines"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je tente de signer à nouveau"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le système devrait détecter la double signature"
+        },
+        {
+          "keyword": "Et",
+          "text": "ma nouvelle signature devrait être rejetée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"Vous avez déjà signé cette pétition\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le compteur de signatures ne devrait pas changer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d1f54f20-c74c-41ec-bd59-5e3886e32dc4",
+      "name": "Pétition expirée sans atteindre le seuil",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition régionale existe depuis 9 mois"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'objectif était de 15000 signatures"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle n'a collecté que 8500 signatures"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la date de clôture arrive"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la pétition devrait être fermée automatiquement"
+        },
+        {
+          "keyword": "Et",
+          "text": "le statut devrait passer à \"échec - seuil non atteint\""
+        },
+        {
+          "keyword": "Et",
+          "text": "l'organisateur devrait recevoir un rapport final"
+        },
+        {
+          "keyword": "Et",
+          "text": "les signataires devraient être informés du résultat"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0335e852-356f-478c-b5c7-4c2be53cffcc",
+      "name": "Réponse des autorités à une pétition réussie",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition a atteint 2000 signatures"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elle a été soumise au conseil communal il y a 2 mois"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le conseil communal examine la pétition"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il décide d'accepter partiellement les demandes"
+        },
+        {
+          "keyword": "Alors",
+          "text": "une réponse officielle devrait être publiée"
+        },
+        {
+          "keyword": "Et",
+          "text": "la réponse devrait inclure:",
+          "dataTable": {
+            "headers": [
+              "Élément",
+              "Contenu"
+            ],
+            "rows": [
+              {
+                "Élément": "Décision",
+                "Contenu": "Acceptation partielle"
+              },
+              {
+                "Élément": "Actions prévues",
+                "Contenu": "Étude de faisabilité, consultation"
+              },
+              {
+                "Élément": "Délai de mise en œuvre",
+                "Contenu": "18 mois"
+              },
+              {
+                "Élément": "Budget alloué",
+                "Contenu": "50.000€"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "tous les signataires devraient être notifiés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "11461278-ff3e-4ca1-9daf-4af36e6924a1",
+      "name": "Pétition frauduleuse avec fausses signatures",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition prétend avoir 5000 signatures"
+        },
+        {
+          "keyword": "Et que",
+          "text": "des doutes sont soulevés sur l'authenticité"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'audit des signatures est effectué"
+        },
+        {
+          "keyword": "Et que",
+          "text": "2000 signatures sont identifiées comme frauduleuses"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ces signatures devraient être invalidées"
+        },
+        {
+          "keyword": "Et",
+          "text": "le compteur devrait être corrigé à 3000 signatures valides"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'organisateur devrait recevoir un avertissement"
+        },
+        {
+          "keyword": "Et",
+          "text": "en cas de fraude intentionnelle, des poursuites peuvent être engagées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "72277db9-c08b-4968-9bab-435e9c47f849",
+      "name": "Éligibilité à signer selon le type de pétition",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un <statut>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai <age> ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une pétition de niveau <niveau> existe"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je vérifie si je peux signer"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mon éligibilité devrait être \"<eligible>\""
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"<raison>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "statut",
+            "age",
+            "niveau",
+            "eligible",
+            "raison"
+          ],
+          "rows": [
+            {
+              "name": "a94e58f8-6336-4cb1-b4f8-4342315b3f60",
+              "values": {
+                "statut": "citoyen belge",
+                "age": "18",
+                "niveau": "fédéral",
+                "eligible": "oui",
+                "raison": "Citoyen majeur éligible"
+              }
+            },
+            {
+              "name": "c781a881-c93f-4ee7-b001-28ab535a8c78",
+              "values": {
+                "statut": "citoyen belge",
+                "age": "16",
+                "niveau": "communal",
+                "eligible": "oui",
+                "raison": "Âge minimum 16 ans pour pétitions locales"
+              }
+            },
+            {
+              "name": "2a2900ff-9883-4da7-8893-47bf5e219bf8",
+              "values": {
+                "statut": "citoyen belge",
+                "age": "15",
+                "niveau": "communal",
+                "eligible": "non",
+                "raison": "Âge minimum non atteint"
+              }
+            },
+            {
+              "name": "7991e9d6-50af-48a3-81e9-5890011dbbef",
+              "values": {
+                "statut": "citoyen EU",
+                "age": "25",
+                "niveau": "européen",
+                "eligible": "oui",
+                "raison": "Citoyen européen éligible"
+              }
+            },
+            {
+              "name": "c893dfc9-087f-4739-be18-3f3d3d9aee2f",
+              "values": {
+                "statut": "citoyen EU",
+                "age": "20",
+                "niveau": "fédéral",
+                "eligible": "non",
+                "raison": "Réservé aux citoyens belges"
+              }
+            },
+            {
+              "name": "7ab5812d-2712-45e4-8800-2d80037a59b7",
+              "values": {
+                "statut": "résident non-EU",
+                "age": "30",
+                "niveau": "communal",
+                "eligible": "oui",
+                "raison": "Résident local éligible"
+              }
+            },
+            {
+              "name": "9aa1fae3-517b-474a-bd0f-1a7209c7b262",
+              "values": {
+                "statut": "résident non-EU",
+                "age": "30",
+                "niveau": "fédéral",
+                "eligible": "non",
+                "raison": "Réservé aux citoyens belges"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "ed9b095c-21ea-4a60-80b4-b22ce02b0d76",
+      "name": "Transformation d'une pétition en référendum",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une pétition communale a collecté 10000 signatures"
+        },
+        {
+          "keyword": "Et que",
+          "text": "cela représente plus de 10% des électeurs inscrits"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le sujet est éligible pour un référendum"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le conseil communal examine la pétition"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il peut décider d'organiser une consultation populaire"
+        },
+        {
+          "keyword": "Et",
+          "text": "tous les citoyens inscrits pourront voter"
+        },
+        {
+          "keyword": "Et",
+          "text": "le résultat sera contraignant si le quorum est atteint"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.948Z"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "transportScolaire",
+  "name": "Transport Scolaire (School Transport) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for applying for subsidized school transport,",
+  "states": [
+    "attente",
+    "DEMANDER_TRANSPORT",
+    "calculDistance",
+    "tropProche",
+    "REINITIALISER",
+    "assignationItineraire",
+    "ITINERAIRE_ASSIGNE",
+    "emissionAbonnement",
+    "ABONNEMENT_EMIS",
+    "abonnementActif",
+    "RENOUVELER_ABONNEMENT",
+    "SIGNALER_PROBLEME",
+    "RESILIER_ABONNEMENT",
+    "gestionProbleme",
+    "PROBLEME_RESOLU",
+    "resilie"
+  ],
+  "events": [
+    "DEMANDER_TRANSPORT",
+    "DISTANCE_CALCULEE",
+    "ITINERAIRE_ASSIGNE",
+    "ABONNEMENT_EMIS",
+    "RENOUVELER_ABONNEMENT",
+    "SIGNALER_PROBLEME",
+    "PROBLEME_RESOLU",
+    "RESILIER_ABONNEMENT",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.937Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Région Wallonne",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Transport scolaire",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.wallonie.be/fr/transport-scolaire",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

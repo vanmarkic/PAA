@@ -1,0 +1,41 @@
+{
+  "id": "permisConduire",
+  "name": "Permis de Conduire",
+  "category": "transport",
+  "description": "",
+  "states": [
+    "inscriptionAutoEcole",
+    "INSCRIRE",
+    "ageMinimum",
+    "formationTheorique",
+    "EXAMEN_THEORIQUE",
+    "examenTheorique",
+    "THEORIQUE_REUSSI",
+    "formationPratique",
+    "FORMATION_PRATIQUE",
+    "filieres",
+    "permisProvisoire",
+    "PERMIS_PROVISOIRE_DELIVRE",
+    "conditions",
+    "conduiteProvisoire",
+    "EXAMEN_PRATIQUE",
+    "examenPratique",
+    "PRATIQUE_REUSSI",
+    "permisDefinitif",
+    "PERMIS_DEFINITIF_DELIVRE",
+    "validite",
+    "termine"
+  ],
+  "events": [
+    "INSCRIRE",
+    "EXAMEN_THEORIQUE",
+    "THEORIQUE_REUSSI",
+    "FORMATION_PRATIQUE",
+    "PERMIS_PROVISOIRE_DELIVRE",
+    "EXAMEN_PRATIQUE",
+    "PRATIQUE_REUSSI",
+    "PERMIS_DEFINITIF_DELIVRE"
+  ],
+  "initial": "inscriptionAutoEcole",
+  "generated": "2025-11-18T10:17:36.940Z"
+}

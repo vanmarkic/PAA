@@ -1,0 +1,31 @@
+{
+  "id": "chirurgieAmbulatoire",
+  "name": "Chirurgie Ambulatoire",
+  "category": "health",
+  "description": "",
+  "states": [
+    "consultationPreoperatoire",
+    "PLANIFIER",
+    "bilanPreoperatoire",
+    "BILAN_OK",
+    "jourIntervention",
+    "ANESTHESIE_ADMINISTREE",
+    "intervention",
+    "INTERVENTION_REUSSIE",
+    "salleReveil",
+    "REVEIL_COMPLET",
+    "surveillance",
+    "AUTORISER_SORTIE",
+    "sortie"
+  ],
+  "events": [
+    "PLANIFIER",
+    "BILAN_OK",
+    "ANESTHESIE_ADMINISTREE",
+    "INTERVENTION_REUSSIE",
+    "REVEIL_COMPLET",
+    "AUTORISER_SORTIE"
+  ],
+  "initial": "consultationPreoperatoire",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

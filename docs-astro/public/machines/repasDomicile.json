@@ -1,0 +1,64 @@
+{
+  "id": "repasDomicile",
+  "name": "Service de Repas à Domicile (Meal Delivery Service) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for meal delivery services,",
+  "states": [
+    "attente",
+    "DEMANDER_SERVICE",
+    "evaluationBesoins",
+    "BESOINS_IDENTIFIES",
+    "planificationRepas",
+    "ETABLIR_PLAN",
+    "personnalisationMenu",
+    "PERSONNALISER_MENU",
+    "livraisonsActives",
+    "LIVRER_REPAS",
+    "MODIFIER_MENU",
+    "SUSPENDRE_LIVRAISONS",
+    "ARRETER_SERVICE",
+    "modificationMenu",
+    "livraisonsSuspendues",
+    "REPRENDRE_LIVRAISONS",
+    "serviceArrete",
+    "REINITIALISER"
+  ],
+  "events": [
+    "DEMANDER_SERVICE",
+    "EVALUER_BESOINS",
+    "BESOINS_IDENTIFIES",
+    "ETABLIR_PLAN",
+    "PERSONNALISER_MENU",
+    "COMMENCER_LIVRAISONS",
+    "LIVRER_REPAS",
+    "MODIFIER_MENU",
+    "SUSPENDRE_LIVRAISONS",
+    "REPRENDRE_LIVRAISONS",
+    "ARRETER_SERVICE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Sécurité Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Repas à domicile",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.belgium.be/fr/famille/aide_et_soins_a_domicile/repas_a_domicile",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

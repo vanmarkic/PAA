@@ -1,0 +1,951 @@
+{
+  "id": "immobilier-urbanisme",
+  "name": "Permis d'Urbanisme et Aménagement du Territoire",
+  "description": "  En tant que propriétaire ou constructeur\n  Je veux obtenir les permis nécessaires pour mes projets\n  Afin de respecter les règles d'aménagement du territoire",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le CoDT (Code du Développement Territorial) s'applique en Wallonie"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le CoBAT (Code Bruxellois de l'Aménagement du Territoire) s'applique à Bruxelles"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le VCRO (Vlaamse Codex Ruimtelijke Ordening) s'applique en Flandre"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les délais légaux sont stricts et suspensifs"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "df0cb2ac-77af-4727-925d-791498be6bbf",
+      "name": "Demande de permis d'urbanisme pour extension",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux construire une extension de 30m²"
+        },
+        {
+          "keyword": "Et que",
+          "text": "mon terrain est en zone d'habitat"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le projet respecte les gabarits voisins"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'urbanisme"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le dossier doit contenir:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Nombre",
+              "Description"
+            ],
+            "rows": [
+              {
+                "Document": "Formulaire demande",
+                "Nombre": "1",
+                "Description": "Cadre I ou annexe selon région"
+              },
+              {
+                "Document": "Plans de situation",
+                "Nombre": "4",
+                "Description": "Échelle 1/1000 ou 1/500"
+              },
+              {
+                "Document": "Plans architecture",
+                "Nombre": "4",
+                "Description": "Façades, coupes, implantation"
+              },
+              {
+                "Document": "Photos",
+                "Nombre": "4",
+                "Description": "Contexte et voisinage"
+              },
+              {
+                "Document": "Notice descriptive",
+                "Nombre": "1",
+                "Description": "Matériaux et techniques"
+              },
+              {
+                "Document": "PEB",
+                "Nombre": "1",
+                "Description": "Si > 50m² ou rénovation lourde"
+              },
+              {
+                "Document": "Statistiques INS",
+                "Nombre": "1",
+                "Description": "Modèle I si nouveau logement"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de traitement est:",
+          "dataTable": {
+            "headers": [
+              "Type",
+              "Délai",
+              "Prolongation possible"
+            ],
+            "rows": [
+              {
+                "Type": "Sans enquête",
+                "Délai": "75 jours",
+                "Prolongation possible": "+30 jours"
+              },
+              {
+                "Type": "Avec enquête",
+                "Délai": "115 jours",
+                "Prolongation possible": "+30 jours"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais de dossier sont environ 125€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "863aff69-1682-4479-825c-cc5bbf7ac2cc",
+      "name": "Déroulement de l'enquête publique urbanisme",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une enquête publique est requise"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le projet dépasse les seuils d'impact"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'enquête est organisée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le processus est:",
+          "dataTable": {
+            "headers": [
+              "Étape",
+              "Durée",
+              "Actions"
+            ],
+            "rows": [
+              {
+                "Étape": "Annonce",
+                "Durée": "5 jours avant",
+                "Actions": "Affichage jaune sur site"
+              },
+              {
+                "Étape": "Publication",
+                "Durée": "-",
+                "Actions": "Site commune et valves"
+              },
+              {
+                "Étape": "Consultation",
+                "Durée": "30 jours",
+                "Actions": "Dossier disponible"
+              },
+              {
+                "Étape": "Réclamations",
+                "Durée": "Pendant enquête",
+                "Actions": "Écrit ou oral"
+              },
+              {
+                "Étape": "Clôture",
+                "Durée": "Dernier jour",
+                "Actions": "PV de clôture"
+              },
+              {
+                "Étape": "Commission",
+                "Durée": "+15 jours",
+                "Actions": "Si réclamations"
+              },
+              {
+                "Étape": "Avis",
+                "Durée": "+30 jours",
+                "Actions": "Favorable ou défavorable"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les voisins dans 50m sont notifiés"
+        },
+        {
+          "keyword": "Et",
+          "text": "les réclamations doivent être motivées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "72dc860b-b7ea-4233-a378-62bddec71d90",
+      "name": "Création d'un lotissement de 5 parcelles",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai un terrain de 5000m²"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux créer 5 lots à bâtir"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la zone est urbanisable"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis d'urbanisation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les exigences sont:",
+          "dataTable": {
+            "headers": [
+              "Aspect",
+              "Obligation",
+              "Norme"
+            ],
+            "rows": [
+              {
+                "Aspect": "Voirie",
+                "Obligation": "Création ou élargissement",
+                "Norme": "6-12m selon type"
+              },
+              {
+                "Aspect": "Équipements",
+                "Obligation": "Eau, gaz, électricité, égouts",
+                "Norme": "Standards région"
+              },
+              {
+                "Aspect": "Espaces verts",
+                "Obligation": "Minimum requis",
+                "Norme": "10% superficie"
+              },
+              {
+                "Aspect": "Parkings",
+                "Obligation": "Ratio par lot",
+                "Norme": "2 places/logement"
+              },
+              {
+                "Aspect": "Charges urbanisme",
+                "Obligation": "Participation",
+                "Norme": "Calcul commune"
+              },
+              {
+                "Aspect": "Garantie bancaire",
+                "Obligation": "Travaux voirie",
+                "Norme": "110% du coût"
+              },
+              {
+                "Aspect": "Cession gratuite",
+                "Obligation": "Voirie et espaces publics",
+                "Norme": "Acte notarié"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "l'étude d'incidences peut être requise"
+        },
+        {
+          "keyword": "Et",
+          "text": "la modification ultérieure nécessite nouveau permis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "56da917e-4e4e-4767-b37a-de57860584be",
+      "name": "Régularisation d'une construction sans permis",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une construction a été réalisée sans permis"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'infraction date de plus de 5 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux régulariser la situation"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une régularisation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure est:",
+          "dataTable": {
+            "headers": [
+              "Étape",
+              "Action",
+              "Conséquence"
+            ],
+            "rows": [
+              {
+                "Étape": "Constat infraction",
+                "Action": "PV urbanisme",
+                "Conséquence": "Risque pénal"
+              },
+              {
+                "Étape": "Demande permis",
+                "Action": "Dossier complet",
+                "Conséquence": "Comme nouveau"
+              },
+              {
+                "Étape": "Analyse conformité",
+                "Action": "Règles actuelles",
+                "Conséquence": "Pas anciennes"
+              },
+              {
+                "Étape": "Amendes",
+                "Action": "Transactionnelle",
+                "Conséquence": "250-25000€"
+              },
+              {
+                "Étape": "Mesures réparatoires",
+                "Action": "Si nécessaire",
+                "Conséquence": "Remise état"
+              },
+              {
+                "Étape": "Délai prescription",
+                "Action": "10 ans (Wallonie)",
+                "Conséquence": "Sauf ordre arrêt"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la bonne foi n'excuse pas l'infraction"
+        },
+        {
+          "keyword": "Et",
+          "text": "le permis peut être refusé si non-conforme"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "058b3430-d5ac-48cf-9032-23776681865c",
+      "name": "Obtention d'un certificat d'urbanisme informatif",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je veux connaître les possibilités d'un terrain"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai pas encore de projet précis"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un CU1"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les informations fournies sont:",
+          "dataTable": {
+            "headers": [
+              "Information",
+              "Source",
+              "Validité"
+            ],
+            "rows": [
+              {
+                "Information": "Affectation plan secteur",
+                "Source": "CoDT/PRAS",
+                "Validité": "Actuelle"
+              },
+              {
+                "Information": "Prescriptions urbanistiques",
+                "Source": "RCU/PPAS",
+                "Validité": "Si existant"
+              },
+              {
+                "Information": "Périmètres particuliers",
+                "Source": "SAR, rénovation",
+                "Validité": "Liste"
+              },
+              {
+                "Information": "Servitudes",
+                "Source": "Utilité publique",
+                "Validité": "Connues"
+              },
+              {
+                "Information": "Permis délivrés",
+                "Source": "Archives commune",
+                "Validité": "10 ans"
+              },
+              {
+                "Information": "Infractions connues",
+                "Source": "Service urbanisme",
+                "Validité": "Si relevées"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de délivrance est 75 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "le coût est environ 25€"
+        },
+        {
+          "keyword": "Et",
+          "text": "ce n'est pas un permis de construire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "95710393-b504-4968-a04e-387633bdf320",
+      "name": "Demande de permis intégré pour projet mixte",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon projet nécessite permis environnement"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il nécessite aussi permis urbanisme"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis en Région Wallonne"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un permis intégré"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les avantages sont:",
+          "dataTable": {
+            "headers": [
+              "Aspect",
+              "Permis séparés",
+              "Permis intégré"
+            ],
+            "rows": [
+              {
+                "Aspect": "Procédures",
+                "Permis séparés": "2 distinctes",
+                "Permis intégré": "1 unique"
+              },
+              {
+                "Aspect": "Délai",
+                "Permis séparés": "115j × 2",
+                "Permis intégré": "140 jours max"
+              },
+              {
+                "Aspect": "Enquête publique",
+                "Permis séparés": "Possible 2×",
+                "Permis intégré": "1 seule"
+              },
+              {
+                "Aspect": "Autorité",
+                "Permis séparés": "Possible différente",
+                "Permis intégré": "Unique"
+              },
+              {
+                "Aspect": "Recours",
+                "Permis séparés": "2 procédures",
+                "Permis intégré": "1 procédure"
+              },
+              {
+                "Aspect": "Cohérence",
+                "Permis séparés": "À assurer",
+                "Permis intégré": "Garantie"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "les classes 1 et 2 sont éligibles"
+        },
+        {
+          "keyword": "Et",
+          "text": "le fonctionnaire délégué peut être compétent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "36fdbe68-4aeb-4450-a984-05bbe9696929",
+      "name": "Transformation d'une maison en 3 appartements",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une grande maison unifamiliale"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux créer 3 appartements"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le permis de division"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les exigences sont:",
+          "dataTable": {
+            "headers": [
+              "Critère",
+              "Norme minimale",
+              "Vérification"
+            ],
+            "rows": [
+              {
+                "Critère": "Surface appartement",
+                "Norme minimale": "50m² (varie région)",
+                "Vérification": "Plans"
+              },
+              {
+                "Critère": "Hauteur sous plafond",
+                "Norme minimale": "2,5m minimum",
+                "Vérification": "Mesures"
+              },
+              {
+                "Critère": "Éclairement",
+                "Norme minimale": "1/10 surface sol",
+                "Vérification": "Calcul"
+              },
+              {
+                "Critère": "Parking",
+                "Norme minimale": "1 place/logement",
+                "Vérification": "Plan mobilité"
+              },
+              {
+                "Critère": "Sécurité incendie",
+                "Norme minimale": "Compartimentage",
+                "Vérification": "Rapport SIAMU"
+              },
+              {
+                "Critère": "Acoustique",
+                "Norme minimale": "Isolation entre lots",
+                "Vérification": "Normes NBN"
+              },
+              {
+                "Critère": "Compteurs séparés",
+                "Norme minimale": "Eau, gaz, électricité",
+                "Vérification": "Gestionnaires"
+              },
+              {
+                "Critère": "Cadastre",
+                "Norme minimale": "Division officielle",
+                "Vérification": "Géomètre"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "un permis d'urbanisme est obligatoire"
+        },
+        {
+          "keyword": "Et",
+          "text": "la copropriété doit être créée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6257e8ec-9f04-4e57-9774-78bc4c7b41d1",
+      "name": "Demande d'abattage d'un arbre remarquable",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un arbre remarquable est sur ma propriété"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il présente un danger ou gêne construction"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande l'autorisation d'abattage"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la procédure est:",
+          "dataTable": {
+            "headers": [
+              "Étape",
+              "Responsable",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Étape": "Identification",
+                "Responsable": "DNF/commune",
+                "Délai": "Liste officielle"
+              },
+              {
+                "Étape": "Demande motivée",
+                "Responsable": "Propriétaire",
+                "Délai": "Formulaire"
+              },
+              {
+                "Étape": "Expertise",
+                "Responsable": "Expert agréé",
+                "Délai": "Si contesté"
+              },
+              {
+                "Étape": "Enquête publique",
+                "Responsable": "Commune",
+                "Délai": "15 jours"
+              },
+              {
+                "Étape": "Avis DNF",
+                "Responsable": "Service nature",
+                "Délai": "Obligatoire"
+              },
+              {
+                "Étape": "Décision",
+                "Responsable": "Collège/Région",
+                "Délai": "60 jours"
+              },
+              {
+                "Étape": "Compensation",
+                "Responsable": "Si accordé",
+                "Délai": "3 arbres minimum"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "l'abattage sans autorisation = 100-1000€/arbre"
+        },
+        {
+          "keyword": "Et",
+          "text": "le remplacement est surveillé 3 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "46967deb-4962-48b4-827e-b79fdcbeb384",
+      "name": "Transformation d'un commerce en logement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un rez-de-chaussée commercial est vacant"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux le transformer en logement"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le plan de secteur l'autorise"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le changement d'affectation"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois vérifier:",
+          "dataTable": {
+            "headers": [
+              "Aspect",
+              "Condition",
+              "Impact"
+            ],
+            "rows": [
+              {
+                "Aspect": "Plan secteur/PRAS",
+                "Condition": "Zone compatible",
+                "Impact": "Fondamental"
+              },
+              {
+                "Aspect": "RCU communal",
+                "Condition": "Maintien commerce ?",
+                "Impact": "Possible refus"
+              },
+              {
+                "Aspect": "Accès PMR",
+                "Condition": "Si public avant",
+                "Impact": "Maintenir"
+              },
+              {
+                "Aspect": "Stationnement",
+                "Condition": "Impact différent",
+                "Impact": "Étude mobilité"
+              },
+              {
+                "Aspect": "Charges urbanisme",
+                "Condition": "Si création logement",
+                "Impact": "Variable"
+              },
+              {
+                "Aspect": "Prescriptions",
+                "Condition": "Façade commerciale",
+                "Impact": "Possible maintien"
+              },
+              {
+                "Aspect": "Voisinage",
+                "Condition": "Perte animation",
+                "Impact": "Opposition possible"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "un permis d'urbanisme est requis"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'enquête publique est probable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "70e0f7dd-2322-47e2-b0a0-d6f94bacfebd",
+      "name": "Travaux sur un bâtiment classé monument",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon bâtiment est classé monument historique"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux effectuer des travaux de restauration"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare mon dossier"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les obligations sont:",
+          "dataTable": {
+            "headers": [
+              "Type travaux",
+              "Autorisation",
+              "Autorité"
+            ],
+            "rows": [
+              {
+                "Type travaux": "Entretien normal",
+                "Autorisation": "Aucune",
+                "Autorité": "-"
+              },
+              {
+                "Type travaux": "Restauration",
+                "Autorisation": "Permis unique",
+                "Autorité": "Région patrimoine"
+              },
+              {
+                "Type travaux": "Modification",
+                "Autorisation": "Très encadrée",
+                "Autorité": "AWaP/Urban"
+              },
+              {
+                "Type travaux": "Techniques",
+                "Autorisation": "Traditionnelles",
+                "Autorité": "Imposées"
+              },
+              {
+                "Type travaux": "Matériaux",
+                "Autorisation": "Authentiques",
+                "Autorité": "Ou similaires"
+              },
+              {
+                "Type travaux": "Expertise",
+                "Autorisation": "Architecte spécialisé",
+                "Autorité": "Liste agréés"
+              },
+              {
+                "Type travaux": "Subsides",
+                "Autorisation": "40-80%",
+                "Autorité": "Selon classement"
+              },
+              {
+                "Type travaux": "Délais",
+                "Autorisation": "Prolongés",
+                "Autorité": "6-12 mois"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la Commission royale des Monuments donne avis"
+        },
+        {
+          "keyword": "Et",
+          "text": "les travaux sont suivis par l'administration"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "65d563f8-8260-4af1-b6cc-2a5369ef7fb0",
+      "name": "Délais de traitement des permis par type",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je demande un <type_permis>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le projet est situé en <region>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "<enquete> enquête publique"
+        },
+        {
+          "keyword": "Quand",
+          "text": "ma demande est complète"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le délai légal est <delai> jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "une prolongation de <prolongation> jours est possible"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "region",
+            "type_permis",
+            "enquete",
+            "delai",
+            "prolongation"
+          ],
+          "rows": [
+            {
+              "name": "dd304340-d8a0-4a99-9ab0-618fdc86066c",
+              "values": {
+                "region": "Wallonie",
+                "type_permis": "urbanisme simple",
+                "enquete": "sans",
+                "delai": "75",
+                "prolongation": "30"
+              }
+            },
+            {
+              "name": "198ee0c0-13dd-47a3-8990-d9b8bac70800",
+              "values": {
+                "region": "Wallonie",
+                "type_permis": "urbanisme",
+                "enquete": "avec",
+                "delai": "115",
+                "prolongation": "30"
+              }
+            },
+            {
+              "name": "161d4af9-0184-4dae-ae86-9c88b55145ce",
+              "values": {
+                "region": "Bruxelles",
+                "type_permis": "urbanisme",
+                "enquete": "sans",
+                "delai": "75",
+                "prolongation": "30"
+              }
+            },
+            {
+              "name": "f3fc8311-2133-44df-b99e-4289c4c82b41",
+              "values": {
+                "region": "Bruxelles",
+                "type_permis": "urbanisme",
+                "enquete": "avec",
+                "delai": "160",
+                "prolongation": "30"
+              }
+            },
+            {
+              "name": "bab4569e-9c5c-44db-94c3-7db549dabe58",
+              "values": {
+                "region": "Wallonie",
+                "type_permis": "intégré",
+                "enquete": "avec",
+                "delai": "140",
+                "prolongation": "40"
+              }
+            },
+            {
+              "name": "ca15ba51-9321-4ca3-ad94-c4854c82c5cd",
+              "values": {
+                "region": "Flandre",
+                "type_permis": "urbanisme",
+                "enquete": "sans",
+                "delai": "60",
+                "prolongation": "30"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.950Z"
+}

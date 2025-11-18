@@ -1,0 +1,64 @@
+{
+  "id": "maladieProfessionnelle",
+  "name": "Machine XState: Maladie professionnelle",
+  "category": "health",
+  "description": "Base légale: Lois coordonnées du 3 juin 1970 relatives aux maladies professionnelles",
+  "states": [
+    "information",
+    "definition",
+    "systemeListe",
+    "liste_fermee",
+    "systeme_ouvert",
+    "principalesCategories",
+    "declaration",
+    "qui_declare",
+    "comment",
+    "exposition",
+    "reconnaissance",
+    "enquete",
+    "criteresReconnaissance",
+    "indemnisation",
+    "incapaciteTemporaire",
+    "incapacitePermanente",
+    "montantRente",
+    "frais_medicaux",
+    "cumuls",
+    "rejet",
+    "recours",
+    "alternatives",
+    "recours_judiciaire",
+    "procedure",
+    "frais"
+  ],
+  "events": [
+    "DECLARER_MALADIE",
+    "RECONNAISSANCE_FEDRIS",
+    "REJET_FEDRIS",
+    "EVALUATION_IPP",
+    "RECOURS"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.937Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "FEDRIS",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Maladies professionnelles",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.fedris.be/fr/professionnels-de-la-sante/maladie-professionnelle",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

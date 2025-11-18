@@ -1,0 +1,154 @@
+{
+  "id": "copropriete-17-mutation-lot",
+  "name": "Mutation d'un Lot",
+  "description": "  En tant que notaire\n  Je veux gérer la mutation d'un lot\n  Afin de transférer la propriété correctement",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné qu'",
+        "text": "un lot est vendu"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "d1e54ab3-ad7d-411b-bf2e-ca11f78e1760",
+      "name": "Vérification des charges dues",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un lot est en vente"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'acte est prévu dans 30 jours"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le notaire demande l'état des charges"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic doit fournir sous 15 jours:",
+          "dataTable": {
+            "headers": [
+              "Document",
+              "Contenu"
+            ],
+            "rows": [
+              {
+                "Document": "État des charges",
+                "Contenu": "Montants dus et à venir"
+              },
+              {
+                "Document": "Procès-verbaux",
+                "Contenu": "3 dernières AG"
+              },
+              {
+                "Document": "Fonds de réserve",
+                "Contenu": "Quote-part"
+              },
+              {
+                "Document": "Litiges en cours",
+                "Contenu": "Liste détaillée"
+              },
+              {
+                "Document": "Budget prévisionnel",
+                "Contenu": "Année en cours"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "9a0b5f74-508c-4fe2-a25d-ef24cd4c23f0",
+      "name": "Transfert avec charges impayées",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le vendeur doit 2500€ de charges"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la vente est prévue"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le notaire établit l'acte"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit retenir le montant dû"
+        },
+        {
+          "keyword": "Et",
+          "text": "payer directement le syndic"
+        },
+        {
+          "keyword": "Et",
+          "text": "obtenir quittance avant signature"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "84c00775-02ac-4046-8af1-9276f102b647",
+      "name": "Information du nouveau propriétaire",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un nouveau propriétaire arrive"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la mutation est effectuée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le syndic doit:",
+          "dataTable": {
+            "headers": [
+              "Action",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Action": "Mettre à jour le registre",
+                "Délai": "8 jours"
+              },
+              {
+                "Action": "Informer de ses droits/devoirs",
+                "Délai": "15 jours"
+              },
+              {
+                "Action": "Transmettre le ROI",
+                "Délai": "15 jours"
+              },
+              {
+                "Action": "Calculer ses charges",
+                "Délai": "Prorata temporis"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

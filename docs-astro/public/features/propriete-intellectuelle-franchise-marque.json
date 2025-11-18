@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-franchise-marque",
+  "name": "Franchise de marque",
+  "description": "  En tant que franchiseur ou franchisé\n  Je veux établir un contrat de franchise\n  Afin d'exploiter une marque et un savoir-faire",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "la franchise implique marque et savoir-faire"
+      },
+      {
+        "keyword": "Et que",
+        "text": "le Code de droit économique s'applique"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "un document d'information précontractuel est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "4b69f17f-da69-4387-b9ad-a2e088092677",
+      "name": "Mise en place d'une franchise",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une marque forte et un concept éprouvé"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "un entrepreneur veut devenir franchisé"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous négocions le contrat de franchise"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je fournis le DIP 1 mois avant signature"
+        },
+        {
+          "keyword": "Et",
+          "text": "le contrat inclut la licence de marque"
+        },
+        {
+          "keyword": "Et",
+          "text": "le transfert de savoir-faire"
+        },
+        {
+          "keyword": "Et",
+          "text": "les redevances de 5-8% du CA"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'exclusivité territoriale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "34374459-2fa7-4473-a0e8-9bea5a373c37",
+      "name": "Protection du savoir-faire en franchise",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le savoir-faire est essentiel"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il doit rester secret"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je le transmets au franchisé"
+        },
+        {
+          "keyword": "Alors",
+          "text": "des clauses de confidentialité strictes s'appliquent"
+        },
+        {
+          "keyword": "Et",
+          "text": "une clause de non-concurrence post-contractuelle"
+        },
+        {
+          "keyword": "Et",
+          "text": "des pénalités en cas de violation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.952Z"
+}

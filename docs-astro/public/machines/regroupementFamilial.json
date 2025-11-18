@@ -1,0 +1,32 @@
+{
+  "id": "regroupementFamilial",
+  "name": "Regroupement Familial",
+  "category": "immigration",
+  "description": "",
+  "states": [
+    "verificationConditions",
+    "DEPOSER_DEMANDE",
+    "conditionsLegales",
+    "evaluationEligibilite",
+    "CONDITIONS_VERIFIEES",
+    "CONDITIONS_NON_REMPLIES",
+    "demandeVisaRegroupement",
+    "VISA_ACCORDE",
+    "entreeBelgique",
+    "ENTREE_BELGIQUE",
+    "delivranceCarteF",
+    "CARTE_F_DELIVREE",
+    "refus",
+    "termine"
+  ],
+  "events": [
+    "DEPOSER_DEMANDE",
+    "CONDITIONS_VERIFIEES",
+    "CONDITIONS_NON_REMPLIES",
+    "VISA_ACCORDE",
+    "ENTREE_BELGIQUE",
+    "CARTE_F_DELIVREE"
+  ],
+  "initial": "verificationConditions",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

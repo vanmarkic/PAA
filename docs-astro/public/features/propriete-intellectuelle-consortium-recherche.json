@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-consortium-recherche",
+  "name": "Consortium de recherche et IP",
+  "description": "  En tant que membre d'un consortium R&D\n  Je veux gérer la propriété intellectuelle commune\n  Afin de valoriser les résultats collaboratifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les projets collaboratifs génèrent de l'IP"
+      },
+      {
+        "keyword": "Et que",
+        "text": "la propriété doit être clarifiée"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'exploitation nécessite des accords"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "2812a412-2fa5-4f2c-aa49-fd68393535a0",
+      "name": "Accord de consortium avec gestion IP",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "5 partenaires collaborent sur un projet"
+        },
+        {
+          "keyword": "Et que",
+          "text": "chacun apporte son background IP"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous signons l'accord de consortium"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous définissons la propriété des résultats"
+        },
+        {
+          "keyword": "Et",
+          "text": "les droits d'accès au background"
+        },
+        {
+          "keyword": "Et",
+          "text": "les règles d'exploitation"
+        },
+        {
+          "keyword": "Et",
+          "text": "la répartition des revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "58507151-b468-4364-98b2-8e895623f985",
+      "name": "Gestion des résultats conjoints",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "une invention est créée conjointement"
+        },
+        {
+          "keyword": "Et que",
+          "text": "3 partenaires sont co-inventeurs"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous gérons cette IP commune"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous désignons un leader pour le dépôt"
+        },
+        {
+          "keyword": "Et",
+          "text": "partageons les coûts et revenus"
+        },
+        {
+          "keyword": "Et",
+          "text": "définissons les territoires d'exploitation"
+        },
+        {
+          "keyword": "Et",
+          "text": "prévoyons les cas de désaccord"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

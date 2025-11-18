@@ -1,0 +1,40 @@
+{
+  "id": "creationEntreprise",
+  "name": "Création d'Entreprise",
+  "category": "commerce",
+  "description": "",
+  "states": [
+    "inactif",
+    "DEMARRER_CREATION",
+    "planFinancier",
+    "PLAN_FINANCIER_VALIDE",
+    "ouvertureCompteBancaire",
+    "COMPTE_BANCAIRE_OUVERT",
+    "redactionActes",
+    "ACTE_CONSTITUTIF_REDIGE",
+    "depotGuichetEntreprise",
+    "DEPOT_GUICHET_ENTREPRISE",
+    "immatriculationBCE",
+    "NUMERO_ENTREPRISE_ATTRIBUE",
+    "activationTVA",
+    "TVA_ACTIVEE",
+    "affiliationCaisseAssurances",
+    "AFFILIATION_CAISSE_COMPLETE",
+    "entrepriseActive",
+    "CREATION_FINALISEE",
+    "termine"
+  ],
+  "events": [
+    "DEMARRER_CREATION",
+    "PLAN_FINANCIER_VALIDE",
+    "COMPTE_BANCAIRE_OUVERT",
+    "ACTE_CONSTITUTIF_REDIGE",
+    "DEPOT_GUICHET_ENTREPRISE",
+    "NUMERO_ENTREPRISE_ATTRIBUE",
+    "TVA_ACTIVEE",
+    "AFFILIATION_CAISSE_COMPLETE",
+    "CREATION_FINALISEE"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.928Z"
+}

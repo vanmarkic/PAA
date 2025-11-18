@@ -1,0 +1,40 @@
+{
+  "id": "reconnaissanceEnfant",
+  "name": "Machine XState: Reconnaissance d'enfant",
+  "category": "family",
+  "description": "Base légale: Code civil belge - Articles 319bis et suivants",
+  "states": [
+    "information",
+    "principe",
+    "quand",
+    "qui_peut",
+    "ou",
+    "verification_consentement",
+    "exceptions",
+    "refus_mere",
+    "delai_reflexion",
+    "etablissement_acte",
+    "procedure",
+    "reconnaissance_etablie",
+    "effets_juridiques",
+    "nom_enfant",
+    "autorite_parentale",
+    "contribution_alimentaire",
+    "contestation_possible",
+    "refus",
+    "alternatives",
+    "recherche_paternite",
+    "action_judiciaire",
+    "delais",
+    "frais"
+  ],
+  "events": [
+    "DEMANDER_RECONNAISSANCE",
+    "CONSENTEMENT_MERE",
+    "REFUS_MERE",
+    "ACTE_DRESSE",
+    "CONTESTER"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.930Z"
+}

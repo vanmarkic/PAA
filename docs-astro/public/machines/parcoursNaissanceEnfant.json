@@ -1,0 +1,40 @@
+{
+  "id": "parcoursNaissanceEnfant",
+  "name": "META MACHINE - Parcours Citoyen : Naissance d'un Enfant",
+  "category": "meta",
+  "description": "Cette meta machine orchestre toutes les démarches administratives",
+  "states": [
+    "naissanceEnfant",
+    "ENFANT_NE",
+    "declarationNaissance",
+    "DECLARATION_EFFECTUEE",
+    "ERREUR",
+    "affiliationMutuelle",
+    "MUTUELLE_AFFILIEE",
+    "demandeAllocationsFamiliales",
+    "ALLOCATIONS_DEMANDEES",
+    "demandePrimeNaissance",
+    "PRIME_DEMANDEE",
+    "montants",
+    "demandeCongeParental",
+    "droits",
+    "inscriptionGarderie",
+    "GARDERIE_INSCRITE",
+    "preparationDeclarationImpots",
+    "TOUTES_DEMARCHES_COMPLETEES",
+    "parcoursComplete"
+  ],
+  "events": [
+    "ENFANT_NE",
+    "DECLARATION_EFFECTUEE",
+    "MUTUELLE_AFFILIEE",
+    "ALLOCATIONS_DEMANDEES",
+    "CONGE_DEMANDE",
+    "PRIME_DEMANDEE",
+    "GARDERIE_INSCRITE",
+    "TOUTES_DEMARCHES_COMPLETEES",
+    "ERREUR"
+  ],
+  "initial": "naissanceEnfant",
+  "generated": "2025-11-18T10:17:36.938Z"
+}

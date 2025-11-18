@@ -1,0 +1,62 @@
+{
+  "id": "logementSocial",
+  "name": "Logement Social (Social Housing) Application Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for applying to social housing in Belgium,",
+  "states": [
+    "attente",
+    "DEMANDER_LOGEMENT",
+    "verificationEligibilite",
+    "calculPriorite",
+    "PRIORITE_CALCULEE",
+    "inscriptionListeAttente",
+    "INSCRIPTION_CONFIRMEE",
+    "enAttente",
+    "LOGEMENT_DISPONIBLE",
+    "ACTUALISER_SITUATION",
+    "RETIRER_DEMANDE",
+    "propositionLogement",
+    "ACCEPTER_LOGEMENT",
+    "REFUSER_LOGEMENT",
+    "attributionLogement",
+    "REINITIALISER",
+    "ineligible",
+    "retiree"
+  ],
+  "events": [
+    "DEMANDER_LOGEMENT",
+    "ELIGIBILITE_VERIFIEE",
+    "PRIORITE_CALCULEE",
+    "INSCRIPTION_CONFIRMEE",
+    "LOGEMENT_DISPONIBLE",
+    "ACCEPTER_LOGEMENT",
+    "REFUSER_LOGEMENT",
+    "ACTUALISER_SITUATION",
+    "RETIRER_DEMANDE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.931Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Région Wallonne - Logement",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Code wallon du Logement et de l'Habitat durable",
+        "publicationDate": "2023-12-15T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://logement.wallonie.be/home/aides-au-logement/aides-a-lacquisition/logement-social.html",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

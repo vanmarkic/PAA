@@ -1,0 +1,43 @@
+{
+  "id": "compteurBudgetElectricite",
+  "name": "Machine XState: Compteur à budget électricité/gaz",
+  "category": "energy",
+  "description": "Base légale: Règlements régionaux énergie (CWaPE, VREG, Brugel)",
+  "states": [
+    "information",
+    "definition",
+    "situations_installation",
+    "types_compteurs",
+    "client_protege",
+    "client_normal",
+    "demande",
+    "qui",
+    "procedure",
+    "frais",
+    "installation",
+    "intervention",
+    "explication",
+    "premier_credit",
+    "actif",
+    "fonctionnement",
+    "rechargement",
+    "consommation",
+    "tarification",
+    "credit_minimum",
+    "protection_hiver",
+    "avantages",
+    "inconvenients",
+    "credit_epuise",
+    "retablissement",
+    "urgence"
+  ],
+  "events": [
+    "DEMANDER_COMPTEUR",
+    "INSTALLATION_PROGRAMMEE",
+    "COMPTEUR_INSTALLE",
+    "RECHARGER",
+    "CREDIT_EPUISE"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.929Z"
+}

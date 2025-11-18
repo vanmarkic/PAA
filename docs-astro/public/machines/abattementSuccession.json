@@ -1,0 +1,70 @@
+{
+  "id": "abattementSuccession",
+  "name": "Machine d'état XState pour l'Abattement succession",
+  "category": "general",
+  "description": "Cette machine d'état représente le flux de travail pour calculer et appliquer",
+  "states": [
+    "inactif",
+    "DEMARRER_DECLARATION",
+    "inventaireBiens",
+    "AJOUTER_BIEN",
+    "EVALUER_BIENS",
+    "evaluationBiens",
+    "BIENS_EVALUES",
+    "calculAbattement",
+    "ABATTEMENT_CALCULE",
+    "abattementCalcule",
+    "SOUMETTRE_ACTE",
+    "validationActe",
+    "ACTE_VALIDE",
+    "ACTE_INVALIDE",
+    "soumissionEvaluations",
+    "SOUMETTRE_EVALUATIONS",
+    "validationEvaluations",
+    "EVALUATIONS_VALIDEES",
+    "EVALUATIONS_INVALIDES",
+    "abattementApprouve",
+    "ABATTEMENT_APPLIQUE",
+    "applique"
+  ],
+  "events": [
+    "DEMARRER_DECLARATION",
+    "AJOUTER_BIEN",
+    "EVALUER_BIENS",
+    "BIENS_EVALUES",
+    "CALCULER_ABATTEMENT",
+    "ABATTEMENT_CALCULE",
+    "SOUMETTRE_ACTE",
+    "ACTE_VALIDE",
+    "ACTE_INVALIDE",
+    "SOUMETTRE_EVALUATIONS",
+    "EVALUATIONS_VALIDEES",
+    "EVALUATIONS_INVALIDES",
+    "ABATTEMENT_APPLIQUE",
+    "REINITIALISER"
+  ],
+  "initial": "inactif",
+  "generated": "2025-11-18T10:17:36.931Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "Région Wallonne",
+        "authorityType": "SPW",
+        "region": "wallonie",
+        "title": "Droits de succession",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/deces/droits_de_succession",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

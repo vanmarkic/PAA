@@ -1,0 +1,62 @@
+{
+  "id": "congeParental",
+  "name": "Machine XState: Congé parental",
+  "category": "family",
+  "description": "Base légale: CCT n°64 (secteur privé) / AR du 10 juin 2002 (secteur public)",
+  "states": [
+    "information",
+    "principe",
+    "conditions",
+    "formules",
+    "temps_plein",
+    "mi_temps",
+    "un_cinquieme",
+    "delai_demande",
+    "demande_employeur",
+    "procedure",
+    "reaction_employeur",
+    "protection",
+    "demande_ONEM",
+    "verification",
+    "conge_en_cours",
+    "montants2024",
+    "paiement",
+    "fiscalite",
+    "droits_sociaux",
+    "fractionnement",
+    "obligations",
+    "report",
+    "motifs_valables"
+  ],
+  "events": [
+    "DEMANDER_CONGE",
+    "CHOISIR_FORMULE",
+    "EMPLOYEUR_ACCEPTE",
+    "EMPLOYEUR_REPORTE",
+    "ONEM_OCTROIE"
+  ],
+  "initial": "information",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "ONEM",
+        "authorityType": "ONEM",
+        "region": "fédéral",
+        "title": "Congé parental",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.onem.be/fr/documentation/feuille-info/t19",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

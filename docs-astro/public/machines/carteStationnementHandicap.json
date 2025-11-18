@@ -1,0 +1,30 @@
+{
+  "id": "carteStationnementHandicap",
+  "name": "Machine XState: Demande de carte de stationnement pour personnes handicapées",
+  "category": "handicap",
+  "description": "Base légale: AR 4 août 1981 relatif à la carte de stationnement pour handicapés",
+  "states": [
+    "preparation",
+    "criteres",
+    "SOUMETTRE_DEMANDE",
+    "evaluation",
+    "criteresPrincipaux",
+    "decision",
+    "dureesValidite",
+    "actif",
+    "caracteristiques",
+    "refus",
+    "recours",
+    "procedure"
+  ],
+  "events": [
+    "SOUMETTRE_DEMANDE",
+    "EVALUATION_FAVORABLE",
+    "EVALUATION_DEFAVORABLE",
+    "RECOURS",
+    "RENOUVELER",
+    "DELIVRER_CARTE"
+  ],
+  "initial": "preparation",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

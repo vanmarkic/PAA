@@ -1,0 +1,70 @@
+{
+  "id": "teleAssistance",
+  "name": "Télé-Assistance (Tele-Assistance) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for tele-assistance services for elderly,",
+  "states": [
+    "attente",
+    "DEMANDER_SERVICE",
+    "evaluationEligibilite",
+    "ELIGIBLE",
+    "NON_ELIGIBLE",
+    "demandeRefusee",
+    "REINITIALISER",
+    "installationEquipement",
+    "ACTIVER_SERVICE",
+    "serviceActif",
+    "ALERTE_RECUE",
+    "TEST_EQUIPEMENT",
+    "RESILIER_SERVICE",
+    "traitementAlerte",
+    "VERIFIER_SITUATION",
+    "verificationAlerte",
+    "FAUSSE_ALERTE",
+    "URGENCE_CONFIRMEE",
+    "interventionUrgence",
+    "INTERVENTION_EFFECTUEE",
+    "testEquipement",
+    "serviceResilie"
+  ],
+  "events": [
+    "DEMANDER_SERVICE",
+    "EVALUER_ELIGIBILITE",
+    "ELIGIBLE",
+    "NON_ELIGIBLE",
+    "INSTALLER_EQUIPEMENT",
+    "ACTIVER_SERVICE",
+    "ALERTE_RECUE",
+    "VERIFIER_SITUATION",
+    "FAUSSE_ALERTE",
+    "URGENCE_CONFIRMEE",
+    "INTERVENTION_EFFECTUEE",
+    "TEST_EQUIPEMENT",
+    "RESILIER_SERVICE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.936Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Sécurité Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Téléassistance pour personnes âgées",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.belgium.be/fr/famille/aide_et_soins_a_domicile/teleassistance",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-nda-confidentialite",
+  "name": "Accord de confidentialité (NDA)",
+  "description": "  En tant qu'entreprise partageant des informations sensibles\n  Je veux établir un NDA efficace\n  Afin de protéger mes secrets lors de négociations",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le NDA protège les informations confidentielles"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "il peut être unilatéral ou bilatéral"
+      },
+      {
+        "keyword": "Et que",
+        "text": "les violations sont sanctionnables"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "0662314b-c25e-49cc-80bb-c9a7a7e1ba08",
+      "name": "NDA avant négociation de partenariat",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je vais révéler ma technologie"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le partenaire potentiel doit l'évaluer"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous signons un NDA"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je définis précisément les informations couvertes"
+        },
+        {
+          "keyword": "Et",
+          "text": "la durée de confidentialité (3-5 ans typique)"
+        },
+        {
+          "keyword": "Et",
+          "text": "les exceptions (déjà connues, publiques)"
+        },
+        {
+          "keyword": "Et",
+          "text": "les pénalités de 50000-100000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5cf0c3d3-3e37-4650-9b5e-16f9951b3207",
+      "name": "Violation de NDA et recours",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un partenaire a violé le NDA"
+        },
+        {
+          "keyword": "Et",
+          "text": "divulgué mes secrets à un concurrent"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'engage des poursuites"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je demande la cessation immédiate"
+        },
+        {
+          "keyword": "Et",
+          "text": "des dommages-intérêts"
+        },
+        {
+          "keyword": "Et",
+          "text": "peux obtenir une injonction"
+        },
+        {
+          "keyword": "Et",
+          "text": "la saisie des documents"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

@@ -1,0 +1,548 @@
+{
+  "id": "droits-civils-carte-identite",
+  "name": "Demande de Carte d'Identité Belge",
+  "description": "  En tant que citoyen belge ou résident\n  Je veux demander ou renouveler ma carte d'identité\n  Afin d'avoir un document d'identité valide",
+  "category": "droits-civils",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les tarifs 2024 sont:",
+        "dataTable": {
+          "headers": [
+            "Type de procédure",
+            "Tarif",
+            "Délai"
+          ],
+          "rows": [
+            {
+              "Type de procédure": "Normale",
+              "Tarif": "20€",
+              "Délai": "7 jours"
+            },
+            {
+              "Type de procédure": "Urgente",
+              "Tarif": "90€",
+              "Délai": "2 jours"
+            },
+            {
+              "Type de procédure": "Très urgente",
+              "Tarif": "135€",
+              "Délai": "24 heures"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "Et que",
+        "text": "la validité est de:",
+        "dataTable": {
+          "headers": [
+            "Age",
+            "Durée validité"
+          ],
+          "rows": [
+            {
+              "Age": "Moins de 18 ans",
+              "Durée validité": "5 ans"
+            },
+            {
+              "Age": "18 ans et plus",
+              "Durée validité": "10 ans"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "51b6b675-02d1-4b9d-b468-f6fe0cf350ac",
+      "name": "Première demande de carte d'identité pour un adulte belge",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 25 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je n'ai jamais eu de carte d'identité"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je fournis tous les documents requis:",
+          "dataTable": {
+            "headers": [
+              "Document"
+            ],
+            "rows": [
+              {
+                "Document": "Photo d'identité récente"
+              },
+              {
+                "Document": "Acte de naissance"
+              },
+              {
+                "Document": "Certificat de résidence"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande ma première carte d'identité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "la validité devrait être de 10 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "le coût devrait être de 20€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai de production devrait être de 7 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a749d6d0-2492-478b-87ca-9f1aff2f7733",
+      "name": "Renouvellement de carte d'identité expirée",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 35 ans"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma carte d'identité expire dans 15 jours"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande le renouvellement de ma carte"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "la validité devrait être de 10 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais pouvoir choisir entre:",
+          "dataTable": {
+            "headers": [
+              "Procédure",
+              "Tarif",
+              "Délai"
+            ],
+            "rows": [
+              {
+                "Procédure": "Normale",
+                "Tarif": "20€",
+                "Délai": "7 jours"
+              },
+              {
+                "Procédure": "Urgente",
+                "Tarif": "90€",
+                "Délai": "2 jours"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "ae71725c-e172-49a7-9b41-6476d47114ef",
+      "name": "Remplacement de carte d'identité volée avec procédure urgente",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "ma carte d'identité a été volée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai fait une déclaration à la police"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai besoin d'un document rapidement pour voyager"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande un remplacement en urgence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois présenter:",
+          "dataTable": {
+            "headers": [
+              "Document"
+            ],
+            "rows": [
+              {
+                "Document": "Déclaration de vol (PV)"
+              },
+              {
+                "Document": "Photo d'identité récente"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "le coût devrait être de 90€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai devrait être de 2 jours maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "8e75aad4-72d8-4923-b5a8-54f84e682559",
+      "name": "Demande Kids-ID pour enfant mineur",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon enfant a 8 ans"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il est de nationalité belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai l'autorité parentale"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une Kids-ID pour mon enfant"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir:",
+          "dataTable": {
+            "headers": [
+              "Document"
+            ],
+            "rows": [
+              {
+                "Document": "Photo d'identité de l'enfant"
+              },
+              {
+                "Document": "Consentement des deux parents"
+              },
+              {
+                "Document": "Preuve d'autorité parentale"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "la validité devrait être de 5 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "le coût devrait être de 10€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la carte devrait inclure les coordonnées d'urgence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "67b59213-230e-45c2-9433-a5573d8096ad",
+      "name": "Refus pour documents incomplets",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai 30 ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte d'identité sans photo conforme"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "Et",
+          "text": "le motif devrait être \"Photo non conforme aux standards ICAO\""
+        },
+        {
+          "keyword": "Et",
+          "text": "je devrais recevoir la liste des exigences photo:",
+          "dataTable": {
+            "headers": [
+              "Exigence"
+            ],
+            "rows": [
+              {
+                "Exigence": "Fond uni et clair"
+              },
+              {
+                "Exigence": "Face visible, expression neutre"
+              },
+              {
+                "Exigence": "Pas de couvre-chef (sauf religieux)"
+              },
+              {
+                "Exigence": "Photo de moins de 6 mois"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "4b6f5915-0437-4fa5-a4b9-bd6c19117f69",
+      "name": "Changement d'adresse avec carte valide",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai une carte d'identité valide"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je déménage dans une autre commune"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je signale mon changement d'adresse"
+        },
+        {
+          "keyword": "Alors",
+          "text": "ma carte devrait être mise à jour"
+        },
+        {
+          "keyword": "Et",
+          "text": "je dois me présenter à la nouvelle commune dans les 8 jours"
+        },
+        {
+          "keyword": "Et",
+          "text": "un autocollant avec la nouvelle adresse sera apposé"
+        },
+        {
+          "keyword": "Et",
+          "text": "le coût devrait être gratuit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "efe8f741-d8f5-4ed8-bf03-afa317fb7ef8",
+      "name": "Calcul de validité selon l'âge",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le demandeur a <age> ans"
+        },
+        {
+          "keyword": "Quand",
+          "text": "il demande une carte d'identité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la validité devrait être de <validite> ans"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "age",
+            "validite"
+          ],
+          "rows": [
+            {
+              "name": "d5645f3a-a1fc-4dc7-91d9-e54fe1ad4dd1",
+              "values": {
+                "age": "5",
+                "validite": "5"
+              }
+            },
+            {
+              "name": "e6a927ac-b556-4359-a07b-f124fc249c86",
+              "values": {
+                "age": "12",
+                "validite": "5"
+              }
+            },
+            {
+              "name": "a7201513-7b29-4a17-ad4d-df4f769b41f6",
+              "values": {
+                "age": "17",
+                "validite": "5"
+              }
+            },
+            {
+              "name": "db6feeff-64ba-43e2-acf8-db3560ed0f9f",
+              "values": {
+                "age": "18",
+                "validite": "10"
+              }
+            },
+            {
+              "name": "fac148d6-f0e3-4505-b73f-e8d174000e70",
+              "values": {
+                "age": "25",
+                "validite": "10"
+              }
+            },
+            {
+              "name": "2f83a195-814f-4c78-9af4-07272b0af9a8",
+              "values": {
+                "age": "65",
+                "validite": "10"
+              }
+            },
+            {
+              "name": "f63cd1b9-4b8e-4c98-89d4-300f95654c3f",
+              "values": {
+                "age": "75",
+                "validite": "10"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "8b72a5d1-8fe5-4544-bb03-2da3fea51004",
+      "name": "Procédure pour personne handicapée ne pouvant se déplacer",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis une personne à mobilité réduite"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je ne peux pas me déplacer à la commune"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai un certificat médical attestant de mon incapacité"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte d'identité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "un agent communal devrait se déplacer à mon domicile"
+        },
+        {
+          "keyword": "Et",
+          "text": "la procédure devrait être gratuite"
+        },
+        {
+          "keyword": "Et",
+          "text": "les empreintes digitales peuvent être exemptées sur base médicale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "008e101f-5ec9-4a33-8a4f-667c0c6f4184",
+      "name": "Carte d'identité pour Belge résidant à l'étranger",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis un citoyen belge"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je réside en France"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis inscrit au consulat belge"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je demande une carte d'identité"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois la demander au consulat belge"
+        },
+        {
+          "keyword": "Et",
+          "text": "la validité devrait être de 10 ans"
+        },
+        {
+          "keyword": "Et",
+          "text": "le délai peut être plus long (jusqu'à 6 semaines)"
+        },
+        {
+          "keyword": "Et",
+          "text": "les frais consulaires s'ajoutent au tarif de base"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.949Z"
+}

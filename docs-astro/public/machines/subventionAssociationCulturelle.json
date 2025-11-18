@@ -1,0 +1,33 @@
+{
+  "id": "subventionAssociationCulturelle",
+  "name": "Subvention Association Culturelle",
+  "category": "culture",
+  "description": "",
+  "states": [
+    "depotDossierSubside",
+    "DEPOSER_DOSSIER",
+    "organismes",
+    "instructionDossier",
+    "DOSSIER_COMPLET",
+    "evaluationProjet",
+    "EVALUATION_COMMISSION",
+    "decisionSubside",
+    "SUBSIDE_ACCORDE",
+    "DEMANDE_CONVENTIONNEMENT",
+    "montants",
+    "subsidePonctuel",
+    "procedureConventionnement",
+    "CONVENTIONNEMENT_ACCORDE",
+    "subsideStructurel"
+  ],
+  "events": [
+    "DEPOSER_DOSSIER",
+    "DOSSIER_COMPLET",
+    "EVALUATION_COMMISSION",
+    "SUBSIDE_ACCORDE",
+    "DEMANDE_CONVENTIONNEMENT",
+    "CONVENTIONNEMENT_ACCORDE"
+  ],
+  "initial": "depotDossierSubside",
+  "generated": "2025-11-18T10:17:36.928Z"
+}

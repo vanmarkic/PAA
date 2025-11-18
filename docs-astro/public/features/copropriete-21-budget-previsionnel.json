@@ -1,0 +1,183 @@
+{
+  "id": "copropriete-21-budget-previsionnel",
+  "name": "Établissement du Budget Prévisionnel",
+  "description": "  En tant que syndic\n  Je veux établir le budget prévisionnel\n  Afin de planifier les dépenses annuelles",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "l'exercice comptable approche"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "1aa5ce66-9964-4a16-9c05-99a67f16e6fb",
+      "name": "Préparation budget annuel standard",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'AG ordinaire approche"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le budget précédent était de 50000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je prépare le nouveau budget"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il comprend:",
+          "dataTable": {
+            "headers": [
+              "Poste",
+              "% Budget",
+              "Montant"
+            ],
+            "rows": [
+              {
+                "Poste": "Entretien courant",
+                "% Budget": "25%",
+                "Montant": "12500€"
+              },
+              {
+                "Poste": "Énergie communs",
+                "% Budget": "20%",
+                "Montant": "10000€"
+              },
+              {
+                "Poste": "Assurances",
+                "% Budget": "10%",
+                "Montant": "5000€"
+              },
+              {
+                "Poste": "Honoraires syndic",
+                "% Budget": "15%",
+                "Montant": "7500€"
+              },
+              {
+                "Poste": "Fonds réserve",
+                "% Budget": "10%",
+                "Montant": "5000€"
+              },
+              {
+                "Poste": "Frais administratifs",
+                "% Budget": "5%",
+                "Montant": "2500€"
+              },
+              {
+                "Poste": "Petites réparations",
+                "% Budget": "10%",
+                "Montant": "5000€"
+              },
+              {
+                "Poste": "Divers et imprévus",
+                "% Budget": "5%",
+                "Montant": "2500€"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "6b9f43aa-7b92-49d2-8113-f410b3e33380",
+      "name": "Ajustement pour inflation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "l'inflation est de 4%"
+        },
+        {
+          "keyword": "Et que",
+          "text": "certains postes sont indexés"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule les ajustements"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'augmentation est:",
+          "dataTable": {
+            "headers": [
+              "Poste",
+              "Indexation"
+            ],
+            "rows": [
+              {
+                "Poste": "Salaires/honoraires",
+                "Indexation": "+4%"
+              },
+              {
+                "Poste": "Énergie",
+                "Indexation": "+8% estimation"
+              },
+              {
+                "Poste": "Assurances",
+                "Indexation": "+3% contrat"
+              },
+              {
+                "Poste": "Entretien",
+                "Indexation": "+4% général"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "83e6d38f-5e4b-4a06-b099-fb8be93024ea",
+      "name": "Vote budget déficitaire interdit",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "les dépenses prévues sont 60000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les recettes prévues sont 55000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le budget est soumis à l'AG"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il doit être équilibré"
+        },
+        {
+          "keyword": "Soit",
+          "text": "par augmentation des charges"
+        },
+        {
+          "keyword": "Soit",
+          "text": "par réduction des dépenses"
+        },
+        {
+          "keyword": "Et",
+          "text": "ne peut être voté en déficit"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.946Z"
+}

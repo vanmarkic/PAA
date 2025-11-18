@@ -1,0 +1,66 @@
+{
+  "id": "aideSansAbri",
+  "name": "Aide aux Sans-Abri (Homeless Assistance) Workflow",
+  "category": "general",
+  "description": "This state machine represents the workflow for homeless assistance services,",
+  "states": [
+    "attente",
+    "SIGNALER_PERSONNE",
+    "premierContact",
+    "HEBERGEMENT_URGENCE",
+    "EVALUATION_SOCIALE",
+    "hebergementUrgence",
+    "EVALUATION_TERMINEE",
+    "evaluationSituation",
+    "elaborationPlanReintegration",
+    "ETABLIR_PLAN",
+    "accompagnementReintegration",
+    "INTEGRER_STRUCTURE",
+    "RETOUR_RUE",
+    "hebergementTransition",
+    "ETAPE_COMPLETEE",
+    "LOGEMENT_TROUVE",
+    "rechercheLogement",
+    "REINTEGRATION_REUSSIE",
+    "logementPermanent",
+    "REINITIALISER",
+    "retourRue"
+  ],
+  "events": [
+    "SIGNALER_PERSONNE",
+    "EVALUATION_SOCIALE",
+    "EVALUATION_TERMINEE",
+    "HEBERGEMENT_URGENCE",
+    "ETABLIR_PLAN",
+    "INTEGRER_STRUCTURE",
+    "ETAPE_COMPLETEE",
+    "LOGEMENT_TROUVE",
+    "REINTEGRATION_REUSSIE",
+    "RETOUR_RUE",
+    "REINITIALISER"
+  ],
+  "initial": "attente",
+  "generated": "2025-11-18T10:17:36.930Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Intégration Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Aide aux sans-abri",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/sans-abrisme",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Données anciennes (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

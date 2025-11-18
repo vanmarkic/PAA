@@ -1,0 +1,178 @@
+{
+  "id": "copropriete-22-appel-fonds-extraordinaire",
+  "name": "Appel de Fonds Extraordinaire",
+  "description": "  En tant que syndic\n  Je veux lancer un appel de fonds extraordinaire\n  Afin de financer des travaux exceptionnels",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "des travaux extraordinaires sont votés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "c0328ee1-0dd7-4654-ab24-7d6cdfeae8fb",
+      "name": "Appel pour travaux de toiture",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "les travaux coûtent 100000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "l'AG les a votés aux 2/3"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je lance l'appel de fonds"
+        },
+        {
+          "keyword": "Alors",
+          "text": "la répartition est:",
+          "dataTable": {
+            "headers": [
+              "Copropriétaire",
+              "Millièmes",
+              "Montant"
+            ],
+            "rows": [
+              {
+                "Copropriétaire": "Appartement A",
+                "Millièmes": "150",
+                "Montant": "15000€"
+              },
+              {
+                "Copropriétaire": "Appartement B",
+                "Millièmes": "100",
+                "Montant": "10000€"
+              },
+              {
+                "Copropriétaire": "Commerce C",
+                "Millièmes": "200",
+                "Montant": "20000€"
+              }
+            ]
+          }
+        },
+        {
+          "keyword": "Et",
+          "text": "l'échéancier peut être:",
+          "dataTable": {
+            "headers": [
+              "Échéance",
+              "Pourcentage"
+            ],
+            "rows": [
+              {
+                "Échéance": "Signature devis",
+                "Pourcentage": "30%"
+              },
+              {
+                "Échéance": "Début travaux",
+                "Pourcentage": "30%"
+              },
+              {
+                "Échéance": "Mi-travaux",
+                "Pourcentage": "20%"
+              },
+              {
+                "Échéance": "Réception",
+                "Pourcentage": "20%"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "7f459aeb-98b3-42ff-86b3-dd05f906b4be",
+      "name": "Copropriétaire demandant étalement",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un copropriétaire doit 15000€"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "il demande un étalement"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le syndic examine la demande"
+        },
+        {
+          "keyword": "Alors",
+          "text": "il peut accorder:",
+          "dataTable": {
+            "headers": [
+              "Durée",
+              "Conditions"
+            ],
+            "rows": [
+              {
+                "Durée": "6 mois",
+                "Conditions": "Sans intérêts si accord AG"
+              },
+              {
+                "Durée": "12 mois",
+                "Conditions": "Avec intérêts 4%"
+              },
+              {
+                "Durée": "24 mois",
+                "Conditions": "Garantie bancaire requise"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "809936e1-cb98-4db7-9a94-8d67c3b714df",
+      "name": "Utilisation fonds de réserve partielle",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le fonds de réserve contient 30000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les travaux coûtent 100000€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "l'AG décide l'utilisation du fonds"
+        },
+        {
+          "keyword": "Alors",
+          "text": "l'appel extraordinaire est de 70000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "le fonds doit être reconstitué sur 5 ans"
+        },
+        {
+          "keyword": "Soit",
+          "text": "6000€/an supplémentaires"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.945Z"
+}

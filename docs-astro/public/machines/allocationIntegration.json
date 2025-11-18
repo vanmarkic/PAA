@@ -1,0 +1,69 @@
+{
+  "id": "allocationIntegration",
+  "name": "Machine XState: Allocation d'Intégration (AI)",
+  "category": "handicap",
+  "description": "Base légale: Loi 27 février 1987 relative aux allocations aux personnes handicapées",
+  "states": [
+    "preparation",
+    "conditionsAcces",
+    "differentiation",
+    "SOUMETTRE_DEMANDE",
+    "evaluationAutonomie",
+    "guideBareme",
+    "seDeplacer",
+    "mangerPreparer",
+    "hygieneCorporelle",
+    "shabiller",
+    "entretienLogement",
+    "vivreSansSupervision",
+    "communiquer",
+    "responsabilitesSecurite",
+    "EVALUATION_FAVORABLE",
+    "octroi",
+    "montantsCategories2024",
+    "categorieI",
+    "categorieII",
+    "categorieIII",
+    "categorieIV",
+    "categorieV",
+    "paiement",
+    "caracteristiques",
+    "obligations",
+    "avantagesLies",
+    "REVISION",
+    "refus",
+    "recours",
+    "procedure"
+  ],
+  "events": [
+    "SOUMETTRE_DEMANDE",
+    "EVALUATION_FAVORABLE",
+    "EVALUATION_DEFAVORABLE",
+    "RECOURS",
+    "REVISION"
+  ],
+  "initial": "preparation",
+  "generated": "2025-11-18T10:17:36.937Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "DG Personnes handicapées",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Allocation d'intégration pour personnes handicapées",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://handicap.belgium.be/fr/allocations-et-aides/allocation-integration.htm",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0",
+    "dataFreshness": {
+      "status": "outdated",
+      "label": "Révision nécessaire (367 jours)",
+      "daysOld": 367
+    }
+  }
+}

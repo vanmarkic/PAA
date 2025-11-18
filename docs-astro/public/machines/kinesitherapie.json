@@ -1,0 +1,24 @@
+{
+  "id": "kinesitherapie",
+  "name": "Kinésithérapie",
+  "category": "health",
+  "description": "",
+  "states": [
+    "prescription",
+    "PRESCRIRE",
+    "evaluationInitiale",
+    "EVALUER",
+    "traitement",
+    "SEANCE_EFFECTUEE",
+    "PROGRAMME_COMPLETE",
+    "evaluationFinale"
+  ],
+  "events": [
+    "PRESCRIRE",
+    "EVALUER",
+    "SEANCE_EFFECTUEE",
+    "PROGRAMME_COMPLETE"
+  ],
+  "initial": "prescription",
+  "generated": "2025-11-18T10:17:36.937Z"
+}

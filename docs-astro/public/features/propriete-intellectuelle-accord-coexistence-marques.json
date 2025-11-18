@@ -1,0 +1,105 @@
+{
+  "id": "propriete-intellectuelle-accord-coexistence-marques",
+  "name": "Accord de coexistence de marques",
+  "description": "  En tant que titulaire de marque\n  Je veux négocier une coexistence pacifique\n  Afin d'éviter les conflits avec des marques similaires",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "des marques similaires peuvent coexister"
+      },
+      {
+        "keyword": "Et qu'",
+        "text": "un accord évite les procédures coûteuses"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'accord doit être équilibré"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "8217b4cb-f36b-4bea-9477-e6c133a9dc34",
+      "name": "Négociation d'accord de coexistence",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma marque \"NOVEX\" existe depuis 2018"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une entreprise dépose \"NOVEC\" dans un secteur proche"
+        },
+        {
+          "keyword": "Et que",
+          "text": "nous voulons éviter un conflit"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous négocions un accord"
+        },
+        {
+          "keyword": "Alors",
+          "text": "nous délimitons les territoires respectifs"
+        },
+        {
+          "keyword": "Et",
+          "text": "définissons les produits/services de chacun"
+        },
+        {
+          "keyword": "Et",
+          "text": "convenons de modifications visuelles"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous engageons à ne pas nous opposer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "34e5b17d-7cea-4931-9a6f-0f0ec410df93",
+      "name": "Accord avec limitations géographiques",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "deux marques identiques coexistent"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "elles opèrent dans des régions différentes"
+        },
+        {
+          "keyword": "Quand",
+          "text": "nous formalisons la coexistence"
+        },
+        {
+          "keyword": "Alors",
+          "text": "chacun limite son usage à sa région"
+        },
+        {
+          "keyword": "Et",
+          "text": "s'engage à ne pas s'étendre"
+        },
+        {
+          "keyword": "Et",
+          "text": "nous informons mutuellement des développements"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.951Z"
+}

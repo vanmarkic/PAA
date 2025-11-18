@@ -1,6 +1,6 @@
 {
-  "generated": "2025-11-18T10:11:27.800Z",
-  "totalMachines": 131,
+  "generated": "2025-11-18T10:17:35.944Z",
+  "totalMachines": 132,
   "categories": [
     "agriculture",
     "commerce",
@@ -1801,6 +1801,44 @@
         "REINITIALISER"
       ],
       "initial": "attente"
+    },
+    {
+      "id": "disEligibility",
+      "name": "Droit à l'Intégration Sociale (DIS) Eligibility",
+      "category": "general",
+      "description": "This state machine orchestrates the eligibility determination workflow",
+      "states": [
+        "idle",
+        "START_EVALUATION",
+        "checkingNationality",
+        "checkingResidence",
+        "checkingEuResidency",
+        "checkingAge",
+        "checkingResources",
+        "checkingResourceClaim",
+        "checkingOwnMeans",
+        "checkingWorkDisposition",
+        "eligible",
+        "RESET",
+        "ineligible"
+      ],
+      "events": [
+        "START_EVALUATION",
+        "NATIONALITY_VALID",
+        "NATIONALITY_INVALID",
+        "RESIDENCE_VALID",
+        "RESIDENCE_INVALID",
+        "AGE_VALID",
+        "AGE_INVALID",
+        "RESOURCES_INSUFFICIENT",
+        "RESOURCES_AVAILABLE",
+        "WORK_DISPOSITION_REQUIRED",
+        "WORK_DISPOSITION_EXEMPTED",
+        "DIS_ELIGIBLE",
+        "DIS_INELIGIBLE",
+        "RESET"
+      ],
+      "initial": "idle"
     },
     {
       "id": "fondsCreances",
@@ -5505,9 +5543,9 @@
     }
   ],
   "statistics": {
-    "totalStates": 2762,
-    "totalEvents": 1262,
-    "averageStatesPerMachine": "21.1",
-    "averageEventsPerMachine": "9.6"
+    "totalStates": 2775,
+    "totalEvents": 1276,
+    "averageStatesPerMachine": "21.0",
+    "averageEventsPerMachine": "9.7"
   }
 }

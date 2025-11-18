@@ -1,0 +1,362 @@
+{
+  "id": "statut-artiste-artist-copyright",
+  "name": "Droits d'Auteur et Droits Voisins",
+  "description": "  En tant qu'artiste créateur\n  Je veux gérer mes droits d'auteur\n  Afin de protéger et monétiser mes œuvres",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "les droits d'auteur comprennent:",
+        "dataTable": {
+          "headers": [
+            "Type de droit",
+            "Durée protection",
+            "Taux standard"
+          ],
+          "rows": [
+            {
+              "Type de droit": "Droit d'auteur œuvre",
+              "Durée protection": "Vie + 70 ans",
+              "Taux standard": "Variable"
+            },
+            {
+              "Type de droit": "Droits voisins interprète",
+              "Durée protection": "50 ans",
+              "Taux standard": "Variable"
+            },
+            {
+              "Type de droit": "Droit de suite plasticien",
+              "Durée protection": "Vie + 70 ans",
+              "Taux standard": "4% max"
+            },
+            {
+              "Type de droit": "Droits mécaniques",
+              "Durée protection": "Vie + 70 ans",
+              "Taux standard": "9.1%"
+            },
+            {
+              "Type de droit": "Droits SABAM",
+              "Durée protection": "Selon contrat",
+              "Taux standard": "10-15%"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "0a92963f-f23e-470f-be5c-817541838b9b",
+      "name": "Inscription à la SABAM",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis compositeur"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai créé 10 œuvres originales"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je veux protéger mes droits"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je m'inscris à la SABAM"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois fournir les partitions"
+        },
+        {
+          "keyword": "Et",
+          "text": "déclarer toutes mes œuvres"
+        },
+        {
+          "keyword": "Et",
+          "text": "signer un mandat de gestion"
+        },
+        {
+          "keyword": "Et",
+          "text": "payer la cotisation annuelle de 50€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "44a4819a-1d86-478e-8d5d-2152c4ee0e39",
+      "name": "Déclaration d'œuvre musicale",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "j'ai composé une nouvelle chanson"
+        },
+        {
+          "keyword": "Et que",
+          "text": "je suis membre SABAM"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je déclare l'œuvre"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je fournis le titre et les paroles"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'indique les co-auteurs éventuels"
+        },
+        {
+          "keyword": "Et",
+          "text": "je précise la répartition des droits"
+        },
+        {
+          "keyword": "Et",
+          "text": "l'œuvre est protégée immédiatement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "82613cd2-57e9-4c39-a48a-7d32e7d94773",
+      "name": "Perception de droits de diffusion",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "ma musique est diffusée à la radio"
+        },
+        {
+          "keyword": "Et que",
+          "text": "la radio a déclaré 50 diffusions"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le tarif est de 25€ par diffusion"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la SABAM perçoit les droits"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le montant brut est de 1250€"
+        },
+        {
+          "keyword": "Et",
+          "text": "la SABAM retient 12% de frais"
+        },
+        {
+          "keyword": "Et",
+          "text": "je reçois 1100€ de droits nets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "02f45d30-69b3-4a0c-ab91-8003d384226b",
+      "name": "Droit de suite sur vente d'œuvre",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis artiste plasticien"
+        },
+        {
+          "keyword": "Et qu'",
+          "text": "une de mes œuvres est revendue 50000€"
+        },
+        {
+          "keyword": "Et que",
+          "text": "c'est une vente aux enchères"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le droit de suite s'applique"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le taux est de 4% jusqu'à 50000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "je perçois 2000€ de droit de suite"
+        },
+        {
+          "keyword": "Et",
+          "text": "la société de gestion prélève 10% de frais"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0021adfa-0369-4210-85ea-abcd2af187ea",
+      "name": "Contrat de cession de droits",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un éditeur veut publier mon livre"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le tirage prévu est de 5000 exemplaires"
+        },
+        {
+          "keyword": "Et que",
+          "text": "le prix de vente est de 20€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je négocie la cession"
+        },
+        {
+          "keyword": "Alors",
+          "text": "mes droits d'auteur sont de 10% du prix"
+        },
+        {
+          "keyword": "Et",
+          "text": "j'obtiens une avance de 5000€"
+        },
+        {
+          "keyword": "Et",
+          "text": "les droits numériques sont négociés séparément"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "a7c88bbb-f1d2-4bdf-bc1b-8adf249e9dd9",
+      "name": "Protection contre le plagiat",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon œuvre a été plagiée"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai les preuves d'antériorité"
+        },
+        {
+          "keyword": "Et que",
+          "text": "j'ai déposé l'œuvre"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'engage une procédure"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux demander l'arrêt de l'exploitation"
+        },
+        {
+          "keyword": "Et",
+          "text": "réclamer des dommages et intérêts"
+        },
+        {
+          "keyword": "Et",
+          "text": "exiger la mention de mon nom"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "0ab30476-4aac-42aa-b468-5ef9c2467c8b",
+      "name": "Calcul des droits selon exploitation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "mon œuvre est exploitée en <type>"
+        },
+        {
+          "keyword": "Et que",
+          "text": "les recettes sont de <recettes>€"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je calcule mes droits"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le taux applicable est de <taux>%"
+        },
+        {
+          "keyword": "Et",
+          "text": "mes droits bruts sont de <droits>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "recettes",
+            "taux",
+            "droits"
+          ],
+          "rows": [
+            {
+              "name": "7de57187-f319-450f-b408-9bed1aa7033b",
+              "values": {
+                "type": "streaming",
+                "recettes": "10000",
+                "taux": "12",
+                "droits": "1200"
+              }
+            },
+            {
+              "name": "06fc8e79-06c3-4735-a121-d9360decd3f5",
+              "values": {
+                "type": "téléchargement",
+                "recettes": "5000",
+                "taux": "15",
+                "droits": "750"
+              }
+            },
+            {
+              "name": "4336d64c-9f9b-4bd5-a57e-90de7e27a7b1",
+              "values": {
+                "type": "synchronisation",
+                "recettes": "20000",
+                "taux": "50",
+                "droits": "10000"
+              }
+            },
+            {
+              "name": "69187fe5-34d2-43df-9b6f-399fa811715e",
+              "values": {
+                "type": "reproduction",
+                "recettes": "8000",
+                "taux": "10",
+                "droits": "800"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "language": "fr"
+  },
+  "generated": "2025-11-18T10:17:36.954Z"
+}
