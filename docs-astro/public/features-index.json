@@ -1,6 +1,6 @@
 {
-  "generated": "2025-11-18T10:17:36.955Z",
-  "total": 90,
+  "generated": "2025-11-18T10:42:07.687Z",
+  "total": 91,
   "features": [
     {
       "id": "benefits-aide-logement",
@@ -45,6 +45,11 @@
     {
       "id": "benefits-credit-temps",
       "name": "Crédit-temps et Interruption de Carrière",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+      "name": "Droit à l'intégration sociale en Belgique",
       "category": "benefits"
     },
     {

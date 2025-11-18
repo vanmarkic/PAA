@@ -60,7 +60,7 @@
   },
   "scenarios": [
     {
-      "id": "5dc07232-90f9-4681-a083-bcef00fb9f25",
+      "id": "7f65dfd3-00d9-401d-a935-62b054cb4bd3",
       "name": "Personne sans titre de séjour - aide médicale urgente uniquement",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "5e7a9f3e-ba69-4d40-b4e8-224d1d9b331a",
+      "id": "94e74d2e-a8bf-4246-ba53-b4444eead52d",
       "name": "Mineur non accompagné - aide sociale spécifique",
       "description": "",
       "tags": [],
@@ -154,7 +154,7 @@
       "isOutline": false
     },
     {
-      "id": "4a9699df-b5a6-4c21-a64b-04e2571ab047",
+      "id": "06684f2f-818f-48c2-9a95-eb5d6a67940c",
       "name": "Étudiant étranger hors UE - aide sociale limitée",
       "description": "",
       "tags": [],
@@ -203,7 +203,7 @@
       "isOutline": false
     },
     {
-      "id": "78145cd3-9477-49d1-8c4f-2d5318a600f6",
+      "id": "d4f4578d-4e55-451b-8194-c20abf63621e",
       "name": "Personne en attente d'allocations de chômage",
       "description": "",
       "tags": [],
@@ -252,7 +252,7 @@
       "isOutline": false
     },
     {
-      "id": "1eeebc8b-03cf-4b8a-b596-47e05e97abee",
+      "id": "5e7adad7-e850-4e60-9e99-ea996a72b2b3",
       "name": "Famille avec enfants - aide en nature",
       "description": "",
       "tags": [],
@@ -317,7 +317,7 @@
       "isOutline": false
     },
     {
-      "id": "40bad978-e25c-4010-9150-b2ee026349e8",
+      "id": "b16d63d1-c914-41c7-8eef-5b0d79ca753a",
       "name": "Personne âgée avec GRAPA insuffisante",
       "description": "",
       "tags": [],
@@ -390,7 +390,7 @@
       "isOutline": false
     },
     {
-      "id": "41af1123-1de8-478f-aae6-fae1f9735721",
+      "id": "89dd950b-7459-4e75-808f-1f2c433d2d0f",
       "name": "Européen en séjour de moins de 3 mois",
       "description": "",
       "tags": [],
@@ -443,7 +443,7 @@
       "isOutline": false
     },
     {
-      "id": "29c2775a-18e9-4d65-812e-ed82a48a6e48",
+      "id": "fd167b9b-1e1b-4df5-a81e-8b72b60d1775",
       "name": "Personne avec handicap - aide sociale spécifique",
       "description": "",
       "tags": [],
@@ -512,7 +512,7 @@
       "isOutline": false
     },
     {
-      "id": "ee2d6472-a9d1-48d1-8a5a-d0636c12e25a",
+      "id": "afc58e61-c798-45f6-8f8d-577dc5e2a420",
       "name": "Aide sociale équivalente au RIS",
       "description": "",
       "tags": [],
@@ -554,7 +554,7 @@
           ],
           "rows": [
             {
-              "name": "cb6a7e2d-191e-4efe-9b42-2d4e12f2af09",
+              "name": "d8e28bdd-7625-4de9-a7ae-c240face8710",
               "values": {
                 "situation": "personne isolée sans papiers",
                 "age": "35",
@@ -563,7 +563,7 @@
               }
             },
             {
-              "name": "b5e798d6-9212-4c13-bc25-7a940b1f28c5",
+              "name": "31baae87-5632-4f90-813d-afe93e91ba7d",
               "values": {
                 "situation": "mineur non accompagné",
                 "age": "17",
@@ -572,7 +572,7 @@
               }
             },
             {
-              "name": "bab3fe6e-842b-4d3e-863e-cb24c03f7660",
+              "name": "43a1813b-393d-4e8c-b1db-f51479a00b72",
               "values": {
                 "situation": "européen < 3 mois séjour",
                 "age": "28",
@@ -581,7 +581,7 @@
               }
             },
             {
-              "name": "7571f453-052d-4827-9fc5-dd33e1b50402",
+              "name": "c559b080-36c5-4597-bcc3-493c9b354566",
               "values": {
                 "situation": "demandeur d'asile",
                 "age": "30",
@@ -595,7 +595,7 @@
       "isOutline": true
     },
     {
-      "id": "485c945c-6584-49f0-bf6c-0f31bad89e17",
+      "id": "328e274f-387b-4437-aeab-493d38a8eaf4",
       "name": "Procédure de demande d'aide sociale",
       "description": "",
       "tags": [],
@@ -655,7 +655,7 @@
       "isOutline": false
     },
     {
-      "id": "b5e17a88-13eb-49e6-a384-aa14e7f5f517",
+      "id": "ab95720a-fe52-4a65-b6d2-139b7cb7462b",
       "name": "Obligations du bénéficiaire d'aide sociale",
       "description": "",
       "tags": [],
@@ -700,7 +700,7 @@
       "isOutline": false
     },
     {
-      "id": "c5268a73-5e7a-4496-9f82-f00b7dfb904d",
+      "id": "3a6318ab-6d64-4865-b0ba-fd8fc118bda9",
       "name": "Récupération de l'aide sociale",
       "description": "",
       "tags": [],
@@ -757,7 +757,7 @@
       "isOutline": false
     },
     {
-      "id": "54fd65a1-aa6a-4d4f-b94d-345a95d45f69",
+      "id": "d81e7dc0-a914-4f66-b8df-c9c2496c9f47",
       "name": "Aide sociale d'urgence",
       "description": "",
       "tags": [],
@@ -821,5 +821,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.940Z"
+  "generated": "2025-11-18T10:42:07.673Z"
 }

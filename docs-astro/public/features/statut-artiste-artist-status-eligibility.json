@@ -40,7 +40,7 @@
   },
   "scenarios": [
     {
-      "id": "2b5a6e5c-4eb9-401c-a1bd-7b527caeaea2",
+      "id": "74ddf8c3-9abd-4325-b53d-42abdf861013",
       "name": "Artiste professionnel éligible au statut complet",
       "description": "",
       "tags": [],
@@ -85,7 +85,7 @@
       "isOutline": false
     },
     {
-      "id": "dfece70e-9541-4982-b630-9ace24db8633",
+      "id": "aaa5ff27-ef0d-4675-b5c2-903b9dcde835",
       "name": "Artiste débutant avec dérogation",
       "description": "",
       "tags": [],
@@ -130,7 +130,7 @@
       "isOutline": false
     },
     {
-      "id": "7723aa57-7809-446a-981a-3d717eba80f4",
+      "id": "d34fa782-3444-4780-90aa-fc15810b2825",
       "name": "Artiste avec revenus mixtes éligible",
       "description": "",
       "tags": [],
@@ -175,7 +175,7 @@
       "isOutline": false
     },
     {
-      "id": "4718c45e-8ca7-45e0-8c0e-c80f321c6c8f",
+      "id": "73e2d3f0-6b32-4cc8-bd85-509a29a867ac",
       "name": "Technicien du spectacle éligible",
       "description": "",
       "tags": [],
@@ -216,7 +216,7 @@
       "isOutline": false
     },
     {
-      "id": "b476d498-c9f0-45b8-91db-5b6db020bd42",
+      "id": "840e3ed6-ab58-434d-af77-fba497215236",
       "name": "Artiste plasticien avec ventes d'œuvres",
       "description": "",
       "tags": [],
@@ -261,7 +261,7 @@
       "isOutline": false
     },
     {
-      "id": "18b8663f-faae-4023-a0f4-90ca77fdbd4a",
+      "id": "f5a7eb89-4b0b-40bd-9f41-0d56d71a300d",
       "name": "Musicien avec cachets insuffisants",
       "description": "",
       "tags": [],
@@ -298,7 +298,7 @@
       "isOutline": false
     },
     {
-      "id": "d6e8ab88-56c5-43da-8662-141a21253cda",
+      "id": "99dc3a6d-3cbb-4fe6-a437-d66a299fe7a1",
       "name": "Artiste avec trop de revenus non-artistiques",
       "description": "",
       "tags": [],
@@ -339,7 +339,7 @@
       "isOutline": false
     },
     {
-      "id": "aff697f1-b03e-4765-bfee-0f68e708fa71",
+      "id": "d4777e66-895c-44a6-9fae-2a33b462192a",
       "name": "Artiste étranger avec permis de travail",
       "description": "",
       "tags": [],
@@ -376,7 +376,7 @@
       "isOutline": false
     },
     {
-      "id": "42dc44c6-5a27-46e0-9e84-210ac18cf655",
+      "id": "8e50f802-0327-4528-843c-f07645123ed8",
       "name": "Calcul des jours prestés selon l'activité",
       "description": "",
       "tags": [],
@@ -410,7 +410,7 @@
           ],
           "rows": [
             {
-              "name": "d055522f-e38c-44a9-9690-e303249bbaa7",
+              "name": "ce17cc99-9831-4269-b537-defad11a7302",
               "values": {
                 "type_artiste": "musicien",
                 "activité": "concerts",
@@ -419,7 +419,7 @@
               }
             },
             {
-              "name": "2dd9d580-31b2-4207-ad8f-dc84d787aef8",
+              "name": "ee6c4569-8d1a-4228-84f0-adaf85f9485e",
               "values": {
                 "type_artiste": "danseur",
                 "activité": "répétitions",
@@ -428,7 +428,7 @@
               }
             },
             {
-              "name": "f546a46b-79f8-465f-aabe-6f58bfcfe74f",
+              "name": "ddf9888b-0b56-4211-9ee6-e9f418f54e28",
               "values": {
                 "type_artiste": "plasticien",
                 "activité": "expositions",
@@ -437,7 +437,7 @@
               }
             },
             {
-              "name": "fc48e298-eb6c-4dce-b814-feb04aa6cf41",
+              "name": "7d475d97-6de9-40f5-b817-e0382e9c14c8",
               "values": {
                 "type_artiste": "écrivain",
                 "activité": "résidences",
@@ -446,7 +446,7 @@
               }
             },
             {
-              "name": "2c283804-8c72-45bb-86d2-d146eec3de54",
+              "name": "e8e9f2bf-69b4-431f-a679-0901fcce5a75",
               "values": {
                 "type_artiste": "metteur en scène",
                 "activité": "créations",
@@ -455,7 +455,7 @@
               }
             },
             {
-              "name": "8d8138cd-0929-4e8e-aef3-f3a174bd92a9",
+              "name": "01d90163-706e-4544-b430-5cad2b55ca59",
               "values": {
                 "type_artiste": "photographe",
                 "activité": "reportages",
@@ -469,7 +469,7 @@
       "isOutline": true
     },
     {
-      "id": "f92829dc-6d94-4abe-9911-84588a0fbee3",
+      "id": "346045ff-9a77-48e7-b552-d38b12f25450",
       "name": "Cumul avec allocations de chômage artistique",
       "description": "",
       "tags": [],
@@ -510,7 +510,7 @@
       "isOutline": false
     },
     {
-      "id": "ada2757f-75be-4573-8ca1-6a036526633e",
+      "id": "4ba3c841-cf8f-4f72-9295-ba8dea19fa32",
       "name": "Passage du statut amateur au professionnel",
       "description": "",
       "tags": [],
@@ -550,5 +550,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.954Z"
+  "generated": "2025-11-18T10:42:07.686Z"
 }

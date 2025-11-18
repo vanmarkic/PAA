@@ -44,7 +44,7 @@
   },
   "scenarios": [
     {
-      "id": "15ebe07f-fdf5-43cb-a560-5cbe31024cff",
+      "id": "5b473606-6c0c-4f0f-9e99-324692d2cc9c",
       "name": "Organisation d'une consultation communale",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "945b08d4-54e6-4153-89b7-2c77540062e6",
+      "id": "d2c1f560-12e8-4f36-a406-ab7646515029",
       "name": "Vote lors d'un référendum constitutionnel",
       "description": "",
       "tags": [],
@@ -158,7 +158,7 @@
       "isOutline": false
     },
     {
-      "id": "ca9f1d8f-9a58-4d13-bd42-e9e52aea8f43",
+      "id": "0dc46d76-2e9b-4722-b8aa-23e76f4f4af4",
       "name": "Dépouillement et validation des résultats",
       "description": "",
       "tags": [],
@@ -221,7 +221,7 @@
       "isOutline": false
     },
     {
-      "id": "10a8b6c5-33b4-40fd-adf0-2d536b35cf74",
+      "id": "9addd178-1ca9-4183-881b-0f2a9327983b",
       "name": "Consultation populaire échouant au quorum",
       "description": "",
       "tags": [],
@@ -258,7 +258,7 @@
       "isOutline": false
     },
     {
-      "id": "5735119f-25ad-4268-a3e8-21d9fa9983b0",
+      "id": "660b0a07-491c-411f-bdbd-7fc7e1dadf63",
       "name": "Initiative citoyenne déclenchant un référendum",
       "description": "",
       "tags": [],
@@ -295,7 +295,7 @@
       "isOutline": false
     },
     {
-      "id": "d5dc494a-f578-4ba2-84ac-2c6d5a709b1b",
+      "id": "7421802b-9200-4fe8-b0f6-b3ee5f1b4b9f",
       "name": "Campagne référendaire avec comités",
       "description": "",
       "tags": [],
@@ -352,7 +352,7 @@
       "isOutline": false
     },
     {
-      "id": "2444a694-9435-4b0b-8752-fb8f609bd13f",
+      "id": "dd9314ce-9cba-4df3-bb92-51ee155e62ed",
       "name": "Vote électronique lors d'une consultation",
       "description": "",
       "tags": [],
@@ -401,7 +401,7 @@
       "isOutline": false
     },
     {
-      "id": "33e7aa55-5fc7-4b91-978e-934af2bd06bb",
+      "id": "e5e59f19-a7bb-499f-953a-805f8b32870c",
       "name": "Contestation des résultats d'un référendum",
       "description": "",
       "tags": [],
@@ -462,7 +462,7 @@
       "isOutline": false
     },
     {
-      "id": "dd63b179-2c48-46bc-9193-330768178762",
+      "id": "70b4df66-792b-4425-8f7a-3ddce63fe557",
       "name": "Participation selon le type de consultation",
       "description": "",
       "tags": [],
@@ -505,7 +505,7 @@
           ],
           "rows": [
             {
-              "name": "2190a61d-584d-4e0e-802d-f2fa66bee521",
+              "name": "cfeecb76-b50f-4cf8-979f-1d21863b61e2",
               "values": {
                 "type": "référendum",
                 "statut_citoyen": "citoyen belge",
@@ -515,7 +515,7 @@
               }
             },
             {
-              "name": "11f1686e-6567-441a-9c49-7c3e357858e0",
+              "name": "46440082-86ad-4745-a3a2-97f93246f0fc",
               "values": {
                 "type": "référendum",
                 "statut_citoyen": "citoyen belge",
@@ -525,7 +525,7 @@
               }
             },
             {
-              "name": "e281d790-34ca-4e86-89be-bcfc028e5dd0",
+              "name": "79f05409-df14-4e47-9e45-785029b71985",
               "values": {
                 "type": "référendum",
                 "statut_citoyen": "citoyen EU",
@@ -535,7 +535,7 @@
               }
             },
             {
-              "name": "30c0375c-413a-4f11-a3b5-3e6c249f9b94",
+              "name": "edd857d9-0f30-400d-a27c-9ee0bfb98300",
               "values": {
                 "type": "consultation",
                 "statut_citoyen": "citoyen belge",
@@ -545,7 +545,7 @@
               }
             },
             {
-              "name": "ec2085bb-fab7-4721-b8ee-62ac40afcd67",
+              "name": "a8befb69-777a-41da-8911-e971a36f3605",
               "values": {
                 "type": "consultation",
                 "statut_citoyen": "résident local",
@@ -555,7 +555,7 @@
               }
             },
             {
-              "name": "870f255a-4cac-485f-95ac-cb729e9a6b2b",
+              "name": "677c1929-bba0-446c-adcd-feff8e0e3d9a",
               "values": {
                 "type": "consultation",
                 "statut_citoyen": "citoyen belge",
@@ -570,7 +570,7 @@
       "isOutline": true
     },
     {
-      "id": "e92b646c-6181-4126-bfaa-363e75f90177",
+      "id": "9f5f27ac-93ab-4c80-aa0c-abbc3bcbd3e6",
       "name": "Budget participatif communal",
       "description": "",
       "tags": [],
@@ -622,5 +622,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.948Z"
+  "generated": "2025-11-18T10:42:07.681Z"
 }

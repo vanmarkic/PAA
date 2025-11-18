@@ -119,7 +119,7 @@
   },
   "scenarios": [
     {
-      "id": "e8e7c8ec-3ea9-42c5-bd61-bf313e6d97d9",
+      "id": "a8b117af-e17b-4571-be07-c294d4a56ef3",
       "name": "Personne isolée à Bruxelles éligible au logement social",
       "description": "",
       "tags": [],
@@ -168,7 +168,7 @@
       "isOutline": false
     },
     {
-      "id": "224abfd1-0364-47d8-8bc7-34db571f3e45",
+      "id": "bd66c224-d68a-45b8-b3db-4713ea715bbf",
       "name": "Famille en Wallonie éligible au logement social",
       "description": "",
       "tags": [],
@@ -217,7 +217,7 @@
       "isOutline": false
     },
     {
-      "id": "51e965e0-baff-4359-871d-0c47dcaba68e",
+      "id": "775da70e-3c72-4d38-b8df-cbc719ae2e6a",
       "name": "Personne handicapée en Flandres avec majoration",
       "description": "",
       "tags": [],
@@ -266,7 +266,7 @@
       "isOutline": false
     },
     {
-      "id": "38c50c8c-e0ae-498c-8736-882f9c364d72",
+      "id": "74b7a5c8-3171-4d33-935f-310c5eff6f4a",
       "name": "Test de patrimoine en Flandres depuis 2024",
       "description": "",
       "tags": [],
@@ -311,7 +311,7 @@
       "isOutline": false
     },
     {
-      "id": "1d3af33a-6e25-4339-8c49-d39a0e05dca6",
+      "id": "ff7eda91-5ace-491a-a0ae-528e7189f9e0",
       "name": "Revenus trop élevés en Wallonie",
       "description": "",
       "tags": [],
@@ -352,7 +352,7 @@
       "isOutline": false
     },
     {
-      "id": "a47a02ef-9b23-4b18-89c0-e9726384883a",
+      "id": "35d0147d-43da-44b3-a85f-083bb40b2590",
       "name": "Propriétaire non éligible",
       "description": "",
       "tags": [],
@@ -389,7 +389,7 @@
       "isOutline": false
     },
     {
-      "id": "d4cf0183-6bd1-46e9-b1d0-faaf9269c3e0",
+      "id": "add7aff5-fa0a-44a3-9a44-dd1f5ba7c66d",
       "name": "Famille nombreuse avec priorité en Wallonie",
       "description": "",
       "tags": [],
@@ -458,7 +458,7 @@
       "isOutline": false
     },
     {
-      "id": "861fb402-a045-49d6-afa9-1807f10fd412",
+      "id": "5b9a2b74-1117-416e-8ec7-4bc702d7a02e",
       "name": "Étudiant majeur en Flandres",
       "description": "",
       "tags": [],
@@ -507,7 +507,7 @@
       "isOutline": false
     },
     {
-      "id": "b7523d5a-dd1b-444c-97ac-9e9c59996089",
+      "id": "b2f4ca41-37f4-4704-bcf6-eced072eebae",
       "name": "Sans-abri avec accompagnement social",
       "description": "",
       "tags": [],
@@ -552,7 +552,7 @@
       "isOutline": false
     },
     {
-      "id": "e254b0e0-34e0-42e8-af7d-c8bef455af92",
+      "id": "fa94194b-3107-46d5-9901-964f65d10644",
       "name": "Calcul du loyer social selon les revenus",
       "description": "",
       "tags": [],
@@ -593,7 +593,7 @@
           ],
           "rows": [
             {
-              "name": "b0f9e76b-8ea8-4fb6-b2f5-786931e6679e",
+              "name": "9f70df86-291b-4b5b-927f-14129790c548",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "revenu": "15000",
@@ -601,7 +601,7 @@
               }
             },
             {
-              "name": "43726f35-7480-447c-a925-f19a01afe345",
+              "name": "30ae90ac-1c16-46b8-a256-6ff6f8bc9381",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "revenu": "25000",
@@ -609,7 +609,7 @@
               }
             },
             {
-              "name": "20cde5af-4a0a-44c1-b238-1e07e01bb4b0",
+              "name": "488848fe-4898-467a-b0dc-742f17020e52",
               "values": {
                 "région": "Wallonie",
                 "revenu": "18000",
@@ -617,7 +617,7 @@
               }
             },
             {
-              "name": "51a928ce-2ea6-4850-8df2-14886210869a",
+              "name": "e9f0b989-c9e6-4e74-a849-40f4f64c3a0b",
               "values": {
                 "région": "Wallonie",
                 "revenu": "30000",
@@ -625,7 +625,7 @@
               }
             },
             {
-              "name": "494a5bba-7c17-40f9-a018-b4b39b4a2c29",
+              "name": "bed28753-4b41-415b-9d3a-455a25ddec8b",
               "values": {
                 "région": "Flandres",
                 "revenu": "20000",
@@ -638,7 +638,7 @@
       "isOutline": true
     },
     {
-      "id": "4f352d7d-8053-4e99-9718-0021eeb7b0f6",
+      "id": "2c984900-2b4a-4efb-97c3-91f01e7468e2",
       "name": "Éligibilité selon région et composition familiale",
       "description": "",
       "tags": [],
@@ -691,7 +691,7 @@
           ],
           "rows": [
             {
-              "name": "2e75a40e-6cdb-4889-8317-2a573169b947",
+              "name": "45b63bb1-274d-41c0-bf31-efcd8b67567c",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "personne isolée",
@@ -703,7 +703,7 @@
               }
             },
             {
-              "name": "22fde834-b3b4-4c5b-bcad-3220129a820c",
+              "name": "8814ef71-444e-4547-b3b5-608d4281f5ae",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "personne isolée",
@@ -715,7 +715,7 @@
               }
             },
             {
-              "name": "e922b074-5c9e-443a-a6b4-c18eb9ee0c4b",
+              "name": "0599176c-8835-4a4e-9803-8b30fa178947",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "couple",
@@ -727,7 +727,7 @@
               }
             },
             {
-              "name": "0449dfa1-ccd3-493f-8049-8363ebbfb210",
+              "name": "05fb5742-ca28-4495-9b23-d920cdc026b2",
               "values": {
                 "région": "Flandres 2024",
                 "situation_familiale": "personne isolée",
@@ -739,7 +739,7 @@
               }
             },
             {
-              "name": "d6449fd7-5ae7-43d5-a8cd-c824688e2add",
+              "name": "9ffef7d2-4856-4c1b-a849-23e822a96648",
               "values": {
                 "région": "Flandres 2024",
                 "situation_familiale": "famille",
@@ -751,7 +751,7 @@
               }
             },
             {
-              "name": "8b169d4e-507b-4397-9d8f-f6405bd19231",
+              "name": "b2ef9cf1-32f6-4200-9055-68ef1533e714",
               "values": {
                 "région": "Flandres 2025",
                 "situation_familiale": "personne isolée",
@@ -763,7 +763,7 @@
               }
             },
             {
-              "name": "c3cf9fb0-6e40-4685-90c2-3f0f333504f6",
+              "name": "80408f40-9f95-474f-82f1-7a3d4e6de7e8",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "couple",
@@ -780,7 +780,7 @@
       "isOutline": true
     },
     {
-      "id": "c82dbd08-3571-485d-8400-8546b68ef3b5",
+      "id": "9e86428d-7e03-49d8-ac14-f5c38d3aaa92",
       "name": "Procédure d'inscription et documents requis",
       "description": "",
       "tags": [],
@@ -861,7 +861,7 @@
       "isOutline": false
     },
     {
-      "id": "5901573a-b8b3-44ac-a958-d119d0706c1d",
+      "id": "3167c148-eb64-47b6-9f8a-7591dcde1906",
       "name": "Mutation au sein du parc social",
       "description": "",
       "tags": [],
@@ -909,5 +909,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.942Z"
+  "generated": "2025-11-18T10:42:07.675Z"
 }

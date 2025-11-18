@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "fc9e7460-9bd5-4298-9e5f-3e5bf9a25cd3",
+      "id": "a271f5b4-64fb-43dd-a1a9-d28066a80892",
       "name": "Demande d'avis sur une question de principe",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "a720f93a-418a-4086-a8c7-ac228ba51102",
+      "id": "b6e636e2-3db9-4612-952c-68d3cd5487b9",
       "name": "État n'ayant pas ratifié le Protocole",
       "description": "",
       "tags": [],
@@ -106,7 +106,7 @@
       "isOutline": false
     },
     {
-      "id": "9bd87ff9-6f9f-4472-bdf6-2c1bad48a3c2",
+      "id": "ca07032a-368e-442e-b6b8-694d4429af23",
       "name": "Question trop abstraite refusée",
       "description": "",
       "tags": [],
@@ -150,5 +150,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.679Z"
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2025-11-18T10:17:36.955Z",
+  "generated": "2025-11-18T10:42:07.687Z",
   "total": 132,
   "machines": [
     {
@@ -203,11 +203,6 @@
       "category": "general"
     },
     {
-      "id": "disEligibility",
-      "name": "Droit à l'Intégration Sociale (DIS) Eligibility",
-      "category": "general"
-    },
-    {
       "id": "fondsCreances",
       "name": "Fonds de Créances (Claims Fund) Workflow",
       "category": "general"
@@ -230,6 +225,11 @@
     {
       "id": "logementSocial",
       "name": "Logement Social (Social Housing) Application Workflow",
+      "category": "general"
+    },
+    {
+      "id": "loiDu26Mai2002ConcernantLeDroitLIntGrati",
+      "name": "loiDu26Mai2002ConcernantLeDroitLIntGrati",
       "category": "general"
     },
     {

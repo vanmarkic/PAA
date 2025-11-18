@@ -36,7 +36,7 @@
   },
   "scenarios": [
     {
-      "id": "34ed35a3-f8c1-428a-90ed-448a6b68e921",
+      "id": "247bfeac-2814-4245-9faf-a5100e412e1a",
       "name": "Personne isolée sans revenus éligible au RIS",
       "description": "",
       "tags": [],
@@ -81,7 +81,7 @@
       "isOutline": false
     },
     {
-      "id": "ab11a791-9dc0-40cd-95b3-bdef01be3c0a",
+      "id": "6c1e82f6-5956-4f6c-b61d-d5c466ccefc0",
       "name": "Personne cohabitante éligible au RIS",
       "description": "",
       "tags": [],
@@ -126,7 +126,7 @@
       "isOutline": false
     },
     {
-      "id": "63544926-d8ad-4296-85c4-e77a14884221",
+      "id": "616d2f93-1f08-40c3-a6d5-ced3c77379d9",
       "name": "Parent isolé avec enfant à charge éligible",
       "description": "",
       "tags": [],
@@ -175,7 +175,7 @@
       "isOutline": false
     },
     {
-      "id": "0282fb3b-b60e-4fc3-b456-d2dccb2554e9",
+      "id": "2c0c435d-bbcb-478b-ae5b-ebf4adbe3c19",
       "name": "Personne trop jeune pour le RIS",
       "description": "",
       "tags": [],
@@ -212,7 +212,7 @@
       "isOutline": false
     },
     {
-      "id": "2b256db9-34e0-40ca-bbb5-95a0a08b513d",
+      "id": "6109c232-2450-414b-ab71-db81b2040628",
       "name": "Personne sans titre de séjour valide",
       "description": "",
       "tags": [],
@@ -249,7 +249,7 @@
       "isOutline": false
     },
     {
-      "id": "b44cbf34-8516-46f2-9bcf-5252f92e4150",
+      "id": "7819e9c9-0b3e-4257-b7e4-721a7396ced3",
       "name": "Patrimoine trop élevé pour le RIS",
       "description": "",
       "tags": [],
@@ -290,7 +290,7 @@
       "isOutline": false
     },
     {
-      "id": "9d9395bd-667e-4b6e-b0af-ba4fbf1737f1",
+      "id": "0b96caa7-3510-4a7c-9898-f2b8ef9faac5",
       "name": "Étudiant temps plein inéligible",
       "description": "",
       "tags": [],
@@ -331,7 +331,7 @@
       "isOutline": false
     },
     {
-      "id": "845721ff-b567-4912-b99a-935fc2324173",
+      "id": "9c96dc0f-f5a7-47ff-8480-a0c3bcb67532",
       "name": "Cumul RIS et revenus professionnels partiels",
       "description": "",
       "tags": [],
@@ -376,7 +376,7 @@
       "isOutline": false
     },
     {
-      "id": "c0963800-9d0b-470a-bb11-363a7e8dd040",
+      "id": "a3cf6a0f-577b-4788-abca-1411a099a744",
       "name": "Calcul RIS selon revenus et catégorie",
       "description": "",
       "tags": [],
@@ -417,7 +417,7 @@
           ],
           "rows": [
             {
-              "name": "c9a5656b-f1ad-47bb-9f1b-85b8fb93d312",
+              "name": "4b3ffb4d-11bc-414b-a515-83442ccab0f6",
               "values": {
                 "catégorie": "une personne isolée",
                 "revenu": "0",
@@ -425,7 +425,7 @@
               }
             },
             {
-              "name": "d68fd9e6-9925-4c15-a7f1-5128dc64403c",
+              "name": "4cb0e4e8-3b0c-4df3-953c-fcf4602dad12",
               "values": {
                 "catégorie": "une personne isolée",
                 "revenu": "300",
@@ -433,7 +433,7 @@
               }
             },
             {
-              "name": "8e8d31ce-6fe0-4349-95c9-e04bf1afaee4",
+              "name": "6e8182ea-7683-4ed3-9683-803d40582be8",
               "values": {
                 "catégorie": "cohabitant",
                 "revenu": "0",
@@ -441,7 +441,7 @@
               }
             },
             {
-              "name": "9a1965b0-1651-4bf3-82e6-a806bd546fd7",
+              "name": "02d00a03-8a7d-4ac6-9d42-bfe02a307105",
               "values": {
                 "catégorie": "cohabitant",
                 "revenu": "200",
@@ -449,7 +449,7 @@
               }
             },
             {
-              "name": "a149a7bd-35a6-4423-8e57-908f269da1f6",
+              "name": "eabae1cc-e74c-4b92-8dba-0954dd83d04d",
               "values": {
                 "catégorie": "parent isolé",
                 "revenu": "0",
@@ -457,7 +457,7 @@
               }
             },
             {
-              "name": "3002b1e6-95a4-4d3b-a9b6-e4a9c57a95df",
+              "name": "74791f5d-a5e7-41ac-99d7-8c261eb9fe28",
               "values": {
                 "catégorie": "parent isolé",
                 "revenu": "500",
@@ -470,7 +470,7 @@
       "isOutline": true
     },
     {
-      "id": "7bf37197-92bd-4330-86d2-360cd0c47b0c",
+      "id": "5b951342-1643-4621-a145-dc06223a3795",
       "name": "Obligations liées au RIS",
       "description": "",
       "tags": [],
@@ -503,7 +503,7 @@
       "isOutline": false
     },
     {
-      "id": "721bc5d2-3655-4a11-9748-c900e906f27d",
+      "id": "4ff5b9c5-b9a9-4b22-a37d-3c74479fe285",
       "name": "Comparaison RIS vs chômage",
       "description": "",
       "tags": [],
@@ -549,7 +549,7 @@
     "language": "fr",
     "version": "2024.1.0"
   },
-  "generated": "2025-11-18T10:17:36.944Z",
+  "generated": "2025-11-18T10:42:07.676Z",
   "legalSources": {
     "sources": [
       {

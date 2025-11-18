@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "ada4cada-f40d-4f6e-911d-daca267f2202",
+      "id": "831151e5-86ce-472e-ae50-1257faa9969f",
       "name": "Appel contre refus de brevet",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "30f9cbf5-008a-41b9-9d73-6027caa7d47b",
+      "id": "b12d571e-c28e-4c7f-98ab-cdb03b616c38",
       "name": "Recours contre refus de marque",
       "description": "",
       "tags": [],
@@ -97,5 +97,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.953Z"
+  "generated": "2025-11-18T10:42:07.684Z"
 }

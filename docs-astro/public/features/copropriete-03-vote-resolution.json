@@ -20,7 +20,7 @@
   },
   "scenarios": [
     {
-      "id": "91f1c7be-6d3c-4561-9c52-656a9927c703",
+      "id": "838776be-714f-4ec6-8e11-73a1ef2e3eff",
       "name": "Vote pour travaux d'entretien ordinaire",
       "description": "",
       "tags": [],
@@ -49,7 +49,7 @@
       "isOutline": false
     },
     {
-      "id": "91c8012b-ca73-4bc6-834e-e1966c6a18e2",
+      "id": "d78adc45-5ef8-48ba-bc45-8f0ad6c0546a",
       "name": "Vote pour modification du règlement",
       "description": "",
       "tags": [],
@@ -78,7 +78,7 @@
       "isOutline": false
     },
     {
-      "id": "0a9df5a1-dcef-4e8c-b5b1-1597dad22747",
+      "id": "1418ad45-d61e-4370-b38d-01ff4a680756",
       "name": "Rejet d'une résolution nécessitant l'unanimité",
       "description": "",
       "tags": [],
@@ -110,5 +110,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.679Z"
 }

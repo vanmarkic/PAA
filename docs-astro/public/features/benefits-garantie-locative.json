@@ -89,7 +89,7 @@
   },
   "scenarios": [
     {
-      "id": "53d33be9-025b-44c3-89ea-17fd0800e986",
+      "id": "fd0d4303-06f8-4021-aba3-23ef9b7ec705",
       "name": "Personne RIS demandant aide CPAS pour garantie",
       "description": "",
       "tags": [],
@@ -142,7 +142,7 @@
       "isOutline": false
     },
     {
-      "id": "3d735e92-9e1e-422b-8028-53e0d0c73ae3",
+      "id": "87a13fa1-e6e6-4ee6-adf8-e0ed4d20b3d3",
       "name": "Famille avec garantie bancaire via CPAS",
       "description": "",
       "tags": [],
@@ -195,7 +195,7 @@
       "isOutline": false
     },
     {
-      "id": "09ad30eb-39af-4ede-8acb-b9967efbef8a",
+      "id": "0ddf0628-3161-41d5-8fbe-ebcf8a1d8e66",
       "name": "Jeune sortant d'institution avec aide exceptionnelle",
       "description": "",
       "tags": [],
@@ -248,7 +248,7 @@
       "isOutline": false
     },
     {
-      "id": "b4b96e21-3523-418b-b6fa-9bf32be54d01",
+      "id": "4cf5714a-d495-4d74-b85c-8c5113eeef23",
       "name": "Personne surendettée en médiation",
       "description": "",
       "tags": [],
@@ -301,7 +301,7 @@
       "isOutline": false
     },
     {
-      "id": "59183359-fd00-4437-8a28-cd6bc0aeffb0",
+      "id": "93cf52ad-1ce1-4a47-97a9-361ff63fab50",
       "name": "Constitution progressive de garantie locative",
       "description": "",
       "tags": [],
@@ -350,7 +350,7 @@
       "isOutline": false
     },
     {
-      "id": "4838520f-c437-4937-8bc0-38ff8244f352",
+      "id": "cd24da07-539e-4b7b-bd8c-a5169ef8e503",
       "name": "Refus d'aide CPAS pour revenus suffisants",
       "description": "",
       "tags": [],
@@ -395,7 +395,7 @@
       "isOutline": false
     },
     {
-      "id": "63ff5045-f008-4075-931f-0c3a78dc4b69",
+      "id": "aebf0086-a2c9-4479-ba0f-b18ecf345474",
       "name": "Garantie via Fonds du Logement régional",
       "description": "",
       "tags": [],
@@ -444,7 +444,7 @@
       "isOutline": false
     },
     {
-      "id": "1e88e577-58b5-4163-b2c9-c010d24ba3e6",
+      "id": "5b7bbf62-2c3c-4846-8a53-4d2ddc4865ed",
       "name": "Changement de logement avec récupération garantie",
       "description": "",
       "tags": [],
@@ -493,7 +493,7 @@
       "isOutline": false
     },
     {
-      "id": "422b2151-7a0d-4128-968e-dc1fe5dddae8",
+      "id": "67c39916-681a-4655-a9a8-9d98d6d69942",
       "name": "Garantie pour logement social ou AIS",
       "description": "",
       "tags": [],
@@ -542,7 +542,7 @@
       "isOutline": false
     },
     {
-      "id": "fc52c4cc-c3bd-463f-8771-365c1bb57245",
+      "id": "0d2417dd-fc1d-45b2-a0db-f061361a2811",
       "name": "Aide CPAS selon situation et montants",
       "description": "",
       "tags": [],
@@ -600,7 +600,7 @@
           ],
           "rows": [
             {
-              "name": "923db752-433b-42f8-a9ab-8d5129d4d2cc",
+              "name": "3ee501b1-1409-449d-8611-e9690bcd5c50",
               "values": {
                 "situation": "bénéficiaire RIS",
                 "revenus": "1070",
@@ -613,7 +613,7 @@
               }
             },
             {
-              "name": "3443f2f8-0d01-4ffc-b891-54bae71b0982",
+              "name": "993b3b8e-f251-4143-90be-51257a60a4d7",
               "values": {
                 "situation": "travailleur pauvre",
                 "revenus": "1400",
@@ -626,7 +626,7 @@
               }
             },
             {
-              "name": "a2d7cf4d-80a5-4caf-85b0-58a2ed7085df",
+              "name": "83f98090-5239-43ef-b678-49a36be4d85a",
               "values": {
                 "situation": "famille nombreuse",
                 "revenus": "2200",
@@ -639,7 +639,7 @@
               }
             },
             {
-              "name": "cc614f6d-bb52-4a3c-9997-5ee6f195da9e",
+              "name": "fbccda9b-6d6b-4e79-81d5-69e7c6977e6e",
               "values": {
                 "situation": "jeune 18 ans",
                 "revenus": "0",
@@ -652,7 +652,7 @@
               }
             },
             {
-              "name": "082ab888-f1c2-41b2-a920-ff529e421cbd",
+              "name": "52631806-3d63-4052-9e79-04b3ef8519f8",
               "values": {
                 "situation": "médiation dettes",
                 "revenus": "1600",
@@ -665,7 +665,7 @@
               }
             },
             {
-              "name": "880c0bd9-416c-4d3e-a857-a8ab345c033c",
+              "name": "af24265b-66b6-40fa-8144-db8e8e857691",
               "values": {
                 "situation": "revenus élevés",
                 "revenus": "3000",
@@ -678,7 +678,7 @@
               }
             },
             {
-              "name": "c8b8f362-3588-4a5b-914f-49668615788a",
+              "name": "67efdcf8-78a0-4043-9fc4-500f5e4bf9f9",
               "values": {
                 "situation": "sans-abri relogé",
                 "revenus": "0",
@@ -696,7 +696,7 @@
       "isOutline": true
     },
     {
-      "id": "f75d5128-1264-4fdc-9781-57a63eb11587",
+      "id": "84029680-e34d-4236-a1ff-62e914740413",
       "name": "Procédure de demande et enquête sociale",
       "description": "",
       "tags": [],
@@ -788,7 +788,7 @@
       "isOutline": false
     },
     {
-      "id": "bc8921e6-a044-448f-b973-418c39ced433",
+      "id": "308c3a9e-8c52-4cab-9b1b-f3ce19c0e2c9",
       "name": "Remboursement et suivi de la garantie",
       "description": "",
       "tags": [],
@@ -869,7 +869,7 @@
       "isOutline": false
     },
     {
-      "id": "afb446dd-2b90-4222-878d-69176aa25812",
+      "id": "30bfd3f2-c4af-4977-b47c-9aabe20107f2",
       "name": "Libération et récupération de garantie",
       "description": "",
       "tags": [],
@@ -959,5 +959,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.942Z"
+  "generated": "2025-11-18T10:42:07.675Z"
 }

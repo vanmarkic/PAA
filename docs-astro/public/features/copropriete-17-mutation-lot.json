@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "d1e54ab3-ad7d-411b-bf2e-ca11f78e1760",
+      "id": "00ec4783-ba62-46d0-a35f-ec5db8242c6b",
       "name": "Vérification des charges dues",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "9a0b5f74-508c-4fe2-a25d-ef24cd4c23f0",
+      "id": "ee400580-133e-4517-a51c-c99ef010101d",
       "name": "Transfert avec charges impayées",
       "description": "",
       "tags": [],
@@ -102,7 +102,7 @@
       "isOutline": false
     },
     {
-      "id": "84c00775-02ac-4046-8af1-9276f102b647",
+      "id": "a12fb563-6ea8-45b0-9575-8579f0492e08",
       "name": "Information du nouveau propriétaire",
       "description": "",
       "tags": [],
@@ -150,5 +150,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.678Z"
 }

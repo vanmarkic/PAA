@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "cb6ad6d7-368e-497d-a450-d982360aea01",
+      "id": "468d4719-31f2-47a8-95a9-afd8dd6004fc",
       "name": "Convocation AG ordinaire dans les délais légaux",
       "description": "",
       "tags": [],
@@ -57,7 +57,7 @@
       "isOutline": false
     },
     {
-      "id": "5e31d676-ec6a-4628-919e-e20a1cb7872d",
+      "id": "bcd4b802-45da-404c-8786-b1a55ef12c09",
       "name": "Convocation AG avec documents obligatoires",
       "description": "",
       "tags": [],
@@ -106,7 +106,7 @@
       "isOutline": false
     },
     {
-      "id": "ca360a34-2955-4129-aebe-ff6b29d3d42a",
+      "id": "de225787-e02e-4256-a70a-cafeba6a1f07",
       "name": "Convocation tardive invalide",
       "description": "",
       "tags": [],
@@ -134,5 +134,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.945Z"
+  "generated": "2025-11-18T10:42:07.678Z"
 }

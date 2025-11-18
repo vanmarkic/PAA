@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "0662314b-c25e-49cc-80bb-c9a7a7e1ba08",
+      "id": "513a8ee2-6b44-4e6a-a3fe-a1e688201996",
       "name": "NDA avant négociation de partenariat",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "5cf0c3d3-3e37-4650-9b5e-16f9951b3207",
+      "id": "ff0a7fa5-26c4-4b9f-8394-514c3b94e6c5",
       "name": "Violation de NDA et recours",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.951Z"
+  "generated": "2025-11-18T10:42:07.683Z"
 }

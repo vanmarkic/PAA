@@ -1,4 +1,3 @@
-```gherkin
 # language: fr
 # @specification-version:1.0.0
 # @legal-basis:Loi du 26 mai 2002 concernant le droit à l'intégration sociale
@@ -74,4 +73,3 @@ Fonctionnalité: Droit à l'intégration sociale en Belgique
     Et que des raisons d'équité justifient une exemption
     Quand je fais une demande de revenu d'intégration sociale
     Alors je peux être exempté de la condition de disposition au travail
-```

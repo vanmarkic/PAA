@@ -20,7 +20,7 @@
   },
   "scenarios": [
     {
-      "id": "0ed4b615-1f4a-4511-b4d8-6182bd21bc8a",
+      "id": "5f24bfa5-9fc1-4807-a9bc-3796e82f122f",
       "name": "Désignation syndic professionnel",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "858fd8a5-e479-4f3f-83e4-80c2b931ed68",
+      "id": "7e5560be-76df-4338-9022-84e2a04ccffd",
       "name": "Validation des conditions IPI",
       "description": "",
       "tags": [],
@@ -106,7 +106,7 @@
       "isOutline": false
     },
     {
-      "id": "f34e6a04-57d4-4ee5-8818-11ac50b3eea6",
+      "id": "424749b7-9df4-45a7-b39a-98030246ea16",
       "name": "Révocation du syndic pour faute grave",
       "description": "",
       "tags": [],
@@ -142,5 +142,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.678Z"
 }

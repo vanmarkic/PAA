@@ -44,7 +44,7 @@
   },
   "scenarios": [
     {
-      "id": "3c6532a0-456d-40c4-b480-d1fd23fd1938",
+      "id": "230ccab8-08dc-409b-a32f-59b44da89bf2",
       "name": "Application des frais forfaitaires",
       "description": "",
       "tags": [],
@@ -81,7 +81,7 @@
       "isOutline": false
     },
     {
-      "id": "da7352d1-c067-4c9d-b07a-85509ba7e206",
+      "id": "0af62337-fa82-4502-b14f-f714e0d5a45f",
       "name": "Droits d'auteur avec précompte mobilier",
       "description": "",
       "tags": [],
@@ -118,7 +118,7 @@
       "isOutline": false
     },
     {
-      "id": "9f13e031-94fd-492c-829a-eb3409a454a0",
+      "id": "ca779e67-d54d-4a2c-b6d5-5f4e4faa392a",
       "name": "TVA sur ventes d'œuvres",
       "description": "",
       "tags": [],
@@ -155,7 +155,7 @@
       "isOutline": false
     },
     {
-      "id": "2c9b6b20-8185-47bd-ab51-d65778f4cfd9",
+      "id": "87f0955c-8134-4843-a998-583b6feb2023",
       "name": "Régime des petites indemnités",
       "description": "",
       "tags": [],
@@ -192,7 +192,7 @@
       "isOutline": false
     },
     {
-      "id": "4a3ad716-0f13-4b28-85ad-99f7b85ca95c",
+      "id": "9a6407e9-d9f7-4ad9-acfb-3fe2fedf4f8c",
       "name": "Cumul salariat et indépendant artistique",
       "description": "",
       "tags": [],
@@ -229,7 +229,7 @@
       "isOutline": false
     },
     {
-      "id": "cb1dbb8c-879b-44b2-9c39-d2ae79f3db6c",
+      "id": "f5576470-659b-4103-ba25-09baad7a0dd3",
       "name": "Calcul fiscal selon revenus",
       "description": "",
       "tags": [],
@@ -267,7 +267,7 @@
           ],
           "rows": [
             {
-              "name": "98ff16ae-dbab-4302-8073-d73094a2cb80",
+              "name": "7eccb443-72ca-48d7-bfd2-cd8c00bbe3df",
               "values": {
                 "revenus": "10000",
                 "régime": "forfaitaire",
@@ -276,7 +276,7 @@
               }
             },
             {
-              "name": "c86e1159-d7d8-46db-bd88-5f40177dea20",
+              "name": "b8a7e72d-df13-4c44-b03f-0d16dc145e25",
               "values": {
                 "revenus": "25000",
                 "régime": "forfaitaire",
@@ -285,7 +285,7 @@
               }
             },
             {
-              "name": "c711c458-3d71-41dd-b8df-3f0fdf39f39b",
+              "name": "9fb8fd2e-54ce-463f-b57d-1776e18c5bed",
               "values": {
                 "revenus": "15000",
                 "régime": "frais réels",
@@ -294,7 +294,7 @@
               }
             },
             {
-              "name": "99e4a010-5790-4497-9346-c8ec02c3864b",
+              "name": "d1e6b786-f6d2-40c0-906d-cd37879e55b8",
               "values": {
                 "revenus": "8000",
                 "régime": "petites indemnités",
@@ -311,5 +311,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.954Z"
+  "generated": "2025-11-18T10:42:07.686Z"
 }

@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "01d6d9f9-0e37-4a20-a46f-7ff04b7ef195",
+      "id": "c74751aa-8b69-40bb-bcdb-e724c9321559",
       "name": "Demande urgente d'empêcher une expulsion",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "d45461e0-5caa-4b63-8f11-8cbe10a2c202",
+      "id": "17b344d9-de3c-4aed-ae21-091309c94fcb",
       "name": "Mesures provisoires pour traitement médical vital",
       "description": "",
       "tags": [],
@@ -114,7 +114,7 @@
       "isOutline": false
     },
     {
-      "id": "026f9681-a7ef-40d9-8515-518611f25afe",
+      "id": "20e0e309-4e32-4039-bebc-6bc1c27b8ff8",
       "name": "Refus de mesures provisoires - pas de risque imminent",
       "description": "",
       "tags": [],
@@ -159,7 +159,7 @@
       "isOutline": false
     },
     {
-      "id": "f3010328-4a39-43cd-b6f8-36bed68af6d7",
+      "id": "a3aa4a91-7cab-4c05-ada8-d43be407b074",
       "name": "Protection d'un témoin dans une affaire de violation",
       "description": "",
       "tags": [],
@@ -204,7 +204,7 @@
       "isOutline": false
     },
     {
-      "id": "701965ff-3803-4955-8728-3bb14226de9b",
+      "id": "d8a19d10-9f87-4d3f-9fee-92a98ae74df8",
       "name": "Évaluation de l'urgence selon le délai",
       "description": "",
       "tags": [],
@@ -252,7 +252,7 @@
           ],
           "rows": [
             {
-              "name": "083da3af-cf2d-4b3a-81e2-cdc87851f458",
+              "name": "1ac60984-3e60-4044-9f3d-179f32a9a4d9",
               "values": {
                 "delai": "24 heures",
                 "type_risque": "expulsion/torture",
@@ -263,7 +263,7 @@
               }
             },
             {
-              "name": "1872b493-5208-4e67-ab58-74014c22a16e",
+              "name": "23906249-090a-4d41-b277-883ef2cfd86c",
               "values": {
                 "delai": "48 heures",
                 "type_risque": "exécution",
@@ -274,7 +274,7 @@
               }
             },
             {
-              "name": "28cadde1-2b1b-4996-9bfc-7bf601121d64",
+              "name": "52fb5c2d-e2b2-4cb1-8d7e-01a0315708f6",
               "values": {
                 "delai": "1 semaine",
                 "type_risque": "transfert prison",
@@ -285,7 +285,7 @@
               }
             },
             {
-              "name": "0c98d525-5010-4686-be3e-eee1e5790a12",
+              "name": "54a619b0-8f4d-481d-a3cc-d388768ea7b6",
               "values": {
                 "delai": "1 mois",
                 "type_risque": "démolition maison",
@@ -304,5 +304,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.679Z"
 }

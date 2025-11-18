@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "e0f29743-6ff6-4dcf-850f-6421232ff849",
+      "id": "a1b6116f-0e9d-49df-b4b5-98e414f08f6e",
       "name": "Fuite d'eau majeure nécessitant intervention immédiate",
       "description": "",
       "tags": [],
@@ -53,7 +53,7 @@
       "isOutline": false
     },
     {
-      "id": "04a75724-a8d5-432a-8867-50d99b8e5a7c",
+      "id": "8a6e3797-27b2-4548-8681-70f136ccde2e",
       "name": "Plafond de dépense pour travaux urgents",
       "description": "",
       "tags": [],
@@ -90,7 +90,7 @@
       "isOutline": false
     },
     {
-      "id": "52ae1122-1a23-41f9-bcf3-d004073adc06",
+      "id": "8fe8a04e-4b90-4aff-9288-68c2ca992a3a",
       "name": "Travaux conservatoires après sinistre",
       "description": "",
       "tags": [],
@@ -146,5 +146,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.946Z"
+  "generated": "2025-11-18T10:42:07.678Z"
 }

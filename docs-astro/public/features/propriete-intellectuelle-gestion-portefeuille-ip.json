@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "78e2705c-26f5-425f-ba38-9e415fb9305a",
+      "id": "18b12d32-9abf-4363-823a-7654b57a116d",
       "name": "Revue annuelle du portefeuille",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "bc271c36-27cb-4c71-82e4-f9c2a1642428",
+      "id": "efe3fab3-7ed0-4afc-90fd-ab8d506f2ad8",
       "name": "Système de gestion des échéances",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.952Z"
+  "generated": "2025-11-18T10:42:07.684Z"
 }

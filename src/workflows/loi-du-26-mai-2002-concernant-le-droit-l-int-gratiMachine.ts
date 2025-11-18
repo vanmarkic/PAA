@@ -1,93 +1,85 @@
-```typescript
-/**
- * XState machine for Droit à l'Intégration Sociale (DIS) Eligibility
- *
- * This state machine orchestrates the eligibility determination workflow
- * based on the Loi du 26 mai 2002 concernant le droit à l'intégration sociale
- * 
- * Workflow:
- * 1. Check nationality requirements
- * 2. Verify residence conditions
- * 3. Validate age requirements
- * 4. Assess resource availability
- * 5. Determine work disposition requirements
- * 6. Provide final eligibility decision
- */
-
 import { createMachine, assign } from 'xstate';
+import { User, EligibilityCheck } from '../domain/types';
 
-export interface DISUser {
-  nationality: 'belgian' | 'eu_citizen' | 'foreign_registered' | 'refugee' | 'subsidiary_protection' | 'other';
-  hasEffectiveResidence: boolean;
-  age: number;
-  hasSufficientResources: boolean;
-  canClaimResources: boolean;
-  canObtainResourcesByOwnMeans: boolean;
-  euResidencyDuration?: number;
-  isAbleToWork?: boolean;
-  hasHealthReasonsPreventingWork?: boolean;
-  hasEquityReasonsForExemption?: boolean;
+interface LoiDu26Mai2002Context {
+  user: User | null;
+  eligibilityResult: EligibilityCheck | null;
+  isEligible: boolean;
+  hasWorkRequirement: boolean;
+  hasWorkExemption: boolean;
+  validationErrors: string[];
+  checkComplete: boolean;
 }
 
-export interface DISContext {
-  user: DISUser | null;
-  eligible: boolean;
-  reasons: string[];
-  requiresWorkDisposition: boolean;
-  exemptFromWorkDisposition: boolean;
-  exemptionReason: string | null;
-  currentCheck: string | null;
-}
+type LoiDu26Mai2002Event =
+  | { type: 'START_CHECK'; user: User }
+  | { type: 'CHECK_AGE' }
+  | { type: 'CHECK_NATIONALITY' }
+  | { type: 'CHECK_RESIDENCE' }
+  | { type: 'CHECK_RESOURCES' }
+  | { type: 'CHECK_WORK_REQUIREMENT' }
+  | { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-ineligible'; reason: string }
+  | { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-eligible' }
+  | { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-work-requirement' }
+  | { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-work-exemption' }
+  | { type: 'COMPLETE_CHECK' }
+  | { type: 'RESET' };
 
-export const disMachine = createMachine({
-  id: 'disEligibility',
+const MAJORITY_AGE = 18;
+const EU_RESIDENCE_MIN_MONTHS = 3;
+
+export const loiDu26Mai2002Machine = createMachine({
+  id: 'loiDu26Mai2002ConcernantLeDroitLIntGrati',
   initial: 'idle',
 
   schemas: {
-    context: {} as DISContext,
-    events: {} as
-      | { type: 'START_EVALUATION'; user: DISUser }
-      | { type: 'NATIONALITY_VALID' }
-      | { type: 'NATIONALITY_INVALID' }
-      | { type: 'RESIDENCE_VALID' }
-      | { type: 'RESIDENCE_INVALID' }
-      | { type: 'AGE_VALID' }
-      | { type: 'AGE_INVALID' }
-      | { type: 'RESOURCES_INSUFFICIENT' }
-      | { type: 'RESOURCES_AVAILABLE' }
-      | { type: 'WORK_DISPOSITION_REQUIRED' }
-      | { type: 'WORK_DISPOSITION_EXEMPTED'; reason: string }
-      | { type: 'DIS_ELIGIBLE' }
-      | { type: 'DIS_INELIGIBLE'; reason: string }
-      | { type: 'RESET' }
+    context: {} as LoiDu26Mai2002Context,
+    events: {} as LoiDu26Mai2002Event,
   },
 
   context: {
     user: null,
-    eligible: false,
-    reasons: [],
-    requiresWorkDisposition: false,
-    exemptFromWorkDisposition: false,
-    exemptionReason: null,
-    currentCheck: null,
+    eligibilityResult: null,
+    isEligible: false,
+    hasWorkRequirement: false,
+    hasWorkExemption: false,
+    validationErrors: [],
+    checkComplete: false,
   },
 
   states: {
     idle: {
       on: {
-        START_EVALUATION: {
-          target: 'checkingNationality',
+        START_CHECK: {
+          target: 'checkingAge',
           actions: assign({
             user: ({ event }) => event.user,
-            eligible: false,
-            reasons: [],
-            requiresWorkDisposition: false,
-            exemptFromWorkDisposition: false,
-            exemptionReason: null,
-            currentCheck: 'nationality',
+            isEligible: false,
+            hasWorkRequirement: false,
+            hasWorkExemption: false,
+            validationErrors: [],
+            checkComplete: false,
           }),
         },
       },
+    },
+
+    checkingAge: {
+      always: [
+        {
+          target: 'checkingNationality',
+          guard: ({ context }) => {
+            if (!context.user) return false;
+            return context.user.age >= MAJORITY_AGE;
+          },
+        },
+        {
+          target: 'ineligible',
+          actions: assign({
+            validationErrors: ({ context }) => [`User age ${context.user?.age} is below minimum age ${MAJORITY_AGE}`],
+          }),
+        },
+      ],
     },
 
     checkingNationality: {
@@ -95,23 +87,17 @@ export const disMachine = createMachine({
         {
           target: 'checkingResidence',
           guard: ({ context }) => {
-            const { user } = context;
-            if (!user) return false;
-            
-            return user.nationality === 'belgian' ||
-                   user.nationality === 'eu_citizen' ||
-                   user.nationality === 'foreign_registered' ||
-                   user.nationality === 'refugee' ||
-                   user.nationality === 'subsidiary_protection';
+            if (!context.user) return false;
+            return context.user.nationality === 'belge' || 
+                   context.user.nationality === 'eu' || 
+                   context.user.nationality === 'apatride' ||
+                   context.user.nationality === 'refugie';
           },
-          actions: assign({
-            currentCheck: 'residence',
-          }),
         },
         {
           target: 'ineligible',
           actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'Nationality requirements not met'],
+            validationErrors: ({ context }) => [`Nationality ${context.user?.nationality} is not eligible`],
           }),
         },
       ],
@@ -120,65 +106,32 @@ export const disMachine = createMachine({
     checkingResidence: {
       always: [
         {
-          target: 'checkingEuResidency',
-          guard: ({ context }) => {
-            const { user } = context;
-            return user?.nationality === 'eu_citizen';
-          },
-        },
-        {
-          target: 'checkingAge',
-          guard: ({ context }) => context.user?.hasEffectiveResidence === true,
-          actions: assign({
-            currentCheck: 'age',
-          }),
-        },
-        {
-          target: 'ineligible',
-          actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'No effective residence in Belgium'],
-          }),
-        },
-      ],
-    },
-
-    checkingEuResidency: {
-      always: [
-        {
-          target: 'checkingAge',
-          guard: ({ context }) => {
-            const { user } = context;
-            return user?.euResidencyDuration !== undefined && user.euResidencyDuration >= 3;
-          },
-          actions: assign({
-            currentCheck: 'age',
-          }),
-        },
-        {
-          target: 'ineligible',
-          actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'EU citizens must have at least 3 months of residency'],
-          }),
-        },
-      ],
-    },
-
-    checkingAge: {
-      always: [
-        {
           target: 'checkingResources',
           guard: ({ context }) => {
-            const { user } = context;
-            return user?.age !== undefined && user.age >= 18;
+            if (!context.user) return false;
+            
+            if (context.user.nationality === 'belge' || 
+                context.user.nationality === 'apatride' ||
+                context.user.nationality === 'refugie') {
+              return context.user.legalResidenceMonths >= 0;
+            }
+            
+            if (context.user.nationality === 'eu') {
+              return context.user.legalResidenceMonths >= EU_RESIDENCE_MIN_MONTHS;
+            }
+            
+            return false;
           },
-          actions: assign({
-            currentCheck: 'resources',
-          }),
         },
         {
           target: 'ineligible',
           actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'Must be at least 18 years old'],
+            validationErrors: ({ context }) => {
+              if (context.user?.nationality === 'eu') {
+                return [`EU citizen requires ${EU_RESIDENCE_MIN_MONTHS} months of residence, has ${context.user?.legalResidenceMonths}`];
+              }
+              return [`Insufficient legal residence: ${context.user?.legalResidenceMonths} months`];
+            },
           }),
         },
       ],
@@ -187,176 +140,126 @@ export const disMachine = createMachine({
     checkingResources: {
       always: [
         {
-          target: 'eligible',
+          target: 'checkingWorkRequirement',
           guard: ({ context }) => {
-            const { user } = context;
-            return user?.hasSufficientResources === true;
+            if (!context.user) return false;
+            return context.user.hasInsufficientResources === true;
           },
-          actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'Has sufficient resources'],
-          }),
-        },
-        {
-          target: 'checkingResourceClaim',
-          guard: ({ context }) => context.user?.hasSufficientResources === false,
-          actions: assign({
-            currentCheck: 'resource_claim',
-          }),
-        },
-      ],
-    },
-
-    checkingResourceClaim: {
-      always: [
-        {
-          target: 'checkingOwnMeans',
-          guard: ({ context }) => context.user?.canClaimResources === true,
-          actions: assign({
-            currentCheck: 'own_means',
-          }),
-        },
-        {
-          target: 'checkingWorkDisposition',
-          actions: assign({
-            currentCheck: 'work_disposition',
-          }),
-        },
-      ],
-    },
-
-    checkingOwnMeans: {
-      always: [
-        {
-          target: 'checkingWorkDisposition',
-          guard: ({ context }) => context.user?.canObtainResourcesByOwnMeans === false,
-          actions: assign({
-            currentCheck: 'work_disposition',
-          }),
         },
         {
           target: 'ineligible',
           actions: assign({
-            reasons: ({ context }) => [...context.reasons, 'Can obtain resources by own means'],
+            validationErrors: () => [`User has sufficient resources`],
           }),
         },
       ],
     },
 
-    checkingWorkDisposition: {
+    checkingWorkRequirement: {
       always: [
         {
-          target: 'eligible',
+          target: 'workExempt',
           guard: ({ context }) => {
-            const { user } = context;
-            return user?.hasHealthReasonsPreventingWork === true;
+            if (!context.user) return false;
+            return context.user.isStudent === true ||
+                   context.user.hasHealthIssues === true ||
+                   context.user.hasEquityReasons === true;
           },
-          actions: assign({
-            exemptFromWorkDisposition: true,
-            exemptionReason: 'Health reasons prevent work',
-            eligible: true,
-            reasons: ({ context }) => [...context.reasons, 'Eligible for DIS - Exempt from work disposition (health)'],
-          }),
         },
         {
-          target: 'eligible',
+          target: 'workRequired',
           guard: ({ context }) => {
-            const { user } = context;
-            return user?.hasEquityReasonsForExemption === true;
+            if (!context.user) return false;
+            return context.user.age < 25;
           },
-          actions: assign({
-            exemptFromWorkDisposition: true,
-            exemptionReason: 'Equity reasons for exemption',
-            eligible: true,
-            reasons: ({ context }) => [...context.reasons, 'Eligible for DIS - Exempt from work disposition (equity)'],
-          }),
         },
         {
           target: 'eligible',
-          guard: ({ context }) => context.user?.isAbleToWork === true,
-          actions: assign({
-            requiresWorkDisposition: true,
-            eligible: true,
-            reasons: ({ context }) => [...context.reasons, 'Eligible for DIS - Work disposition required'],
-          }),
-        },
-        {
-          target: 'eligible',
-          actions: assign({
-            eligible: true,
-            reasons: ({ context }) => [...context.reasons, 'Eligible for DIS'],
-          }),
         },
       ],
+    },
+
+    workRequired: {
+      entry: [
+        assign({
+          hasWorkRequirement: true,
+        }),
+        { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-work-requirement' },
+      ],
+      on: {
+        COMPLETE_CHECK: 'finalizing',
+      },
+    },
+
+    workExempt: {
+      entry: [
+        assign({
+          hasWorkExemption: true,
+        }),
+        { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-work-exemption' },
+      ],
+      on: {
+        COMPLETE_CHECK: 'finalizing',
+      },
     },
 
     eligible: {
-      type: 'final',
-      entry: assign({
-        eligible: true,
-      }),
+      entry: [
+        assign({
+          isEligible: true,
+        }),
+        { type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-eligible' },
+      ],
       on: {
-        RESET: {
-          target: 'idle',
-          actions: assign({
-            user: null,
-            eligible: false,
-            reasons: [],
-            requiresWorkDisposition: false,
-            exemptFromWorkDisposition: false,
-            exemptionReason: null,
-            currentCheck: null,
-          }),
-        },
+        COMPLETE_CHECK: 'finalizing',
       },
     },
 
     ineligible: {
-      type: 'final',
+      entry: [
+        assign({
+          isEligible: false,
+        }),
+        ({ context }) => ({
+          type: 'loiDu26Mai2002ConcernantLeDroitLIntGrati-ineligible' as const,
+          reason: context.validationErrors.join(', '),
+        }),
+      ],
+      on: {
+        COMPLETE_CHECK: 'finalizing',
+      },
+    },
+
+    finalizing: {
       entry: assign({
-        eligible: false,
+        checkComplete: true,
+        eligibilityResult: ({ context }) => ({
+          eligible: context.isEligible,
+          reason: context.isEligible 
+            ? 'User meets all eligibility criteria'
+            : context.validationErrors.join(', '),
+          hasWorkRequirement: context.hasWorkRequirement,
+          hasWorkExemption: context.hasWorkExemption,
+        }),
       }),
+      always: 'complete',
+    },
+
+    complete: {
       on: {
         RESET: {
           target: 'idle',
           actions: assign({
             user: null,
-            eligible: false,
-            reasons: [],
-            requiresWorkDisposition: false,
-            exemptFromWorkDisposition: false,
-            exemptionReason: null,
-            currentCheck: null,
+            eligibilityResult: null,
+            isEligible: false,
+            hasWorkRequirement: false,
+            hasWorkExemption: false,
+            validationErrors: [],
+            checkComplete: false,
           }),
         },
       },
     },
   },
-
-  on: {
-    DIS_ELIGIBLE: {
-      target: 'eligible',
-      actions: assign({
-        eligible: true,
-      }),
-    },
-    DIS_INELIGIBLE: {
-      target: 'ineligible',
-      actions: assign({
-        eligible: false,
-        reasons: ({ event, context }) => [...context.reasons, event.reason],
-      }),
-    },
-    WORK_DISPOSITION_REQUIRED: {
-      actions: assign({
-        requiresWorkDisposition: true,
-      }),
-    },
-    WORK_DISPOSITION_EXEMPTED: {
-      actions: assign({
-        exemptFromWorkDisposition: true,
-        exemptionReason: ({ event }) => event.reason,
-      }),
-    },
-  },
 });
-```

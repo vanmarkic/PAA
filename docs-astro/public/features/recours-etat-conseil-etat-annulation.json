@@ -28,7 +28,7 @@
   },
   "scenarios": [
     {
-      "id": "16987e62-1a83-43ac-9b96-fe678f90f6b6",
+      "id": "f3cc9e07-90e8-4f78-8844-39cc722da98a",
       "name": "Recours dans les délais avec intérêt direct",
       "description": "",
       "tags": [],
@@ -77,7 +77,7 @@
       "isOutline": false
     },
     {
-      "id": "c29ebefa-5a35-4ece-8659-2f77d7e492dc",
+      "id": "48850697-7ded-4ad5-b3ed-af2eb77eecf2",
       "name": "Recours avec demande de suspension en extrême urgence",
       "description": "",
       "tags": [],
@@ -118,7 +118,7 @@
       "isOutline": false
     },
     {
-      "id": "ba4947e1-d8dd-49b0-9e1b-69704606a971",
+      "id": "194d0dbd-9730-4eec-8295-35f663336d91",
       "name": "Recours hors délai",
       "description": "",
       "tags": [],
@@ -155,7 +155,7 @@
       "isOutline": false
     },
     {
-      "id": "b58eb96b-f56d-47cd-937b-85cd070add55",
+      "id": "b762d9b5-6450-4bfe-8094-809d685cf72f",
       "name": "Recours sans intérêt à agir",
       "description": "",
       "tags": [],
@@ -192,7 +192,7 @@
       "isOutline": false
     },
     {
-      "id": "d7dc2e86-64ef-49fc-a076-90e96c038360",
+      "id": "09afd2a8-9fb8-4ef8-bd22-68e3d66bf04f",
       "name": "Association avec intérêt collectif",
       "description": "",
       "tags": [],
@@ -233,7 +233,7 @@
       "isOutline": false
     },
     {
-      "id": "2e480983-8771-43b4-9dab-8c1e43e1d7ac",
+      "id": "b5662a9a-0104-4d91-8987-5fa67ca2fc61",
       "name": "Recours contre un règlement communal",
       "description": "",
       "tags": [],
@@ -270,7 +270,7 @@
       "isOutline": false
     },
     {
-      "id": "72d0548f-6937-4733-bb9a-61222b9d869b",
+      "id": "44f53d1c-df30-4a95-870d-482b1fbdfb4a",
       "name": "Recours avec aide juridique",
       "description": "",
       "tags": [],
@@ -307,7 +307,7 @@
       "isOutline": false
     },
     {
-      "id": "b81fa507-55a3-4424-9aa3-61a22ce7238f",
+      "id": "b8434b4a-b556-431a-9b4a-7879653e09a5",
       "name": "Calcul des délais selon le type de notification",
       "description": "",
       "tags": [],
@@ -350,7 +350,7 @@
           ],
           "rows": [
             {
-              "name": "b1c77ab0-ba7b-46a4-b18c-3b8fdc8bed10",
+              "name": "5b84f0af-7f5c-45be-afb8-4652b8edf965",
               "values": {
                 "date_notification": "2024-01-01",
                 "mode": "recommandé",
@@ -360,7 +360,7 @@
               }
             },
             {
-              "name": "142120bf-35ea-41ab-a611-825afb88d6c5",
+              "name": "5f5639dd-26f6-46b5-a4d0-e71960bccde9",
               "values": {
                 "date_notification": "2024-01-01",
                 "mode": "main propre",
@@ -370,7 +370,7 @@
               }
             },
             {
-              "name": "24db5f3e-b30a-421f-982f-cd9f0886c398",
+              "name": "3720b740-26d7-4525-bbf4-d8bac91235a3",
               "values": {
                 "date_notification": "2024-01-01",
                 "mode": "publication",
@@ -380,7 +380,7 @@
               }
             },
             {
-              "name": "4019c6d7-7ca3-4dd2-8ff6-912d7cefc770",
+              "name": "a3eea48a-6fcf-4962-9371-921a12963335",
               "values": {
                 "date_notification": "2024-01-15",
                 "mode": "recommandé",
@@ -395,7 +395,7 @@
       "isOutline": true
     },
     {
-      "id": "f8fca0f0-d763-42e5-b16b-f2ef0a83ca97",
+      "id": "48c6d19d-bdde-4bb8-9909-3d5223bce5d0",
       "name": "Moyens d'annulation à invoquer",
       "description": "",
       "tags": [],
@@ -456,7 +456,7 @@
       "isOutline": false
     },
     {
-      "id": "6ce23707-6354-46a9-9740-f40154bb84f0",
+      "id": "0a573012-5c4f-49af-b7ce-8e20b1f5c0df",
       "name": "Constitution du dossier administratif",
       "description": "",
       "tags": [],
@@ -492,5 +492,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.954Z"
+  "generated": "2025-11-18T10:42:07.685Z"
 }

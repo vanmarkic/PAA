@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "d2a62982-bc01-4316-8c22-75a80b0ac1fb",
+      "id": "e54c9aa8-b73d-427b-9136-1490d282269d",
       "name": "Calcul du montant obligatoire",
       "description": "",
       "tags": [],
@@ -49,7 +49,7 @@
       "isOutline": false
     },
     {
-      "id": "1d8e0010-b56c-45ed-8e4f-07f11e0966d2",
+      "id": "7ea8191a-ee95-4f70-9e4f-d691c3b3fcd2",
       "name": "Utilisation du fonds de réserve",
       "description": "",
       "tags": [],
@@ -82,7 +82,7 @@
       "isOutline": false
     },
     {
-      "id": "0f463906-9843-4b3e-a5df-f52714f4e2ea",
+      "id": "8c8cc631-57de-4a53-9315-1558dafdf496",
       "name": "Placement du fonds de réserve",
       "description": "",
       "tags": [],
@@ -135,5 +135,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.945Z"
+  "generated": "2025-11-18T10:42:07.678Z"
 }

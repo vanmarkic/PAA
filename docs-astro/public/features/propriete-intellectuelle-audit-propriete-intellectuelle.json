@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "85d30b69-fd70-48ac-a4cd-98635bcc4708",
+      "id": "a1c21a62-3ce6-484f-a7a7-df25e19c44e1",
       "name": "Audit complet du portefeuille IP",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "add903ce-f42d-47db-b326-caaa12991e74",
+      "id": "420180f8-4a24-48b6-a4de-11da317806e4",
       "name": "Audit pré-acquisition (due diligence)",
       "description": "",
       "tags": [],
@@ -109,5 +109,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.951Z"
+  "generated": "2025-11-18T10:42:07.683Z"
 }

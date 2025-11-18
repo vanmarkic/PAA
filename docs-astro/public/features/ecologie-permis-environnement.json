@@ -44,7 +44,7 @@
   },
   "scenarios": [
     {
-      "id": "4210a426-3f19-4eb2-bce2-79bac564ba77",
+      "id": "a0f3cb4a-6243-4e5a-b055-12da399a9fb4",
       "name": "Installation industrielle classe 1 nécessitant permis complet",
       "description": "",
       "tags": [],
@@ -89,7 +89,7 @@
       "isOutline": false
     },
     {
-      "id": "9199572e-7780-4178-bf2d-09483ba45e09",
+      "id": "74065423-72fa-487e-bfd6-255a328a3118",
       "name": "PME classe 2 avec procédure simplifiée",
       "description": "",
       "tags": [],
@@ -130,7 +130,7 @@
       "isOutline": false
     },
     {
-      "id": "fb360c08-6098-4f2c-a6f7-bed4bd13c476",
+      "id": "e66983b8-abe8-4358-9a61-82a4e11e8163",
       "name": "Artisan classe 3 avec simple déclaration",
       "description": "",
       "tags": [],
@@ -171,7 +171,7 @@
       "isOutline": false
     },
     {
-      "id": "ae328e11-8066-48f4-b4ad-3efa6ec24c3a",
+      "id": "0ec6716a-6c10-47fd-894d-277b6ffb60ec",
       "name": "Installation Seveso seuil haut",
       "description": "",
       "tags": [],
@@ -208,7 +208,7 @@
       "isOutline": false
     },
     {
-      "id": "95045c6f-ac4f-4618-8128-0fb2daa63cf6",
+      "id": "ba91a1b7-8970-448c-aa83-9b86650e17a3",
       "name": "Refus pour non-conformité",
       "description": "",
       "tags": [],
@@ -245,7 +245,7 @@
       "isOutline": false
     },
     {
-      "id": "6e8ddcb2-e9aa-46f8-a77b-e791272e88e2",
+      "id": "739ebb58-b106-4ed8-b16e-0d370a27f46a",
       "name": "Calcul des garanties financières selon la classe",
       "description": "",
       "tags": [],
@@ -278,7 +278,7 @@
           ],
           "rows": [
             {
-              "name": "89b842ca-3791-43f3-9cf9-70bd37e72404",
+              "name": "5d5b920f-dbdd-4a9b-8900-0ce628979bca",
               "values": {
                 "classe": "1",
                 "risque": "élevé",
@@ -286,7 +286,7 @@
               }
             },
             {
-              "name": "b6967404-3084-4fa9-93a6-60b22399b7a7",
+              "name": "4f2c9a08-c3bb-48cb-b7c7-3def74da9861",
               "values": {
                 "classe": "1",
                 "risque": "modéré",
@@ -294,7 +294,7 @@
               }
             },
             {
-              "name": "74643b63-f1b3-4a78-b137-1ed07df04916",
+              "name": "0cb60c45-91fd-4c78-8995-abd2cb2845a4",
               "values": {
                 "classe": "2",
                 "risque": "élevé",
@@ -302,7 +302,7 @@
               }
             },
             {
-              "name": "18208e97-17e0-4042-a1d7-3350ee29f076",
+              "name": "81687b0f-84a1-4cf8-be01-47a071593492",
               "values": {
                 "classe": "2",
                 "risque": "modéré",
@@ -310,7 +310,7 @@
               }
             },
             {
-              "name": "7c3085f3-96d9-4722-a0c2-88bb478b3583",
+              "name": "a1e90610-52f3-4066-9938-76cc86f043a3",
               "values": {
                 "classe": "3",
                 "risque": "faible",
@@ -326,5 +326,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.949Z"
+  "generated": "2025-11-18T10:42:07.681Z"
 }

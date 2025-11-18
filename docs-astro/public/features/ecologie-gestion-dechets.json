@@ -56,7 +56,7 @@
   },
   "scenarios": [
     {
-      "id": "c45340ba-a190-42a1-a7f7-7c7ed8ba16f8",
+      "id": "fea20d3c-ab52-4db9-a125-3b591a1a7fb6",
       "name": "Autorisation centre de recyclage classe B",
       "description": "",
       "tags": [],
@@ -121,7 +121,7 @@
       "isOutline": false
     },
     {
-      "id": "2e944dc0-141b-4c61-91e4-36eecb664332",
+      "id": "e79c119f-5398-4276-9ce0-607307591aa1",
       "name": "Permis transport déchets dangereux ADR",
       "description": "",
       "tags": [],
@@ -182,7 +182,7 @@
       "isOutline": false
     },
     {
-      "id": "5c2f75ec-b614-4eb4-bb5d-431fae2fafc0",
+      "id": "fb6cd3b4-dae4-4439-9c00-84b08b18392f",
       "name": "Prime compostage collectif",
       "description": "",
       "tags": [],
@@ -223,7 +223,7 @@
       "isOutline": false
     },
     {
-      "id": "7f80588d-3af4-4935-a438-29ed25ceb6c9",
+      "id": "688015f9-4393-48dd-9de6-a1636cd75174",
       "name": "Enregistrement collecteur déchets électroniques",
       "description": "",
       "tags": [],
@@ -284,7 +284,7 @@
       "isOutline": false
     },
     {
-      "id": "7b1b17bd-1daa-45b0-bf06-a29708023857",
+      "id": "0a5d24fd-5baa-4522-bfb5-a6d5ccd31a7f",
       "name": "Obligation tri 5 flux pour entreprise",
       "description": "",
       "tags": [],
@@ -351,7 +351,7 @@
       "isOutline": false
     },
     {
-      "id": "9c7b9ca7-e80d-4d54-86b6-365a1404ccf5",
+      "id": "c8a74f47-592d-4e85-a2d1-236cc1d6f843",
       "name": "Calcul taxe déchets selon volume et type",
       "description": "",
       "tags": [],
@@ -385,7 +385,7 @@
           ],
           "rows": [
             {
-              "name": "02b2a591-cb2b-47c7-97dc-b056b69eb5ae",
+              "name": "a331f133-a05f-42b3-bdd1-506c5d39f818",
               "values": {
                 "volume": "100",
                 "type": "ménagers",
@@ -394,7 +394,7 @@
               }
             },
             {
-              "name": "d6db17cf-3d7f-430a-a2d5-20325bdfa287",
+              "name": "b73bc9f7-2f13-41c3-ae25-2202c2e24797",
               "values": {
                 "volume": "100",
                 "type": "dangereux",
@@ -403,7 +403,7 @@
               }
             },
             {
-              "name": "b5ee592f-3be1-4284-92dd-1e0e60efe253",
+              "name": "0cc15b1a-e83a-4413-be54-30cb33b29194",
               "values": {
                 "volume": "50",
                 "type": "inertes",
@@ -412,7 +412,7 @@
               }
             },
             {
-              "name": "d75242c7-4d03-45ba-8dda-de129aa50dd5",
+              "name": "db5d25c8-04fb-45f0-aca3-50026164930e",
               "values": {
                 "volume": "200",
                 "type": "industriels",
@@ -421,7 +421,7 @@
               }
             },
             {
-              "name": "849d763e-a0c3-4b68-be10-1168806189f6",
+              "name": "b33c31dd-a6f4-45a7-9a28-09b2c85f90bf",
               "values": {
                 "volume": "10",
                 "type": "DEEE",
@@ -438,5 +438,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:17:36.949Z"
+  "generated": "2025-11-18T10:42:07.681Z"
 }
