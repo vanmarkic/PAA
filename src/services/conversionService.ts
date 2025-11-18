@@ -12,9 +12,9 @@
 import { LegalText, ConvertedText, ConversionLevel, Ambiguity, Example } from '../domain/types';
 
 /**
- * Mock LLM interface - in production, this would call Claude API
+ * LLM interface - implemented by ClaudeAPIClient
  */
-interface LLMService {
+export interface LLMService {
   convert(text: string, level: ConversionLevel): Promise<string>;
   detectAmbiguity(text: string): Promise<boolean>;
   extractStructure(text: string): Promise<any>;
@@ -22,6 +22,7 @@ interface LLMService {
 
 /**
  * Main conversion service
+ * Can use real Claude client or mock for testing
  */
 export class LegalTextConversionService {
   constructor(private llm: LLMService) {}

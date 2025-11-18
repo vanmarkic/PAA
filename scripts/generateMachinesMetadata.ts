@@ -1,10 +1,53 @@
 /**
  * Génère un fichier JSON avec les métadonnées de toutes les machines
  * Pour génération dynamique côté client
+ * Inclut les métadonnées légales depuis legalMetadata.ts
  */
 
 import * as fs from 'fs';
 import * as path from 'path';
+
+// Import legal metadata functions
+// Using ts-node, we can import TypeScript files directly
+let getMachineLegalMetadata: ((id: string) => any) | null = null;
+let getDataFreshnessBadge: ((id: string) => any) | null = null;
+
+try {
+  // Import from TypeScript source (works with ts-node)
+  // Use relative path from compiled location (scripts/compiled/) or source
+  const legalMetadataModule = path.join(__dirname, '..', 'src', 'domain', 'legalMetadata');
+  const helperModule = path.join(__dirname, '..', 'src', 'utils', 'machineMetadataHelper');
+  
+  // Try to require (ts-node will handle .ts files)
+  try {
+    const legalMetadata = require(legalMetadataModule);
+    getMachineLegalMetadata = legalMetadata.getMachineLegalMetadata;
+  } catch (e) {
+    // Try without extension
+    try {
+      const legalMetadata = require(legalMetadataModule + '.ts');
+      getMachineLegalMetadata = legalMetadata.getMachineLegalMetadata;
+    } catch (e2) {
+      // Skip if not available
+    }
+  }
+  
+  try {
+    const helper = require(helperModule);
+    getDataFreshnessBadge = helper.getDataFreshnessBadge;
+  } catch (e) {
+    // Try without extension
+    try {
+      const helper = require(helperModule + '.ts');
+      getDataFreshnessBadge = helper.getDataFreshnessBadge;
+    } catch (e2) {
+      // Skip if not available
+    }
+  }
+} catch (error) {
+  console.warn('⚠️  Legal metadata not available:', (error as Error).message);
+  console.warn('   This is normal if legalMetadata.ts is not accessible');
+}
 
 interface MachineMeta {
   id: string;
@@ -14,6 +57,34 @@ interface MachineMeta {
   states: string[];
   events: string[];
   initial: string;
+  // Legal metadata fields (optional)
+  legalMetadata?: {
+    extractionDate?: string;
+    lastLegislativeUpdate?: string;
+    sources?: Array<{
+      authority: string;
+      authorityType?: string;
+      region?: string;
+      title: string;
+      publicationDate?: string;
+      effectiveDate?: string;
+      officialUrl?: string;
+      language?: string;
+    }>;
+    status?: string;
+    version?: string;
+  };
+  versionHistory?: any[];
+  dataFreshness?: {
+    status: string;
+    label: string;
+    daysOld: number;
+  };
+  parentMachines?: string[];
+  childMachines?: string[];
+  siblingMachines?: string[];
+  version?: string;
+  lastModified?: string;
 }
 
 /**
@@ -152,12 +223,22 @@ async function main() {
   console.log(`📁 ${categories.size} catégories: ${Array.from(categories).join(', ')}`);
   console.log(`📊 Total: ${totalStates} états, ${totalEvents} événements`);
 
+  // Keep machines minimal - legal sources are in separate file
+  // This keeps machines-metadata.json small and fast to load
+  const enrichedMachines = machines.map((machine) => {
+    return {
+      ...machine,
+      // Only include minimal metadata needed for listing/browsing
+      // Legal sources are loaded separately from legal-sources.json
+    };
+  });
+
   // Générer le JSON
   const output = {
     generated: new Date().toISOString(),
     totalMachines: machines.length,
     categories: Array.from(categories).sort(),
-    machines,
+    machines: enrichedMachines,
     statistics: {
       totalStates,
       totalEvents,
@@ -166,11 +247,18 @@ async function main() {
     },
   };
 
-  const outputPath = path.join(__dirname, '..', 'docs', 'machines-metadata.json');
-  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8');
+  // Write to both locations
+  const docsPath = path.join(__dirname, '..', 'docs', 'machines-metadata.json');
+  const astroPath = path.join(__dirname, '..', 'docs-astro', 'public', 'machines-metadata.json');
+  
+  fs.writeFileSync(docsPath, JSON.stringify(output, null, 2), 'utf-8');
+  fs.writeFileSync(astroPath, JSON.stringify(output, null, 2), 'utf-8');
 
-  console.log(`\n✨ Généré: ${outputPath}`);
-  console.log(`📦 Taille: ${(fs.statSync(outputPath).size / 1024).toFixed(2)} KB`);
+  console.log(`\n✨ Généré: ${docsPath}`);
+  console.log(`✨ Généré: ${astroPath}`);
+  console.log(`📦 Taille: ${(fs.statSync(docsPath).size / 1024).toFixed(2)} KB`);
+  console.log(`\n💡 Note: Legal sources are in separate legal-sources.json file`);
+  console.log(`   Run: npm run docs:legal-sources to generate it`);
 }
 
 main().catch(console.error);

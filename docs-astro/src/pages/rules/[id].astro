@@ -1,28 +1,51 @@
 ---
 import MainLayout from '../../layouts/Layout.astro';
-import { loadRulesMetadata, getRuleById, getAllRules, formatOperator, getOperatorColor, getPriorityColor, getPriorityLabel, CATEGORY_NAMES, getBenefitDisplayName } from '../../lib/rules';
+import { loadRulesIndex, loadRule } from '../../lib/loadIndividual';
+import { formatOperator, getOperatorColor, getPriorityColor, getPriorityLabel, CATEGORY_NAMES, getBenefitDisplayName } from '../../lib/rules';
 import { getRelatedWorkflowsForRule, getRelatedFeaturesForRule } from '../../lib/cross-references';
-import { loadFeaturesMetadata } from '../../lib/features';
+import { loadFeaturesIndex } from '../../lib/loadIndividual';
 import { getUrl } from '../../lib/utils';
+import LegalSources from '../../components/LegalSources.astro';
 
 // This function generates all the static paths for each rule
 export async function getStaticPaths() {
-  const metadata = await loadRulesMetadata();
-  const featuresMetadata = await loadFeaturesMetadata();
-  const allRules = getAllRules(metadata);
+  const index = await loadRulesIndex();
+  
+  if (!index) {
+    // Fallback to old method
+    const { loadRulesMetadata, getAllRules } = await import('../../lib/rules');
+    const metadata = await loadRulesMetadata();
+    const allRules = getAllRules(metadata);
+    return allRules.map(rule => ({
+      params: { id: rule.id },
+      props: { ruleId: rule.id }
+    }));
+  }
 
-  return allRules.map(rule => ({
+  return index.rules.map((rule: any) => ({
     params: { id: rule.id },
-    props: { rule, metadata, featuresMetadata }
+    props: { ruleId: rule.id }
   }));
 }
 
-const { rule, metadata, featuresMetadata } = Astro.props;
+const { ruleId } = Astro.props;
+
+// Load individual rule data
+const rule = await loadRule(ruleId);
+
+if (!rule) {
+  return Astro.redirect('/rules');
+}
+
+// Load index for related items
+const rulesIndex = await loadRulesIndex();
+const featuresIndex = await loadFeaturesIndex();
+const allRulesList = rulesIndex?.rules || [];
+const featuresMetadata = { features: featuresIndex?.features || [] };
 
 // Find related rules (same benefit type or category)
-const allRules = getAllRules(metadata);
-const relatedRules = allRules
-  .filter(r =>
+const relatedRules = allRulesList
+  .filter((r: any) =>
     (r.benefitType === rule.benefitType || r.category === rule.category) &&
     r.id !== rule.id
   )
@@ -35,7 +58,7 @@ const relatedFeatures = await getRelatedFeaturesForRule(rule.id);
 // Find the directly associated feature (1:1 relationship)
 // The most closely related feature should be the one with the highest match score
 const associatedFeature = relatedFeatures && relatedFeatures.length > 0
-  ? featuresMetadata.features.find(f => f.id === relatedFeatures[0].id)
+  ? featuresMetadata.features.find((f: any) => f.id === relatedFeatures[0].id)
   : null;
 
 // Helper functions for feature display
@@ -580,6 +603,9 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
             </div>
           </div>
         )}
+
+        <!-- Legal Sources -->
+        <LegalSources ruleId={rule.id} title="Sources Légales de cette Règle" />
       </div>
     </div>
 

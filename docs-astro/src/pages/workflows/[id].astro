@@ -2,22 +2,44 @@
 import MainLayout from '../../layouts/Layout.astro';
 import ProcedureDiagram from '../../components/ProcedureDiagram.astro';
 import ProcedureHierarchy from '../../components/ProcedureHierarchy.astro';
-import { loadMachinesMetadata } from '../../lib/machines';
+import { loadMachinesIndex, loadMachine } from '../../lib/loadIndividual';
 import { getRelatedFeatures, getRelatedRules } from '../../lib/cross-references';
 import { getUrl } from '../../lib/utils';
 import { getWorkflowContextTypes } from '../../lib/workflow-types';
+import LegalSources from '../../components/LegalSources.astro';
 
 // This function generates all the static paths for each workflow
 export async function getStaticPaths() {
-  const metadata = await loadMachinesMetadata();
+  const index = await loadMachinesIndex();
+  
+  if (!index) {
+    // Fallback to old method if index doesn't exist
+    const { loadMachinesMetadata } = await import('../../lib/machines');
+    const metadata = await loadMachinesMetadata();
+    return metadata.machines.map((machine: any) => ({
+      params: { id: machine.id },
+      props: { machineId: machine.id }
+    }));
+  }
 
-  return metadata.machines.map((machine: any) => ({
+  return index.machines.map((machine: any) => ({
     params: { id: machine.id },
-    props: { machine, allMachines: metadata.machines }
+    props: { machineId: machine.id }
   }));
 }
 
-const { machine, allMachines } = Astro.props;
+const { machineId } = Astro.props;
+
+// Load individual machine data
+const machine = await loadMachine(machineId);
+
+if (!machine) {
+  return Astro.redirect('/workflows');
+}
+
+// Load index for related machines
+const index = await loadMachinesIndex();
+const allMachines = index?.machines || [];
 
 // Find related workflows (same category)
 const relatedWorkflows = allMachines
@@ -267,6 +289,9 @@ const contextTypes = getWorkflowContextTypes(machine.id);
         )}
       </div>
     )}
+
+    <!-- Legal Sources -->
+    <LegalSources machineId={machine.id} title="Sources Légales de cette Procédure" />
 
     <!-- Related Rules -->
     {relatedRules.length > 0 && (

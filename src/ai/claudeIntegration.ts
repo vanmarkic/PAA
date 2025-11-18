@@ -8,6 +8,8 @@
  */
 
 import { MonitoringReport, AmountChange, LegalTextChange } from '../utils/legalSourceMonitor';
+import { ClaudeAPIClient } from './claudeAPIClient';
+import { checkVersionCompliance } from '../utils/versionCompliance';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -43,7 +45,7 @@ export interface RulesRewriteRequest {
 export interface AIRewriteResult {
   success: boolean;
   benefitId: string;
-  componentType: 'feature' | 'rules';
+  componentType: 'feature' | 'rules' | 'machine';
   newContent?: string;
   newVersion?: string;
   error?: string;
@@ -52,36 +54,31 @@ export interface AIRewriteResult {
   warnings: string[];
 }
 
+export interface LegalSourceInput {
+  authority: string;
+  title: string;
+  officialUrl: string;
+  publicationDate?: string;
+  effectiveDate?: string;
+  text?: string;
+  articles?: string[];
+  referenceNumber?: string;
+}
+
 // ============================================================================
 // CLAUDE API CLIENT
 // ============================================================================
 
 /**
  * Call Claude API with a prompt
- * NOTE: This is a placeholder. In production, use @anthropic-ai/sdk
+ * Uses real Claude API client
  */
 async function callClaudeAPI(
   prompt: string,
   config: ClaudeAPIConfig
 ): Promise<string> {
-  // PLACEHOLDER: In production, use actual Anthropic SDK
-  // Example:
-  // const Anthropic = require('@anthropic-ai/sdk');
-  // const client = new Anthropic({ apiKey: config.apiKey });
-  //
-  // const message = await client.messages.create({
-  //   model: config.model,
-  //   max_tokens: config.maxTokens,
-  //   messages: [{ role: 'user', content: prompt }],
-  // });
-  //
-  // return message.content[0].text;
-
-  console.log('[PLACEHOLDER] Would call Claude API with prompt length:', prompt.length);
-  console.log('[PLACEHOLDER] Model:', config.model);
-
-  // Return placeholder response
-  return `PLACEHOLDER: AI-generated content would appear here.\n\n${prompt.substring(0, 200)}...`;
+  const client = new ClaudeAPIClient(config);
+  return client.callClaudeAPI(prompt, { maxTokens: config.maxTokens });
 }
 
 // ============================================================================
@@ -549,4 +546,384 @@ function getFeaturePath(benefitId: string): string {
 
 function getRulesPath(benefitId: string): string {
   return path.join(process.cwd(), 'src', 'rules', `${benefitId}Rules.ts`);
+}
+
+// ============================================================================
+// INITIAL GENERATION FUNCTIONS (NEW)
+// ============================================================================
+
+/**
+ * Generate Gherkin feature from legal text (INITIAL GENERATION)
+ */
+export async function generateFeatureFromLegalText(
+  legalText: string,
+  legalSource: LegalSourceInput,
+  config: ClaudeAPIConfig
+): Promise<AIRewriteResult> {
+  console.log(`🤖 Generating feature file from legal text...`);
+
+  try {
+    const prompt = generateFeatureGenerationPrompt(legalText, legalSource);
+    const featureContent = await callClaudeAPI(prompt, config);
+    
+    const validation = validateFeatureContent(featureContent, '1.0.0');
+    
+    return {
+      success: validation.isValid,
+      benefitId: generateFeatureId(legalSource.title),
+      componentType: 'feature',
+      newContent: validation.isValid ? featureContent : undefined,
+      newVersion: '1.0.0',
+      confidence: validation.confidence,
+      requiresHumanReview: true, // Always review initial generation
+      warnings: validation.warnings,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      benefitId: generateFeatureId(legalSource.title),
+      componentType: 'feature',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      confidence: 'low',
+      requiresHumanReview: true,
+      warnings: ['AI generation failed'],
+    };
+  }
+}
+
+function generateFeatureGenerationPrompt(
+  legalText: string,
+  legalSource: LegalSourceInput
+): string {
+  return `# Task: Generate Gherkin Feature File from Belgian Legal Text
+
+You are a legal-tech expert specialized in Belgian social security law.
+Convert this legal text into a Gherkin feature file.
+
+## Legal Source
+- Authority: ${legalSource.authority}
+- Title: ${legalSource.title}
+- URL: ${legalSource.officialUrl}
+- Publication: ${legalSource.publicationDate || 'N/A'}
+- Effective: ${legalSource.effectiveDate || 'N/A'}
+${legalSource.referenceNumber ? `- Reference: ${legalSource.referenceNumber}` : ''}
+${legalSource.articles ? `- Articles: ${legalSource.articles.join(', ')}` : ''}
+
+## Legal Text
+${legalText}
+
+## Instructions
+1. Create a Gherkin feature file in French
+2. Extract eligibility conditions as scenarios
+3. Include monetary amounts if present
+4. Add metadata:
+   - @specification-version:1.0.0
+   - @legal-basis:${legalSource.title}
+   - @legal-url:${legalSource.officialUrl}
+   - @effective-date:${legalSource.effectiveDate || new Date().toISOString().split('T')[0]}
+
+5. Follow this structure:
+\`\`\`gherkin
+# language: fr
+# @specification-version:1.0.0
+# @legal-basis:${legalSource.title}
+# @legal-url:${legalSource.officialUrl}
+# @effective-date:${legalSource.effectiveDate || new Date().toISOString().split('T')[0]}
+
+Fonctionnalité: [Name]
+  En tant que [user]
+  Je veux [goal]
+  Afin de [benefit]
+
+  Contexte:
+    Étant donné que [background]
+
+  Scénario: [Scenario name]
+    Étant donné que [condition]
+    Quand [action]
+    Alors [outcome]
+\`\`\`
+
+## CRITICAL REQUIREMENTS
+- Use French language
+- Include all eligibility conditions
+- Preserve all monetary amounts exactly
+- Maintain semantic accuracy
+- Valid Gherkin syntax
+
+Return ONLY the feature file content, no explanation.`;
+}
+
+/**
+ * Generate rules from feature (INITIAL GENERATION)
+ * Follows conversionService.ts patterns
+ */
+export async function generateRulesFromFeature(
+  feature: {
+    id: string;
+    name: string;
+    content: string;
+    metadata: {
+      specificationVersion: string;
+      legalBasis?: string;
+      legalUrl?: string;
+    };
+  },
+  config: ClaudeAPIConfig
+): Promise<AIRewriteResult> {
+  console.log(`🤖 Generating rules file from feature...`);
+
+  try {
+    // Read example rules to show pattern
+    const exampleRulesPath = path.join(process.cwd(), 'src', 'rules', 'risRules.ts');
+    const exampleRules = fs.existsSync(exampleRulesPath)
+      ? fs.readFileSync(exampleRulesPath, 'utf-8').substring(0, 2000)
+      : '// Example rules pattern';
+
+    const prompt = generateRulesGenerationPrompt(feature, exampleRules);
+    const rulesContent = await callClaudeAPI(prompt, config);
+    
+    const validation = validateRulesContent(
+      rulesContent,
+      feature.metadata.specificationVersion
+    );
+    
+    // Check version compliance
+    const compliance = checkVersionCompliance(feature.id);
+    
+    return {
+      success: validation.isValid,
+      benefitId: feature.id,
+      componentType: 'rules',
+      newContent: validation.isValid ? rulesContent : undefined,
+      newVersion: feature.metadata.specificationVersion,
+      confidence: validation.confidence,
+      requiresHumanReview: true,
+      warnings: [
+        ...validation.warnings,
+        ...(compliance.overallStatus !== 'compliant' ? compliance.issues : []),
+      ],
+    };
+  } catch (error) {
+    return {
+      success: false,
+      benefitId: feature.id,
+      componentType: 'rules',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      confidence: 'low',
+      requiresHumanReview: true,
+      warnings: ['AI generation failed'],
+    };
+  }
+}
+
+function generateRulesGenerationPrompt(
+  feature: any,
+  exampleRules: string
+): string {
+  return `# Task: Generate TypeScript Rules File from Gherkin Feature
+
+You are an expert TypeScript developer working on a Belgian social benefits system.
+Generate a rules implementation file that follows the conversionService.ts patterns.
+
+## Feature Specification
+\`\`\`gherkin
+${feature.content}
+\`\`\`
+
+## Example Rules Pattern (Follow This Structure)
+\`\`\`typescript
+${exampleRules}
+\`\`\`
+
+## Instructions
+1. Create rules file: src/rules/${feature.id}Rules.ts
+2. Follow json-rules-engine patterns from example
+3. Extract conditions from "Étant donné" steps
+4. Extract events from "Quand" steps
+5. Extract outcomes from "Alors" steps
+6. Add metadata:
+   \`\`\`typescript
+   export const ${feature.id.toUpperCase()}_RULES_METADATA = {
+     implementsSpecification: '${feature.metadata.specificationVersion}',
+     implementationVersion: '${feature.metadata.specificationVersion}',
+     implementationStatus: 'complete' as const,
+     lastSyncedWith: 'features/benefits/${feature.id}.feature',
+     generatedFrom: 'features/benefits/${feature.id}.feature@${feature.metadata.specificationVersion}',
+   };
+   \`\`\`
+
+7. Include legal framework references:
+   \`\`\`typescript
+   // BASE JURIDIQUE:
+   // - ${feature.metadata.legalBasis || 'N/A'}
+   //   ${feature.metadata.legalUrl || 'N/A'}
+   \`\`\`
+
+8. Use conversionService.ts patterns:
+   - Extract structure
+   - Identify concepts
+   - Map vocabulary
+   - Generate rules
+
+## CRITICAL REQUIREMENTS
+- TypeScript must compile
+- Follow json-rules-engine patterns exactly
+- All amounts must match feature file
+- Version MUST be: ${feature.metadata.specificationVersion}
+- Include proper imports and exports
+
+Return ONLY the TypeScript file content, no explanation.`;
+}
+
+/**
+ * Generate machine from rules (INITIAL GENERATION)
+ * Uses conversionMachine.ts as template
+ */
+export async function generateMachineFromRules(
+  rules: {
+    id: string;
+    content: string;
+    events: string[];
+    conditions: any;
+  },
+  feature: {
+    id: string;
+    name: string;
+  },
+  config: ClaudeAPIConfig
+): Promise<AIRewriteResult | null> {
+  // Determine if machine is needed
+  if (!needsWorkflow(rules)) {
+    return null; // Skip if no workflow needed
+  }
+
+  console.log(`🤖 Generating machine file from rules...`);
+
+  try {
+    // Read example machine
+    const exampleMachinePath = path.join(process.cwd(), 'src', 'workflows', 'conversionMachine.ts');
+    const exampleMachine = fs.existsSync(exampleMachinePath)
+      ? fs.readFileSync(exampleMachinePath, 'utf-8').substring(0, 2000)
+      : '// Example machine pattern';
+
+    const prompt = generateMachineGenerationPrompt(rules, feature, exampleMachine);
+    const machineContent = await callClaudeAPI(prompt, config);
+    
+    const validation = validateMachineContent(machineContent);
+    
+    return {
+      success: validation.isValid,
+      benefitId: feature.id,
+      componentType: 'machine',
+      newContent: validation.isValid ? machineContent : undefined,
+      confidence: validation.confidence,
+      requiresHumanReview: true,
+      warnings: validation.warnings,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      benefitId: feature.id,
+      componentType: 'machine',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      confidence: 'low',
+      requiresHumanReview: true,
+      warnings: ['AI generation failed'],
+    };
+  }
+}
+
+function needsWorkflow(rules: any): boolean {
+  // Determine if workflow is needed based on:
+  // - Multiple rules that need orchestration
+  // - User interaction required
+  // - Multi-step process
+  
+  // Simple heuristic: if rules have multiple events or complex conditions
+  return rules.events.length > 1 || 
+         (rules.conditions && Object.keys(rules.conditions).length > 3);
+}
+
+function generateMachineGenerationPrompt(
+  rules: any,
+  feature: any,
+  exampleMachine: string
+): string {
+  return `# Task: Generate XState Machine from Rules
+
+You are an expert TypeScript/XState developer.
+Generate an XState state machine that orchestrates these rules.
+
+## Rules
+\`\`\`typescript
+${rules.content.substring(0, 1500)}
+\`\`\`
+
+## Feature Context
+- Name: ${feature.name}
+- ID: ${feature.id}
+
+## Example Machine Pattern (Follow This Structure)
+\`\`\`typescript
+${exampleMachine}
+\`\`\`
+
+## Instructions
+1. Create machine file: src/workflows/${feature.id}Machine.ts
+2. Use XState createMachine
+3. States should reflect rule evaluation flow
+4. Events should match rule events: ${rules.events.join(', ')}
+5. Guards should use rule conditions
+6. Follow conversionMachine.ts patterns
+
+## CRITICAL REQUIREMENTS
+- Valid XState machine syntax
+- TypeScript must compile
+- States must be meaningful
+- Events must match rules
+- Include proper imports
+
+Return ONLY the TypeScript file content, no explanation.`;
+}
+
+function validateMachineContent(content: string): {
+  isValid: boolean;
+  confidence: 'high' | 'medium' | 'low';
+  warnings: string[];
+} {
+  const warnings: string[] = [];
+  let confidence: 'high' | 'medium' | 'low' = 'high';
+
+  // Check for XState imports
+  if (!content.includes('xstate') && !content.includes('XState')) {
+    warnings.push('Missing XState import');
+    confidence = 'low';
+  }
+
+  // Check for createMachine
+  if (!content.includes('createMachine')) {
+    warnings.push('Missing createMachine - invalid XState machine');
+    return { isValid: false, confidence: 'low', warnings };
+  }
+
+  // Check for states
+  if (!content.includes('states:')) {
+    warnings.push('Missing states definition');
+    confidence = 'low';
+  }
+
+  return {
+    isValid: warnings.filter(w => w.includes('invalid') || w.includes('Missing') && w.includes('XState')).length === 0,
+    confidence,
+    warnings,
+  };
+}
+
+function generateFeatureId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .substring(0, 50); // Limit length
 }

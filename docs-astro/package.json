@@ -11,7 +11,7 @@
     "preview:local": "npm run build:local && astro preview",
     "astro": "astro",
     "clean": "rm -rf dist .astro node_modules",
-    "prepare:metadata": "cd .. && npx ts-node scripts/generateMachinesMetadata.ts && cp docs/machines-metadata.json docs-astro/public/ && node scripts/generate-features-metadata-standalone.js"
+    "prepare:metadata": "cd .. && npx ts-node scripts/generateMachinesMetadata.ts && cp docs/machines-metadata.json docs-astro/public/ && node scripts/generate-features-metadata-standalone.js && npx ts-node scripts/generateIndividualMetadata.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",
