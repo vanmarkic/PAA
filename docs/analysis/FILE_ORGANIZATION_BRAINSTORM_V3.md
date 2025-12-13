@@ -273,7 +273,7 @@ scrape-2024-06-10-v2.feature
   },
   
   "changeSummary": {
-    "generatedBy": "claude-opus-4-1",
+    "generatedBy": "claude-opus-4-5",
     "generatedAt": "2024-03-20T10:35:00Z",
     "changeType": "amounts_updated",
     "summary": "Les montants RIS ont été indexés: personne isolée passe de 1000.00€ à 1070.49€, personne cohabitante de 700.00€ à 713.66€.",
@@ -425,7 +425,7 @@ Return ONLY valid JSON, no markdown.`;
   const summary = JSON.parse(response);
   
   return {
-    generatedBy: "claude-opus-4-1",
+    generatedBy: "claude-opus-4-5",
     generatedAt: new Date().toISOString(),
     ...summary
   };

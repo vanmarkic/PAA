@@ -220,7 +220,7 @@ database/
   },
   
   "changeSummary": {
-    "generatedBy": "claude-opus-4-1",
+    "generatedBy": "claude-opus-4-5",
     "generatedAt": "2024-11-18T10:31:00Z",
     "changeType": "amounts_updated",
     "summary": "Les montants RIS ont été indexés...",

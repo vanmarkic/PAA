@@ -103,7 +103,7 @@ async function main() {
   // Create Claude client and orchestrator
   const config: ClaudeAPIConfig = {
     apiKey,
-    model: 'claude-opus-4-1',
+    model: 'claude-opus-4-5',
     maxTokens: 4096,
   };
 

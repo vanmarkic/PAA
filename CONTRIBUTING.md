@@ -5,6 +5,7 @@ Ce guide explique comment ajouter de nouvelles prestations, lois, règles et pro
 ## Table des matières
 
 - [Vue d'ensemble](#vue-densemble)
+- [Rôles Humain vs LLM](#rôles-humain-vs-llm)
 - [Ajouter une nouvelle prestation](#ajouter-une-nouvelle-prestation)
   - [Étape 1 : Types de domaine](#étape-1--types-de-domaine)
   - [Étape 2 : Sources juridiques](#étape-2--sources-juridiques)
@@ -12,6 +13,7 @@ Ce guide explique comment ajouter de nouvelles prestations, lois, règles et pro
   - [Étape 4 : Règles d'éligibilité](#étape-4--règles-déligibilité)
   - [Étape 5 : Machine à états](#étape-5--machine-à-états-procédure)
   - [Étape 6 : Exemple exécutable](#étape-6--exemple-exécutable)
+- [Automatisation avec LLM](#automatisation-avec-llm)
 - [Checklist finale](#checklist-finale)
 - [Conventions de nommage](#conventions-de-nommage)
 
@@ -37,6 +39,77 @@ PAA utilise une **architecture hybride** avec 4 technologies complémentaires :
 4. Règles d'éligibilité →  src/rules/[nom]Rules.ts
 5. Machine à états      →  src/workflows/[nom]Machine.ts
 6. Exemple exécutable   →  src/examples/[nom]Example.ts
+```
+
+---
+
+## Rôles Humain vs LLM
+
+Chaque étape peut être réalisée par un **humain**, un **LLM** (via API Anthropic, OpenAI, etc.), ou une **combinaison** des deux.
+
+### Matrice des responsabilités
+
+| Étape | Humain | LLM | Commentaire |
+|-------|:------:|:---:|-------------|
+| **1. Types de domaine** | ⚪ | 🟢 | **LLM recommandé** - Génération de code TypeScript standard |
+| **2. Sources juridiques** | 🟡 | 🟡 | **Hybride** - LLM extrait, humain valide les URLs officielles |
+| **3. Spécification Gherkin** | 🟡 | 🟡 | **Hybride** - LLM génère, juriste/expert valide la logique |
+| **4. Règles d'éligibilité** | ⚪ | 🟢 | **LLM recommandé** - Traduction Gherkin → json-rules-engine |
+| **5. Machine à états** | ⚪ | 🟢 | **LLM recommandé** - Pattern XState standardisé |
+| **6. Exemple exécutable** | ⚪ | 🟢 | **LLM recommandé** - Génération automatique de cas de test |
+| **Validation finale** | 🟢 | ⚪ | **Humain requis** - Revue juridique et tests d'acceptation |
+
+**Légende :** 🟢 Principal | 🟡 Collaboratif | ⚪ Support/Optionnel
+
+### Détail par étape
+
+#### Étapes automatisables par LLM (🤖)
+
+| Étape | Automatisation | Prérequis |
+|-------|----------------|-----------|
+| **1. Types de domaine** | ✅ 100% | Texte de loi + montants en entrée |
+| **4. Règles d'éligibilité** | ✅ 95% | Spécification Gherkin validée |
+| **5. Machine à états** | ✅ 90% | Description du workflow |
+| **6. Exemple exécutable** | ✅ 100% | Types + Règles générés |
+
+#### Étapes nécessitant validation humaine (👤)
+
+| Étape | Rôle humain | Risque si omis |
+|-------|-------------|----------------|
+| **2. Sources juridiques** | Vérifier URLs ejustice.just.fgov.be | Liens cassés, références incorrectes |
+| **3. Spécification Gherkin** | Valider interprétation juridique | Règles métier erronées |
+| **Validation finale** | Revue par expert métier/juriste | Erreurs de calcul, cas limites |
+
+### Workflow recommandé
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    WORKFLOW HUMAIN + LLM                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  👤 HUMAIN                      🤖 LLM (Anthropic API)          │
+│  ────────                       ──────────────────────          │
+│                                                                 │
+│  1. Fournit le texte de loi ──────► Extrait structure,         │
+│     + montants actuels              catégories, conditions      │
+│                                            │                    │
+│                                            ▼                    │
+│  2. Valide les URLs ◄──────────── Génère sources juridiques    │
+│     ejustice.just.fgov.be                  │                    │
+│                                            ▼                    │
+│  3. Valide la logique ◄────────── Génère spec Gherkin          │
+│     métier (juriste)                       │                    │
+│                                            ▼                    │
+│                                   Génère Types, Rules,          │
+│                                   Machine, Example               │
+│                                            │                    │
+│                                            ▼                    │
+│  4. Exécute tests ◄──────────────  npm test && npm run cucumber │
+│     + revue finale                         │                    │
+│                                            ▼                    │
+│  5. Merge si OK ────────────────────────► ✅ Déployé           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -960,24 +1033,309 @@ export { runExample };
 
 ---
 
+## Automatisation avec LLM
+
+Cette section explique comment utiliser un LLM (Claude, GPT, etc.) pour automatiser la création de prestations.
+
+### Configuration requise
+
+```bash
+# Variables d'environnement pour l'automatisation
+export ANTHROPIC_API_KEY="sk-ant-..."      # Pour Claude API
+# ou
+export OPENAI_API_KEY="sk-..."             # Pour GPT API
+```
+
+### Prompts types pour chaque étape
+
+#### Prompt 1 : Extraction de structure juridique (Étape 2-3)
+
+```
+Tu es un expert en droit social belge. Analyse le texte de loi suivant et extrait :
+
+1. Les CONDITIONS D'ÉLIGIBILITÉ (âge, résidence, revenus, patrimoine, etc.)
+2. Les CATÉGORIES de bénéficiaires avec les MONTANTS associés
+3. Les OBLIGATIONS du bénéficiaire
+4. Les CAS D'EXCLUSION
+
+Texte de loi :
+[COLLER LE TEXTE ICI]
+
+Réponds en JSON structuré.
+```
+
+#### Prompt 2 : Génération de spécification Gherkin (Étape 3)
+
+```
+À partir de cette structure JSON de conditions d'éligibilité, génère une
+spécification Gherkin en français pour PAA.
+
+Inclure :
+- Un Contexte avec les montants actuels
+- Des scénarios positifs (cas éligibles)
+- Des scénarios négatifs (chaque condition de refus)
+- Un Plan du Scénario pour les calculs
+
+Structure JSON :
+[COLLER LE JSON ICI]
+
+Utilise le format de features/benefits/ris.feature comme modèle.
+```
+
+#### Prompt 3 : Génération des règles (Étape 4)
+
+```
+À partir de cette spécification Gherkin, génère le fichier de règles
+json-rules-engine pour PAA.
+
+Spécification :
+[COLLER LE .FEATURE ICI]
+
+Utilise src/rules/risRules.ts comme modèle. Inclure :
+- Les métadonnées de version
+- Toutes les règles avec priorités (10 = bloquant, 5 = éligibilité de base)
+- La fonction de calcul des montants
+- L'export JSON des règles
+```
+
+#### Prompt 4 : Génération de la machine à états (Étape 5)
+
+```
+Génère une machine à états XState pour le workflow de demande de [PRESTATION].
+
+États requis :
+- idle → checkingEligibility → eligible/ineligible
+- eligible → processing → active
+- active (avec monitoring de conformité)
+- États terminaux : declined, terminated
+
+Utilise src/workflows/risMachine.ts comme modèle.
+```
+
+### Script d'automatisation complet
+
+```typescript
+// scripts/generate-benefit.ts
+import Anthropic from '@anthropic-ai/sdk';
+import * as fs from 'fs';
+
+const client = new Anthropic();
+
+interface BenefitInput {
+  name: string;           // ex: "aide-logement"
+  legalText: string;      // Texte de loi brut
+  amounts: Record<string, number>;  // Montants actuels
+  officialUrl: string;    // URL ejustice.just.fgov.be
+}
+
+async function generateBenefit(input: BenefitInput) {
+  // Étape 1: Extraire la structure
+  const structureResponse = await client.messages.create({
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 4096,
+    messages: [{
+      role: 'user',
+      content: `Analyse ce texte de loi belge et extrait les conditions
+                d'éligibilité, catégories, montants et obligations en JSON:
+
+                ${input.legalText}`
+    }]
+  });
+
+  const structure = JSON.parse(structureResponse.content[0].text);
+
+  // Étape 2: Générer le Gherkin
+  const gherkinResponse = await client.messages.create({
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 4096,
+    messages: [{
+      role: 'user',
+      content: `Génère une spec Gherkin en français pour cette prestation:
+                ${JSON.stringify(structure)}
+
+                Montants: ${JSON.stringify(input.amounts)}
+                URL légale: ${input.officialUrl}`
+    }]
+  });
+
+  // Étape 3: Générer les fichiers TypeScript
+  // ... (Types, Rules, Machine, Example)
+
+  // Écrire les fichiers
+  fs.writeFileSync(
+    `features/benefits/${input.name}.feature`,
+    gherkinResponse.content[0].text
+  );
+
+  console.log(`✅ Prestation ${input.name} générée`);
+  console.log('⚠️  Validation humaine requise pour :');
+  console.log('   - URLs juridiques');
+  console.log('   - Logique métier Gherkin');
+  console.log('   - Montants et seuils');
+}
+```
+
+### Commande tout-en-un : `npm run add-law`
+
+Le script `add-new-law.ts` intègre toutes les étapes en une seule commande :
+
+```bash
+# Mode 1: Recherche automatique de sources (🔎 recommandé)
+npm run add-law -- --benefit="allocation-chauffage"
+
+# Mode 2: Recherche auto + sélection automatique de la meilleure source
+npm run add-law -- --benefit="allocation-chauffage" --auto
+
+# Mode 3: Dry-run (voir les sources trouvées sans générer de fichiers)
+npm run add-law -- --benefit="allocation-chauffage" --dry-run
+
+# Mode 4: URL directe (si vous connaissez déjà la source)
+npm run add-law -- --url="https://ejustice.just.fgov.be/..."
+
+# Mode 5: Texte brut (copié depuis un PDF/document)
+npm run add-law -- --text="Article 1. ..." --title="Loi du..." --authority="SPF"
+```
+
+#### Fonctionnement du mode `--benefit`
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                  npm run add-law --benefit="..."                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  1. 🔍 Recherche de sources officielles                        │
+│     └─► Claude analyse le nom de la prestation                 │
+│     └─► Retourne des URLs ejustice.just.fgov.be, moniteur.be   │
+│                                                                 │
+│  2. 📊 Scoring des sources trouvées                            │
+│     ┌────────────────────────────────────────┐                 │
+│     │ Score │ Source                         │                 │
+│     │  10   │ ejustice.just.fgov.be          │                 │
+│     │  10   │ etaamb.openjustice.be          │                 │
+│     │   9   │ moniteur.be                    │                 │
+│     │   8   │ belgium.be / onem.be           │                 │
+│     │   5   │ Sources inconnues              │                 │
+│     └────────────────────────────────────────┘                 │
+│                                                                 │
+│  3. ✅ Sélection automatique                                   │
+│     └─► Score ≥ 9 : auto-sélection                             │
+│     └─► Score 7-8 : warning, vérification recommandée          │
+│     └─► Score < 7 : vérification humaine requise               │
+│                                                                 │
+│  4. 🚀 Pipeline de génération                                  │
+│     └─► Extraction du texte légal                              │
+│     └─► Génération Gherkin, Rules, Machine                     │
+│     └─► Validation de conformité                               │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### Options disponibles
+
+| Option | Description |
+|--------|-------------|
+| `--benefit="..."` | Nom de la prestation (déclenche recherche auto) |
+| `--url="https://..."` | URL directe vers la source légale |
+| `--text="..."` | Texte légal brut |
+| `--title="..."` | Titre de la loi (requis avec --text) |
+| `--authority="..."` | Autorité compétente (requis avec --text) |
+| `--auto` | Sélectionne automatiquement la meilleure source |
+| `--dry-run` | Affiche les sources sans générer de fichiers |
+
+#### Exemple de sortie
+
+```
+═══════════════════════════════════════════════════════════
+🔎 MODE: Recherche automatique de sources
+   Prestation: "allocation-chauffage"
+═══════════════════════════════════════════════════════════
+
+🔍 Searching official sources for "allocation-chauffage"...
+
+📋 Found sources:
+
+   1. ✅ [10/10] Arrêté royal du 21 janvier 2003 concernant l'allocation chauffage
+      https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?...
+      Official Belgian legal database (ejustice.just.fgov.be)
+
+   2. 🟡 [8/10] Allocation chauffage - SPF Économie
+      https://economie.fgov.be/fr/themes/energie/...
+      Official Belgian government website
+
+✅ Auto-selecting best source (score 10/10):
+   Arrêté royal du 21 janvier 2003 concernant l'allocation chauffage
+   https://www.ejustice.just.fgov.be/...
+
+🚀 Starting pipeline...
+
+✅ Success! Generated:
+   📄 Feature: features/benefits/allocation-chauffage.feature
+   ⚙️  Rules: src/rules/allocationChauffageRules.ts
+   🤖 Machine: src/workflows/allocationChauffageMachine.ts
+
+💡 Next steps:
+   1. Review generated files
+   2. Update src/domain/legalMetadata.ts with legal source
+   3. Run tests: npm test
+   4. Check compliance: npm run check:versions
+```
+
+### Coût estimé par prestation
+
+| Modèle | Tokens (~) | Coût estimé |
+|--------|-----------|-------------|
+| Claude Sonnet | ~15k input, ~8k output | ~$0.15 |
+| Claude Opus | ~15k input, ~8k output | ~$0.75 |
+| GPT-4o | ~15k input, ~8k output | ~$0.20 |
+
+**Recommandation :** Utiliser Sonnet pour la génération, Opus pour la validation complexe.
+
+### Validation automatisée
+
+```bash
+# Après génération LLM, exécuter la validation
+npm run typecheck           # Vérifier types TypeScript
+npm run lint               # Vérifier style de code
+npm test                   # Tests unitaires
+npm run cucumber           # Tests BDD
+
+# Si tout passe → PR pour revue humaine
+```
+
+### Limitations connues des LLM
+
+| Aspect | Limitation | Mitigation |
+|--------|------------|------------|
+| **URLs** | Peut inventer des URLs | Toujours vérifier sur ejustice.just.fgov.be |
+| **Montants** | Peut utiliser des montants obsolètes | Fournir les montants actuels en entrée |
+| **Cas limites** | Peut manquer des exceptions légales | Revue par expert juridique |
+| **Calculs complexes** | Peut mal interpréter les formules | Tests avec cas réels |
+
+---
+
 ## Checklist finale
 
 Avant de soumettre votre nouvelle prestation, vérifiez :
 
-| # | Étape | Fichier | Vérifié |
-|---|-------|---------|:-------:|
-| 1 | Type ajouté à `BenefitType` | `src/domain/types.ts` | ☐ |
-| 2 | Types spécifiques créés | `src/domain/[nom]Types.ts` | ☐ |
-| 3 | Sources juridiques ajoutées | `src/legal-sources/belgianLegalSources.ts` | ☐ |
-| 4 | Spécification Gherkin créée | `features/benefits/[nom].feature` | ☐ |
-| 5 | Règles d'éligibilité implémentées | `src/rules/[nom]Rules.ts` | ☐ |
-| 6 | Machine à états créée | `src/workflows/[nom]Machine.ts` | ☐ |
-| 7 | Exemple exécutable créé | `src/examples/[nom]Example.ts` | ☐ |
-| 8 | Script npm ajouté | `package.json` | ☐ |
-| 9 | Tests unitaires passent | `npm test` | ☐ |
-| 10 | Tests BDD passent | `npm run cucumber` | ☐ |
-| 11 | TypeScript compile | `npm run typecheck` | ☐ |
-| 12 | Linting OK | `npm run lint` | ☐ |
+| # | Étape | Fichier | Acteur | Vérifié |
+|---|-------|---------|:------:|:-------:|
+| 1 | Type ajouté à `BenefitType` | `src/domain/types.ts` | 🤖 | ☐ |
+| 2 | Types spécifiques créés | `src/domain/[nom]Types.ts` | 🤖 | ☐ |
+| 3 | Sources juridiques ajoutées | `src/legal-sources/belgianLegalSources.ts` | 🤖+👤 | ☐ |
+| 4 | Spécification Gherkin créée | `features/benefits/[nom].feature` | 🤖+👤 | ☐ |
+| 5 | Règles d'éligibilité implémentées | `src/rules/[nom]Rules.ts` | 🤖 | ☐ |
+| 6 | Machine à états créée | `src/workflows/[nom]Machine.ts` | 🤖 | ☐ |
+| 7 | Exemple exécutable créé | `src/examples/[nom]Example.ts` | 🤖 | ☐ |
+| 8 | Script npm ajouté | `package.json` | 🤖 | ☐ |
+| 9 | Tests unitaires passent | `npm test` | 🤖 | ☐ |
+| 10 | Tests BDD passent | `npm run cucumber` | 🤖 | ☐ |
+| 11 | TypeScript compile | `npm run typecheck` | 🤖 | ☐ |
+| 12 | Linting OK | `npm run lint` | 🤖 | ☐ |
+| 13 | **URLs vérifiées** | Sources juridiques | 👤 | ☐ |
+| 14 | **Logique métier validée** | Spec Gherkin | 👤 | ☐ |
+| 15 | **Revue finale** | Tous les fichiers | 👤 | ☐ |
+
+**Légende :** 🤖 LLM | 👤 Humain | 🤖+👤 Collaboration
 
 ---
 

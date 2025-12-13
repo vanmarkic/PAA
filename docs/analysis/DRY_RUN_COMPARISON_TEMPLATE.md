@@ -5,7 +5,7 @@
 Second dry run for `loi-du-26-mai-2002-concernant-le-droit-l-int-grati.feature` using the new **template-based approach**.
 
 **Date**: 2025-11-18  
-**Model**: `claude-opus-4-1`  
+**Model**: `claude-opus-4-5`  
 **Approach**: Template-based rule generation
 
 ## Key Changes

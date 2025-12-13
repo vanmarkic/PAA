@@ -42,6 +42,7 @@
     "validate:links": "ts-node scripts/validate-links.ts",
     "validate:links:local": "ts-node scripts/validate-links.ts --base-path /",
     "add-law": "ts-node scripts/add-new-law.ts",
+    "generate:rules": "ts-node scripts/generate-rules-from-features.ts",
     "db:init": "ts-node scripts/db-init.ts",
     "db:migrate": "ts-node src/database/migrationService.ts",
     "db:populate-metadata": "ts-node scripts/db-populate-metadata.ts",

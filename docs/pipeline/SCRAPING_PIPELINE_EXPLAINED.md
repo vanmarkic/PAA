@@ -8,7 +8,7 @@ When you run `npm run scrape`, here's the complete flow:
 
 ```
 ✅ Loads environment variables (.env.local or .env)
-✅ Initializes Claude API client (claude-opus-4-1)
+✅ Initializes Claude API client (claude-opus-4-5)
 ✅ Creates LawManagementOrchestrator
 ✅ Loads database registry
 ```

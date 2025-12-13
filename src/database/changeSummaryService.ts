@@ -41,7 +41,7 @@ export class ChangeSummaryService {
       const summary = JSON.parse(jsonMatch[0]);
 
       return {
-        generatedBy: 'claude-opus-4-1',
+        generatedBy: 'claude-opus-4-5',
         generatedAt: new Date().toISOString(),
         changeType: summary.changeType,
         summary: summary.summary,

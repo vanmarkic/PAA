@@ -58,7 +58,7 @@ export class PipelineOrchestrator {
     // Ensure all required fields are set
     this.config = {
       apiKey: config.apiKey,
-      model: config.model || 'claude-opus-4-1',
+      model: config.model || 'claude-opus-4-5',
       maxTokens: config.maxTokens || 4096,
     };
   }

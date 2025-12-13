@@ -44,7 +44,7 @@ async function main() {
 
   const claudeClient = new ClaudeAPIClient({
     apiKey,
-    model: 'claude-opus-4-1',
+    model: 'claude-opus-4-5',
     maxTokens: 8000
   });
 

@@ -3,7 +3,7 @@
 ## Test Execution
 
 **Date**: 2025-11-18  
-**Model**: `claude-opus-4-1`  
+**Model**: `claude-opus-4-5`  
 **Test Feature**: RIS (Revenu d'Intégration Sociale)  
 **Input**: Existing RIS feature file content (first 30 lines)
 
