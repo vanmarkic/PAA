@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "7848a0de-d3be-4aa0-b738-fcd4ec568338",
+      "id": "913b6de3-474e-4ddf-84a9-10d697c2f62e",
       "name": "Protection automatique d'une œuvre littéraire",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "09c947cd-2193-442f-b5be-b0f6f5bae18f",
+      "id": "a19c7a5c-f40b-4f0b-a023-d736a3cc4496",
       "name": "Dépôt i-DEPOT pour preuve de création",
       "description": "",
       "tags": [],
@@ -98,7 +98,7 @@
       "isOutline": false
     },
     {
-      "id": "6f28b0e3-4f19-4d15-8f6e-68e43c0e51db",
+      "id": "11194a6f-9486-4928-a3f9-6a66d108a47f",
       "name": "Œuvre créée par un employé",
       "description": "",
       "tags": [],
@@ -135,7 +135,7 @@
       "isOutline": false
     },
     {
-      "id": "ac7e097d-12d4-4bd7-8d1c-863b7ecfa073",
+      "id": "823d4faa-acb8-48e9-b973-f27494a8aac5",
       "name": "Œuvre de collaboration à plusieurs auteurs",
       "description": "",
       "tags": [],
@@ -168,7 +168,7 @@
       "isOutline": false
     },
     {
-      "id": "fd123625-ad79-48b2-8c27-03e5edfea70d",
+      "id": "75260e64-0b22-440f-87ea-dc451df951e5",
       "name": "Protection d'une base de données",
       "description": "",
       "tags": [],
@@ -208,5 +208,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.684Z"
+  "generated": "2025-12-13T11:57:49.168Z"
 }

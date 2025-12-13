@@ -45,7 +45,7 @@
   },
   "scenarios": [
     {
-      "id": "bd23ad44-1922-49c3-8d53-e50cc4a305ae",
+      "id": "a0221db2-abd9-4f2b-a75a-28bfc3635cf9",
       "name": "Création d'une pétition communale",
       "description": "",
       "tags": [],
@@ -102,7 +102,7 @@
       "isOutline": false
     },
     {
-      "id": "7f7d7db5-f756-4b88-9318-5f7299cc0717",
+      "id": "643fbfb9-ccbd-4c09-96d4-e238c7320dd4",
       "name": "Signature d'une pétition avec vérification",
       "description": "",
       "tags": [],
@@ -155,7 +155,7 @@
       "isOutline": false
     },
     {
-      "id": "98cc3028-e257-4f4b-9cc1-8c56253dc9da",
+      "id": "d8ffd9d5-3ff4-4530-afe6-52dd78e54865",
       "name": "Pétition atteignant le seuil requis",
       "description": "",
       "tags": [],
@@ -200,7 +200,7 @@
       "isOutline": false
     },
     {
-      "id": "2f82a44c-432d-4cdb-bd9a-69059ad24c90",
+      "id": "57bdbb15-0e75-4663-a658-777db357c7c1",
       "name": "Initiative citoyenne européenne",
       "description": "",
       "tags": [],
@@ -249,7 +249,7 @@
       "isOutline": false
     },
     {
-      "id": "c0dc123c-0189-425d-93ac-747f234b74e8",
+      "id": "16ffb95c-fb80-49e5-a0c7-d5283d293bd6",
       "name": "Tentative de double signature",
       "description": "",
       "tags": [],
@@ -286,7 +286,7 @@
       "isOutline": false
     },
     {
-      "id": "3c998e99-2dc4-4e45-82ea-d7bf24cc52ca",
+      "id": "0a19195c-cff8-4de5-a065-9100496055e5",
       "name": "Pétition expirée sans atteindre le seuil",
       "description": "",
       "tags": [],
@@ -327,7 +327,7 @@
       "isOutline": false
     },
     {
-      "id": "e8117b2e-c4b4-4aae-9b3f-f28ab32aa365",
+      "id": "38119bd5-3e0c-4ed0-9669-d37d239b609d",
       "name": "Réponse des autorités à une pétition réussie",
       "description": "",
       "tags": [],
@@ -388,7 +388,7 @@
       "isOutline": false
     },
     {
-      "id": "31974574-9522-4ea4-b1df-403720a29e0c",
+      "id": "571c8f38-eef8-4755-b48f-935bdaae9be9",
       "name": "Pétition frauduleuse avec fausses signatures",
       "description": "",
       "tags": [],
@@ -429,7 +429,7 @@
       "isOutline": false
     },
     {
-      "id": "83607c3d-f223-4cfc-bc31-3d36964dac16",
+      "id": "79216bde-3bff-4243-9836-109bdbc65bc8",
       "name": "Éligibilité à signer selon le type de pétition",
       "description": "",
       "tags": [],
@@ -472,7 +472,7 @@
           ],
           "rows": [
             {
-              "name": "111f97eb-bffd-45ed-b202-3574a3eb54fd",
+              "name": "dead51c1-6028-480f-9c13-fea706061983",
               "values": {
                 "statut": "citoyen belge",
                 "age": "18",
@@ -482,7 +482,7 @@
               }
             },
             {
-              "name": "2541f5ff-c717-471d-b324-b6ffb153c9e3",
+              "name": "155af6b5-c6f7-4b35-9bc1-f335546209b6",
               "values": {
                 "statut": "citoyen belge",
                 "age": "16",
@@ -492,7 +492,7 @@
               }
             },
             {
-              "name": "2294b36b-1ea1-4cef-9fa2-58cf16b43d27",
+              "name": "63c3edb4-4cb8-447c-910b-006726f4a5e9",
               "values": {
                 "statut": "citoyen belge",
                 "age": "15",
@@ -502,7 +502,7 @@
               }
             },
             {
-              "name": "9230538f-86b3-417e-914b-25df42dadb48",
+              "name": "d9bc1c32-0e44-4b0f-9e77-b662162e8e04",
               "values": {
                 "statut": "citoyen EU",
                 "age": "25",
@@ -512,7 +512,7 @@
               }
             },
             {
-              "name": "c9356805-c3e1-43d1-927b-8c6178fb8f5e",
+              "name": "cc44bdd1-557d-44fb-aaba-91193382d2c6",
               "values": {
                 "statut": "citoyen EU",
                 "age": "20",
@@ -522,7 +522,7 @@
               }
             },
             {
-              "name": "815fe315-d995-40c8-83e5-ff8b4bde2e89",
+              "name": "2fb88642-5d97-4e26-a483-4863d6abfd31",
               "values": {
                 "statut": "résident non-EU",
                 "age": "30",
@@ -532,7 +532,7 @@
               }
             },
             {
-              "name": "c828350a-7dc3-4492-923c-f8dc3f83304c",
+              "name": "19272674-9842-4f8b-a95d-08d6df064c2f",
               "values": {
                 "statut": "résident non-EU",
                 "age": "30",
@@ -547,7 +547,7 @@
       "isOutline": true
     },
     {
-      "id": "e252d4c2-c492-452d-a7aa-a4c92fef5b3a",
+      "id": "91c96fd5-db06-4437-b469-08795fb79388",
       "name": "Transformation d'une pétition en référendum",
       "description": "",
       "tags": [],
@@ -587,5 +587,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.680Z"
+  "generated": "2025-12-13T11:57:49.165Z"
 }

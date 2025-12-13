@@ -1,0 +1,464 @@
+{
+  "id": "benefits-documentation-et-l-gislation-bail-ferme",
+  "name": "Bail à ferme en Wallonie",
+  "description": "  En tant que propriétaire ou agriculteur en Wallonie\n  Je veux comprendre les règles du bail à ferme\n  Afin de louer ou exploiter des terres agricoles conformément à la législation",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "name": "",
+    "description": "",
+    "steps": [
+      {
+        "keyword": "Étant donné que",
+        "text": "le bail à ferme est régi par la législation wallonne"
+      },
+      {
+        "keyword": "Et que",
+        "text": "l'Agence du foncier agricole supervise les locations de biens agricoles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "4375253a-00e1-4f22-b540-8d6f4b818a85",
+      "name": "Choix du type de bail à ferme",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je souhaite conclure un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je consulte les différents types de baux disponibles"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je peux choisir parmi les options suivantes:",
+          "dataTable": {
+            "headers": [
+              "Type de bail"
+            ],
+            "rows": [
+              {
+                "Type de bail": "Bail classique"
+              },
+              {
+                "Type de bail": "Bail de carrière"
+              },
+              {
+                "Type de bail": "Bail de longue durée"
+              },
+              {
+                "Type de bail": "Bail de fin de carrière"
+              },
+              {
+                "Type de bail": "Bail de courte durée"
+              }
+            ]
+          }
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "30255dda-d6a9-4c9a-99f5-a2819e6118c2",
+      "name": "Obligation d'un écrit pour le bail à ferme",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conclus un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le contrat est établi"
+        },
+        {
+          "keyword": "Alors",
+          "text": "un écrit est obligatoire pour formaliser le bail"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "99b3525b-8623-4ac7-b540-4f867c66920d",
+      "name": "Réalisation de l'état des lieux",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conclus un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le bail entre en vigueur"
+        },
+        {
+          "keyword": "Alors",
+          "text": "un état des lieux doit être réalisé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2960a349-2967-4a3e-b7e3-0fbbf10d1c30",
+      "name": "Notification à l'Observatoire du foncier agricole",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conclus un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le contrat est signé"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois notifier le bail à l'Observatoire du foncier agricole"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5815b2d6-595b-446b-9899-19951f7c1f70",
+      "name": "Enregistrement au SPF Finances",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je conclus un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le contrat est formalisé"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le bail doit être enregistré au SPF Finances"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "19dc1759-6a9d-488f-8074-1a4fb4733e02",
+      "name": "Calcul du fermage",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis bailleur ou preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je dois déterminer le montant du loyer"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le fermage est calculé selon les coefficients de fermage en vigueur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "95c86cd4-fbaa-4b34-b512-9734b92dca35",
+      "name": "Location de biens publics",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "des biens agricoles publics sont mis en location"
+        },
+        {
+          "keyword": "Quand",
+          "text": "une personne publique loue des terres agricoles"
+        },
+        {
+          "keyword": "Alors",
+          "text": "des règles spécifiques de mise en location s'appliquent"
+        },
+        {
+          "keyword": "Et",
+          "text": "des contrats de gestion peuvent être conclus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "190b32d2-e0ad-4e7f-9ce3-95b038c35b52",
+      "name": "Transmission du bail par décès du preneur",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un preneur décède"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le bail est en cours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les règles de transmission du bail par décès du preneur s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "28f1052e-acfc-470c-84de-ad1b4cf1473d",
+      "name": "Transmission du bail par décès du bailleur",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un bailleur décède"
+        },
+        {
+          "keyword": "Quand",
+          "text": "le bail est en cours"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les règles de transmission du bail par décès du bailleur s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "363a8104-6731-449c-9637-8504e0e08b5d",
+      "name": "Cession du bail",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je souhaite céder mon bail"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les règles de cession prévues par la législation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "2e29f399-9abc-42bc-adbe-50945693757e",
+      "name": "Aliénation des biens loués",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis bailleur d'un bien agricole"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je souhaite vendre le bien loué"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les règles d'aliénation des biens s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "5620fe4b-9e5d-4205-82fd-d21bc49117d2",
+      "name": "Sous-location d'un bien agricole",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je souhaite sous-louer le bien"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les conditions relatives aux sous-locations"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "b72e8a7c-e48d-4ad9-8e2d-b21896c29b6c",
+      "name": "Échange de culture",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je suis agriculteur"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je souhaite échanger des cultures avec un autre agriculteur"
+        },
+        {
+          "keyword": "Alors",
+          "text": "je dois respecter les règles relatives aux échanges de culture"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "d0ff53f9-a6a5-44b0-82d1-32fa52a90aa6",
+      "name": "Contrat de culture",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je souhaite conclure un contrat de culture"
+        },
+        {
+          "keyword": "Quand",
+          "text": "j'établis le contrat"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les dispositions spécifiques aux contrats de culture s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "eb39e419-8a89-4467-867e-d5bfa6fd212e",
+      "name": "Fin du bail de plein droit",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un bail à ferme arrive à son terme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "les conditions de fin de plein droit sont remplies"
+        },
+        {
+          "keyword": "Alors",
+          "text": "le bail prend fin automatiquement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "892ad382-022f-4edd-b8bf-e43e749e3658",
+      "name": "Résiliation amiable du bail",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "le bailleur et le preneur sont d'accord"
+        },
+        {
+          "keyword": "Quand",
+          "text": "ils souhaitent mettre fin au bail"
+        },
+        {
+          "keyword": "Alors",
+          "text": "une résiliation amiable peut être conclue"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "e7e2518b-b476-4428-88b6-c4985ea49227",
+      "name": "Fiscalité - Impôt des personnes physiques",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je perçois des revenus d'un bail à ferme"
+        },
+        {
+          "keyword": "Quand",
+          "text": "je déclare mes revenus"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les règles d'impôt des personnes physiques relatives au bail à ferme s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "37b63b18-0dda-4a47-b84a-343c80816dd5",
+      "name": "Fiscalité - Droits de donation",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné que",
+          "text": "je souhaite donner un bien agricole loué"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la donation est réalisée"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les droits de donation spécifiques s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "fb5e26d5-c5cb-411a-aa95-7e6cdbe19ea1",
+      "name": "Fiscalité - Droits de succession",
+      "description": "",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Étant donné qu'",
+          "text": "un bien agricole loué fait partie d'une succession"
+        },
+        {
+          "keyword": "Quand",
+          "text": "la succession est ouverte"
+        },
+        {
+          "keyword": "Alors",
+          "text": "les droits de succession spécifiques s'appliquent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "specificationVersion": "1.0.0",
+    "effectiveDate": "2025-12-13",
+    "legalBasis": "Documentation et législation - Bail à ferme",
+    "legalUrl": "https://agriculture.wallonie.be/home/ruralite-et-foncier/foncier/foncier-agricole/louer/bail-a-ferme/legislation-et-documentation.html",
+    "language": "fr"
+  },
+  "generated": "2025-12-13T11:57:49.159Z",
+  "legalSources": {
+    "sources": [
+      {
+        "title": "Documentation et législation - Bail à ferme",
+        "authority": "Source légale"
+      }
+    ]
+  }
+}

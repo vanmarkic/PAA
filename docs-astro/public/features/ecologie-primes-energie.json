@@ -56,7 +56,7 @@
   },
   "scenarios": [
     {
-      "id": "287011df-dbfb-49f8-b944-c44db3ecbd14",
+      "id": "d05222c4-3df4-4cb1-8a5d-e422c63c8c59",
       "name": "Installation panneaux solaires pour famille revenus moyens",
       "description": "",
       "tags": [],
@@ -105,7 +105,7 @@
       "isOutline": false
     },
     {
-      "id": "1611895e-a8e7-413f-be8c-ea1243b7d5f4",
+      "id": "32d7dc69-bf7c-4ee3-92ba-0f6107dcbd7b",
       "name": "Cumul de primes pour rénovation complète",
       "description": "",
       "tags": [],
@@ -200,7 +200,7 @@
       "isOutline": false
     },
     {
-      "id": "439b2f5c-46b2-43d0-8954-07991c9f1248",
+      "id": "d34a999a-1adf-4e1f-bc25-b34bd0e854a8",
       "name": "Bonus pour performance énergétique exceptionnelle",
       "description": "",
       "tags": [],
@@ -237,7 +237,7 @@
       "isOutline": false
     },
     {
-      "id": "69b0972e-3ca8-4bf9-906d-e89d4a00fc3d",
+      "id": "f9ec29be-8541-4a38-bae6-ebc92acb85df",
       "name": "Prime véhicule électrique entreprise",
       "description": "",
       "tags": [],
@@ -278,7 +278,7 @@
       "isOutline": false
     },
     {
-      "id": "16e0fa19-9248-4d45-abbb-91f78c9e49c2",
+      "id": "493b6358-37c8-4524-9fa7-34244097f428",
       "name": "Refus pour travaux non conformes",
       "description": "",
       "tags": [],
@@ -315,7 +315,7 @@
       "isOutline": false
     },
     {
-      "id": "9a29013c-6c17-449c-b599-4c97ddf816e0",
+      "id": "1f72b811-71dc-492d-9422-7415b4fa09c9",
       "name": "Calcul prime isolation selon revenus et surface",
       "description": "",
       "tags": [],
@@ -349,7 +349,7 @@
           ],
           "rows": [
             {
-              "name": "0dc98b97-99e4-4a34-b4b2-dea130584e99",
+              "name": "af568a09-4474-4f66-bb7b-555ebf7f7483",
               "values": {
                 "revenus": "25000",
                 "surface": "100",
@@ -358,7 +358,7 @@
               }
             },
             {
-              "name": "6993a71b-14a2-4a2a-ba97-960a7c072318",
+              "name": "e668c6e4-cce0-42ae-9fd9-c8eac31c8bc6",
               "values": {
                 "revenus": "25000",
                 "surface": "100",
@@ -367,7 +367,7 @@
               }
             },
             {
-              "name": "6a4c4dc8-8824-4a06-b65c-0a5afa4c2915",
+              "name": "da6e9ac9-3dd8-4643-a6d2-c1e67a8df26b",
               "values": {
                 "revenus": "45000",
                 "surface": "100",
@@ -376,7 +376,7 @@
               }
             },
             {
-              "name": "dd3d36ab-cac3-4f54-b18b-2c848635824e",
+              "name": "06afd640-fcd2-4b64-a170-684f59bea9ec",
               "values": {
                 "revenus": "45000",
                 "surface": "100",
@@ -385,7 +385,7 @@
               }
             },
             {
-              "name": "02ff3b92-0942-4d47-baf4-2b908516f800",
+              "name": "47095e3b-f609-4085-a1b8-75ef903214e6",
               "values": {
                 "revenus": "70000",
                 "surface": "100",
@@ -394,7 +394,7 @@
               }
             },
             {
-              "name": "8991499b-65bb-4156-974f-feaed2395113",
+              "name": "b051623d-2e38-45a7-8ad4-02e0c51b1dc5",
               "values": {
                 "revenus": "70000",
                 "surface": "100",
@@ -411,5 +411,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.681Z"
+  "generated": "2025-12-13T11:57:49.165Z"
 }

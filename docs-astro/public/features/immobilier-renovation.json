@@ -28,7 +28,7 @@
   },
   "scenarios": [
     {
-      "id": "5069222f-2dfd-4368-96fd-410121b75137",
+      "id": "2dcbb3f4-bb74-4acf-8cac-a8b0d64b99bd",
       "name": "Demande de prime habitation pour isolation toiture",
       "description": "",
       "tags": [],
@@ -132,7 +132,7 @@
       "isOutline": false
     },
     {
-      "id": "2dc13442-cfb6-4406-ab53-33b69fc9e987",
+      "id": "013e1675-3bba-41ec-9869-91899ba80cf5",
       "name": "Réalisation d'un audit énergétique PAE2",
       "description": "",
       "tags": [],
@@ -212,7 +212,7 @@
       "isOutline": false
     },
     {
-      "id": "7294a3eb-1f3e-4490-93f6-bb4b7973b9f0",
+      "id": "2839cab1-7e9c-44b8-97c7-750f417d26dc",
       "name": "Primes RENOLUTION pour rénovation complète",
       "description": "",
       "tags": [],
@@ -301,7 +301,7 @@
       "isOutline": false
     },
     {
-      "id": "9cb81e35-ce80-4a55-89aa-3820c16fa9ca",
+      "id": "0f7c5717-4d10-4bb4-99d2-74d1c260371a",
       "name": "Obtention d'un prêt RenoWatt à taux zéro",
       "description": "",
       "tags": [],
@@ -382,7 +382,7 @@
       "isOutline": false
     },
     {
-      "id": "1f62080a-ee2c-41a5-be4b-2cbae3ae9d28",
+      "id": "2c27da04-55cb-4092-9fe1-5bcb9fcb26f3",
       "name": "Obtention du certificat PEB pour location",
       "description": "",
       "tags": [],
@@ -458,7 +458,7 @@
       "isOutline": false
     },
     {
-      "id": "df9f4636-964e-434f-ba58-90e089952970",
+      "id": "1b1e3cfa-8a60-483f-9806-311abb22f565",
       "name": "Installation de panneaux photovoltaïques avec primes",
       "description": "",
       "tags": [],
@@ -534,7 +534,7 @@
       "isOutline": false
     },
     {
-      "id": "bf5a5bd7-4222-41e0-a69c-95d89c326b3f",
+      "id": "0291a908-d0a2-48d7-86de-a5b7b7879f4f",
       "name": "Adaptation d'un logement pour personne âgée",
       "description": "",
       "tags": [],
@@ -614,7 +614,7 @@
       "isOutline": false
     },
     {
-      "id": "1a4eaa0c-249f-4c7f-acc6-5e53cecc1de3",
+      "id": "baafef27-844d-46d2-84a2-f2a7a0241e1c",
       "name": "Rénovation énergétique d'une copropriété",
       "description": "",
       "tags": [],
@@ -700,7 +700,7 @@
       "isOutline": false
     },
     {
-      "id": "353710ef-e3c5-46cf-85fc-5df7f73ce1e8",
+      "id": "7d5c45ea-7fb7-48f3-aeca-4bfce22dc406",
       "name": "Prime démolition-reconstruction énergétique",
       "description": "",
       "tags": [],
@@ -786,7 +786,7 @@
       "isOutline": false
     },
     {
-      "id": "559a5ba3-9528-4ff7-89c6-95941eef772c",
+      "id": "de568e3f-186a-4e3f-9eab-6ea7d7fbc5d6",
       "name": "Rénovation par tiers investisseur",
       "description": "",
       "tags": [],
@@ -872,7 +872,7 @@
       "isOutline": false
     },
     {
-      "id": "cd053314-d596-4b66-836f-e3e0ded0c016",
+      "id": "54f6e639-fa7b-4e62-b233-5f638a598b10",
       "name": "Calcul prime isolation selon revenus",
       "description": "",
       "tags": [],
@@ -921,7 +921,7 @@
           ],
           "rows": [
             {
-              "name": "837f76b4-50dd-427c-a273-64058ddc42a2",
+              "name": "76d5cf09-31a2-45f7-810d-0e6f00aeef9f",
               "values": {
                 "region": "Wallonie",
                 "revenus": "20000",
@@ -933,7 +933,7 @@
               }
             },
             {
-              "name": "022e2f77-751a-41c5-81fc-00cc3b0ee7cd",
+              "name": "e1dd63c9-d7db-43e7-b79c-a80ef92b75f6",
               "values": {
                 "region": "Wallonie",
                 "revenus": "35000",
@@ -945,7 +945,7 @@
               }
             },
             {
-              "name": "8171125c-f3ec-48b6-a4f7-69c672d0cda5",
+              "name": "60a44435-91d0-4251-a177-0efce123584a",
               "values": {
                 "region": "Wallonie",
                 "revenus": "50000",
@@ -957,7 +957,7 @@
               }
             },
             {
-              "name": "ce035707-e565-46e9-beed-5f8a8b9d8d97",
+              "name": "4ed1d767-7d73-452f-9d5d-cd2844749fce",
               "values": {
                 "region": "Wallonie",
                 "revenus": "70000",
@@ -969,7 +969,7 @@
               }
             },
             {
-              "name": "69e3b8b7-f4a1-49a3-8589-7d98ac463b20",
+              "name": "ca444518-8bf5-4fa7-87fb-5ee6aa532bb4",
               "values": {
                 "region": "Bruxelles",
                 "revenus": "35000",
@@ -981,7 +981,7 @@
               }
             },
             {
-              "name": "7fa32e34-f3e9-4037-9d84-97530d57e836",
+              "name": "55c2e082-ace5-441b-a712-576bdd872cbd",
               "values": {
                 "region": "Wallonie",
                 "revenus": "25000",
@@ -1001,5 +1001,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.683Z"
+  "generated": "2025-12-13T11:57:49.166Z"
 }

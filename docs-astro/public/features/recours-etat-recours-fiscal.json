@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "5a5c8031-bf27-41ed-ad3b-40193ddc3d61",
+      "id": "b28fbf10-9818-4345-ad7a-3bd4accce965",
       "name": "Réclamation contre l'impôt des personnes physiques",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "24b22838-5b67-4fc6-b091-2e7e93d1991b",
+      "id": "440ec987-9392-48aa-88c8-000d02ad5c57",
       "name": "Réclamation tardive avec circonstances exceptionnelles",
       "description": "",
       "tags": [],
@@ -110,7 +110,7 @@
       "isOutline": false
     },
     {
-      "id": "7eb23092-31e0-4217-a7ef-87a648012bbb",
+      "id": "13908282-1ffb-4489-8321-56d02aaca434",
       "name": "Recours au tribunal de première instance",
       "description": "",
       "tags": [],
@@ -155,7 +155,7 @@
       "isOutline": false
     },
     {
-      "id": "7375d992-09a6-47c6-8b92-069fc671aa42",
+      "id": "e83ae686-cd79-445a-9163-4c2c02dd16dc",
       "name": "Procédure amiable avec le service de conciliation",
       "description": "",
       "tags": [],
@@ -196,7 +196,7 @@
       "isOutline": false
     },
     {
-      "id": "10ea36f5-7a1e-4695-91ab-2ddc2163e72f",
+      "id": "57bf24b3-798d-4d1f-bc36-bf47374553e0",
       "name": "Réclamation TVA avec remboursement",
       "description": "",
       "tags": [],
@@ -237,7 +237,7 @@
       "isOutline": false
     },
     {
-      "id": "68bd3c32-abde-4b75-a50c-4c773f32caf7",
+      "id": "868e59be-e3aa-4642-8eef-161923b23630",
       "name": "Recours contre une amende fiscale",
       "description": "",
       "tags": [],
@@ -274,7 +274,7 @@
       "isOutline": false
     },
     {
-      "id": "ab6ea133-1174-46a2-93ae-202c2f690961",
+      "id": "c55700a5-cec1-4e42-bf82-ffc1fe93d3fb",
       "name": "Opposition à contrainte",
       "description": "",
       "tags": [],
@@ -315,7 +315,7 @@
       "isOutline": false
     },
     {
-      "id": "b70c09f9-f4a4-4fad-9045-93f26c371edd",
+      "id": "b6e08b68-012c-459f-b4c4-0142c9431a0c",
       "name": "Délais selon le type d'impôt",
       "description": "",
       "tags": [],
@@ -358,7 +358,7 @@
           ],
           "rows": [
             {
-              "name": "0b887809-1ecc-4dc5-b652-3083014f97b0",
+              "name": "b0f7ddc1-94ae-4ca4-a8bc-e8a04e9fdf47",
               "values": {
                 "type_impot": "IPP",
                 "date_decision": "2024-06-01",
@@ -368,7 +368,7 @@
               }
             },
             {
-              "name": "19997c33-4e52-403c-a9fb-d6d3bd47cd7e",
+              "name": "074c2995-b19b-4dfb-87bd-0538f6276850",
               "values": {
                 "type_impot": "Précompte immobilier",
                 "date_decision": "2024-01-01",
@@ -378,7 +378,7 @@
               }
             },
             {
-              "name": "48df5ca4-2786-489a-bd0d-0d72125cd08a",
+              "name": "7c0c3001-9553-42ed-bbdb-1c2ae4a7a8df",
               "values": {
                 "type_impot": "TVA",
                 "date_decision": "2024-01-01",
@@ -388,7 +388,7 @@
               }
             },
             {
-              "name": "eabc053d-7c68-43d5-aa9b-91a9a670c42b",
+              "name": "08ec5a7e-71c4-48fb-ba53-7ca3d930e91b",
               "values": {
                 "type_impot": "Droits de succession",
                 "date_decision": "2023-01-01",
@@ -403,7 +403,7 @@
       "isOutline": true
     },
     {
-      "id": "ae60b34a-6e03-4f51-88a7-7cd61d6d8afc",
+      "id": "f2bc14de-dd64-4091-8252-ca4c74b7ca69",
       "name": "Demande de surséance indéfinie au recouvrement",
       "description": "",
       "tags": [],
@@ -444,7 +444,7 @@
       "isOutline": false
     },
     {
-      "id": "280b707a-be0e-47c5-9a43-315a68057a90",
+      "id": "c2f50292-8368-4e49-823c-73cdb62a3c4f",
       "name": "Recours en cassation fiscal",
       "description": "",
       "tags": [],
@@ -484,5 +484,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.685Z"
+  "generated": "2025-12-13T11:57:49.169Z"
 }

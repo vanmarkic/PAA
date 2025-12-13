@@ -56,7 +56,7 @@
   },
   "scenarios": [
     {
-      "id": "e6708cac-a09e-4070-bc28-ec9457db5c83",
+      "id": "4ac0beac-b299-4118-8406-926c74649f0e",
       "name": "Demandeur d'emploi en formation métier en pénurie",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "8953c87d-0fab-4e92-b798-52fc464a5917",
+      "id": "b9934129-c667-47d0-a63f-b0f6fff77832",
       "name": "Travailleur en reconversion professionnelle",
       "description": "",
       "tags": [],
@@ -158,7 +158,7 @@
       "isOutline": false
     },
     {
-      "id": "2aded05b-0d79-43a7-bfe0-c3d6a139d3f9",
+      "id": "9b029ead-4e2f-480c-85a5-b672e5fe7a45",
       "name": "Jeune sans qualification en formation qualifiante",
       "description": "",
       "tags": [],
@@ -207,7 +207,7 @@
       "isOutline": false
     },
     {
-      "id": "331ba73a-f0b4-4d0b-a011-163027064389",
+      "id": "836e607d-28ce-475b-9774-dfdba6e4f54f",
       "name": "Formation en alternance pour demandeur d'emploi",
       "description": "",
       "tags": [],
@@ -256,7 +256,7 @@
       "isOutline": false
     },
     {
-      "id": "98cde44c-571b-4ac7-abf3-a0eefecdf1c2",
+      "id": "21d9dfdd-d633-40bc-abcc-bbdc7358f6f1",
       "name": "Travailleur âgé de plus de 50 ans",
       "description": "",
       "tags": [],
@@ -305,7 +305,7 @@
       "isOutline": false
     },
     {
-      "id": "025931a1-8cfd-4bc1-b206-7ed1d4e3af51",
+      "id": "de758dfb-0faf-4b26-b79a-d53400ce04b1",
       "name": "Formation non agréée par le service régional",
       "description": "",
       "tags": [],
@@ -346,7 +346,7 @@
       "isOutline": false
     },
     {
-      "id": "8ecb4506-e22e-4ea5-a5ac-77b1ada929c7",
+      "id": "e37662a9-bddd-4b14-a237-5ecb63d671ee",
       "name": "Parent isolé avec enfants en formation",
       "description": "",
       "tags": [],
@@ -391,7 +391,7 @@
       "isOutline": false
     },
     {
-      "id": "0f824887-8d47-401d-a4a8-d1b54dea9d84",
+      "id": "66277f71-449e-41a4-99e0-3d95ff98a680",
       "name": "Formation en langues pour emploi spécifique",
       "description": "",
       "tags": [],
@@ -440,7 +440,7 @@
       "isOutline": false
     },
     {
-      "id": "4172227d-4652-47d0-9e0c-6dc0178d72fc",
+      "id": "d3fea478-b7d9-4b6e-aa65-42dddf74465b",
       "name": "Indemnités selon le type de formation",
       "description": "",
       "tags": [],
@@ -488,7 +488,7 @@
           ],
           "rows": [
             {
-              "name": "4dffa54f-4fea-45f5-9239-ed8083d8a1cf",
+              "name": "0cc952a1-ebf1-4961-9131-a360dfc2f802",
               "values": {
                 "statut": "demandeur emploi",
                 "type_formation": "métier en pénurie",
@@ -499,7 +499,7 @@
               }
             },
             {
-              "name": "163ecec9-36b2-46b7-86e9-3b3e501ecfde",
+              "name": "a05cf17e-27a0-4148-b021-a5d07ec8ae03",
               "values": {
                 "statut": "demandeur emploi",
                 "type_formation": "qualifiante",
@@ -510,7 +510,7 @@
               }
             },
             {
-              "name": "11bab612-d544-4820-afae-305180780d71",
+              "name": "39641188-419d-478b-928c-cd06cda54b8c",
               "values": {
                 "statut": "travailleur",
                 "type_formation": "reconversion",
@@ -521,7 +521,7 @@
               }
             },
             {
-              "name": "60e6be7c-7892-4851-a51f-959bba0a3d50",
+              "name": "6456b988-6574-4f01-9db3-25719b7e9934",
               "values": {
                 "statut": "jeune sans diplôme",
                 "type_formation": "alternance",
@@ -532,7 +532,7 @@
               }
             },
             {
-              "name": "5cc6dceb-9411-4459-90cf-b568c7d2d384",
+              "name": "6247d03c-0138-4423-958e-5ccb6d06818d",
               "values": {
                 "statut": "parent isolé",
                 "type_formation": "aide-soignante",
@@ -548,7 +548,7 @@
       "isOutline": true
     },
     {
-      "id": "5ebf2448-c971-4890-95c4-01b359dc60f7",
+      "id": "edcf4028-aa28-4f91-acd2-b817449cd678",
       "name": "Validation des compétences acquises",
       "description": "",
       "tags": [],
@@ -589,7 +589,7 @@
       "isOutline": false
     },
     {
-      "id": "8876cc8c-42dc-449a-a31a-4107ab89934b",
+      "id": "1f96902d-0ec0-4f50-88d0-6894fd61bed3",
       "name": "Obligations durant la formation",
       "description": "",
       "tags": [],
@@ -638,7 +638,7 @@
       "isOutline": false
     },
     {
-      "id": "cd297d5a-f5d3-4a85-b54d-683b7ec70b23",
+      "id": "eaa5806c-518a-48fd-979a-87f9e4dfd341",
       "name": "Formation à l'entrepreneuriat",
       "description": "",
       "tags": [],
@@ -690,5 +690,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.675Z"
+  "generated": "2025-12-13T11:57:49.160Z"
 }

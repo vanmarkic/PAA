@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "e7c36910-55f7-49b3-938d-2775327d2306",
+      "id": "982ff3b8-df5f-425e-825b-7dd09e54e18c",
       "name": "Évaluation pour cession de brevet",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "d0d46ad8-7162-467f-925c-8c93538b9e9b",
+      "id": "9aa5830e-583b-40cf-ac6e-5339024cebd8",
       "name": "Nantissement de brevets pour crédit",
       "description": "",
       "tags": [],
@@ -105,5 +105,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.685Z"
+  "generated": "2025-12-13T11:57:49.168Z"
 }

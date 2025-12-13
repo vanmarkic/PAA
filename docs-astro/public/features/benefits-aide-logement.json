@@ -68,7 +68,7 @@
   },
   "scenarios": [
     {
-      "id": "6965029d-86f6-4b4e-a441-be63f2d7c987",
+      "id": "90a176ab-b877-439f-96ec-7200e2cdcec2",
       "name": "Famille monoparentale à Bruxelles éligible à l'allocation loyer",
       "description": "",
       "tags": [],
@@ -113,7 +113,7 @@
       "isOutline": false
     },
     {
-      "id": "2b689775-155d-424f-8bcb-f02b2b443c91",
+      "id": "b21c2914-cb1d-4582-9757-3d68b8145737",
       "name": "Couple avec revenus moyens à Bruxelles",
       "description": "",
       "tags": [],
@@ -158,7 +158,7 @@
       "isOutline": false
     },
     {
-      "id": "1e7b17f7-5874-4dc1-a41c-7477902739f1",
+      "id": "80ff0f21-a080-4c3d-83bb-5ef5c6208643",
       "name": "Personne isolée en Wallonie éligible à ADeL",
       "description": "",
       "tags": [],
@@ -211,7 +211,7 @@
       "isOutline": false
     },
     {
-      "id": "95b0f168-57de-4e18-926d-1ab5a0824c9e",
+      "id": "b26f0567-e0f2-46f5-bb05-dd2493089cfb",
       "name": "Famille en Wallonie avec enfants éligible à ADeL",
       "description": "",
       "tags": [],
@@ -264,7 +264,7 @@
       "isOutline": false
     },
     {
-      "id": "e16607dc-87cb-4e80-93b1-80c57e0c23d2",
+      "id": "86f2b738-fd14-4d71-aa37-3df53fd88925",
       "name": "Candidat logement social en Wallonie éligible à AAL",
       "description": "",
       "tags": [],
@@ -305,7 +305,7 @@
       "isOutline": false
     },
     {
-      "id": "b6b3571f-b7bf-44c8-b6e7-bb75a692baee",
+      "id": "1322e518-bc2e-4e8b-8280-95fdc2caeafc",
       "name": "Revenus trop élevés à Bruxelles",
       "description": "",
       "tags": [],
@@ -342,7 +342,7 @@
       "isOutline": false
     },
     {
-      "id": "e69d7c13-4cb9-4f6a-a83c-ceb337bd2b10",
+      "id": "2bacadef-0c6e-4ad1-a0e4-69a5f8237a82",
       "name": "Propriétaire non éligible",
       "description": "",
       "tags": [],
@@ -375,7 +375,7 @@
       "isOutline": false
     },
     {
-      "id": "94059024-84cc-4890-b78e-783414dc53c8",
+      "id": "1aa662d0-770b-4571-8d6a-5cfec88da691",
       "name": "Loyer trop élevé en Wallonie",
       "description": "",
       "tags": [],
@@ -416,7 +416,7 @@
       "isOutline": false
     },
     {
-      "id": "4d6e69e5-5c1e-4e28-8695-ccdfc83a3de0",
+      "id": "a2008d78-0bca-466a-aae0-f67c568ea3e1",
       "name": "Allocation de relogement à Bruxelles après expulsion",
       "description": "",
       "tags": [],
@@ -465,7 +465,7 @@
       "isOutline": false
     },
     {
-      "id": "23cdbd41-22a4-4580-bd7a-bf0ff16e3d59",
+      "id": "2ecd6607-5641-4b4e-978c-f651de98840c",
       "name": "Personne sans-abri en Wallonie accédant à un logement",
       "description": "",
       "tags": [],
@@ -510,7 +510,7 @@
       "isOutline": false
     },
     {
-      "id": "91be85e0-c0c4-4b0f-a1d2-f77adc9f7821",
+      "id": "8b3cbe90-5899-45ed-8777-2240a8b3e69b",
       "name": "Calcul aide au logement selon région et situation",
       "description": "",
       "tags": [],
@@ -563,7 +563,7 @@
           ],
           "rows": [
             {
-              "name": "4371a2fa-4c78-4dbc-814d-fdaf87b0badb",
+              "name": "902da8aa-368c-4810-a35c-5294232e2316",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "parent isolé",
@@ -575,7 +575,7 @@
               }
             },
             {
-              "name": "75cd049d-05b6-446a-835d-370ea9cd6eb1",
+              "name": "0672eab3-92db-470d-906a-ece9efe16237",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "couple",
@@ -587,7 +587,7 @@
               }
             },
             {
-              "name": "e15eb379-68cc-4b50-82ed-a5e463702e32",
+              "name": "20f73347-71fa-4b2a-b1c8-23bc2397274b",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "personne isolée",
@@ -599,7 +599,7 @@
               }
             },
             {
-              "name": "f93cc54a-6631-429d-8bc4-3d5b269c307b",
+              "name": "d876037b-7203-46a1-9577-f5ff4e89fc72",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "couple 2 enfants",
@@ -611,7 +611,7 @@
               }
             },
             {
-              "name": "f487a0ee-c6e4-4d5c-98be-081716636d8b",
+              "name": "cc971b0b-83e1-4291-a0fd-e93e6defd4ab",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "personne isolée",
@@ -623,7 +623,7 @@
               }
             },
             {
-              "name": "b0d0657c-9d3f-4aa1-a39c-3aa6d6bb345d",
+              "name": "4a554585-83b9-4d22-9c48-50344c43aad8",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "personne isolée",
@@ -635,7 +635,7 @@
               }
             },
             {
-              "name": "e04e0a52-0f74-47c1-8acc-acd069b62c34",
+              "name": "ad40efb7-5bf7-4a83-b7f2-0746ba5d604b",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "personne isolée",
@@ -647,7 +647,7 @@
               }
             },
             {
-              "name": "863c891d-d819-464c-bc8f-06ff144d63d9",
+              "name": "ce168741-a789-4d6e-8438-c8c5b35444aa",
               "values": {
                 "région": "Flandres",
                 "situation_familiale": "famille",
@@ -664,7 +664,7 @@
       "isOutline": true
     },
     {
-      "id": "56ad7fbb-9a7a-45ed-8d8d-33fb9f0f7716",
+      "id": "add6f969-2684-47ea-a137-8cf302e3c33b",
       "name": "Cumul avec autres aides sociales",
       "description": "",
       "tags": [],
@@ -709,7 +709,7 @@
       "isOutline": false
     },
     {
-      "id": "d079eb73-ebcb-4213-aa9b-99fe5c8b481e",
+      "id": "364be915-6b4d-4493-8418-9625d8496ca7",
       "name": "Procédure de demande et délais",
       "description": "",
       "tags": [],
@@ -793,5 +793,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.672Z"
+  "generated": "2025-12-13T11:57:49.156Z"
 }

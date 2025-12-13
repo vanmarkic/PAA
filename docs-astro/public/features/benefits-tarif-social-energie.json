@@ -102,7 +102,7 @@
   },
   "scenarios": [
     {
-      "id": "34212be2-158c-496d-b46c-8352c424a59a",
+      "id": "ac48ee38-a7d6-4bf7-8474-bb2ebfb828d2",
       "name": "Bénéficiaire RIS avec application automatique",
       "description": "",
       "tags": [],
@@ -151,7 +151,7 @@
       "isOutline": false
     },
     {
-      "id": "35ea7f73-89bc-4f1c-9bc2-9ac01b729b4b",
+      "id": "31206ffb-f321-4070-924e-c2598121f426",
       "name": "Personne handicapée avec reconnaissance",
       "description": "",
       "tags": [],
@@ -196,7 +196,7 @@
       "isOutline": false
     },
     {
-      "id": "25bd2abb-d4c7-4bcf-8256-5d375d899276",
+      "id": "dddfb173-c3ed-46b6-9d35-5828dcb978f4",
       "name": "Famille avec enfant handicapé bénéficiaire",
       "description": "",
       "tags": [],
@@ -241,7 +241,7 @@
       "isOutline": false
     },
     {
-      "id": "b258de61-e656-4078-97a8-80fb52743d69",
+      "id": "23ac1e8e-82d0-428e-bfbf-607439a9995c",
       "name": "Personne GRAPA avec tarif social",
       "description": "",
       "tags": [],
@@ -286,7 +286,7 @@
       "isOutline": false
     },
     {
-      "id": "7fa3cebc-0f04-47ea-b767-3a5254363130",
+      "id": "0152ccdb-90a1-4b86-a028-1efbd06184ba",
       "name": "Locataire social avec chauffage collectif",
       "description": "",
       "tags": [],
@@ -331,7 +331,7 @@
       "isOutline": false
     },
     {
-      "id": "141e1a75-3841-4d4e-a0df-3b5572eac72f",
+      "id": "9f3cc5a0-1693-48ee-844f-ea4a4bcd83a9",
       "name": "Ancien bénéficiaire BIM après juillet 2023",
       "description": "",
       "tags": [],
@@ -376,7 +376,7 @@
       "isOutline": false
     },
     {
-      "id": "55b05119-c6d9-44be-b0a1-6430ee2c6129",
+      "id": "d0bdab70-7fe4-42e4-82a9-94b8c1c029cb",
       "name": "Médiation de dettes avec difficultés de paiement",
       "description": "",
       "tags": [],
@@ -421,7 +421,7 @@
       "isOutline": false
     },
     {
-      "id": "f1647f64-78da-4aba-9305-20fcec2e8728",
+      "id": "4531c71e-e3b8-412d-81b5-93264cdc71a1",
       "name": "Changement de fournisseur avec tarif social",
       "description": "",
       "tags": [],
@@ -462,7 +462,7 @@
       "isOutline": false
     },
     {
-      "id": "54fc698d-df19-4c1e-9f30-c0f147e9e048",
+      "id": "2d4af1b1-a36b-4375-83f8-89e42f6477bc",
       "name": "Résidence avec compteur collectif",
       "description": "",
       "tags": [],
@@ -507,7 +507,7 @@
       "isOutline": false
     },
     {
-      "id": "b77fd336-01f3-4dd3-8d51-46565ba6aee6",
+      "id": "c1483350-9403-4f36-af23-dfaa4499667c",
       "name": "Contrôle trimestriel et mise à jour",
       "description": "",
       "tags": [],
@@ -544,7 +544,7 @@
       "isOutline": false
     },
     {
-      "id": "78191d3a-af12-4f3b-8f43-ce58c4d04b4a",
+      "id": "4cc14ba2-815b-4a9b-8bba-72ba5c7ba55f",
       "name": "Économies selon profil de consommation",
       "description": "",
       "tags": [],
@@ -596,7 +596,7 @@
           ],
           "rows": [
             {
-              "name": "19a01326-1bbc-4a78-a1b4-f916e0daed5c",
+              "name": "4a511c87-2ff5-4dc9-99b7-68e092569675",
               "values": {
                 "situation": "personne isolée",
                 "conso_elec": "2000",
@@ -607,7 +607,7 @@
               }
             },
             {
-              "name": "2614fdeb-ed24-4cbe-a582-aaeba7e7d4bb",
+              "name": "fb58f822-0f7b-4099-bfc5-4887ab10d869",
               "values": {
                 "situation": "couple sans enfants",
                 "conso_elec": "3500",
@@ -618,7 +618,7 @@
               }
             },
             {
-              "name": "6c819c75-34d2-435c-b08d-2f4595f5968d",
+              "name": "056a4374-9ee5-4350-9d1f-88ca737a27ff",
               "values": {
                 "situation": "famille 2 enfants",
                 "conso_elec": "4500",
@@ -629,7 +629,7 @@
               }
             },
             {
-              "name": "589d4fa6-87af-4134-817b-596d88aac932",
+              "name": "3b401904-87d7-4b86-9e2e-1b4113b47e33",
               "values": {
                 "situation": "famille nombreuse",
                 "conso_elec": "6000",
@@ -640,7 +640,7 @@
               }
             },
             {
-              "name": "0c39d3ab-e296-4d45-bbea-e2b142522c68",
+              "name": "f53f3efb-5d49-497f-901f-bd566b92cff0",
               "values": {
                 "situation": "appartement électrique",
                 "conso_elec": "8000",
@@ -656,7 +656,7 @@
       "isOutline": true
     },
     {
-      "id": "12a46ab9-7237-46d1-a725-317b0538b596",
+      "id": "da0237c6-6f55-462c-adf5-38bcc7362ea7",
       "name": "Procédure pour client non automatique",
       "description": "",
       "tags": [],
@@ -727,7 +727,7 @@
       "isOutline": false
     },
     {
-      "id": "fd6232ad-f356-4a6f-9f7d-ee2ffdf9531a",
+      "id": "6f7629ee-8c56-49d0-a077-776f96218c52",
       "name": "Impact sur la facture mensuelle",
       "description": "",
       "tags": [],
@@ -775,5 +775,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.677Z"
+  "generated": "2025-12-13T11:57:49.162Z"
 }

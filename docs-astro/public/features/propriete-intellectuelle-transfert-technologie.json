@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "7003bdcc-a58a-40c2-9f42-04bb1c3c2270",
+      "id": "4f100e11-53c0-4326-8d72-461c4756478e",
       "name": "Transfert université-entreprise via licence",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "db97898d-48e1-403a-93e6-d7b456c606bb",
+      "id": "68608df7-d819-4da5-92f2-90d49c82b233",
       "name": "Création de spin-off universitaire",
       "description": "",
       "tags": [],
@@ -102,7 +102,7 @@
       "isOutline": false
     },
     {
-      "id": "155b90d0-1e4e-4138-ba2f-f1cebd1d2987",
+      "id": "abeca1da-d85a-4993-be5a-3d414710420d",
       "name": "Joint venture pour co-développement",
       "description": "",
       "tags": [],
@@ -142,5 +142,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.685Z"
+  "generated": "2025-12-13T11:57:49.168Z"
 }

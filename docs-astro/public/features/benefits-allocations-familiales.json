@@ -90,7 +90,7 @@
   },
   "scenarios": [
     {
-      "id": "e9a9a308-81d5-4efc-bc87-ddaf7bae87d4",
+      "id": "140e765d-77ae-4591-9e53-f32c7378c234",
       "name": "Enfant de 5 ans à Bruxelles né après 2019",
       "description": "",
       "tags": [],
@@ -131,7 +131,7 @@
       "isOutline": false
     },
     {
-      "id": "be2937e2-a124-4281-b481-a06c3082ba9a",
+      "id": "eea7ce92-dc05-4ab6-a0c4-5dad109b1935",
       "name": "Enfant de 15 ans à Bruxelles né avant 2019",
       "description": "",
       "tags": [],
@@ -172,7 +172,7 @@
       "isOutline": false
     },
     {
-      "id": "b8e4fa7e-9e90-406d-af42-434f63296ac6",
+      "id": "3842db36-0e8c-4c05-b8e3-d77e07d44d8e",
       "name": "Enfant de 10 ans en Wallonie né après 2020",
       "description": "",
       "tags": [],
@@ -213,7 +213,7 @@
       "isOutline": false
     },
     {
-      "id": "fdbca11a-bc5f-495d-8806-9ff3df8d9fab",
+      "id": "c964b20c-6a3c-4637-9548-9a6b41930867",
       "name": "Enfant de 19 ans étudiant en Wallonie",
       "description": "",
       "tags": [],
@@ -258,7 +258,7 @@
       "isOutline": false
     },
     {
-      "id": "47314811-1e18-423b-b29e-2c9fdf2bef3b",
+      "id": "b975b686-11d9-425c-8698-d3aaf5dc90d1",
       "name": "Enfant de 8 ans en Flandre (Groeipakket)",
       "description": "",
       "tags": [],
@@ -299,7 +299,7 @@
       "isOutline": false
     },
     {
-      "id": "de2b98c8-29fa-4a23-a5e4-cc4d2eb45d52",
+      "id": "0776bc85-bcd2-4702-b770-5f0f984821ca",
       "name": "Parent isolé avec enfant de 6 ans à Bruxelles",
       "description": "",
       "tags": [],
@@ -348,7 +348,7 @@
       "isOutline": false
     },
     {
-      "id": "91931afb-d814-478a-a74b-a9f39193a3a7",
+      "id": "4e000bf6-e12c-4fa2-87bd-42cb45b6d592",
       "name": "Enfant handicapé de 12 ans à Bruxelles",
       "description": "",
       "tags": [],
@@ -397,7 +397,7 @@
       "isOutline": false
     },
     {
-      "id": "01b52c22-6c2e-436e-9e6f-70de645c3c29",
+      "id": "9731a2dc-a867-4d53-add9-10e7b11e0d3b",
       "name": "Enfant de 26 ans non éligible",
       "description": "",
       "tags": [],
@@ -430,7 +430,7 @@
       "isOutline": false
     },
     {
-      "id": "722357f2-3e0e-49f2-91bf-1cc931e952ad",
+      "id": "5cdf8458-9bbb-493b-bda8-f276de1c2f55",
       "name": "Enfant de 22 ans non étudiant non éligible",
       "description": "",
       "tags": [],
@@ -471,7 +471,7 @@
       "isOutline": false
     },
     {
-      "id": "5c1f15f2-a469-46a3-a058-7bc7975f228f",
+      "id": "e5e7feec-52f6-4b57-a11c-70062e83c60b",
       "name": "Enfant sans domicile légal en Belgique",
       "description": "",
       "tags": [],
@@ -504,7 +504,7 @@
       "isOutline": false
     },
     {
-      "id": "065ab0cf-7846-4797-ac5b-a09d3788b0dc",
+      "id": "90f67804-ddbe-460b-98ae-bbfc1f7b51f3",
       "name": "Famille avec 3 enfants à Bruxelles",
       "description": "",
       "tags": [],
@@ -549,7 +549,7 @@
       "isOutline": false
     },
     {
-      "id": "c2144a35-759b-4c82-ab22-0eeb7a714074",
+      "id": "5ee6cf28-4893-4d74-8e35-bee8cb22bc23",
       "name": "Calcul allocations selon région et âge",
       "description": "",
       "tags": [],
@@ -591,7 +591,7 @@
           ],
           "rows": [
             {
-              "name": "4777a7d3-f825-47b6-8e81-b729bbf45458",
+              "name": "0f5dc7c7-bf77-47da-8ede-a551d85a75b2",
               "values": {
                 "région": "Bruxelles",
                 "age": "3",
@@ -600,7 +600,7 @@
               }
             },
             {
-              "name": "90eff45b-d250-47ea-ac8e-2c22665d12a2",
+              "name": "74d075aa-852d-4cf6-ab45-5b01c04ce3d0",
               "values": {
                 "région": "Bruxelles",
                 "age": "14",
@@ -609,7 +609,7 @@
               }
             },
             {
-              "name": "d87b147b-0765-4c39-8af6-7f3d9baa2148",
+              "name": "63e99380-2495-425b-8e1e-b55c8043ee66",
               "values": {
                 "région": "Bruxelles",
                 "age": "14",
@@ -618,7 +618,7 @@
               }
             },
             {
-              "name": "6c243615-b495-4536-b839-a1fce1e26722",
+              "name": "a9e2b2d8-5cb0-414c-b40c-f6e0d61964d3",
               "values": {
                 "région": "Bruxelles",
                 "age": "20",
@@ -627,7 +627,7 @@
               }
             },
             {
-              "name": "896e22d2-404f-4bd4-b227-967490c8755e",
+              "name": "01ce93d4-d9c9-4896-9e9e-1c201d02241e",
               "values": {
                 "région": "Wallonie",
                 "age": "5",
@@ -636,7 +636,7 @@
               }
             },
             {
-              "name": "23dd0dc6-77d4-4c16-a3ec-a13da6bb7d8f",
+              "name": "c293abbb-648e-4858-901e-37f54e9c72b6",
               "values": {
                 "région": "Wallonie",
                 "age": "19",
@@ -645,7 +645,7 @@
               }
             },
             {
-              "name": "b09449c5-e341-472f-aeb1-7c51494b3740",
+              "name": "2e8029ee-44f5-4770-aac9-3f954f5a9f07",
               "values": {
                 "région": "Flandre",
                 "age": "7",
@@ -654,7 +654,7 @@
               }
             },
             {
-              "name": "2c2ec8d2-138e-472f-bb63-69cd6f866e99",
+              "name": "23c69fe5-4249-43b4-a139-a43cab62d0de",
               "values": {
                 "région": "Flandre",
                 "age": "16",
@@ -668,7 +668,7 @@
       "isOutline": true
     },
     {
-      "id": "c96fbc16-1de0-4977-b6d7-69cab1a8169a",
+      "id": "a0ea6196-5031-41da-8651-8da1c3e464c7",
       "name": "Supplément social selon revenus à Bruxelles",
       "description": "",
       "tags": [],
@@ -709,7 +709,7 @@
       "isOutline": false
     },
     {
-      "id": "b7599f42-ea0d-4920-8fa9-7c486b9cadc3",
+      "id": "7e020bc2-d076-42b6-add1-e2cb54a281c7",
       "name": "Démarches administratives pour allocations familiales",
       "description": "",
       "tags": [],
@@ -754,7 +754,7 @@
       "isOutline": false
     },
     {
-      "id": "826674b0-e40a-46e4-b3e6-1da948750d8c",
+      "id": "1cc091c8-6371-499f-b11f-520c372b29be",
       "name": "Changement de région",
       "description": "",
       "tags": [],
@@ -798,5 +798,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.675Z"
+  "generated": "2025-12-13T11:57:49.158Z"
 }

@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "782fbb5b-ae2a-4e97-8241-3bc28c03943e",
+      "id": "54cddc86-d68e-4a26-8d05-165fde431dbc",
       "name": "Demande d'AOP pour produit agricole",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "ccb9f78e-8d5e-431f-b889-8c51a8a99f8c",
+      "id": "5259cc4c-ba87-4cd1-b93b-2a37639a13e8",
       "name": "Opposition à une demande d'IGP",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.684Z"
+  "generated": "2025-12-13T11:57:49.167Z"
 }

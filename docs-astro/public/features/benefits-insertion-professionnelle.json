@@ -60,7 +60,7 @@
   },
   "scenarios": [
     {
-      "id": "f0b74bfb-ecda-4543-9652-ac09444938df",
+      "id": "b70ebb5a-6201-481b-bf34-31ebc9706df9",
       "name": "Bénéficiaire du RIS en Article 60§7",
       "description": "",
       "tags": [],
@@ -117,7 +117,7 @@
       "isOutline": false
     },
     {
-      "id": "87b3e456-fdb3-449d-ae42-c7034b055755",
+      "id": "82b4e5bf-9291-4946-97bb-bbea76e6a96b",
       "name": "Chômeur longue durée en Programme de Transition Professionnelle",
       "description": "",
       "tags": [],
@@ -166,7 +166,7 @@
       "isOutline": false
     },
     {
-      "id": "aba5e1fb-0f4c-426e-8f86-a150eb34f8de",
+      "id": "fecd3007-8ba0-4c17-af95-c34f9c9cb349",
       "name": "Jeune peu qualifié en Stage First",
       "description": "",
       "tags": [],
@@ -219,7 +219,7 @@
       "isOutline": false
     },
     {
-      "id": "18786375-a86a-4552-8a3a-8e1cb3cc11a1",
+      "id": "e4661cca-29f4-4d0b-9b39-525f0d3ccbb7",
       "name": "Personne handicapée en entreprise de travail adapté",
       "description": "",
       "tags": [],
@@ -268,7 +268,7 @@
       "isOutline": false
     },
     {
-      "id": "c7e7e99d-1074-426e-8d7a-2324f8879b24",
+      "id": "c6fb78ad-507c-401a-8921-cb15681f5f18",
       "name": "Mère isolée dans les titres-services",
       "description": "",
       "tags": [],
@@ -321,7 +321,7 @@
       "isOutline": false
     },
     {
-      "id": "1cdb1073-a96e-4128-b0d4-acc10836d64f",
+      "id": "d4e3c20f-9b84-4d6f-813e-64fa53bf982e",
       "name": "Emploi Activa pour chômeur de longue durée",
       "description": "",
       "tags": [],
@@ -370,7 +370,7 @@
       "isOutline": false
     },
     {
-      "id": "ce4c222e-ca3a-48d2-9297-d0a317ae86ef",
+      "id": "8646e2ff-e369-4290-a6e2-79a4b11d1405",
       "name": "Formation professionnelle individuelle en entreprise (FPI/IBO)",
       "description": "",
       "tags": [],
@@ -423,7 +423,7 @@
       "isOutline": false
     },
     {
-      "id": "b1c818d0-fadf-416d-845e-b481fecb5ec5",
+      "id": "587f8674-c261-48e7-bad3-517fefa24d22",
       "name": "Économie sociale d'insertion (SINE)",
       "description": "",
       "tags": [],
@@ -472,7 +472,7 @@
       "isOutline": false
     },
     {
-      "id": "a679a2f8-eb6a-496a-9201-f62e19f2026f",
+      "id": "0421c3d3-1054-45d1-b076-e1e94266640c",
       "name": "Comparaison des dispositifs d'insertion",
       "description": "",
       "tags": [],
@@ -520,7 +520,7 @@
           ],
           "rows": [
             {
-              "name": "4bf8bae1-e6a0-4589-8a4b-31ea7d08ecff",
+              "name": "dc064a02-5192-4a13-a8b2-e736e62ddcf5",
               "values": {
                 "profil": "bénéficiaire RIS",
                 "duree_chomage": "12 mois",
@@ -531,7 +531,7 @@
               }
             },
             {
-              "name": "e2870a49-dd4c-4e29-8dee-73f7ce8ed33c",
+              "name": "19a16980-bb8f-48d9-8983-c771897ebf55",
               "values": {
                 "profil": "jeune sans diplôme",
                 "duree_chomage": "3 mois",
@@ -542,7 +542,7 @@
               }
             },
             {
-              "name": "e014e307-69b9-4774-86fa-8b8024c77656",
+              "name": "0455910f-6621-42a8-8be5-bb6927291a67",
               "values": {
                 "profil": "chômeur longue durée",
                 "duree_chomage": "24 mois",
@@ -553,7 +553,7 @@
               }
             },
             {
-              "name": "dca079ec-1fcc-4794-aa52-3168b87a711e",
+              "name": "27ac1096-0a79-4879-823d-c348d301cc12",
               "values": {
                 "profil": "parent isolé",
                 "duree_chomage": "36 mois",
@@ -564,7 +564,7 @@
               }
             },
             {
-              "name": "c98228af-fc51-4ac7-9a37-93d357f288bc",
+              "name": "8c00acdd-591d-4364-93cc-2eb09261b78c",
               "values": {
                 "profil": "personne handicapée",
                 "duree_chomage": "6 mois",
@@ -580,7 +580,7 @@
       "isOutline": true
     },
     {
-      "id": "ce737697-53d0-493c-9d08-654cd53655e2",
+      "id": "af89f2a7-d29e-4dad-bfcd-8b42d16195b3",
       "name": "Cumul avec d'autres aides sociales",
       "description": "",
       "tags": [],
@@ -625,7 +625,7 @@
       "isOutline": false
     },
     {
-      "id": "ceae91db-8f7f-44ee-a66e-96611056db9d",
+      "id": "4af94c5d-a700-4272-9e67-6cd97f33d81c",
       "name": "Transition vers l'emploi durable",
       "description": "",
       "tags": [],
@@ -674,7 +674,7 @@
       "isOutline": false
     },
     {
-      "id": "036be4c1-9faf-4c41-baf3-3363b22fe5a6",
+      "id": "c3e3e6cc-9754-4ec4-90f3-87334faa74a5",
       "name": "Échec d'insertion et nouvelle tentative",
       "description": "",
       "tags": [],
@@ -719,7 +719,7 @@
       "isOutline": false
     },
     {
-      "id": "f2a7bfea-d8c4-4c7c-8c9f-763cfdea9541",
+      "id": "700a32f7-5963-4099-a72a-600b76234c85",
       "name": "Obligations pendant l'insertion professionnelle",
       "description": "",
       "tags": [],
@@ -767,5 +767,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.675Z"
+  "generated": "2025-12-13T11:57:49.161Z"
 }

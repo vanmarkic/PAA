@@ -84,7 +84,7 @@
   },
   "scenarios": [
     {
-      "id": "ebfdc74b-0a5e-42d0-9ac8-73fb82059a3f",
+      "id": "daae9537-f123-4317-8834-092aa73d2a07",
       "name": "Personne isolée avec handicap catégorie III éligible",
       "description": "",
       "tags": [],
@@ -137,7 +137,7 @@
       "isOutline": false
     },
     {
-      "id": "d8b8cec0-53e5-465a-8047-348721e7b33a",
+      "id": "897a79ab-1971-4f28-825e-8fa0aa3c7bb5",
       "name": "Parent avec enfant handicapé demandant AI catégorie IV",
       "description": "",
       "tags": [],
@@ -186,7 +186,7 @@
       "isOutline": false
     },
     {
-      "id": "d3e34f36-a1d0-4f09-a1a9-efbc6fd0d442",
+      "id": "939e24c5-88ef-4905-8840-4cd65d99dff0",
       "name": "Travailleur avec handicap cumulant salaire et ARR",
       "description": "",
       "tags": [],
@@ -239,7 +239,7 @@
       "isOutline": false
     },
     {
-      "id": "a12154b8-7c1b-48d3-a890-9bedc488f10d",
+      "id": "634ba9aa-a9e7-443d-9b95-6c3b0c14697b",
       "name": "Personne âgée avec handicap tardif",
       "description": "",
       "tags": [],
@@ -284,7 +284,7 @@
       "isOutline": false
     },
     {
-      "id": "bc6cb4fd-12fb-4537-a875-7516299bcde4",
+      "id": "aa231860-46ea-4877-922b-1bcb51aaa458",
       "name": "Jeune adulte handicapé sans revenus",
       "description": "",
       "tags": [],
@@ -333,7 +333,7 @@
       "isOutline": false
     },
     {
-      "id": "a22525c0-e094-4529-88b1-01748479f428",
+      "id": "08995216-ddaa-4784-8a8c-74066031c1f1",
       "name": "Révision suite à aggravation du handicap",
       "description": "",
       "tags": [],
@@ -374,7 +374,7 @@
       "isOutline": false
     },
     {
-      "id": "5c00cd29-2c2f-4540-b2e8-2ca28d78dc55",
+      "id": "afbbe286-5a9f-431b-8837-8ac89d7fa4dd",
       "name": "Cumul avec indemnités accident du travail",
       "description": "",
       "tags": [],
@@ -411,7 +411,7 @@
       "isOutline": false
     },
     {
-      "id": "6b9391cb-a9e5-40f3-ae98-f2dd715c3887",
+      "id": "b3a14d3c-1fa3-42df-8d43-abed8e47876f",
       "name": "Calcul AI selon points d'autonomie et revenus",
       "description": "",
       "tags": [],
@@ -454,7 +454,7 @@
           ],
           "rows": [
             {
-              "name": "76dd1439-9f71-4d13-be65-7eace76fa070",
+              "name": "1539ad7d-608c-48b6-bfe4-bbf3d55645e9",
               "values": {
                 "points": "7",
                 "categorie": "I",
@@ -464,7 +464,7 @@
               }
             },
             {
-              "name": "8c85d001-af68-4954-b952-de5e4599f6fe",
+              "name": "52a72fed-0439-45da-924e-42743c676c1f",
               "values": {
                 "points": "10",
                 "categorie": "II",
@@ -474,7 +474,7 @@
               }
             },
             {
-              "name": "045866b4-7dc3-4570-ac6b-42c7438eaa61",
+              "name": "a5bfd174-a851-45a9-b16d-39c9ef5ee919",
               "values": {
                 "points": "13",
                 "categorie": "III",
@@ -484,7 +484,7 @@
               }
             },
             {
-              "name": "6d793b53-52c6-4957-be06-c8414fe3a71b",
+              "name": "ca27a28c-6090-49ea-8a4d-3d7a746db47a",
               "values": {
                 "points": "15",
                 "categorie": "IV",
@@ -494,7 +494,7 @@
               }
             },
             {
-              "name": "e477fe22-8e53-48ef-8809-8ae744e09756",
+              "name": "824a950d-a003-4ce7-b884-b9012a06e00e",
               "values": {
                 "points": "18",
                 "categorie": "V",
@@ -509,7 +509,7 @@
       "isOutline": true
     },
     {
-      "id": "ea74f2e0-3615-415f-baf1-a62b2915bf69",
+      "id": "dba1ef27-186a-4626-b5b5-d86a3fe2d1a3",
       "name": "Procédure de demande et évaluation médicale",
       "description": "",
       "tags": [],
@@ -582,7 +582,7 @@
       "isOutline": false
     },
     {
-      "id": "633500a0-8fa5-4faa-b9a0-247be3077525",
+      "id": "8baf7883-82f2-4dde-87dc-605038a9f394",
       "name": "Avantages sociaux liés au statut de handicap",
       "description": "",
       "tags": [],
@@ -639,7 +639,7 @@
       "isOutline": false
     },
     {
-      "id": "84d65eff-1db9-4bd5-b8cf-50c04d0d4e17",
+      "id": "5fe0fa36-7472-4bab-bd06-bbb1f5745ccb",
       "name": "Contrôle et obligations du bénéficiaire",
       "description": "",
       "tags": [],
@@ -691,5 +691,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.675Z"
+  "generated": "2025-12-13T11:57:49.159Z"
 }

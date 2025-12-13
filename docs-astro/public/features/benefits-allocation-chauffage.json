@@ -91,7 +91,7 @@
   },
   "scenarios": [
     {
-      "id": "58046fa7-48b3-45ec-8301-b3dc7e1de4ab",
+      "id": "67a2da5d-200e-4312-b0dd-a4cd4aea605a",
       "name": "Personne isolée BIM éligible à l'allocation forfaitaire",
       "description": "",
       "tags": [],
@@ -136,7 +136,7 @@
       "isOutline": false
     },
     {
-      "id": "d9850071-f2c8-4707-85b9-1d80cd79b76d",
+      "id": "8b9b67db-2aa4-4d57-90e7-4b3e70a16db2",
       "name": "Famille avec livraison de gasoil éligible",
       "description": "",
       "tags": [],
@@ -189,7 +189,7 @@
       "isOutline": false
     },
     {
-      "id": "dd2a2bdb-9506-4ab6-aed5-3cf79f903c53",
+      "id": "2839e504-aece-414a-a9e6-cc21904b5b21",
       "name": "Ménage avec livraison dépassant le maximum",
       "description": "",
       "tags": [],
@@ -234,7 +234,7 @@
       "isOutline": false
     },
     {
-      "id": "f3105f82-c368-4c6d-a829-ddf1308b8b79",
+      "id": "fbd8e650-0ef5-4a32-be6d-489b90ad31e9",
       "name": "Personne en médiation de dettes éligible",
       "description": "",
       "tags": [],
@@ -279,7 +279,7 @@
       "isOutline": false
     },
     {
-      "id": "c70db0d6-4d34-4ee8-babf-0c279dc5cbc7",
+      "id": "65deaab5-6e63-4467-8d7b-bf02646ba90b",
       "name": "Revenus trop élevés pour l'allocation",
       "description": "",
       "tags": [],
@@ -324,7 +324,7 @@
       "isOutline": false
     },
     {
-      "id": "e69c6154-7cf4-4837-abc5-206f3e2de719",
+      "id": "85b2be10-7344-4eea-b3fe-a55bcd1802fd",
       "name": "Demande hors délai",
       "description": "",
       "tags": [],
@@ -365,7 +365,7 @@
       "isOutline": false
     },
     {
-      "id": "b29e2fd3-9692-4baa-8ab5-70b333f525cd",
+      "id": "d9467364-36ac-4cff-a681-b843f0198f1c",
       "name": "Famille nombreuse avec majoration",
       "description": "",
       "tags": [],
@@ -410,7 +410,7 @@
       "isOutline": false
     },
     {
-      "id": "49456e46-e48a-43a5-9cc8-efd6dcd726ce",
+      "id": "541e63b1-dec2-4fe9-ac0f-f5c77779d8d1",
       "name": "Propriétaire occupant éligible",
       "description": "",
       "tags": [],
@@ -455,7 +455,7 @@
       "isOutline": false
     },
     {
-      "id": "874c7aa2-36b7-41b2-ae07-f9ebc7f2f2ae",
+      "id": "63ffe8fb-8dc4-40f4-be79-e1188fc7004e",
       "name": "Chauffage collectif en immeuble",
       "description": "",
       "tags": [],
@@ -500,7 +500,7 @@
       "isOutline": false
     },
     {
-      "id": "6b726c18-826c-4332-a5b2-a95f3ef0bf64",
+      "id": "39eab386-3b0b-4344-b3f7-428c3211c8a7",
       "name": "Cumul avec d'autres aides",
       "description": "",
       "tags": [],
@@ -541,7 +541,7 @@
       "isOutline": false
     },
     {
-      "id": "e2fc9fbd-0b03-4041-abb7-57a3acb5f3a5",
+      "id": "cf58fc61-a2bb-4e00-9dd4-b39d0fba181f",
       "name": "Calcul allocation selon type et quantité",
       "description": "",
       "tags": [],
@@ -595,7 +595,7 @@
           ],
           "rows": [
             {
-              "name": "889c72e1-d3af-407d-8a6d-733f8f4cb3c4",
+              "name": "e0442e3a-9005-487e-92af-8a0c6f6be5ef",
               "values": {
                 "situation": "personne BIM",
                 "revenu": "12000",
@@ -608,7 +608,7 @@
               }
             },
             {
-              "name": "c3e84cbc-e054-4a40-999e-c6a60fe974ec",
+              "name": "f103647d-857d-4dc4-baad-a19e9d1be418",
               "values": {
                 "situation": "couple 1 enfant",
                 "revenu": "18000",
@@ -621,7 +621,7 @@
               }
             },
             {
-              "name": "6481d61d-5ca1-4389-87a4-5a428656b2e9",
+              "name": "701ddcf1-9fbd-4919-987e-dd353ebe5e90",
               "values": {
                 "situation": "personne isolée",
                 "revenu": "14000",
@@ -634,7 +634,7 @@
               }
             },
             {
-              "name": "94fe8aa3-098e-4041-89d4-0141ede81c8b",
+              "name": "93eb5804-8bcf-4070-b56d-d9faba4c3223",
               "values": {
                 "situation": "famille 3 enfants",
                 "revenu": "24000",
@@ -647,7 +647,7 @@
               }
             },
             {
-              "name": "67f421fd-bea5-4366-ac42-a1e7ff771a01",
+              "name": "a962d83a-fd3f-4b71-a4d6-f651c4a19c05",
               "values": {
                 "situation": "couple",
                 "revenu": "30000",
@@ -660,7 +660,7 @@
               }
             },
             {
-              "name": "fc78cb63-16c3-4da6-9e95-5d111f1d496b",
+              "name": "79d93491-0a42-46c9-8a48-51b3ced57c1b",
               "values": {
                 "situation": "médiation dettes",
                 "revenu": "-",
@@ -678,7 +678,7 @@
       "isOutline": true
     },
     {
-      "id": "02a3cb7d-ae03-45ca-97a7-9ee6e5ab6259",
+      "id": "c8e2296e-dc1b-4be6-914b-69ea6cd022e5",
       "name": "Procédure de demande au CPAS",
       "description": "",
       "tags": [],
@@ -759,7 +759,7 @@
       "isOutline": false
     },
     {
-      "id": "05695ed5-0acd-4cb5-9725-3bf87c754029",
+      "id": "1423eb6d-ec8f-4560-9c59-2998f727b056",
       "name": "Contrôle et vérification",
       "description": "",
       "tags": [],
@@ -823,5 +823,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.674Z"
+  "generated": "2025-12-13T11:57:49.157Z"
 }

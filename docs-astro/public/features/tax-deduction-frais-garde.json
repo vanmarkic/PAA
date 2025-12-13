@@ -48,7 +48,7 @@
   },
   "scenarios": [
     {
-      "id": "03a01da1-f7df-40a2-8e27-17d7b092061e",
+      "id": "f6ef2b0a-e575-45d4-8c53-1550460c1f97",
       "name": "Parent avec frais de garde éligibles",
       "description": "",
       "tags": [],
@@ -93,7 +93,7 @@
       "isOutline": false
     },
     {
-      "id": "71c7fac3-49b8-4b98-a722-7d07c24f205b",
+      "id": "19ee11c0-452d-4ffa-9ae3-4b7390270813",
       "name": "Frais de garde dépassant le plafond journalier",
       "description": "",
       "tags": [],
@@ -138,7 +138,7 @@
       "isOutline": false
     },
     {
-      "id": "6fac55ea-4e82-473f-8ba4-52f98b01d7af",
+      "id": "056d5c4f-2452-4313-919c-7b336781e5ec",
       "name": "Parent isolé avec revenus modestes",
       "description": "",
       "tags": [],
@@ -187,7 +187,7 @@
       "isOutline": false
     },
     {
-      "id": "d798face-1c9c-4584-a3ab-8d0e14ba5f32",
+      "id": "97d187f6-6630-42ea-9605-3c0e2db2943b",
       "name": "Enfant de moins de 3 ans - Choix entre avantages",
       "description": "",
       "tags": [],
@@ -240,7 +240,7 @@
       "isOutline": false
     },
     {
-      "id": "ab1a3228-8599-488a-a748-428cf0863de3",
+      "id": "d0d56040-c8f4-4985-a336-9eaea30d3eb4",
       "name": "Enfant handicapé de plus de 14 ans",
       "description": "",
       "tags": [],
@@ -285,7 +285,7 @@
       "isOutline": false
     },
     {
-      "id": "51348176-94c6-4f09-bd3c-c1bee6f71bb2",
+      "id": "e651b978-3bb3-4b50-845e-d292021603fd",
       "name": "Garde partagée - Parents séparés",
       "description": "",
       "tags": [],
@@ -326,7 +326,7 @@
       "isOutline": false
     },
     {
-      "id": "f23c17e1-67b4-4276-b390-320b31469dae",
+      "id": "47ddc6e0-d77c-4f67-ac39-7c1bd74471e5",
       "name": "Camps de vacances et stages",
       "description": "",
       "tags": [],
@@ -411,7 +411,7 @@
       "isOutline": false
     },
     {
-      "id": "55734229-2d15-45da-80ef-f457f26bda2b",
+      "id": "a050460c-61b2-4219-8d6a-ac603ab593af",
       "name": "Organisme non agréé - Pas de déduction",
       "description": "",
       "tags": [],
@@ -448,7 +448,7 @@
       "isOutline": false
     },
     {
-      "id": "84523735-4f5e-468c-a2a2-4fa5c61be739",
+      "id": "3bbbff40-ee12-4763-a292-f46aefe70302",
       "name": "Attestation manquante",
       "description": "",
       "tags": [],
@@ -481,7 +481,7 @@
       "isOutline": false
     },
     {
-      "id": "34e024ff-a07c-4b6b-9229-078819b958b0",
+      "id": "9928a942-dfdf-492f-92df-414753502030",
       "name": "Calcul de déduction selon différents profils",
       "description": "",
       "tags": [],
@@ -529,7 +529,7 @@
           ],
           "rows": [
             {
-              "name": "50bddfd1-2f81-45b3-9501-8682ab2ee168",
+              "name": "1a491391-c698-4617-9393-0012da89a55f",
               "values": {
                 "situation_familiale": "couple marié",
                 "nb_enfants": "1",
@@ -540,7 +540,7 @@
               }
             },
             {
-              "name": "44a6fb0c-7817-483a-b9b2-1273dc712074",
+              "name": "0698605b-51dd-4251-908f-54fd697cef2a",
               "values": {
                 "situation_familiale": "couple marié",
                 "nb_enfants": "2",
@@ -551,7 +551,7 @@
               }
             },
             {
-              "name": "c4585969-96ad-4b01-b8f7-5e0d98227aae",
+              "name": "c044d1bb-863c-4be3-93db-094c98c7299e",
               "values": {
                 "situation_familiale": "parent isolé",
                 "nb_enfants": "1",
@@ -562,7 +562,7 @@
               }
             },
             {
-              "name": "1578b45e-497b-44cc-ad09-d7d740957604",
+              "name": "4c641166-8f58-4da6-8795-b8480041247a",
               "values": {
                 "situation_familiale": "parent isolé",
                 "nb_enfants": "3",
@@ -573,7 +573,7 @@
               }
             },
             {
-              "name": "c12ea890-5028-4446-8617-25aa50933a2b",
+              "name": "eb4fcb51-aa0c-45db-9b16-b0794b51d028",
               "values": {
                 "situation_familiale": "couple cohabitant",
                 "nb_enfants": "1",
@@ -589,7 +589,7 @@
       "isOutline": true
     },
     {
-      "id": "97b58dab-bae1-4a43-a6dd-8276f06084d9",
+      "id": "8c2ec7ba-ddfe-4b58-82b9-5a71b86b86c3",
       "name": "Documentation et justificatifs requis",
       "description": "",
       "tags": [],
@@ -640,7 +640,7 @@
       "isOutline": false
     },
     {
-      "id": "31ffb4f9-f5c8-4fe8-a6de-5f5de44d30d1",
+      "id": "5a840c6f-2c06-4354-98f1-b2583fac9733",
       "name": "Comparaison régionale",
       "description": "",
       "tags": [],
@@ -692,5 +692,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.687Z"
+  "generated": "2025-12-13T11:57:49.169Z"
 }

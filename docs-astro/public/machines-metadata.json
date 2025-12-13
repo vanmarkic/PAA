@@ -1,6 +1,6 @@
 {
-  "generated": "2025-12-13T11:32:39.405Z",
-  "totalMachines": 132,
+  "generated": "2025-12-13T11:57:48.399Z",
+  "totalMachines": 133,
   "categories": [
     "agriculture",
     "commerce",
@@ -1681,6 +1681,50 @@
         "REINITIALISER"
       ],
       "initial": "attente"
+    },
+    {
+      "id": "documentationEtLGislationBailFerme",
+      "name": "Bail à ferme en Wallonie",
+      "category": "general",
+      "description": "This state machine orchestrates the evaluation of bail à ferme (farm lease) rules",
+      "states": [
+        "idle",
+        "START_EVALUATION",
+        "validatingRegion",
+        "selectingBailType",
+        "SET_BAIL_TYPE",
+        "validatingBailType",
+        "selectingPropertyType",
+        "SET_PROPERTY_TYPE",
+        "evaluatingPropertyRules",
+        "calculatingFermage",
+        "PROCESS_TRANSMISSION",
+        "evaluatingTransmission",
+        "PROCESS_TERMINATION",
+        "evaluatingTermination",
+        "PROCESS_FISCAL",
+        "evaluatingFiscal",
+        "VALIDATE_ELIGIBILITY",
+        "COMPLETE_EVALUATION",
+        "validatingEligibility",
+        "eligible",
+        "ineligible",
+        "RETRY",
+        "RESET"
+      ],
+      "events": [
+        "START_EVALUATION",
+        "SET_BAIL_TYPE",
+        "SET_PROPERTY_TYPE",
+        "VALIDATE_ELIGIBILITY",
+        "PROCESS_TRANSMISSION",
+        "PROCESS_TERMINATION",
+        "PROCESS_FISCAL",
+        "COMPLETE_EVALUATION",
+        "RESET",
+        "RETRY"
+      ],
+      "initial": "idle"
     },
     {
       "id": "banqueAlimentaire",
@@ -5538,8 +5582,8 @@
     }
   ],
   "statistics": {
-    "totalStates": 2776,
-    "totalEvents": 1270,
+    "totalStates": 2799,
+    "totalEvents": 1280,
     "averageStatesPerMachine": "21.0",
     "averageEventsPerMachine": "9.6"
   }

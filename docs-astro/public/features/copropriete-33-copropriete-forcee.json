@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "c478f6fc-1973-47bb-a74b-153fb913aec0",
+      "id": "47672d6b-a088-4ebb-b4b8-e41b8964e848",
       "name": "Mur mitoyen obligatoire",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "8c51d6de-ffa7-4329-ab76-038dad857acc",
+      "id": "8c31343f-19f3-400b-b264-827909bb737d",
       "name": "Cour commune indivisible",
       "description": "",
       "tags": [],
@@ -114,7 +114,7 @@
       "isOutline": false
     },
     {
-      "id": "b7f3c055-159e-4d22-81cb-bfbb952f8a4d",
+      "id": "2b0ab201-8fc5-4609-9890-797db42a66db",
       "name": "Passage nécessaire enclave",
       "description": "",
       "tags": [],
@@ -166,5 +166,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.678Z"
+  "generated": "2025-12-13T11:57:49.163Z"
 }

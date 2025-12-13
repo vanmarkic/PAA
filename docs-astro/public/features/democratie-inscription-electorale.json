@@ -28,7 +28,7 @@
   },
   "scenarios": [
     {
-      "id": "0c32d2fe-5916-458e-8084-dbf5ed8b6cec",
+      "id": "79b9a17a-7e66-4f9f-8be6-c8b034f3631e",
       "name": "Citoyen belge majeur automatiquement inscrit",
       "description": "",
       "tags": [],
@@ -77,7 +77,7 @@
       "isOutline": false
     },
     {
-      "id": "e7b45f68-75a5-40f4-9de3-2c3b22498dd0",
+      "id": "7b9ca005-e357-4c15-a196-5f9aab509640",
       "name": "Citoyen européen s'inscrivant pour les élections communales",
       "description": "",
       "tags": [],
@@ -130,7 +130,7 @@
       "isOutline": false
     },
     {
-      "id": "6aef674d-098a-4b5e-a1ef-9e1d00ef8faf",
+      "id": "163310bb-88d7-4194-9c65-7cf32c8ced41",
       "name": "Citoyen non-EU tentant de s'inscrire",
       "description": "",
       "tags": [],
@@ -171,7 +171,7 @@
       "isOutline": false
     },
     {
-      "id": "524c14a0-5811-4a94-a57e-83889f4f7b2f",
+      "id": "075eae67-4c7d-4d2d-881b-064a06193310",
       "name": "Mineur tentant de s'inscrire",
       "description": "",
       "tags": [],
@@ -208,7 +208,7 @@
       "isOutline": false
     },
     {
-      "id": "6a0f4832-24fd-400a-be62-c66479cc6bf1",
+      "id": "0b7b19aa-974d-486b-a23e-8d4df484f386",
       "name": "Citoyen ayant perdu ses droits civiques",
       "description": "",
       "tags": [],
@@ -249,7 +249,7 @@
       "isOutline": false
     },
     {
-      "id": "201ad410-60c5-4fe4-a59e-abedff5882a7",
+      "id": "fe67d40b-79a1-4fd1-9630-a75c4ee7b65e",
       "name": "Citoyen belge résidant à l'étranger",
       "description": "",
       "tags": [],
@@ -298,7 +298,7 @@
       "isOutline": false
     },
     {
-      "id": "ff7cc2ae-b2bd-469a-a0c9-497c39e93405",
+      "id": "535184d7-8f7a-4f07-893a-e95a8709788a",
       "name": "Radiation pour non-participation répétée",
       "description": "",
       "tags": [],
@@ -343,7 +343,7 @@
       "isOutline": false
     },
     {
-      "id": "4e0059b3-e208-4a87-aecf-363153db6969",
+      "id": "bd0abe85-2bcd-4aa0-930b-c42db5d36b33",
       "name": "Inscription selon la nationalité et l'âge",
       "description": "",
       "tags": [],
@@ -386,7 +386,7 @@
           ],
           "rows": [
             {
-              "name": "9e2dc738-c6ef-48e2-b316-ef382dcc819e",
+              "name": "c5fa1971-6735-471d-8cbb-325b4d4e088f",
               "values": {
                 "nationalite": "belge",
                 "age": "18",
@@ -396,7 +396,7 @@
               }
             },
             {
-              "name": "bc7f2c70-d12e-431d-a2af-6db13dd466f6",
+              "name": "4f13a6f4-8ac2-49b4-8784-dbfca970f5b9",
               "values": {
                 "nationalite": "belge",
                 "age": "17",
@@ -406,7 +406,7 @@
               }
             },
             {
-              "name": "3ca05de7-d1cf-433b-bca0-b5aabf913076",
+              "name": "d3fd9ded-a46b-408c-b04a-13e6a0894754",
               "values": {
                 "nationalite": "eu-citoyen",
                 "age": "25",
@@ -416,7 +416,7 @@
               }
             },
             {
-              "name": "b87052cb-fc63-45ed-bf10-66e9f364c10f",
+              "name": "b22f7f2a-fa46-4c4d-a071-1eaf4671d0f7",
               "values": {
                 "nationalite": "eu-citoyen",
                 "age": "18",
@@ -426,7 +426,7 @@
               }
             },
             {
-              "name": "44274440-811c-4d29-8875-217a8113b251",
+              "name": "98f63e40-238e-4283-b0c9-8fd8bc02e126",
               "values": {
                 "nationalite": "non-eu-resident",
                 "age": "30",
@@ -436,7 +436,7 @@
               }
             },
             {
-              "name": "84d1dbe9-e33d-428b-a1be-fbe1d337d226",
+              "name": "f17bc36a-49d1-4b5a-a0d0-2f1e7c46fbdc",
               "values": {
                 "nationalite": "non-eu-resident",
                 "age": "30",
@@ -446,7 +446,7 @@
               }
             },
             {
-              "name": "80ebd86f-62b3-45b9-acc4-dd1612304e87",
+              "name": "3fd461f5-041b-4ea0-936d-ad9fed5b6447",
               "values": {
                 "nationalite": "refugie-reconnu",
                 "age": "21",
@@ -461,7 +461,7 @@
       "isOutline": true
     },
     {
-      "id": "f7b61c17-4ebd-462f-95b2-f78d52bb0c32",
+      "id": "01776835-53c8-4d66-a494-549bff2bdeff",
       "name": "Vérification des conditions de résidence",
       "description": "",
       "tags": [],
@@ -522,7 +522,7 @@
       "isOutline": false
     },
     {
-      "id": "c8876570-cfaa-4af6-b4b1-213d4ffa1d94",
+      "id": "23ed019e-528e-40f3-bb40-377822f4e5eb",
       "name": "Double inscription interdite",
       "description": "",
       "tags": [],
@@ -562,5 +562,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.680Z"
+  "generated": "2025-12-13T11:57:49.164Z"
 }

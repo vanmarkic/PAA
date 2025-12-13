@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "9ae71401-2abd-417e-90b9-bfd81c760709",
+      "id": "f5107fbb-415d-4c51-b59f-7edaeed4414d",
       "name": "Procédure UDRP pour cybersquatting",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "1d4e7622-5aab-484c-947b-84c4ce5d4768",
+      "id": "7a25130a-4288-4b0e-8ff7-aa26846b5a97",
       "name": "Procédure pour .be via CEPANI",
       "description": "",
       "tags": [],
@@ -102,7 +102,7 @@
       "isOutline": false
     },
     {
-      "id": "84b99ea0-0cc4-4115-9b5b-90a22b30fbe4",
+      "id": "d681567a-fd7a-4211-9c4a-1e73f77263e4",
       "name": "Action judiciaire pour concurrence déloyale",
       "description": "",
       "tags": [],
@@ -146,5 +146,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.684Z"
+  "generated": "2025-12-13T11:57:49.167Z"
 }

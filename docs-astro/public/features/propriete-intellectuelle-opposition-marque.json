@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "148b2978-021d-439f-9646-5a8ea7386874",
+      "id": "22c3d8ff-3bb5-446c-ba16-eb4f8c1f5b09",
       "name": "Opposition fondée sur marque identique",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "a56235dd-e831-48a0-9053-831d392b58b2",
+      "id": "b7b6a248-8bef-46d1-9fa9-f015f277319a",
       "name": "Opposition basée sur risque de confusion",
       "description": "",
       "tags": [],
@@ -106,7 +106,7 @@
       "isOutline": false
     },
     {
-      "id": "fcdec4a4-f329-4ef1-b299-1166d6b18b99",
+      "id": "9ac747cc-81fd-43f3-ba20-a9ec15aa4fda",
       "name": "Défense contre une opposition",
       "description": "",
       "tags": [],
@@ -139,7 +139,7 @@
       "isOutline": false
     },
     {
-      "id": "85aae971-a829-493b-94e4-656ff574a940",
+      "id": "910359a4-7769-49ac-aec1-4afb21d0a638",
       "name": "Règlement amiable pendant l'opposition",
       "description": "",
       "tags": [],
@@ -175,5 +175,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.684Z"
+  "generated": "2025-12-13T11:57:49.167Z"
 }

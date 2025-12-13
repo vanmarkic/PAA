@@ -1,10 +1,20 @@
 {
-  "generated": "2025-11-18T10:42:07.687Z",
-  "total": 91,
+  "generated": "2025-12-13T11:57:49.169Z",
+  "total": 109,
   "features": [
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Aide au Logement",
+      "category": "benefits"
+    },
     {
       "id": "benefits-aide-logement",
       "name": "Aide au Logement",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Aide Sociale du CPAS",
       "category": "benefits"
     },
     {
@@ -13,8 +23,18 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Allocation Chauffage (Fonds Social Chauffage)",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-allocation-chauffage",
       "name": "Allocation Chauffage (Fonds Social Chauffage)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Allocation de Garantie de Revenus (AGR)",
       "category": "benefits"
     },
     {
@@ -23,13 +43,28 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Allocation pour l'Aide aux Personnes Âgées (APA)",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-aide-personnes-agees",
       "name": "Allocation pour l'Aide aux Personnes Âgées (APA)",
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Allocations de Chômage",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-allocations-chomage",
       "name": "Allocations de Chômage",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Allocations Familiales",
       "category": "benefits"
     },
     {
@@ -43,8 +78,23 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-documentation-et-l-gislation-bail-ferme",
+      "name": "Bail à ferme en Wallonie",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Crédit-temps et Interruption de Carrière",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-credit-temps",
       "name": "Crédit-temps et Interruption de Carrière",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Déduction des frais de garde d'enfants",
       "category": "benefits"
     },
     {
@@ -53,8 +103,18 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Formation Professionnelle",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-formation-professionnelle",
       "name": "Formation Professionnelle",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Garantie Locative",
       "category": "benefits"
     },
     {
@@ -63,8 +123,18 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Insertion Professionnelle",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-insertion-professionnelle",
       "name": "Insertion Professionnelle",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Logement Social",
       "category": "benefits"
     },
     {
@@ -73,8 +143,18 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Prime de Naissance",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-prime-naissance",
       "name": "Prime de Naissance",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Prime Rénovation",
       "category": "benefits"
     },
     {
@@ -83,8 +163,18 @@
       "category": "benefits"
     },
     {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Revenu d'Intégration Sociale (RIS)",
+      "category": "benefits"
+    },
+    {
       "id": "benefits-ris",
       "name": "Revenu d'Intégration Sociale (RIS)",
+      "category": "benefits"
+    },
+    {
+      "id": "benefits-scrape-2025-11-18-001",
+      "name": "Tarif Social Énergie",
       "category": "benefits"
     },
     {

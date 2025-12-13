@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "9d6c3002-62c8-4b92-b582-d827cf99c6a6",
+      "id": "4dfb3515-dc69-4096-9af5-70ff9ccffb96",
       "name": "Éligibilité basée sur la nationalité belge",
       "description": "",
       "tags": [],
@@ -57,7 +57,7 @@
       "isOutline": false
     },
     {
-      "id": "041812d6-3572-4f38-a95e-b9aa381c3b7c",
+      "id": "26b15d64-af71-4fc4-ba53-a4cc1f01cf44",
       "name": "Éligibilité pour citoyen de l'Union européenne",
       "description": "",
       "tags": [],
@@ -94,7 +94,7 @@
       "isOutline": false
     },
     {
-      "id": "a88e6e98-7f41-4a67-83b2-bc900c69c5dc",
+      "id": "f903309f-ef08-49ed-b3f2-2114f793ae49",
       "name": "Éligibilité pour étranger inscrit au registre de la population",
       "description": "",
       "tags": [],
@@ -127,7 +127,7 @@
       "isOutline": false
     },
     {
-      "id": "d395a4c0-fd3e-4bdb-9476-d98e7cdb992c",
+      "id": "4ee3c569-8d61-4fec-82cd-c0de45d4d5bb",
       "name": "Éligibilité pour réfugié reconnu",
       "description": "",
       "tags": [],
@@ -160,7 +160,7 @@
       "isOutline": false
     },
     {
-      "id": "8d0cc177-5e06-43d2-bbeb-4a70c7184fed",
+      "id": "b1852247-4ce3-4cb7-a489-1bf813d7b705",
       "name": "Éligibilité pour bénéficiaire de protection subsidiaire",
       "description": "",
       "tags": [],
@@ -193,7 +193,7 @@
       "isOutline": false
     },
     {
-      "id": "5ef4fbe1-5f60-4b26-8c90-003d68b0bb4d",
+      "id": "57034f1c-f666-497f-83ba-5e9dbfaeb592",
       "name": "Condition de disposition au travail",
       "description": "",
       "tags": [],
@@ -222,7 +222,7 @@
       "isOutline": false
     },
     {
-      "id": "8c539a42-3283-4ec7-a283-e139ffca8861",
+      "id": "79dcd848-c9fd-4972-bf05-a3ab110fe90d",
       "name": "Exemption de disposition au travail pour raisons de santé",
       "description": "",
       "tags": [],
@@ -247,7 +247,7 @@
       "isOutline": false
     },
     {
-      "id": "2387e9b5-1b4b-49bb-9f05-9f8a952f579a",
+      "id": "7e13344f-18e3-4ef5-a3a0-d285b6f18010",
       "name": "Exemption de disposition au travail pour raisons d'équité",
       "description": "",
       "tags": [],
@@ -279,7 +279,7 @@
     "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language",
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.675Z",
+  "generated": "2025-12-13T11:57:49.160Z",
   "legalSources": {
     "sources": [
       {

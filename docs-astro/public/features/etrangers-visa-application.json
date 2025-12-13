@@ -52,7 +52,7 @@
   },
   "scenarios": [
     {
-      "id": "f150e668-cf82-484e-a1c9-1d651fc68f65",
+      "id": "79502e82-32a7-4304-a898-f27be5bf72e8",
       "name": "Visa Schengen tourisme court séjour",
       "description": "",
       "tags": [],
@@ -105,7 +105,7 @@
       "isOutline": false
     },
     {
-      "id": "01399f28-9a9c-4cb1-9056-7d39d77166ad",
+      "id": "f331da1f-4af4-41bc-89d7-da13dddeb5c1",
       "name": "Visa étudiant long séjour",
       "description": "",
       "tags": [],
@@ -158,7 +158,7 @@
       "isOutline": false
     },
     {
-      "id": "a8c9981f-8ed1-4756-b052-276af598270a",
+      "id": "96f0abd6-257b-4bf2-9d22-327881c57331",
       "name": "Visa travail avec permis unique",
       "description": "",
       "tags": [],
@@ -203,7 +203,7 @@
       "isOutline": false
     },
     {
-      "id": "a9598e02-1e0c-4395-b7b8-68eabae96273",
+      "id": "cd12ff18-8931-4c33-8d75-85d5c28711b9",
       "name": "Visa regroupement familial avec citoyen belge",
       "description": "",
       "tags": [],
@@ -252,7 +252,7 @@
       "isOutline": false
     },
     {
-      "id": "d297b06e-d9be-44c6-89f8-261c553c8d03",
+      "id": "059f3415-ce13-4cd9-a90d-7b941aedf3de",
       "name": "Visa affaires court séjour",
       "description": "",
       "tags": [],
@@ -293,7 +293,7 @@
       "isOutline": false
     },
     {
-      "id": "d6da869b-ab95-4d55-87c5-8ced5e4a5fbb",
+      "id": "8b021c52-426f-493b-a421-c63d2d0c2544",
       "name": "Visa médical",
       "description": "",
       "tags": [],
@@ -334,7 +334,7 @@
       "isOutline": false
     },
     {
-      "id": "f7183ae8-4b69-4e0c-a452-88c12e3b752b",
+      "id": "2f84967b-a90b-482a-9563-968e3a27e721",
       "name": "Visa de transit aéroportuaire",
       "description": "",
       "tags": [],
@@ -375,7 +375,7 @@
       "isOutline": false
     },
     {
-      "id": "b044d5f9-9c7b-43d7-8e6f-f58ef9fed4be",
+      "id": "139524ca-b7b8-443f-872e-0a79ca40fdd0",
       "name": "Refus de visa pour documents insuffisants",
       "description": "",
       "tags": [],
@@ -412,7 +412,7 @@
       "isOutline": false
     },
     {
-      "id": "7950af2f-e1f2-4606-90ac-841d570c8117",
+      "id": "e16996e6-0c80-4919-97ac-a4dcf3f8a651",
       "name": "Exemption de visa pour séjour court",
       "description": "",
       "tags": [],
@@ -449,7 +449,7 @@
       "isOutline": false
     },
     {
-      "id": "c47f9614-467a-475c-a062-30f0d4a78e84",
+      "id": "2aaa6c70-b8c6-4e11-b0d8-9f70fd5a3ed4",
       "name": "Frais de visa selon le type et l'âge",
       "description": "",
       "tags": [],
@@ -482,7 +482,7 @@
           ],
           "rows": [
             {
-              "name": "4fdfab05-9af9-4a77-8f3f-326abd89b05d",
+              "name": "6638a938-9567-4285-838e-2021f8889b63",
               "values": {
                 "type_visa": "visa Schengen",
                 "age": "25",
@@ -490,7 +490,7 @@
               }
             },
             {
-              "name": "4eb0ce5a-70f7-4f72-9335-12b06049cee5",
+              "name": "e7b09ec9-720b-444f-b189-bffac89558aa",
               "values": {
                 "type_visa": "visa Schengen",
                 "age": "8",
@@ -498,7 +498,7 @@
               }
             },
             {
-              "name": "d9f1e7e7-9b32-4192-b417-d6f74622ed8c",
+              "name": "747bd520-46f1-4c23-b521-eb933600c946",
               "values": {
                 "type_visa": "visa Schengen",
                 "age": "4",
@@ -506,7 +506,7 @@
               }
             },
             {
-              "name": "ee96ae26-93c8-42ef-8ba6-4f1365be7eea",
+              "name": "e59a4bba-13e5-4f1d-8336-843ba1c17b61",
               "values": {
                 "type_visa": "visa étudiant",
                 "age": "22",
@@ -514,7 +514,7 @@
               }
             },
             {
-              "name": "13cddfb2-1891-43c3-b47c-59565287185e",
+              "name": "2a049b3c-fb4f-41a8-a59a-cc9f32c91d45",
               "values": {
                 "type_visa": "visa travail",
                 "age": "35",
@@ -522,7 +522,7 @@
               }
             },
             {
-              "name": "d6847602-5db6-4468-9a6d-dc73043440fc",
+              "name": "0aa5b938-e871-4c0f-84d4-c9796960e49b",
               "values": {
                 "type_visa": "regroupement familial",
                 "age": "30",
@@ -535,7 +535,7 @@
       "isOutline": true
     },
     {
-      "id": "ef163b1d-3e27-4eb2-a47f-5b3bcc8711e7",
+      "id": "2a845adc-dca4-4c6c-a35f-85035ac8bd69",
       "name": "Procédure de recours après refus",
       "description": "",
       "tags": [],
@@ -579,5 +579,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.682Z"
+  "generated": "2025-12-13T11:57:49.166Z"
 }

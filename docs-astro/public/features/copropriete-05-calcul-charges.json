@@ -20,7 +20,7 @@
   },
   "scenarios": [
     {
-      "id": "b198692d-3304-4080-8fed-0fca5bd5ea37",
+      "id": "56e11f28-cd4b-4a2f-9200-924cefaaf6fc",
       "name": "Calcul charges générales au prorata des millièmes",
       "description": "",
       "tags": [],
@@ -49,7 +49,7 @@
       "isOutline": false
     },
     {
-      "id": "00b46715-d70b-44a4-93d9-6462acad14dc",
+      "id": "f37c6f13-fec7-46c7-9b9c-178baa3fc6fe",
       "name": "Calcul charges spéciales ascenseur",
       "description": "",
       "tags": [],
@@ -110,7 +110,7 @@
       "isOutline": false
     },
     {
-      "id": "40e6859b-c71b-4bc3-be85-75d9cdda4e42",
+      "id": "b45b44df-7a30-46c0-b5ea-e305cdfe4ac5",
       "name": "Charges impayées avec intérêts de retard",
       "description": "",
       "tags": [],
@@ -146,5 +146,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.678Z"
+  "generated": "2025-12-13T11:57:49.162Z"
 }

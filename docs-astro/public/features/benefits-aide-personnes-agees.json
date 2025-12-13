@@ -80,7 +80,7 @@
   },
   "scenarios": [
     {
-      "id": "cc5a7a48-ac05-4e68-9a18-533c57b71212",
+      "id": "a2f46396-def8-43bb-ae43-8a97e44e4eef",
       "name": "Personne âgée isolée avec perte d'autonomie légère",
       "description": "",
       "tags": [],
@@ -133,7 +133,7 @@
       "isOutline": false
     },
     {
-      "id": "35534d72-d7c7-464c-9926-a9b2038f7f2d",
+      "id": "840252bd-c639-4a7c-ac37-582645c292a1",
       "name": "Couple avec perte d'autonomie modérée",
       "description": "",
       "tags": [],
@@ -186,7 +186,7 @@
       "isOutline": false
     },
     {
-      "id": "6c0bcf6c-90e5-45d4-99f4-2742c993c31b",
+      "id": "277742e7-ca28-4f4b-bc64-0855743ae490",
       "name": "Personne avec handicap sévère en maison de repos",
       "description": "",
       "tags": [],
@@ -239,7 +239,7 @@
       "isOutline": false
     },
     {
-      "id": "76558534-3498-4795-a358-7aa4dc579b41",
+      "id": "789fd6dc-0ac4-4f5f-a43d-8bba200f1602",
       "name": "Personne trop jeune pour l'APA",
       "description": "",
       "tags": [],
@@ -280,7 +280,7 @@
       "isOutline": false
     },
     {
-      "id": "0c617569-36da-4d43-99ef-808aa74cfaa0",
+      "id": "ed33fd96-3f84-4311-9996-de3444fa193e",
       "name": "Score d'autonomie insuffisant",
       "description": "",
       "tags": [],
@@ -317,7 +317,7 @@
       "isOutline": false
     },
     {
-      "id": "5d9afb4b-cece-4f71-9e70-c94fd0308c53",
+      "id": "af1487a1-4c51-4c6b-8244-8c28ba029531",
       "name": "Revenus trop élevés pour personne isolée",
       "description": "",
       "tags": [],
@@ -354,7 +354,7 @@
       "isOutline": false
     },
     {
-      "id": "9e96bf3b-ec1c-4725-9ccb-26efdf9da3f3",
+      "id": "b79db072-a6f4-45cd-a50a-0f8073c7ce97",
       "name": "Évaluation de la perte d'autonomie",
       "description": "",
       "tags": [],
@@ -426,7 +426,7 @@
       "isOutline": false
     },
     {
-      "id": "dba7ded5-5b31-431a-9532-3f544279bd0c",
+      "id": "7ad89b7f-33cd-4c52-927a-8e1d478bb032",
       "name": "Cumul APA avec autres allocations",
       "description": "",
       "tags": [],
@@ -489,7 +489,7 @@
       "isOutline": false
     },
     {
-      "id": "b12cb812-e107-4501-a857-472757c991bf",
+      "id": "b047a6aa-5ddb-42e5-8e03-53cfa95ba300",
       "name": "Calcul APA selon catégorie et revenus",
       "description": "",
       "tags": [],
@@ -541,7 +541,7 @@
           ],
           "rows": [
             {
-              "name": "56486ea8-6a81-443e-9c95-80ad4c46854c",
+              "name": "9c7846b5-6a0b-414f-9048-f629d6fc2fa8",
               "values": {
                 "situation": "personne isolée",
                 "points": "7",
@@ -552,7 +552,7 @@
               }
             },
             {
-              "name": "f151f655-d469-4491-9500-5db9eb795d66",
+              "name": "57dfc5d1-2b3d-4bc6-ae1a-69186bd3c5e6",
               "values": {
                 "situation": "personne isolée",
                 "points": "10",
@@ -563,7 +563,7 @@
               }
             },
             {
-              "name": "a3966741-9319-4fcf-b1d0-d0e294d0de2d",
+              "name": "18548fcb-fa9d-4052-a87b-6647de1a32c2",
               "values": {
                 "situation": "personne isolée",
                 "points": "13",
@@ -574,7 +574,7 @@
               }
             },
             {
-              "name": "9cea49ae-3c90-499e-a191-c26d6a17b96c",
+              "name": "ce5f0224-7907-452b-952f-de7e90d0ecdd",
               "values": {
                 "situation": "personne isolée",
                 "points": "16",
@@ -585,7 +585,7 @@
               }
             },
             {
-              "name": "039c9fb1-0910-4e79-a102-586e4d820dd4",
+              "name": "b7c90410-32b6-4e0b-a00a-ca7004c39bc4",
               "values": {
                 "situation": "en couple",
                 "points": "11",
@@ -596,7 +596,7 @@
               }
             },
             {
-              "name": "bf0d7ab6-f5e3-4cc4-8a66-d1b469874e48",
+              "name": "f6fe8f9a-696e-4288-a26e-4556b068da97",
               "values": {
                 "situation": "en couple",
                 "points": "15",
@@ -612,7 +612,7 @@
       "isOutline": true
     },
     {
-      "id": "fd5c2397-533b-4b58-be87-e13d6b47484f",
+      "id": "4bd4b820-a01d-464e-8b68-4506d8fdd2b7",
       "name": "Procédure de demande APA - Région Bruxelles-Capitale",
       "description": "",
       "tags": [],
@@ -680,7 +680,7 @@
       "isOutline": false
     },
     {
-      "id": "77dbb68a-cc5f-4684-828f-b7d2f448d883",
+      "id": "364a4df9-1f6b-4f4f-97e2-4451e2aa8e5d",
       "name": "Procédure de demande APA - Région Wallonne",
       "description": "",
       "tags": [],
@@ -739,7 +739,7 @@
       "isOutline": false
     },
     {
-      "id": "b9d23678-8b61-4e5b-959f-756d46fec261",
+      "id": "4e01295b-e701-4f74-a5df-3e58ea2497b3",
       "name": "Révision de l'APA suite à changement de situation",
       "description": "",
       "tags": [],
@@ -780,7 +780,7 @@
       "isOutline": false
     },
     {
-      "id": "94be6b4d-00ea-4d95-a568-4d7f92b85da2",
+      "id": "ef17105b-3f79-4c58-9dce-dde603e1c894",
       "name": "APA et services d'aide à domicile",
       "description": "",
       "tags": [],
@@ -844,7 +844,7 @@
       "isOutline": false
     },
     {
-      "id": "1fcc64aa-019b-4b71-9ea5-4e988080b30e",
+      "id": "38974ca2-8b62-462f-af5f-12d7196843a2",
       "name": "Impact sur les impôts",
       "description": "",
       "tags": [],
@@ -881,7 +881,7 @@
       "isOutline": false
     },
     {
-      "id": "a9f441c7-effe-4dce-a3a1-eec9768649cb",
+      "id": "f2546b8c-2c44-4c7f-9070-72f5ca0f7bee",
       "name": "APA en maison de repos et de soins",
       "description": "",
       "tags": [],
@@ -925,5 +925,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-11-18T10:42:07.674Z"
+  "generated": "2025-12-13T11:57:49.158Z"
 }

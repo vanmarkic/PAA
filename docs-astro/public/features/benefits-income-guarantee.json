@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "0926db94-38bd-4bc9-bd6a-1e4d49b5bd87",
+      "id": "4babbe1c-dd9a-4d72-9f5f-db8418331213",
       "name": "Travailleur à temps partiel avec maintien des droits éligible",
       "description": "",
       "tags": [],
@@ -57,7 +57,7 @@
       "isOutline": false
     },
     {
-      "id": "4250d6a2-55d5-4ab3-ac29-34b979894a72",
+      "id": "ffc325b0-be47-4688-9b12-027ae2ff51ec",
       "name": "Salaire trop élevé pour l'AGR",
       "description": "",
       "tags": [],
@@ -90,7 +90,7 @@
       "isOutline": false
     },
     {
-      "id": "eefe6915-3519-4f4b-8ac3-79e08b43df21",
+      "id": "fb62d093-6b7b-4abe-8d3d-d858bf6e241a",
       "name": "Sans maintien des droits",
       "description": "",
       "tags": [],
@@ -123,7 +123,7 @@
       "isOutline": false
     },
     {
-      "id": "ae4a1a35-2d05-48a9-a14a-cf9b8b05e03e",
+      "id": "1fe1a359-e4c5-41fd-b115-0684001cf10e",
       "name": "Incompatibilité avec le chômage complet",
       "description": "",
       "tags": [],
@@ -160,7 +160,7 @@
       "isOutline": false
     },
     {
-      "id": "f9bddc31-2877-435e-b4b9-1b7a0bd27bec",
+      "id": "1c3135dc-ad63-4c64-b406-fc2da72c118a",
       "name": "Heures de travail optimales",
       "description": "",
       "tags": [],
@@ -202,7 +202,7 @@
           ],
           "rows": [
             {
-              "name": "860e3b0f-6f7a-48b8-976d-6a325d16649d",
+              "name": "e9d2f229-bce3-497b-acd6-cb4c410acfed",
               "values": {
                 "heures": "15",
                 "salaire": "800",
@@ -211,7 +211,7 @@
               }
             },
             {
-              "name": "f7c33f31-df26-497f-938b-21f116ac881a",
+              "name": "5e76995b-c2f5-49a9-b617-22f972b8aa67",
               "values": {
                 "heures": "20",
                 "salaire": "1100",
@@ -220,7 +220,7 @@
               }
             },
             {
-              "name": "67c7d302-74b6-4084-9a9b-13ea68b51830",
+              "name": "09030aab-f85e-4be7-82e3-ce71f1b36981",
               "values": {
                 "heures": "28",
                 "salaire": "1500",
@@ -229,7 +229,7 @@
               }
             },
             {
-              "name": "81f5f037-cbb6-4afd-93c1-3fc8b9645316",
+              "name": "8e250362-c918-422e-824d-05c0a6c7541e",
               "values": {
                 "heures": "35",
                 "salaire": "1800",
@@ -252,7 +252,7 @@
     "language": "fr",
     "version": "2025.1.0"
   },
-  "generated": "2025-11-18T10:42:07.674Z",
+  "generated": "2025-12-13T11:57:49.158Z",
   "legalSources": {
     "sources": [
       {
