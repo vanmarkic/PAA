@@ -51,14 +51,14 @@ export const loiDu26Mai2002Machine = createMachine({
   id: 'loiDu26Mai2002ConcernantLeDroitLIntGrati',
   initial: 'idle',
 
-  schemas: {
-    context: {} as LoiDu26Mai2002Context,
-    events: {} as LoiDu26Mai2002Event,
+  types: {} as {
+    context: LoiDu26Mai2002Context;
+    events: LoiDu26Mai2002Event;
   },
 
   context: {
-    user: null as LoiDu26Mai2002User | null,
-    eligibilityResult: null as LoiDu26Mai2002Result | null,
+    user: null,
+    eligibilityResult: null,
     isEligible: false,
     hasWorkRequirement: false,
     hasWorkExemption: false,
