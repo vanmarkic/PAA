@@ -1,9 +1,28 @@
 import { createMachine, assign } from 'xstate';
-import { User, EligibilityCheck } from '../domain/types';
+
+export type Nationality = 'belge' | 'eu' | 'apatride' | 'refugie' | 'autre';
+
+export interface LoiDu26Mai2002User {
+  id: string;
+  age: number;
+  nationality: Nationality;
+  legalResidenceMonths: number;
+  hasInsufficientResources: boolean;
+  isStudent?: boolean;
+  hasHealthIssues?: boolean;
+  hasEquityReasons?: boolean;
+}
+
+export interface LoiDu26Mai2002Result {
+  eligible: boolean;
+  reason: string;
+  hasWorkRequirement: boolean;
+  hasWorkExemption: boolean;
+}
 
 interface LoiDu26Mai2002Context {
-  user: User | null;
-  eligibilityResult: EligibilityCheck | null;
+  user: LoiDu26Mai2002User | null;
+  eligibilityResult: LoiDu26Mai2002Result | null;
   isEligible: boolean;
   hasWorkRequirement: boolean;
   hasWorkExemption: boolean;
@@ -12,7 +31,7 @@ interface LoiDu26Mai2002Context {
 }
 
 type LoiDu26Mai2002Event =
-  | { type: 'START_CHECK'; user: User }
+  | { type: 'START_CHECK'; user: LoiDu26Mai2002User }
   | { type: 'CHECK_AGE' }
   | { type: 'CHECK_NATIONALITY' }
   | { type: 'CHECK_RESIDENCE' }
@@ -38,12 +57,12 @@ export const loiDu26Mai2002Machine = createMachine({
   },
 
   context: {
-    user: null,
-    eligibilityResult: null,
+    user: null as LoiDu26Mai2002User | null,
+    eligibilityResult: null as LoiDu26Mai2002Result | null,
     isEligible: false,
     hasWorkRequirement: false,
     hasWorkExemption: false,
-    validationErrors: [],
+    validationErrors: [] as string[],
     checkComplete: false,
   },
 

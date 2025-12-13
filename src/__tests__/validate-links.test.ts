@@ -12,7 +12,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
-import { validateLinks, ValidationOptions } from '../../scripts/validate-links';
+import { validateLinks, ValidationOptions } from '../utils/validateLinks';
 
 describe('Link Validation Script', () => {
   let tempDir: string;
