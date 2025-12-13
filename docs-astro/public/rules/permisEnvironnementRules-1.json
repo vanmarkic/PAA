@@ -1,0 +1,36 @@
+{
+  "id": "permisEnvironnementRules-1",
+  "description": "Rule 2 for permisenvironnement",
+  "category": "autre",
+  "benefitType": "permisenvironnement",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "power",
+        "operator": "greaterThan",
+        "value": 100
+      },
+      {
+        "fact": "power",
+        "operator": "lessThanInclusive",
+        "value": 1000
+      },
+      {
+        "fact": "emissions.CO2",
+        "operator": "lessThanInclusive",
+        "value": 50
+      },
+      {
+        "fact": "seveso",
+        "operator": "equal",
+        "value": "non"
+      }
+    ]
+  },
+  "event": {
+    "type": "permit-class-2"
+  },
+  "fileName": "permisEnvironnementRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

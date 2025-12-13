@@ -56,7 +56,7 @@
   },
   "scenarios": [
     {
-      "id": "60c47d2c-4c28-4e0f-9492-8ab7950bfc3f",
+      "id": "5de8f114-ddfc-442c-b489-31e95db80469",
       "name": "Licenciement économique avec conditions remplies",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "6fad55bd-3404-4602-a4ae-0a94b4cace0b",
+      "id": "a86fa2df-ff6e-4c0a-ab75-88f97680fee6",
       "name": "Fin de contrat à durée déterminée",
       "description": "",
       "tags": [],
@@ -162,7 +162,7 @@
       "isOutline": false
     },
     {
-      "id": "7d732ec5-5823-424b-8a9f-9a5b62258ba3",
+      "id": "f000507e-5475-40da-8854-218adf50ad97",
       "name": "Travailleur de plus de 36 ans avec historique insuffisant",
       "description": "",
       "tags": [],
@@ -199,7 +199,7 @@
       "isOutline": false
     },
     {
-      "id": "a146a288-1828-458f-92a2-3b33bab9744c",
+      "id": "41e770a5-0f82-4586-bfcd-f0aef9db161c",
       "name": "Démission volontaire sans motif valable",
       "description": "",
       "tags": [],
@@ -240,7 +240,7 @@
       "isOutline": false
     },
     {
-      "id": "06307da2-960d-40dc-8519-ea3b7c77c1eb",
+      "id": "108a4216-e2ec-4f9c-b7ab-33be87984618",
       "name": "Travailleur trop jeune sans stage suffisant",
       "description": "",
       "tags": [],
@@ -273,7 +273,7 @@
       "isOutline": false
     },
     {
-      "id": "d7d60754-8c82-479f-9a84-373c2e730544",
+      "id": "f50c1eb4-bfed-4ec5-85b4-90ddf2cb4230",
       "name": "Chômage temporaire pour force majeure",
       "description": "",
       "tags": [],
@@ -314,7 +314,7 @@
       "isOutline": false
     },
     {
-      "id": "cfc4cbf5-2636-4a61-bd04-21f336b8bcdb",
+      "id": "56bf3388-0a54-47aa-89ae-a0d53b17a940",
       "name": "Travailleur à temps partiel involontaire",
       "description": "",
       "tags": [],
@@ -359,7 +359,7 @@
       "isOutline": false
     },
     {
-      "id": "73848cb7-50f8-4e8b-829a-572431dc8029",
+      "id": "91378646-03fa-4e82-bc89-9acfda989a08",
       "name": "Cumul avec formation professionnelle",
       "description": "",
       "tags": [],
@@ -404,7 +404,7 @@
       "isOutline": false
     },
     {
-      "id": "34267506-eb52-4e66-a4fe-99df720aa0dd",
+      "id": "26632a76-9adc-41f6-9388-2a666425e454",
       "name": "Calcul allocations selon situation familiale",
       "description": "",
       "tags": [],
@@ -456,7 +456,7 @@
           ],
           "rows": [
             {
-              "name": "d5899e04-1f15-4471-a005-4ad6c0aa9fdc",
+              "name": "6e91c972-4a59-4bc8-a43e-e1b35401a670",
               "values": {
                 "age": "25",
                 "jours": "320",
@@ -467,7 +467,7 @@
               }
             },
             {
-              "name": "582002db-f45f-49f6-9baa-646be92d0b15",
+              "name": "f0bc3548-d2ca-46a5-903e-820d762520c9",
               "values": {
                 "age": "30",
                 "jours": "350",
@@ -478,7 +478,7 @@
               }
             },
             {
-              "name": "6258e8b1-4aa3-49cb-a41d-a7ead203155d",
+              "name": "94fb5282-5ba4-4ab0-92d9-f5fda3762d7c",
               "values": {
                 "age": "28",
                 "jours": "400",
@@ -489,7 +489,7 @@
               }
             },
             {
-              "name": "7177bc11-1a66-4126-a000-a16e983794a3",
+              "name": "52cca475-261f-487f-b2fb-13c3a8345ae7",
               "values": {
                 "age": "40",
                 "jours": "500",
@@ -500,7 +500,7 @@
               }
             },
             {
-              "name": "fb3f3bdb-1785-425c-8ba9-b4ebc00fe2f0",
+              "name": "0545daf6-9bb4-49d5-932d-2309abf9f55e",
               "values": {
                 "age": "35",
                 "jours": "480",
@@ -516,7 +516,7 @@
       "isOutline": true
     },
     {
-      "id": "c0c46365-561b-4705-8251-5180e52e805f",
+      "id": "b307fc19-342b-4fb7-8a3e-9ec1af3a7f14",
       "name": "Obligations liées aux allocations de chômage",
       "description": "",
       "tags": [],
@@ -565,7 +565,7 @@
       "isOutline": false
     },
     {
-      "id": "4d63f6a3-7be6-419f-a1cf-d2a2965a793c",
+      "id": "08f33e89-4161-4139-aa39-2c0dd55596eb",
       "name": "Réforme 2024 - Limitation dans le temps",
       "description": "",
       "tags": [],
@@ -602,7 +602,7 @@
       "isOutline": false
     },
     {
-      "id": "6af4747b-f919-4755-8c26-7272876f9620",
+      "id": "a1e60673-277f-4df1-92af-c3c7f875ae76",
       "name": "Allocations d'insertion pour jeunes",
       "description": "",
       "tags": [],
@@ -650,5 +650,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.158Z"
+  "generated": "2025-12-13T17:25:45.874Z"
 }

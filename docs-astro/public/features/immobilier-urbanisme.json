@@ -28,7 +28,7 @@
   },
   "scenarios": [
     {
-      "id": "002cabc4-4f1a-4329-8857-bfa7697191fe",
+      "id": "4425892c-97c0-4af7-970d-2150e4895d74",
       "name": "Demande de permis d'urbanisme pour extension",
       "description": "",
       "tags": [],
@@ -128,7 +128,7 @@
       "isOutline": false
     },
     {
-      "id": "a2ecab3d-72b0-43ce-b816-58baf38c4f2e",
+      "id": "7db3975d-e18f-449b-9b2c-3106c8758e2e",
       "name": "Déroulement de l'enquête publique urbanisme",
       "description": "",
       "tags": [],
@@ -205,7 +205,7 @@
       "isOutline": false
     },
     {
-      "id": "74a65e7a-ca37-4fa8-aa64-548c1692f3a7",
+      "id": "0d705a3d-6556-40ef-8291-efcf9d9dcb26",
       "name": "Création d'un lotissement de 5 parcelles",
       "description": "",
       "tags": [],
@@ -286,7 +286,7 @@
       "isOutline": false
     },
     {
-      "id": "57f1629e-bcb2-4b44-a9c4-136b3eda2852",
+      "id": "229ff57f-1105-49f6-87a4-5ce7af7b3e43",
       "name": "Régularisation d'une construction sans permis",
       "description": "",
       "tags": [],
@@ -362,7 +362,7 @@
       "isOutline": false
     },
     {
-      "id": "35a3d906-4318-4b4b-b104-abbac1e471a3",
+      "id": "e63c30bf-63ed-4214-90fa-6a477e88c4d5",
       "name": "Obtention d'un certificat d'urbanisme informatif",
       "description": "",
       "tags": [],
@@ -438,7 +438,7 @@
       "isOutline": false
     },
     {
-      "id": "bda4f506-ca66-4e12-b875-39fcd80c3a92",
+      "id": "faec8a6b-2066-4d04-94eb-63c25f2ee07e",
       "name": "Demande de permis intégré pour projet mixte",
       "description": "",
       "tags": [],
@@ -514,7 +514,7 @@
       "isOutline": false
     },
     {
-      "id": "8414f909-2a98-43e8-a4b4-b01bedfc18ff",
+      "id": "b3504564-a04c-4827-9e13-1de706afdb88",
       "name": "Transformation d'une maison en 3 appartements",
       "description": "",
       "tags": [],
@@ -596,7 +596,7 @@
       "isOutline": false
     },
     {
-      "id": "d9fe4638-6ef8-45a1-9b58-6b66bfed3b55",
+      "id": "723ffd62-1552-4729-b61e-01fcd7c27454",
       "name": "Demande d'abattage d'un arbre remarquable",
       "description": "",
       "tags": [],
@@ -673,7 +673,7 @@
       "isOutline": false
     },
     {
-      "id": "f5cc93d7-1c95-486d-aa38-5569f127eb90",
+      "id": "d4c54ad7-e8aa-4b58-b620-19e3fc43ff07",
       "name": "Transformation d'un commerce en logement",
       "description": "",
       "tags": [],
@@ -754,7 +754,7 @@
       "isOutline": false
     },
     {
-      "id": "77dd2c80-8c41-4755-8c1a-4640a4f6b730",
+      "id": "cf299b08-a677-49db-9a40-48cbfef52362",
       "name": "Travaux sur un bâtiment classé monument",
       "description": "",
       "tags": [],
@@ -836,7 +836,7 @@
       "isOutline": false
     },
     {
-      "id": "f85fb427-14cc-41e8-8178-59486f0da894",
+      "id": "4a30e365-e9a0-49fe-b1c8-fa068805eca7",
       "name": "Délais de traitement des permis par type",
       "description": "",
       "tags": [],
@@ -879,7 +879,7 @@
           ],
           "rows": [
             {
-              "name": "b66928af-7edf-46db-99ae-08a060b69a0c",
+              "name": "13745c2a-dc27-46f3-a657-cbbd793ede3d",
               "values": {
                 "region": "Wallonie",
                 "type_permis": "urbanisme simple",
@@ -889,7 +889,7 @@
               }
             },
             {
-              "name": "309943d0-ff28-4ffc-82f3-a07114d5242b",
+              "name": "d1956b32-0d9f-465e-836d-104385f8578c",
               "values": {
                 "region": "Wallonie",
                 "type_permis": "urbanisme",
@@ -899,7 +899,7 @@
               }
             },
             {
-              "name": "fa80e6d4-a42f-47d0-9505-affffed5eb9d",
+              "name": "b69261d5-5126-41eb-ab1a-5df167f40f67",
               "values": {
                 "region": "Bruxelles",
                 "type_permis": "urbanisme",
@@ -909,7 +909,7 @@
               }
             },
             {
-              "name": "e3c214a4-3e7d-4ed6-9715-485a63328fc3",
+              "name": "6d1ea33b-c681-413a-9420-a84e9dd0365c",
               "values": {
                 "region": "Bruxelles",
                 "type_permis": "urbanisme",
@@ -919,7 +919,7 @@
               }
             },
             {
-              "name": "f22fc230-0ba4-4344-bfc2-13bd166f4ee0",
+              "name": "889131ce-f7ce-4bac-a151-79b5135fbca9",
               "values": {
                 "region": "Wallonie",
                 "type_permis": "intégré",
@@ -929,7 +929,7 @@
               }
             },
             {
-              "name": "73d6abaa-d971-4305-8ef6-f2559cc794c5",
+              "name": "bf1e894a-052b-4295-b694-ce5b1d19f451",
               "values": {
                 "region": "Flandre",
                 "type_permis": "urbanisme",
@@ -947,5 +947,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.166Z"
+  "generated": "2025-12-13T17:25:45.883Z"
 }

@@ -1,0 +1,31 @@
+{
+  "id": "interimMeasuresRules-6",
+  "description": "Ineligible: Risk of homelessness for vulnerable persons",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "riskType",
+        "operator": "equal",
+        "value": "home-demolition"
+      },
+      {
+        "fact": "alternativeHousing",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "vulnerableOccupants",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "consider-measures"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

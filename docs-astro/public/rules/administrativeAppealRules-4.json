@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-4",
+  "description": "Rule 5 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "acces-documents-administratifs"
+      },
+      {
+        "fact": "documentIdentified",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "document-not-identified"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

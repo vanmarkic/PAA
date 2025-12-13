@@ -1,0 +1,31 @@
+{
+  "id": "conge-materniteRules-7",
+  "description": "Report du repos prénatal autorisé",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 40,
+  "conditions": {
+    "all": [
+      {
+        "fact": "souhaiteTravaillerJusquAccouchement",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "accordMedecin",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutProfessionnel",
+        "operator": "equal",
+        "value": "employee"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-report-prenatal"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

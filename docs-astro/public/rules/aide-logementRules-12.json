@@ -1,0 +1,31 @@
+{
+  "id": "aide-logementRules-12",
+  "description": "Ineligible: liste attente sociale >= 4 ans en Flandres",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "flandres"
+      },
+      {
+        "fact": "moisAttenteListeSociale",
+        "operator": "greaterThanInclusive",
+        "value": "AIDE_LOGEMENT_CONSTANTS.FLANDRES.ATTENTE_MIN_ANNEES * 12"
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

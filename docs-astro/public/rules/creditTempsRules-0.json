@@ -1,0 +1,26 @@
+{
+  "id": "creditTempsRules-0",
+  "description": "Ineligible: ancienneté insuffisante (${MIN_ANCIENNITY_MONTHS} mois requis)",
+  "category": "fiscal",
+  "benefitType": "credittemps",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "anciennityMonths",
+        "operator": "lessThan",
+        "value": "MIN_ANCIENNITY_MONTHS"
+      },
+      {
+        "fact": "creditType",
+        "operator": "notIn",
+        "value": "[palliative]"
+      }
+    ]
+  },
+  "event": {
+    "type": "credit-temps-ineligible"
+  },
+  "fileName": "creditTempsRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

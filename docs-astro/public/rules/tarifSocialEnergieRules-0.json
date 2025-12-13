@@ -1,0 +1,21 @@
+{
+  "id": "tarifSocialEnergieRules-0",
+  "description": "Éligible pour TarifSocialEnergie",
+  "category": "social",
+  "benefitType": "tarifsocialenergie",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-eligible"
+  },
+  "fileName": "tarifSocialEnergieRules",
+  "generated": "2025-12-13T17:27:42.419Z"
+}

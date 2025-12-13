@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-14",
+  "description": "Ineligible: Applicant already has paid legal representation",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasLegalRepresentative",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "representativeProBono",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "refuse-legal-aid"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

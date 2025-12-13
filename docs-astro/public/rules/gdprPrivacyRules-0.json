@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-0",
+  "description": "Ineligible: Vérification d\\",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestType",
+        "operator": "equal",
+        "value": "acces-donnees"
+      },
+      {
+        "fact": "identityVerified",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "identity-verification-required"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

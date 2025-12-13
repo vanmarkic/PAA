@@ -1,0 +1,26 @@
+{
+  "id": "garantie-locativeRules-9",
+  "description": "Éligible - Prêt sans intérêt CPAS",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "revenus",
+        "operator": "lessThan",
+        "value": "GARANTIE_LOCATIVE_CONSTANTS.HIGH_INCOME_THRESHOLD"
+      },
+      {
+        "fact": "epargne",
+        "operator": "lessThan",
+        "value": "GARANTIE_LOCATIVE_CONSTANTS.HIGH_SAVINGS_THRESHOLD"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

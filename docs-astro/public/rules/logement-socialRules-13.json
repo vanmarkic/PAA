@@ -1,0 +1,36 @@
+{
+  "id": "logement-socialRules-13",
+  "description": "Éligible au logement social en Flandres",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "Flandres"
+      },
+      {
+        "fact": "estProprietaire",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "revenuDansLimites_flandres",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "patrimoineDansLimites_flandres",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-eligible"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

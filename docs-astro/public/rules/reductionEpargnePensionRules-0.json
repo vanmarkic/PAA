@@ -1,0 +1,21 @@
+{
+  "id": "reductionEpargnePensionRules-0",
+  "description": "Éligible pour ReductionEpargnePension",
+  "category": "pension",
+  "benefitType": "reductionepargnepension",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "reductionEpargnePension-eligible"
+  },
+  "fileName": "reductionEpargnePensionRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

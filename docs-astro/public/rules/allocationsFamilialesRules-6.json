@@ -1,0 +1,26 @@
+{
+  "id": "allocationsFamilialesRules-6",
+  "description": "Éligible au supplément social",
+  "category": "famille",
+  "benefitType": "allocationsfamiliales",
+  "priority": 5,
+  "conditions": {
+    "any": [
+      {
+        "fact": "annualIncome",
+        "operator": "lessThan",
+        "value": 31000
+      },
+      {
+        "fact": "hasBIMStatus",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "fa-social-supplement"
+  },
+  "fileName": "allocationsFamilialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

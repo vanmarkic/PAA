@@ -1,0 +1,36 @@
+{
+  "id": "allocationHandicapesRules-2",
+  "description": "Éligible à l\\",
+  "category": "handicap",
+  "benefitType": "allocationhandicapes",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "benefitType",
+        "operator": "equal",
+        "value": "ARR"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": "ARR_AMOUNTS_2024.ageLimit"
+      },
+      {
+        "fact": "disabilityPercentage",
+        "operator": "greaterThanInclusive",
+        "value": "ARR_AMOUNTS_2024.minimumDisabilityPercentage"
+      },
+      {
+        "fact": "isResident",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "arr-eligible"
+  },
+  "fileName": "allocationHandicapesRules",
+  "generated": "2025-12-13T17:27:42.419Z"
+}

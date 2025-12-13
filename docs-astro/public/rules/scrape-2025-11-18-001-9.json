@@ -1,0 +1,21 @@
+{
+  "id": "scrape-2025-11-18-001-9",
+  "description": "Ineligible: eigenaar - hulp voorbehouden voor huurders",
+  "category": "autre",
+  "benefitType": "scrape-2025-11-18-001",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "flanders-ineligible"
+  },
+  "fileName": "scrape-2025-11-18-001",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

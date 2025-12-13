@@ -1,0 +1,21 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-14",
+  "description": "Le bail prend fin automatiquement",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "eventType",
+        "operator": "equal",
+        "value": "fin_plein_droit"
+      }
+    ]
+  },
+  "event": {
+    "type": "fin-plein-droit"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

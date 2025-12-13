@@ -1,0 +1,31 @@
+{
+  "id": "aide-socialeRules-2",
+  "description": "Rule 3 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 95,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "AIDE_SOCIALE_CONSTANTS.MIN_AGE_RIS"
+      },
+      {
+        "fact": "representantLegalBelgique",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "situation",
+        "operator": "equal",
+        "value": "mineur_non_accompagne"
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-eligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

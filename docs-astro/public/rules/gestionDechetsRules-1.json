@@ -1,0 +1,21 @@
+{
+  "id": "gestionDechetsRules-1",
+  "description": "Rule 2 for gestiondechets",
+  "category": "autre",
+  "benefitType": "gestiondechets",
+  "priority": 15,
+  "conditions": {
+    "any": [
+      {
+        "fact": "annualVolume",
+        "operator": "greaterThan",
+        "value": 5000
+      }
+    ]
+  },
+  "event": {
+    "type": "large-volume-processing"
+  },
+  "fileName": "gestionDechetsRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

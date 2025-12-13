@@ -1,0 +1,26 @@
+{
+  "id": "aidePersonnesAgeesRules-2",
+  "description": "Ineligible: revenus supérieurs au plafond (${APA_AMOUNTS_2024.incomeCeilings.isolated}€ pour personne isolée)",
+  "category": "autre",
+  "benefitType": "aidepersonnesagees",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "householdType",
+        "operator": "equal",
+        "value": "isolated"
+      },
+      {
+        "fact": "annualIncome",
+        "operator": "greaterThan",
+        "value": "APA_AMOUNTS_2024.incomeCeilings.isolated"
+      }
+    ]
+  },
+  "event": {
+    "type": "apa-ineligible"
+  },
+  "fileName": "aidePersonnesAgeesRules",
+  "generated": "2025-12-13T17:27:42.375Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "carte-medicaleRules-2",
+  "description": "Ineligible: Sans-papiers en état d\\",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "irregular_stay"
+      },
+      {
+        "fact": "hasUrgentMedicalNeed",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasMedicalCertificateUrgency",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isIndigent",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

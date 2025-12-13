@@ -1,0 +1,21 @@
+{
+  "id": "prime-naissanceRules-0",
+  "description": "Ineligible: pas de titre de séjour valide",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-ineligible"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.400Z"
+}

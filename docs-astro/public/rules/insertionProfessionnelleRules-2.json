@@ -1,0 +1,36 @@
+{
+  "id": "insertionProfessionnelleRules-2",
+  "description": "Éligible pour Programme de Transition Professionnelle",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentStatus",
+        "operator": "equal",
+        "value": "chomeur"
+      },
+      {
+        "fact": "monthsUnemployed",
+        "operator": "greaterThanInclusive",
+        "value": "PTP_MIN_UNEMPLOYMENT_MONTHS"
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "ptp"
+      },
+      {
+        "fact": "sectorType",
+        "operator": "in",
+        "value": "[public"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible-ptp"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

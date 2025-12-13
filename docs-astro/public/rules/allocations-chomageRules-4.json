@@ -1,0 +1,26 @@
+{
+  "id": "allocations-chomageRules-4",
+  "description": "Rule 5 for allocations-chomage",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "unemploymentType",
+        "operator": "equal",
+        "value": "force_majeure"
+      },
+      {
+        "fact": "isTemporaryUnemployment",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-eligible-temporary"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

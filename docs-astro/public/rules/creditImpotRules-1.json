@@ -1,0 +1,36 @@
+{
+  "id": "creditImpotRules-1",
+  "description": "Éligible au crédit d\\",
+  "category": "fiscal",
+  "benefitType": "creditimpot",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "situation",
+        "operator": "in",
+        "value": "[single"
+      },
+      {
+        "fact": "totalIncome",
+        "operator": "lessThanInclusive",
+        "value": "TAX_CREDIT_CONSTANTS_2024.lowIncomeThresholds.single"
+      },
+      {
+        "fact": "situation",
+        "operator": "in",
+        "value": "[married"
+      },
+      {
+        "fact": "totalIncome",
+        "operator": "lessThanInclusive",
+        "value": "TAX_CREDIT_CONSTANTS_2024.lowIncomeThresholds.couple"
+      }
+    ]
+  },
+  "event": {
+    "type": "taxcredit-full"
+  },
+  "fileName": "creditImpotRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

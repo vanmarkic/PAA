@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "d2024344-b976-4847-b7b2-e78afe4e4d26",
+      "id": "fdb093bc-2291-426a-994e-1cb87333374a",
       "name": "Demande complète de satisfaction équitable",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "cfe047ae-30b5-4836-81ee-868cbb7e9d37",
+      "id": "d45eab40-6772-42ac-a4fd-0e21744f79aa",
       "name": "Préjudice matériel avec perte de revenus",
       "description": "",
       "tags": [],
@@ -114,7 +114,7 @@
       "isOutline": false
     },
     {
-      "id": "55e5a72b-7f19-4f6a-96c9-409aeda247b5",
+      "id": "cc87458b-0e55-465b-9851-d27f2983ffa9",
       "name": "Préjudice moral pour détention arbitraire",
       "description": "",
       "tags": [],
@@ -159,7 +159,7 @@
       "isOutline": false
     },
     {
-      "id": "7f910fb9-1d5e-4333-be2d-02661cd513f6",
+      "id": "03558672-a5b9-41ab-9e95-7d89a234373e",
       "name": "Frais et dépens avec plusieurs avocats",
       "description": "",
       "tags": [],
@@ -204,7 +204,7 @@
       "isOutline": false
     },
     {
-      "id": "6fcbd6a0-786f-43aa-9be8-42b2fc4b2f8c",
+      "id": "f21e503a-bf5d-497d-ac46-6d370852fd1b",
       "name": "Refus partiel de satisfaction équitable",
       "description": "",
       "tags": [],
@@ -249,7 +249,7 @@
       "isOutline": false
     },
     {
-      "id": "d162fcb5-9a6c-490a-9d26-6d02870c053c",
+      "id": "21f4c382-0dc4-4ee3-ab13-c66edd8c4afc",
       "name": "Montants typiques selon la violation",
       "description": "",
       "tags": [],
@@ -292,7 +292,7 @@
           ],
           "rows": [
             {
-              "name": "067cd216-3713-4e2c-bd3d-64bc03497fd4",
+              "name": "618f8605-f87f-4b7b-b115-fe36d60c36c5",
               "values": {
                 "article": "3",
                 "gravite": "torture",
@@ -302,7 +302,7 @@
               }
             },
             {
-              "name": "82e88c68-6bcf-4d33-b94c-d05b7032bd81",
+              "name": "073a162c-7a55-4c92-a86f-529fd5f1fbeb",
               "values": {
                 "article": "5",
                 "gravite": "2 ans détention",
@@ -312,7 +312,7 @@
               }
             },
             {
-              "name": "624c4c33-3a42-4b97-9532-011e722c49c1",
+              "name": "5ee5019b-7002-45ae-963f-a1478d4224b4",
               "values": {
                 "article": "6",
                 "gravite": "5 ans procès",
@@ -322,7 +322,7 @@
               }
             },
             {
-              "name": "3e77185d-aac0-431e-a8e7-6065f634a011",
+              "name": "02e875ee-98c5-4505-879b-4934a1b4c616",
               "values": {
                 "article": "8",
                 "gravite": "surveillance",
@@ -332,7 +332,7 @@
               }
             },
             {
-              "name": "08cd8f98-c2db-4751-a3ef-a5afd9de9791",
+              "name": "eac21644-359d-478e-a289-cd8f6113e243",
               "values": {
                 "article": "1-P1",
                 "gravite": "expropriation",
@@ -350,5 +350,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.164Z"
+  "generated": "2025-12-13T17:25:45.880Z"
 }

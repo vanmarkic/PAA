@@ -1,0 +1,31 @@
+{
+  "id": "insertion-professionnelleRules-0",
+  "description": "Éligible pour Article 60§7",
+  "category": "autre",
+  "benefitType": "insertion-professionnelle",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isBeneficiaireRIS",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "risDurationMonths",
+        "operator": "greaterThanInclusive",
+        "value": "INSERTION_CONSTANTS.RIS_MIN_DURATION_MONTHS"
+      },
+      {
+        "fact": "proposedDevice",
+        "operator": "equal",
+        "value": "article-60"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible"
+  },
+  "fileName": "insertion-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

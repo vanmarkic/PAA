@@ -1,0 +1,26 @@
+{
+  "id": "aideLogementRules-2",
+  "description": "Ineligible: moins de ${BRUSSELS_2024.priorityPoints.minimum} points de priorité sur liste sociale",
+  "category": "logement",
+  "benefitType": "aidelogement",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "priorityPoints",
+        "operator": "lessThan",
+        "value": "BRUSSELS_2024.priorityPoints.minimum"
+      }
+    ]
+  },
+  "event": {
+    "type": "brussels-ineligible"
+  },
+  "fileName": "aideLogementRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

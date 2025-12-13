@@ -1,0 +1,26 @@
+{
+  "id": "scrape-2025-11-18-001-2",
+  "description": "Ineligible: pas de maintien des droits",
+  "category": "autre",
+  "benefitType": "scrape-2025-11-18-001",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "part-time"
+      },
+      {
+        "fact": "hasRightsMaintenance",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-ineligible"
+  },
+  "fileName": "scrape-2025-11-18-001",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

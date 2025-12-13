@@ -1,0 +1,38 @@
+{
+  "id": "grapaRules-0",
+  "description": "Ineligible: âge minimum non atteint (${MIN_AGE_GRAPA} ans requis en 2024)",
+  "category": "social",
+  "benefitType": "grapa",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "MIN_AGE_GRAPA"
+      }
+    ]
+  },
+  "event": {
+    "type": "grapa-ineligible"
+  },
+  "fileName": "grapaRules",
+  "generated": "2025-12-13T17:27:42.418Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Sécurité Sociale",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Loi du 22 mars 2001 instaurant la garantie de revenus aux personnes âgées",
+        "publicationDate": "2001-04-26T00:00:00.000Z",
+        "effectiveDate": "2001-06-01T00:00:00.000Z",
+        "officialUrl": "https://www.ejustice.just.fgov.be/eli/loi/2001/03/22/2001022201/justel",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0"
+  }
+}

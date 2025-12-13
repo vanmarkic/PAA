@@ -1,0 +1,41 @@
+{
+  "id": "logement-socialRules-9",
+  "description": "Ineligible: revenus > plafond handicap 2025 (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE_HANDICAP}€)",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 74,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "Flandres"
+      },
+      {
+        "fact": "anneeReference",
+        "operator": "equal",
+        "value": 2025
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "personne_isolee"
+      },
+      {
+        "fact": "handicapReconnu",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "revenuImposable",
+        "operator": "greaterThan",
+        "value": "LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE_HANDICAP"
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-ineligible"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

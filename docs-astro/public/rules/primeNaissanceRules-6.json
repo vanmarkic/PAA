@@ -1,0 +1,21 @@
+{
+  "id": "primeNaissanceRules-6",
+  "description": "Ineligible: pas de titre de séjour valide en Belgique",
+  "category": "autre",
+  "benefitType": "primenaissance",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "hasValidResidency",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "birth-allowance-ineligible"
+  },
+  "fileName": "primeNaissanceRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

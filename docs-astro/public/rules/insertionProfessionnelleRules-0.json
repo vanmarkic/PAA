@@ -1,0 +1,21 @@
+{
+  "id": "insertionProfessionnelleRules-0",
+  "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis)",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "MIN_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-ineligible"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

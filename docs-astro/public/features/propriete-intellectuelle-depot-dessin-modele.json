@@ -44,7 +44,7 @@
   },
   "scenarios": [
     {
-      "id": "eea55ccd-8c50-46e2-9515-e6058ad518a4",
+      "id": "a7abdce3-50b6-4948-a107-bc43c69a0f1d",
       "name": "Dépôt de dessin nouveau et ayant caractère individuel",
       "description": "",
       "tags": [],
@@ -89,7 +89,7 @@
       "isOutline": false
     },
     {
-      "id": "3278d09e-736e-45b5-8fd8-9ad9bcbbfd84",
+      "id": "bbd7699f-7791-451a-a33e-2f13e804ca22",
       "name": "Dépôt multiple pour une collection",
       "description": "",
       "tags": [],
@@ -126,7 +126,7 @@
       "isOutline": false
     },
     {
-      "id": "5d9e9fc9-305a-4833-b175-dc22b61888af",
+      "id": "c73b3d62-993c-4fab-bcd1-71ca9940f83c",
       "name": "Ajournement de publication pour confidentialité",
       "description": "",
       "tags": [],
@@ -159,7 +159,7 @@
       "isOutline": false
     },
     {
-      "id": "49a5d151-6cb0-455f-bc25-1e2b13533ec2",
+      "id": "1b8204c9-5235-4977-88f1-ce73dec1ba1d",
       "name": "Protection communautaire non enregistrée",
       "description": "",
       "tags": [],
@@ -195,5 +195,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.167Z"
+  "generated": "2025-12-13T17:25:45.884Z"
 }

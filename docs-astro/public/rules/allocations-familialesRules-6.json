@@ -1,0 +1,31 @@
+{
+  "id": "allocations-familialesRules-6",
+  "description": "Éligible au supplément handicap",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 25,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisability",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "disabilityPercentage",
+        "operator": "greaterThanInclusive",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.DISABILITY_PERCENTAGE_THRESHOLD"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.DISABILITY_MAX_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-supplement"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

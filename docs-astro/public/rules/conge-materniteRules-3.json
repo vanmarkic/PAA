@@ -1,0 +1,36 @@
+{
+  "id": "conge-materniteRules-3",
+  "description": "Éligible pour Congé de Maternité - Employée",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enceinte",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutProfessionnel",
+        "operator": "equal",
+        "value": "employee"
+      },
+      {
+        "fact": "cotisationSecuriteSociale",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "typeGrossesse",
+        "operator": "equal",
+        "value": "simple"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-eligible"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

@@ -20,7 +20,7 @@
   },
   "scenarios": [
     {
-      "id": "4375253a-00e1-4f22-b540-8d6f4b818a85",
+      "id": "b099479d-e151-49f8-a57d-ca7809bc6e94",
       "name": "Choix du type de bail à ferme",
       "description": "",
       "tags": [],
@@ -63,7 +63,7 @@
       "isOutline": false
     },
     {
-      "id": "30255dda-d6a9-4c9a-99f5-a2819e6118c2",
+      "id": "80a29ea7-5a7b-4ad0-af66-5ab120655264",
       "name": "Obligation d'un écrit pour le bail à ferme",
       "description": "",
       "tags": [],
@@ -84,7 +84,7 @@
       "isOutline": false
     },
     {
-      "id": "99b3525b-8623-4ac7-b540-4f867c66920d",
+      "id": "f79fd6fd-d691-4d5d-b6f9-1bf071046c3f",
       "name": "Réalisation de l'état des lieux",
       "description": "",
       "tags": [],
@@ -105,7 +105,7 @@
       "isOutline": false
     },
     {
-      "id": "2960a349-2967-4a3e-b7e3-0fbbf10d1c30",
+      "id": "23858461-8da0-450e-a96d-1616eea07036",
       "name": "Notification à l'Observatoire du foncier agricole",
       "description": "",
       "tags": [],
@@ -126,7 +126,7 @@
       "isOutline": false
     },
     {
-      "id": "5815b2d6-595b-446b-9899-19951f7c1f70",
+      "id": "c64c6cb6-6dd6-45ef-9be6-7b75b5d084bc",
       "name": "Enregistrement au SPF Finances",
       "description": "",
       "tags": [],
@@ -147,7 +147,7 @@
       "isOutline": false
     },
     {
-      "id": "19dc1759-6a9d-488f-8074-1a4fb4733e02",
+      "id": "bdc818b4-fb4e-43a2-b548-f5f8db0e309e",
       "name": "Calcul du fermage",
       "description": "",
       "tags": [],
@@ -168,7 +168,7 @@
       "isOutline": false
     },
     {
-      "id": "95c86cd4-fbaa-4b34-b512-9734b92dca35",
+      "id": "1b92e0b1-dcba-41fc-b506-7617e5445585",
       "name": "Location de biens publics",
       "description": "",
       "tags": [],
@@ -193,7 +193,7 @@
       "isOutline": false
     },
     {
-      "id": "190b32d2-e0ad-4e7f-9ce3-95b038c35b52",
+      "id": "26d2b060-9ae0-4ff0-bd6c-1aa57f5ecd60",
       "name": "Transmission du bail par décès du preneur",
       "description": "",
       "tags": [],
@@ -214,7 +214,7 @@
       "isOutline": false
     },
     {
-      "id": "28f1052e-acfc-470c-84de-ad1b4cf1473d",
+      "id": "3b90c31c-51b6-4a8e-9117-8e975d87fc60",
       "name": "Transmission du bail par décès du bailleur",
       "description": "",
       "tags": [],
@@ -235,7 +235,7 @@
       "isOutline": false
     },
     {
-      "id": "363a8104-6731-449c-9637-8504e0e08b5d",
+      "id": "f6ea7f92-955d-4b0b-b0e3-9fd695f2d9f5",
       "name": "Cession du bail",
       "description": "",
       "tags": [],
@@ -256,7 +256,7 @@
       "isOutline": false
     },
     {
-      "id": "2e29f399-9abc-42bc-adbe-50945693757e",
+      "id": "6b1c427e-4948-4630-8447-1a63bbec7c63",
       "name": "Aliénation des biens loués",
       "description": "",
       "tags": [],
@@ -277,7 +277,7 @@
       "isOutline": false
     },
     {
-      "id": "5620fe4b-9e5d-4205-82fd-d21bc49117d2",
+      "id": "80e05a1d-5d6b-44c3-87f4-4cc660c824e5",
       "name": "Sous-location d'un bien agricole",
       "description": "",
       "tags": [],
@@ -298,7 +298,7 @@
       "isOutline": false
     },
     {
-      "id": "b72e8a7c-e48d-4ad9-8e2d-b21896c29b6c",
+      "id": "a4adaf17-fab2-4c51-9c2f-28ef7efcb163",
       "name": "Échange de culture",
       "description": "",
       "tags": [],
@@ -319,7 +319,7 @@
       "isOutline": false
     },
     {
-      "id": "d0ff53f9-a6a5-44b0-82d1-32fa52a90aa6",
+      "id": "19b7a3d5-2994-46a1-847d-bcbf594c12bc",
       "name": "Contrat de culture",
       "description": "",
       "tags": [],
@@ -340,7 +340,7 @@
       "isOutline": false
     },
     {
-      "id": "eb39e419-8a89-4467-867e-d5bfa6fd212e",
+      "id": "19aa8528-8e87-4abc-a179-1b144aa8243a",
       "name": "Fin du bail de plein droit",
       "description": "",
       "tags": [],
@@ -361,7 +361,7 @@
       "isOutline": false
     },
     {
-      "id": "892ad382-022f-4edd-b8bf-e43e749e3658",
+      "id": "7e9e72d0-0c67-4950-a84b-c35fe50accb3",
       "name": "Résiliation amiable du bail",
       "description": "",
       "tags": [],
@@ -382,7 +382,7 @@
       "isOutline": false
     },
     {
-      "id": "e7e2518b-b476-4428-88b6-c4985ea49227",
+      "id": "21d08624-4486-4500-883c-c0d8c87cfae3",
       "name": "Fiscalité - Impôt des personnes physiques",
       "description": "",
       "tags": [],
@@ -403,7 +403,7 @@
       "isOutline": false
     },
     {
-      "id": "37b63b18-0dda-4a47-b84a-343c80816dd5",
+      "id": "88b80948-1b6c-4027-bcaf-b2e97267647a",
       "name": "Fiscalité - Droits de donation",
       "description": "",
       "tags": [],
@@ -424,7 +424,7 @@
       "isOutline": false
     },
     {
-      "id": "fb5e26d5-c5cb-411a-aa95-7e6cdbe19ea1",
+      "id": "537c64cd-f05f-4b69-bf38-2dfab310fd18",
       "name": "Fiscalité - Droits de succession",
       "description": "",
       "tags": [],
@@ -452,7 +452,7 @@
     "legalUrl": "https://agriculture.wallonie.be/home/ruralite-et-foncier/foncier/foncier-agricole/louer/bail-a-ferme/legislation-et-documentation.html",
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.159Z",
+  "generated": "2025-12-13T17:25:45.874Z",
   "legalSources": {
     "sources": [
       {

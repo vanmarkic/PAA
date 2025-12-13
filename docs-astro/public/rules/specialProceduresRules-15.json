@@ -1,0 +1,31 @@
+{
+  "id": "specialProceduresRules-15",
+  "description": "Ineligible: Systemic problem requiring general measures",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSystemicProblem",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "numberOfSimilarCases",
+        "operator": "greaterThan",
+        "value": 10
+      },
+      {
+        "fact": "problemAffectsLegislation",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "apply-pilot-procedure"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

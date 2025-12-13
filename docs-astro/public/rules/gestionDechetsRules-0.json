@@ -1,0 +1,21 @@
+{
+  "id": "gestionDechetsRules-0",
+  "description": "Rule 1 for gestiondechets",
+  "category": "autre",
+  "benefitType": "gestiondechets",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "wasteType",
+        "operator": "equal",
+        "value": "déchets-dangereux"
+      }
+    ]
+  },
+  "event": {
+    "type": "hazardous-waste-permit"
+  },
+  "fileName": "gestionDechetsRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

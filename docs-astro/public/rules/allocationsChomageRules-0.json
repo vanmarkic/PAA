@@ -1,0 +1,21 @@
+{
+  "id": "allocationsChomageRules-0",
+  "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis)",
+  "category": "emploi",
+  "benefitType": "allocationschomage",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "MIN_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "unemployment-ineligible"
+  },
+  "fileName": "allocationsChomageRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

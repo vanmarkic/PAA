@@ -1,0 +1,41 @@
+{
+  "id": "aideLogementRules-7",
+  "description": "Éligible pour allocation déménagement et loyer",
+  "category": "logement",
+  "benefitType": "aidelogement",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isRenting",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "incomeVsThreshold",
+        "operator": "lessThanInclusive",
+        "value": "see_code"
+      },
+      {
+        "fact": "leavingUnsanitaryHousing",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "leavingOvercrowdedHousing",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "evicted",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "wallonia-eligible-adel"
+  },
+  "fileName": "aideLogementRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

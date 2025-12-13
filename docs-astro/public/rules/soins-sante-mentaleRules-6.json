@@ -1,0 +1,26 @@
+{
+  "id": "soins-sante-mentaleRules-6",
+  "description": "Consultation psychiatre - tarif BIM",
+  "category": "sante",
+  "benefitType": "soins-sante-mentale",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeSoin",
+        "operator": "equal",
+        "value": "psychiatre"
+      },
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "BIM"
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-psychiatre-bim"
+  },
+  "fileName": "soins-sante-mentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

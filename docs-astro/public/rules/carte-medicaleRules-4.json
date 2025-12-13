@@ -1,0 +1,36 @@
+{
+  "id": "carte-medicaleRules-4",
+  "description": "Ineligible: Européen sans ressources depuis moins de 3 mois - AMU temporaire uniquement",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "in",
+        "value": "[eu_citizen"
+      },
+      {
+        "fact": "monthsInBelgium",
+        "operator": "lessThan",
+        "value": "CARTE_MEDICALE_CONSTANTS.EU_CITIZEN_MIN_RESIDENCE_MONTHS"
+      },
+      {
+        "fact": "isIndigent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasUrgentMedicalNeed",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

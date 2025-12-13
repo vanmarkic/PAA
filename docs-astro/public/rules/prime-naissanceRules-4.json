@@ -1,0 +1,31 @@
+{
+  "id": "prime-naissanceRules-4",
+  "description": "Ineligible: enfant mort-né avant 180 jours de grossesse",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isStillbirth",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "stillbirthPregnancyDays",
+        "operator": "lessThan",
+        "value": "PRIME_NAISSANCE_CONSTANTS.MIN_STILLBIRTH_PREGNANCY_DAYS"
+      },
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-ineligible"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

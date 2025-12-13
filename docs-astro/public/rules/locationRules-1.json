@@ -1,0 +1,26 @@
+{
+  "id": "locationRules-1",
+  "description": "Ineligible: Indexation possible uniquement après 12 mois",
+  "category": "autre",
+  "benefitType": "location",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "monthsSinceLastIndexation",
+        "operator": "lessThan",
+        "value": 12
+      },
+      {
+        "fact": "indexationRequested",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "indexation-too-early"
+  },
+  "fileName": "locationRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

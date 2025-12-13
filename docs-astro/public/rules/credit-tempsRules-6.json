@@ -1,0 +1,41 @@
+{
+  "id": "credit-tempsRules-6",
+  "description": "Éligible au crédit-temps fin de carrière mi-temps",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 79,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "fin_carriere"
+      },
+      {
+        "fact": "reduction",
+        "operator": "equal",
+        "value": "mi_temps"
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_2"
+      },
+      {
+        "fact": "carriereAnnees",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_CARRIERE_FIN_CARRIERE_ANNEES"
+      },
+      {
+        "fact": "secteur",
+        "operator": "equal",
+        "value": "prive"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-eligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

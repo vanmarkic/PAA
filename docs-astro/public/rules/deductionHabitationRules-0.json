@@ -1,0 +1,26 @@
+{
+  "id": "deductionHabitationRules-0",
+  "description": "Ineligible: Avantages régionaux réservés à l\\",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "propertyType",
+        "operator": "notEqual",
+        "value": "principal"
+      },
+      {
+        "fact": "seekingRegionalAdvantage",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-ineligible"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

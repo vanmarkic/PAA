@@ -1,0 +1,41 @@
+{
+  "id": "allocationsFamilialesRules-2",
+  "description": "Ineligible: âge maximum dépassé ou conditions non remplies pour 18-25 ans",
+  "category": "famille",
+  "benefitType": "allocationsfamiliales",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "childAge",
+        "operator": "greaterThan",
+        "value": "MAX_AGE_CHILD_CONDITIONAL"
+      },
+      {
+        "fact": "childAge",
+        "operator": "greaterThan",
+        "value": "MAX_AGE_CHILD_UNCONDITIONAL"
+      },
+      {
+        "fact": "isStudent",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isApprentice",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isJobSeeker",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "fa-ineligible"
+  },
+  "fileName": "allocationsFamilialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

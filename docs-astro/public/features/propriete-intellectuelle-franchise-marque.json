@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "63197dbf-e14c-4c5b-8314-e57c225b4f01",
+      "id": "0892509b-8826-45ef-b1bf-95c1c23ed9f0",
       "name": "Mise en place d'une franchise",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "2179cca7-3f44-4d6f-a3cf-8a6d7732a87d",
+      "id": "4c2c675a-68f9-4ca2-a539-8fca058a7c5b",
       "name": "Protection du savoir-faire en franchise",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.167Z"
+  "generated": "2025-12-13T17:25:45.884Z"
 }

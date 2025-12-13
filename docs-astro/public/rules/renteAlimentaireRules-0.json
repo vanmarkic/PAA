@@ -1,0 +1,21 @@
+{
+  "id": "renteAlimentaireRules-0",
+  "description": "Éligible pour RenteAlimentaire",
+  "category": "autre",
+  "benefitType": "rentealimentaire",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "renteAlimentaire-eligible"
+  },
+  "fileName": "renteAlimentaireRules",
+  "generated": "2025-12-13T17:27:42.408Z"
+}

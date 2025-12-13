@@ -1,0 +1,36 @@
+{
+  "id": "allocations-chomageRules-5",
+  "description": "Rule 6 for allocations-chomage",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "unemploymentType",
+        "operator": "equal",
+        "value": "insertion"
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.MIN_AGE"
+      },
+      {
+        "fact": "hasCompletedInsertionStage",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasDiploma",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-eligible-insertion"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

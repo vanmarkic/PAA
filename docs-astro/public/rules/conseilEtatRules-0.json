@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-0",
+  "description": "Rule 1 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "conseil-etat-annulation"
+      },
+      {
+        "fact": "daysElapsed",
+        "operator": "greaterThan",
+        "value": 60
+      }
+    ]
+  },
+  "event": {
+    "type": "deadline-expired"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

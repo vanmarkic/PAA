@@ -1,0 +1,41 @@
+{
+  "id": "residencePermitRules-2",
+  "description": "Éligible pour carte B (séjour illimité)",
+  "category": "autre",
+  "benefitType": "residencepermit",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestedCardType",
+        "operator": "equal",
+        "value": "B"
+      },
+      {
+        "fact": "yearsOfResidence",
+        "operator": "greaterThanInclusive",
+        "value": 5
+      },
+      {
+        "fact": "hasUninterruptedResidence",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasStableIncome",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasNoConvictions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "card-b-eligible"
+  },
+  "fileName": "residencePermitRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

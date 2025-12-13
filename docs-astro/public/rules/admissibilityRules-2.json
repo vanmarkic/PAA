@@ -1,0 +1,26 @@
+{
+  "id": "admissibilityRules-2",
+  "description": "Ineligible: Domestic remedies not exhausted and no exception applies",
+  "category": "autre",
+  "benefitType": "admissibility",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "domesticRemediesExhausted",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "remediesIneffective",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "inadmissible"
+  },
+  "fileName": "admissibilityRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

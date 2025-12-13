@@ -1,0 +1,36 @@
+{
+  "id": "aidePersonnesAgeesRules-10",
+  "description": "Éligible APA catégorie 5",
+  "category": "autre",
+  "benefitType": "aidepersonnesagees",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "APA_CONSTANTS.minAge"
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "greaterThanInclusive",
+        "value": 17
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "lessThanInclusive",
+        "value": 18
+      },
+      {
+        "fact": "incomeWithinLimits",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "apa-eligible-category-5"
+  },
+  "fileName": "aidePersonnesAgeesRules",
+  "generated": "2025-12-13T17:27:42.375Z"
+}

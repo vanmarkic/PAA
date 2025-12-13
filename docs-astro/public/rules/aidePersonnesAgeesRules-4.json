@@ -1,0 +1,21 @@
+{
+  "id": "aidePersonnesAgeesRules-4",
+  "description": "Ineligible: nationalité ou statut de résidence non éligible",
+  "category": "autre",
+  "benefitType": "aidepersonnesagees",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "nationality",
+        "operator": "in",
+        "value": "[belgian"
+      }
+    ]
+  },
+  "event": {
+    "type": "apa-ineligible"
+  },
+  "fileName": "aidePersonnesAgeesRules",
+  "generated": "2025-12-13T17:27:42.375Z"
+}

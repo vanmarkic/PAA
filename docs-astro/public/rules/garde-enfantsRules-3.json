@@ -1,0 +1,21 @@
+{
+  "id": "garde-enfantsRules-3",
+  "description": "Réduction parent isolé applicable",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "parent_isole",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-reduction-parent-isole"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

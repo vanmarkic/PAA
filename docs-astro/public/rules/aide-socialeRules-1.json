@@ -1,0 +1,26 @@
+{
+  "id": "aide-socialeRules-1",
+  "description": "Rule 2 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 99,
+  "conditions": {
+    "all": [
+      {
+        "fact": "titreSejour",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "besoinSoinsMedicauxUrgents",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-ineligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

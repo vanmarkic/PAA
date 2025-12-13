@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-11",
+  "description": "Ineligible: Applicant lacks sufficient means",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "annualIncome",
+        "operator": "lessThan",
+        "value": 15000
+      },
+      {
+        "fact": "hasSignificantAssets",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "grant-legal-aid"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.385Z"
+}

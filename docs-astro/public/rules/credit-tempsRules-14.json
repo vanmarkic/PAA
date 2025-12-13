@@ -1,0 +1,31 @@
+{
+  "id": "credit-tempsRules-14",
+  "description": "Ineligible: Enfant trop âgé (maximum ${CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_CONGE_PARENTAL} ans, ou ${CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_HANDICAPE} ans si handicapé)",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 91,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "conge_parental"
+      },
+      {
+        "fact": "ageEnfant",
+        "operator": "greaterThan",
+        "value": "CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_CONGE_PARENTAL"
+      },
+      {
+        "fact": "enfantHandicape",
+        "operator": "notEqual",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-ineligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

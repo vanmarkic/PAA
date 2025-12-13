@@ -1,0 +1,41 @@
+{
+  "id": "allocations-chomageRules-2",
+  "description": "Ineligible: jours travaillés insuffisants (${CHOMAGE_CONSTANTS.DAYS_REQUIRED_UNDER_36} jours requis sur ${CHOMAGE_CONSTANTS.MONTHS_REFERENCE_UNDER_36} mois)",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.MIN_AGE"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "CHOMAGE_CONSTANTS.AGE_THRESHOLD"
+      },
+      {
+        "fact": "daysWorked",
+        "operator": "lessThan",
+        "value": "CHOMAGE_CONSTANTS.DAYS_REQUIRED_UNDER_36"
+      },
+      {
+        "fact": "unemploymentType",
+        "operator": "notEqual",
+        "value": "force_majeure"
+      },
+      {
+        "fact": "unemploymentType",
+        "operator": "notEqual",
+        "value": "insertion"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-ineligible"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

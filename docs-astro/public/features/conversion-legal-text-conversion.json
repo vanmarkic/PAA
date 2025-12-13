@@ -6,7 +6,7 @@
   "tags": [],
   "scenarios": [
     {
-      "id": "cb7a3d59-d61c-49e2-a00e-57815b9e09f0",
+      "id": "86648b1d-75d4-4e7c-a906-38609069d93c",
       "name": "Conversion basique d'un article du code civil",
       "description": "",
       "tags": [],
@@ -38,7 +38,7 @@
       "isOutline": false
     },
     {
-      "id": "ff2281e2-8782-4023-804d-d74d39152926",
+      "id": "35f654ad-75d3-478b-8f67-a91dbedfe12a",
       "name": "Conversion avec exemples pratiques",
       "description": "",
       "tags": [],
@@ -70,7 +70,7 @@
       "isOutline": false
     },
     {
-      "id": "0405fb93-a38b-45d3-917c-8a01f912a247",
+      "id": "178b3e50-4b9f-4118-8d14-0537faee7896",
       "name": "Conversion pour optimiseur social",
       "description": "",
       "tags": [],
@@ -110,7 +110,7 @@
       "isOutline": false
     },
     {
-      "id": "118ebeee-c4b3-4a01-8d4a-0767c8c822b3",
+      "id": "f78412eb-d296-4966-8f99-77c6ec73edf3",
       "name": "Détection d'ambiguïté juridique",
       "description": "",
       "tags": [],
@@ -143,7 +143,7 @@
       "isOutline": false
     },
     {
-      "id": "37b43014-0b54-4637-82ed-54b045bf80a5",
+      "id": "db43253c-45e6-4974-8e91-3929a0399503",
       "name": "Validation sémantique échoue",
       "description": "",
       "tags": [],
@@ -176,7 +176,7 @@
       "isOutline": false
     },
     {
-      "id": "29070a6a-55aa-4cae-82e8-f6cb2ac46d61",
+      "id": "1da218e4-baff-48ae-b63b-1872e75d564b",
       "name": "Niveaux de conversion multiples",
       "description": "",
       "tags": [],
@@ -214,7 +214,7 @@
           ],
           "rows": [
             {
-              "name": "c2b8bc36-1fcb-44ad-8857-b31503356556",
+              "name": "dcd0d924-e9d9-4e9b-b1bc-76bb68076ecc",
               "values": {
                 "niveau": "simple",
                 "complexité": "faible",
@@ -223,7 +223,7 @@
               }
             },
             {
-              "name": "c905f65d-075b-4d50-bfca-dd0f8135e299",
+              "name": "36318437-d000-47ec-be58-4c80f862b6d0",
               "values": {
                 "niveau": "détaillé",
                 "complexité": "moyenne",
@@ -232,7 +232,7 @@
               }
             },
             {
-              "name": "b488ff4a-913d-46c3-a9ba-65005528160f",
+              "name": "8a701b15-a0d1-4638-b9bb-bfa6c9bdfa91",
               "values": {
                 "niveau": "exemples",
                 "complexité": "faible",
@@ -241,7 +241,7 @@
               }
             },
             {
-              "name": "ba83ce17-900f-4447-af04-e901f47c8193",
+              "name": "482a18e8-21c7-4737-8d54-1d4a04c86f1c",
               "values": {
                 "niveau": "warnings",
                 "complexité": "moyenne",
@@ -258,7 +258,7 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.162Z",
+  "generated": "2025-12-13T17:25:45.878Z",
   "legalSources": {
     "sources": [
       {

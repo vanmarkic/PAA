@@ -1,0 +1,21 @@
+{
+  "id": "conge-materniteRules-12",
+  "description": "Droit aux pauses d\\",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "allaitement",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-allaitement"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "familyReunificationRules-6",
+  "description": "Procédure facilitée pour famille de réfugié",
+  "category": "autre",
+  "benefitType": "familyreunification",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "sponsorIsRefugee",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "applicationWithinOneYear",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "nuclearFamily",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "refugee-family-eligible"
+  },
+  "fileName": "familyReunificationRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

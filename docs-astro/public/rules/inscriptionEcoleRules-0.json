@@ -1,0 +1,21 @@
+{
+  "id": "inscriptionEcoleRules-0",
+  "description": "Éligible pour InscriptionEcole",
+  "category": "autre",
+  "benefitType": "inscriptionecole",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "inscriptionEcole-eligible"
+  },
+  "fileName": "inscriptionEcoleRules",
+  "generated": "2025-12-13T17:27:42.397Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "scrape-2025-11-18-001-8",
+  "description": "Éligible pour allocation attente logement",
+  "category": "autre",
+  "benefitType": "scrape-2025-11-18-001",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "waitingListMonths",
+        "operator": "greaterThan",
+        "value": "WALLONIA_2024.aalAllowances.waitingListMinMonths"
+      },
+      {
+        "fact": "incomeVsThreshold",
+        "operator": "lessThanInclusive",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "wallonia-eligible-aal"
+  },
+  "fileName": "scrape-2025-11-18-001",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

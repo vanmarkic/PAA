@@ -1,0 +1,36 @@
+{
+  "id": "credit-tempsRules-7",
+  "description": "Éligible à l\\",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 75,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "interruption_carriere"
+      },
+      {
+        "fact": "secteur",
+        "operator": "equal",
+        "value": "public"
+      },
+      {
+        "fact": "fonctionnaireStatutaire",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "ancienneteMois",
+        "operator": "greaterThanInclusive",
+        "value": 60
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-eligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

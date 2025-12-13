@@ -1,0 +1,31 @@
+{
+  "id": "asylumRules-2",
+  "description": "Éligible à la protection subsidiaire",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasRiskOfSeriousHarm",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "harmType",
+        "operator": "in",
+        "value": "[death-penalty"
+      },
+      {
+        "fact": "cannotReturnSafely",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "subsidiary-protection-eligible"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

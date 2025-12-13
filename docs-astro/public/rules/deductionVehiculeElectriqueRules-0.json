@@ -1,0 +1,21 @@
+{
+  "id": "deductionVehiculeElectriqueRules-0",
+  "description": "Éligible pour DeductionVehiculeElectrique",
+  "category": "fiscal",
+  "benefitType": "deductionvehiculeelectrique",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "deductionVehiculeElectrique-eligible"
+  },
+  "fileName": "deductionVehiculeElectriqueRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

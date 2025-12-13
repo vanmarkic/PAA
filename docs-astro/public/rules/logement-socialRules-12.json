@@ -1,0 +1,36 @@
+{
+  "id": "logement-socialRules-12",
+  "description": "Éligible au logement social en Wallonie",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "Wallonie"
+      },
+      {
+        "fact": "estProprietaire",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "estInscritRegistre",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "revenuDansLimites_wallonie",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-eligible"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

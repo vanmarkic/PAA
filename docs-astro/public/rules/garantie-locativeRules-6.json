@@ -1,0 +1,31 @@
+{
+  "id": "garantie-locativeRules-6",
+  "description": "Famille - Garantie bancaire via CPAS",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "tailleMemage",
+        "operator": "greaterThanInclusive",
+        "value": 3
+      },
+      {
+        "fact": "constitutionType",
+        "operator": "equal",
+        "value": "garantie_bancaire"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

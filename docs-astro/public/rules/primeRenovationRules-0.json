@@ -1,0 +1,21 @@
+{
+  "id": "primeRenovationRules-0",
+  "description": "Éligible pour PrimeRenovation",
+  "category": "autre",
+  "benefitType": "primerenovation",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "primeRenovationRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

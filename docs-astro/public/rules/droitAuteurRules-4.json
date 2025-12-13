@@ -1,0 +1,26 @@
+{
+  "id": "droitAuteurRules-4",
+  "description": "Protection du logiciel comme œuvre littéraire",
+  "category": "autre",
+  "benefitType": "droitauteur",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSoftware",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasOriginalCode",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "software-copyright-protection"
+  },
+  "fileName": "droitAuteurRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

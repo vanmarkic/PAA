@@ -1,0 +1,26 @@
+{
+  "id": "artistStatusRules-2",
+  "description": "Ineligible: Minimum ${ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD} jours de prestations artistiques requis (vous avez {daysWorkedArtistic} jours)",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "daysWorkedArtistic",
+        "operator": "lessThan",
+        "value": "ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD"
+      },
+      {
+        "fact": "yearsExperience",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-ineligible"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

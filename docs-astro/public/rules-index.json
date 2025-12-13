@@ -1,5 +1,5052 @@
 {
-  "generated": "2025-12-13T14:45:22.219Z",
-  "total": 0,
-  "rules": []
+  "generated": "2025-12-13T17:27:42.459Z",
+  "total": 841,
+  "rules": [
+    {
+      "id": "abattementSuccessionRules-0",
+      "description": "Éligible pour AbattementSuccession",
+      "category": "autre",
+      "benefitType": "abattementsuccession"
+    },
+    {
+      "id": "abattementSuccessionRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "abattementsuccession"
+    },
+    {
+      "id": "abonnementSocialTransportRules-0",
+      "description": "Éligible pour AbonnementSocialTransport",
+      "category": "autre",
+      "benefitType": "abonnementsocialtransport"
+    },
+    {
+      "id": "abonnementSocialTransportRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "abonnementsocialtransport"
+    },
+    {
+      "id": "accidentTravailRules-0",
+      "description": "Éligible pour AccidentTravail",
+      "category": "autre",
+      "benefitType": "accidenttravail"
+    },
+    {
+      "id": "accidentTravailRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "accidenttravail"
+    },
+    {
+      "id": "accompagnementSocialRules-0",
+      "description": "Éligible pour AccompagnementSocial",
+      "category": "autre",
+      "benefitType": "accompagnementsocial"
+    },
+    {
+      "id": "accompagnementSocialRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "accompagnementsocial"
+    },
+    {
+      "id": "aide-personnes-ageesRules-0",
+      "description": "Ineligible: âge minimum non atteint (${APA_CONSTANTS.MIN_AGE} ans requis)",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-1",
+      "description": "Ineligible: score d",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-2",
+      "description": "Ineligible: revenus supérieurs au plafond (${APA_INCOME_THRESHOLDS_2024.SINGLE}€ pour personne isolée)",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-3",
+      "description": "Ineligible: revenus supérieurs au plafond (${APA_INCOME_THRESHOLDS_2024.COUPLE}€ pour ménage)",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-4",
+      "description": "Ineligible: revenus supérieurs au plafond (${APA_INCOME_THRESHOLDS_2024.SINGLE}€ pour personne isolée)",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-5",
+      "description": "Rule 6 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-6",
+      "description": "Rule 7 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-7",
+      "description": "Rule 8 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-8",
+      "description": "Rule 9 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-9",
+      "description": "Rule 10 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-10",
+      "description": "Rule 11 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-11",
+      "description": "Rule 12 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-12",
+      "description": "Rule 13 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-13",
+      "description": "Rule 14 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aide-personnes-ageesRules-14",
+      "description": "Rule 15 for aide-personnes-agees",
+      "category": "autre",
+      "benefitType": "aide-personnes-agees"
+    },
+    {
+      "id": "aideAlimentaireRules-0",
+      "description": "Éligible pour AideAlimentaire",
+      "category": "autre",
+      "benefitType": "aidealimentaire"
+    },
+    {
+      "id": "aideAlimentaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidealimentaire"
+    },
+    {
+      "id": "aideJuridiqueRules-0",
+      "description": "Éligible pour AideJuridique",
+      "category": "autre",
+      "benefitType": "aidejuridique"
+    },
+    {
+      "id": "aideJuridiqueRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidejuridique"
+    },
+    {
+      "id": "aideMenagereRules-0",
+      "description": "Éligible pour AideMenagere",
+      "category": "autre",
+      "benefitType": "aidemenagere"
+    },
+    {
+      "id": "aideMenagereRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidemenagere"
+    },
+    {
+      "id": "aideMobiliteRules-0",
+      "description": "Éligible pour AideMobilite",
+      "category": "autre",
+      "benefitType": "aidemobilite"
+    },
+    {
+      "id": "aideMobiliteRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidemobilite"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-0",
+      "description": "Ineligible: âge minimum non atteint (${APA_CONSTANTS.minAge} ans requis)",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-1",
+      "description": "Ineligible: score d",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-2",
+      "description": "Ineligible: revenus supérieurs au plafond (${APA_AMOUNTS_2024.incomeCeilings.isolated}€ pour personne isolée)",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-3",
+      "description": "Ineligible: revenus supérieurs au plafond (${APA_AMOUNTS_2024.incomeCeilings.couple}€ pour ménage)",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-4",
+      "description": "Ineligible: nationalité ou statut de résidence non éligible",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-5",
+      "description": "Ineligible: doit résider en Région de Bruxelles-Capitale ou en Wallonie",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-6",
+      "description": "Éligible APA catégorie 1",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-7",
+      "description": "Éligible APA catégorie 2",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-8",
+      "description": "Éligible APA catégorie 3",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-9",
+      "description": "Éligible APA catégorie 4",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aidePersonnesAgeesRules-10",
+      "description": "Éligible APA catégorie 5",
+      "category": "autre",
+      "benefitType": "aidepersonnesagees"
+    },
+    {
+      "id": "aideSansAbriRules-0",
+      "description": "Éligible pour AideSansAbri",
+      "category": "autre",
+      "benefitType": "aidesansabri"
+    },
+    {
+      "id": "aideSansAbriRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidesansabri"
+    },
+    {
+      "id": "aideVictimesRules-0",
+      "description": "Éligible pour AideVictimes",
+      "category": "autre",
+      "benefitType": "aidevictimes"
+    },
+    {
+      "id": "aideVictimesRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "aidevictimes"
+    },
+    {
+      "id": "allocation-chauffageRules-0",
+      "description": "Ineligible: délai de 60 jours dépassé",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocation-chauffageRules-1",
+      "description": "Ineligible: BIM - intervention majorée",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocation-chauffageRules-2",
+      "description": "Ineligible: médiation de dettes",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocation-chauffageRules-3",
+      "description": "Ineligible: revenus limités",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocation-chauffageRules-4",
+      "description": "Ineligible: revenus trop élevés",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocation-chauffageRules-5",
+      "description": "Ineligible: revenus des personnes à charge trop élevés",
+      "category": "autre",
+      "benefitType": "allocation-chauffage"
+    },
+    {
+      "id": "allocationChauffageRules-0",
+      "description": "Éligible pour AllocationChauffage",
+      "category": "autre",
+      "benefitType": "allocationchauffage"
+    },
+    {
+      "id": "allocationChauffageRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "allocationchauffage"
+    },
+    {
+      "id": "avantagesNatureRules-0",
+      "description": "Éligible pour AvantagesNature",
+      "category": "autre",
+      "benefitType": "avantagesnature"
+    },
+    {
+      "id": "avantagesNatureRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "avantagesnature"
+    },
+    {
+      "id": "banqueAlimentaireRules-0",
+      "description": "Éligible pour BanqueAlimentaire",
+      "category": "autre",
+      "benefitType": "banquealimentaire"
+    },
+    {
+      "id": "banqueAlimentaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "banquealimentaire"
+    },
+    {
+      "id": "scrape-2025-11-18-001-0",
+      "description": "Éligible pour AbattementSuccession",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-2",
+      "description": "Ineligible: pas de maintien des droits",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-3",
+      "description": "Ineligible: cumul interdit avec chômage complet",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-4",
+      "description": "Rule 5 for scrape-2025-11-18-001",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-5",
+      "description": "Ineligible: propriétaire - aide réservée aux locataires",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-6",
+      "description": "Ineligible: revenus dépassent les plafonds",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-7",
+      "description": "Éligible pour allocation déménagement et loyer",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-8",
+      "description": "Éligible pour allocation attente logement",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-9",
+      "description": "Ineligible: eigenaar - hulp voorbehouden voor huurders",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-10",
+      "description": "Ineligible: minder dan ${FLANDERS_2024.waitingListMinYears} jaar op wachtlijst",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "scrape-2025-11-18-001-11",
+      "description": "In aanmerking voor huurpremie",
+      "category": "autre",
+      "benefitType": "scrape-2025-11-18-001"
+    },
+    {
+      "id": "budgetEnergetiqueRules-0",
+      "description": "Éligible pour BudgetEnergetique",
+      "category": "autre",
+      "benefitType": "budgetenergetique"
+    },
+    {
+      "id": "budgetEnergetiqueRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "budgetenergetique"
+    },
+    {
+      "id": "centreAccueilRules-0",
+      "description": "Éligible pour CentreAccueil",
+      "category": "autre",
+      "benefitType": "centreaccueil"
+    },
+    {
+      "id": "centreAccueilRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "centreaccueil"
+    },
+    {
+      "id": "chequesRepasRules-0",
+      "description": "Éligible pour ChequesRepas",
+      "category": "autre",
+      "benefitType": "chequesrepas"
+    },
+    {
+      "id": "chequesRepasRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "chequesrepas"
+    },
+    {
+      "id": "conge-materniteRules-0",
+      "description": "Ineligible: doit être enceinte ou avoir accouché récemment",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-1",
+      "description": "Ineligible: cotisations à la sécurité sociale insuffisantes",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-2",
+      "description": "Ineligible: durée de cotisation insuffisante (minimum 6 mois requis)",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-3",
+      "description": "Éligible pour Congé de Maternité - Employée",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-4",
+      "description": "Éligible pour Congé de Maternité - Grossesse Multiple",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-5",
+      "description": "Éligible pour Congé de Maternité - Indépendante",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-6",
+      "description": "Éligible pour Congé de Maternité - Chômeuse",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-7",
+      "description": "Report du repos prénatal autorisé",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-8",
+      "description": "Accouchement prématuré - semaines prénatales non prises sont perdues",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-9",
+      "description": "Prolongation possible pour hospitalisation du nouveau-né",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-10",
+      "description": "Droit au congé de maternité complet maintenu",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-11",
+      "description": "Passage automatique en congé de maternité",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-12",
+      "description": "Droit aux pauses d\\",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-materniteRules-13",
+      "description": "Protection contre le licenciement active",
+      "category": "autre",
+      "benefitType": "conge-maternite"
+    },
+    {
+      "id": "conge-parentalRules-0",
+      "description": "Ineligible: enfant de plus de 12 ans",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-1",
+      "description": "Ineligible: enfant handicapé de plus de 21 ans",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-2",
+      "description": "Ineligible: ancienneté insuffisante (12 mois requis)",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-3",
+      "description": "Ineligible: congé parental corona - mesure temporaire expirée",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-4",
+      "description": "Ineligible: temps partiel incompatible avec formule 1/5 temps",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-5",
+      "description": "Ineligible: temps partiel incompatible avec formule 1/10 temps",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-6",
+      "description": "protection contre le licenciement active",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-7",
+      "description": "Rule 8 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-8",
+      "description": "Rule 9 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-9",
+      "description": "Rule 10 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-10",
+      "description": "Rule 11 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-11",
+      "description": "Rule 12 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-12",
+      "description": "Rule 13 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-13",
+      "description": "Rule 14 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "conge-parentalRules-14",
+      "description": "Rule 15 for conge-parental",
+      "category": "autre",
+      "benefitType": "conge-parental"
+    },
+    {
+      "id": "congeMaterniteRules-0",
+      "description": "Éligible pour CongeMaternite",
+      "category": "autre",
+      "benefitType": "congematernite"
+    },
+    {
+      "id": "congeMaterniteRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "congematernite"
+    },
+    {
+      "id": "congeParentalRules-0",
+      "description": "Éligible pour CongeParental",
+      "category": "autre",
+      "benefitType": "congeparental"
+    },
+    {
+      "id": "congeParentalRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "congeparental"
+    },
+    {
+      "id": "contratDureeDetermineeRules-0",
+      "description": "Éligible pour ContratDureeDeterminee",
+      "category": "autre",
+      "benefitType": "contratdureedeterminee"
+    },
+    {
+      "id": "contratDureeDetermineeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "contratdureedeterminee"
+    },
+    {
+      "id": "contratDureeIndetermineeRules-0",
+      "description": "Éligible pour ContratDureeIndeterminee",
+      "category": "autre",
+      "benefitType": "contratdureeindeterminee"
+    },
+    {
+      "id": "contratDureeIndetermineeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "contratdureeindeterminee"
+    },
+    {
+      "id": "contratTravailRules-0",
+      "description": "Éligible pour ContratTravail",
+      "category": "autre",
+      "benefitType": "contrattravail"
+    },
+    {
+      "id": "contratTravailRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "contrattravail"
+    },
+    {
+      "id": "assembleeGeneraleRules-0",
+      "description": "Ineligible: Délai minimum de ${COPROPRIETE_CONSTANTS.DELAI_CONVOCATION_AG_ORDINAIRE} jours non respecté pour AG ordinaire",
+      "category": "autre",
+      "benefitType": "assembleegenerale"
+    },
+    {
+      "id": "assembleeGeneraleRules-1",
+      "description": "Ineligible: Délai minimum de ${COPROPRIETE_CONSTANTS.DELAI_CONVOCATION_AG_EXTRAORDINAIRE} jours non respecté pour AG extraordinaire",
+      "category": "autre",
+      "benefitType": "assembleegenerale"
+    },
+    {
+      "id": "assembleeGeneraleRules-2",
+      "description": "Ineligible: AG obligatoire après 24 mois en régime biannuel",
+      "category": "autre",
+      "benefitType": "assembleegenerale"
+    },
+    {
+      "id": "assembleeGeneraleRules-3",
+      "description": "Ineligible: Documents obligatoires manquants pour AG ordinaire",
+      "category": "autre",
+      "benefitType": "assembleegenerale"
+    },
+    {
+      "id": "assembleeGeneraleRules-4",
+      "description": "Ineligible: 1/5 des copropriétaires demande une AG extraordinaire",
+      "category": "autre",
+      "benefitType": "assembleegenerale"
+    },
+    {
+      "id": "chargesRules-0",
+      "description": "Rule 1 for charges",
+      "category": "autre",
+      "benefitType": "charges"
+    },
+    {
+      "id": "chargesRules-1",
+      "description": "Rule 2 for charges",
+      "category": "autre",
+      "benefitType": "charges"
+    },
+    {
+      "id": "chargesRules-2",
+      "description": "Rule 3 for charges",
+      "category": "autre",
+      "benefitType": "charges"
+    },
+    {
+      "id": "chargesRules-3",
+      "description": "Rule 4 for charges",
+      "category": "autre",
+      "benefitType": "charges"
+    },
+    {
+      "id": "travauxRules-0",
+      "description": "Rule 1 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "travauxRules-1",
+      "description": "Rule 2 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "travauxRules-2",
+      "description": "Rule 3 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "travauxRules-3",
+      "description": "Rule 4 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "travauxRules-4",
+      "description": "Rule 5 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "travauxRules-5",
+      "description": "Rule 6 for travaux",
+      "category": "autre",
+      "benefitType": "travaux"
+    },
+    {
+      "id": "admissibilityRules-0",
+      "description": "Ineligible: Application submitted after 4-month deadline (new rule)",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-1",
+      "description": "Ineligible: Application submitted after 6-month deadline (old rule)",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-2",
+      "description": "Ineligible: Domestic remedies not exhausted and no exception applies",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-3",
+      "description": "Ineligible: Applicant does not have victim status under Article 34",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-4",
+      "description": "Ineligible: No significant disadvantage suffered",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-5",
+      "description": "Ineligible: Application is manifestly ill-founded",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-6",
+      "description": "Ineligible: Abuse of the right of application",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-7",
+      "description": "Ineligible: Anonymous application without justification",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-8",
+      "description": "Ineligible: Substantially same as previously examined application",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-9",
+      "description": "Ineligible: Violation occurred before State ratification of Convention",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "admissibilityRules-10",
+      "description": "Application meets all admissibility criteria",
+      "category": "autre",
+      "benefitType": "admissibility"
+    },
+    {
+      "id": "interimMeasuresRules-0",
+      "description": "Ineligible: Imminent risk to life under Article 2",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-1",
+      "description": "Ineligible: Imminent risk of torture or inhuman treatment under Article 3",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-2",
+      "description": "Ineligible: Risk of irreversible harm upon expulsion",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-3",
+      "description": "Ineligible: Denial of urgent medical treatment in detention",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-4",
+      "description": "Ineligible: Risk to child welfare and family life",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-5",
+      "description": "Ineligible: Protection of witness/journalist at risk",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-6",
+      "description": "Ineligible: Risk of homelessness for vulnerable persons",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-7",
+      "description": "Ineligible: No risk of irreversible harm - damage compensable",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-8",
+      "description": "Ineligible: No imminent risk - sufficient time for normal procedure",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "interimMeasuresRules-9",
+      "description": "Ineligible: Effective domestic remedies available",
+      "category": "autre",
+      "benefitType": "interimmeasures"
+    },
+    {
+      "id": "specialProceduresRules-0",
+      "description": "Ineligible: Serious question affecting interpretation of Convention",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-1",
+      "description": "Ineligible: Serious issue of general importance",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-2",
+      "description": "Ineligible: Outside 3-month time limit",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-3",
+      "description": "Ineligible: Case does not raise sufficiently important issues",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-4",
+      "description": "Ineligible: New decisive fact justifies revision",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-5",
+      "description": "Ineligible: Request outside 6-month time limit",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-6",
+      "description": "Ineligible: New fact would not affect outcome",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-7",
+      "description": "Ineligible: State has automatic right when national is applicant",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-8",
+      "description": "Ineligible: Commissioner for Human Rights has right to intervene",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-9",
+      "description": "Ineligible: NGO can provide valuable expertise",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-10",
+      "description": "Ineligible: No proper interest in the case",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-11",
+      "description": "Ineligible: Applicant lacks sufficient means",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-12",
+      "description": "Ineligible: Partial financial need established",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-13",
+      "description": "Ineligible: Application lacks reasonable prospects of success",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-14",
+      "description": "Ineligible: Applicant already has paid legal representation",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-15",
+      "description": "Ineligible: Systemic problem requiring general measures",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-16",
+      "description": "Ineligible: Large number of repetitive cases",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-17",
+      "description": "Ineligible: Individual case without systemic implications",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-18",
+      "description": "Ineligible: Valid request from highest court of Protocol 16 state",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-19",
+      "description": "Ineligible: Question of principle relating to Convention interpretation",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-20",
+      "description": "Ineligible: State has not ratified Protocol 16",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "specialProceduresRules-21",
+      "description": "Ineligible: Question too abstract or hypothetical",
+      "category": "autre",
+      "benefitType": "specialprocedures"
+    },
+    {
+      "id": "demissionRules-0",
+      "description": "Éligible pour Demission",
+      "category": "autre",
+      "benefitType": "demission"
+    },
+    {
+      "id": "demissionRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "demission"
+    },
+    {
+      "id": "inscriptionElectoraleRules-0",
+      "description": "Ineligible: âge minimum non atteint (${DEMOCRATIE_CONSTANTS.AGE_MAJORITE_ELECTORALE} ans requis)",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-1",
+      "description": "Inscription automatique pour les citoyens belges majeurs",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-2",
+      "description": "Inscription volontaire possible pour citoyens européens",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-3",
+      "description": "Inscription possible pour résidents non-EU après 5 ans",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-4",
+      "description": "Ineligible: Suspension des droits civiques en cours",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-5",
+      "description": "Ineligible: Amendes électorales impayées",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "inscriptionElectoraleRules-6",
+      "description": "Vérification de la résidence principale requise",
+      "category": "autre",
+      "benefitType": "inscriptionelectorale"
+    },
+    {
+      "id": "petitionsRules-0",
+      "description": "Ineligible: Âge minimum non atteint (16 ans pour pétitions locales)",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-1",
+      "description": "Ineligible: Pétitions fédérales réservées aux citoyens belges",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-2",
+      "description": "Ineligible: Initiatives européennes réservées aux citoyens UE",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-3",
+      "description": "Ineligible: Vous devez résider dans la commune concernée",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-4",
+      "description": "Ineligible: Vous avez déjà signé cette pétition",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-5",
+      "description": "Ineligible: Cette pétition n\\",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-6",
+      "description": "Ineligible: Le délai de collecte des signatures est expiré",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-7",
+      "description": "Le seuil de signatures requis est atteint",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "petitionsRules-8",
+      "description": "Minimum ${DEMOCRATIE_CONSTANTS.INITIATIVE_CITOYENNE_UE_PAYS_MIN} pays membres requis",
+      "category": "autre",
+      "benefitType": "petitions"
+    },
+    {
+      "id": "discriminationEmploiRules-0",
+      "description": "Éligible pour DiscriminationEmploi",
+      "category": "autre",
+      "benefitType": "discriminationemploi"
+    },
+    {
+      "id": "discriminationEmploiRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "discriminationemploi"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-0",
+      "description": "Type de bail valide sélectionné",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-1",
+      "description": "Ineligible: Un écrit est obligatoire pour formaliser le bail à ferme",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-2",
+      "description": "Ineligible: Un état des lieux doit être réalisé lors de l",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-3",
+      "description": "Ineligible: Le bail doit être notifié à l",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-4",
+      "description": "Ineligible: Le bail doit être enregistré au SPF Finances",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-5",
+      "description": "Le fermage est calculé selon les coefficients de fermage en vigueur",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-6",
+      "description": "Règles spécifiques de mise en location de biens publics applicables",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-7",
+      "description": "Les règles de transmission du bail par décès du preneur s\\",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-8",
+      "description": "Les règles de transmission du bail par décès du bailleur s\\",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-9",
+      "description": "Les règles de cession prévues par la législation doivent être respectées",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-10",
+      "description": "Les règles d",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-11",
+      "description": "Les conditions relatives aux sous-locations doivent être respectées",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-12",
+      "description": "Les règles relatives aux échanges de culture doivent être respectées",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-13",
+      "description": "Les dispositions spécifiques aux contrats de culture s\\",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-14",
+      "description": "Le bail prend fin automatiquement",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-15",
+      "description": "Une résiliation amiable peut être conclue",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-16",
+      "description": "Les règles d",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-17",
+      "description": "Les droits de donation spécifiques s\\",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "documentation-et-l-gislation-bail-fermeRules-18",
+      "description": "Droits de succession applicables au bail à ferme",
+      "category": "autre",
+      "benefitType": "documentation-et-l-gislation-bail-ferme"
+    },
+    {
+      "id": "droitGreveRules-0",
+      "description": "Éligible pour DroitGreve",
+      "category": "autre",
+      "benefitType": "droitgreve"
+    },
+    {
+      "id": "droitGreveRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "droitgreve"
+    },
+    {
+      "id": "gdprPrivacyRules-0",
+      "description": "Ineligible: Vérification d\\",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-1",
+      "description": "Ineligible: Effacement impossible - obligation légale de conservation",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-2",
+      "description": "Rule 3 for gdprprivacy",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-3",
+      "description": "Ineligible: Portabilité applicable uniquement pour traitement basé sur consentement ou contrat",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-4",
+      "description": "Ineligible: Demandes excessives - frais administratifs applicables",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-5",
+      "description": "Ineligible: Notification tardive - délai de ${CIVIL_RIGHTS_CONSTANTS.DATA_BREACH_NOTIFICATION}h dépassé",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-6",
+      "description": "Ineligible: Images probablement effacées - conservation standard 30 jours",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-7",
+      "description": "Ineligible: Accès au dossier médical limité au patient ou représentant légal",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "gdprPrivacyRules-8",
+      "description": "Ineligible: Extension de délai doit être notifiée avant 30 jours",
+      "category": "autre",
+      "benefitType": "gdprprivacy"
+    },
+    {
+      "id": "identityDocumentRules-0",
+      "description": "Pour les enfants de moins de 12 ans, demandez une Kids-ID",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-1",
+      "description": "Ineligible: Nationalité belge requise pour ce document",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-2",
+      "description": "Renouvellement possible seulement dans les 3 mois avant expiration",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-3",
+      "description": "Rule 4 for identitydocument",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-4",
+      "description": "Ineligible: Photo de plus de 6 mois",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-5",
+      "description": "Rule 6 for identitydocument",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-6",
+      "description": "Ineligible: Inscription au registre de la population requise",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "identityDocumentRules-7",
+      "description": "Ineligible: Consentement parental requis pour les mineurs",
+      "category": "autre",
+      "benefitType": "identitydocument"
+    },
+    {
+      "id": "marriageRules-0",
+      "description": "Ineligible: Les deux partenaires doivent avoir au moins ${CIVIL_RIGHTS_CONSTANTS.MARRIAGE_MIN_AGE} ans",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-1",
+      "description": "Ineligible: Bigamie interdite - Un des partenaires est déjà marié",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-2",
+      "description": "Ineligible: Mariage interdit entre parents au degré prohibé",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-3",
+      "description": "Ineligible: Cohabitation légale existante doit être terminée",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-4",
+      "description": "Rule 5 for marriage",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-5",
+      "description": "Ineligible: Délai de ${CIVIL_RIGHTS_CONSTANTS.MARRIAGE_DECLARATION_DAYS} jours requis après publication des bans",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-6",
+      "description": "Ineligible: Le divorce doit être définitif avant un nouveau mariage",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "marriageRules-7",
+      "description": "Ineligible: Le mariage nécessite 2 à 4 témoins majeurs",
+      "category": "autre",
+      "benefitType": "marriage"
+    },
+    {
+      "id": "droitsDonationReduitsRules-0",
+      "description": "Éligible pour DroitsDonationReduits",
+      "category": "autre",
+      "benefitType": "droitsdonationreduits"
+    },
+    {
+      "id": "droitsDonationReduitsRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "droitsdonationreduits"
+    },
+    {
+      "id": "ecoChequeRules-0",
+      "description": "Éligible pour EcoCheque",
+      "category": "autre",
+      "benefitType": "ecocheque"
+    },
+    {
+      "id": "ecoChequeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "ecocheque"
+    },
+    {
+      "id": "gestionDechetsRules-0",
+      "description": "Rule 1 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "gestionDechetsRules-1",
+      "description": "Rule 2 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "gestionDechetsRules-2",
+      "description": "Rule 3 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "gestionDechetsRules-3",
+      "description": "Rule 4 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "gestionDechetsRules-4",
+      "description": "Rule 5 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "gestionDechetsRules-5",
+      "description": "Rule 6 for gestiondechets",
+      "category": "autre",
+      "benefitType": "gestiondechets"
+    },
+    {
+      "id": "permisEnvironnementRules-0",
+      "description": "Rule 1 for permisenvironnement",
+      "category": "autre",
+      "benefitType": "permisenvironnement"
+    },
+    {
+      "id": "permisEnvironnementRules-1",
+      "description": "Rule 2 for permisenvironnement",
+      "category": "autre",
+      "benefitType": "permisenvironnement"
+    },
+    {
+      "id": "permisEnvironnementRules-2",
+      "description": "Rule 3 for permisenvironnement",
+      "category": "autre",
+      "benefitType": "permisenvironnement"
+    },
+    {
+      "id": "permisEnvironnementRules-3",
+      "description": "Rule 4 for permisenvironnement",
+      "category": "autre",
+      "benefitType": "permisenvironnement"
+    },
+    {
+      "id": "permisEnvironnementRules-4",
+      "description": "Rule 5 for permisenvironnement",
+      "category": "autre",
+      "benefitType": "permisenvironnement"
+    },
+    {
+      "id": "egaliteSalarialeRules-0",
+      "description": "Éligible pour EgaliteSalariale",
+      "category": "autre",
+      "benefitType": "egalitesalariale"
+    },
+    {
+      "id": "egaliteSalarialeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "egalitesalariale"
+    },
+    {
+      "id": "asylumRules-0",
+      "description": "Ineligible: Un autre pays européen est responsable (Règlement Dublin III)",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-1",
+      "description": "Éligible au statut de réfugié (Convention de Genève)",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-2",
+      "description": "Éligible à la protection subsidiaire",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-3",
+      "description": "Ineligible: Demande manifestement infondée",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-4",
+      "description": "Demandeur vulnérable - procédures spéciales requises",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-5",
+      "description": "Ineligible: Exclu de la protection internationale (crimes graves)",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "asylumRules-6",
+      "description": "Ineligible: Pays tiers sûr - aurait pu demander protection ailleurs",
+      "category": "autre",
+      "benefitType": "asylum"
+    },
+    {
+      "id": "familyReunificationRules-0",
+      "description": "Ineligible: Revenus insuffisants (minimum ${INCOME_REQUIREMENTS.FAMILY_REUNIFICATION_SPONSOR}€/mois requis)",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-1",
+      "description": "Éligible comme conjoint/partenaire",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-2",
+      "description": "Éligible comme enfant mineur",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-3",
+      "description": "Éligible comme ascendant à charge",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-4",
+      "description": "Ineligible: Logement inadéquat ou non conforme",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-5",
+      "description": "Ineligible: Assurance maladie manquante ou insuffisante",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-6",
+      "description": "Procédure facilitée pour famille de réfugié",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "familyReunificationRules-7",
+      "description": "Éligible comme partenaire de fait",
+      "category": "autre",
+      "benefitType": "familyreunification"
+    },
+    {
+      "id": "residencePermitRules-0",
+      "description": "Ineligible: Pas de statut de séjour valide ou entrée irrégulière",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-1",
+      "description": "Éligible pour carte A (séjour temporaire)",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-2",
+      "description": "Éligible pour carte B (séjour illimité)",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-3",
+      "description": "Éligible pour carte E (citoyen UE)",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-4",
+      "description": "Éligible pour carte F (membre famille UE)",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-5",
+      "description": "Éligible pour carte bleue européenne",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "residencePermitRules-6",
+      "description": "Ineligible: Problèmes d\\",
+      "category": "autre",
+      "benefitType": "residencepermit"
+    },
+    {
+      "id": "exonerationPlusValueRules-0",
+      "description": "Éligible pour ExonerationPlusValue",
+      "category": "autre",
+      "benefitType": "exonerationplusvalue"
+    },
+    {
+      "id": "exonerationPlusValueRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "exonerationplusvalue"
+    },
+    {
+      "id": "exonerationPrecompteRules-0",
+      "description": "Éligible pour ExonerationPrecompte",
+      "category": "autre",
+      "benefitType": "exonerationprecompte"
+    },
+    {
+      "id": "exonerationPrecompteRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "exonerationprecompte"
+    },
+    {
+      "id": "exonerationRevenusMobiliersRules-0",
+      "description": "Éligible pour ExonerationRevenusMobiliers",
+      "category": "autre",
+      "benefitType": "exonerationrevenusmobiliers"
+    },
+    {
+      "id": "exonerationRevenusMobiliersRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "exonerationrevenusmobiliers"
+    },
+    {
+      "id": "flexiJobRules-0",
+      "description": "Éligible pour FlexiJob",
+      "category": "autre",
+      "benefitType": "flexijob"
+    },
+    {
+      "id": "flexiJobRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "flexijob"
+    },
+    {
+      "id": "fondsCreancesRules-0",
+      "description": "Éligible pour FondsCreances",
+      "category": "autre",
+      "benefitType": "fondscreances"
+    },
+    {
+      "id": "fondsCreancesRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "fondscreances"
+    },
+    {
+      "id": "fondsSecuriteExistenceRules-0",
+      "description": "Éligible pour FondsSecuriteExistence",
+      "category": "autre",
+      "benefitType": "fondssecuriteexistence"
+    },
+    {
+      "id": "fondsSecuriteExistenceRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "fondssecuriteexistence"
+    },
+    {
+      "id": "fraisProfessionnelsRules-0",
+      "description": "Éligible pour FraisProfessionnels",
+      "category": "autre",
+      "benefitType": "fraisprofessionnels"
+    },
+    {
+      "id": "fraisProfessionnelsRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "fraisprofessionnels"
+    },
+    {
+      "id": "garantie-locativeRules-0",
+      "description": "Ineligible: ressources suffisantes disponibles",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-1",
+      "description": "Éligible - Avance directe sur compte bloqué",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-2",
+      "description": "Situation prioritaire - Don exceptionnel possible",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-3",
+      "description": "Jeune sans ressources - Don exceptionnel",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-4",
+      "description": "Sans-abri relogé - Don avec accompagnement",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-5",
+      "description": "Médiation de dettes - Prêt adapté au plan de médiation",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-6",
+      "description": "Famille - Garantie bancaire via CPAS",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-7",
+      "description": "Travailleur avec revenus modestes - Prêt sans intérêt",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-8",
+      "description": "Logement social - Procédure simplifiée avec déduction RIS",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantie-locativeRules-9",
+      "description": "Éligible - Prêt sans intérêt CPAS",
+      "category": "autre",
+      "benefitType": "garantie-locative"
+    },
+    {
+      "id": "garantieLocativeRules-0",
+      "description": "Éligible pour GarantieLocative",
+      "category": "autre",
+      "benefitType": "garantielocative"
+    },
+    {
+      "id": "garantieLocativeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "garantielocative"
+    },
+    {
+      "id": "garde-enfantsRules-0",
+      "description": "Garde gratuite avec statut BIM depuis janvier 2023",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-1",
+      "description": "Ineligible: enfant de plus de 12 ans",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-2",
+      "description": "Réduction temps partiel applicable",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-3",
+      "description": "Réduction parent isolé applicable",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-4",
+      "description": "Réduction famille nombreuse (3+ enfants) applicable",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-5",
+      "description": "Réduction pour enfants simultanés en crèche",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-6",
+      "description": "Garde privée agréée éligible à la déduction fiscale",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-7",
+      "description": "Ineligible: gardienne non agréée ONE/Kind en Gezin",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-8",
+      "description": "Crèche d\\",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-9",
+      "description": "Intervention Alimento disponible",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-10",
+      "description": "Éligible aux aides pour garde d\\",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-11",
+      "description": "Éligible aux aides pour garde d\\",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-12",
+      "description": "Service garde enfants malades disponible via mutuelle",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-13",
+      "description": "Chèques garde d\\",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "garde-enfantsRules-14",
+      "description": "Garde gratuite (BIM) + intervention employeur acquise",
+      "category": "autre",
+      "benefitType": "garde-enfants"
+    },
+    {
+      "id": "gardeEnfantsRules-0",
+      "description": "Éligible pour GardeEnfants",
+      "category": "autre",
+      "benefitType": "gardeenfants"
+    },
+    {
+      "id": "gardeEnfantsRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "gardeenfants"
+    },
+    {
+      "id": "harcelementTravailRules-0",
+      "description": "Éligible pour HarcelementTravail",
+      "category": "autre",
+      "benefitType": "harcelementtravail"
+    },
+    {
+      "id": "harcelementTravailRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "harcelementtravail"
+    },
+    {
+      "id": "horaireFlexibleRules-0",
+      "description": "Éligible pour HoraireFlexible",
+      "category": "autre",
+      "benefitType": "horaireflexible"
+    },
+    {
+      "id": "horaireFlexibleRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "horaireflexible"
+    },
+    {
+      "id": "acquisitionRules-0",
+      "description": "Ineligible: Acheteur doit avoir minimum 18 ans",
+      "category": "autre",
+      "benefitType": "acquisition"
+    },
+    {
+      "id": "acquisitionRules-1",
+      "description": "Ineligible: Taux d\\",
+      "category": "autre",
+      "benefitType": "acquisition"
+    },
+    {
+      "id": "acquisitionRules-2",
+      "description": "Ineligible: Apport personnel insuffisant (minimum 10% pour primo-accédant)",
+      "category": "autre",
+      "benefitType": "acquisition"
+    },
+    {
+      "id": "acquisitionRules-3",
+      "description": "Ineligible: Apport personnel insuffisant (minimum 20% pour non primo-accédant)",
+      "category": "autre",
+      "benefitType": "acquisition"
+    },
+    {
+      "id": "locationRules-0",
+      "description": "Ineligible: Garantie locative dépasse le maximum légal",
+      "category": "autre",
+      "benefitType": "location"
+    },
+    {
+      "id": "locationRules-1",
+      "description": "Ineligible: Indexation possible uniquement après 12 mois",
+      "category": "autre",
+      "benefitType": "location"
+    },
+    {
+      "id": "locationRules-2",
+      "description": "Ineligible: Préavis doit être donné par recommandé",
+      "category": "autre",
+      "benefitType": "location"
+    },
+    {
+      "id": "locationRules-3",
+      "description": "Ineligible: Expulsion interdite en période hivernale avec enfants mineurs",
+      "category": "autre",
+      "benefitType": "location"
+    },
+    {
+      "id": "income-guaranteeRules-0",
+      "description": "Ineligible: cumul interdit avec chômage complet",
+      "category": "autre",
+      "benefitType": "income-guarantee"
+    },
+    {
+      "id": "income-guaranteeRules-1",
+      "description": "Ineligible: pas de maintien des droits",
+      "category": "autre",
+      "benefitType": "income-guarantee"
+    },
+    {
+      "id": "income-guaranteeRules-2",
+      "description": "Ineligible: salaire supérieur au minimum garanti",
+      "category": "autre",
+      "benefitType": "income-guarantee"
+    },
+    {
+      "id": "income-guaranteeRules-3",
+      "description": "Ineligible: doit être travailleur à temps partiel",
+      "category": "autre",
+      "benefitType": "income-guarantee"
+    },
+    {
+      "id": "income-guaranteeRules-4",
+      "description": "Éligible pour Allocation de Garantie de Revenus (AGR)",
+      "category": "autre",
+      "benefitType": "income-guarantee"
+    },
+    {
+      "id": "inscriptionEcoleRules-0",
+      "description": "Éligible pour InscriptionEcole",
+      "category": "autre",
+      "benefitType": "inscriptionecole"
+    },
+    {
+      "id": "inscriptionEcoleRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "inscriptionecole"
+    },
+    {
+      "id": "insertion-professionnelleRules-0",
+      "description": "Éligible pour Article 60§7",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-1",
+      "description": "Éligible pour Programme de Transition Professionnelle",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-2",
+      "description": "Éligible pour Stage First",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-3",
+      "description": "Éligible pour Entreprise de Travail Adapté",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-4",
+      "description": "Éligible pour emploi Titres-services",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-5",
+      "description": "Éligible pour Activa avec carte",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-6",
+      "description": "Éligible pour Formation Professionnelle Individuelle",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-7",
+      "description": "Éligible pour SINE - Économie sociale d\\",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-8",
+      "description": "Ineligible: Âge minimum non atteint (${INSERTION_CONSTANTS.MIN_AGE_GENERAL} ans requis)",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertion-professionnelleRules-9",
+      "description": "Ineligible: Âge maximum dépassé pour Stage First (${INSERTION_CONSTANTS.MAX_AGE_STAGE_FIRST} ans maximum)",
+      "category": "autre",
+      "benefitType": "insertion-professionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-0",
+      "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis)",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-1",
+      "description": "Éligible pour Article 60§7",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-2",
+      "description": "Éligible pour Programme de Transition Professionnelle",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-3",
+      "description": "Éligible pour Activa",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-4",
+      "description": "Éligible pour Stage First",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-5",
+      "description": "Éligible pour Entreprise de Travail Adapté",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-6",
+      "description": "Éligible pour emploi titres-services",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-7",
+      "description": "Éligible pour Formation Professionnelle Individuelle",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-8",
+      "description": "Éligible pour Économie Sociale d\\",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "insertionProfessionnelleRules-9",
+      "description": "Ineligible: durée RIS insuffisante (${ARTICLE_60_MIN_RIS_DURATION_MONTHS} mois minimum requis)",
+      "category": "autre",
+      "benefitType": "insertionprofessionnelle"
+    },
+    {
+      "id": "licenciementRules-0",
+      "description": "Éligible pour Licenciement",
+      "category": "autre",
+      "benefitType": "licenciement"
+    },
+    {
+      "id": "licenciementRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "licenciement"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-0",
+      "description": "Ineligible: Vous n\\",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-1",
+      "description": "Ineligible: Vous n\\",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-2",
+      "description": "Ineligible: Vous disposez de ressources suffisantes",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-3",
+      "description": "Éligible en tant que citoyen belge",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-4",
+      "description": "Éligible en tant que citoyen de l\\",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-5",
+      "description": "Éligible en tant qu\\",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-6",
+      "description": "Éligible en tant que réfugié reconnu",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-7",
+      "description": "Éligible en tant que bénéficiaire de la protection subsidiaire",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-8",
+      "description": "Rule 9 for loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-9",
+      "description": "Rule 10 for loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-10",
+      "description": "Rule 11 for loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+      "category": "autre",
+      "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati"
+    },
+    {
+      "id": "mediationDettesRules-0",
+      "description": "Éligible pour MediationDettes",
+      "category": "autre",
+      "benefitType": "mediationdettes"
+    },
+    {
+      "id": "mediationDettesRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "mediationdettes"
+    },
+    {
+      "id": "mediationFamilialeRules-0",
+      "description": "Éligible pour MediationFamiliale",
+      "category": "autre",
+      "benefitType": "mediationfamiliale"
+    },
+    {
+      "id": "mediationFamilialeRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "mediationfamiliale"
+    },
+    {
+      "id": "outplacementRules-0",
+      "description": "Éligible pour Outplacement",
+      "category": "autre",
+      "benefitType": "outplacement"
+    },
+    {
+      "id": "outplacementRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "outplacement"
+    },
+    {
+      "id": "preavisRules-0",
+      "description": "Éligible pour Preavis",
+      "category": "autre",
+      "benefitType": "preavis"
+    },
+    {
+      "id": "preavisRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "preavis"
+    },
+    {
+      "id": "prime-naissanceRules-0",
+      "description": "Ineligible: pas de titre de séjour valide",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-1",
+      "description": "Ineligible: délai de prescription de 5 ans dépassé",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-2",
+      "description": "Ineligible: demande anticipée possible uniquement à partir du 6ème mois de grossesse",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-3",
+      "description": "Ineligible: adoption non officiellement reconnue",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-4",
+      "description": "Ineligible: enfant mort-né avant 180 jours de grossesse",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-5",
+      "description": "Éligible avec justification du retard requise",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-6",
+      "description": "Éligible pour Prime de Naissance (demande anticipée)",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-7",
+      "description": "Éligible pour Prime d",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-8",
+      "description": "Éligible pour Prime de Naissance (enfant mort-né)",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-9",
+      "description": "Éligible pour Prime de Naissance (naissance multiple)",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-naissanceRules-10",
+      "description": "Éligible pour Prime de Naissance",
+      "category": "autre",
+      "benefitType": "prime-naissance"
+    },
+    {
+      "id": "prime-renovationRules-0",
+      "description": "Ineligible: Système Renolution suspendu en 2025 - Attente nouveau gouvernement",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-1",
+      "description": "Ineligible: Catégorie R5 exclue du système depuis 2025",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-2",
+      "description": "Ineligible: Doit être propriétaire ou locataire avec accord écrit du propriétaire",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-3",
+      "description": "Ineligible: Le logement doit avoir plus de 15 ans pour ces travaux",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-4",
+      "description": "Éligible - Prime isolation toiture catégorie R1",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-5",
+      "description": "Éligible - Prime ventilation double flux catégorie R2 (locataire)",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-6",
+      "description": "Éligible - Rénovation globale catégorie R3 (audit obligatoire)",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-7",
+      "description": "Éligible - Prime pompe à chaleur catégorie R2 (montants réduits de 60% en 2025)",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-8",
+      "description": "Éligible - Catégorie R4 avec taux intervention 50%",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-9",
+      "description": "Éligible - MijnVerbouwPremie Flandres",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "prime-renovationRules-10",
+      "description": "Éligible - Prime châssis catégorie R2",
+      "category": "autre",
+      "benefitType": "prime-renovation"
+    },
+    {
+      "id": "primeNaissanceRules-0",
+      "description": "Éligible pour prime de naissance anticipée (6ème mois)",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-1",
+      "description": "Éligible pour prime de naissance (délai normal)",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-2",
+      "description": "Éligible pour prime de naissance (délai exceptionnel avec justification)",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-3",
+      "description": "Éligible pour prime de naissance (enfant mort-né après 180 jours)",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-4",
+      "description": "Éligible pour prime d\\",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-5",
+      "description": "Ineligible: délai de prescription de ${MAX_DECLARATION_YEARS_EXCEPTIONAL} ans dépassé",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-6",
+      "description": "Ineligible: pas de titre de séjour valide en Belgique",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeNaissanceRules-7",
+      "description": "Ineligible: grossesse inférieure à ${MIN_STILLBIRTH_DAYS} jours pour enfant mort-né",
+      "category": "autre",
+      "benefitType": "primenaissance"
+    },
+    {
+      "id": "primeRenovationRules-0",
+      "description": "Éligible pour PrimeRenovation",
+      "category": "autre",
+      "benefitType": "primerenovation"
+    },
+    {
+      "id": "primeRenovationRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "primerenovation"
+    },
+    {
+      "id": "brevetRules-0",
+      "description": "L\\",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-1",
+      "description": "L\\",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-2",
+      "description": "L\\",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-3",
+      "description": "Ineligible: Matière non brevetable selon Article 52(2) CBE",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-4",
+      "description": "Ineligible: Délai de priorité de ${IP_CONSTANTS.PATENT_PRIORITY_PERIOD} mois dépassé",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-5",
+      "description": "Ineligible: Délai PCT de ${IP_CONSTANTS.PATENT_PCT_PERIOD} mois pour phase nationale dépassé",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "brevetRules-6",
+      "description": "Ineligible: Annuité non payée après délai de grâce",
+      "category": "autre",
+      "benefitType": "brevet"
+    },
+    {
+      "id": "droitAuteurRules-0",
+      "description": "L\\",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "droitAuteurRules-1",
+      "description": "Ineligible: Les idées et concepts ne sont pas protégeables, seule l\\",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "droitAuteurRules-2",
+      "description": "Droits patrimoniaux transférés à l\\",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "droitAuteurRules-3",
+      "description": "Protection sui generis de base de données",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "droitAuteurRules-4",
+      "description": "Protection du logiciel comme œuvre littéraire",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "droitAuteurRules-5",
+      "description": "Œuvre de collaboration - accord de tous requis",
+      "category": "autre",
+      "benefitType": "droitauteur"
+    },
+    {
+      "id": "marqueRules-0",
+      "description": "La marque possède un caractère distinctif",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-1",
+      "description": "Ineligible: Marque descriptive, générique ou usuelle dans le commerce",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-2",
+      "description": "Ineligible: Conflit avec une marque antérieure",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-3",
+      "description": "Ineligible: Contraire à l\\",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-4",
+      "description": "Ineligible: Marque trompeuse sur la nature, qualité ou origine",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-5",
+      "description": "Période d\\",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "marqueRules-6",
+      "description": "Ineligible: Marque susceptible de déchéance pour non-usage (5 ans)",
+      "category": "autre",
+      "benefitType": "marque"
+    },
+    {
+      "id": "protectionEnfanceRules-0",
+      "description": "Éligible pour ProtectionEnfance",
+      "category": "autre",
+      "benefitType": "protectionenfance"
+    },
+    {
+      "id": "protectionEnfanceRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "protectionenfance"
+    },
+    {
+      "id": "protectionJuridiqueRules-0",
+      "description": "Éligible pour ProtectionJuridique",
+      "category": "autre",
+      "benefitType": "protectionjuridique"
+    },
+    {
+      "id": "protectionJuridiqueRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "protectionjuridique"
+    },
+    {
+      "id": "quotientConjugalRules-0",
+      "description": "Éligible pour QuotientConjugal",
+      "category": "autre",
+      "benefitType": "quotientconjugal"
+    },
+    {
+      "id": "quotientConjugalRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "quotientconjugal"
+    },
+    {
+      "id": "administrativeAppealRules-0",
+      "description": "Rule 1 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-1",
+      "description": "Rule 2 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-2",
+      "description": "Rule 3 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-3",
+      "description": "Rule 4 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-4",
+      "description": "Rule 5 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-5",
+      "description": "Rule 6 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-6",
+      "description": "Rule 7 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-7",
+      "description": "Rule 8 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-8",
+      "description": "Rule 9 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "administrativeAppealRules-9",
+      "description": "Rule 10 for administrativeappeal",
+      "category": "autre",
+      "benefitType": "administrativeappeal"
+    },
+    {
+      "id": "conseilEtatRules-0",
+      "description": "Rule 1 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-1",
+      "description": "Rule 2 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-2",
+      "description": "Rule 3 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-3",
+      "description": "Rule 4 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-4",
+      "description": "Rule 5 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-5",
+      "description": "Rule 6 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-6",
+      "description": "Rule 7 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-7",
+      "description": "Rule 8 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-8",
+      "description": "Rule 9 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "conseilEtatRules-9",
+      "description": "Rule 10 for conseiletat",
+      "category": "autre",
+      "benefitType": "conseiletat"
+    },
+    {
+      "id": "renteAlimentaireRules-0",
+      "description": "Éligible pour RenteAlimentaire",
+      "category": "autre",
+      "benefitType": "rentealimentaire"
+    },
+    {
+      "id": "renteAlimentaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "rentealimentaire"
+    },
+    {
+      "id": "repasDomicileRules-0",
+      "description": "Éligible pour RepasDomicile",
+      "category": "autre",
+      "benefitType": "repasdomicile"
+    },
+    {
+      "id": "repasDomicileRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "repasdomicile"
+    },
+    {
+      "id": "repasScolairesGratuitsRules-0",
+      "description": "Éligible pour RepasScolairesGratuits",
+      "category": "autre",
+      "benefitType": "repasscolairesgratuits"
+    },
+    {
+      "id": "repasScolairesGratuitsRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "repasscolairesgratuits"
+    },
+    {
+      "id": "representationSyndicaleRules-0",
+      "description": "Éligible pour RepresentationSyndicale",
+      "category": "autre",
+      "benefitType": "representationsyndicale"
+    },
+    {
+      "id": "representationSyndicaleRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "representationsyndicale"
+    },
+    {
+      "id": "restaurantsSociauxRules-0",
+      "description": "Éligible pour RestaurantsSociaux",
+      "category": "autre",
+      "benefitType": "restaurantssociaux"
+    },
+    {
+      "id": "restaurantsSociauxRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "restaurantssociaux"
+    },
+    {
+      "id": "revenuCadastralExonerationRules-0",
+      "description": "Éligible pour RevenuCadastralExoneration",
+      "category": "autre",
+      "benefitType": "revenucadastralexoneration"
+    },
+    {
+      "id": "revenuCadastralExonerationRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "revenucadastralexoneration"
+    },
+    {
+      "id": "servicePublicEmploiRules-0",
+      "description": "Éligible pour ServicePublicEmploi",
+      "category": "autre",
+      "benefitType": "servicepublicemploi"
+    },
+    {
+      "id": "servicePublicEmploiRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "servicepublicemploi"
+    },
+    {
+      "id": "stageRules-0",
+      "description": "Éligible pour Stage",
+      "category": "autre",
+      "benefitType": "stage"
+    },
+    {
+      "id": "stageRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "stage"
+    },
+    {
+      "id": "artistStatusRules-0",
+      "description": "Ineligible: Âge minimum de 18 ans requis pour le statut d\\",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-1",
+      "description": "Ineligible: Permis de travail requis pour les artistes hors-UE",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-2",
+      "description": "Ineligible: Minimum ${ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD} jours de prestations artistiques requis (vous avez {daysWorkedArtistic} jours)",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-3",
+      "description": "Ineligible: Minimum ${ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_REDUCED} jours requis pour première demande (vous avez {daysWorkedArtistic} jours)",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-4",
+      "description": "Ineligible: Revenus artistiques insuffisants (minimum ${ARTIST_STATUS_CONSTANTS.MINIMUM_ARTISTIC_INCOME}€ requis)",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-5",
+      "description": "Ineligible: Revenus non-artistiques dépassent le plafond (${ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME}€ maximum)",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-6",
+      "description": "Statut d\\",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-7",
+      "description": "Statut d\\",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-8",
+      "description": "Statut d\\",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-9",
+      "description": "Statut mixte accordé (revenus artistiques et non-artistiques)",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-10",
+      "description": "Jours d\\",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "artistStatusRules-11",
+      "description": "Jours de résidence comptent double pour écrivains",
+      "category": "autre",
+      "benefitType": "artiststatus"
+    },
+    {
+      "id": "teleAssistanceRules-0",
+      "description": "Éligible pour TeleAssistance",
+      "category": "autre",
+      "benefitType": "teleassistance"
+    },
+    {
+      "id": "teleAssistanceRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "teleassistance"
+    },
+    {
+      "id": "teletravailRules-0",
+      "description": "Éligible pour Teletravail",
+      "category": "autre",
+      "benefitType": "teletravail"
+    },
+    {
+      "id": "teletravailRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "teletravail"
+    },
+    {
+      "id": "tempsPartielRules-0",
+      "description": "Éligible pour TempsPartiel",
+      "category": "autre",
+      "benefitType": "tempspartiel"
+    },
+    {
+      "id": "tempsPartielRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "tempspartiel"
+    },
+    {
+      "id": "transportScolaireRules-0",
+      "description": "Éligible pour TransportScolaire",
+      "category": "autre",
+      "benefitType": "transportscolaire"
+    },
+    {
+      "id": "transportScolaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "transportscolaire"
+    },
+    {
+      "id": "travailEtudiantRules-0",
+      "description": "Éligible pour TravailEtudiant",
+      "category": "autre",
+      "benefitType": "travailetudiant"
+    },
+    {
+      "id": "travailEtudiantRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "travailetudiant"
+    },
+    {
+      "id": "travailInterimaireRules-0",
+      "description": "Éligible pour TravailInterimaire",
+      "category": "autre",
+      "benefitType": "travailinterimaire"
+    },
+    {
+      "id": "travailInterimaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "travailinterimaire"
+    },
+    {
+      "id": "tvaReduiteRules-0",
+      "description": "Éligible pour TvaReduite",
+      "category": "autre",
+      "benefitType": "tvareduite"
+    },
+    {
+      "id": "tvaReduiteRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "autre",
+      "benefitType": "tvareduite"
+    },
+    {
+      "id": "agrRules-0",
+      "description": "Eligible pour AGR",
+      "category": "emploi",
+      "benefitType": "agr"
+    },
+    {
+      "id": "agrRules-1",
+      "description": "Ineligible: salaire supérieur au minimum garanti",
+      "category": "emploi",
+      "benefitType": "agr"
+    },
+    {
+      "id": "agrRules-2",
+      "description": "Ineligible: pas de maintien des droits",
+      "category": "emploi",
+      "benefitType": "agr"
+    },
+    {
+      "id": "agrRules-3",
+      "description": "Ineligible: cumul interdit avec chômage complet",
+      "category": "emploi",
+      "benefitType": "agr"
+    },
+    {
+      "id": "allocations-chomageRules-0",
+      "description": "Ineligible: âge minimum non atteint (${CHOMAGE_CONSTANTS.MIN_AGE} ans requis)",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-1",
+      "description": "Ineligible: démission volontaire - période de sanction applicable",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-2",
+      "description": "Ineligible: jours travaillés insuffisants (${CHOMAGE_CONSTANTS.DAYS_REQUIRED_UNDER_36} jours requis sur ${CHOMAGE_CONSTANTS.MONTHS_REFERENCE_UNDER_36} mois)",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-3",
+      "description": "Ineligible: jours travaillés insuffisants (${CHOMAGE_CONSTANTS.DAYS_REQUIRED_36_AND_OVER} jours requis sur ${CHOMAGE_CONSTANTS.MONTHS_REFERENCE_36_AND_OVER} mois)",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-4",
+      "description": "Rule 5 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-5",
+      "description": "Rule 6 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-6",
+      "description": "Ineligible: inscription obligatoire auprès de l\\",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-7",
+      "description": "Rule 8 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-8",
+      "description": "Rule 9 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-9",
+      "description": "Rule 10 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocations-chomageRules-10",
+      "description": "Rule 11 for allocations-chomage",
+      "category": "emploi",
+      "benefitType": "allocations-chomage"
+    },
+    {
+      "id": "allocationsChomageRules-0",
+      "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis)",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-1",
+      "description": "Ineligible: non inscrit auprès de l\\",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-2",
+      "description": "Ineligible: jours travaillés insuffisants (${MIN_WORKING_DAYS_UNDER_36} jours requis sur 18 mois)",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-3",
+      "description": "Ineligible: jours travaillés insuffisants (${MIN_WORKING_DAYS_36_49} jours requis sur 24 mois)",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-4",
+      "description": "Ineligible: jours travaillés insuffisants (${MIN_WORKING_DAYS_50_PLUS} jours requis sur 36 mois)",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-5",
+      "description": "Ineligible: démission volontaire - période de sanction applicable",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-6",
+      "description": "Éligible pour chômage temporaire force majeure",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-7",
+      "description": "Conditions de base remplies pour allocations de chômage",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "allocationsChomageRules-8",
+      "description": "Éligible pour allocations d\\",
+      "category": "emploi",
+      "benefitType": "allocationschomage"
+    },
+    {
+      "id": "artistUnemploymentRules-0",
+      "description": "Ineligible: Minimum ${ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD} jours sur ${ARTIST_STATUS_CONSTANTS.REFERENCE_PERIOD_MONTHS} mois requis",
+      "category": "emploi",
+      "benefitType": "artistunemployment"
+    },
+    {
+      "id": "artistUnemploymentRules-1",
+      "description": "Période de protection de 12 mois active",
+      "category": "emploi",
+      "benefitType": "artistunemployment"
+    },
+    {
+      "id": "artistUnemploymentRules-2",
+      "description": "Exonération cachet applicable",
+      "category": "emploi",
+      "benefitType": "artistunemployment"
+    },
+    {
+      "id": "artistUnemploymentRules-3",
+      "description": "Formation artistique compatible avec allocations",
+      "category": "emploi",
+      "benefitType": "artistunemployment"
+    },
+    {
+      "id": "aide-logementRules-0",
+      "description": "Ineligible: propriétaire du logement - aide réservée aux locataires",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-1",
+      "description": "Ineligible: revenus annuels > 27,550.86€",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-2",
+      "description": "Ineligible: expulsion avec revenus éligibles - allocation de relogement",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-3",
+      "description": "Ineligible: famille monoparentale avec revenus <= 20,895.43€",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-4",
+      "description": "Ineligible: revenus entre 20,895.43€ et 27,550.86€",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-5",
+      "description": "Ineligible: priorité sociale avec revenus <= 20,895.43€",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-6",
+      "description": "Ineligible: revenus dépassent plafond isolé (17,000€)",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-7",
+      "description": "Ineligible: revenus dépassent plafond couple (23,200€)",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-8",
+      "description": "Ineligible: sortie de rue - ADeL forfaitaire sans preuve logement antérieur",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-9",
+      "description": "Ineligible: revenus < 17,000€ et déménagement logement salubre",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-10",
+      "description": "Ineligible: famille avec enfants quittant logement inadapté - ADeL avec majoration enfants",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-11",
+      "description": "Ineligible: inscrit liste attente > 18 mois",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-12",
+      "description": "Ineligible: liste attente sociale >= 4 ans en Flandres",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aide-logementRules-13",
+      "description": "Ineligible: loyer excessif par rapport aux plafonds régionaux",
+      "category": "logement",
+      "benefitType": "aide-logement"
+    },
+    {
+      "id": "aideLogementRules-0",
+      "description": "Ineligible: propriétaire du logement - aide réservée aux locataires",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-1",
+      "description": "Ineligible: revenus annuels > ${BRUSSELS_2024.incomeThresholds.mediumIncome}€",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-2",
+      "description": "Ineligible: moins de ${BRUSSELS_2024.priorityPoints.minimum} points de priorité sur liste sociale",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-3",
+      "description": "Rule 4 for aidelogement",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-4",
+      "description": "Rule 5 for aidelogement",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-5",
+      "description": "Ineligible: propriétaire - aide réservée aux locataires",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-6",
+      "description": "Ineligible: revenus dépassent les plafonds",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-7",
+      "description": "Éligible pour allocation déménagement et loyer",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-8",
+      "description": "Éligible pour allocation attente logement",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-9",
+      "description": "Ineligible: eigenaar - hulp voorbehouden voor huurders",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-10",
+      "description": "Ineligible: minder dan ${FLANDERS_2024.waitingListMinYears} jaar op wachtlijst",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "aideLogementRules-11",
+      "description": "In aanmerking voor huurpremie",
+      "category": "logement",
+      "benefitType": "aidelogement"
+    },
+    {
+      "id": "bonusLogementRules-0",
+      "description": "Éligible pour BonusLogement",
+      "category": "logement",
+      "benefitType": "bonuslogement"
+    },
+    {
+      "id": "bonusLogementRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "logement",
+      "benefitType": "bonuslogement"
+    },
+    {
+      "id": "primesEnergieRules-0",
+      "description": "Rule 1 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "primesEnergieRules-1",
+      "description": "Rule 2 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "primesEnergieRules-2",
+      "description": "Rule 3 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "primesEnergieRules-3",
+      "description": "Rule 4 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "primesEnergieRules-4",
+      "description": "Rule 5 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "primesEnergieRules-5",
+      "description": "Rule 6 for primesenergie",
+      "category": "logement",
+      "benefitType": "primesenergie"
+    },
+    {
+      "id": "logementSocialRules-0",
+      "description": "Ineligible: Revenus dépassent le plafond pour logement social",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-1",
+      "description": "Ineligible: Ne peut pas posséder de propriété",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-2",
+      "description": "Ineligible: Doit avoir minimum 18 ans",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-3",
+      "description": "Ineligible: Doit être résident légal en Belgique",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logement-socialRules-0",
+      "description": "Ineligible: propriétaire d\\",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-1",
+      "description": "Ineligible: non inscrit au registre de la population",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-2",
+      "description": "Ineligible: revenus > plafond (${LOGEMENT_SOCIAL_CONSTANTS.WALLONIE_PLAFOND_ISOLE}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-3",
+      "description": "Ineligible: revenus dépassent le plafond adapté pour ménage en Wallonie",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-4",
+      "description": "Ineligible: revenus > plafond (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2024_PLAFOND_ISOLE}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-5",
+      "description": "Ineligible: revenus > plafond handicap (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2024_PLAFOND_ISOLE_HANDICAP}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-6",
+      "description": "Ineligible: revenus dépassent le plafond adapté pour ménage en Flandres 2024",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-7",
+      "description": "Ineligible: patrimoine mobilier > limite (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_PATRIMOINE_LIMITE_2025}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-8",
+      "description": "Ineligible: revenus > plafond 2025 (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-9",
+      "description": "Ineligible: revenus > plafond handicap 2025 (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE_HANDICAP}€)",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-10",
+      "description": "Éligible en urgence via Housing First",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-11",
+      "description": "Éligible au logement social à Bruxelles-Capitale",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-12",
+      "description": "Éligible au logement social en Wallonie",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-13",
+      "description": "Éligible au logement social en Flandres",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-14",
+      "description": "Priorité supplémentaire sur la liste d\\",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-15",
+      "description": "Points de priorité pour logement insalubre",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logement-socialRules-16",
+      "description": "Points de priorité pour famille monoparentale",
+      "category": "logement",
+      "benefitType": "logement-social"
+    },
+    {
+      "id": "logementSocialRules-4",
+      "description": "Ineligible: propriétaire d\\",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-5",
+      "description": "Ineligible: revenus dépassent les plafonds sociaux",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-6",
+      "description": "Ineligible: non inscrit au registre de la population",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-7",
+      "description": "Éligible pour logement social en Wallonie",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-8",
+      "description": "Ineligible: eigenaar van onroerend goed",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-9",
+      "description": "Ineligible: inkomen boven sociale grenzen",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-10",
+      "description": "Ineligible: vermogen boven limiet",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "logementSocialRules-11",
+      "description": "In aanmerking voor sociale huisvesting",
+      "category": "logement",
+      "benefitType": "logementsocial"
+    },
+    {
+      "id": "tarif-social-energieRules-0",
+      "description": "Ineligible: Bénéficiaire RIS - application automatique via SPF Économie",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-1",
+      "description": "Ineligible: Bénéficiaire GRAPA - application automatique via SPF Économie",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-2",
+      "description": "Ineligible: Personne handicapée avec allocation - application automatique",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-3",
+      "description": "Ineligible: Enfant avec allocation familiale majorée - tout le ménage bénéficie du tarif social",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-4",
+      "description": "Ineligible: Locataire social avec chauffage collectif - prime tarif social disponible depuis septembre 2024",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-5",
+      "description": "Ineligible: Le BIM ne donne plus droit au tarif social depuis le 1er juillet 2023",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-6",
+      "description": "Ineligible: Médiation de dettes - éligibilité évaluée au cas par cas",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-7",
+      "description": "Ineligible: Compteur collectif - prime tarif social disponible depuis septembre 2024",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-8",
+      "description": "Ineligible: Aucun contrat d\\",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "tarif-social-energieRules-9",
+      "description": "Ineligible: Éligible mais attestation requise",
+      "category": "logement",
+      "benefitType": "tarif-social-energie"
+    },
+    {
+      "id": "aide-socialeRules-0",
+      "description": "Rule 1 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-1",
+      "description": "Rule 2 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-2",
+      "description": "Rule 3 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-3",
+      "description": "Rule 4 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-4",
+      "description": "Rule 5 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-5",
+      "description": "Rule 6 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-6",
+      "description": "Rule 7 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-7",
+      "description": "Rule 8 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-8",
+      "description": "Rule 9 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-9",
+      "description": "Rule 10 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-10",
+      "description": "Rule 11 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aide-socialeRules-11",
+      "description": "Rule 12 for aide-sociale",
+      "category": "social",
+      "benefitType": "aide-sociale"
+    },
+    {
+      "id": "aideSocialeRules-0",
+      "description": "aide médicale urgente pour personnes sans titre de séjour",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-1",
+      "description": "mineurs exclus du RIS mais éligibles aide sociale",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-2",
+      "description": "étudiant avec garant défaillant",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-3",
+      "description": "demandeur d\\",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-4",
+      "description": "avance sur allocations en attente",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-5",
+      "description": "aide sociale d\\",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-6",
+      "description": "aide sociale complémentaire pour personne avec handicap",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-7",
+      "description": "aide d\\",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-8",
+      "description": "aide en nature pour famille avec enfants",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "aideSocialeRules-9",
+      "description": "aide sociale complémentaire pour personne âgée",
+      "category": "social",
+      "benefitType": "aidesociale"
+    },
+    {
+      "id": "formationEntrepriseRules-0",
+      "description": "Éligible pour FormationEntreprise",
+      "category": "social",
+      "benefitType": "formationentreprise"
+    },
+    {
+      "id": "formationEntrepriseRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "social",
+      "benefitType": "formationentreprise"
+    },
+    {
+      "id": "grapaRules-0",
+      "description": "Ineligible: âge minimum non atteint (${MIN_AGE_GRAPA} ans requis en 2024)",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-1",
+      "description": "Ineligible: résidence effective en Belgique requise",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-2",
+      "description": "Ineligible: nationalité ou statut non éligible - doit être Belge, citoyen UE avec droits de pension, réfugié reconnu ou apatride",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-3",
+      "description": "Ineligible: ressources supérieures au plafond GRAPA (${GRAPA_MONTHLY_AMOUNTS_2024.isolated}€/mois)",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-4",
+      "description": "Ineligible: ressources supérieures au plafond GRAPA cohabitant (${GRAPA_MONTHLY_AMOUNTS_2024.cohabitant}€/mois)",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-5",
+      "description": "Ineligible: doit d\\",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-6",
+      "description": "Éligible pour GRAPA personne isolée",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-7",
+      "description": "Éligible pour GRAPA personne cohabitante",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "grapaRules-8",
+      "description": "réfugié reconnu éligible selon la loi du 22 mai 1969",
+      "category": "social",
+      "benefitType": "grapa"
+    },
+    {
+      "id": "risRules-0",
+      "description": "Ineligible: âge minimum non atteint (${RIS_CONSTANTS.MIN_AGE} ans requis)",
+      "category": "social",
+      "benefitType": "ris"
+    },
+    {
+      "id": "risRules-1",
+      "description": "Ineligible: pas de titre de séjour valide",
+      "category": "social",
+      "benefitType": "ris"
+    },
+    {
+      "id": "risRules-2",
+      "description": "Ineligible: patrimoine mobilier supérieur à ${RIS_CONSTANTS.MAX_PATRIMONY_MOVABLE}€",
+      "category": "social",
+      "benefitType": "ris"
+    },
+    {
+      "id": "risRules-3",
+      "description": "Ineligible: étudiant temps plein (sauf exceptions)",
+      "category": "social",
+      "benefitType": "ris"
+    },
+    {
+      "id": "risRules-4",
+      "description": "Conditions de base remplies",
+      "category": "social",
+      "benefitType": "ris"
+    },
+    {
+      "id": "tarifSocialEnergieRules-0",
+      "description": "Éligible pour TarifSocialEnergie",
+      "category": "social",
+      "benefitType": "tarifsocialenergie"
+    },
+    {
+      "id": "tarifSocialEnergieRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "social",
+      "benefitType": "tarifsocialenergie"
+    },
+    {
+      "id": "allocationHandicapesRules-0",
+      "description": "Ineligible: Âge supérieur à ${ARR_AMOUNTS_2024.ageLimit} ans - pas d",
+      "category": "handicap",
+      "benefitType": "allocationhandicapes"
+    },
+    {
+      "id": "allocationHandicapesRules-1",
+      "description": "Ineligible: Taux d",
+      "category": "handicap",
+      "benefitType": "allocationhandicapes"
+    },
+    {
+      "id": "allocationHandicapesRules-2",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocationhandicapes"
+    },
+    {
+      "id": "allocationHandicapesRules-3",
+      "description": "Ineligible: Points d",
+      "category": "handicap",
+      "benefitType": "allocationhandicapes"
+    },
+    {
+      "id": "allocationHandicapesRules-4",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocationhandicapes"
+    },
+    {
+      "id": "allocationIntegrationRules-0",
+      "description": "Éligible pour AllocationIntegration",
+      "category": "handicap",
+      "benefitType": "allocationintegration"
+    },
+    {
+      "id": "allocationIntegrationRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "handicap",
+      "benefitType": "allocationintegration"
+    },
+    {
+      "id": "allocations-handicapesRules-0",
+      "description": "Ineligible: âge minimum non atteint pour l",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-1",
+      "description": "Ineligible: limite d",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-2",
+      "description": "Ineligible: doit être Belge ou résident légal en Belgique",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-3",
+      "description": "Ineligible: évaluation médicale DG Handicap requise",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-4",
+      "description": "Ineligible: score d",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-5",
+      "description": "Ineligible: doit résider en Belgique minimum ${HANDICAP_CONSTANTS.RESIDENCE_MONTHS_REQUIRED} mois par an",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-6",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-7",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-8",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-9",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-10",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-11",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-12",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-13",
+      "description": "Éligible à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-14",
+      "description": "Personne de plus de 65 ans: éligible uniquement à l\\",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-handicapesRules-15",
+      "description": "AI cumulable avec indemnité accident du travail, ARR réduite",
+      "category": "handicap",
+      "benefitType": "allocations-handicapes"
+    },
+    {
+      "id": "allocations-familialesRules-0",
+      "description": "Ineligible: âge maximum dépassé (25 ans)",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-1",
+      "description": "Ineligible: pas de domicile légal ou titre de séjour valide",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-2",
+      "description": "Ineligible: pas de condition remplie pour 18-25 ans",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-3",
+      "description": "Éligible aux allocations familiales (enfant mineur)",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-4",
+      "description": "Éligible aux allocations familiales (étudiant)",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-5",
+      "description": "Éligible au supplément famille monoparentale",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-6",
+      "description": "Éligible au supplément handicap",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocations-familialesRules-7",
+      "description": "Éligible au supplément social",
+      "category": "famille",
+      "benefitType": "allocations-familiales"
+    },
+    {
+      "id": "allocationsFamilialesRules-0",
+      "description": "Éligible sans condition (0-18 ans)",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-1",
+      "description": "Éligible avec conditions (18-25 ans)",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-2",
+      "description": "Ineligible: âge maximum dépassé ou conditions non remplies pour 18-25 ans",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-3",
+      "description": "Ineligible: pas de domicile légal ou titre de séjour valide en Belgique",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-4",
+      "description": "Éligible au supplément handicap",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-5",
+      "description": "Éligible au supplément orphelin",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsFamilialesRules-6",
+      "description": "Éligible au supplément social",
+      "category": "famille",
+      "benefitType": "allocationsfamiliales"
+    },
+    {
+      "id": "allocationsEtudesRules-0",
+      "description": "Éligible pour AllocationsEtudes",
+      "category": "education",
+      "benefitType": "allocationsetudes"
+    },
+    {
+      "id": "allocationsEtudesRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "education",
+      "benefitType": "allocationsetudes"
+    },
+    {
+      "id": "bourseEtudesRules-0",
+      "description": "Éligible pour BourseEtudes",
+      "category": "education",
+      "benefitType": "bourseetudes"
+    },
+    {
+      "id": "bourseEtudesRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "education",
+      "benefitType": "bourseetudes"
+    },
+    {
+      "id": "formation-professionnelleRules-0",
+      "description": "Ineligible: âge minimum non atteint (${FORMATION_CONSTANTS.MIN_AGE} ans requis, sauf exceptions)",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-1",
+      "description": "Rule 2 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-2",
+      "description": "Rule 3 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-3",
+      "description": "Rule 4 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-4",
+      "description": "Rule 5 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-5",
+      "description": "Rule 6 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-6",
+      "description": "Rule 7 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-7",
+      "description": "Rule 8 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-8",
+      "description": "Rule 9 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-9",
+      "description": "Rule 10 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formation-professionnelleRules-10",
+      "description": "Rule 11 for formation-professionnelle",
+      "category": "education",
+      "benefitType": "formation-professionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-0",
+      "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis sauf exceptions)",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-1",
+      "description": "Ineligible: non inscrit auprès du service régional de l\\",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-2",
+      "description": "Ineligible: formation non agréée - risque de perdre allocations de chômage",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-3",
+      "description": "Éligible pour formation métier en pénurie",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-4",
+      "description": "Éligible prioritaire - jeune sans qualification",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-5",
+      "description": "Éligible au congé-éducation payé",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-6",
+      "description": "Éligible pour formation en alternance",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-7",
+      "description": "Éligible avec aide garde d\\",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-8",
+      "description": "Accès prioritaire - travailleur 50+",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "formationProfessionnelleRules-9",
+      "description": "Conditions de base remplies pour formation professionnelle",
+      "category": "education",
+      "benefitType": "formationprofessionnelle"
+    },
+    {
+      "id": "assurance-maladieRules-0",
+      "description": "Ineligible: non affilié à une mutuelle - affiliation obligatoire pour tous",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-1",
+      "description": "Ineligible: cotisations sociales impayées - suspension des droits",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-2",
+      "description": "Ineligible: statut BIM automatique - bénéficiaire GRAPA, RIS ou ARR",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-3",
+      "description": "Ineligible: statut BIM automatique - enfant avec allocation handicap >66%",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-4",
+      "description": "Ineligible: revenus inférieurs au seuil BIM (${INAMI_CONSTANTS.SEUIL_BIM_2024.MENAGE_1_PERSONNE}€ pour 1 personne)",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-5",
+      "description": "Ineligible: travailleur salarié affilié à une mutuelle avec cotisations à jour",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-6",
+      "description": "Ineligible: travailleur indépendant - mêmes remboursements mais délai de carence pour indemnités",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-7",
+      "description": "Ineligible: chômeur indemnisé - droits maintenus, cotisations prélevées sur allocations",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-8",
+      "description": "Ineligible: pensionné - droits à l\\",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-9",
+      "description": "Ineligible: étudiant affilié - droit à la CEAM pour soins en Europe",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-10",
+      "description": "Ineligible: malade chronique reconnu avec dépenses supérieures à 365€/an",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assurance-maladieRules-11",
+      "description": "Ineligible: assuré social en ordre de mutuelle",
+      "category": "sante",
+      "benefitType": "assurance-maladie"
+    },
+    {
+      "id": "assuranceMaladieRules-0",
+      "description": "Éligible BIM automatique",
+      "category": "sante",
+      "benefitType": "assurancemaladie"
+    },
+    {
+      "id": "assuranceMaladieRules-1",
+      "description": "Éligible BIM sur base des revenus",
+      "category": "sante",
+      "benefitType": "assurancemaladie"
+    },
+    {
+      "id": "assuranceMaladieRules-2",
+      "description": "Ineligible: Affiliation à une mutuelle obligatoire",
+      "category": "sante",
+      "benefitType": "assurancemaladie"
+    },
+    {
+      "id": "assuranceMaladieRules-3",
+      "description": "Éligible assurance maladie",
+      "category": "sante",
+      "benefitType": "assurancemaladie"
+    },
+    {
+      "id": "assuranceMaladieRules-4",
+      "description": "Calcul MAF requis",
+      "category": "sante",
+      "benefitType": "assurancemaladie"
+    },
+    {
+      "id": "carte-medicaleRules-0",
+      "description": "Ineligible: Résident belge/légal sans ressources suffisantes et sans mutuelle active",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-1",
+      "description": "Ineligible: Bénéficiaire du RIS - carte médicale automatique",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-2",
+      "description": "Ineligible: Sans-papiers en état d\\",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-3",
+      "description": "Ineligible: Demandeur d\\",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-4",
+      "description": "Ineligible: Européen sans ressources depuis moins de 3 mois - AMU temporaire uniquement",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-5",
+      "description": "Ineligible: Étudiant européen sans ressources ne pouvant rentrer - AMU temporaire",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-6",
+      "description": "Ineligible: Travailleur précaire avec mutuelle mais revenus insuffisants - aide partielle",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-7",
+      "description": "Ineligible: Parent isolé bénéficiaire RIS avec enfants scolarisés - carte familiale",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-8",
+      "description": "Ineligible: Personne âgée isolée avec reste à vivre insuffisant et problèmes de santé chroniques",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-9",
+      "description": "Ineligible: Revenus et reste à vivre suffisants avec mutuelle active - carte refusée",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-10",
+      "description": "Ineligible: Séjour irrégulier sans besoin médical urgent attesté - pas d\\",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carte-medicaleRules-11",
+      "description": "Ineligible: Européen depuis moins de 3 mois sans état d\\",
+      "category": "sante",
+      "benefitType": "carte-medicale"
+    },
+    {
+      "id": "carteMedicaleRules-0",
+      "description": "Éligible carte médicale - revenus insuffisants",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "carteMedicaleRules-1",
+      "description": "Éligible carte médicale - bénéficiaire RIS",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "carteMedicaleRules-2",
+      "description": "Éligible AMU - soins urgents",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "carteMedicaleRules-3",
+      "description": "Éligible aide médicale partielle",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "carteMedicaleRules-4",
+      "description": "Éligible carte médicale - personne âgée précaire",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "carteMedicaleRules-5",
+      "description": "Ineligible: Ressources suffisantes",
+      "category": "sante",
+      "benefitType": "cartemedicale"
+    },
+    {
+      "id": "conge-maladieRules-0",
+      "description": "Ineligible: Certificat médical obligatoire non fourni (délai: 48h)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-1",
+      "description": "Ineligible: Cotisations sociales non payées - indépendant non éligible",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-2",
+      "description": "Salaire garanti par employeur (100%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-3",
+      "description": "Salaire garanti ouvrier - Semaine 1 (100%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-4",
+      "description": "Salaire garanti ouvrier - Semaine 2 (85.88%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-5",
+      "description": "Salaire garanti ouvrier - Semaines 3-4 (25.88% employeur + 60% mutuelle)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-6",
+      "description": "Incapacité primaire - Indemnités mutuelle (60% plafonné)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-7",
+      "description": "Invalidité - Avec charge de famille (65%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-8",
+      "description": "Invalidité - Isolé (55%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-9",
+      "description": "Invalidité - Cohabitant (40%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-10",
+      "description": "Indépendant - Période de carence (pas d\\",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-11",
+      "description": "Indépendant - Indemnité partielle",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-12",
+      "description": "Indépendant - Indemnité complète",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-13",
+      "description": "Chômeur malade - Indemnités maladie avec minimum garanti",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-14",
+      "description": "Accident du travail - Couverture assurance AT (90%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-15",
+      "description": "Maladie professionnelle - Couverture Fedris (90%)",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-16",
+      "description": "Congé de maternité - 82% puis 75% du salaire",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "conge-maladieRules-17",
+      "description": "Reprise progressive - Cumul salaire partiel + indemnité partielle",
+      "category": "sante",
+      "benefitType": "conge-maladie"
+    },
+    {
+      "id": "congeMaladieRules-0",
+      "description": "Éligible pour CongeMaladie",
+      "category": "sante",
+      "benefitType": "congemaladie"
+    },
+    {
+      "id": "congeMaladieRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "sante",
+      "benefitType": "congemaladie"
+    },
+    {
+      "id": "maladieProfessionnelleRules-0",
+      "description": "Éligible pour MaladieProfessionnelle",
+      "category": "sante",
+      "benefitType": "maladieprofessionnelle"
+    },
+    {
+      "id": "maladieProfessionnelleRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "sante",
+      "benefitType": "maladieprofessionnelle"
+    },
+    {
+      "id": "soins-sante-mentaleRules-0",
+      "description": "Première séance gratuite (bilan)",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-1",
+      "description": "Séances gratuites pour les moins de 23 ans",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-2",
+      "description": "Séance individuelle adulte - tarif ordinaire",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-3",
+      "description": "Séance individuelle adulte - tarif BIM",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-4",
+      "description": "Séance de groupe - tarif unique",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-5",
+      "description": "Consultation psychiatre - tarif ordinaire",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-6",
+      "description": "Consultation psychiatre - tarif BIM",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-7",
+      "description": "Urgence psychiatrique - admission couverte",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-8",
+      "description": "Hospitalisation jours 1-5 - tarif ordinaire",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-9",
+      "description": "Hospitalisation jours 1-5 - tarif BIM",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soins-sante-mentaleRules-10",
+      "description": "Éligible aux soins de santé mentale remboursés",
+      "category": "sante",
+      "benefitType": "soins-sante-mentale"
+    },
+    {
+      "id": "soinsSanteMentaleRules-0",
+      "description": "Éligible pour SoinsSanteMentale",
+      "category": "sante",
+      "benefitType": "soinssantementale"
+    },
+    {
+      "id": "soinsSanteMentaleRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "sante",
+      "benefitType": "soinssantementale"
+    },
+    {
+      "id": "credit-tempsRules-0",
+      "description": "Le crédit-temps sans motif est supprimé depuis avril 2017",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-1",
+      "description": "Éligible au congé parental",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-2",
+      "description": "Employeur PME peut reporter la demande",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-3",
+      "description": "Éligible au crédit-temps pour assistance médicale",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-4",
+      "description": "Éligible au congé pour soins palliatifs",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-5",
+      "description": "Éligible au crédit-temps fin de carrière 1/5 temps",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-6",
+      "description": "Éligible au crédit-temps fin de carrière mi-temps",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-7",
+      "description": "Éligible à l\\",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-8",
+      "description": "Éligible au crédit-temps pour formation reconnue",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-9",
+      "description": "Les demandes papier ne sont plus acceptées",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-10",
+      "description": "Ineligible: Âge minimum non atteint (${CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_5} ans requis pour réduction 1/5 temps fin de carrière)",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-11",
+      "description": "Ineligible: Âge minimum non atteint (${CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_2} ans requis pour réduction mi-temps fin de carrière)",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-12",
+      "description": "Ineligible: Ancienneté insuffisante (${CREDIT_TEMPS_CONSTANTS.MIN_ANCIENNETE_EMPLOYEUR_MOIS} mois requis)",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-13",
+      "description": "Ineligible: Carrière insuffisante (${CREDIT_TEMPS_CONSTANTS.MIN_CARRIERE_FIN_CARRIERE_ANNEES} ans de carrière salariée requis)",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-14",
+      "description": "Ineligible: Enfant trop âgé (maximum ${CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_CONGE_PARENTAL} ans, ou ${CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_HANDICAPE} ans si handicapé)",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "credit-tempsRules-15",
+      "description": "Ineligible: Maximum de ${CREDIT_TEMPS_CONSTANTS.MAX_CREDIT_TEMPS_AVEC_MOTIF} mois de crédit-temps avec motif déjà atteint",
+      "category": "fiscal",
+      "benefitType": "credit-temps"
+    },
+    {
+      "id": "creditImpotInvestissementDurableRules-0",
+      "description": "Éligible pour CreditImpotInvestissementDurable",
+      "category": "fiscal",
+      "benefitType": "creditimpotinvestissementdurable"
+    },
+    {
+      "id": "creditImpotInvestissementDurableRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "creditimpotinvestissementdurable"
+    },
+    {
+      "id": "creditImpotRules-0",
+      "description": "Ineligible: Revenus trop élevés pour le crédit d\\",
+      "category": "fiscal",
+      "benefitType": "creditimpot"
+    },
+    {
+      "id": "creditImpotRules-1",
+      "description": "Éligible au crédit d\\",
+      "category": "fiscal",
+      "benefitType": "creditimpot"
+    },
+    {
+      "id": "creditImpotRules-2",
+      "description": "Éligible au crédit d\\",
+      "category": "fiscal",
+      "benefitType": "creditimpot"
+    },
+    {
+      "id": "creditImpotRules-3",
+      "description": "Éligible au bonus à l\\",
+      "category": "fiscal",
+      "benefitType": "creditimpot"
+    },
+    {
+      "id": "creditImpotRules-4",
+      "description": "Éligible au bonus parent isolé",
+      "category": "fiscal",
+      "benefitType": "creditimpot"
+    },
+    {
+      "id": "creditImpotServiceLocalRules-0",
+      "description": "Éligible pour CreditImpotServiceLocal",
+      "category": "fiscal",
+      "benefitType": "creditimpotservicelocal"
+    },
+    {
+      "id": "creditImpotServiceLocalRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "creditimpotservicelocal"
+    },
+    {
+      "id": "creditTempsRules-0",
+      "description": "Ineligible: ancienneté insuffisante (${MIN_ANCIENNITY_MONTHS} mois requis)",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-1",
+      "description": "Ineligible: crédit-temps sans motif supprimé depuis avril 2017",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-2",
+      "description": "Éligible pour congé parental",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-3",
+      "description": "Éligible pour assistance médicale",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-4",
+      "description": "Éligible pour soins palliatifs",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-5",
+      "description": "Éligible pour fin de carrière 1/5 temps",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-6",
+      "description": "Éligible pour fin de carrière 1/2 temps",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-7",
+      "description": "Éligible pour crédit-temps formation",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-8",
+      "description": "Employeur peut reporter la demande",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "creditTempsRules-9",
+      "description": "Éligible pour interruption de carrière (secteur public)",
+      "category": "fiscal",
+      "benefitType": "credittemps"
+    },
+    {
+      "id": "deductionDonsRules-0",
+      "description": "Éligible pour DeductionDons",
+      "category": "fiscal",
+      "benefitType": "deductiondons"
+    },
+    {
+      "id": "deductionDonsRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "deductiondons"
+    },
+    {
+      "id": "deductionEmpruntHypothecaireRules-0",
+      "description": "Éligible pour DeductionEmpruntHypothecaire",
+      "category": "fiscal",
+      "benefitType": "deductionemprunthypothecaire"
+    },
+    {
+      "id": "deductionEmpruntHypothecaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "deductionemprunthypothecaire"
+    },
+    {
+      "id": "deductionFraisGardeRules-0",
+      "description": "Ineligible: Aucun enfant éligible pour la déduction",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionFraisGardeRules-1",
+      "description": "Ineligible: Tous les enfants dépassent l",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionFraisGardeRules-2",
+      "description": "Ineligible: Organisme de garde non agréé - aucune déduction possible",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionFraisGardeRules-3",
+      "description": "Ineligible: Attestation fiscale obligatoire manquante",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionFraisGardeRules-4",
+      "description": "Éligible avec taux majoré de 75% (parent isolé revenus modestes)",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionFraisGardeRules-5",
+      "description": "Éligible pour déduction frais de garde",
+      "category": "fiscal",
+      "benefitType": "deductionfraisgarde"
+    },
+    {
+      "id": "deductionHabitationRules-0",
+      "description": "Ineligible: Avantages régionaux réservés à l\\",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-1",
+      "description": "Éligible au chèque habitat wallon",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-2",
+      "description": "Éligible à la déduction des intérêts à Bruxelles",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-3",
+      "description": "Droits acquis bonus logement flamand",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-4",
+      "description": "Ineligible: Pas d\\",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-5",
+      "description": "Déduction ordinaire des intérêts (résidence secondaire)",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionHabitationRules-6",
+      "description": "Ineligible: Non-respect du délai d\\",
+      "category": "fiscal",
+      "benefitType": "deductionhabitation"
+    },
+    {
+      "id": "deductionInvestissementRules-0",
+      "description": "Éligible pour DeductionInvestissement",
+      "category": "fiscal",
+      "benefitType": "deductioninvestissement"
+    },
+    {
+      "id": "deductionInvestissementRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "deductioninvestissement"
+    },
+    {
+      "id": "deductionIsolationRules-0",
+      "description": "Éligible pour DeductionIsolation",
+      "category": "fiscal",
+      "benefitType": "deductionisolation"
+    },
+    {
+      "id": "deductionIsolationRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "deductionisolation"
+    },
+    {
+      "id": "deductionVehiculeElectriqueRules-0",
+      "description": "Éligible pour DeductionVehiculeElectrique",
+      "category": "fiscal",
+      "benefitType": "deductionvehiculeelectrique"
+    },
+    {
+      "id": "deductionVehiculeElectriqueRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "fiscal",
+      "benefitType": "deductionvehiculeelectrique"
+    },
+    {
+      "id": "pensionComplementaireRules-0",
+      "description": "Éligible pour PensionComplementaire",
+      "category": "pension",
+      "benefitType": "pensioncomplementaire"
+    },
+    {
+      "id": "pensionComplementaireRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "pension",
+      "benefitType": "pensioncomplementaire"
+    },
+    {
+      "id": "pensionRetraiteRules-0",
+      "description": "Éligible pour PensionRetraite",
+      "category": "pension",
+      "benefitType": "pensionretraite"
+    },
+    {
+      "id": "pensionRetraiteRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "pension",
+      "benefitType": "pensionretraite"
+    },
+    {
+      "id": "pensionSurvieRules-0",
+      "description": "Éligible pour PensionSurvie",
+      "category": "pension",
+      "benefitType": "pensionsurvie"
+    },
+    {
+      "id": "pensionSurvieRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "pension",
+      "benefitType": "pensionsurvie"
+    },
+    {
+      "id": "reductionEpargnePensionRules-0",
+      "description": "Éligible pour ReductionEpargnePension",
+      "category": "pension",
+      "benefitType": "reductionepargnepension"
+    },
+    {
+      "id": "reductionEpargnePensionRules-1",
+      "description": "Ineligible: conditions de base non remplies",
+      "category": "pension",
+      "benefitType": "reductionepargnepension"
+    }
+  ]
 }

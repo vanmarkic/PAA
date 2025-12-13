@@ -1,0 +1,26 @@
+{
+  "id": "allocations-familialesRules-5",
+  "description": "Éligible au supplément famille monoparentale",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 30,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSingleParent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasLegalResidenceInBelgium",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-supplement"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

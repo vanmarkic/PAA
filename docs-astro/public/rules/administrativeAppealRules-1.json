@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-1",
+  "description": "Rule 2 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[mediateur-federal"
+      },
+      {
+        "fact": "daysSinceIncident",
+        "operator": "greaterThan",
+        "value": 365
+      }
+    ]
+  },
+  "event": {
+    "type": "delay-exceeded"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

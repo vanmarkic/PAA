@@ -1,0 +1,31 @@
+{
+  "id": "carte-medicaleRules-11",
+  "description": "Ineligible: Européen depuis moins de 3 mois sans état d\\",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "in",
+        "value": "[eu_citizen"
+      },
+      {
+        "fact": "monthsInBelgium",
+        "operator": "lessThan",
+        "value": "CARTE_MEDICALE_CONSTANTS.EU_CITIZEN_MIN_RESIDENCE_MONTHS"
+      },
+      {
+        "fact": "isIndigent",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-ineligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

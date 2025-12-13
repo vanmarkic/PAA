@@ -1,0 +1,31 @@
+{
+  "id": "credit-tempsRules-11",
+  "description": "Ineligible: Âge minimum non atteint (${CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_2} ans requis pour réduction mi-temps fin de carrière)",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 78,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "fin_carriere"
+      },
+      {
+        "fact": "reduction",
+        "operator": "equal",
+        "value": "mi_temps"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_2"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-ineligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

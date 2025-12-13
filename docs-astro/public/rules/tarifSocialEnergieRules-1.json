@@ -1,0 +1,21 @@
+{
+  "id": "tarifSocialEnergieRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "social",
+  "benefitType": "tarifsocialenergie",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-ineligible"
+  },
+  "fileName": "tarifSocialEnergieRules",
+  "generated": "2025-12-13T17:27:42.419Z"
+}

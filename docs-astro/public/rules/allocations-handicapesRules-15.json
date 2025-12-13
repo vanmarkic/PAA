@@ -1,0 +1,26 @@
+{
+  "id": "allocations-handicapesRules-15",
+  "description": "AI cumulable avec indemnité accident du travail, ARR réduite",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 30,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasWorkAccidentIndemnity",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "greaterThanInclusive",
+        "value": "HANDICAP_CONSTANTS.MIN_POINTS_FOR_AI"
+      }
+    ]
+  },
+  "event": {
+    "type": "work-accident-cumulation"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

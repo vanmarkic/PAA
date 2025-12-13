@@ -1,0 +1,56 @@
+{
+  "id": "aide-logementRules-10",
+  "description": "Ineligible: famille avec enfants quittant logement inadapté - ADeL avec majoration enfants",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "couple-avec-enfants"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "parent-isole"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "lessThanInclusive",
+        "value": "AIDE_LOGEMENT_CONSTANTS.WALLONIE.PLAFOND_REVENUS_COUPLE"
+      },
+      {
+        "fact": "quitteLogementSurpeuple",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "quitteLogementInsalubre",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      },
+      {
+        "fact": "nombreEnfants",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "conge-parentalRules-6",
+  "description": "protection contre le licenciement active",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enCongeParental",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "notificationEmployeur",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-protection"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

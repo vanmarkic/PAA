@@ -28,7 +28,7 @@
   },
   "scenarios": [
     {
-      "id": "2ea4b75b-5520-4a18-a684-3907d2247df2",
+      "id": "111884f4-2c83-482d-af0f-1f4687473213",
       "name": "Établissement d'un bail d'habitation conforme",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "2ee16b21-32a0-462e-a925-8f912ae81da1",
+      "id": "51675b77-e530-454f-8508-e17b22af431c",
       "name": "Constitution de la garantie locative bancaire",
       "description": "",
       "tags": [],
@@ -175,7 +175,7 @@
       "isOutline": false
     },
     {
-      "id": "a925ccf6-cf74-4614-b9bd-336d454cfad1",
+      "id": "1956a01b-a1f1-408d-b367-103a1979e251",
       "name": "Calcul de l'indexation annuelle du loyer",
       "description": "",
       "tags": [],
@@ -220,7 +220,7 @@
       "isOutline": false
     },
     {
-      "id": "a79546bc-ae09-4329-8cd1-16ad1f75f436",
+      "id": "1fbc1a36-b5e3-412f-a710-d83f0f947433",
       "name": "Réalisation de l'état des lieux contradictoire",
       "description": "",
       "tags": [],
@@ -287,7 +287,7 @@
       "isOutline": false
     },
     {
-      "id": "3096bf60-6203-466a-a4f0-35895d7b9982",
+      "id": "6186b6ea-0677-453a-9d75-94beff55a85e",
       "name": "Répartition des obligations de réparation",
       "description": "",
       "tags": [],
@@ -351,7 +351,7 @@
       "isOutline": false
     },
     {
-      "id": "383fdc62-d44f-4a58-8505-dfd5de493bcf",
+      "id": "f1496e47-0936-4751-a07b-991d401daabf",
       "name": "Résiliation du bail par le locataire",
       "description": "",
       "tags": [],
@@ -417,7 +417,7 @@
       "isOutline": false
     },
     {
-      "id": "afc6a0af-d35e-4b13-adf9-766b394e3ced",
+      "id": "0a82512f-f9df-41bc-ade3-f3ed021d441c",
       "name": "Procédure d'expulsion pour non-paiement",
       "description": "",
       "tags": [],
@@ -489,7 +489,7 @@
       "isOutline": false
     },
     {
-      "id": "a3622acd-4c54-4d19-841a-75da5010a79a",
+      "id": "733e5a76-3817-49b3-9186-ef38ffaa74c8",
       "name": "Location d'un logement étudiant",
       "description": "",
       "tags": [],
@@ -558,7 +558,7 @@
       "isOutline": false
     },
     {
-      "id": "470f3074-e64c-493b-8246-a5732da6c4ca",
+      "id": "011ddff7-ab04-4710-a0a4-c6bf66ceb591",
       "name": "Mise en place d'une colocation légale",
       "description": "",
       "tags": [],
@@ -623,7 +623,7 @@
       "isOutline": false
     },
     {
-      "id": "51efea44-ac8f-40f7-9f85-82d220d59d2f",
+      "id": "906671b6-fe81-4e1b-b27e-551b88e3eefa",
       "name": "Recours pour logement insalubre",
       "description": "",
       "tags": [],
@@ -695,7 +695,7 @@
       "isOutline": false
     },
     {
-      "id": "e64299de-50b3-4a0d-82a5-937b68d3f63c",
+      "id": "b9bdd777-ca87-4694-8ed3-14a56691849c",
       "name": "Calcul du préavis selon la durée d'occupation",
       "description": "",
       "tags": [],
@@ -738,7 +738,7 @@
           ],
           "rows": [
             {
-              "name": "00cec7ad-9bb1-4f32-ab9b-83438a9b940a",
+              "name": "829c5c87-354d-4ceb-bd36-735ffb633525",
               "values": {
                 "type_bail": "9 ans",
                 "mois_occupation": "5",
@@ -748,7 +748,7 @@
               }
             },
             {
-              "name": "68b1c9e6-c8e8-4690-a9f8-3c6a7436e5e3",
+              "name": "a908a4bd-e228-4a39-a3da-1071798de1c4",
               "values": {
                 "type_bail": "9 ans",
                 "mois_occupation": "8",
@@ -758,7 +758,7 @@
               }
             },
             {
-              "name": "045a855d-58de-4b15-9fe4-be84b4c7cc30",
+              "name": "b8e4fd37-4be7-4bec-b66e-b3dea89141ef",
               "values": {
                 "type_bail": "9 ans",
                 "mois_occupation": "15",
@@ -768,7 +768,7 @@
               }
             },
             {
-              "name": "4850be29-1128-470f-9eac-500bb478e23b",
+              "name": "6842a2ee-655c-4c22-9df1-995ebcb7b8c1",
               "values": {
                 "type_bail": "9 ans",
                 "mois_occupation": "24",
@@ -778,7 +778,7 @@
               }
             },
             {
-              "name": "61e3cead-240b-4fb8-b4ea-324e74308436",
+              "name": "e318a317-4c14-4a4c-a4dd-91b7b91b807e",
               "values": {
                 "type_bail": "3 ans",
                 "mois_occupation": "12",
@@ -788,7 +788,7 @@
               }
             },
             {
-              "name": "8bf9bc52-ba7b-43d1-a752-690b1e7d4164",
+              "name": "d2867bac-1886-4bf1-8d10-fc440c7088e9",
               "values": {
                 "type_bail": "9 ans",
                 "mois_occupation": "36",
@@ -806,5 +806,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.166Z"
+  "generated": "2025-12-13T17:25:45.883Z"
 }

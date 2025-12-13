@@ -1,0 +1,36 @@
+{
+  "id": "garantie-locativeRules-2",
+  "description": "Situation prioritaire - Don exceptionnel possible",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 95,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estSortantInstitution",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": 21
+      },
+      {
+        "fact": "epargne",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "aFamille",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

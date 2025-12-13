@@ -1,0 +1,21 @@
+{
+  "id": "logementSocialRules-6",
+  "description": "Ineligible: non inscrit au registre de la population",
+  "category": "logement",
+  "benefitType": "logementsocial",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "registeredInBelgium",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "wallonia-social-ineligible"
+  },
+  "fileName": "logementSocialRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "credit-tempsRules-5",
+  "description": "Éligible au crédit-temps fin de carrière 1/5 temps",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "fin_carriere"
+      },
+      {
+        "fact": "reduction",
+        "operator": "equal",
+        "value": "un_cinquieme"
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_AGE_FIN_CARRIERE_1_5"
+      },
+      {
+        "fact": "carriereAnnees",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_CARRIERE_FIN_CARRIERE_ANNEES"
+      },
+      {
+        "fact": "secteur",
+        "operator": "equal",
+        "value": "prive"
+      },
+      {
+        "fact": "accordEmployeur",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-eligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "logementSocialRules-0",
+  "description": "Ineligible: Revenus dépassent le plafond pour logement social",
+  "category": "logement",
+  "benefitType": "logementsocial",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "adjustedIncome",
+        "operator": "greaterThan",
+        "value": "IMMOBILIER_CONSTANTS.SOCIAL_HOUSING_CEILINGS.wallonie.single"
+      },
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "bruxelles"
+      },
+      {
+        "fact": "adjustedIncome",
+        "operator": "greaterThan",
+        "value": "IMMOBILIER_CONSTANTS.SOCIAL_HOUSING_CEILINGS.bruxelles.single"
+      },
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "flandre"
+      },
+      {
+        "fact": "adjustedIncome",
+        "operator": "greaterThan",
+        "value": "IMMOBILIER_CONSTANTS.SOCIAL_HOUSING_CEILINGS.flandre.single"
+      }
+    ]
+  },
+  "event": {
+    "type": "income-too-high"
+  },
+  "fileName": "logementSocialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

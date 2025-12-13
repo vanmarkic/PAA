@@ -1,0 +1,26 @@
+{
+  "id": "artistUnemploymentRules-1",
+  "description": "Période de protection de 12 mois active",
+  "category": "emploi",
+  "benefitType": "artistunemployment",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasProtectionPeriod",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthsSinceLastWork",
+        "operator": "lessThanInclusive",
+        "value": "ARTIST_STATUS_CONSTANTS.PROTECTION_PERIOD_MONTHS"
+      }
+    ]
+  },
+  "event": {
+    "type": "protection-period-active"
+  },
+  "fileName": "artistUnemploymentRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

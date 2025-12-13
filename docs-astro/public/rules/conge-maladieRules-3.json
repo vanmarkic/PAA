@@ -1,0 +1,31 @@
+{
+  "id": "conge-maladieRules-3",
+  "description": "Salaire garanti ouvrier - Semaine 1 (100%)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 79,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "ouvrier"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "lessThanInclusive",
+        "value": "CONGE_MALADIE_CONSTANTS.SALAIRE_GARANTI_OUVRIER_100_JOURS"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "prime-renovationRules-2",
+  "description": "Ineligible: Doit être propriétaire ou locataire avec accord écrit du propriétaire",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isTenant",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "hasOwnerAgreement",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-ineligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

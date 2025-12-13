@@ -1,0 +1,26 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-18",
+  "description": "Droits de succession applicables au bail à ferme",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 35,
+  "conditions": {
+    "all": [
+      {
+        "fact": "bailType",
+        "operator": "equal",
+        "value": "bail-ferme"
+      },
+      {
+        "fact": "succession",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "succession-rights"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "garantie-locativeRules-3",
+  "description": "Jeune sans ressources - Don exceptionnel",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 94,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": 18
+      },
+      {
+        "fact": "revenus",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "epargne",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

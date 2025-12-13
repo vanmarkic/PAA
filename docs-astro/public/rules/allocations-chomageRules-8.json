@@ -1,0 +1,41 @@
+{
+  "id": "allocations-chomageRules-8",
+  "description": "Rule 9 for allocations-chomage",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.AGE_THRESHOLD"
+      },
+      {
+        "fact": "daysWorked",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.DAYS_REQUIRED_36_AND_OVER"
+      },
+      {
+        "fact": "isRegisteredWithONEM",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isAvailableForWork",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "unemploymentType",
+        "operator": "notEqual",
+        "value": "demission"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-eligible"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

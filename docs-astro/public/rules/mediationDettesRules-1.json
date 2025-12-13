@@ -1,0 +1,21 @@
+{
+  "id": "mediationDettesRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "autre",
+  "benefitType": "mediationdettes",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "mediationDettes-ineligible"
+  },
+  "fileName": "mediationDettesRules",
+  "generated": "2025-12-13T17:27:42.400Z"
+}

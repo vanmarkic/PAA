@@ -1,0 +1,21 @@
+{
+  "id": "allocations-handicapesRules-3",
+  "description": "Ineligible: évaluation médicale DG Handicap requise",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 97,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasMedicalEvaluation",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocations-handicapes-ineligible"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "logementSocialRules-3",
+  "description": "Ineligible: Doit être résident légal en Belgique",
+  "category": "logement",
+  "benefitType": "logementsocial",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "legalResident",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "no-residency"
+  },
+  "fileName": "logementSocialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

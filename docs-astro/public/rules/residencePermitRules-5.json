@@ -1,0 +1,36 @@
+{
+  "id": "residencePermitRules-5",
+  "description": "Éligible pour carte bleue européenne",
+  "category": "autre",
+  "benefitType": "residencepermit",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestedCardType",
+        "operator": "equal",
+        "value": "H"
+      },
+      {
+        "fact": "hasHighQualificationDiploma",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "annualSalary",
+        "operator": "greaterThanInclusive",
+        "value": 58000
+      },
+      {
+        "fact": "hasWorkContract",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "blue-card-eligible"
+  },
+  "fileName": "residencePermitRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

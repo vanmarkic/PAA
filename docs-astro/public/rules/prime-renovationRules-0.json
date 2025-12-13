@@ -1,0 +1,26 @@
+{
+  "id": "prime-renovationRules-0",
+  "description": "Ineligible: Système Renolution suspendu en 2025 - Attente nouveau gouvernement",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.BRUXELLES"
+      },
+      {
+        "fact": "year",
+        "operator": "greaterThanInclusive",
+        "value": 2025
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-ineligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

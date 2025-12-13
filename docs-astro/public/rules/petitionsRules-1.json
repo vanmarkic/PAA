@@ -1,0 +1,26 @@
+{
+  "id": "petitionsRules-1",
+  "description": "Ineligible: Pétitions fédérales réservées aux citoyens belges",
+  "category": "autre",
+  "benefitType": "petitions",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "petitionType",
+        "operator": "equal",
+        "value": "petition-federale"
+      },
+      {
+        "fact": "signerNationalite",
+        "operator": "notEqual",
+        "value": "belge"
+      }
+    ]
+  },
+  "event": {
+    "type": "signature-ineligible"
+  },
+  "fileName": "petitionsRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

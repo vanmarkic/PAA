@@ -1,0 +1,26 @@
+{
+  "id": "logement-socialRules-10",
+  "description": "Éligible en urgence via Housing First",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estSansAbri",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "accompagnementCPAS",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-eligible-urgence"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

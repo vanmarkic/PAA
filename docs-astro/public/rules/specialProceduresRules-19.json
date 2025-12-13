@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-19",
+  "description": "Ineligible: Question of principle relating to Convention interpretation",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "raisesQuestionOfPrinciple",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "relatedToPendingCase",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "accept-request"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "teletravailRules-0",
+  "description": "Éligible pour Teletravail",
+  "category": "autre",
+  "benefitType": "teletravail",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "teletravail-eligible"
+  },
+  "fileName": "teletravailRules",
+  "generated": "2025-12-13T17:27:42.410Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Emploi",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Loi du 21 novembre 2022 relative au télétravail occasionnel et régulier",
+        "publicationDate": "2022-12-02T00:00:00.000Z",
+        "effectiveDate": "2023-01-01T00:00:00.000Z",
+        "officialUrl": "https://emploi.belgique.be/fr/themes/contrats-de-travail/teletravail",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2022-11-21T00:00:00.000Z",
+    "version": "2024.1.0"
+  }
+}

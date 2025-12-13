@@ -1,0 +1,36 @@
+{
+  "id": "asylumRules-1",
+  "description": "Éligible au statut de réfugié (Convention de Genève)",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasFearOfPersecution",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "persecutionReason",
+        "operator": "in",
+        "value": "[race"
+      },
+      {
+        "fact": "cannotReturnSafely",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isCredible",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "refugee-eligible"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

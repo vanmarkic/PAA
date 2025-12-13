@@ -1,0 +1,21 @@
+{
+  "id": "conge-parentalRules-2",
+  "description": "Ineligible: ancienneté insuffisante (12 mois requis)",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 98,
+  "conditions": {
+    "all": [
+      {
+        "fact": "ancienneteMois",
+        "operator": "lessThan",
+        "value": "CONGE_PARENTAL_CONSTANTS.MIN_ANCIENNETE_MOIS"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-ineligible"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

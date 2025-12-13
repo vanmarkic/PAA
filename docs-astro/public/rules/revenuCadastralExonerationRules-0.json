@@ -1,0 +1,21 @@
+{
+  "id": "revenuCadastralExonerationRules-0",
+  "description": "Éligible pour RevenuCadastralExoneration",
+  "category": "autre",
+  "benefitType": "revenucadastralexoneration",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "revenuCadastralExoneration-eligible"
+  },
+  "fileName": "revenuCadastralExonerationRules",
+  "generated": "2025-12-13T17:27:42.408Z"
+}

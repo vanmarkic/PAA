@@ -37,6 +37,9 @@ if (!rule) {
   return Astro.redirect('/rules');
 }
 
+// Ensure rule has event property for safety
+const ruleEvent = rule.event || { type: 'unknown' };
+
 // Load index for related items
 const rulesIndex = await loadRulesIndex();
 const featuresIndex = await loadFeaturesIndex();
@@ -304,14 +307,14 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
           <div class="space-y-4">
             <div>
               <span class="text-gray-600 font-medium">Type d'événement:</span>
-              <code class="ml-2 px-3 py-1 bg-purple-100 text-purple-700 rounded text-sm">{rule.event.type}</code>
+              <code class="ml-2 px-3 py-1 bg-purple-100 text-purple-700 rounded text-sm">{ruleEvent.type}</code>
             </div>
 
-            {rule.event.params && (
+            {ruleEvent.params && (
               <div>
                 <span class="text-gray-600 font-medium">Paramètres:</span>
                 <div class="mt-2 bg-gray-50 rounded-lg p-3">
-                  <pre class="text-sm text-gray-700">{JSON.stringify(rule.event.params, null, 2)}</pre>
+                  <pre class="text-sm text-gray-700">{JSON.stringify(ruleEvent.params, null, 2)}</pre>
                 </div>
               </div>
             )}
@@ -319,12 +322,12 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <h3 class="font-medium text-blue-900 mb-2">Interprétation</h3>
               <p class="text-blue-700 text-sm">
-                {rule.event.type.includes('eligible') ? (
+                {ruleEvent.type.includes('eligible') ? (
                   <>Cette règle détermine l'éligibilité pour la prestation. Si toutes les conditions sont remplies, le demandeur est éligible.</>
-                ) : rule.event.type.includes('ineligible') ? (
+                ) : ruleEvent.type.includes('ineligible') ? (
                   <>Cette règle identifie les cas d'inéligibilité. Si les conditions sont remplies, le demandeur n'est pas éligible.</>
                 ) : (
-                  <>Cette règle déclenche l'événement <code>{rule.event.type}</code> lorsque les conditions sont remplies.</>
+                  <>Cette règle déclenche l'événement <code>{ruleEvent.type}</code> lorsque les conditions sont remplies.</>
                 )}
               </p>
             </div>
@@ -360,7 +363,7 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
                     <svg class="w-px h-8 bg-gray-400 mx-auto mt-4"></svg>
 
                     <div class="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-lg">
-                      → {rule.event.type}
+                      → {ruleEvent.type}
                     </div>
                   </div>
                 )}
@@ -674,7 +677,7 @@ function getLogicTreeIcon(type: 'all' | 'any'): string {
               <p class="text-gray-600 text-sm mb-3">{related.benefitType || 'Général'}</p>
               <div class="flex items-center text-sm text-gray-500">
                 <span class="mr-3">P{related.priority}</span>
-                <span>{related.event.type}</span>
+                <span>{related.event?.type || 'N/A'}</span>
               </div>
             </a>
           ))}

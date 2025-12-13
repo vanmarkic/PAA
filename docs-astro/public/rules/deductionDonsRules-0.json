@@ -1,0 +1,21 @@
+{
+  "id": "deductionDonsRules-0",
+  "description": "Éligible pour DeductionDons",
+  "category": "fiscal",
+  "benefitType": "deductiondons",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "deductionDons-eligible"
+  },
+  "fileName": "deductionDonsRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

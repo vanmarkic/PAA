@@ -1,0 +1,26 @@
+{
+  "id": "tarif-social-energieRules-1",
+  "description": "Ineligible: Bénéficiaire GRAPA - application automatique via SPF Économie",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 99,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasGRAPA",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "spfDataTransmitted",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-eligible"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

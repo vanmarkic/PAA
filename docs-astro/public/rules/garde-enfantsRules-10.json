@@ -1,0 +1,36 @@
+{
+  "id": "garde-enfantsRules-10",
+  "description": "Éligible aux aides pour garde d\\",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 30,
+  "conditions": {
+    "all": [
+      {
+        "fact": "garde_subventionnee",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "type_garde",
+        "operator": "in",
+        "value": "[creche_one"
+      },
+      {
+        "fact": "ageAnnees",
+        "operator": "lessThanInclusive",
+        "value": "GARDE_ENFANTS_CONSTANTS.AGE_MAX_DEDUCTION_FISCALE"
+      },
+      {
+        "fact": "statut_bim",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-eligible"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

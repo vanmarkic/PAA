@@ -1,0 +1,26 @@
+{
+  "id": "conge-materniteRules-0",
+  "description": "Ineligible: doit être enceinte ou avoir accouché récemment",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enceinte",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "accouchementPremature",
+        "operator": "notEqual",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-ineligible"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

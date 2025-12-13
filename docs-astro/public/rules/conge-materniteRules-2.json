@@ -1,0 +1,26 @@
+{
+  "id": "conge-materniteRules-2",
+  "description": "Ineligible: durée de cotisation insuffisante (minimum 6 mois requis)",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "dureeCotisation",
+        "operator": "lessThan",
+        "value": "CONGE_MATERNITE_CONSTANTS.DUREE_COTISATION_MIN_MOIS"
+      },
+      {
+        "fact": "cotisationSecuriteSociale",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-cotisations-insuffisantes"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

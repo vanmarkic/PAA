@@ -1,0 +1,21 @@
+{
+  "id": "acquisitionRules-0",
+  "description": "Ineligible: Acheteur doit avoir minimum 18 ans",
+  "category": "autre",
+  "benefitType": "acquisition",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "buyerAge",
+        "operator": "lessThan",
+        "value": 18
+      }
+    ]
+  },
+  "event": {
+    "type": "acquisition-ineligible"
+  },
+  "fileName": "acquisitionRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

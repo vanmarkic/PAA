@@ -1,0 +1,21 @@
+{
+  "id": "exonerationRevenusMobiliersRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "autre",
+  "benefitType": "exonerationrevenusmobiliers",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "exonerationRevenusMobiliers-ineligible"
+  },
+  "fileName": "exonerationRevenusMobiliersRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

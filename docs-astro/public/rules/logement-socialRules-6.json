@@ -1,0 +1,36 @@
+{
+  "id": "logement-socialRules-6",
+  "description": "Ineligible: revenus dépassent le plafond adapté pour ménage en Flandres 2024",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 76,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "Flandres"
+      },
+      {
+        "fact": "anneeReference",
+        "operator": "equal",
+        "value": 2024
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "notEqual",
+        "value": "personne_isolee"
+      },
+      {
+        "fact": "revenuDepasse_flandres_2024_autres",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-ineligible"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

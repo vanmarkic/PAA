@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-3",
+  "description": "Rule 4 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[conseil-etat-annulation"
+      },
+      {
+        "fact": "hasAdministrativeAct",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "no-administrative-act"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

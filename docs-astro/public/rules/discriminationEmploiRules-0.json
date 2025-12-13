@@ -1,0 +1,21 @@
+{
+  "id": "discriminationEmploiRules-0",
+  "description": "Éligible pour DiscriminationEmploi",
+  "category": "autre",
+  "benefitType": "discriminationemploi",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "discriminationEmploi-eligible"
+  },
+  "fileName": "discriminationEmploiRules",
+  "generated": "2025-12-13T17:27:42.388Z"
+}

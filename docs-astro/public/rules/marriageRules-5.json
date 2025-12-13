@@ -1,0 +1,26 @@
+{
+  "id": "marriageRules-5",
+  "description": "Ineligible: Délai de ${CIVIL_RIGHTS_CONSTANTS.MARRIAGE_DECLARATION_DAYS} jours requis après publication des bans",
+  "category": "autre",
+  "benefitType": "marriage",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "declarationSubmitted",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "daysSinceDeclaration",
+        "operator": "lessThan",
+        "value": "CIVIL_RIGHTS_CONSTANTS.MARRIAGE_DECLARATION_DAYS"
+      }
+    ]
+  },
+  "event": {
+    "type": "banns-period-not-complete"
+  },
+  "fileName": "marriageRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

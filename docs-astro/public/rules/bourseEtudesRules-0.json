@@ -1,0 +1,21 @@
+{
+  "id": "bourseEtudesRules-0",
+  "description": "Éligible pour BourseEtudes",
+  "category": "education",
+  "benefitType": "bourseetudes",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "bourseEtudes-eligible"
+  },
+  "fileName": "bourseEtudesRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

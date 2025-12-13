@@ -1,0 +1,21 @@
+{
+  "id": "maladieProfessionnelleRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "sante",
+  "benefitType": "maladieprofessionnelle",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "maladieProfessionnelle-ineligible"
+  },
+  "fileName": "maladieProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-3",
+  "description": "demandeur d\\",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "asylum-seeker"
+      },
+      {
+        "fact": "asylumProcedureActive",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-demandeur-asile"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

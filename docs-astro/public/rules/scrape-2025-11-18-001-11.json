@@ -1,0 +1,31 @@
+{
+  "id": "scrape-2025-11-18-001-11",
+  "description": "In aanmerking voor huurpremie",
+  "category": "autre",
+  "benefitType": "scrape-2025-11-18-001",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isRenting",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "waitingListYears",
+        "operator": "greaterThanInclusive",
+        "value": "FLANDERS_2024.waitingListMinYears"
+      }
+    ]
+  },
+  "event": {
+    "type": "flanders-eligible"
+  },
+  "fileName": "scrape-2025-11-18-001",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

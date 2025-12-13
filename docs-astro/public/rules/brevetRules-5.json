@@ -1,0 +1,26 @@
+{
+  "id": "brevetRules-5",
+  "description": "Ineligible: Délai PCT de ${IP_CONSTANTS.PATENT_PCT_PERIOD} mois pour phase nationale dépassé",
+  "category": "autre",
+  "benefitType": "brevet",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isPCTApplication",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthsSincePCTFiling",
+        "operator": "greaterThan",
+        "value": "IP_CONSTANTS.PATENT_PCT_PERIOD"
+      }
+    ]
+  },
+  "event": {
+    "type": "pct-deadline-missed"
+  },
+  "fileName": "brevetRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

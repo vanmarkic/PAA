@@ -1,0 +1,31 @@
+{
+  "id": "insertionProfessionnelleRules-7",
+  "description": "Éligible pour Formation Professionnelle Individuelle",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentStatus",
+        "operator": "in",
+        "value": "[chomeur"
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "fpi"
+      },
+      {
+        "fact": "hasEmployerReady",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible-fpi"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

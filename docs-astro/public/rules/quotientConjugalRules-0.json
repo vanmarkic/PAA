@@ -1,0 +1,21 @@
+{
+  "id": "quotientConjugalRules-0",
+  "description": "Éligible pour QuotientConjugal",
+  "category": "autre",
+  "benefitType": "quotientconjugal",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "quotientConjugal-eligible"
+  },
+  "fileName": "quotientConjugalRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

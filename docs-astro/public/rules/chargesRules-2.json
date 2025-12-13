@@ -1,0 +1,21 @@
+{
+  "id": "chargesRules-2",
+  "description": "Rule 3 for charges",
+  "category": "autre",
+  "benefitType": "charges",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "jours_retard",
+        "operator": "greaterThan",
+        "value": 90
+      }
+    ]
+  },
+  "event": {
+    "type": "impayes-graves"
+  },
+  "fileName": "chargesRules",
+  "generated": "2025-12-13T17:27:42.382Z"
+}

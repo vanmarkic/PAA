@@ -1,0 +1,26 @@
+{
+  "id": "residencePermitRules-0",
+  "description": "Ineligible: Pas de statut de séjour valide ou entrée irrégulière",
+  "category": "autre",
+  "benefitType": "residencepermit",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "currentResidenceStatus",
+        "operator": "equal",
+        "value": "no-status"
+      },
+      {
+        "fact": "hasValidEntry",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "residence-ineligible"
+  },
+  "fileName": "residencePermitRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

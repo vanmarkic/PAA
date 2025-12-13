@@ -1,0 +1,31 @@
+{
+  "id": "marqueRules-6",
+  "description": "Ineligible: Marque susceptible de déchéance pour non-usage (5 ans)",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isRegistered",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "yearsSinceRegistration",
+        "operator": "greaterThanInclusive",
+        "value": 5
+      },
+      {
+        "fact": "hasGenuineUse",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "trademark-vulnerable-cancellation"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "horaireFlexibleRules-0",
+  "description": "Éligible pour HoraireFlexible",
+  "category": "autre",
+  "benefitType": "horaireflexible",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "horaireFlexible-eligible"
+  },
+  "fileName": "horaireFlexibleRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

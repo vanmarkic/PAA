@@ -1,0 +1,21 @@
+{
+  "id": "gardeEnfantsRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "autre",
+  "benefitType": "gardeenfants",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-ineligible"
+  },
+  "fileName": "gardeEnfantsRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

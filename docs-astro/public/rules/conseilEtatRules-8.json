@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-8",
+  "description": "Rule 9 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[conseil-etat-annulation"
+      },
+      {
+        "fact": "hasSeriousGrounds",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "no-serious-grounds"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.407Z"
+}

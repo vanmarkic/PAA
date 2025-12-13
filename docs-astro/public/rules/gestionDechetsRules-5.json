@@ -1,0 +1,26 @@
+{
+  "id": "gestionDechetsRules-5",
+  "description": "Rule 6 for gestiondechets",
+  "category": "autre",
+  "benefitType": "gestiondechets",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "treatmentMethod",
+        "operator": "equal",
+        "value": "recyclage"
+      },
+      {
+        "fact": "hasStorageFacility",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "recycling-center"
+  },
+  "fileName": "gestionDechetsRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

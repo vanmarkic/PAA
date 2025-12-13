@@ -1,0 +1,31 @@
+{
+  "id": "garantie-locativeRules-4",
+  "description": "Sans-abri relogé - Don avec accompagnement",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 93,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estSansAbri",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "revenus",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "epargne",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

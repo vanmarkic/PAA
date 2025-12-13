@@ -1,0 +1,26 @@
+{
+  "id": "insertionProfessionnelleRules-6",
+  "description": "Éligible pour emploi titres-services",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isIsolatedParent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "titre-service"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible-titre-service"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

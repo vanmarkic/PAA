@@ -1,0 +1,26 @@
+{
+  "id": "credit-tempsRules-13",
+  "description": "Ineligible: Carrière insuffisante (${CREDIT_TEMPS_CONSTANTS.MIN_CARRIERE_FIN_CARRIERE_ANNEES} ans de carrière salariée requis)",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 77,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "fin_carriere"
+      },
+      {
+        "fact": "carriereAnnees",
+        "operator": "lessThan",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_CARRIERE_FIN_CARRIERE_ANNEES"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-ineligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

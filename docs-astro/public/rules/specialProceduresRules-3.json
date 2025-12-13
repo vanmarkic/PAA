@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-3",
+  "description": "Ineligible: Case does not raise sufficiently important issues",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "routineApplication",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "wellEstablishedCaseLaw",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "reject-referral"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

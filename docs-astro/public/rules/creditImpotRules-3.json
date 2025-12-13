@@ -1,0 +1,26 @@
+{
+  "id": "creditImpotRules-3",
+  "description": "Éligible au bonus à l\\",
+  "category": "fiscal",
+  "benefitType": "creditimpot",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "employed"
+      },
+      {
+        "fact": "grossMonthlySalary",
+        "operator": "lessThan",
+        "value": "TAX_CREDIT_CONSTANTS_2024.workBonus.salaryThreshold"
+      }
+    ]
+  },
+  "event": {
+    "type": "workbonus-eligible"
+  },
+  "fileName": "creditImpotRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

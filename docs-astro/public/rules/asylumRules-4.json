@@ -1,0 +1,36 @@
+{
+  "id": "asylumRules-4",
+  "description": "Demandeur vulnérable - procédures spéciales requises",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "isUnaccompaniedMinor",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasTortureSigns",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasMentalHealthIssues",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isPregnant",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "vulnerable-applicant"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

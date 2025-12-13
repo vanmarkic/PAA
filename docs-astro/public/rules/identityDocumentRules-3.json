@@ -1,0 +1,26 @@
+{
+  "id": "identityDocumentRules-3",
+  "description": "Rule 4 for identitydocument",
+  "category": "autre",
+  "benefitType": "identitydocument",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "documentStatus",
+        "operator": "equal",
+        "value": "perdu"
+      },
+      {
+        "fact": "documentStatus",
+        "operator": "equal",
+        "value": "vole"
+      }
+    ]
+  },
+  "event": {
+    "type": "police-declaration-required"
+  },
+  "fileName": "identityDocumentRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

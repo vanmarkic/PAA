@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-16",
+  "description": "Ineligible: Large number of repetitive cases",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "repetitiveCases",
+        "operator": "greaterThan",
+        "value": 50
+      },
+      {
+        "fact": "sameViolationType",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "apply-pilot-procedure"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

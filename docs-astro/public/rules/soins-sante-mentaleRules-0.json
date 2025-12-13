@@ -1,0 +1,26 @@
+{
+  "id": "soins-sante-mentaleRules-0",
+  "description": "Première séance gratuite (bilan)",
+  "category": "sante",
+  "benefitType": "soins-sante-mentale",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "numeroSeance",
+        "operator": "equal",
+        "value": 1
+      },
+      {
+        "fact": "typeSoin",
+        "operator": "in",
+        "value": "[premiere_seance"
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-premiere-seance-gratuite"
+  },
+  "fileName": "soins-sante-mentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

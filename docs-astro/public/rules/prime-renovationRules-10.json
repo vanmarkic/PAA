@@ -1,0 +1,36 @@
+{
+  "id": "prime-renovationRules-10",
+  "description": "Éligible - Prime châssis catégorie R2",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.WALLONIE"
+      },
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "R2"
+      },
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "workType",
+        "operator": "equal",
+        "value": "chassis_vitrages"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.403Z"
+}

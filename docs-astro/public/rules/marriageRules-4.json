@@ -1,0 +1,26 @@
+{
+  "id": "marriageRules-4",
+  "description": "Rule 5 for marriage",
+  "category": "autre",
+  "benefitType": "marriage",
+  "priority": 7,
+  "conditions": {
+    "any": [
+      {
+        "fact": "partner1Nationality",
+        "operator": "notEqual",
+        "value": "BE"
+      },
+      {
+        "fact": "partner2Nationality",
+        "operator": "notEqual",
+        "value": "BE"
+      }
+    ]
+  },
+  "event": {
+    "type": "foreign-partner-requirements"
+  },
+  "fileName": "marriageRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

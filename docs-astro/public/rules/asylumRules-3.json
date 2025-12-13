@@ -1,0 +1,31 @@
+{
+  "id": "asylumRules-3",
+  "description": "Ineligible: Demande manifestement infondée",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "previousApplications",
+        "operator": "greaterThan",
+        "value": 2
+      },
+      {
+        "fact": "safeCountryOfOrigin",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasCommittedSeriousCrime",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "manifestly-unfounded"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

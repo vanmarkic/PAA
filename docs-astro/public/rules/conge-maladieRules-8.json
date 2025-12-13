@@ -1,0 +1,36 @@
+{
+  "id": "conge-maladieRules-8",
+  "description": "Invalidité - Isolé (55%)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 59,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "in",
+        "value": "[salarie"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "greaterThan",
+        "value": "CONGE_MALADIE_CONSTANTS.SEUIL_INVALIDITE_JOURS"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "isole"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

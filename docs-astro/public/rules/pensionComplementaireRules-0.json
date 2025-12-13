@@ -1,0 +1,21 @@
+{
+  "id": "pensionComplementaireRules-0",
+  "description": "Éligible pour PensionComplementaire",
+  "category": "pension",
+  "benefitType": "pensioncomplementaire",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "pensionComplementaire-eligible"
+  },
+  "fileName": "pensionComplementaireRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

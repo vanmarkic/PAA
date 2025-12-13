@@ -1,0 +1,46 @@
+{
+  "id": "allocations-handicapesRules-11",
+  "description": "Éligible à l\\",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 40,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "HANDICAP_CONSTANTS.MIN_AGE_ARR"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": "HANDICAP_CONSTANTS.MAX_AGE_ARR"
+      },
+      {
+        "fact": "livingSituation",
+        "operator": "equal",
+        "value": "isolated"
+      },
+      {
+        "fact": "hasMedicalEvaluation",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isLegalResident",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isBelgian",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "arr-eligible"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

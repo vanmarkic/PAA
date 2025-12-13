@@ -1,0 +1,31 @@
+{
+  "id": "garde-enfantsRules-6",
+  "description": "Garde privée agréée éligible à la déduction fiscale",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "type_garde",
+        "operator": "equal",
+        "value": "gardienne_privee"
+      },
+      {
+        "fact": "gardienne_agreee",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "ageAnnees",
+        "operator": "lessThanInclusive",
+        "value": "GARDE_ENFANTS_CONSTANTS.AGE_MAX_DEDUCTION_FISCALE"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-eligible-deduction-privee"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

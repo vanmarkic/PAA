@@ -1,0 +1,26 @@
+{
+  "id": "marqueRules-4",
+  "description": "Ineligible: Marque trompeuse sur la nature, qualité ou origine",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "isMisleading",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isDeceptive",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "trademark-ineligible"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

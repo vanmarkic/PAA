@@ -1,0 +1,26 @@
+{
+  "id": "marqueRules-3",
+  "description": "Ineligible: Contraire à l\\",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "againstPublicOrder",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "againstMorality",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "trademark-ineligible"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

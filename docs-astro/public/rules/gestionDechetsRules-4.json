@@ -1,0 +1,26 @@
+{
+  "id": "gestionDechetsRules-4",
+  "description": "Rule 5 for gestiondechets",
+  "category": "autre",
+  "benefitType": "gestiondechets",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "applicantType",
+        "operator": "equal",
+        "value": "entreprise"
+      },
+      {
+        "fact": "employeeCount",
+        "operator": "greaterThan",
+        "value": 20
+      }
+    ]
+  },
+  "event": {
+    "type": "mandatory-sorting"
+  },
+  "fileName": "gestionDechetsRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

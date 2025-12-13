@@ -1,0 +1,31 @@
+{
+  "id": "specialProceduresRules-18",
+  "description": "Ineligible: Valid request from highest court of Protocol 16 state",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestingCourtLevel",
+        "operator": "equal",
+        "value": "highest"
+      },
+      {
+        "fact": "stateRatifiedProtocol16",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "questionsConcernConvention",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "accept-request"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "allocations-familialesRules-7",
+  "description": "Éligible au supplément social",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "annualGrossIncome",
+        "operator": "lessThan",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.SOCIAL_INCOME_THRESHOLD"
+      },
+      {
+        "fact": "hasLegalResidenceInBelgium",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-supplement"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

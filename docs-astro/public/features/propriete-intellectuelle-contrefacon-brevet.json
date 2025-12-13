@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "71f71367-c124-47a5-aac0-dac892cc15f6",
+      "id": "8975bebb-4249-4383-ad14-0365f5c57846",
       "name": "Saisie-contrefaçon avec huissier",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "cde08960-aa1f-41c2-9352-617095c87150",
+      "id": "5d95d9cd-b9c4-4d62-bc9b-1d1b82887e9e",
       "name": "Action au fond avec expertise judiciaire",
       "description": "",
       "tags": [],
@@ -102,7 +102,7 @@
       "isOutline": false
     },
     {
-      "id": "3be1c8ff-e8fd-4253-8892-a28a379380e5",
+      "id": "89d89775-3c7a-4c6f-805c-116a943664e5",
       "name": "Calcul des dommages-intérêts",
       "description": "",
       "tags": [],
@@ -139,7 +139,7 @@
       "isOutline": false
     },
     {
-      "id": "538f1d7a-97f5-4b3f-93fb-91245ec47e23",
+      "id": "1770d58b-9f6e-4e53-a3d5-d2a89d982313",
       "name": "Défense par invalidité du brevet",
       "description": "",
       "tags": [],
@@ -175,5 +175,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.167Z"
+  "generated": "2025-12-13T17:25:45.884Z"
 }

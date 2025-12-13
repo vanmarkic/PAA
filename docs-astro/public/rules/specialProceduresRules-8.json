@@ -1,0 +1,21 @@
+{
+  "id": "specialProceduresRules-8",
+  "description": "Ineligible: Commissioner for Human Rights has right to intervene",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "intervenerType",
+        "operator": "equal",
+        "value": "commissioner"
+      }
+    ]
+  },
+  "event": {
+    "type": "grant-intervention"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.385Z"
+}

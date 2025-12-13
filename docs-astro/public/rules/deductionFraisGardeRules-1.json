@@ -1,0 +1,21 @@
+{
+  "id": "deductionFraisGardeRules-1",
+  "description": "Ineligible: Tous les enfants dépassent l",
+  "category": "fiscal",
+  "benefitType": "deductionfraisgarde",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "allChildrenTooOld",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "childcare-ineligible"
+  },
+  "fileName": "deductionFraisGardeRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

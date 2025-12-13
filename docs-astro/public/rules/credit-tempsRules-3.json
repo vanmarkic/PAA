@@ -1,0 +1,36 @@
+{
+  "id": "credit-tempsRules-3",
+  "description": "Éligible au crédit-temps pour assistance médicale",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "assistance_medicale"
+      },
+      {
+        "fact": "certificatMedical",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "parentMalade",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "ancienneteMois",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_ANCIENNETE_EMPLOYEUR_MOIS"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-eligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

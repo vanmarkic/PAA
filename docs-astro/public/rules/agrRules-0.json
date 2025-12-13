@@ -1,0 +1,31 @@
+{
+  "id": "agrRules-0",
+  "description": "Eligible pour AGR",
+  "category": "emploi",
+  "benefitType": "agr",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "part-time"
+      },
+      {
+        "fact": "hasRightsMaintenance",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthlySalaryGross",
+        "operator": "lessThan",
+        "value": "MINIMUM_GUARANTEED_INCOME"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-eligible"
+  },
+  "fileName": "agrRules",
+  "generated": "2025-12-13T17:27:42.410Z"
+}

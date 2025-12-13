@@ -1,0 +1,26 @@
+{
+  "id": "marriageRules-1",
+  "description": "Ineligible: Bigamie interdite - Un des partenaires est déjà marié",
+  "category": "autre",
+  "benefitType": "marriage",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "partner1Status",
+        "operator": "equal",
+        "value": "marie"
+      },
+      {
+        "fact": "partner2Status",
+        "operator": "equal",
+        "value": "marie"
+      }
+    ]
+  },
+  "event": {
+    "type": "bigamy-prevention"
+  },
+  "fileName": "marriageRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

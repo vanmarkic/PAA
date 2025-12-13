@@ -1,0 +1,36 @@
+{
+  "id": "soins-sante-mentaleRules-2",
+  "description": "Séance individuelle adulte - tarif ordinaire",
+  "category": "sante",
+  "benefitType": "soins-sante-mentale",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "SOINS_SANTE_MENTALE_CONSTANTS.AGE_JEUNE_MAX"
+      },
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "ordinaire"
+      },
+      {
+        "fact": "typeSoin",
+        "operator": "equal",
+        "value": "seance_individuelle"
+      },
+      {
+        "fact": "numeroSeance",
+        "operator": "greaterThan",
+        "value": 1
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-adulte-ordinaire"
+  },
+  "fileName": "soins-sante-mentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

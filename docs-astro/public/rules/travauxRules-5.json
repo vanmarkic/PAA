@@ -1,0 +1,21 @@
+{
+  "id": "travauxRules-5",
+  "description": "Rule 6 for travaux",
+  "category": "autre",
+  "benefitType": "travaux",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "affecte_structure",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "expertise-requise"
+  },
+  "fileName": "travauxRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

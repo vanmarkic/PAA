@@ -1,0 +1,31 @@
+{
+  "id": "prime-naissanceRules-2",
+  "description": "Ineligible: demande anticipée possible uniquement à partir du 6ème mois de grossesse",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isAnticipatedRequest",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "pregnancyMonths",
+        "operator": "lessThan",
+        "value": "PRIME_NAISSANCE_CONSTANTS.MIN_PREGNANCY_MONTHS_ANTICIPATED"
+      },
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-ineligible"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.400Z"
+}

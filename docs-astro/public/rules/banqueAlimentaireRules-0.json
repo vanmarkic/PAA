@@ -1,0 +1,21 @@
+{
+  "id": "banqueAlimentaireRules-0",
+  "description": "Éligible pour BanqueAlimentaire",
+  "category": "autre",
+  "benefitType": "banquealimentaire",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "banqueAlimentaire-eligible"
+  },
+  "fileName": "banqueAlimentaireRules",
+  "generated": "2025-12-13T17:27:42.376Z"
+}

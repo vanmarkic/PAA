@@ -1,0 +1,21 @@
+{
+  "id": "assurance-maladieRules-0",
+  "description": "Ineligible: non affilié à une mutuelle - affiliation obligatoire pour tous",
+  "category": "sante",
+  "benefitType": "assurance-maladie",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "estAffilieMutuelle",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "assuranceMaladie-ineligible"
+  },
+  "fileName": "assurance-maladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

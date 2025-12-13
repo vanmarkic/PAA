@@ -1,0 +1,21 @@
+{
+  "id": "brevetRules-3",
+  "description": "Ineligible: Matière non brevetable selon Article 52(2) CBE",
+  "category": "autre",
+  "benefitType": "brevet",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "subjectMatter",
+        "operator": "in",
+        "value": "[business-method"
+      }
+    ]
+  },
+  "event": {
+    "type": "patent-ineligible"
+  },
+  "fileName": "brevetRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

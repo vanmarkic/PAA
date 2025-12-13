@@ -1,0 +1,26 @@
+{
+  "id": "assuranceMaladieRules-3",
+  "description": "Éligible assurance maladie",
+  "category": "sante",
+  "benefitType": "assurancemaladie",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasMutuelle",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "paidContributions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "health-insurance-eligible"
+  },
+  "fileName": "assuranceMaladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

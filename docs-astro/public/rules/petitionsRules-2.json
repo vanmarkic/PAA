@@ -1,0 +1,26 @@
+{
+  "id": "petitionsRules-2",
+  "description": "Ineligible: Initiatives européennes réservées aux citoyens UE",
+  "category": "autre",
+  "benefitType": "petitions",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "petitionType",
+        "operator": "in",
+        "value": "[petition-europeenne"
+      },
+      {
+        "fact": "signerNationalite",
+        "operator": "notIn",
+        "value": "[belge"
+      }
+    ]
+  },
+  "event": {
+    "type": "signature-ineligible"
+  },
+  "fileName": "petitionsRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

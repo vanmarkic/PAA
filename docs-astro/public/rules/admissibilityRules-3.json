@@ -1,0 +1,21 @@
+{
+  "id": "admissibilityRules-3",
+  "description": "Ineligible: Applicant does not have victim status under Article 34",
+  "category": "autre",
+  "benefitType": "admissibility",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasVictimStatus",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "inadmissible"
+  },
+  "fileName": "admissibilityRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

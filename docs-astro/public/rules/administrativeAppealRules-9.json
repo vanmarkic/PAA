@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-9",
+  "description": "Rule 10 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[recours-permis-urbanisme"
+      },
+      {
+        "fact": "daysSinceNotification",
+        "operator": "greaterThan",
+        "value": 30
+      }
+    ]
+  },
+  "event": {
+    "type": "permit-deadline-expired"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

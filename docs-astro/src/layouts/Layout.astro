@@ -66,12 +66,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               <span class="font-bold text-xl">PAA</span>
             </a>
             <nav class="flex items-center space-x-6 text-sm font-medium">
-              <a href={getUrl('docs')} class="transition-colors hover:text-foreground/80">
-                Documentation
-              </a>
-              <a href={getUrl('api')} class="transition-colors hover:text-foreground/80">
-                API
-              </a>
               <a href={getUrl('workflows')} class="transition-colors hover:text-foreground/80">
                 Procédures
               </a>
@@ -139,16 +133,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           </div>
           <div class="flex items-center gap-4">
             <a
-              href={getUrl('privacy')}
+              href="https://github.com/vanmarkic/PAA"
+              target="_blank"
+              rel="noopener noreferrer"
               class="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Privacy Policy
-            </a>
-            <a
-              href={getUrl('terms')}
-              class="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms of Service
+              GitHub
             </a>
           </div>
         </div>

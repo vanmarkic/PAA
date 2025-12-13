@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-5",
+  "description": "aide sociale d\\",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "eu-citizen"
+      },
+      {
+        "fact": "residenceDurationMonths",
+        "operator": "lessThan",
+        "value": 3
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-urgence-europeen"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

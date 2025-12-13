@@ -1,0 +1,36 @@
+{
+  "id": "deductionHabitationRules-1",
+  "description": "Éligible au chèque habitat wallon",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonia"
+      },
+      {
+        "fact": "propertyType",
+        "operator": "equal",
+        "value": "principal"
+      },
+      {
+        "fact": "loanAfterCutoff",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "incomeWithinLimit",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-eligible-cheque-habitat"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-6",
+  "description": "Rule 7 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "recours-administratif-hierarchique"
+      },
+      {
+        "fact": "hierarchicalSuperiorExists",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "no-hierarchical-superior"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

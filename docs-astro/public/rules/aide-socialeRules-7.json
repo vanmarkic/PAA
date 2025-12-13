@@ -1,0 +1,31 @@
+{
+  "id": "aide-socialeRules-7",
+  "description": "Rule 8 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "nationalite",
+        "operator": "equal",
+        "value": "ue"
+      },
+      {
+        "fact": "dureeSejourMois",
+        "operator": "lessThan",
+        "value": "AIDE_SOCIALE_CONSTANTS.MIN_STAY_EU_MONTHS"
+      },
+      {
+        "fact": "revenus",
+        "operator": "lessThan",
+        "value": "AIDE_SOCIALE_AMOUNTS_2024.RIS_ISOLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-eligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

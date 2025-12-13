@@ -1,0 +1,31 @@
+{
+  "id": "primeNaissanceRules-1",
+  "description": "Éligible pour prime de naissance (délai normal)",
+  "category": "autre",
+  "benefitType": "primenaissance",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "daysSinceBirth",
+        "operator": "lessThanInclusive",
+        "value": "MAX_DECLARATION_DAYS_NORMAL"
+      },
+      {
+        "fact": "daysSinceBirth",
+        "operator": "greaterThanInclusive",
+        "value": "see_code"
+      },
+      {
+        "fact": "isStillbirth",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "birth-allowance-eligible-normal"
+  },
+  "fileName": "primeNaissanceRules",
+  "generated": "2025-12-13T17:27:42.403Z"
+}

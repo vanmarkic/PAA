@@ -1,0 +1,31 @@
+{
+  "id": "allocationHandicapesRules-4",
+  "description": "Éligible à l\\",
+  "category": "handicap",
+  "benefitType": "allocationhandicapes",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "benefitType",
+        "operator": "equal",
+        "value": "AI"
+      },
+      {
+        "fact": "autonomyPoints",
+        "operator": "greaterThanInclusive",
+        "value": "AI_AMOUNTS_2024.minimumPoints"
+      },
+      {
+        "fact": "isResident",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "ai-eligible"
+  },
+  "fileName": "allocationHandicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

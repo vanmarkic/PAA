@@ -1,0 +1,21 @@
+{
+  "id": "specialProceduresRules-6",
+  "description": "Ineligible: New fact would not affect outcome",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "factIsDecisive",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "reject-revision"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.385Z"
+}

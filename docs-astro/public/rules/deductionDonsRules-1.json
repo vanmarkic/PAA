@@ -1,0 +1,21 @@
+{
+  "id": "deductionDonsRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "fiscal",
+  "benefitType": "deductiondons",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "deductionDons-ineligible"
+  },
+  "fileName": "deductionDonsRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

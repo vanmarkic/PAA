@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-1",
+  "description": "Ineligible: Effacement impossible - obligation légale de conservation",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestType",
+        "operator": "equal",
+        "value": "effacement-donnees"
+      },
+      {
+        "fact": "hasLegalObligation",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "erasure-denied-legal-obligation"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

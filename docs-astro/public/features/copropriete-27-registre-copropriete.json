@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "af95f807-3eee-4e2c-92ac-ff8a7fbf6e44",
+      "id": "bd81864b-6b12-48aa-b866-6ae48c02c49a",
       "name": "Contenu obligatoire du registre",
       "description": "",
       "tags": [],
@@ -73,7 +73,7 @@
       "isOutline": false
     },
     {
-      "id": "60c0a5e7-f66e-4672-95a3-93c93ade7d34",
+      "id": "705b5662-b7e5-48b7-9c0a-ac28210816cc",
       "name": "Consultation du registre",
       "description": "",
       "tags": [],
@@ -118,7 +118,7 @@
       "isOutline": false
     },
     {
-      "id": "3e3ccbcc-2cd3-4956-9936-469026e047fe",
+      "id": "ffd81ef8-e549-4e01-80cc-20d7785d96a8",
       "name": "Transmission registre nouveau syndic",
       "description": "",
       "tags": [],
@@ -171,5 +171,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.163Z"
+  "generated": "2025-12-13T17:25:45.879Z"
 }

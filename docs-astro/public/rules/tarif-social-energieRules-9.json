@@ -1,0 +1,31 @@
+{
+  "id": "tarif-social-energieRules-9",
+  "description": "Ineligible: Éligible mais attestation requise",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "spfDataTransmitted",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "hasValidAttestation",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "hasEligibleStatus",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-pending"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "egaliteSalarialeRules-0",
+  "description": "Éligible pour EgaliteSalariale",
+  "category": "autre",
+  "benefitType": "egalitesalariale",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "egaliteSalariale-eligible"
+  },
+  "fileName": "egaliteSalarialeRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

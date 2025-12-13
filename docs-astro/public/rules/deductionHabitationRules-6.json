@@ -1,0 +1,31 @@
+{
+  "id": "deductionHabitationRules-6",
+  "description": "Ineligible: Non-respect du délai d\\",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "propertyType",
+        "operator": "equal",
+        "value": "principal"
+      },
+      {
+        "fact": "hasOccupiedProperty",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "yearsSinceAcquisition",
+        "operator": "greaterThan",
+        "value": "HOUSING_CONSTANTS_2024.occupancyDeadline"
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-advantage-recovery"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

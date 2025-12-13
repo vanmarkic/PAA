@@ -1,0 +1,26 @@
+{
+  "id": "tarif-social-energieRules-2",
+  "description": "Ineligible: Personne handicapée avec allocation - application automatique",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 98,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisabilityRecognition",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasDisabilityAllowance",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-eligible"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

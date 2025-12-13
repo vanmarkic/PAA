@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-3",
+  "description": "Ineligible: Portabilité applicable uniquement pour traitement basé sur consentement ou contrat",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestType",
+        "operator": "equal",
+        "value": "portabilite-donnees"
+      },
+      {
+        "fact": "processingBasis",
+        "operator": "notIn",
+        "value": "[consent"
+      }
+    ]
+  },
+  "event": {
+    "type": "portability-not-applicable"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "petitionsRules-0",
+  "description": "Ineligible: Âge minimum non atteint (16 ans pour pétitions locales)",
+  "category": "autre",
+  "benefitType": "petitions",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "signerAge",
+        "operator": "lessThan",
+        "value": 16
+      }
+    ]
+  },
+  "event": {
+    "type": "signature-ineligible"
+  },
+  "fileName": "petitionsRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

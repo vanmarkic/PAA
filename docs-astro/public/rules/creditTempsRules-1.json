@@ -1,0 +1,26 @@
+{
+  "id": "creditTempsRules-1",
+  "description": "Ineligible: crédit-temps sans motif supprimé depuis avril 2017",
+  "category": "fiscal",
+  "benefitType": "credittemps",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "creditType",
+        "operator": "equal",
+        "value": "ordinary"
+      },
+      {
+        "fact": "hasApprovedTraining",
+        "operator": "notEqual",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "credit-temps-ineligible"
+  },
+  "fileName": "creditTempsRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

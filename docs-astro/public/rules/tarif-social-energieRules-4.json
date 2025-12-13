@@ -1,0 +1,26 @@
+{
+  "id": "tarif-social-energieRules-4",
+  "description": "Ineligible: Locataire social avec chauffage collectif - prime tarif social disponible depuis septembre 2024",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSocialHousingTenant",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasCollectiveHeating",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-eligible"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

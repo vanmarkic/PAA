@@ -1,0 +1,36 @@
+{
+  "id": "formation-professionnelleRules-8",
+  "description": "Rule 9 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 68,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "demandeur_emploi"
+      },
+      {
+        "fact": "trainingType",
+        "operator": "equal",
+        "value": "linguistique"
+      },
+      {
+        "fact": "hasConditionalJobOffer",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "brussels"
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-eligible"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

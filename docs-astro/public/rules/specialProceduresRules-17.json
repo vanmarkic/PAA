@@ -1,0 +1,26 @@
+{
+  "id": "specialProceduresRules-17",
+  "description": "Ineligible: Individual case without systemic implications",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isIsolatedCase",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "noSystemicIssue",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "standard-procedure"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.386Z"
+}

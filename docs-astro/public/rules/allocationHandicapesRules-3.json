@@ -1,0 +1,26 @@
+{
+  "id": "allocationHandicapesRules-3",
+  "description": "Ineligible: Points d",
+  "category": "handicap",
+  "benefitType": "allocationhandicapes",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "benefitType",
+        "operator": "equal",
+        "value": "AI"
+      },
+      {
+        "fact": "autonomyPoints",
+        "operator": "lessThan",
+        "value": "AI_AMOUNTS_2024.minimumPoints"
+      }
+    ]
+  },
+  "event": {
+    "type": "ai-ineligible"
+  },
+  "fileName": "allocationHandicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "carte-medicaleRules-0",
+  "description": "Ineligible: Résident belge/légal sans ressources suffisantes et sans mutuelle active",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "in",
+        "value": "[belgian_resident"
+      },
+      {
+        "fact": "monthlyIncome",
+        "operator": "lessThan",
+        "value": "CARTE_MEDICALE_CONSTANTS.RIS_ISOLE"
+      },
+      {
+        "fact": "mutuelleActive",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

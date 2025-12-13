@@ -60,7 +60,7 @@
   },
   "scenarios": [
     {
-      "id": "7cba6e29-6b63-465b-88fa-3fc40a37983b",
+      "id": "93b0214c-d97c-45cc-b04b-d750818366ae",
       "name": "Congé parental pour parent d'un enfant de moins de 12 ans",
       "description": "",
       "tags": [],
@@ -113,7 +113,7 @@
       "isOutline": false
     },
     {
-      "id": "3f012385-d217-448b-848b-612cc90d238a",
+      "id": "48a50d09-cff8-4919-90b2-bc06158e27dd",
       "name": "Crédit-temps pour soins à un parent malade",
       "description": "",
       "tags": [],
@@ -166,7 +166,7 @@
       "isOutline": false
     },
     {
-      "id": "e72148e0-e2b9-494e-90ae-9c653b34e1ad",
+      "id": "cc397dd4-a33e-496c-b87b-b9f58cc7ba4c",
       "name": "Fin de carrière en douceur à 1/5 temps",
       "description": "",
       "tags": [],
@@ -219,7 +219,7 @@
       "isOutline": false
     },
     {
-      "id": "d2668df9-2961-4932-9331-893de03b3387",
+      "id": "51b3accd-7c54-4193-90aa-a71275fdf187",
       "name": "Interruption de carrière complète secteur public",
       "description": "",
       "tags": [],
@@ -268,7 +268,7 @@
       "isOutline": false
     },
     {
-      "id": "06251244-bfd8-41b2-ad13-f271efa1282e",
+      "id": "c26df6ec-278a-43a6-9d90-129cb76112e7",
       "name": "Congé pour soins palliatifs",
       "description": "",
       "tags": [],
@@ -313,7 +313,7 @@
       "isOutline": false
     },
     {
-      "id": "edff9023-cced-4544-a6a7-8576dbcc1c7e",
+      "id": "78fcd8e1-1529-47e6-a302-f8521c846492",
       "name": "Crédit-temps refusé pour motif non valable",
       "description": "",
       "tags": [],
@@ -350,7 +350,7 @@
       "isOutline": false
     },
     {
-      "id": "1df5bf1b-2c47-405e-989d-0c4b40a88911",
+      "id": "00f4055b-06ff-4ecf-82c9-fc4f2a83a297",
       "name": "Employé dans une PME de moins de 10 travailleurs",
       "description": "",
       "tags": [],
@@ -395,7 +395,7 @@
       "isOutline": false
     },
     {
-      "id": "eb9abcfd-9be2-4ab5-862f-0555b28db20b",
+      "id": "3617a5ba-1df4-42e0-889e-6e67b43933bb",
       "name": "Crédit-temps pour formation reconnue",
       "description": "",
       "tags": [],
@@ -444,7 +444,7 @@
       "isOutline": false
     },
     {
-      "id": "498bfdfe-20f8-40df-a631-9eb7c4abb14e",
+      "id": "65180f45-4ed8-45e6-b916-ca8887e331b6",
       "name": "Montants d'allocations selon la situation",
       "description": "",
       "tags": [],
@@ -492,7 +492,7 @@
           ],
           "rows": [
             {
-              "name": "0c8c2924-05cc-4708-95d5-47e5bf80d01b",
+              "name": "b969564b-33bf-47ba-9285-9ab056c15451",
               "values": {
                 "type_conge": "congé parental",
                 "situation": "isolé",
@@ -503,7 +503,7 @@
               }
             },
             {
-              "name": "eac30f5d-8267-4499-a7bf-99aed60bf883",
+              "name": "3badaf85-e698-404f-957c-f41c39f361a5",
               "values": {
                 "type_conge": "congé parental",
                 "situation": "isolé",
@@ -514,7 +514,7 @@
               }
             },
             {
-              "name": "e4f6d387-0303-4f55-9bed-5a9c129add7e",
+              "name": "0b8a5080-4cb1-45b4-ac3b-ee08f4737759",
               "values": {
                 "type_conge": "congé parental",
                 "situation": "isolé",
@@ -525,7 +525,7 @@
               }
             },
             {
-              "name": "48c52e5b-a417-4645-95fc-a5307f1bb57e",
+              "name": "bd35456a-e51e-47cd-b4b0-8aa620fd7db9",
               "values": {
                 "type_conge": "assistance médicale",
                 "situation": "cohabitant",
@@ -536,7 +536,7 @@
               }
             },
             {
-              "name": "2a78523f-408a-4017-a7ec-e2e0c73261c0",
+              "name": "134125d8-6303-4938-88ac-58a9deaeea9b",
               "values": {
                 "type_conge": "soins palliatifs",
                 "situation": "isolé",
@@ -547,7 +547,7 @@
               }
             },
             {
-              "name": "b3ecd996-c14b-45e6-83b6-dcf7bd30f593",
+              "name": "7a378e7f-c864-4a66-8022-6d17a73294b5",
               "values": {
                 "type_conge": "fin de carrière",
                 "situation": "isolé",
@@ -558,7 +558,7 @@
               }
             },
             {
-              "name": "48b9bdb1-ed25-4990-9311-f9c788597363",
+              "name": "1a638482-6341-4b8c-a12f-272d8082041e",
               "values": {
                 "type_conge": "fin de carrière",
                 "situation": "isolé",
@@ -574,7 +574,7 @@
       "isOutline": true
     },
     {
-      "id": "afa7cc62-8fdb-4a9c-90a0-2c918513f3d0",
+      "id": "d44411fe-8a73-47d0-b358-51de03ca3ff5",
       "name": "Procédure via Break@work depuis 2024",
       "description": "",
       "tags": [],
@@ -619,7 +619,7 @@
       "isOutline": false
     },
     {
-      "id": "0bdde095-7b4d-4cdf-a044-5c02250c82e4",
+      "id": "9c9065e2-6d84-4d12-81bc-eb83a76828ff",
       "name": "Cumul de différents types de congés",
       "description": "",
       "tags": [],
@@ -660,7 +660,7 @@
       "isOutline": false
     },
     {
-      "id": "eae8e220-1cc9-4879-81a3-63b492cf9298",
+      "id": "b8e2d778-84b5-4d50-90bc-3ae63ea33f5a",
       "name": "Impact sur la pension",
       "description": "",
       "tags": [],
@@ -705,7 +705,7 @@
       "isOutline": false
     },
     {
-      "id": "dc754427-5d44-4f51-b055-f32adad5a9e6",
+      "id": "225308e3-ae32-43c8-b8ef-0202ba5fe6a9",
       "name": "Obligations pendant le crédit-temps",
       "description": "",
       "tags": [],
@@ -753,5 +753,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.159Z"
+  "generated": "2025-12-13T17:25:45.876Z"
 }

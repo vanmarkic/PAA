@@ -1,0 +1,26 @@
+{
+  "id": "deductionHabitationRules-5",
+  "description": "Déduction ordinaire des intérêts (résidence secondaire)",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "propertyType",
+        "operator": "in",
+        "value": "[secondary"
+      },
+      {
+        "fact": "hasLoanInterest",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-eligible-ordinary-deduction"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

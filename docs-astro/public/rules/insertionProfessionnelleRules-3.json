@@ -1,0 +1,36 @@
+{
+  "id": "insertionProfessionnelleRules-3",
+  "description": "Éligible pour Activa",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentStatus",
+        "operator": "equal",
+        "value": "chomeur"
+      },
+      {
+        "fact": "monthsUnemployed",
+        "operator": "greaterThanInclusive",
+        "value": "ACTIVA_MIN_UNEMPLOYMENT_MONTHS"
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "activa"
+      },
+      {
+        "fact": "hasEmployerReady",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible-activa"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

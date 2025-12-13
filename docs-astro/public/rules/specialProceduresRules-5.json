@@ -1,0 +1,21 @@
+{
+  "id": "specialProceduresRules-5",
+  "description": "Ineligible: Request outside 6-month time limit",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "monthsSinceDiscovery",
+        "operator": "greaterThan",
+        "value": "ECHR_DEADLINES.REVISION_REQUEST_MONTHS"
+      }
+    ]
+  },
+  "event": {
+    "type": "reject-revision"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

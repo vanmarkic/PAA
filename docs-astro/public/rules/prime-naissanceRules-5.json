@@ -1,0 +1,36 @@
+{
+  "id": "prime-naissanceRules-5",
+  "description": "Éligible avec justification du retard requise",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "daysSinceBirth",
+        "operator": "greaterThan",
+        "value": "PRIME_NAISSANCE_CONSTANTS.NORMAL_DECLARATION_DAYS"
+      },
+      {
+        "fact": "daysSinceBirth",
+        "operator": "lessThanInclusive",
+        "value": "PRIME_NAISSANCE_CONSTANTS.MAX_DECLARATION_DAYS"
+      },
+      {
+        "fact": "isAnticipatedRequest",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-eligible-late"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

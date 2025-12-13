@@ -1,0 +1,41 @@
+{
+  "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-4",
+  "description": "Éligible en tant que citoyen de l\\",
+  "category": "autre",
+  "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isEUCitizen",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasEffectiveResidenceInBelgium",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "residenceRightDurationMonths",
+        "operator": "greaterThan",
+        "value": "EU_RESIDENCE_MIN_MONTHS"
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "MAJORITY_AGE"
+      },
+      {
+        "fact": "hasSufficientResources",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "loiDu26Mai2002ConcernantLeDroitLIntGrati-eligible"
+  },
+  "fileName": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "garantieLocativeRules-0",
+  "description": "Éligible pour GarantieLocative",
+  "category": "autre",
+  "benefitType": "garantielocative",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantieLocativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

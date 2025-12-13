@@ -1,0 +1,26 @@
+{
+  "id": "gestionDechetsRules-3",
+  "description": "Rule 4 for gestiondechets",
+  "category": "autre",
+  "benefitType": "gestiondechets",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "treatmentMethod",
+        "operator": "equal",
+        "value": "compostage"
+      },
+      {
+        "fact": "annualVolume",
+        "operator": "greaterThan",
+        "value": 100
+      }
+    ]
+  },
+  "event": {
+    "type": "composting-facility"
+  },
+  "fileName": "gestionDechetsRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

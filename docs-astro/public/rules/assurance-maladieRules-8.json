@@ -1,0 +1,31 @@
+{
+  "id": "assurance-maladieRules-8",
+  "description": "Ineligible: pensionné - droits à l\\",
+  "category": "sante",
+  "benefitType": "assurance-maladie",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estAffilieMutuelle",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cotisationsAJour",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutAssure",
+        "operator": "equal",
+        "value": "pensionne"
+      }
+    ]
+  },
+  "event": {
+    "type": "assuranceMaladie-eligible"
+  },
+  "fileName": "assurance-maladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

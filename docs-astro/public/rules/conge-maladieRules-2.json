@@ -1,0 +1,31 @@
+{
+  "id": "conge-maladieRules-2",
+  "description": "Salaire garanti par employeur (100%)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "in",
+        "value": "[salarie"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "lessThanInclusive",
+        "value": "CONGE_MALADIE_CONSTANTS.SALAIRE_GARANTI_EMPLOYE_JOURS"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

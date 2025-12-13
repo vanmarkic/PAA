@@ -1,0 +1,26 @@
+{
+  "id": "garde-enfantsRules-0",
+  "description": "Garde gratuite avec statut BIM depuis janvier 2023",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut_bim",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "garde_subventionnee",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-gratuit-bim"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

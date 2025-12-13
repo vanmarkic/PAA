@@ -1,0 +1,26 @@
+{
+  "id": "carteMedicaleRules-5",
+  "description": "Ineligible: Ressources suffisantes",
+  "category": "sante",
+  "benefitType": "cartemedicale",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "resteAVivre",
+        "operator": "greaterThan",
+        "value": 800
+      },
+      {
+        "fact": "hasMutuelle",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "medical-card-ineligible"
+  },
+  "fileName": "carteMedicaleRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

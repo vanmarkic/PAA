@@ -1,0 +1,36 @@
+{
+  "id": "marriageRules-6",
+  "description": "Ineligible: Le divorce doit être définitif avant un nouveau mariage",
+  "category": "autre",
+  "benefitType": "marriage",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "partner1Status",
+        "operator": "equal",
+        "value": "divorce"
+      },
+      {
+        "fact": "partner1DivorceFinal",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "partner2Status",
+        "operator": "equal",
+        "value": "divorce"
+      },
+      {
+        "fact": "partner2DivorceFinal",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "divorce-not-final"
+  },
+  "fileName": "marriageRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

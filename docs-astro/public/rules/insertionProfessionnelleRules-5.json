@@ -1,0 +1,31 @@
+{
+  "id": "insertionProfessionnelleRules-5",
+  "description": "Éligible pour Entreprise de Travail Adapté",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisability",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "disabilityPercentage",
+        "operator": "greaterThanInclusive",
+        "value": 35
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "eta"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible-eta"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

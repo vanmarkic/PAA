@@ -1,0 +1,26 @@
+{
+  "id": "creditImpotRules-4",
+  "description": "Éligible au bonus parent isolé",
+  "category": "fiscal",
+  "benefitType": "creditimpot",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSingleParent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasDependentChildren",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "singleparent-bonus"
+  },
+  "fileName": "creditImpotRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

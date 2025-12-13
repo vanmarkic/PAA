@@ -1,0 +1,21 @@
+{
+  "id": "pensionSurvieRules-0",
+  "description": "Éligible pour PensionSurvie",
+  "category": "pension",
+  "benefitType": "pensionsurvie",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "pensionSurvie-eligible"
+  },
+  "fileName": "pensionSurvieRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

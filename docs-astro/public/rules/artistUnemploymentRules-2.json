@@ -1,0 +1,26 @@
+{
+  "id": "artistUnemploymentRules-2",
+  "description": "Exonération cachet applicable",
+  "category": "emploi",
+  "benefitType": "artistunemployment",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasCachetIncome",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cachetAmount",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "cachet-exemption"
+  },
+  "fileName": "artistUnemploymentRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

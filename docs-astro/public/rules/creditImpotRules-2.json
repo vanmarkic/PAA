@@ -1,0 +1,21 @@
+{
+  "id": "creditImpotRules-2",
+  "description": "Éligible au crédit d\\",
+  "category": "fiscal",
+  "benefitType": "creditimpot",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "incomeInPhaseOutRange",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "taxcredit-partial"
+  },
+  "fileName": "creditImpotRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "budgetEnergetiqueRules-0",
+  "description": "Éligible pour BudgetEnergetique",
+  "category": "autre",
+  "benefitType": "budgetenergetique",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "budgetEnergetique-eligible"
+  },
+  "fileName": "budgetEnergetiqueRules",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "conge-maladieRules-5",
+  "description": "Salaire garanti ouvrier - Semaines 3-4 (25.88% employeur + 60% mutuelle)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 77,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "ouvrier"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "greaterThan",
+        "value": "CONGE_MALADIE_CONSTANTS.SALAIRE_GARANTI_OUVRIER_85_JOURS"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "lessThanInclusive",
+        "value": "CONGE_MALADIE_CONSTANTS.SALAIRE_GARANTI_OUVRIER_MIXTE_JOURS"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

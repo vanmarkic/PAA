@@ -1,0 +1,41 @@
+{
+  "id": "insertion-professionnelleRules-2",
+  "description": "Éligible pour Stage First",
+  "category": "autre",
+  "benefitType": "insertion-professionnelle",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": "INSERTION_CONSTANTS.MAX_AGE_STAGE_FIRST"
+      },
+      {
+        "fact": "qualificationLevel",
+        "operator": "in",
+        "value": "[aucune"
+      },
+      {
+        "fact": "isRegisteredActiris",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "actirisRegistrationMonths",
+        "operator": "greaterThanInclusive",
+        "value": 3
+      },
+      {
+        "fact": "proposedDevice",
+        "operator": "equal",
+        "value": "stage-first"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible"
+  },
+  "fileName": "insertion-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

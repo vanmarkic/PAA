@@ -1,0 +1,21 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-13",
+  "description": "Les dispositions spécifiques aux contrats de culture s\\",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "actionType",
+        "operator": "equal",
+        "value": "contrat_culture"
+      }
+    ]
+  },
+  "event": {
+    "type": "contrat-culture-rules-apply"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

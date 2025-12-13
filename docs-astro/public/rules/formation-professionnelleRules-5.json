@@ -1,0 +1,36 @@
+{
+  "id": "formation-professionnelleRules-5",
+  "description": "Rule 6 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "demandeur_emploi"
+      },
+      {
+        "fact": "trainingType",
+        "operator": "equal",
+        "value": "alternance"
+      },
+      {
+        "fact": "contractType",
+        "operator": "equal",
+        "value": "FPIE"
+      },
+      {
+        "fact": "hasHostCompany",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-eligible"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

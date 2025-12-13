@@ -1,0 +1,21 @@
+{
+  "id": "repasScolairesGratuitsRules-0",
+  "description": "Éligible pour RepasScolairesGratuits",
+  "category": "autre",
+  "benefitType": "repasscolairesgratuits",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "repasScolairesGratuits-eligible"
+  },
+  "fileName": "repasScolairesGratuitsRules",
+  "generated": "2025-12-13T17:27:42.408Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "contratTravailRules-0",
+  "description": "Éligible pour ContratTravail",
+  "category": "autre",
+  "benefitType": "contrattravail",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "contratTravail-eligible"
+  },
+  "fileName": "contratTravailRules",
+  "generated": "2025-12-13T17:27:42.381Z"
+}

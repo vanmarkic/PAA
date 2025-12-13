@@ -1,0 +1,31 @@
+{
+  "id": "interimMeasuresRules-1",
+  "description": "Ineligible: Imminent risk of torture or inhuman treatment under Article 3",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "riskType",
+        "operator": "equal",
+        "value": "torture"
+      },
+      {
+        "fact": "riskType",
+        "operator": "equal",
+        "value": "inhuman-treatment"
+      },
+      {
+        "fact": "imminence",
+        "operator": "lessThanInclusive",
+        "value": 48
+      }
+    ]
+  },
+  "event": {
+    "type": "grant-urgent"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

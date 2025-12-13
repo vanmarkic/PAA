@@ -1,0 +1,41 @@
+{
+  "id": "aide-logementRules-9",
+  "description": "Ineligible: revenus < 17,000€ et déménagement logement salubre",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 65,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "personne-isolee"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "lessThan",
+        "value": "AIDE_LOGEMENT_CONSTANTS.WALLONIE.PLAFOND_REVENUS_ISOLE"
+      },
+      {
+        "fact": "quitteLogementInsalubre",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

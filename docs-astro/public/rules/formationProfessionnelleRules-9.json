@@ -1,0 +1,31 @@
+{
+  "id": "formationProfessionnelleRules-9",
+  "description": "Conditions de base remplies pour formation professionnelle",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "MIN_AGE"
+      },
+      {
+        "fact": "status",
+        "operator": "equal",
+        "value": "demandeur-emploi"
+      },
+      {
+        "fact": "isRegisteredWithRegionalService",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-eligible"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

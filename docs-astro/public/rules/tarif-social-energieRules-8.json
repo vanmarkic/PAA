@@ -1,0 +1,26 @@
+{
+  "id": "tarif-social-energieRules-8",
+  "description": "Ineligible: Aucun contrat d\\",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 110,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasElectricityContract",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "hasGasContract",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-ineligible"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

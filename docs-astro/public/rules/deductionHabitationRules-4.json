@@ -1,0 +1,31 @@
+{
+  "id": "deductionHabitationRules-4",
+  "description": "Ineligible: Pas d\\",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "flanders"
+      },
+      {
+        "fact": "propertyType",
+        "operator": "equal",
+        "value": "principal"
+      },
+      {
+        "fact": "loanAfter2020",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-ineligible-flanders-new"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

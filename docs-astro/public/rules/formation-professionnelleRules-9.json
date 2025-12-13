@@ -1,0 +1,31 @@
+{
+  "id": "formation-professionnelleRules-9",
+  "description": "Rule 10 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 65,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "demandeur_emploi"
+      },
+      {
+        "fact": "trainingType",
+        "operator": "equal",
+        "value": "entrepreneuriat"
+      },
+      {
+        "fact": "registeredOrganism",
+        "operator": "equal",
+        "value": "REGIONAL_ORGANISMS.IFAPME"
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-eligible"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

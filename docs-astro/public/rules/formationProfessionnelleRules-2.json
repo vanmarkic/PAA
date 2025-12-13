@@ -1,0 +1,26 @@
+{
+  "id": "formationProfessionnelleRules-2",
+  "description": "Ineligible: formation non agréée - risque de perdre allocations de chômage",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isReceivingUnemploymentBenefits",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isApprovedTraining",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-warning"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

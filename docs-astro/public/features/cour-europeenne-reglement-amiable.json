@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "dcbf78ce-9a00-48ce-9e8a-d0c492146d09",
+      "id": "45439370-533b-48d2-b82f-dc18e7bfdac5",
       "name": "Proposition de règlement amiable par l'État",
       "description": "",
       "tags": [],
@@ -69,7 +69,7 @@
       "isOutline": false
     },
     {
-      "id": "123247f0-3085-4fcb-b9de-cde5f19610a3",
+      "id": "fb83e13f-2c3c-49fa-8898-5c445cec47e3",
       "name": "Négociation réussie avec engagement de réformes",
       "description": "",
       "tags": [],
@@ -114,7 +114,7 @@
       "isOutline": false
     },
     {
-      "id": "c45d4a3f-de97-4a9f-ad40-33839b3cbd44",
+      "id": "6abcf5ae-c5e2-4e04-a162-ef24cd5f4241",
       "name": "Échec des négociations - retour à la procédure",
       "description": "",
       "tags": [],
@@ -159,7 +159,7 @@
       "isOutline": false
     },
     {
-      "id": "c883a5ed-f24e-406e-8144-3db4d3befd0f",
+      "id": "e0522dd7-74e3-42f9-a85d-faa59ba20f44",
       "name": "Règlement incluant des mesures générales",
       "description": "",
       "tags": [],
@@ -204,7 +204,7 @@
       "isOutline": false
     },
     {
-      "id": "5cd3e189-e1fc-47b2-a037-25f98ab20da1",
+      "id": "fda794bb-fff7-4d1c-9b61-40ca0bae9645",
       "name": "Évaluation d'une offre de règlement",
       "description": "",
       "tags": [],
@@ -252,7 +252,7 @@
           ],
           "rows": [
             {
-              "name": "5da3b2e9-3d58-464a-bcb7-707b12948de2",
+              "name": "8acb5000-d36f-406e-8e12-27364c7617bb",
               "values": {
                 "montant": "20000",
                 "prejudice": "25000",
@@ -263,7 +263,7 @@
               }
             },
             {
-              "name": "219d1267-bcc4-4446-b515-06146d9e6e23",
+              "name": "3593488f-8bce-458b-89b4-d76b59070c02",
               "values": {
                 "montant": "5000",
                 "prejudice": "30000",
@@ -274,7 +274,7 @@
               }
             },
             {
-              "name": "045e24ce-7350-4c85-980a-4d20d9e05d16",
+              "name": "36eb8734-4795-4ac7-90d9-f1805e53ba1d",
               "values": {
                 "montant": "30000",
                 "prejudice": "25000",
@@ -285,7 +285,7 @@
               }
             },
             {
-              "name": "417c1914-d9e5-4d1d-9043-c0b70facdcbf",
+              "name": "95b45e91-b67a-4f11-a8db-0173b48856a0",
               "values": {
                 "montant": "15000",
                 "prejudice": "15000",
@@ -304,5 +304,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.164Z"
+  "generated": "2025-12-13T17:25:45.880Z"
 }

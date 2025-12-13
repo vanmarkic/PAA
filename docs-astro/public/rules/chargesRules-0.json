@@ -1,0 +1,26 @@
+{
+  "id": "chargesRules-0",
+  "description": "Rule 1 for charges",
+  "category": "autre",
+  "benefitType": "charges",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "jours_retard",
+        "operator": "greaterThan",
+        "value": "see_code"
+      },
+      {
+        "fact": "jours_retard",
+        "operator": "lessThanInclusive",
+        "value": 30
+      }
+    ]
+  },
+  "event": {
+    "type": "retard-leger"
+  },
+  "fileName": "chargesRules",
+  "generated": "2025-12-13T17:27:42.382Z"
+}

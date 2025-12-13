@@ -1,0 +1,31 @@
+{
+  "id": "specialProceduresRules-1",
+  "description": "Ineligible: Serious issue of general importance",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "systemicProblem",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "numberOfAffectedPersons",
+        "operator": "greaterThan",
+        "value": 1000
+      },
+      {
+        "fact": "fundamentalRightAtStake",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "accept-referral"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

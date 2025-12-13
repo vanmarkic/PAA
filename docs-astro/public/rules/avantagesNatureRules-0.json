@@ -1,0 +1,21 @@
+{
+  "id": "avantagesNatureRules-0",
+  "description": "Éligible pour AvantagesNature",
+  "category": "autre",
+  "benefitType": "avantagesnature",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "avantagesNature-eligible"
+  },
+  "fileName": "avantagesNatureRules",
+  "generated": "2025-12-13T17:27:42.376Z"
+}

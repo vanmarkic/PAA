@@ -1,0 +1,26 @@
+{
+  "id": "interimMeasuresRules-9",
+  "description": "Ineligible: Effective domestic remedies available",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "domesticRemediesAvailable",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "domesticRemediesEffective",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "refuse-measures"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

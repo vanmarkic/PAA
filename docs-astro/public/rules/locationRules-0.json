@@ -1,0 +1,36 @@
+{
+  "id": "locationRules-0",
+  "description": "Ineligible: Garantie locative dépasse le maximum légal",
+  "category": "autre",
+  "benefitType": "location",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "in",
+        "value": "[wallonie"
+      },
+      {
+        "fact": "depositMonths",
+        "operator": "greaterThan",
+        "value": 2
+      },
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "flandre"
+      },
+      {
+        "fact": "depositMonths",
+        "operator": "greaterThan",
+        "value": 3
+      }
+    ]
+  },
+  "event": {
+    "type": "illegal-deposit"
+  },
+  "fileName": "locationRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

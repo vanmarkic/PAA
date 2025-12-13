@@ -1,0 +1,51 @@
+{
+  "id": "prime-naissanceRules-10",
+  "description": "Éligible pour Prime de Naissance",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isAnticipatedRequest",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isAdoption",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isStillbirth",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isMultipleBirth",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "daysSinceBirth",
+        "operator": "greaterThanInclusive",
+        "value": "see_code"
+      },
+      {
+        "fact": "daysSinceBirth",
+        "operator": "lessThanInclusive",
+        "value": "PRIME_NAISSANCE_CONSTANTS.NORMAL_DECLARATION_DAYS"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-eligible"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

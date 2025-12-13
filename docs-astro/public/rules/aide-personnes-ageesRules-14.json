@@ -1,0 +1,41 @@
+{
+  "id": "aide-personnes-ageesRules-14",
+  "description": "Rule 15 for aide-personnes-agees",
+  "category": "autre",
+  "benefitType": "aide-personnes-agees",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "APA_CONSTANTS.MIN_AGE"
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "greaterThanInclusive",
+        "value": 17
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "lessThanInclusive",
+        "value": 18
+      },
+      {
+        "fact": "livingSituation",
+        "operator": "equal",
+        "value": "couple"
+      },
+      {
+        "fact": "annualIncome",
+        "operator": "lessThanInclusive",
+        "value": "APA_INCOME_THRESHOLDS_2024.COUPLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aidePersonnesAgees-eligible"
+  },
+  "fileName": "aide-personnes-ageesRules",
+  "generated": "2025-12-13T17:27:42.374Z"
+}

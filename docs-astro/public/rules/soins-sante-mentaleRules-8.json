@@ -1,0 +1,36 @@
+{
+  "id": "soins-sante-mentaleRules-8",
+  "description": "Hospitalisation jours 1-5 - tarif ordinaire",
+  "category": "sante",
+  "benefitType": "soins-sante-mentale",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeSoin",
+        "operator": "equal",
+        "value": "hospitalisation"
+      },
+      {
+        "fact": "joursHospitalisation",
+        "operator": "lessThanInclusive",
+        "value": 5
+      },
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "ordinaire"
+      },
+      {
+        "fact": "estEnCrise",
+        "operator": "notEqual",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-hospi-debut-ordinaire"
+  },
+  "fileName": "soins-sante-mentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

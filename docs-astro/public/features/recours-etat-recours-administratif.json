@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "2aa0d2cf-62bb-47c4-9cee-386007e00535",
+      "id": "7729b9cc-74db-4300-87ef-eb23bdbfd3dd",
       "name": "Recours gracieux auprès de l'auteur de l'acte",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "40bfe8b4-7d51-4547-a98a-05d8c64963ed",
+      "id": "b997d182-863f-4351-a494-6d23a7ff7536",
       "name": "Recours hiérarchique auprès du supérieur",
       "description": "",
       "tags": [],
@@ -106,7 +106,7 @@
       "isOutline": false
     },
     {
-      "id": "aea579e6-803e-4dbb-8e0c-f0d73989cf55",
+      "id": "d71ccea1-85b6-458c-a303-8801b4202fcd",
       "name": "Recours administratif obligatoire en matière fiscale",
       "description": "",
       "tags": [],
@@ -143,7 +143,7 @@
       "isOutline": false
     },
     {
-      "id": "723f1fa2-5f45-48b2-bbc2-2fe13f58417b",
+      "id": "f34f305b-b45e-43a0-b527-8c16823336ef",
       "name": "Recours devant une commission administrative",
       "description": "",
       "tags": [],
@@ -180,7 +180,7 @@
       "isOutline": false
     },
     {
-      "id": "ff39c12d-8237-439d-ac84-dc6f7d2358e5",
+      "id": "b66f1c76-7b0c-4526-abc9-1213d64757f4",
       "name": "Médiation administrative",
       "description": "",
       "tags": [],
@@ -221,7 +221,7 @@
       "isOutline": false
     },
     {
-      "id": "5bee1f16-95e5-4e4e-8f9f-e6a3ebc9f2f8",
+      "id": "8de1b1e1-3a82-49ff-a7e3-63a33d32006f",
       "name": "Recours contre le silence de l'administration",
       "description": "",
       "tags": [],
@@ -262,7 +262,7 @@
       "isOutline": false
     },
     {
-      "id": "e93969f6-12c7-44fb-bf5a-7acdb1dd0a31",
+      "id": "3975fe2a-1ef1-4dd2-a636-42a70871047e",
       "name": "Choix du recours approprié",
       "description": "",
       "tags": [],
@@ -305,7 +305,7 @@
           ],
           "rows": [
             {
-              "name": "479c201a-b44c-4716-ae1a-98031ba06641",
+              "name": "fd8dda35-782f-45ce-9bfe-3cdf85f104ca",
               "values": {
                 "type_decision": "permis refusé",
                 "autorite": "commune",
@@ -315,7 +315,7 @@
               }
             },
             {
-              "name": "af490e8d-f2ed-4dbc-a92b-d60f902379ee",
+              "name": "9ad74fa1-ad7a-44da-be51-8dfb054a8413",
               "values": {
                 "type_decision": "sanction disciplinaire",
                 "autorite": "administration",
@@ -325,7 +325,7 @@
               }
             },
             {
-              "name": "2cd257b2-6c38-4d91-9b2e-8a77bf112646",
+              "name": "ecef681e-0802-4499-94d3-08f53add1789",
               "values": {
                 "type_decision": "impôt",
                 "autorite": "SPF Finances",
@@ -335,7 +335,7 @@
               }
             },
             {
-              "name": "523d710a-fb32-4fd4-b595-0ba60265e861",
+              "name": "8d306090-fc6c-4573-b2f7-4ba00266f612",
               "values": {
                 "type_decision": "aide sociale",
                 "autorite": "CPAS",
@@ -345,7 +345,7 @@
               }
             },
             {
-              "name": "fe0d06c4-61cf-4e38-a4bb-01e2638274b6",
+              "name": "66231900-66a5-4f84-8450-26a181f42b23",
               "values": {
                 "type_decision": "amende administrative",
                 "autorite": "commune",
@@ -360,7 +360,7 @@
       "isOutline": true
     },
     {
-      "id": "f5fafc57-9dfa-49e8-8cbb-5eb77c1d2f1e",
+      "id": "6d7d6647-7aad-43d6-9287-cd9bab72017e",
       "name": "Recours administratif avec effet suspensif",
       "description": "",
       "tags": [],
@@ -397,7 +397,7 @@
       "isOutline": false
     },
     {
-      "id": "7ea840b4-9ec7-4b99-af18-170f75a4fed4",
+      "id": "4913ba2c-1c08-4f7b-ba06-cd73cb904b24",
       "name": "Opposition administrative",
       "description": "",
       "tags": [],
@@ -438,7 +438,7 @@
       "isOutline": false
     },
     {
-      "id": "513937a5-3b19-48ae-a757-2c73e1d5973c",
+      "id": "010cd996-4b65-4a5f-80f3-e891a4063ca9",
       "name": "Révision administrative pour fait nouveau",
       "description": "",
       "tags": [],
@@ -482,5 +482,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.168Z"
+  "generated": "2025-12-13T17:25:45.885Z"
 }

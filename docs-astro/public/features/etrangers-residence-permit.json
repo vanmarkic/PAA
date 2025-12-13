@@ -60,7 +60,7 @@
   },
   "scenarios": [
     {
-      "id": "ab6a9243-98c3-4443-8486-412470df3ed0",
+      "id": "5ddc1365-82c4-4a67-8da6-d458f6a3cf23",
       "name": "Demande de première carte A (séjour temporaire)",
       "description": "",
       "tags": [],
@@ -113,7 +113,7 @@
       "isOutline": false
     },
     {
-      "id": "77b6e5c8-f9aa-493b-95f1-d9597cefaff7",
+      "id": "0cb96509-3ec0-4e42-baa1-e0100fb5de84",
       "name": "Renouvellement de carte A",
       "description": "",
       "tags": [],
@@ -154,7 +154,7 @@
       "isOutline": false
     },
     {
-      "id": "72206e16-b647-446b-bb47-ee662113a639",
+      "id": "9d57a51a-57f7-4193-9f05-27916e5a3b79",
       "name": "Demande de carte B (séjour illimité)",
       "description": "",
       "tags": [],
@@ -199,7 +199,7 @@
       "isOutline": false
     },
     {
-      "id": "3f1d5f7b-2695-4370-b038-9114e646c162",
+      "id": "550d4689-a6a8-4587-b55e-2c1b5835bcfa",
       "name": "Demande de carte E (citoyen UE)",
       "description": "",
       "tags": [],
@@ -236,7 +236,7 @@
       "isOutline": false
     },
     {
-      "id": "15d200e4-4548-4a66-9c81-26d078bbcf2c",
+      "id": "d0c226a3-4348-413a-bf3a-602b9f4978ae",
       "name": "Demande de carte F (membre de famille UE)",
       "description": "",
       "tags": [],
@@ -277,7 +277,7 @@
       "isOutline": false
     },
     {
-      "id": "3cf4f7f7-4dde-49b3-88e8-e52ccfad10e8",
+      "id": "61293068-4992-4c12-932b-07da719827c4",
       "name": "Demande de carte H (carte bleue européenne)",
       "description": "",
       "tags": [],
@@ -322,7 +322,7 @@
       "isOutline": false
     },
     {
-      "id": "ec442c97-7cce-437d-9fbc-a6cad2b3ec05",
+      "id": "a444a978-9b43-4ef4-9d6e-ca27f697c78b",
       "name": "Refus pour séjour irrégulier",
       "description": "",
       "tags": [],
@@ -359,7 +359,7 @@
       "isOutline": false
     },
     {
-      "id": "28cbafc6-3efe-447d-9a84-b93ca427b6ff",
+      "id": "5410bfe2-d394-4f83-bca8-42a63340b520",
       "name": "Contrôle de résidence par l'agent de quartier",
       "description": "",
       "tags": [],
@@ -396,7 +396,7 @@
       "isOutline": false
     },
     {
-      "id": "416b0933-aa02-44aa-a382-c59f281356ae",
+      "id": "6777a699-9943-44c4-95ca-9050b8f51b76",
       "name": "Calcul des frais selon le type de carte",
       "description": "",
       "tags": [],
@@ -429,7 +429,7 @@
           ],
           "rows": [
             {
-              "name": "6c9488e7-a545-4e6e-b7fc-44f2d3e8ab4e",
+              "name": "3e3a9e4a-4d71-46c3-85e3-e8f94247c953",
               "values": {
                 "type_carte": "Carte A",
                 "type_demande": "nouvelle",
@@ -437,7 +437,7 @@
               }
             },
             {
-              "name": "67ca3f68-f396-43ca-8047-c9e64ceffd87",
+              "name": "d193500b-03c5-4dd8-a938-11e07fd08561",
               "values": {
                 "type_carte": "Carte A",
                 "type_demande": "renouvellement",
@@ -445,7 +445,7 @@
               }
             },
             {
-              "name": "5a0dc949-2257-4903-b43b-7ad1c2e45cb8",
+              "name": "aa4aa99b-6a7a-4b52-abb6-4b2b55aad004",
               "values": {
                 "type_carte": "Carte B",
                 "type_demande": "nouvelle",
@@ -453,7 +453,7 @@
               }
             },
             {
-              "name": "a1050b0f-9caa-4ff5-b8dc-11f20ca12dc9",
+              "name": "db4e33cd-e7a3-4aa7-a517-acf21d600f04",
               "values": {
                 "type_carte": "Carte C",
                 "type_demande": "nouvelle",
@@ -461,7 +461,7 @@
               }
             },
             {
-              "name": "4e6f49ba-8523-4a34-8017-788613cdc21a",
+              "name": "136b59f7-279f-4ee6-812e-f7a7dca76247",
               "values": {
                 "type_carte": "Carte E",
                 "type_demande": "nouvelle",
@@ -469,7 +469,7 @@
               }
             },
             {
-              "name": "aa3808d3-0307-42e7-98b7-a3571e9b61da",
+              "name": "7ed8f7cc-cca8-49ae-889a-9253afbde924",
               "values": {
                 "type_carte": "Carte F",
                 "type_demande": "nouvelle",
@@ -477,7 +477,7 @@
               }
             },
             {
-              "name": "7799d006-a03f-4228-a35c-aecd30a749c6",
+              "name": "61046e9a-77e4-48c4-9d4d-8e005788060b",
               "values": {
                 "type_carte": "Carte H",
                 "type_demande": "nouvelle",
@@ -490,7 +490,7 @@
       "isOutline": true
     },
     {
-      "id": "0a45cc8f-16e5-4d48-a6b8-8c06c33bb023",
+      "id": "ebacb17a-254b-4a2c-b0a8-646b654302e2",
       "name": "Procédure accélérée moyennant supplément",
       "description": "",
       "tags": [],
@@ -530,5 +530,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.166Z"
+  "generated": "2025-12-13T17:25:45.881Z"
 }

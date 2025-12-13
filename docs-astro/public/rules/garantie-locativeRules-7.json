@@ -1,0 +1,36 @@
+{
+  "id": "garantie-locativeRules-7",
+  "description": "Travailleur avec revenus modestes - Prêt sans intérêt",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "revenus",
+        "operator": "greaterThan",
+        "value": "see_code"
+      },
+      {
+        "fact": "revenus",
+        "operator": "lessThan",
+        "value": 1800
+      },
+      {
+        "fact": "epargne",
+        "operator": "lessThan",
+        "value": 500
+      },
+      {
+        "fact": "estBeneficiaireRIS",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

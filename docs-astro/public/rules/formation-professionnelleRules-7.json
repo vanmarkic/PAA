@@ -1,0 +1,31 @@
+{
+  "id": "formation-professionnelleRules-7",
+  "description": "Rule 8 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 72,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isSingleParent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "numberOfChildren",
+        "operator": "greaterThan",
+        "value": "see_code"
+      },
+      {
+        "fact": "isTrainingApproved",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-eligible"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

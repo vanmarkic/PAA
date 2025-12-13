@@ -1,0 +1,36 @@
+{
+  "id": "income-guaranteeRules-4",
+  "description": "Éligible pour Allocation de Garantie de Revenus (AGR)",
+  "category": "autre",
+  "benefitType": "income-guarantee",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isPartTimeWorker",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasMaintenanceOfRights",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "grossMonthlySalary",
+        "operator": "lessThan",
+        "value": "AGR_CONSTANTS.REVENU_MINIMUM_MENSUEL_GARANTI"
+      },
+      {
+        "fact": "receivesFullUnemploymentBenefit",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "incomeGuarantee-eligible"
+  },
+  "fileName": "income-guaranteeRules",
+  "generated": "2025-12-13T17:27:42.397Z"
+}

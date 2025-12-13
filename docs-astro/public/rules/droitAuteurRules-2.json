@@ -1,0 +1,26 @@
+{
+  "id": "droitAuteurRules-2",
+  "description": "Droits patrimoniaux transférés à l\\",
+  "category": "autre",
+  "benefitType": "droitauteur",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isEmployeeWork",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasContractualTransfer",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "copyright-transferred-employer"
+  },
+  "fileName": "droitAuteurRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

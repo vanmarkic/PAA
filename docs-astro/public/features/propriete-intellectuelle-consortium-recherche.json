@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "69ddfa4c-4cf0-441f-9aba-c0b4f1cd6d04",
+      "id": "a15b827e-35f6-4309-bb0a-314cf173994a",
       "name": "Accord de consortium avec gestion IP",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "941f4018-8ebc-42b8-aa73-c2e312c2680b",
+      "id": "b2fc65a5-7821-4eb0-917d-d121a528e062",
       "name": "Gestion des résultats conjoints",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.167Z"
+  "generated": "2025-12-13T17:25:45.884Z"
 }

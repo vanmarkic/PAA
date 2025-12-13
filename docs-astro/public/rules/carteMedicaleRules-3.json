@@ -1,0 +1,36 @@
+{
+  "id": "carteMedicaleRules-3",
+  "description": "Éligible aide médicale partielle",
+  "category": "sante",
+  "benefitType": "cartemedicale",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasEmployment",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthlyIncome",
+        "operator": "lessThan",
+        "value": 1200
+      },
+      {
+        "fact": "hasMutuelle",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "medicalDebt",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "medical-card-eligible-partial"
+  },
+  "fileName": "carteMedicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

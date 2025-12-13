@@ -1,0 +1,26 @@
+{
+  "id": "agrRules-1",
+  "description": "Ineligible: salaire supérieur au minimum garanti",
+  "category": "emploi",
+  "benefitType": "agr",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "part-time"
+      },
+      {
+        "fact": "monthlySalaryGross",
+        "operator": "greaterThanInclusive",
+        "value": "MINIMUM_GUARANTEED_INCOME"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-ineligible"
+  },
+  "fileName": "agrRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

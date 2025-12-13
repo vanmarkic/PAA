@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-6",
+  "description": "aide sociale complémentaire pour personne avec handicap",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisability",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasSpecificNeeds",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-complementaire-handicap"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

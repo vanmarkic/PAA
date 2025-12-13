@@ -1,0 +1,26 @@
+{
+  "id": "assembleeGeneraleRules-1",
+  "description": "Ineligible: Délai minimum de ${COPROPRIETE_CONSTANTS.DELAI_CONVOCATION_AG_EXTRAORDINAIRE} jours non respecté pour AG extraordinaire",
+  "category": "autre",
+  "benefitType": "assembleegenerale",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "assemblee_type",
+        "operator": "equal",
+        "value": "extraordinaire"
+      },
+      {
+        "fact": "delai_convocation",
+        "operator": "lessThan",
+        "value": "COPROPRIETE_CONSTANTS.DELAI_CONVOCATION_AG_EXTRAORDINAIRE"
+      }
+    ]
+  },
+  "event": {
+    "type": "convocation-invalide"
+  },
+  "fileName": "assembleeGeneraleRules",
+  "generated": "2025-12-13T17:27:42.381Z"
+}

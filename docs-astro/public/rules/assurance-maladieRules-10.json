@@ -1,0 +1,36 @@
+{
+  "id": "assurance-maladieRules-10",
+  "description": "Ineligible: malade chronique reconnu avec dépenses supérieures à 365€/an",
+  "category": "sante",
+  "benefitType": "assurance-maladie",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estAffilieMutuelle",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cotisationsAJour",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "estMaladeCronique",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "depensesAnnuellesSante",
+        "operator": "greaterThan",
+        "value": "INAMI_CONSTANTS.SEUIL_DEPENSES_CHRONIQUE"
+      }
+    ]
+  },
+  "event": {
+    "type": "assuranceMaladie-forfait-chronique"
+  },
+  "fileName": "assurance-maladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

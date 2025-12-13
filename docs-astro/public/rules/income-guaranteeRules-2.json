@@ -1,0 +1,21 @@
+{
+  "id": "income-guaranteeRules-2",
+  "description": "Ineligible: salaire supérieur au minimum garanti",
+  "category": "autre",
+  "benefitType": "income-guarantee",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "grossMonthlySalary",
+        "operator": "greaterThanInclusive",
+        "value": "AGR_CONSTANTS.REVENU_MINIMUM_MENSUEL_GARANTI"
+      }
+    ]
+  },
+  "event": {
+    "type": "incomeGuarantee-ineligible"
+  },
+  "fileName": "income-guaranteeRules",
+  "generated": "2025-12-13T17:27:42.397Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "insertion-professionnelleRules-6",
+  "description": "Éligible pour Formation Professionnelle Individuelle",
+  "category": "autre",
+  "benefitType": "insertion-professionnelle",
+  "priority": 75,
+  "conditions": {
+    "all": [
+      {
+        "fact": "unemploymentDurationMonths",
+        "operator": "greaterThanInclusive",
+        "value": "see_code"
+      },
+      {
+        "fact": "proposedDevice",
+        "operator": "equal",
+        "value": "fpi-ibo"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible"
+  },
+  "fileName": "insertion-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

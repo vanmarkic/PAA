@@ -1,0 +1,31 @@
+{
+  "id": "carteMedicaleRules-4",
+  "description": "Éligible carte médicale - personne âgée précaire",
+  "category": "sante",
+  "benefitType": "cartemedicale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": 65
+      },
+      {
+        "fact": "pensionAmount",
+        "operator": "lessThan",
+        "value": 1000
+      },
+      {
+        "fact": "hasChronicCondition",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "medical-card-eligible-elderly"
+  },
+  "fileName": "carteMedicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

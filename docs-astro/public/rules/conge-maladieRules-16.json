@@ -1,0 +1,31 @@
+{
+  "id": "conge-maladieRules-16",
+  "description": "Congé de maternité - 82% puis 75% du salaire",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeIncapacite",
+        "operator": "equal",
+        "value": "maternite"
+      },
+      {
+        "fact": "estEnceinte",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

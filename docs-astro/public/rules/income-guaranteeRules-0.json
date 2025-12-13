@@ -1,0 +1,21 @@
+{
+  "id": "income-guaranteeRules-0",
+  "description": "Ineligible: cumul interdit avec chômage complet",
+  "category": "autre",
+  "benefitType": "income-guarantee",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "receivesFullUnemploymentBenefit",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "incomeGuarantee-ineligible"
+  },
+  "fileName": "income-guaranteeRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

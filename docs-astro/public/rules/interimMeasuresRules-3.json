@@ -1,0 +1,31 @@
+{
+  "id": "interimMeasuresRules-3",
+  "description": "Ineligible: Denial of urgent medical treatment in detention",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "applicantDetained",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "medicalCondition",
+        "operator": "in",
+        "value": "[life-threatening"
+      },
+      {
+        "fact": "treatmentDenied",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "grant-medical"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

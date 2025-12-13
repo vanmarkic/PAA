@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-1",
+  "description": "Rule 2 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "conseil-etat-extreme-urgence"
+      },
+      {
+        "fact": "daysElapsed",
+        "operator": "greaterThan",
+        "value": 5
+      }
+    ]
+  },
+  "event": {
+    "type": "deadline-expired"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

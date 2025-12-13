@@ -1,0 +1,31 @@
+{
+  "id": "insertion-professionnelleRules-7",
+  "description": "Éligible pour SINE - Économie sociale d\\",
+  "category": "autre",
+  "benefitType": "insertion-professionnelle",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "profileType",
+        "operator": "equal",
+        "value": "tres-eloigne-emploi"
+      },
+      {
+        "fact": "hasSocialProblems",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "proposedDevice",
+        "operator": "equal",
+        "value": "sine"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible"
+  },
+  "fileName": "insertion-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "prime-renovationRules-9",
+  "description": "Éligible - MijnVerbouwPremie Flandres",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.FLANDRES"
+      },
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

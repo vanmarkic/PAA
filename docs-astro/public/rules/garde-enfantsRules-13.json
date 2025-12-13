@@ -1,0 +1,31 @@
+{
+  "id": "garde-enfantsRules-13",
+  "description": "Chèques garde d\\",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "ageAnnees",
+        "operator": "lessThan",
+        "value": 3
+      },
+      {
+        "fact": "reprise_activite",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-cheques-regionaux"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

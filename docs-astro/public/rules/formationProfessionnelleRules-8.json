@@ -1,0 +1,26 @@
+{
+  "id": "formationProfessionnelleRules-8",
+  "description": "Accès prioritaire - travailleur 50+",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": 50
+      },
+      {
+        "fact": "status",
+        "operator": "equal",
+        "value": "demandeur-emploi"
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-eligible-senior"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

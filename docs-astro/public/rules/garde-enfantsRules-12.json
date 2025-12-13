@@ -1,0 +1,21 @@
+{
+  "id": "garde-enfantsRules-12",
+  "description": "Service garde enfants malades disponible via mutuelle",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 25,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enfant_malade",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-garde-malade"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

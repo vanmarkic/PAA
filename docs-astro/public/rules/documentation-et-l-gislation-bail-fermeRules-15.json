@@ -1,0 +1,26 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-15",
+  "description": "Une résiliation amiable peut être conclue",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "actionType",
+        "operator": "equal",
+        "value": "resiliation_amiable"
+      },
+      {
+        "fact": "hasMutualAgreement",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "resiliation-amiable-possible"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

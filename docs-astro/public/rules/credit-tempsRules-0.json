@@ -1,0 +1,26 @@
+{
+  "id": "credit-tempsRules-0",
+  "description": "Le crédit-temps sans motif est supprimé depuis avril 2017",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "credit_temps_sans_motif"
+      },
+      {
+        "fact": "motifValable",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-ineligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "brevetRules-1",
+  "description": "L\\",
+  "category": "autre",
+  "benefitType": "brevet",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasInventiveStep",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isObviousToSkilledPerson",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "patent-inventive-step-satisfied"
+  },
+  "fileName": "brevetRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

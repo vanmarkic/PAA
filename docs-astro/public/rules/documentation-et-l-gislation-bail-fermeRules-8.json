@@ -1,0 +1,21 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-8",
+  "description": "Les règles de transmission du bail par décès du bailleur s\\",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 60,
+  "conditions": {
+    "all": [
+      {
+        "fact": "eventType",
+        "operator": "equal",
+        "value": "deces_bailleur"
+      }
+    ]
+  },
+  "event": {
+    "type": "transmission-deces-bailleur"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.389Z"
+}

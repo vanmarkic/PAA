@@ -1,0 +1,26 @@
+{
+  "id": "brevetRules-6",
+  "description": "Ineligible: Annuité non payée après délai de grâce",
+  "category": "autre",
+  "benefitType": "brevet",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "annuityDue",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthsSinceDueDate",
+        "operator": "greaterThan",
+        "value": "IP_CONSTANTS.PATENT_GRACE_PERIOD"
+      }
+    ]
+  },
+  "event": {
+    "type": "patent-lapsed"
+  },
+  "fileName": "brevetRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

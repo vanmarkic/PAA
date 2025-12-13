@@ -1,0 +1,31 @@
+{
+  "id": "artistStatusRules-9",
+  "description": "Statut mixte accordé (revenus artistiques et non-artistiques)",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "annualIncomeArtistic",
+        "operator": "greaterThanInclusive",
+        "value": "ARTIST_STATUS_CONSTANTS.MINIMUM_ARTISTIC_INCOME"
+      },
+      {
+        "fact": "annualIncomeNonArtistic",
+        "operator": "greaterThan",
+        "value": 5000
+      },
+      {
+        "fact": "annualIncomeNonArtistic",
+        "operator": "lessThanInclusive",
+        "value": "ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-status-mixed"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

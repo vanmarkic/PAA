@@ -1,0 +1,36 @@
+{
+  "id": "assuranceMaladieRules-0",
+  "description": "Éligible BIM automatique",
+  "category": "sante",
+  "benefitType": "assurancemaladie",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "hasGRAPA",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasRIS",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasARR",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isOrphan",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "bim-eligible-automatic"
+  },
+  "fileName": "assuranceMaladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

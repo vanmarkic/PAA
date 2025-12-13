@@ -1,0 +1,26 @@
+{
+  "id": "formationProfessionnelleRules-1",
+  "description": "Ineligible: non inscrit auprès du service régional de l\\",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "status",
+        "operator": "equal",
+        "value": "demandeur-emploi"
+      },
+      {
+        "fact": "isRegisteredWithRegionalService",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-ineligible"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

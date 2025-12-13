@@ -1,0 +1,26 @@
+{
+  "id": "identityDocumentRules-7",
+  "description": "Ineligible: Consentement parental requis pour les mineurs",
+  "category": "autre",
+  "benefitType": "identitydocument",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": 18
+      },
+      {
+        "fact": "parentalConsent",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "parental-consent-missing"
+  },
+  "fileName": "identityDocumentRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

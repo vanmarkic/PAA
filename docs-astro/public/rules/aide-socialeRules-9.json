@@ -1,0 +1,31 @@
+{
+  "id": "aide-socialeRules-9",
+  "description": "Rule 10 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "situationUrgence",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "revenus",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "risqueRue",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-eligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "logementSocialRules-9",
+  "description": "Ineligible: inkomen boven sociale grenzen",
+  "category": "logement",
+  "benefitType": "logementsocial",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "incomeVsThreshold",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "flanders-social-ineligible"
+  },
+  "fileName": "logementSocialRules",
+  "generated": "2025-12-13T17:27:42.416Z"
+}

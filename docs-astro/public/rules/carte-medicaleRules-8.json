@@ -1,0 +1,36 @@
+{
+  "id": "carte-medicaleRules-8",
+  "description": "Ineligible: Personne âgée isolée avec reste à vivre insuffisant et problèmes de santé chroniques",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": 65
+      },
+      {
+        "fact": "familySituation",
+        "operator": "equal",
+        "value": "isolated"
+      },
+      {
+        "fact": "resteAVivre",
+        "operator": "lessThan",
+        "value": "CARTE_MEDICALE_CONSTANTS.MIN_RESTE_A_VIVRE_ISOLE"
+      },
+      {
+        "fact": "hasChronicHealthIssues",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

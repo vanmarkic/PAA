@@ -1,0 +1,26 @@
+{
+  "id": "conge-parentalRules-3",
+  "description": "Ineligible: congé parental corona - mesure temporaire expirée",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 97,
+  "conditions": {
+    "all": [
+      {
+        "fact": "demandeCoronaCongé",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "anneeEnCours",
+        "operator": "greaterThanInclusive",
+        "value": 2024
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-ineligible"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

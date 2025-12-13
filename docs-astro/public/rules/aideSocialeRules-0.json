@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-0",
+  "description": "aide médicale urgente pour personnes sans titre de séjour",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "no-valid-status"
+      },
+      {
+        "fact": "needsUrgentMedicalCare",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-medicale-urgente-eligible"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

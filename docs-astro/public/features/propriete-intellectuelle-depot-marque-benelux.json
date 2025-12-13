@@ -40,7 +40,7 @@
   },
   "scenarios": [
     {
-      "id": "991662df-3899-40f9-9028-ea6e9ec462ac",
+      "id": "ada8f781-cb27-4bbd-8863-49e323554748",
       "name": "Dépôt de marque verbale distinctive",
       "description": "",
       "tags": [],
@@ -85,7 +85,7 @@
       "isOutline": false
     },
     {
-      "id": "48e648ac-4a36-45f8-ab5b-ff0b5987032b",
+      "id": "eca6575e-af50-4ecc-876a-b72a4767abee",
       "name": "Marque descriptive refusée",
       "description": "",
       "tags": [],
@@ -122,7 +122,7 @@
       "isOutline": false
     },
     {
-      "id": "284ccf50-15c8-474e-8e56-3fcccd08af3f",
+      "id": "41489eff-2389-4e7d-a0e6-68d754f7dd28",
       "name": "Opposition par un tiers",
       "description": "",
       "tags": [],
@@ -159,7 +159,7 @@
       "isOutline": false
     },
     {
-      "id": "e06e1f71-560a-46ac-b1a2-6fe0d1655900",
+      "id": "96faeb98-89eb-487a-8671-78c6b1782f96",
       "name": "Renouvellement de marque après 10 ans",
       "description": "",
       "tags": [],
@@ -192,7 +192,7 @@
       "isOutline": false
     },
     {
-      "id": "bc12a675-6252-4d2d-9868-ff27d7c58aec",
+      "id": "de628535-0376-4626-93a1-ea766b10ea17",
       "name": "Calcul des frais selon nombre de classes",
       "description": "",
       "tags": [],
@@ -220,28 +220,28 @@
           ],
           "rows": [
             {
-              "name": "812d9d1b-4f54-40c3-a5b4-be924b8e6ed9",
+              "name": "ad38cc40-abdf-4db7-8c2a-418e7d24b432",
               "values": {
                 "nombre_classes": "3",
                 "montant": "244"
               }
             },
             {
-              "name": "17673db6-1adc-4141-8408-976a8205dcc2",
+              "name": "e182fee9-b3f0-47ec-8358-07b2c34bc868",
               "values": {
                 "nombre_classes": "4",
                 "montant": "281"
               }
             },
             {
-              "name": "f350afcf-0fe2-4387-9afd-7489ea9f9d55",
+              "name": "42909d82-e0c3-4c80-8cdf-dbabd5f2afeb",
               "values": {
                 "nombre_classes": "5",
                 "montant": "318"
               }
             },
             {
-              "name": "63e2fcc2-04c9-4a62-ac26-b2c279150a1d",
+              "name": "c7d5cbe4-19e2-4309-9a10-1fd25b6bf202",
               "values": {
                 "nombre_classes": "10",
                 "montant": "503"
@@ -256,5 +256,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.167Z"
+  "generated": "2025-12-13T17:25:45.884Z"
 }

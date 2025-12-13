@@ -1,0 +1,26 @@
+{
+  "id": "identityDocumentRules-1",
+  "description": "Ineligible: Nationalité belge requise pour ce document",
+  "category": "autre",
+  "benefitType": "identitydocument",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "documentType",
+        "operator": "in",
+        "value": "[carte-identite"
+      },
+      {
+        "fact": "nationality",
+        "operator": "notEqual",
+        "value": "BE"
+      }
+    ]
+  },
+  "event": {
+    "type": "nationality-requirement-failed"
+  },
+  "fileName": "identityDocumentRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

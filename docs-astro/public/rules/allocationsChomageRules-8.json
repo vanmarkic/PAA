@@ -1,0 +1,31 @@
+{
+  "id": "allocationsChomageRules-8",
+  "description": "Éligible pour allocations d\\",
+  "category": "emploi",
+  "benefitType": "allocationschomage",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": 25
+      },
+      {
+        "fact": "hasCompletedInsertionStage",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "workingDaysLast18Months",
+        "operator": "lessThan",
+        "value": "MIN_WORKING_DAYS_UNDER_36"
+      }
+    ]
+  },
+  "event": {
+    "type": "unemployment-eligible-insertion"
+  },
+  "fileName": "allocationsChomageRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

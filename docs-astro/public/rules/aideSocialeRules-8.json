@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-8",
+  "description": "aide en nature pour famille avec enfants",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDependentChildren",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "needsSupplementaryAid",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-en-nature-famille"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

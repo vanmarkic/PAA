@@ -1,0 +1,31 @@
+{
+  "id": "assembleeGeneraleRules-2",
+  "description": "Ineligible: AG obligatoire après 24 mois en régime biannuel",
+  "category": "autre",
+  "benefitType": "assembleegenerale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "copropriete_status",
+        "operator": "equal",
+        "value": "petite_copropriete"
+      },
+      {
+        "fact": "regime_biannuel",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "mois_depuis_derniere_ag",
+        "operator": "greaterThan",
+        "value": 24
+      }
+    ]
+  },
+  "event": {
+    "type": "ag-obligatoire"
+  },
+  "fileName": "assembleeGeneraleRules",
+  "generated": "2025-12-13T17:27:42.381Z"
+}

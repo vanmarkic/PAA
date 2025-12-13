@@ -1,0 +1,21 @@
+{
+  "id": "familyReunificationRules-5",
+  "description": "Ineligible: Assurance maladie manquante ou insuffisante",
+  "category": "autre",
+  "benefitType": "familyreunification",
+  "priority": 7,
+  "conditions": {
+    "any": [
+      {
+        "fact": "hasHealthInsurance",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "family-ineligible"
+  },
+  "fileName": "familyReunificationRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

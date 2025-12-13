@@ -1,0 +1,36 @@
+{
+  "id": "carte-medicaleRules-7",
+  "description": "Ineligible: Parent isolé bénéficiaire RIS avec enfants scolarisés - carte familiale",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "familySituation",
+        "operator": "equal",
+        "value": "single_parent"
+      },
+      {
+        "fact": "receivesRIS",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "numberOfChildren",
+        "operator": "greaterThan",
+        "value": "see_code"
+      },
+      {
+        "fact": "childrenSchooled",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

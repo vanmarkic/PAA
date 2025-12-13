@@ -1,0 +1,26 @@
+{
+  "id": "conge-maladieRules-15",
+  "description": "Maladie professionnelle - Couverture Fedris (90%)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 94,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeIncapacite",
+        "operator": "equal",
+        "value": "maladie_professionnelle"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

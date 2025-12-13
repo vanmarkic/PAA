@@ -1,0 +1,36 @@
+{
+  "id": "conge-maladieRules-10",
+  "description": "Indépendant - Période de carence (pas d\\",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 55,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "independant"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "lessThanInclusive",
+        "value": "CONGE_MALADIE_CONSTANTS.INDEPENDANT_CARENCE_JOURS"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cotisationsSocialesPayees",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

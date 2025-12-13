@@ -1,0 +1,21 @@
+{
+  "id": "allocations-handicapesRules-5",
+  "description": "Ineligible: doit résider en Belgique minimum ${HANDICAP_CONSTANTS.RESIDENCE_MONTHS_REQUIRED} mois par an",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 95,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residenceMonthsPerYear",
+        "operator": "lessThan",
+        "value": "HANDICAP_CONSTANTS.RESIDENCE_MONTHS_REQUIRED"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocations-handicapes-ineligible"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "garde-enfantsRules-1",
+  "description": "Ineligible: enfant de plus de 12 ans",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "ageAnnees",
+        "operator": "greaterThan",
+        "value": "GARDE_ENFANTS_CONSTANTS.AGE_MAX_DEDUCTION_FISCALE"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-ineligible-deduction"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "conge-parentalRules-4",
+  "description": "Ineligible: temps partiel incompatible avec formule 1/5 temps",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 96,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeContrat",
+        "operator": "equal",
+        "value": "temps_partiel"
+      },
+      {
+        "fact": "formuleChoisie",
+        "operator": "equal",
+        "value": "1/5_temps"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-ineligible"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

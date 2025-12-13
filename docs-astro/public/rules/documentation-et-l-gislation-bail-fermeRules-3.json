@@ -1,0 +1,26 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-3",
+  "description": "Ineligible: Le bail doit être notifié à l",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "actionType",
+        "operator": "equal",
+        "value": "conclusion_bail"
+      },
+      {
+        "fact": "isNotifiedToObservatoire",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "documentationEtLGislationBailFerme-ineligible"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.388Z"
+}

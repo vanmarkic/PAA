@@ -1,0 +1,21 @@
+{
+  "id": "fondsSecuriteExistenceRules-0",
+  "description": "Éligible pour FondsSecuriteExistence",
+  "category": "autre",
+  "benefitType": "fondssecuriteexistence",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "fondsSecuriteExistence-eligible"
+  },
+  "fileName": "fondsSecuriteExistenceRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

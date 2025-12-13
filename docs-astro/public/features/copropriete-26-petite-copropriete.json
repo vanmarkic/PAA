@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "579031a5-d60f-4ebe-95fb-432d9a268e69",
+      "id": "6654c952-d432-44a0-b1d0-0e4bd63128a5",
       "name": "Application régime simplifié",
       "description": "",
       "tags": [],
@@ -70,7 +70,7 @@
       "isOutline": false
     },
     {
-      "id": "fa4dbe9b-2ab7-470d-9bb1-b44e1e1565f1",
+      "id": "dca0f43d-4029-41f2-a466-d203b5c1a048",
       "name": "AG biannuelle petite copropriété",
       "description": "",
       "tags": [],
@@ -119,7 +119,7 @@
       "isOutline": false
     },
     {
-      "id": "5c5ce18b-dd50-42f4-aa1d-3d19d1f6ab3e",
+      "id": "5ac0533b-54e0-46c4-9342-e3b9e25065ee",
       "name": "Décision sans AG physique",
       "description": "",
       "tags": [],
@@ -167,5 +167,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.163Z"
+  "generated": "2025-12-13T17:25:45.879Z"
 }

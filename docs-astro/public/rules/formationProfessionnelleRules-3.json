@@ -1,0 +1,31 @@
+{
+  "id": "formationProfessionnelleRules-3",
+  "description": "Éligible pour formation métier en pénurie",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "status",
+        "operator": "equal",
+        "value": "demandeur-emploi"
+      },
+      {
+        "fact": "isShortageOccupation",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isRegisteredWithRegionalService",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-eligible-shortage"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

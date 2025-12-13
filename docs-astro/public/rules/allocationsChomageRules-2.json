@@ -1,0 +1,26 @@
+{
+  "id": "allocationsChomageRules-2",
+  "description": "Ineligible: jours travaillés insuffisants (${MIN_WORKING_DAYS_UNDER_36} jours requis sur 18 mois)",
+  "category": "emploi",
+  "benefitType": "allocationschomage",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": 36
+      },
+      {
+        "fact": "workingDaysLast18Months",
+        "operator": "lessThan",
+        "value": "MIN_WORKING_DAYS_UNDER_36"
+      }
+    ]
+  },
+  "event": {
+    "type": "unemployment-ineligible"
+  },
+  "fileName": "allocationsChomageRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

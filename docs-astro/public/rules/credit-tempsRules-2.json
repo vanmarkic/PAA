@@ -1,0 +1,26 @@
+{
+  "id": "credit-tempsRules-2",
+  "description": "Employeur PME peut reporter la demande",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 89,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "conge_parental"
+      },
+      {
+        "fact": "nombreEmployeur",
+        "operator": "lessThan",
+        "value": "CREDIT_TEMPS_CONSTANTS.SEUIL_PME"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-pme-defer"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

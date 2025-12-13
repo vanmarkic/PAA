@@ -1,0 +1,31 @@
+{
+  "id": "creditTempsRules-3",
+  "description": "Éligible pour assistance médicale",
+  "category": "fiscal",
+  "benefitType": "credittemps",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "creditType",
+        "operator": "equal",
+        "value": "medical-assistance"
+      },
+      {
+        "fact": "hasSickFamilyMember",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "anciennityMonths",
+        "operator": "greaterThanInclusive",
+        "value": "MIN_ANCIENNITY_MONTHS"
+      }
+    ]
+  },
+  "event": {
+    "type": "credit-temps-eligible-medical"
+  },
+  "fileName": "creditTempsRules",
+  "generated": "2025-12-13T17:27:42.428Z"
+}

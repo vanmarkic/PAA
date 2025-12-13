@@ -1,0 +1,26 @@
+{
+  "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-10",
+  "description": "Rule 11 for loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+  "category": "autre",
+  "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isEligible",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasEquityReasonsForExemption",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "loiDu26Mai2002ConcernantLeDroitLIntGrati-work-exemption"
+  },
+  "fileName": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules",
+  "generated": "2025-12-13T17:27:42.400Z"
+}

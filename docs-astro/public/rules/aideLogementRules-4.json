@@ -1,0 +1,41 @@
+{
+  "id": "aideLogementRules-4",
+  "description": "Rule 5 for aidelogement",
+  "category": "logement",
+  "benefitType": "aidelogement",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isRenting",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "totalIncome",
+        "operator": "greaterThan",
+        "value": "BRUSSELS_2024.incomeThresholds.socialPriority"
+      },
+      {
+        "fact": "totalIncome",
+        "operator": "lessThanInclusive",
+        "value": "BRUSSELS_2024.incomeThresholds.mediumIncome"
+      },
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "priorityPoints",
+        "operator": "greaterThanInclusive",
+        "value": "BRUSSELS_2024.priorityPoints.minimum"
+      }
+    ]
+  },
+  "event": {
+    "type": "brussels-eligible-medium"
+  },
+  "fileName": "aideLogementRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "aide-socialeRules-6",
+  "description": "Rule 7 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 75,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": 65
+      },
+      {
+        "fact": "beneficiaireGRAPA",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "fraisMedicauxImportants",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-eligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

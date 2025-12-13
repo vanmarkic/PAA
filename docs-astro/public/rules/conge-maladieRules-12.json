@@ -1,0 +1,36 @@
+{
+  "id": "conge-maladieRules-12",
+  "description": "Indépendant - Indemnité complète",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 53,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "independant"
+      },
+      {
+        "fact": "dureeIncapaciteJours",
+        "operator": "greaterThan",
+        "value": "CONGE_MALADIE_CONSTANTS.INDEPENDANT_PARTIEL_FIN"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cotisationsSocialesPayees",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

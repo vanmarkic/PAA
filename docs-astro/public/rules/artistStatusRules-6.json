@@ -1,0 +1,31 @@
+{
+  "id": "artistStatusRules-6",
+  "description": "Statut d\\",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "daysWorkedArtistic",
+        "operator": "greaterThanInclusive",
+        "value": "ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD"
+      },
+      {
+        "fact": "annualIncomeArtistic",
+        "operator": "greaterThanInclusive",
+        "value": 15000
+      },
+      {
+        "fact": "yearsExperience",
+        "operator": "greaterThanInclusive",
+        "value": 2
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-status-professional"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

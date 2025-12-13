@@ -1,0 +1,26 @@
+{
+  "id": "artistStatusRules-8",
+  "description": "Statut d\\",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employersCount",
+        "operator": "greaterThanInclusive",
+        "value": 3
+      },
+      {
+        "fact": "daysWorkedArtistic",
+        "operator": "greaterThanInclusive",
+        "value": "ARTIST_STATUS_CONSTANTS.MINIMUM_DAYS_STANDARD"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-status-intermittent"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

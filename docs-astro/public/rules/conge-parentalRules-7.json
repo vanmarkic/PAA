@@ -1,0 +1,41 @@
+{
+  "id": "conge-parentalRules-7",
+  "description": "Rule 8 for conge-parental",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeContrat",
+        "operator": "equal",
+        "value": "temps_plein"
+      },
+      {
+        "fact": "ageEnfant",
+        "operator": "lessThan",
+        "value": "CONGE_PARENTAL_CONSTANTS.AGE_LIMITE_ENFANT"
+      },
+      {
+        "fact": "enfantHandicape",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "ancienneteMois",
+        "operator": "greaterThanInclusive",
+        "value": "CONGE_PARENTAL_CONSTANTS.MIN_ANCIENNETE_MOIS"
+      },
+      {
+        "fact": "formuleChoisie",
+        "operator": "equal",
+        "value": "temps_plein"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-eligible"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

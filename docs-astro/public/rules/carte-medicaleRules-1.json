@@ -1,0 +1,21 @@
+{
+  "id": "carte-medicaleRules-1",
+  "description": "Ineligible: Bénéficiaire du RIS - carte médicale automatique",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "receivesRIS",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

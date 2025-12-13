@@ -1,0 +1,21 @@
+{
+  "id": "aidePersonnesAgeesRules-5",
+  "description": "Ineligible: doit résider en Région de Bruxelles-Capitale ou en Wallonie",
+  "category": "autre",
+  "benefitType": "aidepersonnesagees",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "in",
+        "value": "[brussels"
+      }
+    ]
+  },
+  "event": {
+    "type": "apa-ineligible"
+  },
+  "fileName": "aidePersonnesAgeesRules",
+  "generated": "2025-12-13T17:27:42.375Z"
+}

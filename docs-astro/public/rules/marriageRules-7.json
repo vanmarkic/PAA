@@ -1,0 +1,26 @@
+{
+  "id": "marriageRules-7",
+  "description": "Ineligible: Le mariage nécessite 2 à 4 témoins majeurs",
+  "category": "autre",
+  "benefitType": "marriage",
+  "priority": 5,
+  "conditions": {
+    "any": [
+      {
+        "fact": "witnessCount",
+        "operator": "lessThan",
+        "value": 2
+      },
+      {
+        "fact": "witnessCount",
+        "operator": "greaterThan",
+        "value": 4
+      }
+    ]
+  },
+  "event": {
+    "type": "witness-requirement"
+  },
+  "fileName": "marriageRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

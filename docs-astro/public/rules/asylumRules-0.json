@@ -1,0 +1,26 @@
+{
+  "id": "asylumRules-0",
+  "description": "Ineligible: Un autre pays européen est responsable (Règlement Dublin III)",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasEurodacHit",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "responsibleCountry",
+        "operator": "notEqual",
+        "value": "belgium"
+      }
+    ]
+  },
+  "event": {
+    "type": "dublin-transfer"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

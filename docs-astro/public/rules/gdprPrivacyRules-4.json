@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-4",
+  "description": "Ineligible: Demandes excessives - frais administratifs applicables",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestsInLast12Months",
+        "operator": "greaterThan",
+        "value": 3
+      },
+      {
+        "fact": "requestType",
+        "operator": "in",
+        "value": "[acces-donnees"
+      }
+    ]
+  },
+  "event": {
+    "type": "excessive-requests-fee"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

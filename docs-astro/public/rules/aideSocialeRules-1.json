@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-1",
+  "description": "mineurs exclus du RIS mais éligibles aide sociale",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "unaccompanied-minor"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": 18
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-mineur-eligible"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "logement-socialRules-8",
+  "description": "Ineligible: revenus > plafond 2025 (${LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE}€)",
+  "category": "logement",
+  "benefitType": "logement-social",
+  "priority": 75,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "Flandres"
+      },
+      {
+        "fact": "anneeReference",
+        "operator": "equal",
+        "value": 2025
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "personne_isolee"
+      },
+      {
+        "fact": "handicapReconnu",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "revenuImposable",
+        "operator": "greaterThan",
+        "value": "LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_2025_PLAFOND_ISOLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "logementSocial-ineligible"
+  },
+  "fileName": "logement-socialRules",
+  "generated": "2025-12-13T17:27:42.415Z"
+}

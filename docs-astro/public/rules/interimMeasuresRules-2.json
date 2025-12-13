@@ -1,0 +1,31 @@
+{
+  "id": "interimMeasuresRules-2",
+  "description": "Ineligible: Risk of irreversible harm upon expulsion",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[expulsion"
+      },
+      {
+        "fact": "destinationCountryRisk",
+        "operator": "greaterThanInclusive",
+        "value": 7
+      },
+      {
+        "fact": "expulsionScheduled",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "grant-likely"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

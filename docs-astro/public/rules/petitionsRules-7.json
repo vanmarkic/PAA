@@ -1,0 +1,26 @@
+{
+  "id": "petitionsRules-7",
+  "description": "Le seuil de signatures requis est atteint",
+  "category": "autre",
+  "benefitType": "petitions",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "verifiedSignatures",
+        "operator": "greaterThanInclusive",
+        "value": "{ fact: requiredSignatures"
+      },
+      {
+        "fact": "requiredSignatures",
+        "operator": "unknown",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "threshold-reached"
+  },
+  "fileName": "petitionsRules",
+  "generated": "2025-12-13T17:27:42.388Z"
+}

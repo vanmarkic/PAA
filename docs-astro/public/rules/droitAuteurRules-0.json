@@ -1,0 +1,26 @@
+{
+  "id": "droitAuteurRules-0",
+  "description": "L\\",
+  "category": "autre",
+  "benefitType": "droitauteur",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasOriginalExpression",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isCreativeWork",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "copyright-eligible"
+  },
+  "fileName": "droitAuteurRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

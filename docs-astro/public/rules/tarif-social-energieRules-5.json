@@ -1,0 +1,26 @@
+{
+  "id": "tarif-social-energieRules-5",
+  "description": "Ineligible: Le BIM ne donne plus droit au tarif social depuis le 1er juillet 2023",
+  "category": "logement",
+  "benefitType": "tarif-social-energie",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasBIM",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasNoOtherEligibleStatus",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "tarifSocialEnergie-ineligible"
+  },
+  "fileName": "tarif-social-energieRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

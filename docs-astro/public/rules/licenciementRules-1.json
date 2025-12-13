@@ -1,0 +1,38 @@
+{
+  "id": "licenciementRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "autre",
+  "benefitType": "licenciement",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "licenciement-ineligible"
+  },
+  "fileName": "licenciementRules",
+  "generated": "2025-12-13T17:27:42.399Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Emploi",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Licenciement - Loi du 3 juillet 1978",
+        "publicationDate": "1978-08-22T00:00:00.000Z",
+        "effectiveDate": "1978-09-01T00:00:00.000Z",
+        "officialUrl": "https://emploi.belgique.be/fr/themes/contrats-de-travail/fin-du-contrat-de-travail/licenciement",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0"
+  }
+}

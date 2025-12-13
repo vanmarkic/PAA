@@ -1,0 +1,31 @@
+{
+  "id": "deductionHabitationRules-2",
+  "description": "Éligible à la déduction des intérêts à Bruxelles",
+  "category": "fiscal",
+  "benefitType": "deductionhabitation",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "brussels"
+      },
+      {
+        "fact": "propertyType",
+        "operator": "equal",
+        "value": "principal"
+      },
+      {
+        "fact": "hasLoanInterest",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "housing-eligible-brussels-deduction"
+  },
+  "fileName": "deductionHabitationRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}

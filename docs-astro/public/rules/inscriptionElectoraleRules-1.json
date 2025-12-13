@@ -1,0 +1,31 @@
+{
+  "id": "inscriptionElectoraleRules-1",
+  "description": "Inscription automatique pour les citoyens belges majeurs",
+  "category": "autre",
+  "benefitType": "inscriptionelectorale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "nationalite",
+        "operator": "equal",
+        "value": "belge"
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "DEMOCRATIE_CONSTANTS.AGE_MAJORITE_ELECTORALE"
+      },
+      {
+        "fact": "droitsCiviquesActifs",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "inscription-automatique"
+  },
+  "fileName": "inscriptionElectoraleRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

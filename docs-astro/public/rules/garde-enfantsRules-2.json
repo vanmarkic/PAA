@@ -1,0 +1,26 @@
+{
+  "id": "garde-enfantsRules-2",
+  "description": "Réduction temps partiel applicable",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 70,
+  "conditions": {
+    "all": [
+      {
+        "fact": "heures_presence_jour",
+        "operator": "lessThanInclusive",
+        "value": "GARDE_ENFANTS_CONSTANTS.SEUIL_TEMPS_PARTIEL_HEURES"
+      },
+      {
+        "fact": "heures_presence_jour",
+        "operator": "greaterThan",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-reduction-temps-partiel"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

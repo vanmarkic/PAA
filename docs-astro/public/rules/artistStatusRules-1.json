@@ -1,0 +1,21 @@
+{
+  "id": "artistStatusRules-1",
+  "description": "Ineligible: Permis de travail requis pour les artistes hors-UE",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "hors-UE sans permis"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-ineligible"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

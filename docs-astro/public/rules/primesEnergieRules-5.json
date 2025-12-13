@@ -1,0 +1,21 @@
+{
+  "id": "primesEnergieRules-5",
+  "description": "Rule 6 for primesenergie",
+  "category": "logement",
+  "benefitType": "primesenergie",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estimatedCost",
+        "operator": "greaterThan",
+        "value": 50000
+      }
+    ]
+  },
+  "event": {
+    "type": "subsidy-cap"
+  },
+  "fileName": "primesEnergieRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

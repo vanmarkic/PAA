@@ -1,0 +1,26 @@
+{
+  "id": "primeNaissanceRules-0",
+  "description": "Éligible pour prime de naissance anticipée (6ème mois)",
+  "category": "autre",
+  "benefitType": "primenaissance",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "pregnancyMonths",
+        "operator": "greaterThanInclusive",
+        "value": "MIN_PREGNANCY_MONTHS_ANTICIPATION"
+      },
+      {
+        "fact": "isStillbirth",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "birth-allowance-eligible-anticipation"
+  },
+  "fileName": "primeNaissanceRules",
+  "generated": "2025-12-13T17:27:42.403Z"
+}

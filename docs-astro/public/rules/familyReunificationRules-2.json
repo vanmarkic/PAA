@@ -1,0 +1,31 @@
+{
+  "id": "familyReunificationRules-2",
+  "description": "Éligible comme enfant mineur",
+  "category": "autre",
+  "benefitType": "familyreunification",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "relationship",
+        "operator": "equal",
+        "value": "minor-child"
+      },
+      {
+        "fact": "childAge",
+        "operator": "lessThan",
+        "value": 18
+      },
+      {
+        "fact": "hasParentalAuthority",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "child-eligible"
+  },
+  "fileName": "familyReunificationRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

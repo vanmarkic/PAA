@@ -1,0 +1,46 @@
+{
+  "id": "allocation-chauffageRules-3",
+  "description": "Ineligible: revenus limités",
+  "category": "autre",
+  "benefitType": "allocation-chauffage",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isBIM",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isDebtMediation",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "annualGrossIncome",
+        "operator": "lessThanInclusive",
+        "value": "{ fact: incomeThreshold"
+      },
+      {
+        "fact": "incomeThreshold",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "dependentsEligible",
+        "operator": "lessThanInclusive",
+        "value": "ALLOCATION_CHAUFFAGE_CONSTANTS.APPLICATION_DEADLINE_DAYS"
+      },
+      {
+        "fact": "daysSinceInvoice",
+        "operator": "unknown",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationChauffage-eligible"
+  },
+  "fileName": "allocation-chauffageRules",
+  "generated": "2025-12-13T17:27:42.376Z"
+}

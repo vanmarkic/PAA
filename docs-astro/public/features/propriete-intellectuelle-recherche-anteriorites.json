@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "cf39df32-6980-4c83-a034-cb9fff2393b4",
+      "id": "a13d247d-d75c-4b6a-abe9-5c7cb0b37f4d",
       "name": "Recherche de brevets pour liberté d'exploitation",
       "description": "",
       "tags": [],
@@ -61,7 +61,7 @@
       "isOutline": false
     },
     {
-      "id": "6e3281ed-d00a-484a-a868-88d0fbb0573e",
+      "id": "04bc5565-57a8-41db-9804-f93b66fdcdb1",
       "name": "Recherche de marques similaires",
       "description": "",
       "tags": [],
@@ -98,7 +98,7 @@
       "isOutline": false
     },
     {
-      "id": "d259a2d2-c7fa-4fb1-a02f-8351e4c86927",
+      "id": "cf6cdfad-6b02-4262-a7e7-58a760bf7080",
       "name": "Recherche de dessins et modèles",
       "description": "",
       "tags": [],
@@ -138,5 +138,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.168Z"
+  "generated": "2025-12-13T17:25:45.885Z"
 }

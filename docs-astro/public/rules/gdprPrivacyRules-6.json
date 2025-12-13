@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-6",
+  "description": "Ineligible: Images probablement effacées - conservation standard 30 jours",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestType",
+        "operator": "equal",
+        "value": "acces-camera-surveillance"
+      },
+      {
+        "fact": "daysSinceRecording",
+        "operator": "greaterThan",
+        "value": 30
+      }
+    ]
+  },
+  "event": {
+    "type": "cctv-footage-deleted"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "conge-maladieRules-0",
+  "description": "Ineligible: Certificat médical obligatoire non fourni (délai: 48h)",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-ineligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

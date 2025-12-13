@@ -64,7 +64,7 @@
   },
   "scenarios": [
     {
-      "id": "86f6c2b4-dccf-4e92-ac28-529ad28749a5",
+      "id": "eb7716eb-9c83-428c-a2a8-6a5384afa344",
       "name": "Premier enfant à Bruxelles - demande anticipée",
       "description": "",
       "tags": [],
@@ -109,7 +109,7 @@
       "isOutline": false
     },
     {
-      "id": "7b0336b0-99ff-49dd-ae3c-94c10edfbcca",
+      "id": "f72c9816-6fc7-4fca-ba46-b5feaa7921a7",
       "name": "Deuxième enfant à Bruxelles - après naissance",
       "description": "",
       "tags": [],
@@ -150,7 +150,7 @@
       "isOutline": false
     },
     {
-      "id": "7c629bbd-f901-4f90-be91-3709023652d2",
+      "id": "1200d3dd-feee-4cf6-b5d6-eef322d9c48a",
       "name": "Premier enfant en Wallonie",
       "description": "",
       "tags": [],
@@ -187,7 +187,7 @@
       "isOutline": false
     },
     {
-      "id": "3d253b72-8200-4ef0-a2b2-c96b284cc9f7",
+      "id": "7a1fdfdd-de7f-4c16-a1f6-3f6bf59a64cf",
       "name": "Troisième enfant en Wallonie",
       "description": "",
       "tags": [],
@@ -228,7 +228,7 @@
       "isOutline": false
     },
     {
-      "id": "398bd80b-ebcb-46c7-9a7f-facd8ea84a6f",
+      "id": "db30c46e-c516-4943-8d66-e4f9264d5419",
       "name": "Premier enfant en Flandre (Startbedrag)",
       "description": "",
       "tags": [],
@@ -265,7 +265,7 @@
       "isOutline": false
     },
     {
-      "id": "68ad2642-4268-4543-b8e9-e1bdeff1b9f2",
+      "id": "93a9a5e0-e149-4bd7-b5eb-e3cf4b9c8aba",
       "name": "Jumeaux à Bruxelles",
       "description": "",
       "tags": [],
@@ -310,7 +310,7 @@
       "isOutline": false
     },
     {
-      "id": "cfebfd19-554c-4fe2-af08-ca324529003a",
+      "id": "0c536798-fc10-4a50-80fb-c4da6552fb91",
       "name": "Adoption d'un enfant de 3 ans à Bruxelles",
       "description": "",
       "tags": [],
@@ -355,7 +355,7 @@
       "isOutline": false
     },
     {
-      "id": "106a8c57-b1b4-4310-8601-7e18d12e95f3",
+      "id": "9a6c9bec-aeaa-4f30-b968-053aafe7be2d",
       "name": "Demande tardive après 90 jours",
       "description": "",
       "tags": [],
@@ -400,7 +400,7 @@
       "isOutline": false
     },
     {
-      "id": "60ea2305-bd0c-4c81-8519-ff225775f105",
+      "id": "91ae8ef0-9828-4ef0-9cf5-0e1aebc8968b",
       "name": "Demande très tardive après 5 ans - non éligible",
       "description": "",
       "tags": [],
@@ -433,7 +433,7 @@
       "isOutline": false
     },
     {
-      "id": "d5d91a16-7d69-41e9-a187-8c0a0772d847",
+      "id": "0ca69efb-aeff-4017-b4f2-de404ade073b",
       "name": "Enfant mort-né",
       "description": "",
       "tags": [],
@@ -470,7 +470,7 @@
       "isOutline": false
     },
     {
-      "id": "86c813d5-82f3-4d52-b262-9c849479b010",
+      "id": "2953ea70-e182-4662-83af-ab083a5f43f9",
       "name": "Parent sans titre de séjour valide",
       "description": "",
       "tags": [],
@@ -503,7 +503,7 @@
       "isOutline": false
     },
     {
-      "id": "60ce47de-1eb4-415a-be72-9de926a9db7e",
+      "id": "e5b91a82-8cc2-4903-95a3-c1414959ddb0",
       "name": "Famille déménageant entre régions",
       "description": "",
       "tags": [],
@@ -544,7 +544,7 @@
       "isOutline": false
     },
     {
-      "id": "7e1f4a52-13fe-4a56-a9ab-710297d82808",
+      "id": "e5bb3929-7284-47aa-b4bd-d92ef44a38c2",
       "name": "Calcul prime selon région et rang",
       "description": "",
       "tags": [],
@@ -581,7 +581,7 @@
           ],
           "rows": [
             {
-              "name": "75aea4d1-149e-47c3-9386-d5cbb493ae09",
+              "name": "2775c5e7-ae3a-4049-ad40-8034b3f59ce3",
               "values": {
                 "région": "Bruxelles",
                 "rang": "1",
@@ -589,7 +589,7 @@
               }
             },
             {
-              "name": "5672c410-ea26-4ecf-9c1a-601294b18b51",
+              "name": "c798fe3a-bc75-4206-8094-fab9b0d46b11",
               "values": {
                 "région": "Bruxelles",
                 "rang": "2",
@@ -597,7 +597,7 @@
               }
             },
             {
-              "name": "ec4ea1b4-84a9-4e86-b95a-63aa769a3ed5",
+              "name": "cc90f6cf-f304-4af2-a145-5dd15710c248",
               "values": {
                 "région": "Bruxelles",
                 "rang": "3",
@@ -605,7 +605,7 @@
               }
             },
             {
-              "name": "12529ae0-9304-44d2-a6cf-6424b364a52a",
+              "name": "422cd434-ca78-4913-a6e4-69c27206c213",
               "values": {
                 "région": "Wallonie",
                 "rang": "1",
@@ -613,7 +613,7 @@
               }
             },
             {
-              "name": "d942468f-9404-4ddb-870c-1a4c31df4416",
+              "name": "3aaf3296-3480-4719-836c-da61f3d9d166",
               "values": {
                 "région": "Wallonie",
                 "rang": "2",
@@ -621,7 +621,7 @@
               }
             },
             {
-              "name": "f85c2301-8143-4ae2-89d8-c2fc68631659",
+              "name": "f9c7eb0a-b2a3-4e06-bda6-7498e65fc19e",
               "values": {
                 "région": "Wallonie",
                 "rang": "4",
@@ -629,7 +629,7 @@
               }
             },
             {
-              "name": "70bf8f31-aaa9-41c0-8b71-b3e39d1635bb",
+              "name": "0d9d7573-7df9-4051-a48d-dfd4b01b572b",
               "values": {
                 "région": "Flandre",
                 "rang": "1",
@@ -637,7 +637,7 @@
               }
             },
             {
-              "name": "a5009947-02ed-45e0-aa9e-1ae8665662ed",
+              "name": "15ef12dd-90ac-4840-95a6-1f67eb8cd807",
               "values": {
                 "région": "Flandre",
                 "rang": "2",
@@ -645,7 +645,7 @@
               }
             },
             {
-              "name": "ad3d6e96-5065-413a-82a1-574518c80f70",
+              "name": "182b7dd9-ffeb-4553-9992-a02d8a3160df",
               "values": {
                 "région": "Flandre",
                 "rang": "5",
@@ -658,7 +658,7 @@
       "isOutline": true
     },
     {
-      "id": "3eb1d6a9-8a23-4713-ba8f-e7cf37cb9e04",
+      "id": "9dc8a3e2-74e8-4eb1-ac82-6d2f940eb8e9",
       "name": "Documents requis pour la prime",
       "description": "",
       "tags": [],
@@ -715,7 +715,7 @@
       "isOutline": false
     },
     {
-      "id": "a31f4b9d-e309-4905-b5d2-6850952ea0ad",
+      "id": "23e1c6b4-15ac-4ec5-a31c-430a272e768c",
       "name": "Cumul avec autres aides",
       "description": "",
       "tags": [],
@@ -763,5 +763,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.161Z"
+  "generated": "2025-12-13T17:25:45.877Z"
 }

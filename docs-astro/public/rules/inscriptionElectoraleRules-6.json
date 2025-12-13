@@ -1,0 +1,21 @@
+{
+  "id": "inscriptionElectoraleRules-6",
+  "description": "Vérification de la résidence principale requise",
+  "category": "autre",
+  "benefitType": "inscriptionelectorale",
+  "priority": 6,
+  "conditions": {
+    "any": [
+      {
+        "fact": "residenceVerifiee",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "verification-residence-requise"
+  },
+  "fileName": "inscriptionElectoraleRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

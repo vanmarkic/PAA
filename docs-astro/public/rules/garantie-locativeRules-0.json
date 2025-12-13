@@ -1,0 +1,26 @@
+{
+  "id": "garantie-locativeRules-0",
+  "description": "Ineligible: ressources suffisantes disponibles",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "revenus",
+        "operator": "greaterThanInclusive",
+        "value": "GARANTIE_LOCATIVE_CONSTANTS.HIGH_INCOME_THRESHOLD"
+      },
+      {
+        "fact": "epargne",
+        "operator": "greaterThanInclusive",
+        "value": "GARANTIE_LOCATIVE_CONSTANTS.HIGH_SAVINGS_THRESHOLD"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-ineligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

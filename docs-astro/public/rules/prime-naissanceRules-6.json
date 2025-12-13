@@ -1,0 +1,31 @@
+{
+  "id": "prime-naissanceRules-6",
+  "description": "Éligible pour Prime de Naissance (demande anticipée)",
+  "category": "autre",
+  "benefitType": "prime-naissance",
+  "priority": 40,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasValidResidencePermit",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isAnticipatedRequest",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "pregnancyMonths",
+        "operator": "greaterThanInclusive",
+        "value": "PRIME_NAISSANCE_CONSTANTS.MIN_PREGNANCY_MONTHS_ANTICIPATED"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeNaissance-eligible"
+  },
+  "fileName": "prime-naissanceRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aide-personnes-ageesRules-1",
+  "description": "Ineligible: score d",
+  "category": "autre",
+  "benefitType": "aide-personnes-agees",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "APA_CONSTANTS.MIN_AGE"
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "lessThan",
+        "value": "APA_CONSTANTS.MIN_AUTONOMY_SCORE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aidePersonnesAgees-ineligible"
+  },
+  "fileName": "aide-personnes-ageesRules",
+  "generated": "2025-12-13T17:27:42.374Z"
+}

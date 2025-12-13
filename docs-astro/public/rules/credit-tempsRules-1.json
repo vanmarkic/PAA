@@ -1,0 +1,36 @@
+{
+  "id": "credit-tempsRules-1",
+  "description": "Éligible au congé parental",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "conge_parental"
+      },
+      {
+        "fact": "ageEnfant",
+        "operator": "lessThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MAX_AGE_ENFANT_CONGE_PARENTAL"
+      },
+      {
+        "fact": "congeParentalDejaPris",
+        "operator": "lessThan",
+        "value": "CREDIT_TEMPS_CONSTANTS.MAX_CONGE_PARENTAL_PAR_ENFANT"
+      },
+      {
+        "fact": "ancienneteMois",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MIN_ANCIENNETE_EMPLOYEUR_MOIS"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-eligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

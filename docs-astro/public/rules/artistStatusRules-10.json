@@ -1,0 +1,21 @@
+{
+  "id": "artistStatusRules-10",
+  "description": "Jours d\\",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "plasticien"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-special-calculation"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

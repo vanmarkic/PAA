@@ -1,0 +1,21 @@
+{
+  "id": "travauxRules-0",
+  "description": "Rule 1 for travaux",
+  "category": "autre",
+  "benefitType": "travaux",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "urgence",
+        "operator": "equal",
+        "value": "immediat"
+      }
+    ]
+  },
+  "event": {
+    "type": "intervention-immediate"
+  },
+  "fileName": "travauxRules",
+  "generated": "2025-12-13T17:27:42.382Z"
+}

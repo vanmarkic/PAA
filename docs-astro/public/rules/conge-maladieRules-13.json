@@ -1,0 +1,26 @@
+{
+  "id": "conge-maladieRules-13",
+  "description": "Chômeur malade - Indemnités maladie avec minimum garanti",
+  "category": "sante",
+  "benefitType": "conge-maladie",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "statut",
+        "operator": "equal",
+        "value": "chomeur"
+      },
+      {
+        "fact": "certificatMedicalFourni",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaladie-eligible"
+  },
+  "fileName": "conge-maladieRules",
+  "generated": "2025-12-13T17:27:42.425Z"
+}

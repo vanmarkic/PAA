@@ -1,0 +1,41 @@
+{
+  "id": "allocations-familialesRules-2",
+  "description": "Ineligible: pas de condition remplie pour 18-25 ans",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.MIN_AGE_ADULT"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.MAX_AGE"
+      },
+      {
+        "fact": "isStudent",
+        "operator": "notEqual",
+        "value": true
+      },
+      {
+        "fact": "isJobSeeker",
+        "operator": "notEqual",
+        "value": true
+      },
+      {
+        "fact": "isInTraining",
+        "operator": "notEqual",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-ineligible"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

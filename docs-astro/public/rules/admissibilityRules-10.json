@@ -1,0 +1,41 @@
+{
+  "id": "admissibilityRules-10",
+  "description": "Application meets all admissibility criteria",
+  "category": "autre",
+  "benefitType": "admissibility",
+  "priority": 1,
+  "conditions": {
+    "all": [
+      {
+        "fact": "domesticRemediesExhausted",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "withinTimeLimit",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasVictimStatus",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasSignificantDisadvantage",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasArgumentableClaim",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "admissible"
+  },
+  "fileName": "admissibilityRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

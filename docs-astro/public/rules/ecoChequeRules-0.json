@@ -1,0 +1,21 @@
+{
+  "id": "ecoChequeRules-0",
+  "description": "Éligible pour EcoCheque",
+  "category": "autre",
+  "benefitType": "ecocheque",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "ecoCheque-eligible"
+  },
+  "fileName": "ecoChequeRules",
+  "generated": "2025-12-13T17:27:42.391Z"
+}

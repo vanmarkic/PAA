@@ -1,0 +1,31 @@
+{
+  "id": "petitionsRules-3",
+  "description": "Ineligible: Vous devez résider dans la commune concernée",
+  "category": "autre",
+  "benefitType": "petitions",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "petitionType",
+        "operator": "equal",
+        "value": "petition-communale"
+      },
+      {
+        "fact": "signerCommune",
+        "operator": "notEqual",
+        "value": "{ fact: petitionCommune"
+      },
+      {
+        "fact": "petitionCommune",
+        "operator": "unknown",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "signature-ineligible"
+  },
+  "fileName": "petitionsRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

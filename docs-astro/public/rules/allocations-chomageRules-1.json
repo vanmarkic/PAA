@@ -1,0 +1,26 @@
+{
+  "id": "allocations-chomageRules-1",
+  "description": "Ineligible: démission volontaire - période de sanction applicable",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "unemploymentType",
+        "operator": "equal",
+        "value": "demission"
+      },
+      {
+        "fact": "hasValidReason",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-sanction"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

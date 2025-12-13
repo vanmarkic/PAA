@@ -1,0 +1,26 @@
+{
+  "id": "marqueRules-2",
+  "description": "Ineligible: Conflit avec une marque antérieure",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "hasIdenticalPriorMark",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasSimilarPriorMark",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "trademark-conflict"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

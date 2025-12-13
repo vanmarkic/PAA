@@ -50,7 +50,7 @@
   },
   "scenarios": [
     {
-      "id": "91e2499a-c5d9-4532-8167-fc09a8f4b60a",
+      "id": "eeee8d1f-6cb3-4f07-8264-c78639ee416a",
       "name": "Inscription à la SABAM",
       "description": "",
       "tags": [],
@@ -91,7 +91,7 @@
       "isOutline": false
     },
     {
-      "id": "a273d199-9a2b-4dd0-b32f-2ceaa41f858f",
+      "id": "d484e72c-d6a3-4e76-a186-67c09458cb17",
       "name": "Déclaration d'œuvre musicale",
       "description": "",
       "tags": [],
@@ -128,7 +128,7 @@
       "isOutline": false
     },
     {
-      "id": "a26e1b55-f5b5-4da4-9ab6-e9f03d4cd15e",
+      "id": "3ba51827-c554-4075-abf2-8ee6586576b2",
       "name": "Perception de droits de diffusion",
       "description": "",
       "tags": [],
@@ -165,7 +165,7 @@
       "isOutline": false
     },
     {
-      "id": "1bd02d3e-28e0-41a5-b3de-d3829b652a5c",
+      "id": "5f51ad0e-b820-4160-9848-6d7e3dc9d02b",
       "name": "Droit de suite sur vente d'œuvre",
       "description": "",
       "tags": [],
@@ -202,7 +202,7 @@
       "isOutline": false
     },
     {
-      "id": "631c37e8-4313-4aa0-8595-ed82ea2048fe",
+      "id": "e1b7a4d7-d7da-48bf-9889-ab59a05c96f3",
       "name": "Contrat de cession de droits",
       "description": "",
       "tags": [],
@@ -239,7 +239,7 @@
       "isOutline": false
     },
     {
-      "id": "bd409744-2001-4dad-9e36-dea287754aa2",
+      "id": "ce8b9e1b-dadf-42ab-b556-33c915a84fcc",
       "name": "Protection contre le plagiat",
       "description": "",
       "tags": [],
@@ -276,7 +276,7 @@
       "isOutline": false
     },
     {
-      "id": "024602c6-8d07-4527-ab1c-f053165b427b",
+      "id": "d0ba7d2d-ec66-4459-b060-e1553b8d4e04",
       "name": "Calcul des droits selon exploitation",
       "description": "",
       "tags": [],
@@ -314,7 +314,7 @@
           ],
           "rows": [
             {
-              "name": "7f3b5978-0956-46c7-8c0d-1618df726471",
+              "name": "9227e7e4-f6a9-4761-bec7-b86ca9990286",
               "values": {
                 "type": "streaming",
                 "recettes": "10000",
@@ -323,7 +323,7 @@
               }
             },
             {
-              "name": "7c96bfb8-d49a-4bb7-b784-fe48d67790a0",
+              "name": "69188467-fcb6-4ad8-b7cf-be507a6d075d",
               "values": {
                 "type": "téléchargement",
                 "recettes": "5000",
@@ -332,7 +332,7 @@
               }
             },
             {
-              "name": "83266aed-d737-4aff-918a-acfc1ad352b2",
+              "name": "cd877a7d-744f-4390-892c-dbe253d8e2d9",
               "values": {
                 "type": "synchronisation",
                 "recettes": "20000",
@@ -341,7 +341,7 @@
               }
             },
             {
-              "name": "c97f1375-6f87-48a2-92a4-763f0aab2770",
+              "name": "2f446ab5-210c-4434-b655-3330bb8e8d2d",
               "values": {
                 "type": "reproduction",
                 "recettes": "8000",
@@ -358,5 +358,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.169Z"
+  "generated": "2025-12-13T17:25:45.886Z"
 }

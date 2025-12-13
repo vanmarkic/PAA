@@ -1,0 +1,21 @@
+{
+  "id": "aide-personnes-ageesRules-0",
+  "description": "Ineligible: âge minimum non atteint (${APA_CONSTANTS.MIN_AGE} ans requis)",
+  "category": "autre",
+  "benefitType": "aide-personnes-agees",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "APA_CONSTANTS.MIN_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aidePersonnesAgees-ineligible"
+  },
+  "fileName": "aide-personnes-ageesRules",
+  "generated": "2025-12-13T17:27:42.373Z"
+}

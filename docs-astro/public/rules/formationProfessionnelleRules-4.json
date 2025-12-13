@@ -1,0 +1,31 @@
+{
+  "id": "formationProfessionnelleRules-4",
+  "description": "Éligible prioritaire - jeune sans qualification",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": 25
+      },
+      {
+        "fact": "hasNoQualification",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isRegisteredWithRegionalService",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-eligible-young"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

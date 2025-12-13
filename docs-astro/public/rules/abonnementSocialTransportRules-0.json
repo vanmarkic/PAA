@@ -1,0 +1,21 @@
+{
+  "id": "abonnementSocialTransportRules-0",
+  "description": "Éligible pour AbonnementSocialTransport",
+  "category": "autre",
+  "benefitType": "abonnementsocialtransport",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "abonnementSocialTransport-eligible"
+  },
+  "fileName": "abonnementSocialTransportRules",
+  "generated": "2025-12-13T17:27:42.373Z"
+}

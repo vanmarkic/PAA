@@ -24,7 +24,7 @@
   },
   "scenarios": [
     {
-      "id": "02cb24d8-52eb-4bd2-84f8-5e3e1cafa180",
+      "id": "f0158ba4-1fbe-4ad4-91be-4ff6bba02257",
       "name": "Négociation d'accord de coexistence",
       "description": "",
       "tags": [],
@@ -65,7 +65,7 @@
       "isOutline": false
     },
     {
-      "id": "5689261e-ee66-4d0b-81ad-495b6653f963",
+      "id": "2f69a957-228c-4273-bd4b-585e86266806",
       "name": "Accord avec limitations géographiques",
       "description": "",
       "tags": [],
@@ -101,5 +101,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.166Z"
+  "generated": "2025-12-13T17:25:45.883Z"
 }

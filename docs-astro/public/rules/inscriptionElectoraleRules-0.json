@@ -1,0 +1,21 @@
+{
+  "id": "inscriptionElectoraleRules-0",
+  "description": "Ineligible: âge minimum non atteint (${DEMOCRATIE_CONSTANTS.AGE_MAJORITE_ELECTORALE} ans requis)",
+  "category": "autre",
+  "benefitType": "inscriptionelectorale",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "DEMOCRATIE_CONSTANTS.AGE_MAJORITE_ELECTORALE"
+      }
+    ]
+  },
+  "event": {
+    "type": "inscription-ineligible"
+  },
+  "fileName": "inscriptionElectoraleRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

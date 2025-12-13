@@ -1,0 +1,36 @@
+{
+  "id": "residencePermitRules-4",
+  "description": "Éligible pour carte F (membre famille UE)",
+  "category": "autre",
+  "benefitType": "residencepermit",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestedCardType",
+        "operator": "equal",
+        "value": "F"
+      },
+      {
+        "fact": "hasFamilyLinkWithEU",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "sponsorHasCardE",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasProofOfRelationship",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "card-f-eligible"
+  },
+  "fileName": "residencePermitRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-2",
+  "description": "Ineligible: Un état des lieux doit être réalisé lors de l",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "actionType",
+        "operator": "equal",
+        "value": "conclusion_bail"
+      },
+      {
+        "fact": "hasEtatDesLieux",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "documentationEtLGislationBailFerme-ineligible"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.388Z"
+}

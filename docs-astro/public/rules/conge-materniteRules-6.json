@@ -1,0 +1,26 @@
+{
+  "id": "conge-materniteRules-6",
+  "description": "Éligible pour Congé de Maternité - Chômeuse",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enceinte",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutProfessionnel",
+        "operator": "equal",
+        "value": "chomeuse"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-eligible-chomeuse"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

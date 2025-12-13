@@ -1,0 +1,21 @@
+{
+  "id": "artistStatusRules-0",
+  "description": "Ineligible: Âge minimum de 18 ans requis pour le statut d\\",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": 18
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-ineligible"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

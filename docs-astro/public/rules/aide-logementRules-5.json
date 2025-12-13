@@ -1,0 +1,36 @@
+{
+  "id": "aide-logementRules-5",
+  "description": "Ineligible: priorité sociale avec revenus <= 20,895.43€",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 75,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "bruxelles-capitale"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "lessThanInclusive",
+        "value": "AIDE_LOGEMENT_CONSTANTS.BRUXELLES.PLAFOND_REVENUS_PRIORITE_SOCIALE"
+      },
+      {
+        "fact": "pointsPrioriteListeSociale",
+        "operator": "greaterThanInclusive",
+        "value": "AIDE_LOGEMENT_CONSTANTS.BRUXELLES.POINTS_PRIORITE_MIN"
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

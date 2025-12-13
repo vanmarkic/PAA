@@ -1,0 +1,21 @@
+{
+  "id": "interimMeasuresRules-8",
+  "description": "Ineligible: No imminent risk - sufficient time for normal procedure",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "imminence",
+        "operator": "greaterThan",
+        "value": 720
+      }
+    ]
+  },
+  "event": {
+    "type": "refuse-measures"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

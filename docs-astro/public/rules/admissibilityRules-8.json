@@ -1,0 +1,26 @@
+{
+  "id": "admissibilityRules-8",
+  "description": "Ineligible: Substantially same as previously examined application",
+  "category": "autre",
+  "benefitType": "admissibility",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "previouslyExamined",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "containsNewInformation",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "inadmissible"
+  },
+  "fileName": "admissibilityRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

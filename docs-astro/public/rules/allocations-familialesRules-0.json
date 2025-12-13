@@ -1,0 +1,21 @@
+{
+  "id": "allocations-familialesRules-0",
+  "description": "Ineligible: âge maximum dépassé (25 ans)",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThan",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.MAX_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-ineligible"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

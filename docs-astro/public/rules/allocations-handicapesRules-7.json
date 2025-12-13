@@ -1,0 +1,41 @@
+{
+  "id": "allocations-handicapesRules-7",
+  "description": "Éligible à l\\",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 49,
+  "conditions": {
+    "all": [
+      {
+        "fact": "autonomyScore",
+        "operator": "greaterThanInclusive",
+        "value": 15
+      },
+      {
+        "fact": "autonomyScore",
+        "operator": "lessThanInclusive",
+        "value": 16
+      },
+      {
+        "fact": "hasMedicalEvaluation",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isLegalResident",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isBelgian",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "ai-eligible"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "formationProfessionnelleRules-6",
+  "description": "Éligible pour formation en alternance",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "trainingType",
+        "operator": "equal",
+        "value": "TRAINING_TYPES.ALTERNANCE"
+      },
+      {
+        "fact": "hasCompanyForAlternance",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-eligible-alternance"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

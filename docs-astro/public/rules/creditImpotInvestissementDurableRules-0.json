@@ -1,0 +1,21 @@
+{
+  "id": "creditImpotInvestissementDurableRules-0",
+  "description": "Éligible pour CreditImpotInvestissementDurable",
+  "category": "fiscal",
+  "benefitType": "creditimpotinvestissementdurable",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "creditImpotInvestissementDurable-eligible"
+  },
+  "fileName": "creditImpotInvestissementDurableRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

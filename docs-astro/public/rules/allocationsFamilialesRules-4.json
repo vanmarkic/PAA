@@ -1,0 +1,26 @@
+{
+  "id": "allocationsFamilialesRules-4",
+  "description": "Éligible au supplément handicap",
+  "category": "famille",
+  "benefitType": "allocationsfamiliales",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisability",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "childAge",
+        "operator": "lessThanInclusive",
+        "value": "MAX_AGE_DISABILITY_SUPPLEMENT"
+      }
+    ]
+  },
+  "event": {
+    "type": "fa-disability-supplement"
+  },
+  "fileName": "allocationsFamilialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

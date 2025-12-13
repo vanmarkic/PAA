@@ -1,0 +1,31 @@
+{
+  "id": "aide-logementRules-6",
+  "description": "Ineligible: revenus dépassent plafond isolé (17,000€)",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 88,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "personne-isolee"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "greaterThan",
+        "value": "AIDE_LOGEMENT_CONSTANTS.WALLONIE.PLAFOND_REVENUS_ISOLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-ineligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

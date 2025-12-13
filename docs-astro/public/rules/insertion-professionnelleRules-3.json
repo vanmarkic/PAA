@@ -1,0 +1,31 @@
+{
+  "id": "insertion-professionnelleRules-3",
+  "description": "Éligible pour Entreprise de Travail Adapté",
+  "category": "autre",
+  "benefitType": "insertion-professionnelle",
+  "priority": 95,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDisability",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "disabilityPercentage",
+        "operator": "greaterThanInclusive",
+        "value": "INSERTION_CONSTANTS.DISABILITY_PERCENTAGE_ETA"
+      },
+      {
+        "fact": "proposedDevice",
+        "operator": "equal",
+        "value": "eta"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-eligible"
+  },
+  "fileName": "insertion-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.398Z"
+}

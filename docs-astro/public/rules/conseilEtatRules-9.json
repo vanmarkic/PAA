@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-9",
+  "description": "Rule 10 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "priorAppealRequired",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "priorAppealDone",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "no-prior-appeal"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.407Z"
+}

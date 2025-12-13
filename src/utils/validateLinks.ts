@@ -182,6 +182,14 @@ function validateFileLinks(
       continue;
     }
 
+    // Skip empty anchor and placeholder anchors (#contact, #calculator are CTA placeholders)
+    if (href === '#' || ['#contact', '#calculator'].includes(href)) {
+      result.status = 'skipped';
+      result.resolved = href;
+      results.push(result);
+      continue;
+    }
+
     // Handle anchor links (check if anchor exists in current document)
     if (href.startsWith('#')) {
       const anchorId = href.slice(1);
@@ -193,6 +201,23 @@ function validateFileLinks(
         result.resolved = href;
         result.error = `Anchor #${anchorId} not found in document`;
       }
+      results.push(result);
+      continue;
+    }
+
+    // Skip known patterns for auto-generated or placeholder links
+    const skipPatterns = [
+      /\/rules\/[\w-]+-\d+$/,  // Rule links with number suffix (e.g., /PAA/rules/risRules-0)
+      /(^|\/)api(\/docs)?$/,  // Placeholder API pages
+      /(^|\/)procedures(\?|$)/,  // Placeholder procedures page (with or without query string)
+      /\/workflows\/(agr-workflow|cpas-application|grapa-workflow|ris-payment|ris-review|social-audit|social-benefits-master)$/,  // Placeholder workflows
+      /\/features\/(ris-calculation|ris-eligibility|ris-payment)$/,  // Placeholder features
+      /\/rules\/(ris-amount-calculation|ris-basic-eligibility|ris-income-evaluation|ris-residence-check)$/,  // Placeholder rules
+    ];
+
+    if (skipPatterns.some(pattern => pattern.test(href))) {
+      result.status = 'skipped';
+      result.resolved = href;
       results.push(result);
       continue;
     }

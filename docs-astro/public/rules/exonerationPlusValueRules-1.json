@@ -1,0 +1,21 @@
+{
+  "id": "exonerationPlusValueRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "autre",
+  "benefitType": "exonerationplusvalue",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "exonerationPlusValue-ineligible"
+  },
+  "fileName": "exonerationPlusValueRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

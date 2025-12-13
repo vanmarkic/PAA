@@ -1,0 +1,21 @@
+{
+  "id": "deductionInvestissementRules-0",
+  "description": "Éligible pour DeductionInvestissement",
+  "category": "fiscal",
+  "benefitType": "deductioninvestissement",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "deductionInvestissement-eligible"
+  },
+  "fileName": "deductionInvestissementRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

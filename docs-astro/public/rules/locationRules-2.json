@@ -1,0 +1,26 @@
+{
+  "id": "locationRules-2",
+  "description": "Ineligible: Préavis doit être donné par recommandé",
+  "category": "autre",
+  "benefitType": "location",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "noticeGiven",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "noticeType",
+        "operator": "notEqual",
+        "value": "registered_mail"
+      }
+    ]
+  },
+  "event": {
+    "type": "invalid-notice"
+  },
+  "fileName": "locationRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

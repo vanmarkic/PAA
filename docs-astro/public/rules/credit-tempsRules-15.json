@@ -1,0 +1,31 @@
+{
+  "id": "credit-tempsRules-15",
+  "description": "Ineligible: Maximum de ${CREDIT_TEMPS_CONSTANTS.MAX_CREDIT_TEMPS_AVEC_MOTIF} mois de crédit-temps avec motif déjà atteint",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 88,
+  "conditions": {
+    "all": [
+      {
+        "fact": "creditTempsDejaPris",
+        "operator": "greaterThanInclusive",
+        "value": "CREDIT_TEMPS_CONSTANTS.MAX_CREDIT_TEMPS_AVEC_MOTIF"
+      },
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "assistance_medicale"
+      },
+      {
+        "fact": "typeConge",
+        "operator": "equal",
+        "value": "credit_temps_formation"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-ineligible"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

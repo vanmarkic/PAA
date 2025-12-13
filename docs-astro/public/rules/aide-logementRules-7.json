@@ -1,0 +1,36 @@
+{
+  "id": "aide-logementRules-7",
+  "description": "Ineligible: revenus dépassent plafond couple (23,200€)",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 87,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "couple"
+      },
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "couple-avec-enfants"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "greaterThan",
+        "value": "AIDE_LOGEMENT_CONSTANTS.WALLONIE.PLAFOND_REVENUS_COUPLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-ineligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

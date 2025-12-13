@@ -1,0 +1,26 @@
+{
+  "id": "credit-tempsRules-9",
+  "description": "Les demandes papier ne sont plus acceptées",
+  "category": "fiscal",
+  "benefitType": "credit-temps",
+  "priority": 98,
+  "conditions": {
+    "all": [
+      {
+        "fact": "datesDemande",
+        "operator": "greaterThanInclusive",
+        "value": "new Date(2024-10-01).getTime()"
+      },
+      {
+        "fact": "applicationBreakAtWork",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditTemps-procedure-error"
+  },
+  "fileName": "credit-tempsRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

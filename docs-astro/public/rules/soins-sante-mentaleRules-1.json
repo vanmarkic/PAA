@@ -1,0 +1,31 @@
+{
+  "id": "soins-sante-mentaleRules-1",
+  "description": "Séances gratuites pour les moins de 23 ans",
+  "category": "sante",
+  "benefitType": "soins-sante-mentale",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "SOINS_SANTE_MENTALE_CONSTANTS.AGE_JEUNE_MAX"
+      },
+      {
+        "fact": "typeSoin",
+        "operator": "equal",
+        "value": "seance_individuelle"
+      },
+      {
+        "fact": "numeroSeance",
+        "operator": "greaterThan",
+        "value": 1
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-jeune-gratuit"
+  },
+  "fileName": "soins-sante-mentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

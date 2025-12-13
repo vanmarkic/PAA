@@ -1,0 +1,31 @@
+{
+  "id": "aide-logementRules-11",
+  "description": "Ineligible: inscrit liste attente > 18 mois",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 55,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "moisAttenteListeSociale",
+        "operator": "greaterThan",
+        "value": "AIDE_LOGEMENT_CONSTANTS.WALLONIE.AAL_ATTENTE_MIN_MOIS"
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

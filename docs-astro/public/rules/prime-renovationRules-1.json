@@ -1,0 +1,26 @@
+{
+  "id": "prime-renovationRules-1",
+  "description": "Ineligible: Catégorie R5 exclue du système depuis 2025",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.WALLONIE"
+      },
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "R5"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-ineligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

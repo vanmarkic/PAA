@@ -1,0 +1,26 @@
+{
+  "id": "primesEnergieRules-3",
+  "description": "Rule 4 for primesenergie",
+  "category": "logement",
+  "benefitType": "primesenergie",
+  "priority": 15,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estimatedCost",
+        "operator": "greaterThan",
+        "value": 25000
+      },
+      {
+        "fact": "type",
+        "operator": "in",
+        "value": "[rénovation-énergétique"
+      }
+    ]
+  },
+  "event": {
+    "type": "audit-required"
+  },
+  "fileName": "primesEnergieRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

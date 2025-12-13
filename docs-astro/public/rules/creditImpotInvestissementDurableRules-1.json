@@ -1,0 +1,21 @@
+{
+  "id": "creditImpotInvestissementDurableRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "fiscal",
+  "benefitType": "creditimpotinvestissementdurable",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "creditImpotInvestissementDurable-ineligible"
+  },
+  "fileName": "creditImpotInvestissementDurableRules",
+  "generated": "2025-12-13T17:27:42.427Z"
+}

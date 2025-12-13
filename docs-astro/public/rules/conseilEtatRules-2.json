@@ -1,0 +1,26 @@
+{
+  "id": "conseilEtatRules-2",
+  "description": "Rule 3 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "hasDirectInterest",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "interestDescription",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "standing-missing"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

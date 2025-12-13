@@ -1,0 +1,31 @@
+{
+  "id": "insertionProfessionnelleRules-9",
+  "description": "Ineligible: durée RIS insuffisante (${ARTICLE_60_MIN_RIS_DURATION_MONTHS} mois minimum requis)",
+  "category": "autre",
+  "benefitType": "insertionprofessionnelle",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentStatus",
+        "operator": "equal",
+        "value": "ris"
+      },
+      {
+        "fact": "monthsOnRIS",
+        "operator": "lessThan",
+        "value": "ARTICLE_60_MIN_RIS_DURATION_MONTHS"
+      },
+      {
+        "fact": "insertionProgram",
+        "operator": "equal",
+        "value": "article-60"
+      }
+    ]
+  },
+  "event": {
+    "type": "insertion-ineligible"
+  },
+  "fileName": "insertionProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

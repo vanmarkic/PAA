@@ -1,0 +1,21 @@
+{
+  "id": "mediationFamilialeRules-0",
+  "description": "Éligible pour MediationFamiliale",
+  "category": "autre",
+  "benefitType": "mediationfamiliale",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "mediationFamiliale-eligible"
+  },
+  "fileName": "mediationFamilialeRules",
+  "generated": "2025-12-13T17:27:42.400Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aide-logementRules-1",
+  "description": "Ineligible: revenus annuels > 27,550.86€",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "bruxelles-capitale"
+      },
+      {
+        "fact": "revenuAnnuel",
+        "operator": "greaterThan",
+        "value": "AIDE_LOGEMENT_CONSTANTS.BRUXELLES.PLAFOND_REVENUS_ANNUELS"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-ineligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "carte-medicaleRules-10",
+  "description": "Ineligible: Séjour irrégulier sans besoin médical urgent attesté - pas d\\",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "irregular_stay"
+      },
+      {
+        "fact": "hasUrgentMedicalNeed",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-ineligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

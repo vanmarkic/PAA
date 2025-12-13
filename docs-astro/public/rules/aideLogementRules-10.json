@@ -1,0 +1,26 @@
+{
+  "id": "aideLogementRules-10",
+  "description": "Ineligible: minder dan ${FLANDERS_2024.waitingListMinYears} jaar op wachtlijst",
+  "category": "logement",
+  "benefitType": "aidelogement",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "waitingListYears",
+        "operator": "lessThan",
+        "value": "FLANDERS_2024.waitingListMinYears"
+      }
+    ]
+  },
+  "event": {
+    "type": "flanders-ineligible"
+  },
+  "fileName": "aideLogementRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "prime-renovationRules-5",
+  "description": "Éligible - Prime ventilation double flux catégorie R2 (locataire)",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.WALLONIE"
+      },
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "R2"
+      },
+      {
+        "fact": "isTenant",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasOwnerAgreement",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "workType",
+        "operator": "equal",
+        "value": "ventilation_double_flux"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "assurance-maladieRules-3",
+  "description": "Ineligible: statut BIM automatique - enfant avec allocation handicap >66%",
+  "category": "sante",
+  "benefitType": "assurance-maladie",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estAffilieMutuelle",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "cotisationsAJour",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "enfantHandicapePlus66",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "assuranceMaladie-bim-automatique"
+  },
+  "fileName": "assurance-maladieRules",
+  "generated": "2025-12-13T17:27:42.423Z"
+}

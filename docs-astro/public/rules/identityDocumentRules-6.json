@@ -1,0 +1,26 @@
+{
+  "id": "identityDocumentRules-6",
+  "description": "Ineligible: Inscription au registre de la population requise",
+  "category": "autre",
+  "benefitType": "identitydocument",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "registeredInCommune",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "documentType",
+        "operator": "notIn",
+        "value": "[passeport]"
+      }
+    ]
+  },
+  "event": {
+    "type": "residence-registration-required"
+  },
+  "fileName": "identityDocumentRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

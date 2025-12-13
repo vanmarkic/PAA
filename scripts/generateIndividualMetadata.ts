@@ -349,8 +349,21 @@ async function main() {
   // Load rules
   if (fs.existsSync(rulesPath)) {
     const rulesData = JSON.parse(fs.readFileSync(rulesPath, 'utf-8'));
-    rules = rulesData.rules || [];
-    console.log(`📊 Found ${rules.length} rules`);
+    // Rules are stored in rulesByCategory, flatten them
+    let allRules: any[] = [];
+    if (rulesData.rulesByCategory) {
+      allRules = Object.values(rulesData.rulesByCategory).flat() as any[];
+    } else if (rulesData.rules) {
+      allRules = rulesData.rules;
+    }
+    // Deduplicate by ID (some rules appear in multiple categories)
+    const seen = new Set<string>();
+    rules = allRules.filter(r => {
+      if (seen.has(r.id)) return false;
+      seen.add(r.id);
+      return true;
+    });
+    console.log(`📊 Found ${rules.length} unique rules (${allRules.length - rules.length} duplicates removed)`);
   } else {
     console.warn('⚠️  rules-metadata.json not found. Run npm run rules:metadata first.');
   }

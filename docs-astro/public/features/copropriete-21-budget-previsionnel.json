@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "9eab530f-7972-40cd-9e32-fea6bb747e31",
+      "id": "96d4ca3b-ef9e-4cdb-93a3-2099af773337",
       "name": "Préparation budget annuel standard",
       "description": "",
       "tags": [],
@@ -90,7 +90,7 @@
       "isOutline": false
     },
     {
-      "id": "bd76ee2c-ae5c-4326-8086-069142dbb10d",
+      "id": "b0803c9e-0858-48e3-928c-bd140cece635",
       "name": "Ajustement pour inflation",
       "description": "",
       "tags": [],
@@ -139,7 +139,7 @@
       "isOutline": false
     },
     {
-      "id": "a3df8a22-0a48-43f4-ac73-4b2fe8d4d166",
+      "id": "45c26ca2-82c1-426f-a15b-5bbb875b290c",
       "name": "Vote budget déficitaire interdit",
       "description": "",
       "tags": [],
@@ -179,5 +179,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.163Z"
+  "generated": "2025-12-13T17:25:45.879Z"
 }

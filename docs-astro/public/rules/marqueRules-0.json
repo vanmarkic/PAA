@@ -1,0 +1,26 @@
+{
+  "id": "marqueRules-0",
+  "description": "La marque possède un caractère distinctif",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasDistinctiveCharacter",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isDescriptive",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "trademark-distinctive"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

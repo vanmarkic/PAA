@@ -1,0 +1,21 @@
+{
+  "id": "agrRules-3",
+  "description": "Ineligible: cumul interdit avec chômage complet",
+  "category": "emploi",
+  "benefitType": "agr",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentBenefits",
+        "operator": "contains",
+        "value": "unemployment"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-ineligible"
+  },
+  "fileName": "agrRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

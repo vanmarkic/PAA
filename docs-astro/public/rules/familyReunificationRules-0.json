@@ -1,0 +1,26 @@
+{
+  "id": "familyReunificationRules-0",
+  "description": "Ineligible: Revenus insuffisants (minimum ${INCOME_REQUIREMENTS.FAMILY_REUNIFICATION_SPONSOR}€/mois requis)",
+  "category": "autre",
+  "benefitType": "familyreunification",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "sponsorIncome",
+        "operator": "lessThan",
+        "value": "INCOME_REQUIREMENTS.FAMILY_REUNIFICATION_SPONSOR"
+      },
+      {
+        "fact": "isRefugee",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "family-ineligible"
+  },
+  "fileName": "familyReunificationRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "garde-enfantsRules-9",
+  "description": "Intervention Alimento disponible",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 35,
+  "conditions": {
+    "all": [
+      {
+        "fact": "secteur_travail",
+        "operator": "equal",
+        "value": "alimentaire"
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-intervention-alimento"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

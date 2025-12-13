@@ -1,0 +1,21 @@
+{
+  "id": "administrativeAppealRules-2",
+  "description": "Rule 3 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isAnonymous",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "anonymous-complaint"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

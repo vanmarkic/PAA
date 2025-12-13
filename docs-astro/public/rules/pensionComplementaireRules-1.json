@@ -1,0 +1,21 @@
+{
+  "id": "pensionComplementaireRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "pension",
+  "benefitType": "pensioncomplementaire",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "pensionComplementaire-ineligible"
+  },
+  "fileName": "pensionComplementaireRules",
+  "generated": "2025-12-13T17:27:42.430Z"
+}

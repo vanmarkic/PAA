@@ -1,0 +1,21 @@
+{
+  "id": "artistStatusRules-5",
+  "description": "Ineligible: Revenus non-artistiques dépassent le plafond (${ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME}€ maximum)",
+  "category": "autre",
+  "benefitType": "artiststatus",
+  "priority": 7,
+  "conditions": {
+    "any": [
+      {
+        "fact": "annualIncomeNonArtistic",
+        "operator": "greaterThan",
+        "value": "ARTIST_STATUS_CONSTANTS.MAXIMUM_NON_ARTISTIC_INCOME"
+      }
+    ]
+  },
+  "event": {
+    "type": "artist-ineligible"
+  },
+  "fileName": "artistStatusRules",
+  "generated": "2025-12-13T17:27:42.409Z"
+}

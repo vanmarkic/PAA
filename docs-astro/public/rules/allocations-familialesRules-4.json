@@ -1,0 +1,36 @@
+{
+  "id": "allocations-familialesRules-4",
+  "description": "Éligible aux allocations familiales (étudiant)",
+  "category": "famille",
+  "benefitType": "allocations-familiales",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.MIN_AGE_ADULT"
+      },
+      {
+        "fact": "age",
+        "operator": "lessThanInclusive",
+        "value": "ALLOCATIONS_FAMILIALES_CONSTANTS.MAX_AGE"
+      },
+      {
+        "fact": "isStudent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasLegalResidenceInBelgium",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsFamiliales-eligible"
+  },
+  "fileName": "allocations-familialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

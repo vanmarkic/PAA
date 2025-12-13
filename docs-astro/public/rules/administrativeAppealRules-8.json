@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-8",
+  "description": "Rule 9 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "recours-cpas"
+      },
+      {
+        "fact": "daysSinceDecision",
+        "operator": "greaterThan",
+        "value": 90
+      }
+    ]
+  },
+  "event": {
+    "type": "cpas-deadline-expired"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

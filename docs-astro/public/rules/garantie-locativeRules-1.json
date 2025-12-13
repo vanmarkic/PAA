@@ -1,0 +1,26 @@
+{
+  "id": "garantie-locativeRules-1",
+  "description": "Éligible - Avance directe sur compte bloqué",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estBeneficiaireRIS",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "epargne",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

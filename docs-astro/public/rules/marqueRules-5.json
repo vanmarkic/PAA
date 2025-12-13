@@ -1,0 +1,26 @@
+{
+  "id": "marqueRules-5",
+  "description": "Période d\\",
+  "category": "autre",
+  "benefitType": "marque",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isPublished",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "monthsSincePublication",
+        "operator": "greaterThan",
+        "value": "IP_CONSTANTS.DEADLINES.OPPOSITION_FILING"
+      }
+    ]
+  },
+  "event": {
+    "type": "opposition-period-expired"
+  },
+  "fileName": "marqueRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

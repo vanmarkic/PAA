@@ -1,0 +1,21 @@
+{
+  "id": "risRules-2",
+  "description": "Ineligible: patrimoine mobilier supérieur à ${RIS_CONSTANTS.MAX_PATRIMONY_MOVABLE}€",
+  "category": "social",
+  "benefitType": "ris",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "patrimonyValue",
+        "operator": "greaterThan",
+        "value": "RIS_CONSTANTS.MAX_PATRIMONY_MOVABLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "ris-ineligible"
+  },
+  "fileName": "risRules",
+  "generated": "2025-12-13T17:27:42.419Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "scrape-2025-11-18-001-3",
+  "description": "Ineligible: cumul interdit avec chômage complet",
+  "category": "autre",
+  "benefitType": "scrape-2025-11-18-001",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "currentBenefits",
+        "operator": "contains",
+        "value": "unemployment"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-ineligible"
+  },
+  "fileName": "scrape-2025-11-18-001",
+  "generated": "2025-12-13T17:27:42.377Z"
+}

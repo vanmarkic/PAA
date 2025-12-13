@@ -1,0 +1,31 @@
+{
+  "id": "conge-materniteRules-13",
+  "description": "Protection contre le licenciement active",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 25,
+  "conditions": {
+    "all": [
+      {
+        "fact": "enceinte",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "employeurInforme",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutProfessionnel",
+        "operator": "equal",
+        "value": "employee"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-protection"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-7",
+  "description": "Rule 8 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "procedureType",
+        "operator": "equal",
+        "value": "recours-administratif-gracieux"
+      },
+      {
+        "fact": "daysSinceDecision",
+        "operator": "greaterThan",
+        "value": 120
+      }
+    ]
+  },
+  "event": {
+    "type": "late-gracious-appeal"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

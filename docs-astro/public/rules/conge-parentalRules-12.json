@@ -1,0 +1,36 @@
+{
+  "id": "conge-parentalRules-12",
+  "description": "Rule 13 for conge-parental",
+  "category": "autre",
+  "benefitType": "conge-parental",
+  "priority": 20,
+  "conditions": {
+    "all": [
+      {
+        "fact": "situationFamiliale",
+        "operator": "equal",
+        "value": "parent_isole"
+      },
+      {
+        "fact": "gardeExclusive",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "ancienneteMois",
+        "operator": "greaterThanInclusive",
+        "value": "CONGE_PARENTAL_CONSTANTS.MIN_ANCIENNETE_MOIS"
+      },
+      {
+        "fact": "ageEnfant",
+        "operator": "lessThan",
+        "value": "CONGE_PARENTAL_CONSTANTS.AGE_LIMITE_ENFANT"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeParental-majoration"
+  },
+  "fileName": "conge-parentalRules",
+  "generated": "2025-12-13T17:27:42.379Z"
+}

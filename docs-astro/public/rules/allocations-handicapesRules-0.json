@@ -1,0 +1,21 @@
+{
+  "id": "allocations-handicapesRules-0",
+  "description": "Ineligible: âge minimum non atteint pour l",
+  "category": "handicap",
+  "benefitType": "allocations-handicapes",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "HANDICAP_CONSTANTS.MIN_AGE_ARR"
+      }
+    ]
+  },
+  "event": {
+    "type": "arr-ineligible-age-min"
+  },
+  "fileName": "allocations-handicapesRules",
+  "generated": "2025-12-13T17:27:42.420Z"
+}

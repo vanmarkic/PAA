@@ -1,0 +1,21 @@
+{
+  "id": "soinsSanteMentaleRules-1",
+  "description": "Ineligible: conditions de base non remplies",
+  "category": "sante",
+  "benefitType": "soinssantementale",
+  "priority": 10,
+  "conditions": {
+    "any": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "soinsSanteMentale-ineligible"
+  },
+  "fileName": "soinsSanteMentaleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

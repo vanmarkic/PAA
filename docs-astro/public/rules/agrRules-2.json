@@ -1,0 +1,26 @@
+{
+  "id": "agrRules-2",
+  "description": "Ineligible: pas de maintien des droits",
+  "category": "emploi",
+  "benefitType": "agr",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "part-time"
+      },
+      {
+        "fact": "hasRightsMaintenance",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "agr-ineligible"
+  },
+  "fileName": "agrRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

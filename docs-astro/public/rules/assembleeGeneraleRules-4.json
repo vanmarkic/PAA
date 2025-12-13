@@ -1,0 +1,26 @@
+{
+  "id": "assembleeGeneraleRules-4",
+  "description": "Ineligible: 1/5 des copropriétaires demande une AG extraordinaire",
+  "category": "autre",
+  "benefitType": "assembleegenerale",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "milliemes_demandeurs",
+        "operator": "greaterThanInclusive",
+        "value": 200
+      },
+      {
+        "fact": "demande_ecrite",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "convocation-obligatoire"
+  },
+  "fileName": "assembleeGeneraleRules",
+  "generated": "2025-12-13T17:27:42.382Z"
+}

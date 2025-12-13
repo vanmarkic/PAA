@@ -1,0 +1,26 @@
+{
+  "id": "risRules-3",
+  "description": "Ineligible: étudiant temps plein (sauf exceptions)",
+  "category": "social",
+  "benefitType": "ris",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isFullTimeStudent",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": 25
+      }
+    ]
+  },
+  "event": {
+    "type": "ris-ineligible"
+  },
+  "fileName": "risRules",
+  "generated": "2025-12-13T17:27:42.419Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules-1",
+  "description": "Ineligible: Vous n\\",
+  "category": "autre",
+  "benefitType": "loi-du-26-mai-2002-concernant-le-droit-l-int-grati",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasEffectiveResidenceInBelgium",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "loiDu26Mai2002ConcernantLeDroitLIntGrati-ineligible"
+  },
+  "fileName": "loi-du-26-mai-2002-concernant-le-droit-l-int-gratiRules",
+  "generated": "2025-12-13T17:27:42.399Z"
+}

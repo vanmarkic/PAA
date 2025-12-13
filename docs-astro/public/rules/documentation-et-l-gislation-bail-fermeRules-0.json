@@ -1,0 +1,26 @@
+{
+  "id": "documentation-et-l-gislation-bail-fermeRules-0",
+  "description": "Type de bail valide sélectionné",
+  "category": "autre",
+  "benefitType": "documentation-et-l-gislation-bail-ferme",
+  "priority": 100,
+  "conditions": {
+    "all": [
+      {
+        "fact": "actionType",
+        "operator": "equal",
+        "value": "conclusion_bail"
+      },
+      {
+        "fact": "bailType",
+        "operator": "in",
+        "value": "BAIL_TYPES"
+      }
+    ]
+  },
+  "event": {
+    "type": "bail-type-valid"
+  },
+  "fileName": "documentation-et-l-gislation-bail-fermeRules",
+  "generated": "2025-12-13T17:27:42.388Z"
+}

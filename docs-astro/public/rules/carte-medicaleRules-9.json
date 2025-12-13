@@ -1,0 +1,31 @@
+{
+  "id": "carte-medicaleRules-9",
+  "description": "Ineligible: Revenus et reste à vivre suffisants avec mutuelle active - carte refusée",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "monthlyIncome",
+        "operator": "greaterThanInclusive",
+        "value": "CARTE_MEDICALE_CONSTANTS.RIS_ISOLE"
+      },
+      {
+        "fact": "mutuelleActive",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "resteAVivre",
+        "operator": "greaterThanInclusive",
+        "value": "CARTE_MEDICALE_CONSTANTS.MIN_RESTE_A_VIVRE_ISOLE"
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-ineligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

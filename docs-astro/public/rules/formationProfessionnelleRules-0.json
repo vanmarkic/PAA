@@ -1,0 +1,26 @@
+{
+  "id": "formationProfessionnelleRules-0",
+  "description": "Ineligible: âge minimum non atteint (${MIN_AGE} ans requis sauf exceptions)",
+  "category": "education",
+  "benefitType": "formationprofessionnelle",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "age",
+        "operator": "lessThan",
+        "value": "MIN_AGE"
+      },
+      {
+        "fact": "hasSpecialException",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "formation-ineligible"
+  },
+  "fileName": "formationProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

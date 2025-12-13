@@ -1,0 +1,31 @@
+{
+  "id": "aide-socialeRules-4",
+  "description": "Rule 5 for aide-sociale",
+  "category": "social",
+  "benefitType": "aide-sociale",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "demandeChomageEnCours",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "revenus",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "nationalite",
+        "operator": "equal",
+        "value": "belge"
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-eligible"
+  },
+  "fileName": "aide-socialeRules",
+  "generated": "2025-12-13T17:27:42.417Z"
+}

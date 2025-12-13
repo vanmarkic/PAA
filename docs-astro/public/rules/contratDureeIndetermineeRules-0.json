@@ -1,0 +1,21 @@
+{
+  "id": "contratDureeIndetermineeRules-0",
+  "description": "Éligible pour ContratDureeIndeterminee",
+  "category": "autre",
+  "benefitType": "contratdureeindeterminee",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "contratDureeIndeterminee-eligible"
+  },
+  "fileName": "contratDureeIndetermineeRules",
+  "generated": "2025-12-13T17:27:42.381Z"
+}

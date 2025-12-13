@@ -1,0 +1,36 @@
+{
+  "id": "carte-medicaleRules-5",
+  "description": "Ineligible: Étudiant européen sans ressources ne pouvant rentrer - AMU temporaire",
+  "category": "sante",
+  "benefitType": "carte-medicale",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "eu_student"
+      },
+      {
+        "fact": "monthsInBelgium",
+        "operator": "lessThan",
+        "value": "CARTE_MEDICALE_CONSTANTS.EU_CITIZEN_MIN_RESIDENCE_MONTHS"
+      },
+      {
+        "fact": "canReturnToCountry",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "isIndigent",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "carteMedicale-eligible"
+  },
+  "fileName": "carte-medicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

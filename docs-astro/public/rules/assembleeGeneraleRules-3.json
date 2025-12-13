@@ -1,0 +1,36 @@
+{
+  "id": "assembleeGeneraleRules-3",
+  "description": "Ineligible: Documents obligatoires manquants pour AG ordinaire",
+  "category": "autre",
+  "benefitType": "assembleegenerale",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "assemblee_type",
+        "operator": "equal",
+        "value": "ordinaire_annuelle"
+      },
+      {
+        "fact": "comptes_annuels_joints",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "budget_previsionnel_joint",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "rapport_syndic_joint",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "documents-manquants"
+  },
+  "fileName": "assembleeGeneraleRules",
+  "generated": "2025-12-13T17:27:42.381Z"
+}

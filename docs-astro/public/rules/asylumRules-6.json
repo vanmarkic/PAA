@@ -1,0 +1,26 @@
+{
+  "id": "asylumRules-6",
+  "description": "Ineligible: Pays tiers sûr - aurait pu demander protection ailleurs",
+  "category": "autre",
+  "benefitType": "asylum",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasTransitedSafeCountry",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "couldHaveAppliedThere",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "safe-third-country"
+  },
+  "fileName": "asylumRules",
+  "generated": "2025-12-13T17:27:42.392Z"
+}

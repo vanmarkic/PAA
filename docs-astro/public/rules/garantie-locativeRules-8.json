@@ -1,0 +1,26 @@
+{
+  "id": "garantie-locativeRules-8",
+  "description": "Logement social - Procédure simplifiée avec déduction RIS",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 88,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estLogementSocial",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "estBeneficiaireRIS",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

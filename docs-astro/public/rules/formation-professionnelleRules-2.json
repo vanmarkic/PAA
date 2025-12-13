@@ -1,0 +1,36 @@
+{
+  "id": "formation-professionnelleRules-2",
+  "description": "Rule 3 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 80,
+  "conditions": {
+    "all": [
+      {
+        "fact": "employmentStatus",
+        "operator": "equal",
+        "value": "demandeur_emploi"
+      },
+      {
+        "fact": "isShortageOccupation",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isTrainingApproved",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "FORMATION_CONSTANTS.MIN_AGE"
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-eligible"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

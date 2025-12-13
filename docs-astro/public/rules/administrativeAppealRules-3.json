@@ -1,0 +1,26 @@
+{
+  "id": "administrativeAppealRules-3",
+  "description": "Rule 4 for administrativeappeal",
+  "category": "autre",
+  "benefitType": "administrativeappeal",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "judicialProceedingsOngoing",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "procedureType",
+        "operator": "in",
+        "value": "[mediateur-federal"
+      }
+    ]
+  },
+  "event": {
+    "type": "judicial-proceedings"
+  },
+  "fileName": "administrativeAppealRules",
+  "generated": "2025-12-13T17:27:42.405Z"
+}

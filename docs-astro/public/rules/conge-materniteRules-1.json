@@ -1,0 +1,26 @@
+{
+  "id": "conge-materniteRules-1",
+  "description": "Ineligible: cotisations à la sécurité sociale insuffisantes",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "cotisationSecuriteSociale",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "statutProfessionnel",
+        "operator": "notEqual",
+        "value": "chomeuse"
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-cotisations-insuffisantes"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

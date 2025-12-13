@@ -1,0 +1,26 @@
+{
+  "id": "artistUnemploymentRules-3",
+  "description": "Formation artistique compatible avec allocations",
+  "category": "emploi",
+  "benefitType": "artistunemployment",
+  "priority": 6,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isInTraining",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "trainingType",
+        "operator": "equal",
+        "value": "artistic"
+      }
+    ]
+  },
+  "event": {
+    "type": "training-compatible"
+  },
+  "fileName": "artistUnemploymentRules",
+  "generated": "2025-12-13T17:27:42.412Z"
+}

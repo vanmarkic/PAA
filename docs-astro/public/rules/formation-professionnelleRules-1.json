@@ -1,0 +1,26 @@
+{
+  "id": "formation-professionnelleRules-1",
+  "description": "Rule 2 for formation-professionnelle",
+  "category": "education",
+  "benefitType": "formation-professionnelle",
+  "priority": 90,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isTrainingApproved",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "hasUnemploymentBenefits",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "formationProfessionnelle-warning"
+  },
+  "fileName": "formation-professionnelleRules",
+  "generated": "2025-12-13T17:27:42.422Z"
+}

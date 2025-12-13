@@ -1,0 +1,31 @@
+{
+  "id": "admissibilityRules-1",
+  "description": "Ineligible: Application submitted after 6-month deadline (old rule)",
+  "category": "autre",
+  "benefitType": "admissibility",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "hasFinalDomesticDecision",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "violationAfterFebruary2024",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "daysSinceFinalDecision",
+        "operator": "greaterThan",
+        "value": "ECHR_DEADLINES.OLD_DEADLINE_MONTHS * 30"
+      }
+    ]
+  },
+  "event": {
+    "type": "inadmissible"
+  },
+  "fileName": "admissibilityRules",
+  "generated": "2025-12-13T17:27:42.383Z"
+}

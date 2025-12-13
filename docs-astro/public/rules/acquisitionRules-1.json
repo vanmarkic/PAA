@@ -1,0 +1,21 @@
+{
+  "id": "acquisitionRules-1",
+  "description": "Ineligible: Taux d\\",
+  "category": "autre",
+  "benefitType": "acquisition",
+  "priority": 9,
+  "conditions": {
+    "any": [
+      {
+        "fact": "debtRatio",
+        "operator": "greaterThan",
+        "value": "IMMOBILIER_CONSTANTS.MAX_DEBT_RATIO"
+      }
+    ]
+  },
+  "event": {
+    "type": "mortgage-risk"
+  },
+  "fileName": "acquisitionRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

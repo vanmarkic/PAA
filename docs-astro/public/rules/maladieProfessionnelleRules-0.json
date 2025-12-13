@@ -1,0 +1,21 @@
+{
+  "id": "maladieProfessionnelleRules-0",
+  "description": "Éligible pour MaladieProfessionnelle",
+  "category": "sante",
+  "benefitType": "maladieprofessionnelle",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "maladieProfessionnelle-eligible"
+  },
+  "fileName": "maladieProfessionnelleRules",
+  "generated": "2025-12-13T17:27:42.426Z"
+}

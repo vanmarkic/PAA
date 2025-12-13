@@ -1,0 +1,36 @@
+{
+  "id": "prime-renovationRules-7",
+  "description": "Éligible - Prime pompe à chaleur catégorie R2 (montants réduits de 60% en 2025)",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.WALLONIE"
+      },
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "R2"
+      },
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "workType",
+        "operator": "equal",
+        "value": "pompe_chaleur"
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

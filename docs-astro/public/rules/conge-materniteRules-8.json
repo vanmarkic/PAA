@@ -1,0 +1,21 @@
+{
+  "id": "conge-materniteRules-8",
+  "description": "Accouchement prématuré - semaines prénatales non prises sont perdues",
+  "category": "autre",
+  "benefitType": "conge-maternite",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "accouchementPremature",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "congeMaternite-premature"
+  },
+  "fileName": "conge-materniteRules",
+  "generated": "2025-12-13T17:27:42.378Z"
+}

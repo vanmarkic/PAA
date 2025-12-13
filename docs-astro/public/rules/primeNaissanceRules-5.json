@@ -1,0 +1,26 @@
+{
+  "id": "primeNaissanceRules-5",
+  "description": "Ineligible: délai de prescription de ${MAX_DECLARATION_YEARS_EXCEPTIONAL} ans dépassé",
+  "category": "autre",
+  "benefitType": "primenaissance",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "daysSinceBirth",
+        "operator": "greaterThan",
+        "value": "MAX_DECLARATION_YEARS_EXCEPTIONAL * 365"
+      },
+      {
+        "fact": "isStillbirth",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "birth-allowance-ineligible"
+  },
+  "fileName": "primeNaissanceRules",
+  "generated": "2025-12-13T17:27:42.404Z"
+}

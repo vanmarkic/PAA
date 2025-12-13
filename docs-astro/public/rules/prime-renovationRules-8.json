@@ -1,0 +1,31 @@
+{
+  "id": "prime-renovationRules-8",
+  "description": "Éligible - Catégorie R4 avec taux intervention 50%",
+  "category": "autre",
+  "benefitType": "prime-renovation",
+  "priority": 40,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "REGIONS.WALLONIE"
+      },
+      {
+        "fact": "category",
+        "operator": "equal",
+        "value": "R4"
+      },
+      {
+        "fact": "isOwner",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "primeRenovation-eligible"
+  },
+  "fileName": "prime-renovationRules",
+  "generated": "2025-12-13T17:27:42.401Z"
+}

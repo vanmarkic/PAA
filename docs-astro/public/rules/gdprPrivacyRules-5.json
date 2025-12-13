@@ -1,0 +1,26 @@
+{
+  "id": "gdprPrivacyRules-5",
+  "description": "Ineligible: Notification tardive - délai de ${CIVIL_RIGHTS_CONSTANTS.DATA_BREACH_NOTIFICATION}h dépassé",
+  "category": "autre",
+  "benefitType": "gdprprivacy",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "requestType",
+        "operator": "equal",
+        "value": "notification-violation"
+      },
+      {
+        "fact": "hoursSinceBreach",
+        "operator": "greaterThan",
+        "value": "CIVIL_RIGHTS_CONSTANTS.DATA_BREACH_NOTIFICATION"
+      }
+    ]
+  },
+  "event": {
+    "type": "breach-notification-late"
+  },
+  "fileName": "gdprPrivacyRules",
+  "generated": "2025-12-13T17:27:42.390Z"
+}

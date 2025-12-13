@@ -92,7 +92,7 @@
   },
   "scenarios": [
     {
-      "id": "e7456f8a-15c9-4378-9ddf-59282cadbd85",
+      "id": "466dde54-e97e-4d71-a287-7b0d57756099",
       "name": "Propriétaire wallon catégorie R1 isolation toiture",
       "description": "",
       "tags": [],
@@ -145,7 +145,7 @@
       "isOutline": false
     },
     {
-      "id": "29f85b97-4cfc-4c8b-afd7-4f5098657e44",
+      "id": "cb6c0963-9d2b-40cf-bb86-73308e99a5d7",
       "name": "Couple wallon catégorie R3 rénovation globale",
       "description": "",
       "tags": [],
@@ -198,7 +198,7 @@
       "isOutline": false
     },
     {
-      "id": "83baf7f3-4c5b-4c1a-903b-1342c69a4a90",
+      "id": "a5d2e66d-1fd4-4548-a22f-ff1dec5cc594",
       "name": "Locataire avec accord propriétaire Wallonie",
       "description": "",
       "tags": [],
@@ -247,7 +247,7 @@
       "isOutline": false
     },
     {
-      "id": "f14d26f0-f85a-4eee-947e-42b5f702d73e",
+      "id": "a739574e-3a53-4329-b97e-4527ede823b0",
       "name": "Propriétaire Bruxelles situation 2025",
       "description": "",
       "tags": [],
@@ -292,7 +292,7 @@
       "isOutline": false
     },
     {
-      "id": "539a9ad2-f245-482a-8ff8-bcd0d16d3cf7",
+      "id": "a61baeb8-28cc-4886-b1ee-9697b5fa3782",
       "name": "Propriétaire flamand MijnVerbouwPremie 2025",
       "description": "",
       "tags": [],
@@ -345,7 +345,7 @@
       "isOutline": false
     },
     {
-      "id": "2f2788c3-356a-46ff-88e9-b7daef3ba18c",
+      "id": "8866ecc8-fb1c-44f3-acb3-1f494c7a6fcf",
       "name": "Revenus élevés Wallonie catégorie R5",
       "description": "",
       "tags": [],
@@ -390,7 +390,7 @@
       "isOutline": false
     },
     {
-      "id": "82d3baaf-5328-4d9e-9d0a-29c4bf07bab7",
+      "id": "2d552f09-06a9-44b4-b62e-31ca49fc01ce",
       "name": "Pompe à chaleur en Wallonie catégorie R2",
       "description": "",
       "tags": [],
@@ -443,7 +443,7 @@
       "isOutline": false
     },
     {
-      "id": "d8319495-886b-48d6-8d5e-5d9f4a47006f",
+      "id": "7a08d637-a438-45cc-a81d-6d845cea9f98",
       "name": "Châssis et vitrages en Wallonie",
       "description": "",
       "tags": [],
@@ -492,7 +492,7 @@
       "isOutline": false
     },
     {
-      "id": "de2a9888-f203-4e22-a30d-5615f09e06b8",
+      "id": "5e9c3f48-ec5f-4b30-9f04-af30bb97390b",
       "name": "Avantage fiscal isolation toiture Wallonie",
       "description": "",
       "tags": [],
@@ -541,7 +541,7 @@
       "isOutline": false
     },
     {
-      "id": "e488313f-2389-4fa7-8705-3b2d191c68c9",
+      "id": "10df0989-cf9f-4dd1-9e1b-520c754f130b",
       "name": "Calcul primes selon région et travaux",
       "description": "",
       "tags": [],
@@ -599,7 +599,7 @@
           ],
           "rows": [
             {
-              "name": "095e2720-0ab1-4c45-9d14-ba53db8dd028",
+              "name": "5c148355-e1c2-4fd9-930a-0c5ca67b76d4",
               "values": {
                 "région": "Wallonie",
                 "revenus": "22000",
@@ -612,7 +612,7 @@
               }
             },
             {
-              "name": "0fbbae0d-0cfa-4cfb-9555-665342d5f396",
+              "name": "906bbe02-a097-4276-90d1-2e02b68b5f5b",
               "values": {
                 "région": "Wallonie",
                 "revenus": "35000",
@@ -625,7 +625,7 @@
               }
             },
             {
-              "name": "68c92b1e-7d47-405d-b8b2-440fb2b7c562",
+              "name": "e8d4411f-92af-4f4f-92a0-eeafcfa33c29",
               "values": {
                 "région": "Wallonie",
                 "revenus": "45000",
@@ -638,7 +638,7 @@
               }
             },
             {
-              "name": "69f1e806-ccb3-4deb-bb3c-2fd9df98cbf7",
+              "name": "93a73f33-f474-48ea-a79f-e4d71b4a5115",
               "values": {
                 "région": "Wallonie",
                 "revenus": "100000",
@@ -651,7 +651,7 @@
               }
             },
             {
-              "name": "8f05ed68-8b1b-4f5f-918f-19b0c82a710e",
+              "name": "f242c059-04e8-4909-83d6-03210fb7a318",
               "values": {
                 "région": "Flandres",
                 "revenus": "28000",
@@ -664,7 +664,7 @@
               }
             },
             {
-              "name": "b2d65a80-1637-4816-a8db-52f3ba468ea0",
+              "name": "99a14ed7-5aa6-4b53-8431-0e185f5fca04",
               "values": {
                 "région": "Flandres",
                 "revenus": "40000",
@@ -677,7 +677,7 @@
               }
             },
             {
-              "name": "7d80710f-76b9-4b19-bdcc-28bf001b1a1e",
+              "name": "b7982191-6d67-4892-be0f-c4ba70d71ab8",
               "values": {
                 "région": "Bruxelles",
                 "revenus": "30000",
@@ -695,7 +695,7 @@
       "isOutline": true
     },
     {
-      "id": "a79bf9f5-80ec-4871-a2dc-1d5037c27ba2",
+      "id": "93e2d425-f4ce-45a7-a170-14f61b76c5c9",
       "name": "Conditions et obligations post-travaux",
       "description": "",
       "tags": [],
@@ -774,7 +774,7 @@
       "isOutline": false
     },
     {
-      "id": "8a8ee6fe-ddb6-4279-9b66-45427533da3d",
+      "id": "19731953-a2d7-45d2-bd40-21e4d7f74450",
       "name": "Procédure et délais de demande",
       "description": "",
       "tags": [],
@@ -880,5 +880,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.161Z"
+  "generated": "2025-12-13T17:25:45.878Z"
 }

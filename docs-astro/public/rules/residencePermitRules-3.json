@@ -1,0 +1,31 @@
+{
+  "id": "residencePermitRules-3",
+  "description": "Éligible pour carte E (citoyen UE)",
+  "category": "autre",
+  "benefitType": "residencepermit",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "nationality",
+        "operator": "in",
+        "value": "[eu-citizen"
+      },
+      {
+        "fact": "hasEmploymentOrSufficientResources",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "hasHealthInsurance",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "card-e-eligible"
+  },
+  "fileName": "residencePermitRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

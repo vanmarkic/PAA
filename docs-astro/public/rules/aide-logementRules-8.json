@@ -1,0 +1,31 @@
+{
+  "id": "aide-logementRules-8",
+  "description": "Ineligible: sortie de rue - ADeL forfaitaire sans preuve logement antérieur",
+  "category": "logement",
+  "benefitType": "aide-logement",
+  "priority": 82,
+  "conditions": {
+    "all": [
+      {
+        "fact": "region",
+        "operator": "equal",
+        "value": "wallonie"
+      },
+      {
+        "fact": "sortDeLaRue",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "statutLogement",
+        "operator": "equal",
+        "value": "locataire"
+      }
+    ]
+  },
+  "event": {
+    "type": "aideLogement-eligible"
+  },
+  "fileName": "aide-logementRules",
+  "generated": "2025-12-13T17:27:42.413Z"
+}

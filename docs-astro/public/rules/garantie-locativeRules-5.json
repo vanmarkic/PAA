@@ -1,0 +1,21 @@
+{
+  "id": "garantie-locativeRules-5",
+  "description": "Médiation de dettes - Prêt adapté au plan de médiation",
+  "category": "autre",
+  "benefitType": "garantie-locative",
+  "priority": 85,
+  "conditions": {
+    "all": [
+      {
+        "fact": "estEnMediationDettes",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "garantieLocative-eligible"
+  },
+  "fileName": "garantie-locativeRules",
+  "generated": "2025-12-13T17:27:42.394Z"
+}

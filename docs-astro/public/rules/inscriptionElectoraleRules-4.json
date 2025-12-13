@@ -1,0 +1,21 @@
+{
+  "id": "inscriptionElectoraleRules-4",
+  "description": "Ineligible: Suspension des droits civiques en cours",
+  "category": "autre",
+  "benefitType": "inscriptionelectorale",
+  "priority": 11,
+  "conditions": {
+    "any": [
+      {
+        "fact": "suspensionDroitsCiviques",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "inscription-suspendue"
+  },
+  "fileName": "inscriptionElectoraleRules",
+  "generated": "2025-12-13T17:27:42.387Z"
+}

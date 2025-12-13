@@ -1,0 +1,31 @@
+{
+  "id": "aideLogementRules-8",
+  "description": "Éligible pour allocation attente logement",
+  "category": "logement",
+  "benefitType": "aidelogement",
+  "priority": 4,
+  "conditions": {
+    "all": [
+      {
+        "fact": "onWaitingList",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "waitingListMonths",
+        "operator": "greaterThan",
+        "value": "WALLONIA_2024.aalAllowances.waitingListMinMonths"
+      },
+      {
+        "fact": "incomeVsThreshold",
+        "operator": "lessThanInclusive",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "wallonia-eligible-aal"
+  },
+  "fileName": "aideLogementRules",
+  "generated": "2025-12-13T17:27:42.414Z"
+}

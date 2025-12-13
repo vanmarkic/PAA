@@ -1,0 +1,36 @@
+{
+  "id": "allocations-chomageRules-9",
+  "description": "Rule 10 for allocations-chomage",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 45,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isPartTime",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "age",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.MIN_AGE"
+      },
+      {
+        "fact": "daysWorked",
+        "operator": "greaterThanInclusive",
+        "value": "CHOMAGE_CONSTANTS.DAYS_REQUIRED_UNDER_36"
+      },
+      {
+        "fact": "seekingFullTime",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-eligible-parttime"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

@@ -32,7 +32,7 @@
   },
   "scenarios": [
     {
-      "id": "833f7ccc-549c-4b87-b69a-08bcc89cb672",
+      "id": "e790e230-cd05-44f8-9d14-a8aa16e46a97",
       "name": "Calcul de la capacité d'emprunt pour acquisition",
       "description": "",
       "tags": [],
@@ -73,7 +73,7 @@
       "isOutline": false
     },
     {
-      "id": "48e390f1-18b4-4298-bec8-685cc125426c",
+      "id": "eed3f4d4-1508-47b8-92ad-1a7f91fc0627",
       "name": "Soumission d'une offre d'achat conforme",
       "description": "",
       "tags": [],
@@ -134,7 +134,7 @@
       "isOutline": false
     },
     {
-      "id": "70b52ef2-70ba-435c-b061-d0f5f3b78262",
+      "id": "fd10b9a7-565f-4dde-b7ca-3e35d563441f",
       "name": "Demande de crédit hypothécaire",
       "description": "",
       "tags": [],
@@ -203,7 +203,7 @@
       "isOutline": false
     },
     {
-      "id": "41280849-63bc-4275-860e-0e6cc5c3e3d0",
+      "id": "f29f5253-a7af-49ba-9ca2-4646967c9ba7",
       "name": "Vérification de la conformité urbanistique",
       "description": "",
       "tags": [],
@@ -270,7 +270,7 @@
       "isOutline": false
     },
     {
-      "id": "ab70b376-bd43-48c9-a180-93fdc70be2cb",
+      "id": "d3b1905a-7a99-4bf7-b2d9-8dbb23d81d92",
       "name": "Réalisation de l'expertise obligatoire",
       "description": "",
       "tags": [],
@@ -331,7 +331,7 @@
       "isOutline": false
     },
     {
-      "id": "a90bacc9-c051-47b1-a77d-5fff5d13af49",
+      "id": "8211043d-6e00-47e7-a55f-5314045a13a2",
       "name": "Signature de l'acte authentique chez le notaire",
       "description": "",
       "tags": [],
@@ -398,7 +398,7 @@
       "isOutline": false
     },
     {
-      "id": "c20e1ef1-e5c7-4572-83e0-d78dc8979715",
+      "id": "6a732e67-9fc8-45dc-9062-c974dc6a601e",
       "name": "Application des avantages primo-accédant",
       "description": "",
       "tags": [],
@@ -464,7 +464,7 @@
       "isOutline": false
     },
     {
-      "id": "38163fa9-bf37-4464-910d-08afa25763c0",
+      "id": "520746c2-70c8-4726-ba9b-e42e925f7c68",
       "name": "Acquisition d'un bien en viager",
       "description": "",
       "tags": [],
@@ -530,7 +530,7 @@
       "isOutline": false
     },
     {
-      "id": "99878c49-8b6c-400f-9c08-4bc9c7d7efa5",
+      "id": "62e3b388-cd87-4494-ade9-2ab2eb5b2f59",
       "name": "Acquisition d'un appartement en copropriété",
       "description": "",
       "tags": [],
@@ -595,7 +595,7 @@
       "isOutline": false
     },
     {
-      "id": "2e0c183e-5411-4e72-aa7a-239568503844",
+      "id": "f3f06983-b0ed-4e25-b8d2-ca304b0e81c9",
       "name": "Activation des protections légales de l'acheteur",
       "description": "",
       "tags": [],
@@ -657,7 +657,7 @@
       "isOutline": false
     },
     {
-      "id": "3a8fee1b-f2a2-4663-af3f-abca49be13a6",
+      "id": "dbc56f3d-29b5-4614-9cb4-934f591dbf74",
       "name": "Calcul des frais d'acquisition par région",
       "description": "",
       "tags": [],
@@ -705,7 +705,7 @@
           ],
           "rows": [
             {
-              "name": "9c81cd53-0975-40d7-bdcc-36f27594b1db",
+              "name": "4dbed692-df4a-4f5e-9fb3-20e95ca4c3e0",
               "values": {
                 "région": "Wallonie",
                 "prix": "200000",
@@ -716,7 +716,7 @@
               }
             },
             {
-              "name": "3974d76b-3242-4f92-af35-12371f8505fe",
+              "name": "270848a4-60af-4f9d-b3ba-07ad03a8a514",
               "values": {
                 "région": "Wallonie",
                 "prix": "200000",
@@ -727,7 +727,7 @@
               }
             },
             {
-              "name": "519a1aab-48ee-4079-8be4-4b4f5e151950",
+              "name": "68d491fd-1d8f-47b4-ad9d-00c90d6dc448",
               "values": {
                 "région": "Flandre",
                 "prix": "200000",
@@ -738,7 +738,7 @@
               }
             },
             {
-              "name": "785d64b9-8a53-4577-8dbb-512132d6d382",
+              "name": "4c96eac9-d8a5-4db2-862b-67aaaacdcd19",
               "values": {
                 "région": "Bruxelles",
                 "prix": "200000",
@@ -749,7 +749,7 @@
               }
             },
             {
-              "name": "74b149e6-903e-47a1-baa4-27d554fe24ba",
+              "name": "672fa93a-d33d-47c1-baa6-32e7ce6040e5",
               "values": {
                 "région": "Wallonie",
                 "prix": "500000",
@@ -768,5 +768,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.166Z"
+  "generated": "2025-12-13T17:25:45.882Z"
 }

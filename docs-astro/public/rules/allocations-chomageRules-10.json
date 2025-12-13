@@ -1,0 +1,26 @@
+{
+  "id": "allocations-chomageRules-10",
+  "description": "Rule 11 for allocations-chomage",
+  "category": "emploi",
+  "benefitType": "allocations-chomage",
+  "priority": 40,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isReceivingBenefits",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "isInApprovedTraining",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "allocationsChomage-training-cumul"
+  },
+  "fileName": "allocations-chomageRules",
+  "generated": "2025-12-13T17:27:42.411Z"
+}

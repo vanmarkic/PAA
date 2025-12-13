@@ -1,0 +1,26 @@
+{
+  "id": "interimMeasuresRules-7",
+  "description": "Ineligible: No risk of irreversible harm - damage compensable",
+  "category": "autre",
+  "benefitType": "interimmeasures",
+  "priority": 3,
+  "conditions": {
+    "all": [
+      {
+        "fact": "irreversibleHarm",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "compensableByMoney",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "refuse-measures"
+  },
+  "fileName": "interimMeasuresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

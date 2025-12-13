@@ -1,0 +1,21 @@
+{
+  "id": "exonerationRevenusMobiliersRules-0",
+  "description": "Éligible pour ExonerationRevenusMobiliers",
+  "category": "autre",
+  "benefitType": "exonerationrevenusmobiliers",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "meetsBasicConditions",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "exonerationRevenusMobiliers-eligible"
+  },
+  "fileName": "exonerationRevenusMobiliersRules",
+  "generated": "2025-12-13T17:27:42.393Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "allocationsFamilialesRules-0",
+  "description": "Éligible sans condition (0-18 ans)",
+  "category": "famille",
+  "benefitType": "allocationsfamiliales",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "childAge",
+        "operator": "greaterThanInclusive",
+        "value": "MIN_AGE_CHILD"
+      },
+      {
+        "fact": "childAge",
+        "operator": "lessThanInclusive",
+        "value": "MAX_AGE_CHILD_UNCONDITIONAL"
+      }
+    ]
+  },
+  "event": {
+    "type": "fa-eligible-unconditional"
+  },
+  "fileName": "allocationsFamilialesRules",
+  "generated": "2025-12-13T17:27:42.421Z"
+}

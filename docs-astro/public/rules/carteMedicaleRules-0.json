@@ -1,0 +1,26 @@
+{
+  "id": "carteMedicaleRules-0",
+  "description": "Éligible carte médicale - revenus insuffisants",
+  "category": "sante",
+  "benefitType": "cartemedicale",
+  "priority": 9,
+  "conditions": {
+    "all": [
+      {
+        "fact": "isResident",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "resteAVivre",
+        "operator": "lessThan",
+        "value": "MEDICAL_CARD_THRESHOLDS.resteAVivre.minimum"
+      }
+    ]
+  },
+  "event": {
+    "type": "medical-card-eligible-income"
+  },
+  "fileName": "carteMedicaleRules",
+  "generated": "2025-12-13T17:27:42.424Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "locationRules-3",
+  "description": "Ineligible: Expulsion interdite en période hivernale avec enfants mineurs",
+  "category": "autre",
+  "benefitType": "location",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "evictionMonth",
+        "operator": "in",
+        "value": "[12"
+      },
+      {
+        "fact": "hasMinorChildren",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "winter-eviction-prohibited"
+  },
+  "fileName": "locationRules",
+  "generated": "2025-12-13T17:27:42.396Z"
+}

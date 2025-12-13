@@ -1,0 +1,31 @@
+{
+  "id": "conseilEtatRules-4",
+  "description": "Rule 5 for conseiletat",
+  "category": "autre",
+  "benefitType": "conseiletat",
+  "priority": 7,
+  "conditions": {
+    "all": [
+      {
+        "fact": "feeRequired",
+        "operator": "equal",
+        "value": true
+      },
+      {
+        "fact": "feePaid",
+        "operator": "equal",
+        "value": "see_code"
+      },
+      {
+        "fact": "feeExemption",
+        "operator": "equal",
+        "value": "see_code"
+      }
+    ]
+  },
+  "event": {
+    "type": "fee-not-paid"
+  },
+  "fileName": "conseilEtatRules",
+  "generated": "2025-12-13T17:27:42.406Z"
+}

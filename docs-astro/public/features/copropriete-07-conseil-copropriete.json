@@ -16,7 +16,7 @@
   },
   "scenarios": [
     {
-      "id": "e758a2d8-3ee1-4839-b40a-7b42fe014bae",
+      "id": "842bb2d9-1e04-4c3a-9932-f806e13dc1eb",
       "name": "Élection obligatoire du conseil",
       "description": "",
       "tags": [],
@@ -49,7 +49,7 @@
       "isOutline": false
     },
     {
-      "id": "ba2ee70a-e450-4677-a1a5-7868800d0d1f",
+      "id": "db153fb9-7ab5-4447-b940-730be6352125",
       "name": "Missions du conseil de copropriété",
       "description": "",
       "tags": [],
@@ -98,7 +98,7 @@
       "isOutline": false
     },
     {
-      "id": "8bbd096d-a37c-4ebc-94f3-e29f8749008e",
+      "id": "945f3c4e-fee3-4d7f-afb4-77c5eef7d808",
       "name": "Réunion conseil avec le syndic",
       "description": "",
       "tags": [],
@@ -134,5 +134,5 @@
   "metadata": {
     "language": "fr"
   },
-  "generated": "2025-12-13T11:57:49.163Z"
+  "generated": "2025-12-13T17:25:45.879Z"
 }

@@ -1,0 +1,21 @@
+{
+  "id": "specialProceduresRules-2",
+  "description": "Ineligible: Outside 3-month time limit",
+  "category": "autre",
+  "benefitType": "specialprocedures",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "fact": "daysSinceJudgment",
+        "operator": "greaterThan",
+        "value": "ECHR_DEADLINES.GRAND_CHAMBER_REFERRAL_MONTHS * 30"
+      }
+    ]
+  },
+  "event": {
+    "type": "reject-referral"
+  },
+  "fileName": "specialProceduresRules",
+  "generated": "2025-12-13T17:27:42.384Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "garde-enfantsRules-5",
+  "description": "Réduction pour enfants simultanés en crèche",
+  "category": "autre",
+  "benefitType": "garde-enfants",
+  "priority": 50,
+  "conditions": {
+    "all": [
+      {
+        "fact": "nombre_enfants_creche",
+        "operator": "greaterThanInclusive",
+        "value": 2
+      }
+    ]
+  },
+  "event": {
+    "type": "gardeEnfants-reduction-enfants-simultanes"
+  },
+  "fileName": "garde-enfantsRules",
+  "generated": "2025-12-13T17:27:42.395Z"
+}

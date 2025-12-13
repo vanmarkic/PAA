@@ -1,0 +1,26 @@
+{
+  "id": "aideSocialeRules-2",
+  "description": "étudiant avec garant défaillant",
+  "category": "social",
+  "benefitType": "aidesociale",
+  "priority": 8,
+  "conditions": {
+    "all": [
+      {
+        "fact": "residencyStatus",
+        "operator": "equal",
+        "value": "student-visa"
+      },
+      {
+        "fact": "hasGuarantorDefault",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "aide-sociale-etudiant-limited"
+  },
+  "fileName": "aideSocialeRules",
+  "generated": "2025-12-13T17:27:42.418Z"
+}

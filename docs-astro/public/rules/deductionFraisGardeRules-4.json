@@ -1,0 +1,31 @@
+{
+  "id": "deductionFraisGardeRules-4",
+  "description": "Éligible avec taux majoré de 75% (parent isolé revenus modestes)",
+  "category": "fiscal",
+  "benefitType": "deductionfraisgarde",
+  "priority": 5,
+  "conditions": {
+    "all": [
+      {
+        "fact": "familySituation",
+        "operator": "in",
+        "value": "[single"
+      },
+      {
+        "fact": "annualIncome",
+        "operator": "lessThan",
+        "value": "CHILDCARE_CONSTANTS_2024.lowIncomeThreshold"
+      },
+      {
+        "fact": "hasEligibleChildren",
+        "operator": "equal",
+        "value": true
+      }
+    ]
+  },
+  "event": {
+    "type": "childcare-eligible-increased-rate"
+  },
+  "fileName": "deductionFraisGardeRules",
+  "generated": "2025-12-13T17:27:42.429Z"
+}
