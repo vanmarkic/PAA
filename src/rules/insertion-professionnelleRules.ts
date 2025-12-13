@@ -857,4 +857,8 @@ export const INSERTION_PROFESSIONNELLE_RULES_JSON = {
       name: 'Titres-services',
       targetGroup: 'Personnes éloignées de l\'emploi',
       maxDuration: 'Illimitée',
-      mainBenefit: '
+      mainBenefit: 'Emploi dans les services de proximité',
+      conditions: ['Personne éloignée de l\'emploi'],
+    },
+  ],
+};

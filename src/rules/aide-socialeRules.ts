@@ -803,4 +803,9 @@ export const AIDE_SOCIALE_RULES_JSON = {
     {
       id: 'aide-urgence',
       description: 'Situation d\'urgence - aide immédiate',
-      conditions: ['Situation d\'urgence', 'Aucun revenu', 'Risque
+      conditions: ['Situation d\'urgence', 'Aucun revenu', 'Risque immédiat'],
+      result: 'Aide d\'urgence immédiate',
+      priority: 60,
+    },
+  ],
+};

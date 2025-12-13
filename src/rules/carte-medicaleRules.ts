@@ -900,3 +900,9 @@ export const CARTE_MEDICALE_RULES_JSON = {
       conditions: [
         'Parent isolé',
         'Bénéficiaire RIS',
+        'Enfants à charge',
+      ],
+      outcome: 'Carte médicale familiale pour le ménage',
+    },
+  ],
+};

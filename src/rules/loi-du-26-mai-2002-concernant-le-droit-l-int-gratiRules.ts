@@ -456,4 +456,31 @@ export async function checkLoiDu26Mai2002ConcernantLeDroitLIntGratiEligibility(
   try {
     const results = await loiDu26Mai2002ConcernantLeDroitLIntGratiEngineInstance.run(facts);
 
-    const ineligibleEvent =
+    const ineligibleEvent = results.events.find((e) => e.type.includes('ineligible'));
+    const eligibleEvent = results.events.find((e) => e.type.includes('eligible'));
+
+    if (eligibleEvent) {
+      return {
+        ...baseResult,
+        isEligible: true,
+        reason: eligibleEvent.params?.reason as string,
+      };
+    }
+
+    if (ineligibleEvent) {
+      return {
+        ...baseResult,
+        isEligible: false,
+        reason: ineligibleEvent.params?.reason as string,
+      };
+    }
+
+    return baseResult;
+  } catch (error) {
+    return {
+      ...baseResult,
+      isEligible: false,
+      reason: 'Erreur lors de la vérification',
+    };
+  }
+}

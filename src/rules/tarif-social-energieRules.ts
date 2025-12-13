@@ -772,3 +772,5 @@ export const TARIF_SOCIAL_ENERGIE_RULES_JSON = {
     },
     gas: '4.745 cents/kWh',
     revision: 'Trimestrielle',
+  },
+};

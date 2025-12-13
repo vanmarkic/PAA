@@ -784,4 +784,7 @@ export const ASSURANCE_MALADIE_RULES_JSON = {
       id: 'bim-automatique-handicap',
       description: 'Statut BIM automatique pour enfant avec handicap >66%',
       condition: 'enfantHandicapePlus66 === true',
-      consequence: '
+      consequence: 'Statut BIM automatique accordé',
+    },
+  ],
+};

@@ -844,3 +844,27 @@ export async function checkAllocationsHandicapesEligibility(
 
     // Calculate full result
     const calculatedResult = calculateAllocationsHandicapesAmount(user);
+
+    if (aiEligibleEvent || arrEligibleEvent) {
+      return {
+        isEligible: true,
+        ...calculatedResult,
+      };
+    }
+
+    if (elderlyAIOnlyEvent) {
+      return {
+        isEligible: true,
+        type: 'AI_ONLY',
+        ...calculatedResult,
+      };
+    }
+
+    return {
+      isEligible: false,
+      reason: 'Conditions non remplies',
+    };
+  } catch (error) {
+    throw new Error(`Error checking Allocations Handicapés eligibility: ${error}`);
+  }
+};

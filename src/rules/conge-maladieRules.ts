@@ -798,4 +798,13 @@ export function calculateCongeMaladieAmount(input: CongeMaladieInput): number {
       return salaireJournalier * CONGE_MALADIE_CONSTANTS.TAUX_OUVRIER_SEMAINE_2; // 85.88%
     } else if (input.dureeIncapaciteJours <= CONGE_MALADIE_CONSTANTS.SALAIRE_GARANTI_OUVRIER_MIXTE_JOURS) {
       // Mixte: 25.88% employeur + 60% mutuelle
-      const partEmployeur = salaireJournalier * CONGE_MALADIE_
+      const partEmployeur = salaireJournalier * CONGE_MALADIE_CONSTANTS.TAUX_EMPLOYEUR_MIXTE;
+      const partMutuelle = salaireJournalier * CONGE_MALADIE_CONSTANTS.TAUX_MUTUELLE_MIXTE;
+      return partEmployeur + partMutuelle;
+    }
+    return salaireJournalier * CONGE_MALADIE_CONSTANTS.TAUX_MUTUELLE;
+  }
+
+  // Default return for other cases
+  return salaireJournalier * CONGE_MALADIE_CONSTANTS.TAUX_INCAPACITE_PRIMAIRE;
+}

@@ -863,4 +863,10 @@ export const PRIME_RENOVATION_RULES_JSON = {
     },
     flanders: {
       auditRequired: 'Recommandé',
-      applicationTiming: '
+      applicationTiming: 'Avant ou après travaux',
+      processingTime: '2-3 mois',
+      paymentTiming: 'Après travaux et audit',
+      maxWorkDelay: '2 ans',
+    },
+  },
+};

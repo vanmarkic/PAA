@@ -896,4 +896,16 @@ export async function checkCreditTempsEligibility(
       return {
         benefitType: 'credit-temps',
         isEligible: false,
-        reason: ineligibleEvent.params?.reason as string
+        reason: ineligibleEvent.params?.reason as string,
+      };
+    }
+
+    return {
+      benefitType: 'credit-temps',
+      isEligible: false,
+      reason: 'Conditions non remplies',
+    };
+  } catch (error) {
+    throw new Error(`Error checking Credit Temps eligibility: ${error}`);
+  }
+};

@@ -873,4 +873,13 @@ export async function checkLogementSocialEligibility(
       patrimoineDansLimites_flandres = user.patrimoineMobilier <= LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_PATRIMOINE_LIMITE_2025;
     }
   } else {
-    // Brussels - Variable thresholds, using Wall
+    // Brussels - Variable thresholds, using Wallonia limits as default
+    revenuDansLimites = revenuImposable <= seuilsReferenceWallonie[compositionMenage] || revenuImposable <= seuilsReferenceWallonie['couple_ou_isole_avec_enfants'];
+    patrimoineDansLimites_flandres = true; // Not applicable for Brussels
+  }
+
+  return {
+    revenuDansLimites,
+    patrimoineDansLimites_flandres,
+  };
+}

@@ -862,3 +862,6 @@ export const CONGE_PARENTAL_RULES_JSON = {
     supplementaryLaws: [
       'Loi du 22 janvier 1985 de redressement contenant des dispositions sociales',
       'Convention collective de travail n°64 du 29 avril 1997',
+    ],
+  },
+};

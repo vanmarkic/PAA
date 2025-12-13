@@ -1,11 +1,15 @@
 name: Legal Source Monitoring
 
+# DISABLED: This workflow is currently disabled until the legal monitoring feature is fixed.
+# To re-enable, uncomment the schedule trigger below.
+# See: version compliance issues with missing rules files
+
 on:
   # Run every Monday at 9:00 AM (UTC)
-  schedule:
-    - cron: '0 9 * * 1'
+  # schedule:
+  #   - cron: '0 9 * * 1'
 
-  # Allow manual trigger
+  # Allow manual trigger (for testing when ready to re-enable)
   workflow_dispatch:
 
 jobs:

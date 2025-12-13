@@ -529,3 +529,17 @@ function createDocumentationEtLGislationBailFermeEngine(): Engine {
   // Rule 19: Succession rights
   engine.addRule({
     conditions: {
+      all: [
+        { fact: 'bailType', operator: 'equal', value: 'bail-ferme' },
+        { fact: 'succession', operator: 'equal', value: true },
+      ],
+    },
+    event: {
+      type: 'succession-rights',
+      params: { message: 'Droits de succession applicables au bail à ferme' },
+    },
+    priority: 35,
+  });
+
+  return engine;
+}

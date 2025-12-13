@@ -801,4 +801,15 @@ export async function checkAideLogementEligibility(
         montantDemenagement: calculation.montantDemenagement || (eligibleEvent.params?.montantDemenagement as number),
         dureeMaxAnnees: eligibleEvent.params?.dureeMaxAnnees as number,
         reason: eligibleEvent.params?.reason as string,
-        calculDetails: calculation.calculDetails
+        calculDetails: calculation.calculDetails,
+      };
+    }
+
+    return {
+      isEligible: false,
+      reason: 'Conditions non remplies',
+    };
+  } catch (error) {
+    throw new Error(`Error checking Aide Logement eligibility: ${error}`);
+  }
+};

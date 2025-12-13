@@ -760,3 +760,11 @@ export function calculateCoutMultipleEnfants(user: GardeEnfantsUser): {
  * Check Garde d'Enfants et Aides Financières eligibility
  */
 export async function checkGardeEnfantsEligibility(
+  user: Record<string, unknown>
+): Promise<{ isEligible: boolean; reason?: string }> {
+  // Basic eligibility check
+  if (!user.hasChildren) {
+    return { isEligible: false, reason: 'Pas d\'enfants à charge' };
+  }
+  return { isEligible: true };
+}

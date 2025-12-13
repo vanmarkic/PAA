@@ -773,3 +773,9 @@ export const CONGE_MATERNITE_RULES_JSON = {
       total: '15 semaines',
     },
     multiplePregnancy: {
+      prenatal: '8 semaines',
+      postnatal: '9 semaines',
+      total: '17 semaines',
+    },
+  },
+};

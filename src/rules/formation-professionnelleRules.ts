@@ -817,4 +817,14 @@ export const FORMATION_PROFESSIONNELLE_RULES_JSON = {
       priority: 85,
     },
     {
-      id:
+      id: 'formation-generale',
+      description: 'Formation professionnelle standard',
+      condition: 'demandeurEmploi == true',
+      benefits: {
+        monthlyAllowance: 100,
+        freePublicTransport: false,
+      },
+      priority: 50,
+    },
+  ],
+};
