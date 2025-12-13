@@ -189,13 +189,17 @@ Start infrastructure: `npm run docker:up`
 
 ## Common Development Workflows
 
+> **📚 Guide complet : voir [CONTRIBUTING.md](./CONTRIBUTING.md)** pour des instructions détaillées avec exemples de code.
+
 ### Adding a New Benefit Type
 1. Add benefit type to `BenefitType` enum in `src/domain/types.ts`
-2. Create Gherkin scenarios in `features/benefits/[benefit-name].feature`
-3. Implement rules in `src/rules/[benefit-name]Rules.ts`
-4. If workflow needed, create state machine in `src/workflows/[benefit-name]Machine.ts`
-5. Add example in `src/examples/[benefit-name]Example.ts`
-6. Add API routes/controllers if exposing via REST API
+2. Create domain types in `src/domain/[benefit-name]Types.ts`
+3. Add legal sources in `src/legal-sources/belgianLegalSources.ts`
+4. Create Gherkin scenarios in `features/benefits/[benefit-name].feature`
+5. Implement rules in `src/rules/[benefit-name]Rules.ts`
+6. If workflow needed, create state machine in `src/workflows/[benefit-name]Machine.ts`
+7. Add example in `src/examples/[benefit-name]Example.ts`
+8. Add API routes/controllers if exposing via REST API
 
 ### Adding a New Administrative Procedure State Machine
 1. Create machine file in `src/workflows/` (directory name is legacy; contains procedures)

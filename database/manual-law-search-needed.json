@@ -1,0 +1,572 @@
+{
+  "timestamp": "2025-11-18T16:47:22.208Z",
+  "totalLaws": 100,
+  "knownLaws": 6,
+  "manualSearchNeeded": 94,
+  "topics": [
+    {
+      "topicId": "abattement-succession",
+      "title": "[Placeholder] Loi pour Abattement succession",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Abattement succession belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "abonnement-social-transport",
+      "title": "[Placeholder] Loi pour Abonnement social transport",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Abonnement social transport belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-alimentaire",
+      "title": "[Placeholder] Loi pour Aide alimentaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide alimentaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-juridique",
+      "title": "[Placeholder] Loi pour Aide juridique",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide juridique belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-logement",
+      "title": "[Placeholder] Loi pour Aide au logement",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide au logement belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-menagere",
+      "title": "[Placeholder] Loi pour Aide ménagère",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide ménagère belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-mobilite",
+      "title": "[Placeholder] Loi pour Aide mobilité",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide mobilité belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-personnes-agees",
+      "title": "[Placeholder] Loi pour Aide aux personnes âgées",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide aux personnes âgées belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-sans-abri",
+      "title": "[Placeholder] Loi pour Aide sans-abri",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide sans-abri belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "aide-victimes",
+      "title": "[Placeholder] Loi pour Aide victimes",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Aide victimes belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "allocation-chauffage",
+      "title": "[Placeholder] Loi pour Allocation chauffage",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Allocation chauffage belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "allocation-handicapes",
+      "title": "[Placeholder] Loi pour Allocations handicapés",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Allocations handicapés belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "allocations-etudes",
+      "title": "[Placeholder] Loi pour Allocations d'études",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Allocations d'études belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "assurance-maladie",
+      "title": "[Placeholder] Loi pour Assurance maladie",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Assurance maladie belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "avantages-nature",
+      "title": "[Placeholder] Loi pour Avantages en nature",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Avantages en nature belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "banque-alimentaire",
+      "title": "[Placeholder] Loi pour Banque alimentaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Banque alimentaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "bonus-logement",
+      "title": "[Placeholder] Loi pour Bonus logement",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Bonus logement belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "bourse-etudes",
+      "title": "[Placeholder] Loi pour Bourse d'études",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Bourse d'études belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "budget-energetique",
+      "title": "[Placeholder] Loi pour Budget énergétique",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Budget énergétique belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "carte-medicale",
+      "title": "[Placeholder] Loi pour Carte médicale",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Carte médicale belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "centre-accueil",
+      "title": "[Placeholder] Loi pour Centre d'accueil",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Centre d'accueil belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "cheques-repas",
+      "title": "[Placeholder] Loi pour Chèques repas",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Chèques repas belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "conge-maladie",
+      "title": "[Placeholder] Loi pour Congé maladie",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Congé maladie belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "conge-maternite",
+      "title": "[Placeholder] Loi pour Congé maternité",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Congé maternité belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "conge-parental",
+      "title": "[Placeholder] Loi pour Congé parental",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Congé parental belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "contrat-duree-determinee",
+      "title": "[Placeholder] Loi pour Contrat durée déterminée",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Contrat durée déterminée belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "contrat-duree-indeterminee",
+      "title": "[Placeholder] Loi pour Contrat durée indéterminée",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Contrat durée indéterminée belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "contrat-travail",
+      "title": "[Placeholder] Loi pour Contrat de travail",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Contrat de travail belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "credit-impot-investissement-durable",
+      "title": "[Placeholder] Loi pour Crédit d'impôt investissement durable",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Crédit d'impôt investissement durable belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "credit-impot",
+      "title": "[Placeholder] Loi pour Crédit d'impôt",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Crédit d'impôt belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "credit-impot-service-local",
+      "title": "[Placeholder] Loi pour Crédit d'impôt service local",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Crédit d'impôt service local belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "credit-temps",
+      "title": "[Placeholder] Loi pour Crédit-temps",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Crédit-temps belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-dons",
+      "title": "[Placeholder] Loi pour Déduction dons",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction dons belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-emprunt-hypothecaire",
+      "title": "[Placeholder] Loi pour Déduction emprunt hypothécaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction emprunt hypothécaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-frais-garde",
+      "title": "[Placeholder] Loi pour Déduction frais de garde",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction frais de garde belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-habitation",
+      "title": "[Placeholder] Loi pour Déduction habitation",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction habitation belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-investissement",
+      "title": "[Placeholder] Loi pour Déduction investissement",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction investissement belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-isolation",
+      "title": "[Placeholder] Loi pour Déduction isolation",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction isolation belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "deduction-vehicule-electrique",
+      "title": "[Placeholder] Loi pour Déduction véhicule électrique",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Déduction véhicule électrique belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "demission",
+      "title": "[Placeholder] Loi pour Démission",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Démission belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "discrimination-emploi",
+      "title": "[Placeholder] Loi pour Discrimination emploi",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Discrimination emploi belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "droit-greve",
+      "title": "[Placeholder] Loi pour Droit de grève",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Droit de grève belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "droits-donation-reduits",
+      "title": "[Placeholder] Loi pour Droits donation réduits",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Droits donation réduits belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "eco-cheque",
+      "title": "[Placeholder] Loi pour Éco-chèque",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Éco-chèque belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "egalite-salariale",
+      "title": "[Placeholder] Loi pour Égalité salariale",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Égalité salariale belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "exoneration-plus-value",
+      "title": "[Placeholder] Loi pour Exonération plus-value",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Exonération plus-value belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "exoneration-precompte",
+      "title": "[Placeholder] Loi pour Exonération précompte",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Exonération précompte belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "exoneration-revenus-mobiliers",
+      "title": "[Placeholder] Loi pour Exonération revenus mobiliers",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Exonération revenus mobiliers belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "flexi-job",
+      "title": "[Placeholder] Loi pour Flexi-job",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Flexi-job belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "fonds-creances",
+      "title": "[Placeholder] Loi pour Fonds créances",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Fonds créances belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "fonds-securite-existence",
+      "title": "[Placeholder] Loi pour Fonds de sécurité d'existence",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Fonds de sécurité d'existence belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "formation-entreprise",
+      "title": "[Placeholder] Loi pour Formation entreprise",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Formation entreprise belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "formation-professionnelle",
+      "title": "[Placeholder] Loi pour Formation professionnelle",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Formation professionnelle belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "frais-professionnels",
+      "title": "[Placeholder] Loi pour Frais professionnels",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Frais professionnels belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "garantie-locative",
+      "title": "[Placeholder] Loi pour Garantie locative",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Garantie locative belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "garde-enfants",
+      "title": "[Placeholder] Loi pour Garde d'enfants",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Garde d'enfants belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "grapa",
+      "title": "[Placeholder] Loi pour Garantie de Revenus aux Personnes Âgées",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Garantie de Revenus aux Personnes Âgées belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "harcelement-travail",
+      "title": "[Placeholder] Loi pour Harcèlement au travail",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Harcèlement au travail belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "horaire-flexible",
+      "title": "[Placeholder] Loi pour Horaire flexible",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Horaire flexible belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "inscription-ecole",
+      "title": "[Placeholder] Loi pour Inscription école",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Inscription école belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "insertion-professionnelle",
+      "title": "[Placeholder] Loi pour Insertion professionnelle",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Insertion professionnelle belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "licenciement",
+      "title": "[Placeholder] Loi pour Licenciement",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Licenciement belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "logement-social",
+      "title": "[Placeholder] Loi pour Logement social",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Logement social belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "maladie-professionnelle",
+      "title": "[Placeholder] Loi pour Maladie professionnelle",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Maladie professionnelle belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "mediation-dettes",
+      "title": "[Placeholder] Loi pour Médiation dettes",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Médiation dettes belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "mediation-familiale",
+      "title": "[Placeholder] Loi pour Médiation familiale",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Médiation familiale belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "outplacement",
+      "title": "[Placeholder] Loi pour Outplacement",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Outplacement belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "pension-complementaire",
+      "title": "[Placeholder] Loi pour Pension complémentaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Pension complémentaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "pension-retraite",
+      "title": "[Placeholder] Loi pour Pensions de retraite",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Pensions de retraite belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "pension-survie",
+      "title": "[Placeholder] Loi pour Pensions de survie",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Pensions de survie belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "preavis",
+      "title": "[Placeholder] Loi pour Préavis",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Préavis belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "prime-naissance",
+      "title": "[Placeholder] Loi pour Prime de naissance",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Prime de naissance belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "prime-renovation",
+      "title": "[Placeholder] Loi pour Prime rénovation",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Prime rénovation belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "protection-enfance",
+      "title": "[Placeholder] Loi pour Protection enfance",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Protection enfance belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "protection-juridique",
+      "title": "[Placeholder] Loi pour Protection juridique",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Protection juridique belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "quotient-conjugal",
+      "title": "[Placeholder] Loi pour Quotient conjugal",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Quotient conjugal belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "reduction-epargne-pension",
+      "title": "[Placeholder] Loi pour Réduction épargne pension",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Réduction épargne pension belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "rente-alimentaire",
+      "title": "[Placeholder] Loi pour Rente alimentaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Rente alimentaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "repas-domicile",
+      "title": "[Placeholder] Loi pour Repas à domicile",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Repas à domicile belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "repas-scolaires-gratuits",
+      "title": "[Placeholder] Loi pour Repas scolaires gratuits",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Repas scolaires gratuits belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "representation-syndicale",
+      "title": "[Placeholder] Loi pour Représentation syndicale",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Représentation syndicale belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "restaurants-sociaux",
+      "title": "[Placeholder] Loi pour Restaurants sociaux",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Restaurants sociaux belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "revenu-cadastral-exoneration",
+      "title": "[Placeholder] Loi pour Revenu cadastral exonération",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Revenu cadastral exonération belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "service-public-emploi",
+      "title": "[Placeholder] Loi pour Service public emploi",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Service public emploi belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "soins-sante-mentale",
+      "title": "[Placeholder] Loi pour Soins santé mentale",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Soins santé mentale belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "stage",
+      "title": "[Placeholder] Loi pour Stage",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Stage belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "tarif-social-energie",
+      "title": "[Placeholder] Loi pour Tarif social énergie",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Tarif social énergie belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "tele-assistance",
+      "title": "[Placeholder] Loi pour Télé-assistance",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Télé-assistance belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "teletravail",
+      "title": "[Placeholder] Loi pour Télétravail",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Télétravail belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "temps-partiel",
+      "title": "[Placeholder] Loi pour Temps partiel",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Temps partiel belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "transport-scolaire",
+      "title": "[Placeholder] Loi pour Transport scolaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Transport scolaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "travail-etudiant",
+      "title": "[Placeholder] Loi pour Travail étudiant",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Travail étudiant belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "travail-interimaire",
+      "title": "[Placeholder] Loi pour Travail intérimaire",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "Travail intérimaire belgique ejustice.just.fgov.be"
+    },
+    {
+      "topicId": "tva-reduite",
+      "title": "[Placeholder] Loi pour TVA réduite",
+      "currentUrl": "https://www.ejustice.just.fgov.be",
+      "searchQuery": "TVA réduite belgique ejustice.just.fgov.be"
+    }
+  ]
+}

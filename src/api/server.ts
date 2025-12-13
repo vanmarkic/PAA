@@ -19,6 +19,7 @@ import { closeQueue } from '../queue/conversionQueue';
 import risRoutes from './routes/risRoutes';
 import authRoutes from './routes/authRoutes';
 import workflowRoutes from './routes/workflowRoutes';
+import eligibilityRoutes from './routes/eligibilityRoutes';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-in-production';
 const PORT = parseInt(process.env.PORT || '3000');
@@ -84,6 +85,7 @@ export async function createServer() {
         { name: 'ris', description: 'RIS (Revenu d\'Intégration Sociale) endpoints' },
         { name: 'agr', description: 'AGR (Allocation de Garantie de Revenus) endpoints' },
         { name: 'conversion', description: 'Legal text conversion endpoints' },
+        { name: 'eligibility', description: 'Generic eligibility endpoints (all benefits)' },
       ],
       components: {
         securitySchemes: {
@@ -118,6 +120,7 @@ export async function createServer() {
   await server.register(authRoutes, { prefix: '/api/auth' });
   await server.register(risRoutes, { prefix: '/api/ris' });
   await server.register(workflowRoutes, { prefix: '/api/workflows' });
+  await server.register(eligibilityRoutes, { prefix: '/api/eligibility' });
 
   // Error handler
   server.setErrorHandler((error, request, reply) => {

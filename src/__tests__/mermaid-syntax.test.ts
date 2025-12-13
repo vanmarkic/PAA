@@ -11,8 +11,8 @@ import * as path from 'path';
 describe('Mermaid Syntax Validation', () => {
   const projectRoot = path.resolve(__dirname, '../..');
   const markdownFiles = [
-    'ARCHITECTURE.md',
-    'docs/state-machines-visualization.md',
+    'docs/architecture/ARCHITECTURE.md',
+    'docs/visualization/state-machines-visualization.md',
     // 'docs/index.html', // Removed - file no longer exists (moved to Astro)
   ];
 
@@ -170,7 +170,7 @@ describe('Mermaid Syntax Validation', () => {
 
   describe('Mermaid Best Practices', () => {
     test('choice states should be properly declared', () => {
-      const filePath = path.join(projectRoot, 'ARCHITECTURE.md');
+      const filePath = path.join(projectRoot, 'docs/architecture/ARCHITECTURE.md');
       if (!fs.existsSync(filePath)) {
         return;
       }

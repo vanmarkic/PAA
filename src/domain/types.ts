@@ -213,3 +213,89 @@ export interface Ambiguity {
   recommendation: string;
   riskLevel: 'low' | 'medium' | 'high';
 }
+
+// Structured explanation for eligibility decisions
+export interface ExplanationStep {
+  /**
+   * Machine-readable code for this explanation step
+   * e.g. 'AGE_MIN_NOT_MET', 'INCOME_ABOVE_THRESHOLD'
+   */
+  code: string;
+
+  /**
+   * Human-readable explanation in plain language
+   */
+  message: string;
+
+  /**
+   * Optional legal references (URLs or identifiers)
+   */
+  legalRefs?: string[];
+
+  /**
+   * Optional additional metadata (region, article numbers, etc.)
+   */
+  metadata?: Record<string, any>;
+}
+
+// Structured next steps for the user or social worker
+export interface NextStep {
+  /**
+   * Short label for the step (UI-facing)
+   */
+  label: string;
+
+  /**
+   * Longer description or guidance
+   */
+  description?: string;
+
+  /**
+   * Optional URL (online form, documentation, CPAS portal, etc.)
+   */
+  url?: string;
+
+  /**
+   * Required documents for this step
+   */
+  requiredDocuments?: string[];
+
+  /**
+   * Suggested deadline or time window (e.g. '45 jours')
+   */
+  deadlineHint?: string;
+}
+
+// Generic request shape for eligibility checks across all benefits
+export interface EligibilityRequest {
+  benefitType: BenefitType;
+  /**
+   * Optional identifier of the person in the client system
+   * (user id, dossier id, etc.)
+   */
+  personId?: string;
+  /**
+   * Normalized facts used by the rules engine.
+   * Each benefit defines its own expected keys and types.
+   */
+  facts: Record<string, unknown>;
+}
+
+// Canonical response shape for eligibility checks
+// Extends EligibilityCheck to remain backwards compatible
+export interface EligibilityDecision extends EligibilityCheck {
+  /**
+   * Structured explanation steps (timeline of the reasoning)
+   */
+  explanationSteps?: ExplanationStep[];
+
+  /**
+   * Structured next steps for the user / social worker
+   */
+  structuredNextSteps?: NextStep[];
+
+  /**
+   * Raw engine result for debugging/traceability (not exposed to end-users)
+   */
+  rawResult?: any;
+}

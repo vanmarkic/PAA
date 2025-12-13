@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "schemaVersion": "1.0.0",
-  "lastUpdated": "2025-11-18T16:16:57.036Z",
+  "lastUpdated": "2025-11-18T16:47:22.207Z",
   "description": "Central registry for Belgian legal sources and topics",
   "laws": {
     "_comment": "All laws tracked in the system. Key = lawId (e.g., 'loi-2002-05-26')",
@@ -143,9 +143,9 @@
     },
     "placeholder-accident-travail": {
       "lawId": "placeholder-accident-travail",
-      "title": "[Placeholder] Loi pour Accident du travail",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi du 10 avril 1971 sur les accidents du travail",
+      "lawDate": "1971-04-10",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1971041001&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "accident-travail"
@@ -163,9 +163,9 @@
     },
     "placeholder-accompagnement-social": {
       "lawId": "placeholder-accompagnement-social",
-      "title": "[Placeholder] Loi pour Accompagnement social",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi organique du 8 juillet 1976 des centres publics d'action sociale",
+      "lawDate": "1976-07-08",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1976070801&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "accompagnement-social"
@@ -323,9 +323,9 @@
     },
     "placeholder-aide-sociale": {
       "lawId": "placeholder-aide-sociale",
-      "title": "[Placeholder] Loi pour Aide sociale CPAS",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi organique du 8 juillet 1976 des centres publics d'action sociale",
+      "lawDate": "1976-07-08",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1976070801&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "aide-sociale"
@@ -403,9 +403,9 @@
     },
     "placeholder-allocation-integration": {
       "lawId": "placeholder-allocation-integration",
-      "title": "[Placeholder] Loi pour Allocation d'intégration",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+      "lawDate": "2002-05-26",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2002052647&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "allocation-integration"
@@ -423,9 +423,9 @@
     },
     "placeholder-allocations-chomage": {
       "lawId": "placeholder-allocations-chomage",
-      "title": "[Placeholder] Loi pour Allocations de chômage",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi du 20 décembre 2001 concernant les allocations de chômage",
+      "lawDate": "2001-12-20",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=2001122001&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "allocations-chomage"
@@ -463,9 +463,9 @@
     },
     "placeholder-allocations-familiales": {
       "lawId": "placeholder-allocations-familiales",
-      "title": "[Placeholder] Loi pour Allocations familiales",
-      "lawDate": "2025-11-18",
-      "url": "https://www.ejustice.just.fgov.be",
+      "title": "Loi du 19 août 1930 concernant les allocations familiales",
+      "lawDate": "1930-08-19",
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1930081901&table_name=loi",
       "authority": "À déterminer",
       "topics": [
         "allocations-familiales"

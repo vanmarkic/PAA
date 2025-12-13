@@ -83,24 +83,32 @@ export function getBaseUrl(): string {
 }
 
 /**
+ * Build a URL path from base and path components.
+ * Exported for testing. Used internally by getUrl.
+ */
+export function buildUrlPath(basePath: string, path: string): string {
+  // Remove leading slash if present
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  // Ensure basePath ends with / for proper concatenation
+  const normalizedBase = basePath.endsWith('/') ? basePath : `${basePath}/`;
+  // Combine and remove duplicate slashes
+  const fullPath = `${normalizedBase}${cleanPath}`;
+  return fullPath.replace(/\/+/g, '/');
+}
+
+/**
  * Get properly formatted URL with base path for internal links
  * This ensures URLs work correctly on GitHub Pages with /PAA base path
  */
 export function getUrl(path: string): string {
-  // Remove leading slash if present
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  
   // In browser, use the current base path
   if (isBrowser()) {
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
     const base = document.querySelector('base')?.href || window.location.origin;
     return new URL(cleanPath, base).pathname;
   }
-  
+
   // In build/SSG, use import.meta.env.BASE_URL which includes the /PAA path in production
   const baseUrl = import.meta.env.BASE_URL || '/';
-  // Ensure baseUrl ends with / for proper concatenation
-  const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  // Combine and remove duplicate slashes
-  const fullPath = `${normalizedBase}${cleanPath}`;
-  return fullPath.replace(/\/+/g, '/');
+  return buildUrlPath(baseUrl, path);
 }

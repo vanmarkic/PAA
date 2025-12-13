@@ -46,6 +46,8 @@
     "db:migrate": "ts-node src/database/migrationService.ts",
     "db:populate-metadata": "ts-node scripts/db-populate-metadata.ts",
     "db:find-sources": "ts-node scripts/db-find-sources.ts",
+    "db:update-specific-urls": "ts-node scripts/db-update-specific-urls.ts",
+    "db:search-laws-interactive": "ts-node scripts/db-search-laws-interactive.ts",
     "scrape": "ts-node scripts/run-scraping.ts",
     "test": "jest",
     "test:watch": "jest --watch",
