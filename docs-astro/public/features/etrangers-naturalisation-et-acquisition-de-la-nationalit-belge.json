@@ -1,0 +1,592 @@
+{
+  "id": "etrangers-naturalisation-et-acquisition-de-la-nationalit-belge",
+  "name": "Naturalisation et acquisition de la nationalité belge",
+  "description": "En tant qu'étranger résidant en Belgique Je veux acquérir la nationalité belge Afin de devenir citoyen belge avec tous les droits",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les voies d'acquisition sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Naturalisation après 5 ans de résidence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside légalement depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai eu un séjour illimité les 5 dernières années"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 468 jours sur 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un diplôme belge du secondaire supérieur"
+        },
+        {
+          "keyword": "And",
+          "text": "que je parle français au niveau A2"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de condamnations pénales graves"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la naturalisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois déposer le dossier à la commune"
+        },
+        {
+          "keyword": "And",
+          "text": "payer 150€ de frais de dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir mon acte de naissance intégral"
+        },
+        {
+          "keyword": "And",
+          "text": "attendre la décision de la Chambre (12 mois)"
+        },
+        {
+          "keyword": "And",
+          "text": "si accepté, je deviens belge"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Déclaration de nationalité par intégration sociale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside légalement depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une carte B ou C"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai suivi un parcours d'intégration"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un certificat de langue A2"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai participé économiquement ou socialement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de faits personnels graves"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une déclaration de nationalité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je la dépose à l'officier d'état civil"
+        },
+        {
+          "keyword": "And",
+          "text": "le parquet a 4 mois pour s'opposer"
+        },
+        {
+          "keyword": "And",
+          "text": "si pas d'opposition, je deviens belge"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois un acte de nationalité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Nationalité après 10 ans de résidence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside légalement depuis 10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai toujours respecté mes obligations"
+        },
+        {
+          "keyword": "And",
+          "text": "que je connais une langue nationale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je participe à la vie de ma communauté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la nationalité"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont plus souples"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver ma participation sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de 4 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "c'est une procédure déclarative"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Nationalité par mariage avec un Belge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis marié avec un(e) Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes mariés depuis 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous vivons ensemble en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un titre de séjour de plus de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je parle une langue nationale (A2)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je prouve mon intégration sociale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la nationalité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver la vie commune effective"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir résidé ensemble minimum 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "le parquet vérifie le mariage"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure dure 4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Option de nationalité pour jeune majeur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 19 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis né en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes parents étrangers y résidaient légalement"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai toujours vécu en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence principale ici"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais la déclaration d'option"
+        },
+        {
+          "keyword": "Then",
+          "text": "c'est un droit entre 18 et 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois le faire avant mes 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "c'est automatique si conditions remplies"
+        },
+        {
+          "keyword": "And",
+          "text": "je deviens belge immédiatement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Nationalité pour apatride reconnu",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis reconnu apatride"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une carte B depuis 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Belgique depuis 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je parle une langue nationale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la nationalité"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai une procédure accélérée"
+        },
+        {
+          "keyword": "And",
+          "text": "les conditions sont allégées"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver mon intégration"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure dure 4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Refus pour condamnation pénale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je remplis les conditions de résidence"
+        },
+        {
+          "keyword": "And",
+          "text": "que je parle français niveau A2"
+        },
+        {
+          "keyword": "But",
+          "text": "que j'ai été condamné à 8 mois de prison"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'était il y a 3 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la nationalité"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande sera probablement refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif sera \"faits personnels graves\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois attendre 10 ans après la condamnation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Nationalité pour enfant né en Belgique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un enfant est né en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ses parents sont étrangers"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils résident légalement depuis 10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant a toujours vécu en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "l'enfant atteint 12 ans"
+        },
+        {
+          "keyword": "Then",
+          "text": "les parents peuvent demander pour lui"
+        },
+        {
+          "keyword": "And",
+          "text": "si accepté avant ses 18 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Perte de nationalité d'origine",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je deviens belge par naturalisation"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon pays n'accepte pas la double nationalité"
+        },
+        {
+          "keyword": "When",
+          "text": "j'acquiers la nationalité belge"
+        },
+        {
+          "keyword": "Then",
+          "text": "je perds automatiquement ma nationalité d'origine"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois en être informé avant"
+        },
+        {
+          "keyword": "And",
+          "text": "évaluer les conséquences"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas renoncer à la nationalité belge facilement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Preuve de participation économique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande la naturalisation"
+        },
+        {
+          "keyword": "And",
+          "text": "que je dois prouver ma participation économique"
+        },
+        {
+          "keyword": "When",
+          "text": "je constitue mon dossier"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux prouver:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Test de connaissance langue et société",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande la nationalité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je dois prouver mes connaissances"
+        },
+        {
+          "keyword": "When",
+          "text": "je passe les tests requis"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois avoir le niveau A2 en langue"
+        },
+        {
+          "keyword": "And",
+          "text": "connaître les droits et devoirs des citoyens"
+        },
+        {
+          "keyword": "And",
+          "text": "comprendre l'histoire et institutions belges"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir les certificats requis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Délais selon la procédure",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande la nationalité par <procedure>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon dossier est complet"
+        },
+        {
+          "keyword": "When",
+          "text": "ma demande est traitée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai devrait être <delai> mois"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "procedure",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "procedure": "naturalisation",
+                "delai": "12"
+              }
+            },
+            {
+              "values": {
+                "procedure": "déclaration 5 ans",
+                "delai": "4"
+              }
+            },
+            {
+              "values": {
+                "procedure": "déclaration 10 ans",
+                "delai": "4"
+              }
+            },
+            {
+              "values": {
+                "procedure": "mariage",
+                "delai": "4"
+              }
+            },
+            {
+              "values": {
+                "procedure": "option 18-22 ans",
+                "delai": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Recours après refus de nationalité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande de nationalité est refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste les motifs"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais un recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois m'adresser au tribunal de première instance"
+        },
+        {
+          "keyword": "And",
+          "text": "le faire dans les 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux contester les faits ou l'interprétation"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal statue dans les 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux faire appel de la décision"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

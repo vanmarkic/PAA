@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-impression-3d-et-risques-de-contrefa-on",
+  "name": "Impression 3D et risques de contrefaçon",
+  "description": "En tant que titulaire de droits ou utilisateur 3D Je veux gérer les aspects IP de l'impression 3D Afin d'éviter la contrefaçon et respecter les droits",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'impression 3D facilite la reproduction"
+      },
+      {
+        "text": "Et que les fichiers CAD peuvent violer des droits"
+      },
+      {
+        "text": "Et que la responsabilité est complexe"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Protection de designs pour impression 3D",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je crée des modèles 3D originaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que je les vends en ligne"
+        },
+        {
+          "keyword": "When",
+          "text": "je protège ma propriété intellectuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dépose les designs distinctifs"
+        },
+        {
+          "keyword": "And",
+          "text": "protège les fichiers STL par copyright"
+        },
+        {
+          "keyword": "And",
+          "text": "utilise des DRM ou watermarks"
+        },
+        {
+          "keyword": "And",
+          "text": "poursuis les copies non autorisées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Plateforme de partage et responsabilité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je gère une plateforme de fichiers 3D"
+        },
+        {
+          "keyword": "And",
+          "text": "que des utilisateurs uploadent des modèles"
+        },
+        {
+          "keyword": "When",
+          "text": "un modèle viole des droits IP"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'applique la procédure notice-and-takedown"
+        },
+        {
+          "keyword": "And",
+          "text": "retire rapidement les contenus signalés"
+        },
+        {
+          "keyword": "And",
+          "text": "éviter la responsabilité secondaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

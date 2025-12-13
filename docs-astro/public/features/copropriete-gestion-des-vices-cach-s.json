@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-des-vices-cach-s",
+  "name": "Gestion des Vices Cachés",
+  "description": "En tant que copropriété Je veux gérer les vices cachés Afin de protéger les intérêts collectifs",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un vice caché est découvert"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Vice caché affectant parties communes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une infiltration structurelle est découverte"
+        },
+        {
+          "keyword": "When",
+          "text": "le vice est constaté par expert"
+        },
+        {
+          "keyword": "Then",
+          "text": "les actions sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Vice affectant un lot privatif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire découvre un vice"
+        },
+        {
+          "keyword": "When",
+          "text": "il demande l'aide de la copropriété"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Action collective contre promoteur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que plusieurs vices affectent l'immeuble"
+        },
+        {
+          "keyword": "And",
+          "text": "que 5 copropriétaires sont concernés"
+        },
+        {
+          "keyword": "When",
+          "text": "une action collective est envisagée"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

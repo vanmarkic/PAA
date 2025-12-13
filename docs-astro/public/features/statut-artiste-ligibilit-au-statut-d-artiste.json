@@ -1,0 +1,508 @@
+{
+  "id": "statut-artiste-ligibilit-au-statut-d-artiste",
+  "name": "Éligibilité au Statut d'Artiste",
+  "description": "En tant qu'artiste ou travailleur culturel Je veux vérifier mon éligibilité au statut d'artiste Afin de bénéficier du régime spécifique de protection sociale",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les seuils pour le statut d'artiste 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Artiste professionnel éligible au statut complet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un artiste professionnel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 25 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques annuels sont de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 180 jours artistiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'autres revenus professionnels"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible au statut d'artiste complet"
+        },
+        {
+          "keyword": "And",
+          "text": "le type de statut devrait être \"artiste professionnel\""
+        },
+        {
+          "keyword": "And",
+          "text": "j'aurais droit au régime de sécurité sociale adapté"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Artiste débutant avec dérogation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un artiste débutant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques annuels sont de 8000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 110 jours artistiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est ma première demande"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible au statut d'artiste débutant"
+        },
+        {
+          "keyword": "And",
+          "text": "une dérogation devrait être appliquée pour les jours prestés"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"première demande - seuil réduit accepté\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Artiste avec revenus mixtes éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste et enseignant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 30 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques annuels sont de 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus d'enseignement sont de 8000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 160 jours au total"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible au statut mixte"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul devrait prendre en compte les revenus mixtes"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits sociaux devraient être adaptés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Technicien du spectacle éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis technicien son et lumière"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 28 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus techniques annuels sont de 22000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 175 jours techniques"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé pour 5 employeurs différents"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible au statut de technicien du spectacle"
+        },
+        {
+          "keyword": "And",
+          "text": "j'aurais droit au régime intermittent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Artiste plasticien avec ventes d'œuvres",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste plasticien"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes ventes d'œuvres rapportent 18000€ par an"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 30 jours d'exposition"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 50 jours de création attestés"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible au statut d'artiste plasticien"
+        },
+        {
+          "keyword": "And",
+          "text": "les jours d'exposition devraient compter double"
+        },
+        {
+          "keyword": "And",
+          "text": "mes jours totaux devraient être 110 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Musicien avec cachets insuffisants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis musicien"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 26 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes cachets annuels totalisent 1500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 45 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus artistiques insuffisants (minimum 2000€)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Artiste avec trop de revenus non-artistiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis comédien"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 29 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques sont de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus non-artistiques sont de 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 160 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus non-artistiques dépassent le plafond (10000€)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Artiste étranger avec permis de travail",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste étranger"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un permis de travail artiste valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques sont de 20000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 165 jours en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au statut d'artiste"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "des conditions spécifiques s'appliquent pour les étrangers"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul des jours prestés selon l'activité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <type_artiste>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai effectué <jours_activité> jours de <activité>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes jours prestés pour le statut"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes jours comptabilisés devraient être <jours_comptés>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_artiste",
+            "activité",
+            "jours_activité",
+            "jours_comptés"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_artiste": "musicien",
+                "activité": "concerts",
+                "jours_activité": "50",
+                "jours_comptés": "50"
+              }
+            },
+            {
+              "values": {
+                "type_artiste": "danseur",
+                "activité": "répétitions",
+                "jours_activité": "80",
+                "jours_comptés": "80"
+              }
+            },
+            {
+              "values": {
+                "type_artiste": "plasticien",
+                "activité": "expositions",
+                "jours_activité": "20",
+                "jours_comptés": "40"
+              }
+            },
+            {
+              "values": {
+                "type_artiste": "écrivain",
+                "activité": "résidences",
+                "jours_activité": "30",
+                "jours_comptés": "60"
+              }
+            },
+            {
+              "values": {
+                "type_artiste": "metteur en scène",
+                "activité": "créations",
+                "jours_activité": "40",
+                "jours_comptés": "80"
+              }
+            },
+            {
+              "values": {
+                "type_artiste": "photographe",
+                "activité": "reportages",
+                "jours_activité": "60",
+                "jours_comptés": "60"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Cumul avec allocations de chômage artistique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie d'allocations de chômage artistique"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes allocations mensuelles sont de 900€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je gagne 800€ par mois en cachets"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le statut d'artiste"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes droits cumulés"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux cumuler partiellement les revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "l'exonération devrait être de 130€"
+        },
+        {
+          "keyword": "And",
+          "text": "mes allocations ajustées devraient être calculées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Passage du statut amateur au professionnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'étais artiste amateur"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques dépassent maintenant 2000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 160 jours artistiques"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le statut professionnel"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois passer devant la Commission des Artistes"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir mes attestations de prestations"
+        },
+        {
+          "keyword": "And",
+          "text": "prouver le caractère professionnel de mon activité"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

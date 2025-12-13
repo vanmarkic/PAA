@@ -1,0 +1,442 @@
+{
+  "id": "recours-etat-recours-en-annulation-au-conseil-d-tat",
+  "name": "Recours en annulation au Conseil d'État",
+  "description": "En tant que citoyen ou personne morale Je veux introduire un recours en annulation contre un acte administratif Afin d'obtenir l'annulation d'une décision illégale",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le délai de recours est de 60 jours"
+      },
+      {
+        "text": "Et que le droit de timbre est de 200€"
+      },
+      {
+        "text": "Et que le Conseil d'État est compétent pour les actes administratifs"
+      },
+      {
+        "text": "Et que l'intérêt à agir doit être démontré"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Recours dans les délais avec intérêt direct",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision de refus de permis d'urbanisme"
+        },
+        {
+          "keyword": "And",
+          "text": "que la notification date du \"2024-01-15\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"2024-02-20\""
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis propriétaire du terrain concerné"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un intérêt direct et personnel"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "le recours devrait être admissible"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai restant devrait être de 25 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de procédure devraient être de 200€"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir demander la suspension en même temps"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Recours avec demande de suspension en extrême urgence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu un ordre de démolition"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'exécution est prévue dans 5 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que la démolition causerait un préjudice grave et irréparable"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les conditions d'extrême urgence"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais pouvoir introduire un recours en extrême urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être de 400€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audience devrait être fixée dans les 3 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois démontrer l'imminence du péril"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recours hors délai",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision défavorable"
+        },
+        {
+          "keyword": "And",
+          "text": "que la notification date du \"2024-01-01\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"2024-04-15\""
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "le recours ne devrait pas être admissible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"délai de recours dépassé (60 jours)\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais vérifier si un cas de force majeure s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Recours sans intérêt à agir",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une décision administrative a été prise"
+        },
+        {
+          "keyword": "And",
+          "text": "que cette décision ne me concerne pas directement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'intérêt personnel et actuel"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie l'admissibilité de mon recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "le recours ne devrait pas être admissible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"absence d'intérêt à agir\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais vérifier si une action collective est possible"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Association avec intérêt collectif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je représente une association environnementale"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos statuts prévoient la défense de l'environnement depuis plus de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une décision autorise un projet polluant"
+        },
+        {
+          "keyword": "And",
+          "text": "que ce projet affecte notre objet social"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie notre capacité à agir"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'association devrait avoir intérêt à agir"
+        },
+        {
+          "keyword": "And",
+          "text": "nous devrions fournir nos statuts publiés au Moniteur Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "nous devrions prouver notre activité effective"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Recours contre un règlement communal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un règlement communal a été adopté"
+        },
+        {
+          "keyword": "And",
+          "text": "que ce règlement impose des taxes illégales"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis contribuable de la commune"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis un recours en annulation"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai devrait être de 60 jours à partir de la publication"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois attaquer le règlement dans son ensemble"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander la suspension si urgence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Recours avec aide juridique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont inférieurs au seuil"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite contester une décision administrative"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas les moyens de payer les frais"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide juridique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais pouvoir bénéficier du pro deo"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de procédure pourraient être réduits ou supprimés"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir une attestation de revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Calcul des délais selon le type de notification",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision le <date_notification>"
+        },
+        {
+          "keyword": "And",
+          "text": "que la notification s'est faite par <mode>"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le <date_actuelle>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le délai de recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai devrait <etre_expire>"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait rester <jours_restants> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "date_notification",
+            "mode",
+            "date_actuelle",
+            "etre_expire",
+            "jours_restants"
+          ],
+          "rows": [
+            {
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "recommandé",
+                "date_actuelle": "2024-02-15",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "main propre",
+                "date_actuelle": "2024-02-15",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "values": {
+                "date_notification": "2024-01-01",
+                "mode": "publication",
+                "date_actuelle": "2024-03-15",
+                "etre_expire": "expirer",
+                "jours_restants": "0"
+              }
+            },
+            {
+              "values": {
+                "date_notification": "2024-01-15",
+                "mode": "recommandé",
+                "date_actuelle": "2024-03-10",
+                "etre_expire": "ne pas expirer",
+                "jours_restants": "5"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Moyens d'annulation à invoquer",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conteste une décision administrative"
+        },
+        {
+          "keyword": "When",
+          "text": "je rédige ma requête"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois invoquer au moins un des moyens suivants:"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque moyen doit être développé et étayé"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois citer les dispositions légales violées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Constitution du dossier administratif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un recours est introduit"
+        },
+        {
+          "keyword": "When",
+          "text": "l'administration est notifiée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle doit transmettre le dossier administratif dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "le dossier doit contenir toutes les pièces"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander des pièces manquantes"
+        },
+        {
+          "keyword": "And",
+          "text": "l'absence de transmission peut entraîner l'annulation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

@@ -1,0 +1,279 @@
+{
+  "id": "benefits-droit-l-int-gration-sociale-en-belgique",
+  "name": "Droit à l'intégration sociale en Belgique",
+  "description": "En tant que citoyen résidant en Belgique Je veux vérifier mon éligibilité au revenu d'intégration sociale Afin de bénéficier d'une aide financière si je remplis les conditions",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la loi du 26 mai 2002 définit les conditions d'accès au droit à l'intégration sociale"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Éligibilité basée sur la nationalité belge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis de nationalité belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence effective en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai atteint l'âge de la majorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dispose pas de ressources suffisantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne peux pas y prétendre"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne suis pas en mesure de me les procurer par mes efforts personnels ou par d'autres moyens"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à l'intégration sociale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Éligibilité pour citoyen de l'Union européenne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis citoyen de l'Union européenne"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence effective en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie d'un droit de séjour de plus de trois mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai atteint l'âge de la majorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dispose pas de ressources suffisantes"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à l'intégration sociale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Éligibilité pour étranger inscrit au registre de la population",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étranger inscrit au registre de la population"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence effective en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai atteint l'âge de la majorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dispose pas de ressources suffisantes"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à l'intégration sociale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Éligibilité pour réfugié reconnu",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis reconnu réfugié en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence effective en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai atteint l'âge de la majorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dispose pas de ressources suffisantes"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à l'intégration sociale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Éligibilité pour bénéficiaire de protection subsidiaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de la protection subsidiaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ma résidence effective en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai atteint l'âge de la majorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dispose pas de ressources suffisantes"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à l'intégration sociale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Condition de disposition au travail",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis éligible au droit à l'intégration sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis apte au travail"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois être disposé à travailler"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver ma disposition au travail"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Exemption de disposition au travail pour raisons de santé",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis éligible au droit à l'intégration sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "que des raisons de santé m'empêchent de travailler"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je suis exempté de la condition de disposition au travail"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Exemption de disposition au travail pour raisons d'équité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis éligible au droit à l'intégration sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "que des raisons d'équité justifient une exemption"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande de revenu d'intégration sociale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux être exempté de la condition de disposition au travail"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "specificationVersion": "1.0.0",
+    "legalBasis": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+    "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language",
+    "effectiveDate": "2024-01-01"
+  },
+  "generated": "2025-12-13T14:45:22.197Z",
+  "legalSources": {
+    "sources": [
+      {
+        "title": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
+        "authority": "Source légale"
+      }
+    ]
+  }
+}

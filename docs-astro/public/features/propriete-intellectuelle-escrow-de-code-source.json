@@ -1,0 +1,84 @@
+{
+  "id": "propriete-intellectuelle-escrow-de-code-source",
+  "name": "Escrow de code source",
+  "description": "En tant que licencié ou fournisseur de logiciel Je veux mettre en place un escrow Afin de sécuriser l'accès au code source",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'escrow protège les deux parties"
+      },
+      {
+        "text": "Et qu'un tiers de confiance intervient"
+      },
+      {
+        "text": "Et que les conditions de libération sont prédéfinies"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Mise en place d'escrow logiciel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je licencie un logiciel critique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux sécuriser la continuité"
+        },
+        {
+          "keyword": "When",
+          "text": "nous établissons un contrat d'escrow"
+        },
+        {
+          "keyword": "Then",
+          "text": "le code source est déposé chez un tiers"
+        },
+        {
+          "keyword": "And",
+          "text": "mis à jour régulièrement"
+        },
+        {
+          "keyword": "And",
+          "text": "libéré si faillite ou abandon du support"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Déclenchement de libération d'escrow",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le fournisseur fait faillite"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un contrat d'escrow"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la libération"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'agent d'escrow vérifie les conditions"
+        },
+        {
+          "keyword": "And",
+          "text": "libère le code source dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

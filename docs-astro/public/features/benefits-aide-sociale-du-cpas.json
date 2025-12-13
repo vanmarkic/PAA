@@ -1,0 +1,575 @@
+{
+  "id": "benefits-aide-sociale-du-cpas",
+  "name": "Aide Sociale du CPAS",
+  "description": "En tant que personne en difficulté financière Je veux savoir si j'ai droit à l'aide sociale du CPAS Afin de subvenir à mes besoins essentiels",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'aide sociale est régie par:"
+      },
+      {
+        "text": "Et que les montants de référence 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Personne sans titre de séjour - aide médicale urgente uniquement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne sans papiers"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de titre de séjour valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin de soins médicaux urgents"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible uniquement à l'aide médicale urgente"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS prend en charge les frais médicaux urgents"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas recevoir d'aide financière régulière"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"aide médicale urgente pour personnes sans titre de séjour\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mineur non accompagné - aide sociale spécifique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis mineur non accompagné"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 16 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de représentant légal en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside dans un centre d'accueil"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à l'aide sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "non au RIS car \"mineurs exclus du RIS\""
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide couvre \"hébergement, nourriture, vêtements, frais scolaires\""
+        },
+        {
+          "keyword": "And",
+          "text": "un tuteur est désigné par le service des tutelles"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Étudiant étranger hors UE - aide sociale limitée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étudiant étranger hors UE"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un visa étudiant valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes ressources sont insuffisantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai signé un engagement de prise en charge"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir une aide sociale très limitée"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS vérifie l'engagement de prise en charge"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide est exceptionnelle et temporaire"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"étudiant avec garant défaillant\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne en attente d'allocations de chômage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis demandeur d'emploi"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 28 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai introduit une demande de chômage il y a 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucun revenu actuellement"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à une avance sur allocations"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant est équivalent au RIS catégorie isolé (1070.49€)"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide est récupérable sur mes futures allocations"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS contacte l'ONEM pour accélérer le traitement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Famille avec enfants - aide en nature",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 enfants de 8 et 12 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie du RIS famille monoparentale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des difficultés supplémentaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une aide complémentaire au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux recevoir une aide en nature comprenant:"
+        },
+        {
+          "keyword": "And",
+          "text": "cette aide complète mon RIS"
+        },
+        {
+          "keyword": "And",
+          "text": "elle est réévaluée tous les 3 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Personne âgée avec GRAPA insuffisante",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 72 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie de la GRAPA (1549.42€)"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon loyer est de 900€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des frais médicaux importants"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à une aide sociale complémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide peut couvrir:"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS fait une enquête sociale complète"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide est accordée après analyse du budget"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Européen en séjour de moins de 3 mois",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis citoyen européen"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 30 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Belgique depuis 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de ressources suffisantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'emploi"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible au RIS"
+        },
+        {
+          "keyword": "But",
+          "text": "je peux recevoir une aide sociale d'urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "cette aide est limitée dans le temps"
+        },
+        {
+          "keyword": "And",
+          "text": "elle ne peut pas créer une charge déraisonnable"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS peut décider un retour volontaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Personne avec handicap - aide sociale spécifique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne avec handicap"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 45 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie d'allocations handicap (1200€)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des frais médicaux importants liés au handicap"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à une aide sociale complémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide peut inclure:"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS collabore avec l'AVIQ/PHARE"
+        },
+        {
+          "keyword": "And",
+          "text": "un projet individualisé est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Aide sociale équivalente au RIS",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas droit au RIS car <raison_exclusion>"
+        },
+        {
+          "keyword": "But",
+          "text": "que je suis dans le besoin"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide sociale au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir une aide équivalente de <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "age",
+            "raison_exclusion",
+            "montant"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "personne isolée sans papiers",
+                "age": "35",
+                "raison_exclusion": "pas de titre de séjour",
+                "montant": "0"
+              }
+            },
+            {
+              "values": {
+                "situation": "mineur non accompagné",
+                "age": "17",
+                "raison_exclusion": "moins de 18 ans",
+                "montant": "1070.49"
+              }
+            },
+            {
+              "values": {
+                "situation": "européen < 3 mois séjour",
+                "age": "28",
+                "raison_exclusion": "séjour inférieur à 3 mois",
+                "montant": "variable"
+              }
+            },
+            {
+              "values": {
+                "situation": "demandeur d'asile",
+                "age": "30",
+                "raison_exclusion": "procédure d'asile en cours",
+                "montant": "1070.49"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Procédure de demande d'aide sociale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux demander l'aide sociale"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Obligations du bénéficiaire d'aide sociale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de l'aide sociale du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter les obligations suivantes:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Récupération de l'aide sociale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai bénéficié de l'aide sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma situation financière s'est améliorée"
+        },
+        {
+          "keyword": "When",
+          "text": "le CPAS examine la récupération"
+        },
+        {
+          "keyword": "Then",
+          "text": "la récupération est possible dans les cas suivants:"
+        },
+        {
+          "keyword": "But",
+          "text": "pas de récupération si \"aide minimale de survie\""
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS doit motiver sa décision de récupération"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Aide sociale d'urgence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis dans une situation d'urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucune ressource immédiate"
+        },
+        {
+          "keyword": "And",
+          "text": "que je risque d'être à la rue ce soir"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux recevoir une aide d'urgence immédiate comprenant:"
+        },
+        {
+          "keyword": "And",
+          "text": "une enquête sociale complète suit dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide d'urgence est limitée à maximum 1 mois"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.190Z"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-transition-nerg-tique",
+  "name": "Transition Énergétique",
+  "description": "En tant que copropriété Je veux améliorer la performance énergétique Afin de réduire les coûts et l'empreinte carbone",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la transition énergétique est prioritaire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation panneaux solaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un projet solaire de 50000€ est proposé"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote le projet"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majorité requise est 2/3"
+        },
+        {
+          "keyword": "And",
+          "text": "les subsides disponibles sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Audit énergétique obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'immeuble date de 1975"
+        },
+        {
+          "keyword": "And",
+          "text": "que le PEB est classe F"
+        },
+        {
+          "keyword": "When",
+          "text": "l'audit est réalisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il identifie:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Bornes recharge véhicules électriques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 copropriétaires ont des VE"
+        },
+        {
+          "keyword": "And",
+          "text": "demandent l'installation de bornes"
+        },
+        {
+          "keyword": "When",
+          "text": "le projet est étudié"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

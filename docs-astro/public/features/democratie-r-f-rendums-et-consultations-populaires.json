@@ -1,0 +1,495 @@
+{
+  "id": "democratie-r-f-rendums-et-consultations-populaires",
+  "name": "Référendums et consultations populaires",
+  "description": "En tant que citoyen Je veux participer aux référendums et consultations Afin d'exprimer directement mon opinion sur des questions importantes",
+  "category": "democratie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les référendums sont organisés au niveau:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Organisation d'une consultation communale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la commune de Liège veut consulter ses citoyens"
+        },
+        {
+          "keyword": "And",
+          "text": "que le sujet est \"Piétonnisation du centre-ville\""
+        },
+        {
+          "keyword": "And",
+          "text": "que le conseil communal a approuvé la consultation"
+        },
+        {
+          "keyword": "When",
+          "text": "la consultation est organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "que la question est formulée de manière neutre"
+        },
+        {
+          "keyword": "And",
+          "text": "que la période de vote est de 30 jours"
+        },
+        {
+          "keyword": "Then",
+          "text": "tous les citoyens inscrits devraient être informés"
+        },
+        {
+          "keyword": "And",
+          "text": "les modalités de vote devraient inclure:"
+        },
+        {
+          "keyword": "And",
+          "text": "le quorum minimum devrait être 10% des inscrits"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Vote lors d'un référendum constitutionnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un référendum constitutionnel est organisé"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis un citoyen belge inscrit"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu ma convocation"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au bureau de vote"
+        },
+        {
+          "keyword": "And",
+          "text": "que je présente ma carte d'identité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois mon bulletin de vote"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais pouvoir voter OUI ou NON"
+        },
+        {
+          "keyword": "And",
+          "text": "mon vote devrait être secret"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir un justificatif de participation"
+        },
+        {
+          "keyword": "And",
+          "text": "le vote est obligatoire avec amende en cas d'absence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Dépouillement et validation des résultats",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une consultation populaire s'est terminée"
+        },
+        {
+          "keyword": "And",
+          "text": "que le dépouillement commence"
+        },
+        {
+          "keyword": "And",
+          "text": "que les résultats sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "que le nombre d'inscrits est 85000"
+        },
+        {
+          "keyword": "When",
+          "text": "les résultats sont validés"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux de participation devrait être 25.1%"
+        },
+        {
+          "keyword": "And",
+          "text": "le quorum de 10% devrait être atteint"
+        },
+        {
+          "keyword": "And",
+          "text": "le résultat devrait être \"OUI à 60.1%\""
+        },
+        {
+          "keyword": "And",
+          "text": "les résultats devraient être publiés sous 3 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Consultation populaire échouant au quorum",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une consultation régionale est organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "que le quorum minimum est de 30%"
+        },
+        {
+          "keyword": "And",
+          "text": "que seulement 22% des électeurs ont participé"
+        },
+        {
+          "keyword": "When",
+          "text": "les résultats sont comptabilisés"
+        },
+        {
+          "keyword": "Then",
+          "text": "la consultation devrait être déclarée \"non valide\""
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"quorum de participation non atteint\""
+        },
+        {
+          "keyword": "And",
+          "text": "les autorités peuvent décider de réorganiser"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Initiative citoyenne déclenchant un référendum",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une initiative citoyenne a collecté 50000 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela représente 15% des électeurs de la région"
+        },
+        {
+          "keyword": "And",
+          "text": "que le seuil légal de 10% est dépassé"
+        },
+        {
+          "keyword": "When",
+          "text": "l'initiative est validée par les autorités"
+        },
+        {
+          "keyword": "Then",
+          "text": "un référendum devrait être organisé dans les 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "la question devrait reprendre la formulation de l'initiative"
+        },
+        {
+          "keyword": "And",
+          "text": "une campagne d'information neutre devrait être menée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Campagne référendaire avec comités",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un référendum est prévu dans 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que des comités de campagne sont formés"
+        },
+        {
+          "keyword": "When",
+          "text": "je crée un comité \"Pour le OUI\""
+        },
+        {
+          "keyword": "And",
+          "text": "que j'enregistre le comité auprès des autorités"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon comité devrait respecter:"
+        },
+        {
+          "keyword": "And",
+          "text": "toutes les dépenses doivent être déclarées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Vote électronique lors d'une consultation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une consultation permet le vote électronique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai activé ma eID pour le vote en ligne"
+        },
+        {
+          "keyword": "And",
+          "text": "que la période de vote est ouverte"
+        },
+        {
+          "keyword": "When",
+          "text": "je me connecte à la plateforme de vote"
+        },
+        {
+          "keyword": "And",
+          "text": "que je m'authentifie avec ma eID"
+        },
+        {
+          "keyword": "And",
+          "text": "que je soumets mon vote"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir un accusé de réception"
+        },
+        {
+          "keyword": "And",
+          "text": "mon vote devrait être anonymisé"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne devrais pas pouvoir voter à nouveau"
+        },
+        {
+          "keyword": "And",
+          "text": "un code de vérification devrait m'être fourni"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Contestation des résultats d'un référendum",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un référendum s'est tenu"
+        },
+        {
+          "keyword": "And",
+          "text": "que les résultats montrent \"OUI à 50.8%\""
+        },
+        {
+          "keyword": "And",
+          "text": "que des irrégularités sont suspectées"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose un recours dans les 40 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis des preuves d'irrégularités"
+        },
+        {
+          "keyword": "Then",
+          "text": "le Conseil d'État devrait examiner le recours"
+        },
+        {
+          "keyword": "And",
+          "text": "une enquête devrait être menée"
+        },
+        {
+          "keyword": "And",
+          "text": "si les irrégularités sont confirmées:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Participation selon le type de consultation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une consultation de type <type> est organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis un <statut_citoyen>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon droit de participation"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon éligibilité devrait être \"<eligible>\""
+        },
+        {
+          "keyword": "And",
+          "text": "le vote devrait être \"<obligation>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "statut_citoyen",
+            "age",
+            "eligible",
+            "obligation"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type": "référendum",
+                "statut_citoyen": "citoyen belge",
+                "age": "18",
+                "eligible": "oui",
+                "obligation": "obligatoire"
+              }
+            },
+            {
+              "values": {
+                "type": "référendum",
+                "statut_citoyen": "citoyen belge",
+                "age": "75",
+                "eligible": "oui",
+                "obligation": "facultatif"
+              }
+            },
+            {
+              "values": {
+                "type": "référendum",
+                "statut_citoyen": "citoyen EU",
+                "age": "25",
+                "eligible": "non",
+                "obligation": "-"
+              }
+            },
+            {
+              "values": {
+                "type": "consultation",
+                "statut_citoyen": "citoyen belge",
+                "age": "18",
+                "eligible": "oui",
+                "obligation": "facultatif"
+              }
+            },
+            {
+              "values": {
+                "type": "consultation",
+                "statut_citoyen": "résident local",
+                "age": "21",
+                "eligible": "oui",
+                "obligation": "facultatif"
+              }
+            },
+            {
+              "values": {
+                "type": "consultation",
+                "statut_citoyen": "citoyen belge",
+                "age": "16",
+                "eligible": "non",
+                "obligation": "-"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Budget participatif communal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la commune alloue 100.000€ au budget participatif"
+        },
+        {
+          "keyword": "And",
+          "text": "que les citoyens peuvent proposer des projets"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai soumis un projet \"Aire de jeux inclusive\""
+        },
+        {
+          "keyword": "When",
+          "text": "la phase de vote commence"
+        },
+        {
+          "keyword": "And",
+          "text": "que chaque citoyen a 3 votes à distribuer"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon projet reçoit 850 votes"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il arrive en 2ème position"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon projet devrait être retenu pour financement"
+        },
+        {
+          "keyword": "And",
+          "text": "le budget alloué devrait être proportionnel aux votes"
+        },
+        {
+          "keyword": "And",
+          "text": "la mise en œuvre devrait commencer dans l'année"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

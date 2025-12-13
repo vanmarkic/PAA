@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-assurance-de-l-immeuble",
+  "name": "Assurance de l'Immeuble",
+  "description": "En tant que syndic Je veux gérer les assurances de la copropriété Afin de protéger le patrimoine commun",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'assurance immeuble est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Souscription assurance globale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'immeuble vaut 3 millions d'euros"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il compte 30 lots"
+        },
+        {
+          "keyword": "When",
+          "text": "je souscris l'assurance globale"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle doit couvrir:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Déclaration de sinistre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un dégât des eaux survient"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic est informé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Répartition franchise après sinistre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un sinistre génère 1000€ de franchise"
+        },
+        {
+          "keyword": "And",
+          "text": "que le responsable est identifié"
+        },
+        {
+          "keyword": "When",
+          "text": "la franchise est payée"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

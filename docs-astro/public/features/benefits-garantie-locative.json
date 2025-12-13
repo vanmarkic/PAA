@@ -1,586 +1,503 @@
 {
   "id": "benefits-garantie-locative",
   "name": "Garantie Locative",
-  "description": "  En tant que locataire avec des difficultés financières\n  Je veux obtenir de l'aide pour constituer ma garantie locative\n  Afin de pouvoir accéder à un logement décent",
+  "description": "En tant que locataire avec des difficultés financières Je veux obtenir de l'aide pour constituer ma garantie locative Afin de pouvoir accéder à un logement décent",
   "category": "benefits",
   "tags": [],
   "background": {
-    "name": "",
-    "description": "",
     "steps": [
       {
-        "keyword": "Étant donné que",
-        "text": "les montants maximums de garantie locative 2024 sont:",
-        "dataTable": {
-          "headers": [
-            "Région",
-            "Type constitution",
-            "Montant maximum",
-            "Depuis"
-          ],
-          "rows": [
-            {
-              "Région": "Bruxelles-Capitale",
-              "Type constitution": "Tous types",
-              "Montant maximum": "2 mois de loyer",
-              "Depuis": "Nov 2024"
-            },
-            {
-              "Région": "Wallonie",
-              "Type constitution": "Compte bloqué",
-              "Montant maximum": "2 mois de loyer",
-              "Depuis": "En vigueur"
-            },
-            {
-              "Région": "Wallonie",
-              "Type constitution": "Garantie bancaire",
-              "Montant maximum": "3 mois de loyer",
-              "Depuis": "En vigueur"
-            },
-            {
-              "Région": "Wallonie",
-              "Type constitution": "Via CPAS",
-              "Montant maximum": "3 mois de loyer",
-              "Depuis": "En vigueur"
-            },
-            {
-              "Région": "Flandres",
-              "Type constitution": "Tous types",
-              "Montant maximum": "3 mois de loyer max",
-              "Depuis": "En vigueur"
-            }
-          ]
-        }
+        "text": "Étant donné que les montants maximums de garantie locative 2024 sont:"
       },
       {
-        "keyword": "Et que",
-        "text": "les types d'intervention CPAS sont:",
-        "dataTable": {
-          "headers": [
-            "Type intervention",
-            "Description",
-            "Montant max"
-          ],
-          "rows": [
-            {
-              "Type intervention": "Avance directe",
-              "Description": "CPAS place l'argent sur compte bloqué",
-              "Montant max": "2 mois loyer"
-            },
-            {
-              "Type intervention": "Garantie bancaire",
-              "Description": "Banque s'engage via CPAS",
-              "Montant max": "3 mois loyer"
-            },
-            {
-              "Type intervention": "Prêt sans intérêt",
-              "Description": "CPAS prête avec plan de remboursement",
-              "Montant max": "2-3 mois loyer"
-            },
-            {
-              "Type intervention": "Don",
-              "Description": "CPAS offre la garantie (cas exceptionnels)",
-              "Montant max": "Variable"
-            }
-          ]
-        }
+        "text": "Et que les types d'intervention CPAS sont:"
       }
     ]
   },
   "scenarios": [
     {
-      "id": "55595ad0-b034-4607-aff1-6fe65254dd63",
+      "id": "scenario-1",
       "name": "Personne RIS demandant aide CPAS pour garantie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je bénéficie du RIS à 1070.49€/mois"
+          "keyword": "Given",
+          "text": "que je bénéficie du RIS à 1070.49€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai trouvé un logement à 600€/mois"
+          "keyword": "And",
+          "text": "que j'ai trouvé un logement à 600€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie demandée est 2 mois (1,200€)"
+          "keyword": "And",
+          "text": "que la garantie demandée est 2 mois (1,200€)"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai aucune épargne"
+          "keyword": "And",
+          "text": "que je n'ai aucune épargne"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside à Bruxelles"
+          "keyword": "And",
+          "text": "que je réside à Bruxelles"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande l'aide du CPAS pour la garantie"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible à l'aide"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le CPAS peut avancer les 1,200€"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'argent est placé sur un compte bloqué à mon nom"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je rembourse progressivement selon mes capacités"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le plan de remboursement est adapté à mes revenus"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "e7f215b8-2379-4854-9116-875b03c2f26a",
+      "id": "scenario-2",
       "name": "Famille avec garantie bancaire via CPAS",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "nous sommes une famille de 4 personnes"
+          "keyword": "Given",
+          "text": "que nous sommes une famille de 4 personnes"
         },
         {
-          "keyword": "Et que",
-          "text": "nos revenus mensuels sont de 2,000€"
+          "keyword": "And",
+          "text": "que nos revenus mensuels sont de 2,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "le loyer du nouveau logement est 900€"
+          "keyword": "And",
+          "text": "que le loyer du nouveau logement est 900€"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie demandée est 2,700€ (3 mois)"
+          "keyword": "And",
+          "text": "que la garantie demandée est 2,700€ (3 mois)"
         },
         {
-          "keyword": "Et que",
-          "text": "nous résidons en Wallonie"
+          "keyword": "And",
+          "text": "que nous résidons en Wallonie"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "nous demandons une garantie bancaire via le CPAS"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "le CPAS évalue notre situation financière"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "peut se porter garant auprès de la banque"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la banque émet la garantie au nom du CPAS"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "nous remboursons le CPAS progressivement"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "aucun intérêt n'est appliqué"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "8482031b-978d-4ab3-8398-843754f0e50c",
+      "id": "scenario-3",
       "name": "Jeune sortant d'institution avec aide exceptionnelle",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai 19 ans"
+          "keyword": "Given",
+          "text": "que j'ai 19 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je sors d'une institution d'aide à la jeunesse"
+          "keyword": "And",
+          "text": "que je sors d'une institution d'aide à la jeunesse"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai un contrat de travail à 1,400€/mois"
+          "keyword": "And",
+          "text": "que j'ai un contrat de travail à 1,400€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai trouvé un studio à 500€/mois"
+          "keyword": "And",
+          "text": "que j'ai trouvé un studio à 500€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai aucune épargne ni famille"
+          "keyword": "And",
+          "text": "que je n'ai aucune épargne ni famille"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande l'aide du CPAS"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "ma situation est considérée comme prioritaire"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le CPAS peut octroyer un don partiel ou total"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la garantie de 1,000€ peut être offerte"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "un accompagnement social est proposé"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "un suivi budgétaire est mis en place"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "052356cc-d761-4182-be06-05e6bf7f949f",
+      "id": "scenario-4",
       "name": "Personne surendettée en médiation",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis en médiation de dettes"
+          "keyword": "Given",
+          "text": "que je suis en médiation de dettes"
         },
         {
-          "keyword": "Et que",
-          "text": "mon budget est géré par un médiateur"
+          "keyword": "And",
+          "text": "que mon budget est géré par un médiateur"
         },
         {
-          "keyword": "Et que",
-          "text": "je dois déménager suite à une expulsion"
+          "keyword": "And",
+          "text": "que je dois déménager suite à une expulsion"
         },
         {
-          "keyword": "Et que",
-          "text": "le nouveau loyer est 650€/mois"
+          "keyword": "And",
+          "text": "que le nouveau loyer est 650€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie demandée est 1,300€"
+          "keyword": "And",
+          "text": "que la garantie demandée est 1,300€"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "le médiateur demande l'aide du CPAS"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "le CPAS examine avec le médiateur"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "peut accorder un prêt sans intérêt"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le remboursement est intégré au plan de médiation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "les mensualités sont adaptées (ex: 50€/mois)"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la durée peut s'étendre sur 2-3 ans"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "cda9d793-57d5-4cb9-8202-c9190e0baa8c",
+      "id": "scenario-5",
       "name": "Constitution progressive de garantie locative",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis locataire à Bruxelles"
+          "keyword": "Given",
+          "text": "que je suis locataire à Bruxelles"
         },
         {
-          "keyword": "Et que",
-          "text": "mon loyer est de 700€/mois"
+          "keyword": "And",
+          "text": "que mon loyer est de 700€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai que 500€ d'économies"
+          "keyword": "And",
+          "text": "que je n'ai que 500€ d'économies"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie requise est 1,400€ (2 mois)"
+          "keyword": "And",
+          "text": "que la garantie requise est 1,400€ (2 mois)"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je négocie avec le propriétaire"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je peux proposer une garantie progressive"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "verser 500€ immédiatement"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "compléter par versements de 150€/mois sur 6 mois"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le CPAS peut garantir les versements futurs"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "un accord écrit est obligatoire"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "b323ec10-5c69-4592-a045-d111eefab1e0",
+      "id": "scenario-6",
       "name": "Refus d'aide CPAS pour revenus suffisants",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai un salaire de 2,500€/mois"
+          "keyword": "Given",
+          "text": "que j'ai un salaire de 2,500€/mois"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 5,000€ d'épargne"
+          "keyword": "And",
+          "text": "que j'ai 5,000€ d'épargne"
         },
         {
-          "keyword": "Et que",
-          "text": "je demande l'aide pour une garantie de 1,800€"
+          "keyword": "And",
+          "text": "que je demande l'aide pour une garantie de 1,800€"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai pas de charges exceptionnelles"
+          "keyword": "And",
+          "text": "que je n'ai pas de charges exceptionnelles"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande l'aide du CPAS"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "ma demande devrait être refusée"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif est \"ressources suffisantes disponibles\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je suis orienté vers une solution bancaire classique"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux faire appel de la décision"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "4dfaa6d6-7c51-49f1-aca9-09ab17d9aeea",
+      "id": "scenario-7",
       "name": "Garantie via Fonds du Logement régional",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je réside en Wallonie"
+          "keyword": "Given",
+          "text": "que je réside en Wallonie"
         },
         {
-          "keyword": "Et que",
-          "text": "mes revenus sont modestes mais stables"
+          "keyword": "And",
+          "text": "que mes revenus sont modestes mais stables"
         },
         {
-          "keyword": "Et que",
-          "text": "je ne suis pas éligible à l'aide CPAS"
+          "keyword": "And",
+          "text": "que je ne suis pas éligible à l'aide CPAS"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai besoin d'une garantie de 1,500€"
+          "keyword": "And",
+          "text": "que j'ai besoin d'une garantie de 1,500€"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je m'adresse au Fonds du Logement"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je peux obtenir un prêt à taux réduit"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le taux est de 0% à 2% selon mes revenus"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le remboursement s'étale sur 24-36 mois"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "les conditions sont plus souples qu'une banque"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'accord du propriétaire est requis"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "5dc7fbd4-9ce0-4d62-94a6-688babd66869",
+      "id": "scenario-8",
       "name": "Changement de logement avec récupération garantie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai une garantie CPAS sur mon logement actuel"
+          "keyword": "Given",
+          "text": "que j'ai une garantie CPAS sur mon logement actuel"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie est de 1,200€ sur compte bloqué"
+          "keyword": "And",
+          "text": "que la garantie est de 1,200€ sur compte bloqué"
         },
         {
-          "keyword": "Et que",
-          "text": "je dois déménager pour un nouveau logement"
+          "keyword": "And",
+          "text": "que je dois déménager pour un nouveau logement"
         },
         {
-          "keyword": "Et que",
-          "text": "la nouvelle garantie requise est 1,400€"
+          "keyword": "And",
+          "text": "que la nouvelle garantie requise est 1,400€"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande le transfert de garantie"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "le CPAS peut faciliter la transition"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "avancer la différence de 200€"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "coordonner avec l'ancien et nouveau propriétaire"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "s'assurer de la libération de l'ancienne garantie"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "éviter une double garantie temporaire"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "82755677-4919-4dd4-ae9c-13d2bf0d63a3",
+      "id": "scenario-9",
       "name": "Garantie pour logement social ou AIS",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'accède à un logement social"
+          "keyword": "Given",
+          "text": "que j'accède à un logement social"
         },
         {
-          "keyword": "Et que",
-          "text": "le loyer social est de 350€/mois"
+          "keyword": "And",
+          "text": "que le loyer social est de 350€/mois"
         },
         {
-          "keyword": "Et qu'",
-          "text": "une garantie de 700€ est demandée"
+          "keyword": "And",
+          "text": "qu'une garantie de 700€ est demandée"
         },
         {
-          "keyword": "Et que",
-          "text": "je bénéficie du RIS"
+          "keyword": "And",
+          "text": "que je bénéficie du RIS"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande l'aide pour la garantie"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "le CPAS a une procédure simplifiée"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la garantie peut être constituée progressivement"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "les premiers mois peuvent être déduits du RIS"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "un maximum de 100€/mois est prélevé"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la société de logement accepte cet arrangement"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "7773d217-737b-44f0-8dac-e511448f95ad",
+      "id": "scenario-10",
       "name": "Aide CPAS selon situation et montants",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis <situation>"
+          "keyword": "Given",
+          "text": "que je suis <situation>"
         },
         {
-          "keyword": "Et que",
-          "text": "mes revenus mensuels sont <revenus>€"
+          "keyword": "And",
+          "text": "que mes revenus mensuels sont <revenus>€"
         },
         {
-          "keyword": "Et que",
-          "text": "le loyer est de <loyer>€"
+          "keyword": "And",
+          "text": "que le loyer est de <loyer>€"
         },
         {
-          "keyword": "Et que",
-          "text": "la garantie demandée est <garantie>€"
+          "keyword": "And",
+          "text": "que la garantie demandée est <garantie>€"
         },
         {
-          "keyword": "Et que",
-          "text": "mon épargne est <épargne>€"
+          "keyword": "And",
+          "text": "que mon épargne est <épargne>€"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande l'aide du CPAS"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "l'éligibilité est <éligibilité>"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le type d'aide proposé est <type_aide>"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le montant accordé est <montant>€"
         }
       ],
@@ -600,7 +517,6 @@
           ],
           "rows": [
             {
-              "name": "ca363c7e-dfe8-4c94-a599-6ca06e2f449f",
               "values": {
                 "situation": "bénéficiaire RIS",
                 "revenus": "1070",
@@ -613,7 +529,6 @@
               }
             },
             {
-              "name": "63222439-4cee-433e-936e-b0d7beb1d8ba",
               "values": {
                 "situation": "travailleur pauvre",
                 "revenus": "1400",
@@ -626,7 +541,6 @@
               }
             },
             {
-              "name": "c74f9c9f-9a78-41ca-9a5a-402a33f0b89a",
               "values": {
                 "situation": "famille nombreuse",
                 "revenus": "2200",
@@ -639,7 +553,6 @@
               }
             },
             {
-              "name": "e700a0d4-a3bb-4aa1-a353-78ac092a4cab",
               "values": {
                 "situation": "jeune 18 ans",
                 "revenus": "0",
@@ -652,7 +565,6 @@
               }
             },
             {
-              "name": "e71cbce1-549f-40d4-ae6b-b1b696b72bed",
               "values": {
                 "situation": "médiation dettes",
                 "revenus": "1600",
@@ -665,7 +577,6 @@
               }
             },
             {
-              "name": "82a75aca-7634-4f58-8091-a64eb44676bf",
               "values": {
                 "situation": "revenus élevés",
                 "revenus": "3000",
@@ -678,7 +589,6 @@
               }
             },
             {
-              "name": "7dade3f9-9fe7-4b52-a0d1-e5468671d4f0",
               "values": {
                 "situation": "sans-abri relogé",
                 "revenus": "0",
@@ -696,268 +606,90 @@
       "isOutline": true
     },
     {
-      "id": "fca289ce-9062-4138-879a-08057fb526c4",
+      "id": "scenario-11",
       "name": "Procédure de demande et enquête sociale",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je demande l'aide du CPAS pour une garantie"
+          "keyword": "Given",
+          "text": "que je demande l'aide du CPAS pour une garantie"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "j'introduis ma demande"
         },
         {
-          "keyword": "Alors",
-          "text": "la procédure comprend:",
-          "dataTable": {
-            "headers": [
-              "Étape",
-              "Délai",
-              "Documents requis"
-            ],
-            "rows": [
-              {
-                "Étape": "Dépôt de la demande",
-                "Délai": "Immédiat",
-                "Documents requis": "Formulaire + carte identité"
-              },
-              {
-                "Étape": "Accusé de réception",
-                "Délai": "Immédiat",
-                "Documents requis": "Preuve de dépôt avec date"
-              },
-              {
-                "Étape": "Enquête sociale",
-                "Délai": "8-15 jours",
-                "Documents requis": "Visite à domicile possible"
-              },
-              {
-                "Étape": "Documents à fournir",
-                "Délai": "Variable",
-                "Documents requis": "Contrat bail, preuves revenus"
-              },
-              {
-                "Étape": "Décision du conseil",
-                "Délai": "Max 30 jours",
-                "Documents requis": "Notification écrite"
-              },
-              {
-                "Étape": "Versement si accepté",
-                "Délai": "8 jours",
-                "Documents requis": "Sur compte bloqué ou au propriétaire"
-              }
-            ]
-          }
+          "keyword": "Then",
+          "text": "la procédure comprend:"
         },
         {
-          "keyword": "Et",
-          "text": "l'enquête sociale examine:",
-          "dataTable": {
-            "headers": [
-              "Critère examiné",
-              "Vérification"
-            ],
-            "rows": [
-              {
-                "Critère examiné": "Situation financière",
-                "Vérification": "Revenus, charges, dettes"
-              },
-              {
-                "Critère examiné": "Composition du ménage",
-                "Vérification": "Registre national"
-              },
-              {
-                "Critère examiné": "Nécessité du déménagement",
-                "Vérification": "Raisons (insalubrité, expulsion)"
-              },
-              {
-                "Critère examiné": "Capacité de remboursement",
-                "Vérification": "Budget disponible mensuel"
-              },
-              {
-                "Critère examiné": "Autres aides possibles",
-                "Vérification": "Famille, employeur, associations"
-              }
-            ]
-          }
+          "keyword": "And",
+          "text": "l'enquête sociale examine:"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "c66e7b87-74bd-4ca1-a448-5a20b29056b8",
+      "id": "scenario-12",
       "name": "Remboursement et suivi de la garantie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai reçu une aide CPAS de 1,500€"
+          "keyword": "Given",
+          "text": "que j'ai reçu une aide CPAS de 1,500€"
         },
         {
-          "keyword": "Et que",
-          "text": "c'est un prêt sans intérêt"
+          "keyword": "And",
+          "text": "que c'est un prêt sans intérêt"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "le plan de remboursement est établi"
         },
         {
-          "keyword": "Alors",
-          "text": "les modalités sont:",
-          "dataTable": {
-            "headers": [
-              "Aspect",
-              "Détail"
-            ],
-            "rows": [
-              {
-                "Aspect": "Mensualité",
-                "Détail": "Adaptée aux revenus (50-150€)"
-              },
-              {
-                "Aspect": "Durée maximale",
-                "Détail": "36 mois généralement"
-              },
-              {
-                "Aspect": "Révision possible",
-                "Détail": "Si changement situation"
-              },
-              {
-                "Aspect": "Suspension possible",
-                "Détail": "En cas de difficultés temporaires"
-              },
-              {
-                "Aspect": "Remboursement anticipé",
-                "Détail": "Toujours possible sans pénalité"
-              }
-            ]
-          }
+          "keyword": "Then",
+          "text": "les modalités sont:"
         },
         {
-          "keyword": "Et",
-          "text": "en cas de non-remboursement:",
-          "dataTable": {
-            "headers": [
-              "Conséquence",
-              "Application"
-            ],
-            "rows": [
-              {
-                "Conséquence": "Rappels",
-                "Application": "3 rappels avant poursuites"
-              },
-              {
-                "Conséquence": "Médiation",
-                "Application": "Tentative de nouvel accord"
-              },
-              {
-                "Conséquence": "Récupération",
-                "Application": "Sur prestations sociales futures"
-              },
-              {
-                "Conséquence": "Poursuites",
-                "Application": "En dernier recours uniquement"
-              }
-            ]
-          }
+          "keyword": "And",
+          "text": "en cas de non-remboursement:"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "a7594d2b-1c68-47b8-a720-8b3f68a69be1",
+      "id": "scenario-13",
       "name": "Libération et récupération de garantie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je quitte mon logement"
+          "keyword": "Given",
+          "text": "que je quitte mon logement"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai une garantie CPAS de 1,200€"
+          "keyword": "And",
+          "text": "que j'ai une garantie CPAS de 1,200€"
         },
         {
-          "keyword": "Et que",
-          "text": "l'état des lieux de sortie est fait"
+          "keyword": "And",
+          "text": "que l'état des lieux de sortie est fait"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "la garantie doit être libérée"
         },
         {
-          "keyword": "Alors",
-          "text": "la procédure est:",
-          "dataTable": {
-            "headers": [
-              "Étape",
-              "Responsable",
-              "Délai"
-            ],
-            "rows": [
-              {
-                "Étape": "État des lieux de sortie",
-                "Responsable": "Locataire",
-                "Délai": "Fin du bail"
-              },
-              {
-                "Étape": "Accord sur dégâts éventuels",
-                "Responsable": "Parties",
-                "Délai": "Immédiat"
-              },
-              {
-                "Étape": "Libération garantie",
-                "Responsable": "Propriétaire",
-                "Délai": "Max 2 mois"
-              },
-              {
-                "Étape": "Remboursement au CPAS",
-                "Responsable": "Automatique",
-                "Délai": "Si prêt en cours"
-              },
-              {
-                "Étape": "Solde au locataire",
-                "Responsable": "CPAS",
-                "Délai": "Après déduction"
-              }
-            ]
-          }
+          "keyword": "Then",
+          "text": "la procédure est:"
         },
         {
-          "keyword": "Et",
-          "text": "si contestation:",
-          "dataTable": {
-            "headers": [
-              "Recours",
-              "Procédure"
-            ],
-            "rows": [
-              {
-                "Recours": "Médiation",
-                "Procédure": "Via juge de paix"
-              },
-              {
-                "Recours": "CPAS peut intervenir",
-                "Procédure": "Assistance juridique"
-              },
-              {
-                "Recours": "Protection du locataire",
-                "Procédure": "Garantie ne peut être saisie"
-              }
-            ]
-          }
+          "keyword": "And",
+          "text": "si contestation:"
         }
       ],
       "isOutline": false
     }
   ],
-  "metadata": {
-    "language": "fr"
-  },
-  "generated": "2025-12-13T11:57:49.160Z"
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.198Z"
 }

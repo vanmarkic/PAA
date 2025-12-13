@@ -1,0 +1,660 @@
+{
+  "id": "benefits-allocation-pour-l-aide-aux-personnes-g-es-apa",
+  "name": "Allocation pour l'Aide aux Personnes Âgées (APA)",
+  "description": "En tant que personne âgée avec perte d'autonomie Je veux savoir si j'ai droit à l'APA Afin de couvrir les coûts supplémentaires liés à ma perte d'autonomie",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les montants APA 2024 sont:"
+      },
+      {
+        "text": "Et que les plafonds de revenus depuis juin 2024 sont:"
+      },
+      {
+        "text": "Et que l'âge minimum est 65 ans"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Personne âgée isolée avec perte d'autonomie légère",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 68 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Région de Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de 8 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 15000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "ma catégorie APA devrait être 1"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant annuel devrait être 1269.81€"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être 105.82€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Couple avec perte d'autonomie modérée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je vis en couple"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 72 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de 11 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus annuels combinés sont de 22000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous résidons en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "ma catégorie APA devrait être 2"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant annuel devrait être 4847.15€"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être 403.93€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Personne avec handicap sévère en maison de repos",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en maison de repos"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 82 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de 16 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 18000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Région de Bruxelles-Capitale"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "ma catégorie APA devrait être 4"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant annuel devrait être 6939.25€"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être 578.27€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'APA est versée directement à la maison de repos"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne trop jeune pour l'APA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 60 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une perte d'autonomie de 10 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de 12000€ par an"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"âge minimum non atteint (65 ans requis)\""
+        },
+        {
+          "keyword": "But",
+          "text": "je peux être orienté vers \"l'allocation de remplacement de revenus (ARR)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Score d'autonomie insuffisant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de 5 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de 15000€ par an"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"score d'autonomie insuffisant (minimum 7 points requis)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Revenus trop élevés pour personne isolée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 75 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de 12 points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 25000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus supérieurs au plafond (20725.25€ pour personne isolée)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Évaluation de la perte d'autonomie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande l'APA"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "un médecin évalue ma perte d'autonomie"
+        },
+        {
+          "keyword": "Then",
+          "text": "il évalue les domaines suivants:"
+        },
+        {
+          "keyword": "And",
+          "text": "le total détermine ma catégorie APA"
+        },
+        {
+          "keyword": "And",
+          "text": "l'évaluation est valable 5 ans maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Cumul APA avec autres allocations",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bénéficiaire de l'APA catégorie 3"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois 491.11€ par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie aussi de la GRAPA"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les règles de cumul"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'APA est cumulable avec:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul APA selon catégorie et revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score d'autonomie est de <points> points"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de <revenus>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma catégorie est <catégorie>"
+        },
+        {
+          "keyword": "And",
+          "text": "mon montant annuel est <montant_annuel>€"
+        },
+        {
+          "keyword": "And",
+          "text": "mon montant mensuel est <montant_mensuel>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "points",
+            "revenus",
+            "catégorie",
+            "montant_annuel",
+            "montant_mensuel"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "personne isolée",
+                "points": "7",
+                "revenus": "10000",
+                "catégorie": "1",
+                "montant_annuel": "1269.81",
+                "montant_mensuel": "105.82"
+              }
+            },
+            {
+              "values": {
+                "situation": "personne isolée",
+                "points": "10",
+                "revenus": "15000",
+                "catégorie": "2",
+                "montant_annuel": "4847.15",
+                "montant_mensuel": "403.93"
+              }
+            },
+            {
+              "values": {
+                "situation": "personne isolée",
+                "points": "13",
+                "revenus": "18000",
+                "catégorie": "3",
+                "montant_annuel": "5893.36",
+                "montant_mensuel": "491.11"
+              }
+            },
+            {
+              "values": {
+                "situation": "personne isolée",
+                "points": "16",
+                "revenus": "20000",
+                "catégorie": "4",
+                "montant_annuel": "6939.25",
+                "montant_mensuel": "578.27"
+              }
+            },
+            {
+              "values": {
+                "situation": "en couple",
+                "points": "11",
+                "revenus": "24000",
+                "catégorie": "2",
+                "montant_annuel": "4847.15",
+                "montant_mensuel": "403.93"
+              }
+            },
+            {
+              "values": {
+                "situation": "en couple",
+                "points": "15",
+                "revenus": "25000",
+                "catégorie": "4",
+                "montant_annuel": "6939.25",
+                "montant_mensuel": "578.27"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Procédure de demande APA - Région Bruxelles-Capitale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux demander l'APA"
+        },
+        {
+          "keyword": "When",
+          "text": "je commence la procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois suivre ces étapes:"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir de l'aide du CPAS pour la demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Procédure de demande APA - Région Wallonne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux demander l'APA"
+        },
+        {
+          "keyword": "When",
+          "text": "je commence la procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois suivre ces étapes:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Révision de l'APA suite à changement de situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de l'APA catégorie 2"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma perte d'autonomie s'aggrave"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon score passe de 10 à 14 points"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une révision"
+        },
+        {
+          "keyword": "Then",
+          "text": "une nouvelle évaluation médicale est programmée"
+        },
+        {
+          "keyword": "And",
+          "text": "si confirmée, ma catégorie passe à 3"
+        },
+        {
+          "keyword": "And",
+          "text": "mon allocation mensuelle passe de 403.93€ à 491.11€"
+        },
+        {
+          "keyword": "And",
+          "text": "le changement prend effet le mois suivant la décision"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "APA et services d'aide à domicile",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de l'APA catégorie 3"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vis à domicile"
+        },
+        {
+          "keyword": "When",
+          "text": "j'utilise mon APA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux financer:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-14",
+      "name": "Impact sur les impôts",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de l'APA"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois 5893.36€ par an (catégorie 3)"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'APA est exonérée d'impôts"
+        },
+        {
+          "keyword": "And",
+          "text": "elle n'est pas comptée dans mes revenus imposables"
+        },
+        {
+          "keyword": "And",
+          "text": "je bénéficie d'une réduction d'impôt pour personne handicapée"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la réduction dépend de mon degré de handicap"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-15",
+      "name": "APA en maison de repos et de soins",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'entre en maison de repos"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie de l'APA catégorie 4"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût mensuel est de 2000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma contribution"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon APA de 578.27€ est versée à l'établissement"
+        },
+        {
+          "keyword": "And",
+          "text": "ma pension contribue également"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS peut intervenir pour le solde si nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "je garde un argent de poche minimum de 111.24€/mois"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.191Z"
+}

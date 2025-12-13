@@ -1,0 +1,488 @@
+{
+  "id": "benefits-carte-m-dicale-et-aide-m-dicale-urgente-amu",
+  "name": "Carte Médicale et Aide Médicale Urgente (AMU)",
+  "description": "En tant que personne en situation de précarité Je veux obtenir une carte médicale du CPAS Afin d'accéder gratuitement aux soins de santé essentiels",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la carte médicale CPAS couvre:"
+      },
+      {
+        "text": "Et que l'AMU (Aide Médicale Urgente) est pour:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Résident belge sans ressources demandant carte médicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont inférieurs au RIS"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de mutuelle active"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des problèmes de santé chroniques"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au CPAS de ma commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "une enquête sociale est menée"
+        },
+        {
+          "keyword": "And",
+          "text": "si mes ressources sont insuffisantes"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois une carte médicale valable 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "renouvelable sur demande"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux consulter les médecins conventionnés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Sans-papiers nécessitant soins urgents (AMU)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en séjour irrégulier"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin de soins médicaux urgents"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucune ressource financière"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "le CPAS vérifie mon état d'indigence"
+        },
+        {
+          "keyword": "And",
+          "text": "accorde l'AMU pour les soins urgents"
+        },
+        {
+          "keyword": "And",
+          "text": "couvre:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Famille avec enfants et carte médicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé avec 3 enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie du RIS"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes enfants sont scolarisés"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la carte médicale familiale"
+        },
+        {
+          "keyword": "Then",
+          "text": "toute la famille est couverte"
+        },
+        {
+          "keyword": "And",
+          "text": "les enfants ont accès à:"
+        },
+        {
+          "keyword": "And",
+          "text": "la carte est valable pour toute la famille"
+        },
+        {
+          "keyword": "And",
+          "text": "renouvelable tous les 3 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne âgée isolée avec carte médicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne de 75 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension est de 900€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des frais médicaux importants"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vis seul"
+        },
+        {
+          "keyword": "When",
+          "text": "le CPAS évalue ma situation"
+        },
+        {
+          "keyword": "Then",
+          "text": "il calcule mes ressources disponibles"
+        },
+        {
+          "keyword": "And",
+          "text": "si le reste est insuffisant pour vivre"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'obtiens une carte médicale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Étudiant européen sans ressources",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étudiant européen"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'étudie en Belgique depuis 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai plus de ressources financières"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne peux pas rentrer dans mon pays"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma situation est évaluée"
+        },
+        {
+          "keyword": "And",
+          "text": "si je suis en état de besoin urgent"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux recevoir l'AMU temporaire"
+        },
+        {
+          "keyword": "But",
+          "text": "pas d'aide sociale complète (< 3 mois)"
+        },
+        {
+          "keyword": "And",
+          "text": "uniquement pour soins urgents"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Travailleur précaire avec carte médicale partielle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire est de 600€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une mutuelle mais difficultés à payer"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide du CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "le CPAS peut accorder une aide partielle:"
+        },
+        {
+          "keyword": "And",
+          "text": "cette aide complète ma mutuelle"
+        },
+        {
+          "keyword": "And",
+          "text": "évite l'accumulation de dettes médicales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Procédure de demande et documents requis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux demander la carte médicale"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'assistant social mène une enquête"
+        },
+        {
+          "keyword": "And",
+          "text": "visite mon domicile si nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision est prise dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Utilisation de la carte médicale chez le médecin",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une carte médicale CPAS valide"
+        },
+        {
+          "keyword": "When",
+          "text": "je vais chez un médecin conventionné"
+        },
+        {
+          "keyword": "Then",
+          "text": "je présente ma carte médicale"
+        },
+        {
+          "keyword": "And",
+          "text": "le médecin vérifie la validité"
+        },
+        {
+          "keyword": "And",
+          "text": "ne me fait pas payer la consultation"
+        },
+        {
+          "keyword": "And",
+          "text": "envoie la facture directement au CPAS"
+        },
+        {
+          "keyword": "But",
+          "text": "si je vais chez un médecin non-conventionné"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois payer et demander remboursement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Évaluation ressources pour carte médicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont de <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon loyer est de <loyer>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "When",
+          "text": "le CPAS calcule mes ressources"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon reste à vivre est <reste>€"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision est <decision>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "revenus",
+            "loyer",
+            "reste",
+            "decision"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "isolé",
+                "revenus": "800",
+                "loyer": "500",
+                "reste": "300",
+                "decision": "carte accordée"
+              }
+            },
+            {
+              "values": {
+                "situation": "isolé",
+                "revenus": "1200",
+                "loyer": "400",
+                "reste": "800",
+                "decision": "carte refusée"
+              }
+            },
+            {
+              "values": {
+                "situation": "famille 3 pers",
+                "revenus": "1500",
+                "loyer": "700",
+                "reste": "800",
+                "decision": "carte accordée"
+              }
+            },
+            {
+              "values": {
+                "situation": "couple",
+                "revenus": "1100",
+                "loyer": "600",
+                "reste": "500",
+                "decision": "carte partielle"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Réseau de soins et prestataires conventionnés",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai la carte médicale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux accéder au réseau conventionné:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter ce réseau"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Renouvellement et obligations du bénéficiaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de la carte médicale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter ces obligations:"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas de non-respect:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Recours en cas de refus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande de carte médicale est refusée"
+        },
+        {
+          "keyword": "When",
+          "text": "je conteste la décision"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux introduire un recours:"
+        },
+        {
+          "keyword": "And",
+          "text": "pendant le recours"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.193Z"
+}

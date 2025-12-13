@@ -1,0 +1,268 @@
+{
+  "id": "statut-artiste-ch-mage-pour-artistes",
+  "name": "Chômage pour Artistes",
+  "description": "En tant qu'artiste au chômage Je veux comprendre mes droits spécifiques Afin de maintenir mon activité artistique",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le régime de chômage artiste prévoit:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Ouverture de droits au chômage artistique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis comédien"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 165 jours sur les 21 derniers mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai cotisé à la sécurité sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon dernier contrat s'est terminé"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'ouverture de mes droits au chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais avoir droit au chômage artistique"
+        },
+        {
+          "keyword": "And",
+          "text": "ma période de protection devrait être de 12 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux maintenir mon activité artistique accessoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Maintien des droits avec activité artistique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je perçois le chômage artistique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un cachet de 400€ pour un spectacle"
+        },
+        {
+          "keyword": "And",
+          "text": "que ce cachet est sur 3 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare cette activité"
+        },
+        {
+          "keyword": "Then",
+          "text": "une partie du cachet est exonérée (390€)"
+        },
+        {
+          "keyword": "And",
+          "text": "mes allocations sont maintenues partiellement"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits sont prolongés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Règle du cachet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis musicien au chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un concert rémunéré 500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que la prestation dure 1 jour"
+        },
+        {
+          "keyword": "When",
+          "text": "j'applique la règle du cachet"
+        },
+        {
+          "keyword": "Then",
+          "text": "130€ sont exonérés"
+        },
+        {
+          "keyword": "And",
+          "text": "370€ sont déduits de mes allocations"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve le statut d'artiste"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Formation artistique pendant le chômage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis au chômage artistique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux suivre une formation de mise en scène"
+        },
+        {
+          "keyword": "And",
+          "text": "que la formation dure 3 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "la formation est compatible avec le chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "mes allocations sont maintenues"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir une attestation de présence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Calcul des allocations selon situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques mensuels sont de <revenus>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes allocations"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon allocation journalière est de <allocation>€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'exonération appliquée est de <exonération>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "revenus",
+            "allocation",
+            "exonération"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "isolé sans revenus",
+                "revenus": "0",
+                "allocation": "65.96",
+                "exonération": "0"
+              }
+            },
+            {
+              "values": {
+                "situation": "cohabitant sans revenus",
+                "revenus": "0",
+                "allocation": "43.78",
+                "exonération": "0"
+              }
+            },
+            {
+              "values": {
+                "situation": "isolé avec cachets",
+                "revenus": "400",
+                "allocation": "45.00",
+                "exonération": "130"
+              }
+            },
+            {
+              "values": {
+                "situation": "chef de famille",
+                "revenus": "200",
+                "allocation": "55.00",
+                "exonération": "130"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-6",
+      "name": "Fin de période de protection",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma période de protection de 12 mois se termine"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 80 jours sur cette période"
+        },
+        {
+          "keyword": "When",
+          "text": "j'évalue mon renouvellement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver 156 jours sur 21 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "justifier de démarches actives"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

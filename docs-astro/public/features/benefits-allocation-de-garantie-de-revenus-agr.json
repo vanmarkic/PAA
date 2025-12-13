@@ -1,0 +1,250 @@
+{
+  "id": "benefits-allocation-de-garantie-de-revenus-agr",
+  "name": "Allocation de Garantie de Revenus (AGR)",
+  "description": "En tant que travailleur à temps partiel Je veux savoir si j'ai droit à l'AGR Afin d'optimiser mes revenus",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le revenu minimum mensuel garanti est de 1650€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Travailleur à temps partiel avec maintien des droits éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un travailleur à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le maintien des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 1200€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'AGR"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de l'allocation devrait être 360€"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir cumuler avec mon salaire"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir cumuler avec les allocations familiales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Salaire trop élevé pour l'AGR",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un travailleur à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le maintien des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 1700€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'AGR"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"salaire supérieur au minimum garanti\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Sans maintien des droits",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un travailleur à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas le maintien des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 1200€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'AGR"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"pas de maintien des droits\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Incompatibilité avec le chômage complet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un travailleur à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le maintien des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 1200€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois une allocation de chômage complet"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'AGR"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"cumul interdit avec chômage complet\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Heures de travail optimales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille <heures> heures par semaine"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de <salaire>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le maintien des droits"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon revenu total avec l'AGR"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon revenu total devrait être de <revenu_total>€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'optimisation devrait suggérer \"<conseil>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "heures",
+            "salaire",
+            "revenu_total",
+            "conseil"
+          ],
+          "rows": [
+            {
+              "values": {
+                "heures": "15",
+                "salaire": "800",
+                "revenu_total": "1160",
+                "conseil": "\"Augmenter à 20-28h pour maximiser AGR\""
+              }
+            },
+            {
+              "values": {
+                "heures": "20",
+                "salaire": "1100",
+                "revenu_total": "1540",
+                "conseil": "\"Zone optimale pour AGR\""
+              }
+            },
+            {
+              "values": {
+                "heures": "28",
+                "salaire": "1500",
+                "revenu_total": "1700",
+                "conseil": "\"Zone optimale pour AGR\""
+              }
+            },
+            {
+              "values": {
+                "heures": "35",
+                "salaire": "1800",
+                "revenu_total": "1800",
+                "conseil": "\"Temps plein, pas d'AGR possible\""
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {
+    "specificationVersion": "2025.1.0",
+    "effectiveDate": "2025-02-01",
+    "legalBasis": "Arrêté royal du 25 novembre 1991 portant réglementation du chômage",
+    "legalUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1991112550&table_name=loi",
+    "implementedBy": "src/rules/agrRules.ts"
+  },
+  "generated": "2025-12-13T14:45:22.191Z",
+  "legalSources": {
+    "sources": [
+      {
+        "title": "Arrêté royal du 25 novembre 1991 portant réglementation du chômage",
+        "authority": "Source légale"
+      }
+    ]
+  }
+}

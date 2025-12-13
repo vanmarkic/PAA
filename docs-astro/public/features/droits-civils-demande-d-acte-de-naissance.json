@@ -1,0 +1,336 @@
+{
+  "id": "droits-civils-demande-d-acte-de-naissance",
+  "name": "Demande d'Acte de Naissance",
+  "description": "En tant que citoyen ou parent Je veux obtenir un acte de naissance Afin de prouver l'identité et la filiation",
+  "category": "droits-civils",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les types d'actes disponibles sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Déclaration de naissance d'un nouveau-né",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un enfant est né à l'hôpital"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis le père de l'enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que la naissance date de moins de 15 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare la naissance à la commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "la déclaration doit être faite dans les 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "l'acte de naissance est gratuit à la première délivrance"
+        },
+        {
+          "keyword": "And",
+          "text": "le prénom et nom sont enregistrés selon les règles en vigueur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Demande d'extrait d'acte de naissance pour passeport",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai besoin d'un acte pour demander un passeport"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis né en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma commune de naissance est Bruxelles"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un extrait avec filiation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'acte doit dater de moins de 3 mois pour être valide"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût est de 25€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Demande d'acte de naissance pour enfant mineur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent d'un enfant mineur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai l'autorité parentale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'acte de naissance de mon enfant"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver:"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir tous les types d'extraits"
+        },
+        {
+          "keyword": "And",
+          "text": "l'usage doit être justifié pour certaines procédures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Demande d'acte de naissance étranger avec transcription",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis né à l'étranger"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis belge ou parent d'un belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'acte n'est pas transcrit en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la transcription de mon acte étranger"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure passe par le consulat ou le SPF Justice"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai peut être de 2 à 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "des vérifications d'authenticité sont effectuées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Rectification d'erreur sur acte de naissance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'il y a une erreur sur mon acte de naissance"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'erreur concerne l'orthographe du prénom"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une rectification administrative"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "si c'est une erreur matérielle évidente"
+        },
+        {
+          "keyword": "Then",
+          "text": "la rectification est gratuite"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est d'environ 1 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Demande d'acte pour personne décédée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une personne est décédée depuis plus de 50 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande son acte de naissance"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'acte est librement accessible"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune justification n'est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir une copie intégrale"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif reste de 25€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Reconnaissance paternelle/maternelle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un enfant n'a pas de filiation paternelle établie"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux reconnaître l'enfant comme mon enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que la mère donne son consentement"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une reconnaissance"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux le faire:"
+        },
+        {
+          "keyword": "And",
+          "text": "si l'enfant a plus de 12 ans, son consentement est requis"
+        },
+        {
+          "keyword": "And",
+          "text": "la reconnaissance est mentionnée sur l'acte de naissance"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Délais selon le type de demande",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande un acte de naissance"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'utilise la méthode <methode>"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de délivrance est <delai>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "methode",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "methode": "BAEC en ligne",
+                "delai": "Immédiat"
+              }
+            },
+            {
+              "values": {
+                "methode": "Guichet commune",
+                "delai": "Le jour même"
+              }
+            },
+            {
+              "values": {
+                "methode": "Courrier postal",
+                "delai": "5-10 jours"
+              }
+            },
+            {
+              "values": {
+                "methode": "Consulat",
+                "delai": "2-4 semaines"
+              }
+            },
+            {
+              "values": {
+                "methode": "Transcription",
+                "delai": "2-6 mois"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

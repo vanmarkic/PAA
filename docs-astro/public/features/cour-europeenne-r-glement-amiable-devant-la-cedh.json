@@ -1,0 +1,292 @@
+{
+  "id": "cour-europeenne-r-glement-amiable-devant-la-cedh",
+  "name": "Règlement amiable devant la CEDH",
+  "description": "En tant que partie à une procédure devant la CEDH Je veux explorer la possibilité d'un règlement amiable Afin de résoudre le litige sans jugement",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'article 39 de la Convention prévoit le règlement amiable"
+      },
+      {
+        "text": "Et que la Cour se met à disposition des parties"
+      },
+      {
+        "text": "Et que les négociations sont confidentielles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Proposition de règlement amiable par l'État",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma requête a été déclarée recevable"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État reconnaît certaines défaillances"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il propose une compensation de 25000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "des mesures pour éviter de futures violations"
+        },
+        {
+          "keyword": "When",
+          "text": "j'examine la proposition de règlement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais évaluer si elle couvre mon préjudice"
+        },
+        {
+          "keyword": "And",
+          "text": "vérifier les garanties de non-répétition"
+        },
+        {
+          "keyword": "And",
+          "text": "pouvoir négocier les termes"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir un délai de réflexion suffisant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Négociation réussie avec engagement de réformes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je dénonce des conditions de détention indignes"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État accepte de reconnaître les violations"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il s'engage à rénover les prisons concernées"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il offre 15000 euros de compensation"
+        },
+        {
+          "keyword": "When",
+          "text": "nous finalisons le règlement amiable"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'accord devrait inclure un calendrier de réformes"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoir un mécanisme de suivi"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait approuver l'accord"
+        },
+        {
+          "keyword": "And",
+          "text": "l'affaire serait rayée du rôle après exécution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Échec des négociations - retour à la procédure",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les négociations durent depuis 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État refuse de reconnaître la violation"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il offre seulement 1000 euros sans admission"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est insuffisant par rapport au préjudice"
+        },
+        {
+          "keyword": "When",
+          "text": "les négociations échouent"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure contentieuse devrait reprendre"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait fixer un calendrier"
+        },
+        {
+          "keyword": "And",
+          "text": "les éléments confidentiels resteraient protégés"
+        },
+        {
+          "keyword": "And",
+          "text": "l'affaire irait vers un jugement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Règlement incluant des mesures générales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon cas révèle un problème systémique"
+        },
+        {
+          "keyword": "And",
+          "text": "que 200 requêtes similaires sont pendantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État propose une réforme législative"
+        },
+        {
+          "keyword": "And",
+          "text": "une compensation pour tous les cas similaires"
+        },
+        {
+          "keyword": "When",
+          "text": "nous négocions un règlement pilote"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'accord devrait couvrir tous les cas similaires"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoir des mesures législatives précises"
+        },
+        {
+          "keyword": "And",
+          "text": "établir un mécanisme d'indemnisation"
+        },
+        {
+          "keyword": "And",
+          "text": "être soumis à la supervision du Comité des Ministres"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Évaluation d'une offre de règlement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'on m'offre <montant> euros"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon préjudice est estimé à <prejudice> euros"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État \"<reconnaissance>\""
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il propose \"<mesures>\""
+        },
+        {
+          "keyword": "When",
+          "text": "j'évalue l'offre"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'offre devrait être considérée comme \"<evaluation>\""
+        },
+        {
+          "keyword": "And",
+          "text": "ma décision probable serait \"<decision>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "montant",
+            "prejudice",
+            "reconnaissance",
+            "mesures",
+            "evaluation",
+            "decision"
+          ],
+          "rows": [
+            {
+              "values": {
+                "montant": "20000",
+                "prejudice": "25000",
+                "reconnaissance": "reconnaît la violation",
+                "mesures": "réformes complètes",
+                "evaluation": "acceptable",
+                "decision": "accepter"
+              }
+            },
+            {
+              "values": {
+                "montant": "5000",
+                "prejudice": "30000",
+                "reconnaissance": "nie la violation",
+                "mesures": "aucune",
+                "evaluation": "insuffisante",
+                "decision": "refuser"
+              }
+            },
+            {
+              "values": {
+                "montant": "30000",
+                "prejudice": "25000",
+                "reconnaissance": "reconnaît partiellement",
+                "mesures": "mesures limitées",
+                "evaluation": "correcte",
+                "decision": "négocier"
+              }
+            },
+            {
+              "values": {
+                "montant": "15000",
+                "prejudice": "15000",
+                "reconnaissance": "reconnaît totalement",
+                "mesures": "garanties non-répétition",
+                "evaluation": "bonne",
+                "decision": "accepter"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

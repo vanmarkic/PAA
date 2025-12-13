@@ -1,0 +1,645 @@
+{
+  "id": "benefits-tarif-social-nergie",
+  "name": "Tarif Social Énergie",
+  "description": "En tant que ménage à revenus modestes ou situation sociale particulière Je veux savoir si j'ai droit au tarif social pour l'électricité et le gaz Afin de réduire mes factures d'énergie",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les tarifs sociaux novembre 2024 sont:"
+      },
+      {
+        "text": "Et que les catégories de bénéficiaires automatiques sont:"
+      },
+      {
+        "text": "Et que le tarif est fixé par la CREG (Commission de Régulation de l'Électricité et du Gaz)"
+      },
+      {
+        "text": "Et que l'application est automatique via le SPF Économie pour les clients protégés fédéraux"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Bénéficiaire RIS avec application automatique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie du RIS à 1070.49€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un contrat d'électricité et de gaz"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis client chez un fournisseur commercial"
+        },
+        {
+          "keyword": "And",
+          "text": "que le SPF Économie a transmis mes données"
+        },
+        {
+          "keyword": "When",
+          "text": "mon fournisseur reçoit la liste trimestrielle"
+        },
+        {
+          "keyword": "Then",
+          "text": "le tarif social est appliqué automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "ma facture d'électricité passe à 22.773 cents/kWh"
+        },
+        {
+          "keyword": "And",
+          "text": "ma facture de gaz passe à 4.745 cents/kWh"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune démarche n'est requise de ma part"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif s'applique rétroactivement au début du trimestre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Personne handicapée avec reconnaissance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une reconnaissance de handicap à 65%"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois une allocation de remplacement de revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un compteur électrique bihoraire"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma consommation mensuelle est de 300 kWh"
+        },
+        {
+          "keyword": "When",
+          "text": "le tarif social est appliqué"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma facture est calculée au tarif social bihoraire"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie est d'environ 40-50% sur le prix normal"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif est maintenu tant que mon statut est valide"
+        },
+        {
+          "keyword": "And",
+          "text": "la révision est automatique chaque trimestre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Famille avec enfant handicapé bénéficiaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant reçoit une allocation familiale majorée"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant a une reconnaissance de handicap"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous vivons dans le même ménage"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous consommons 4000 kWh d'électricité par an"
+        },
+        {
+          "keyword": "When",
+          "text": "le SPF vérifie notre éligibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "tout le ménage bénéficie du tarif social"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie annuelle est d'environ 500-800€"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif s'applique à toute la consommation du ménage"
+        },
+        {
+          "keyword": "And",
+          "text": "pas de limite de consommation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne GRAPA avec tarif social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de la GRAPA à 1549.42€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vis seul"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un chauffage électrique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma consommation hivernale est élevée"
+        },
+        {
+          "keyword": "When",
+          "text": "le tarif social est appliqué"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma facture d'électricité est plafonnée à 22.773 cents/kWh"
+        },
+        {
+          "keyword": "And",
+          "text": "aucun frais fixe n'est supprimé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'abonnement reste dû"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie est significative en période hivernale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Locataire social avec chauffage collectif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis locataire d'un logement social"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'immeuble a un chauffage collectif au gaz"
+        },
+        {
+          "keyword": "And",
+          "text": "que les charges sont réparties entre locataires"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une attestation de la société de logement"
+        },
+        {
+          "keyword": "When",
+          "text": "je transmets l'attestation au gestionnaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à la prime tarif social depuis septembre 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime compense la différence avec le tarif social"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul est basé sur ma quote-part"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime est versée directement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Ancien bénéficiaire BIM après juillet 2023",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficiais du BIM avant juillet 2023"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'avais le tarif social automatique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'autre statut social"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus restent modestes"
+        },
+        {
+          "keyword": "When",
+          "text": "la règle change au 1er juillet 2023"
+        },
+        {
+          "keyword": "Then",
+          "text": "je perds le tarif social automatique"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois vérifier si j'ai un autre statut éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander une attestation si éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "sinon je reviens au tarif commercial normal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Médiation de dettes avec difficultés de paiement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en médiation de dettes judiciaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des arriérés sur mes factures d'énergie"
+        },
+        {
+          "keyword": "And",
+          "text": "que le médiateur gère mon budget"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont insuffisants"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le tarif social via attestation"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon éligibilité est évaluée au cas par cas"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir l'attestation du médiateur"
+        },
+        {
+          "keyword": "And",
+          "text": "si accordé, le tarif s'applique pour 1 an"
+        },
+        {
+          "keyword": "And",
+          "text": "le renouvellement nécessite une nouvelle attestation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Changement de fournisseur avec tarif social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie du tarif social"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux changer de fournisseur d'énergie"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon statut reste valide"
+        },
+        {
+          "keyword": "When",
+          "text": "je change de fournisseur"
+        },
+        {
+          "keyword": "Then",
+          "text": "le tarif social est transféré automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "le nouveau fournisseur est informé par le SPF"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune interruption du tarif social"
+        },
+        {
+          "keyword": "And",
+          "text": "le même tarif CREG s'applique chez tous les fournisseurs"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Résidence avec compteur collectif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je vis dans une résidence avec compteur collectif"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis éligible au tarif social (RIS)"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'électricité est facturée via le syndic"
+        },
+        {
+          "keyword": "And",
+          "text": "que la nouvelle prime existe depuis septembre 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime tarif social"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir une attestation d'éligibilité"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime compense le différentiel de tarif"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul est basé sur ma consommation estimée"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime est versée directement à moi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Contrôle trimestriel et mise à jour",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie du tarif social"
+        },
+        {
+          "keyword": "When",
+          "text": "la CREG révise les tarifs trimestriellement"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon tarif est ajusté automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "les nouveaux tarifs s'appliquent au 1er du trimestre"
+        },
+        {
+          "keyword": "And",
+          "text": "ma situation est vérifiée via le SPF"
+        },
+        {
+          "keyword": "And",
+          "text": "si je ne suis plus éligible, le tarif normal reprend"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une notification de changement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Économies selon profil de consommation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma consommation annuelle est <conso_elec> kWh électricité"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma consommation annuelle est <conso_gaz> kWh gaz"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie du tarif social"
+        },
+        {
+          "keyword": "When",
+          "text": "je compare avec le tarif commercial moyen"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'économie annuelle électricité est environ <eco_elec>€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie annuelle gaz est environ <eco_gaz>€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie totale est environ <eco_totale>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "conso_elec",
+            "conso_gaz",
+            "eco_elec",
+            "eco_gaz",
+            "eco_totale"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "personne isolée",
+                "conso_elec": "2000",
+                "conso_gaz": "5000",
+                "eco_elec": "200",
+                "eco_gaz": "150",
+                "eco_totale": "350"
+              }
+            },
+            {
+              "values": {
+                "situation": "couple sans enfants",
+                "conso_elec": "3500",
+                "conso_gaz": "12000",
+                "eco_elec": "350",
+                "eco_gaz": "360",
+                "eco_totale": "710"
+              }
+            },
+            {
+              "values": {
+                "situation": "famille 2 enfants",
+                "conso_elec": "4500",
+                "conso_gaz": "18000",
+                "eco_elec": "450",
+                "eco_gaz": "540",
+                "eco_totale": "990"
+              }
+            },
+            {
+              "values": {
+                "situation": "famille nombreuse",
+                "conso_elec": "6000",
+                "conso_gaz": "25000",
+                "eco_elec": "600",
+                "eco_gaz": "750",
+                "eco_totale": "1350"
+              }
+            },
+            {
+              "values": {
+                "situation": "appartement électrique",
+                "conso_elec": "8000",
+                "conso_gaz": "0",
+                "eco_elec": "800",
+                "eco_gaz": "0",
+                "eco_totale": "800"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-12",
+      "name": "Procédure pour client non automatique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai droit au tarif social"
+        },
+        {
+          "keyword": "But",
+          "text": "que je ne suis pas client protégé fédéral automatique"
+        },
+        {
+          "keyword": "When",
+          "text": "je veux bénéficier du tarif social"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois obtenir une attestation:"
+        },
+        {
+          "keyword": "And",
+          "text": "je transmets l'attestation à mon fournisseur"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif s'applique dans les 10 jours ouvrables"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois renouveler selon la validité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Impact sur la facture mensuelle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je consomme 250 kWh d'électricité par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je consomme 800 kWh de gaz par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai le tarif social"
+        },
+        {
+          "keyword": "When",
+          "text": "ma facture est calculée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le coût électricité est 250 × 0.22773 = 56.93€"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût gaz est 800 × 0.04745 = 37.96€"
+        },
+        {
+          "keyword": "And",
+          "text": "le total énergie est 94.89€ (hors frais fixes)"
+        },
+        {
+          "keyword": "And",
+          "text": "comparé au tarif normal (~180€), j'économise ~85€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie annuelle est environ 1,020€"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.202Z"
+}

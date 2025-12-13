@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-protection-d-obtention-v-g-tale",
+  "name": "Protection d'obtention végétale",
+  "description": "En tant qu'obtenteur de nouvelles variétés végétales Je veux protéger mes créations Afin de contrôler leur commercialisation pendant 25-30 ans",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la protection UPOV est disponible"
+      },
+      {
+        "text": "Et que les tests DHS sont obligatoires"
+      },
+      {
+        "text": "Et que la durée est de 25 ans (30 pour arbres/vignes)"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de certificat d'obtention végétale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé une nouvelle variété de tomate"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle est distincte, homogène et stable (DHS)"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle a une dénomination unique"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose ma demande à l'OCVV"
+        },
+        {
+          "keyword": "Then",
+          "text": "des essais DHS sont organisés"
+        },
+        {
+          "keyword": "And",
+          "text": "durent 2 cycles de végétation"
+        },
+        {
+          "keyword": "And",
+          "text": "coûtent environ 3000€"
+        },
+        {
+          "keyword": "And",
+          "text": "le certificat est délivré si conforme"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Protection provisoire pendant l'examen",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande est en cours d'examen"
+        },
+        {
+          "keyword": "And",
+          "text": "que des tiers commercialisent déjà"
+        },
+        {
+          "keyword": "When",
+          "text": "je notifie mes droits provisoires"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux réclamer une indemnité"
+        },
+        {
+          "keyword": "But",
+          "text": "seulement après délivrance du certificat"
+        },
+        {
+          "keyword": "And",
+          "text": "rétroactivement à la publication"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

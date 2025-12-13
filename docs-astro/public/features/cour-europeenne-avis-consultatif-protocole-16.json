@@ -1,0 +1,144 @@
+{
+  "id": "cour-europeenne-avis-consultatif-protocole-16",
+  "name": "Avis consultatif (Protocole 16)",
+  "description": "En tant que juridiction suprême nationale Je veux demander un avis consultatif à la CEDH Afin d'obtenir des orientations sur l'interprétation de la Convention",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le Protocole 16 permet les avis consultatifs"
+      },
+      {
+        "text": "Et que seules les plus hautes juridictions peuvent demander"
+      },
+      {
+        "text": "Et que l'État doit avoir ratifié le Protocole 16"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'avis sur une question de principe",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis la Cour de cassation belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que la Belgique a ratifié le Protocole 16"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une affaire soulève une nouvelle question d'interprétation"
+        },
+        {
+          "keyword": "And",
+          "text": "que la question concerne l'article 8 et les données numériques"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un avis consultatif"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais exposer le contexte juridique et factuel"
+        },
+        {
+          "keyword": "And",
+          "text": "formuler des questions précises"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer la pertinence pour l'affaire pendante"
+        },
+        {
+          "keyword": "And",
+          "text": "la Grande Chambre devrait examiner la demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "État n'ayant pas ratifié le Protocole",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une haute juridiction française"
+        },
+        {
+          "keyword": "And",
+          "text": "que la France n'a pas ratifié le Protocole 16"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une question importante sur la Convention"
+        },
+        {
+          "keyword": "When",
+          "text": "je considère demander un avis"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure ne serait pas disponible"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais trancher selon ma propre interprétation"
+        },
+        {
+          "keyword": "And",
+          "text": "attendre une éventuelle requête individuelle ultérieure"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Question trop abstraite refusée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une juridiction demande un avis général"
+        },
+        {
+          "keyword": "And",
+          "text": "que les questions sont hypothétiques"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elles ne sont pas liées à une affaire concrète"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elles ressemblent à une consultation académique"
+        },
+        {
+          "keyword": "When",
+          "text": "la CEDH examine la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait refuser de donner un avis"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer que les questions sont trop abstraites"
+        },
+        {
+          "keyword": "And",
+          "text": "rappeler le cadre du Protocole 16"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

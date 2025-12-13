@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-caves-et-greniers",
+  "name": "Gestion Caves et Greniers",
+  "description": "En tant que copropriété Je veux gérer caves et greniers Afin d'optimiser l'usage des espaces",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'immeuble a caves et greniers"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Attribution cave supplémentaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une cave est libérée"
+        },
+        {
+          "keyword": "And",
+          "text": "que 3 copropriétaires la demandent"
+        },
+        {
+          "keyword": "When",
+          "text": "l'attribution est décidée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les critères sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Sécurisation accès caves",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des vols sont signalés"
+        },
+        {
+          "keyword": "When",
+          "text": "la sécurisation est votée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les mesures sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Encombrement parties communes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des objets encombrent les couloirs"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic intervient"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

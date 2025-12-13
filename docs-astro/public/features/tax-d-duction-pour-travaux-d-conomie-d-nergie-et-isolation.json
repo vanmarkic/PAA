@@ -1,0 +1,546 @@
+{
+  "id": "tax-d-duction-pour-travaux-d-conomie-d-nergie-et-isolation",
+  "name": "Déduction pour travaux d'économie d'énergie et isolation",
+  "description": "En tant que propriétaire soucieux de l'environnement Je veux déduire mes investissements en économie d'énergie Afin de réduire mon impôt tout en améliorant mon habitation",
+  "category": "tax",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres fiscaux 2024 pour travaux d'économie d'énergie sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Isolation du toit avec facture conforme",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire occupant"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon habitation a plus de 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai fait isoler mon toit en mars 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût total est de 8000€ TVA comprise"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'entrepreneur est enregistré et agréé"
+        },
+        {
+          "keyword": "And",
+          "text": "que les matériaux respectent les normes R ≥ 4.5"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la base de calcul est 8000€"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt est 2400€ (30% de 8000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer au code 7162-68"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Remplacement de chaudière par pompe à chaleur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai remplacé ma chaudière au mazout"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût total est de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai obtenu une prime régionale de 3000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'installation est certifiée conforme"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la base déductible est 9000€ (12000€ - 3000€ prime)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt est 2700€ (30% de 9000€)"
+        },
+        {
+          "keyword": "But",
+          "text": "plafonnée à 3260€ sur 4 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Audit énergétique préalable avec taux majoré",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai fait réaliser un audit énergétique en janvier 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'audit a coûté 850€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai ensuite réalisé les travaux recommandés:"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'audit est déductible à 850€"
+        },
+        {
+          "keyword": "And",
+          "text": "les travaux bénéficient du taux majoré de 45%"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction totale est: 850€ + (28000€ × 45%) = 13450€"
+        },
+        {
+          "keyword": "But",
+          "text": "plafonnée à 3260€ pour l'année"
+        },
+        {
+          "keyword": "And",
+          "text": "l'excédent est reportable sur 4 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Installation de panneaux solaires photovoltaïques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai installé des panneaux solaires en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût d'installation est de 9000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que la puissance installée est de 5 kWc"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai obtenu des certificats verts"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la déductibilité fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "les panneaux solaires ne sont plus déductibles depuis 2024"
+        },
+        {
+          "keyword": "But",
+          "text": "je bénéficie d'autres avantages:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Double vitrage haute performance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai remplacé mes châssis simple vitrage"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût total est de 10000€ pour 10 fenêtres"
+        },
+        {
+          "keyword": "And",
+          "text": "que les travaux sont réalisés en mai 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction"
+        },
+        {
+          "keyword": "Then",
+          "text": "la réduction d'impôt est 3000€ (30% de 10000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les certificats de conformité"
+        },
+        {
+          "keyword": "And",
+          "text": "les factures doivent détailler matériaux et main d'œuvre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Cumul avec primes régionales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai réalisé une isolation complète"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût total est de 20000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu:"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la base déductible est 14000€ (20000€ - 6000€ primes)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt est 4200€ (30% de 14000€)"
+        },
+        {
+          "keyword": "But",
+          "text": "plafonnée à 3260€ pour l'année"
+        },
+        {
+          "keyword": "And",
+          "text": "l'excédent de 940€ est reportable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Travaux sur résidence secondaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une résidence secondaire en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'y ai fait des travaux d'isolation en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût est de 7000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la déductibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne peux pas bénéficier de la réduction"
+        },
+        {
+          "keyword": "But",
+          "text": "je peux déduire via les charges professionnelles si location"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Report des déductions non utilisées",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai fait des travaux en 2023"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma réduction calculée était de 5000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai pu déduire 3260€ en 2023"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un report de 1740€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai fait de nouveaux travaux en 2024 pour 4000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction 2024"
+        },
+        {
+          "keyword": "Then",
+          "text": "la nouvelle réduction est 1200€ (30% de 4000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ajoute le report de 2023: 1740€"
+        },
+        {
+          "keyword": "And",
+          "text": "le total est 2940€ pour 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "tout est déductible car inférieur au plafond"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul déduction selon type de travaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réalise des travaux de type <type_travaux>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût est de <cout>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un audit énergétique: <audit>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois une prime de <prime>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux applicable est <taux>%"
+        },
+        {
+          "keyword": "And",
+          "text": "la base déductible est <base>€"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt est <reduction>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_travaux",
+            "cout",
+            "audit",
+            "prime",
+            "taux",
+            "base",
+            "reduction"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_travaux": "Isolation toiture",
+                "cout": "6000",
+                "audit": "non",
+                "prime": "1000",
+                "taux": "30",
+                "base": "5000",
+                "reduction": "1500"
+              }
+            },
+            {
+              "values": {
+                "type_travaux": "Isolation murs",
+                "cout": "12000",
+                "audit": "oui",
+                "prime": "2500",
+                "taux": "45",
+                "base": "9500",
+                "reduction": "3260"
+              }
+            },
+            {
+              "values": {
+                "type_travaux": "Pompe à chaleur",
+                "cout": "15000",
+                "audit": "non",
+                "prime": "3000",
+                "taux": "30",
+                "base": "12000",
+                "reduction": "3260"
+              }
+            },
+            {
+              "values": {
+                "type_travaux": "Chaudière condensation",
+                "cout": "5000",
+                "audit": "non",
+                "prime": "500",
+                "taux": "30",
+                "base": "4500",
+                "reduction": "1350"
+              }
+            },
+            {
+              "values": {
+                "type_travaux": "Isolation complète",
+                "cout": "25000",
+                "audit": "oui",
+                "prime": "5000",
+                "taux": "45",
+                "base": "20000",
+                "reduction": "3260"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Conditions techniques et normes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux bénéficier des déductions"
+        },
+        {
+          "keyword": "When",
+          "text": "je planifie mes travaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter les normes techniques:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entrepreneur doit être enregistré"
+        },
+        {
+          "keyword": "And",
+          "text": "les factures doivent être détaillées et conformes"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Appartement en copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis copropriétaire d'un appartement"
+        },
+        {
+          "keyword": "And",
+          "text": "que la copropriété fait isoler la façade"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma quote-part est de 4500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que les travaux sont conformes aux normes"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux déduire ma quote-part"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction est 1350€ (30% de 4500€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir l'attestation du syndic"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Documentation et déclaration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déclarer mes travaux d'économie d'énergie"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare ma déclaration"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "utiliser les codes fiscaux:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.218Z"
+}

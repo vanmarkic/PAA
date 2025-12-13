@@ -1,0 +1,471 @@
+{
+  "id": "recours-etat-acc-s-aux-documents-administratifs",
+  "name": "Accès aux documents administratifs",
+  "description": "En tant que citoyen Je veux accéder aux documents administratifs Afin d'exercer mon droit à la transparence administrative",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la publicité de l'administration est un principe constitutionnel"
+      },
+      {
+        "text": "Et que la loi du 11 avril 1994 organise ce droit"
+      },
+      {
+        "text": "Et que des exceptions existent pour protéger certains intérêts"
+      },
+      {
+        "text": "Et que chaque niveau de pouvoir a sa propre législation"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'accès à mon dossier personnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'administration détient un dossier me concernant"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux consulter mon dossier personnel"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une demande d'accès"
+        },
+        {
+          "keyword": "Then",
+          "text": "je n'ai pas besoin de justifier mon intérêt"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration a 30 jours pour répondre"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux consulter sur place gratuitement"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir copie moyennant paiement des frais"
+        },
+        {
+          "keyword": "And",
+          "text": "les données de tiers doivent être occultées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Demande d'accès à un document d'intérêt général",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un document administratif existe"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il ne contient pas de données personnelles"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'est pas couvert par une exception"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'accès à ce document"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois identifier clairement le document"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration doit répondre dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "motiver tout refus ou limitation"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir copie ou consultation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Refus d'accès pour protection de la vie privée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un document contient des données personnelles de tiers"
+        },
+        {
+          "keyword": "And",
+          "text": "que ces données ne peuvent être anonymisées"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'intérêt légitime particulier"
+        },
+        {
+          "keyword": "When",
+          "text": "l'administration examine ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle peut refuser l'accès pour protéger la vie privée"
+        },
+        {
+          "keyword": "And",
+          "text": "elle doit motiver ce refus"
+        },
+        {
+          "keyword": "And",
+          "text": "m'indiquer les voies de recours"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux contester devant la Commission d'accès"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Documents préparatoires non communicables",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un document est préparatoire à une décision"
+        },
+        {
+          "keyword": "And",
+          "text": "que la décision n'est pas encore prise"
+        },
+        {
+          "keyword": "And",
+          "text": "que la divulgation nuirait au processus décisionnel"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande ce document"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'administration peut refuser temporairement"
+        },
+        {
+          "keyword": "And",
+          "text": "le document devient accessible après la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux revenir après la décision finale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Recours à la Commission d'accès aux documents administratifs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande d'accès a été refusée"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis la Commission d'accès"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois le faire dans les 60 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir copie de ma demande initiale"
+        },
+        {
+          "keyword": "And",
+          "text": "la Commission rend un avis dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration doit suivre cet avis ou motiver"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Demande de rectification de données incorrectes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un document administratif contient des erreurs me concernant"
+        },
+        {
+          "keyword": "And",
+          "text": "que ces erreurs peuvent me porter préjudice"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la rectification"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver l'erreur"
+        },
+        {
+          "keyword": "And",
+          "text": "proposer la correction"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration doit examiner ma demande"
+        },
+        {
+          "keyword": "And",
+          "text": "soit rectifier, soit motiver son refus"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux exercer un recours si refus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Accès aux documents environnementaux (Convention d'Aarhus)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un document concerne l'environnement"
+        },
+        {
+          "keyword": "And",
+          "text": "que la Convention d'Aarhus s'applique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'accès"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles sont plus favorables"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de réponse est de 30 jours maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "les exceptions sont interprétées restrictivement"
+        },
+        {
+          "keyword": "And",
+          "text": "l'intérêt public prime souvent"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais doivent rester raisonnables"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Délais et procédures selon le niveau de pouvoir",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux accéder à un document de <niveau>"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma demande date du <date_demande>"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le <date_actuelle>"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le statut"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de réponse est de <delai_reponse> jours"
+        },
+        {
+          "keyword": "And",
+          "text": "le statut devrait être <statut>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "niveau",
+            "date_demande",
+            "date_actuelle",
+            "delai_reponse",
+            "statut"
+          ],
+          "rows": [
+            {
+              "values": {
+                "niveau": "fédéral",
+                "date_demande": "2024-01-01",
+                "date_actuelle": "2024-01-25",
+                "delai_reponse": "30",
+                "statut": "en attente"
+              }
+            },
+            {
+              "values": {
+                "niveau": "fédéral",
+                "date_demande": "2024-01-01",
+                "date_actuelle": "2024-02-05",
+                "delai_reponse": "30",
+                "statut": "silence = refus"
+              }
+            },
+            {
+              "values": {
+                "niveau": "régional",
+                "date_demande": "2024-01-01",
+                "date_actuelle": "2024-01-25",
+                "delai_reponse": "30",
+                "statut": "en attente"
+              }
+            },
+            {
+              "values": {
+                "niveau": "communal",
+                "date_demande": "2024-01-01",
+                "date_actuelle": "2024-01-20",
+                "delai_reponse": "30",
+                "statut": "en attente"
+              }
+            },
+            {
+              "values": {
+                "niveau": "européen",
+                "date_demande": "2024-01-01",
+                "date_actuelle": "2024-01-10",
+                "delai_reponse": "15",
+                "statut": "en attente"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Réutilisation de documents administratifs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai obtenu accès à des documents"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux les réutiliser commercialement"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation de réutilisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "certaines conditions peuvent s'appliquer"
+        },
+        {
+          "keyword": "And",
+          "text": "des redevances peuvent être demandées"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter les droits d'auteur"
+        },
+        {
+          "keyword": "And",
+          "text": "mentionner la source"
+        },
+        {
+          "keyword": "And",
+          "text": "ne pas dénaturer l'information"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Protection des lanceurs d'alerte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai connaissance d'irrégularités"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux accéder aux documents pour les prouver"
+        },
+        {
+          "keyword": "And",
+          "text": "que je crains des représailles"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander la confidentialité"
+        },
+        {
+          "keyword": "And",
+          "text": "invoquer la protection des lanceurs d'alerte"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration doit protéger mon identité"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux passer par un intermédiaire"
+        },
+        {
+          "keyword": "And",
+          "text": "des recours spécifiques existent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

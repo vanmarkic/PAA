@@ -1,0 +1,84 @@
+{
+  "id": "propriete-intellectuelle-proc-dure-acc-l-r-e-pour-brevets-verts",
+  "name": "Procédure accélérée pour brevets verts",
+  "description": "En tant qu'inventeur de technologie verte Je veux accélérer l'examen de mon brevet Afin de commercialiser rapidement ma solution écologique",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les technologies vertes bénéficient de programmes accélérés"
+      },
+      {
+        "text": "Et que l'examen peut être réduit à 12 mois"
+      },
+      {
+        "text": "Et que c'est gratuit dans plusieurs offices"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Green Channel à l'OEB",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon invention réduit les émissions CO2"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle est éligible au programme vert"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'accélération Green Channel"
+        },
+        {
+          "keyword": "Then",
+          "text": "je soumets une déclaration d'éligibilité"
+        },
+        {
+          "keyword": "And",
+          "text": "l'examen est prioritaire"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir un brevet en 12-18 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Certification technologie propre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon brevet concerne l'énergie renouvelable"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux valoriser l'aspect écologique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la certification verte"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'office vérifie la contribution environnementale"
+        },
+        {
+          "keyword": "And",
+          "text": "délivre un label \"Green Patent\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-protection-juridique-du-logiciel",
+  "name": "Protection juridique du logiciel",
+  "description": "En tant que développeur ou éditeur Je veux protéger mon logiciel Afin d'empêcher la copie et le piratage",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le logiciel est protégé par droit d'auteur"
+      },
+      {
+        "text": "Et que les brevets sont possibles si effet technique"
+      },
+      {
+        "text": "Et que plusieurs protections se cumulent"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Protection multiple d'un logiciel innovant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai développé un logiciel avec algorithme novateur"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il produit un effet technique"
+        },
+        {
+          "keyword": "When",
+          "text": "j'établis ma stratégie de protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "je protège le code par droit d'auteur automatique"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux breveter la méthode technique"
+        },
+        {
+          "keyword": "And",
+          "text": "protéger l'interface comme dessin"
+        },
+        {
+          "keyword": "And",
+          "text": "garder les algorithmes clés secrets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Licence logiciel et protection",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je distribue mon logiciel"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux contrôler son usage"
+        },
+        {
+          "keyword": "When",
+          "text": "je rédige la licence (EULA)"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'interdis la décompilation"
+        },
+        {
+          "keyword": "And",
+          "text": "limite l'usage à un nombre de postes"
+        },
+        {
+          "keyword": "And",
+          "text": "interdis la revente"
+        },
+        {
+          "keyword": "And",
+          "text": "prévois des audits de conformité"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

@@ -1,0 +1,536 @@
+{
+  "id": "benefits-d-duction-des-emprunts-hypoth-caires",
+  "name": "Déduction des emprunts hypothécaires",
+  "description": "En tant que propriétaire avec emprunt hypothécaire Je veux déduire mes intérêts et remboursements en capital Afin de réduire mon impôt sur le revenu",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres fiscaux 2024 pour emprunts hypothécaires sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Emprunt habitation propre et unique - Wallonie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt de 250000€ en janvier 2021"
+        },
+        {
+          "keyword": "And",
+          "text": "que la durée de l'emprunt est de 20 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que le taux d'intérêt est de 1.5%"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé en 2024:"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie du chèque habitat de 1520€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'avantage est une réduction d'impôt directe"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne déduis pas les intérêts séparément"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Emprunt habitation non principale - Déduction ordinaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un emprunt pour une résidence secondaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté l'emprunt de 150000€ en 2018"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 2800€ d'intérêts en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 600€ d'assurance solde restant dû"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "seuls les intérêts sont déductibles"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant déductible est plafonné à 2350€"
+        },
+        {
+          "keyword": "And",
+          "text": "la déduction s'applique au taux marginal d'imposition"
+        },
+        {
+          "keyword": "And",
+          "text": "pour un taux de 40%, l'économie est de 940€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Emprunt mixte habitation et travaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai contracté un emprunt de 300000€"
+        },
+        {
+          "keyword": "And",
+          "text": "80000€ pour des travaux de rénovation"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 4500€ d'intérêts en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "les intérêts sont ventilés proportionnellement:"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque partie suit ses propres règles de déduction"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux cumuler avec les primes rénovation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Refinancement avec augmentation du capital",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'avais un emprunt initial de 200000€ en 2019"
+        },
+        {
+          "keyword": "And",
+          "text": "que le solde restant dû était de 170000€ en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai refinancé pour 220000€ en mars 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 3800€ d'intérêts après refinancement"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "seule la partie correspondant au solde initial (170000€) est éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les intérêts déductibles sont: 3800€ × (170000/220000) = 2936€"
+        },
+        {
+          "keyword": "And",
+          "text": "le supplément de 50000€ ne donne pas droit à déduction"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Couple avec emprunts multiples",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes un couple marié"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons:"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons nos déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'habitation principale suit les règles régionales"
+        },
+        {
+          "keyword": "And",
+          "text": "les autres biens sont en déduction ordinaire plafonnée"
+        },
+        {
+          "keyword": "And",
+          "text": "le plafond global de 2350€ s'applique par bien"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Emprunt à taux variable avec révision",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un emprunt à taux variable"
+        },
+        {
+          "keyword": "And",
+          "text": "que le taux initial était de 1.2% en 2023"
+        },
+        {
+          "keyword": "And",
+          "text": "que le taux a été révisé à 2.1% en juin 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes intérêts payés sont:"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare mes intérêts"
+        },
+        {
+          "keyword": "Then",
+          "text": "le total déductible est 2900€"
+        },
+        {
+          "keyword": "But",
+          "text": "plafonné selon les règles applicables"
+        },
+        {
+          "keyword": "And",
+          "text": "l'attestation bancaire reprend le total annuel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Assurance solde restant dû - Règles transitoires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai contracté mon emprunt en 2015"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance solde restant dû"
+        },
+        {
+          "keyword": "And",
+          "text": "que la prime annuelle est de 800€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la déductibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'assurance est déductible car contrat avant 2020"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant s'ajoute aux intérêts"
+        },
+        {
+          "keyword": "But",
+          "text": "le plafond global reste d'application"
+        },
+        {
+          "keyword": "And",
+          "text": "pour les nouveaux contrats (post-2020), pas de déduction"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Remboursement anticipé partiel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai effectué un remboursement anticipé de 30000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé une indemnité de remploi de 900€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes intérêts réguliers sont de 2500€ pour 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'indemnité de remploi n'est pas déductible"
+        },
+        {
+          "keyword": "And",
+          "text": "seuls les intérêts réguliers (2500€) sont déductibles"
+        },
+        {
+          "keyword": "And",
+          "text": "mes mensualités futures sont recalculées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Déduction selon région et date contrat",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside en <région>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon emprunt date de <année_contrat>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le montant emprunté est de <montant>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <enfants> enfants à charge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie <intérêts>€ d'intérêts annuels"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon avantage fiscal"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'avantage devrait être <avantage>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "année_contrat",
+            "montant",
+            "enfants",
+            "intérêts",
+            "avantage"
+          ],
+          "rows": [
+            {
+              "values": {
+                "région": "Wallonie",
+                "année_contrat": "2021",
+                "montant": "200000",
+                "enfants": "0",
+                "intérêts": "3000",
+                "avantage": "1520"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "année_contrat": "2020",
+                "montant": "250000",
+                "enfants": "2",
+                "intérêts": "3750",
+                "avantage": "1770"
+              }
+            },
+            {
+              "values": {
+                "région": "Bruxelles",
+                "année_contrat": "2018",
+                "montant": "180000",
+                "enfants": "1",
+                "intérêts": "2700",
+                "avantage": "1215"
+              }
+            },
+            {
+              "values": {
+                "région": "Flandre",
+                "année_contrat": "2019",
+                "montant": "220000",
+                "enfants": "2",
+                "intérêts": "3300",
+                "avantage": "1520"
+              }
+            },
+            {
+              "values": {
+                "région": "Flandre",
+                "année_contrat": "2024",
+                "montant": "300000",
+                "enfants": "1",
+                "intérêts": "4500",
+                "avantage": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Construction ou acquisition sur plan",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai signé un compromis pour une construction"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un crédit de construction de 350000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne paie que des intérêts intercalaires en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que le montant des intérêts est de 2100€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "les intérêts intercalaires sont déductibles"
+        },
+        {
+          "keyword": "But",
+          "text": "l'avantage fiscal principal commence après réception"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois occuper dans les 2 ans de la réception"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Séparation et reprise de l'emprunt",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je me suis séparé en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai repris seul l'emprunt commun de 180000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 3200€ d'intérêts depuis la reprise"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'habitation reste ma résidence principale"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie de l'intégralité des avantages"
+        },
+        {
+          "keyword": "And",
+          "text": "les conditions initiales sont maintenues"
+        },
+        {
+          "keyword": "And",
+          "text": "mon ex-conjoint perd tout avantage fiscal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Documentation requise pour la déclaration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déduire mes intérêts hypothécaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois disposer de:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois utiliser les codes:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.195Z"
+}

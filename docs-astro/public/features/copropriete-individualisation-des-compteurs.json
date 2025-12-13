@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-individualisation-des-compteurs",
+  "name": "Individualisation des Compteurs",
+  "description": "En tant que copropriété Je veux individualiser les compteurs Afin que chacun paie sa consommation réelle",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les compteurs sont collectifs"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation compteurs eau individuels",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'eau est au compteur général"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'individualisation coûte 500€/lot"
+        },
+        {
+          "keyword": "When",
+          "text": "le projet est voté à l'AG"
+        },
+        {
+          "keyword": "Then",
+          "text": "il nécessite:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Répartiteurs frais chauffage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le chauffage est collectif"
+        },
+        {
+          "keyword": "And",
+          "text": "que la directive européenne l'impose"
+        },
+        {
+          "keyword": "When",
+          "text": "les répartiteurs sont installés"
+        },
+        {
+          "keyword": "Then",
+          "text": "la facturation devient:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Copropriétaire refusant accès",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire refuse l'accès"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic agit"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

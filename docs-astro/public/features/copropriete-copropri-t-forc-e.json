@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-copropri-t-forc-e",
+  "name": "Copropriété Forcée",
+  "description": "En tant que copropriété Je veux gérer les situations de copropriété forcée Afin de respecter les droits inaliénables",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'une situation de copropriété forcée existe"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Mur mitoyen obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que deux propriétés sont contiguës"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un mur mitoyen les sépare"
+        },
+        {
+          "keyword": "When",
+          "text": "un propriétaire veut modifier le mur"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Cour commune indivisible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une cour dessert 4 maisons"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle est indivisible par nature"
+        },
+        {
+          "keyword": "When",
+          "text": "un copropriétaire veut la modifier"
+        },
+        {
+          "keyword": "Then",
+          "text": "il faut:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Passage nécessaire enclave",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une propriété est enclavée"
+        },
+        {
+          "keyword": "And",
+          "text": "bénéficie d'un passage nécessaire"
+        },
+        {
+          "keyword": "When",
+          "text": "le fonds servant veut modifier"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

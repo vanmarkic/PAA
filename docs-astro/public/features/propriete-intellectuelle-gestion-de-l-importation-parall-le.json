@@ -1,0 +1,76 @@
+{
+  "id": "propriete-intellectuelle-gestion-de-l-importation-parall-le",
+  "name": "Gestion de l'importation parallèle",
+  "description": "En tant que titulaire de droits IP Je veux contrôler les importations parallèles Afin de protéger mon réseau de distribution",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'épuisement communautaire s'applique"
+      },
+      {
+        "text": "Et que les importations hors EEE peuvent être bloquées"
+      },
+      {
+        "text": "Et que les produits authentiques dans l'EEE circulent librement"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Blocage d'importation hors EEE",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes produits sont vendus moins cher hors Europe"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un importateur veut les importer en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je détecte cette importation parallèle"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux saisir les douanes"
+        },
+        {
+          "keyword": "And",
+          "text": "bloquer l'importation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Importation parallèle légale dans l'EEE",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai vendu mes produits en Allemagne"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un revendeur les importe en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "j'essaie de m'y opposer"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne peux pas bloquer"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-gestion-des-d-m-nagements",
+  "name": "Gestion des Déménagements",
+  "description": "En tant que copropriété Je veux encadrer les déménagements Afin de limiter les dégradations",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un déménagement est prévu"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Déclaration déménagement obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire déménage"
+        },
+        {
+          "keyword": "When",
+          "text": "il informe le syndic"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit fournir:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Caution dégradations déménagement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une caution est demandée"
+        },
+        {
+          "keyword": "When",
+          "text": "le montant est fixé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il est de:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Dégâts lors déménagement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'ascenseur est endommagé"
+        },
+        {
+          "keyword": "When",
+          "text": "les responsabilités sont établies"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

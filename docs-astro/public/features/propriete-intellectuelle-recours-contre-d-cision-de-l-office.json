@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-recours-contre-d-cision-de-l-office",
+  "name": "Recours contre décision de l'office",
+  "description": "En tant que déposant Je veux contester une décision de refus Afin d'obtenir mon droit de propriété intellectuelle",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un recours est possible"
+      },
+      {
+        "text": "Et que le délai est généralement de 2 mois"
+      },
+      {
+        "text": "Et que les frais de recours sont dus"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Appel contre refus de brevet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'OPRI a refusé mon brevet"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste les motifs de refus"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme un recours dans les 2 mois"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois payer les frais de recours"
+        },
+        {
+          "keyword": "And",
+          "text": "soumettre des arguments détaillés"
+        },
+        {
+          "keyword": "And",
+          "text": "éventuellement modifier mes revendications"
+        },
+        {
+          "keyword": "And",
+          "text": "une chambre de recours examine mon dossier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Recours contre refus de marque",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le BOIP refuse ma marque"
+        },
+        {
+          "keyword": "And",
+          "text": "que je pense que c'est une erreur"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais appel devant la Cour d'appel"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois être représenté par un avocat"
+        },
+        {
+          "keyword": "And",
+          "text": "présenter des arguments juridiques"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour peut annuler la décision"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

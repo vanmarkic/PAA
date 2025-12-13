@@ -1,0 +1,516 @@
+{
+  "id": "democratie-p-titions-et-initiatives-citoyennes",
+  "name": "Pétitions et initiatives citoyennes",
+  "description": "En tant que citoyen engagé Je veux créer et signer des pétitions Afin de faire entendre ma voix démocratiquement",
+  "category": "democratie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les seuils de signatures sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Création d'une pétition communale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 21 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Liège"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux créer une pétition pour \"Plus de pistes cyclables\""
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma pétition communale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis une description détaillée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je définis l'objectif à 500 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fixe la date de clôture dans 6 mois"
+        },
+        {
+          "keyword": "Then",
+          "text": "la pétition devrait être enregistrée"
+        },
+        {
+          "keyword": "And",
+          "text": "elle devrait recevoir un numéro d'enregistrement"
+        },
+        {
+          "keyword": "And",
+          "text": "elle devrait être publiée sur la plateforme officielle"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais être désigné comme organisateur principal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Signature d'une pétition avec vérification",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition \"Réduction de la vitesse en ville\" existe"
+        },
+        {
+          "keyword": "And",
+          "text": "que la pétition a déjà 1234 signatures vérifiées"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis un résident de la commune concernée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 18 ans ou plus"
+        },
+        {
+          "keyword": "When",
+          "text": "je signe la pétition avec mon eID"
+        },
+        {
+          "keyword": "And",
+          "text": "que je confirme mon identité"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma signature devrait être enregistrée"
+        },
+        {
+          "keyword": "And",
+          "text": "ma signature devrait être marquée \"à vérifier\""
+        },
+        {
+          "keyword": "And",
+          "text": "le système devrait vérifier mon éligibilité"
+        },
+        {
+          "keyword": "And",
+          "text": "si je suis éligible, ma signature devient \"vérifiée\""
+        },
+        {
+          "keyword": "And",
+          "text": "le compteur devrait passer à 1235 signatures vérifiées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Pétition atteignant le seuil requis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition communale existe"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'objectif est de 500 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que la pétition a actuellement 499 signatures vérifiées"
+        },
+        {
+          "keyword": "When",
+          "text": "j'ajoute ma signature vérifiée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le seuil devrait être atteint"
+        },
+        {
+          "keyword": "And",
+          "text": "l'organisateur devrait être notifié"
+        },
+        {
+          "keyword": "And",
+          "text": "la commune devrait être notifiée automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "la pétition devrait passer au statut \"soumise aux autorités\""
+        },
+        {
+          "keyword": "And",
+          "text": "un délai de réponse de 3 mois devrait commencer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Initiative citoyenne européenne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux lancer une initiative citoyenne européenne"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai formé un comité de 7 citoyens de pays différents"
+        },
+        {
+          "keyword": "And",
+          "text": "que le sujet concerne \"La protection des abeilles en Europe\""
+        },
+        {
+          "keyword": "When",
+          "text": "j'enregistre l'initiative"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis les traductions en FR, NL, DE et EN"
+        },
+        {
+          "keyword": "And",
+          "text": "que la Commission européenne valide la recevabilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'initiative devrait être publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "nous devrions avoir 12 mois pour collecter 1 million de signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "les signatures doivent venir d'au moins 7 pays membres"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque pays a un seuil minimum de signatures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Tentative de double signature",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition \"Transport gratuit\" existe"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai déjà signé cette pétition il y a 2 semaines"
+        },
+        {
+          "keyword": "When",
+          "text": "je tente de signer à nouveau"
+        },
+        {
+          "keyword": "Then",
+          "text": "le système devrait détecter la double signature"
+        },
+        {
+          "keyword": "And",
+          "text": "ma nouvelle signature devrait être rejetée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"Vous avez déjà signé cette pétition\""
+        },
+        {
+          "keyword": "And",
+          "text": "le compteur de signatures ne devrait pas changer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Pétition expirée sans atteindre le seuil",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition régionale existe depuis 9 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'objectif était de 15000 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle n'a collecté que 8500 signatures"
+        },
+        {
+          "keyword": "When",
+          "text": "la date de clôture arrive"
+        },
+        {
+          "keyword": "Then",
+          "text": "la pétition devrait être fermée automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "le statut devrait passer à \"échec - seuil non atteint\""
+        },
+        {
+          "keyword": "And",
+          "text": "l'organisateur devrait recevoir un rapport final"
+        },
+        {
+          "keyword": "And",
+          "text": "les signataires devraient être informés du résultat"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Réponse des autorités à une pétition réussie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition a atteint 2000 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle a été soumise au conseil communal il y a 2 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "le conseil communal examine la pétition"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il décide d'accepter partiellement les demandes"
+        },
+        {
+          "keyword": "Then",
+          "text": "une réponse officielle devrait être publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "la réponse devrait inclure:"
+        },
+        {
+          "keyword": "And",
+          "text": "tous les signataires devraient être notifiés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Pétition frauduleuse avec fausses signatures",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition prétend avoir 5000 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que des doutes sont soulevés sur l'authenticité"
+        },
+        {
+          "keyword": "When",
+          "text": "l'audit des signatures est effectué"
+        },
+        {
+          "keyword": "And",
+          "text": "que 2000 signatures sont identifiées comme frauduleuses"
+        },
+        {
+          "keyword": "Then",
+          "text": "ces signatures devraient être invalidées"
+        },
+        {
+          "keyword": "And",
+          "text": "le compteur devrait être corrigé à 3000 signatures valides"
+        },
+        {
+          "keyword": "And",
+          "text": "l'organisateur devrait recevoir un avertissement"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas de fraude intentionnelle, des poursuites peuvent être engagées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Éligibilité à signer selon le type de pétition",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un <statut>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une pétition de niveau <niveau> existe"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie si je peux signer"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon éligibilité devrait être \"<eligible>\""
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"<raison>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "statut",
+            "age",
+            "niveau",
+            "eligible",
+            "raison"
+          ],
+          "rows": [
+            {
+              "values": {
+                "statut": "citoyen belge",
+                "age": "18",
+                "niveau": "fédéral",
+                "eligible": "oui",
+                "raison": "Citoyen majeur éligible"
+              }
+            },
+            {
+              "values": {
+                "statut": "citoyen belge",
+                "age": "16",
+                "niveau": "communal",
+                "eligible": "oui",
+                "raison": "Âge minimum 16 ans pour pétitions locales"
+              }
+            },
+            {
+              "values": {
+                "statut": "citoyen belge",
+                "age": "15",
+                "niveau": "communal",
+                "eligible": "non",
+                "raison": "Âge minimum non atteint"
+              }
+            },
+            {
+              "values": {
+                "statut": "citoyen EU",
+                "age": "25",
+                "niveau": "européen",
+                "eligible": "oui",
+                "raison": "Citoyen européen éligible"
+              }
+            },
+            {
+              "values": {
+                "statut": "citoyen EU",
+                "age": "20",
+                "niveau": "fédéral",
+                "eligible": "non",
+                "raison": "Réservé aux citoyens belges"
+              }
+            },
+            {
+              "values": {
+                "statut": "résident non-EU",
+                "age": "30",
+                "niveau": "communal",
+                "eligible": "oui",
+                "raison": "Résident local éligible"
+              }
+            },
+            {
+              "values": {
+                "statut": "résident non-EU",
+                "age": "30",
+                "niveau": "fédéral",
+                "eligible": "non",
+                "raison": "Réservé aux citoyens belges"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Transformation d'une pétition en référendum",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une pétition communale a collecté 10000 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela représente plus de 10% des électeurs inscrits"
+        },
+        {
+          "keyword": "And",
+          "text": "que le sujet est éligible pour un référendum"
+        },
+        {
+          "keyword": "When",
+          "text": "le conseil communal examine la pétition"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut décider d'organiser une consultation populaire"
+        },
+        {
+          "keyword": "And",
+          "text": "tous les citoyens inscrits pourront voter"
+        },
+        {
+          "keyword": "And",
+          "text": "le résultat sera contraignant si le quorum est atteint"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

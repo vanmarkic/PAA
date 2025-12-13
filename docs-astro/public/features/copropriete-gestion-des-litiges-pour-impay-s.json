@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-gestion-des-litiges-pour-impay-s",
+  "name": "Gestion des Litiges pour Impayés",
+  "description": "En tant que syndic Je veux gérer les impayés de charges Afin de recouvrer les créances de la copropriété",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un copropriétaire a des charges impayées"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Procédure de recouvrement amiable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire doit 1500€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il a 45 jours de retard"
+        },
+        {
+          "keyword": "When",
+          "text": "je lance la procédure de recouvrement"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Calcul des intérêts de retard",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un montant de 2000€ est impayé"
+        },
+        {
+          "keyword": "And",
+          "text": "que le retard est de 120 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les pénalités"
+        },
+        {
+          "keyword": "Then",
+          "text": "les intérêts sont de 8% annuel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Saisie conservatoire sur lot",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les impayés dépassent 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le montant dépasse 2000€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG autorise la saisie à la majorité absolue"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic peut:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

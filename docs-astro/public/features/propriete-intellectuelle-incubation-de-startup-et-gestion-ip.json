@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-incubation-de-startup-et-gestion-ip",
+  "name": "Incubation de startup et gestion IP",
+  "description": "En tant que startup en incubateur Je veux protéger et développer mon IP Afin de créer de la valeur pour les investisseurs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'IP est cruciale pour les startups"
+      },
+      {
+        "text": "Et que les incubateurs offrent du support"
+      },
+      {
+        "text": "Et que les investisseurs regardent le portefeuille IP"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Stratégie IP en incubation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma startup entre en incubateur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une technologie innovante"
+        },
+        {
+          "keyword": "When",
+          "text": "j'élabore ma stratégie IP"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'incubateur m'aide à identifier les actifs"
+        },
+        {
+          "keyword": "And",
+          "text": "prioriser les dépôts selon le budget"
+        },
+        {
+          "keyword": "And",
+          "text": "négocier avec des cabinets IP partenaires"
+        },
+        {
+          "keyword": "And",
+          "text": "préparer le portefeuille pour les investisseurs"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Due diligence IP pour levée de fonds",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je prépare une levée de fonds"
+        },
+        {
+          "keyword": "And",
+          "text": "que les VCs vont auditer mon IP"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare la data room"
+        },
+        {
+          "keyword": "Then",
+          "text": "je documente tous mes droits IP"
+        },
+        {
+          "keyword": "And",
+          "text": "je corrige les faiblesses identifiées"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

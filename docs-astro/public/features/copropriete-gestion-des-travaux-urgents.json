@@ -1,0 +1,114 @@
+{
+  "id": "copropriete-gestion-des-travaux-urgents",
+  "name": "Gestion des Travaux Urgents",
+  "description": "En tant que syndic Je veux gérer les travaux urgents Afin de préserver l'immeuble et la sécurité",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un problème urgent survient dans l'immeuble"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Fuite d'eau majeure nécessitant intervention immédiate",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une canalisation principale a éclaté"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'eau menace plusieurs appartements"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic est informé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut engager les travaux immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "sans autorisation préalable de l'AG"
+        },
+        {
+          "keyword": "And",
+          "text": "doit informer le conseil de copropriété sous 24h"
+        },
+        {
+          "keyword": "And",
+          "text": "convoquer une AG extraordinaire sous 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Plafond de dépense pour travaux urgents",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des travaux urgents sont nécessaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que le devis est de 8000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le plafond syndic est de 5000€"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic évalue la situation"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit consulter le conseil de copropriété"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir au moins 2 devis si possible"
+        },
+        {
+          "keyword": "And",
+          "text": "peut dépasser si danger imminent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Travaux conservatoires après sinistre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un sinistre a endommagé le toit"
+        },
+        {
+          "keyword": "And",
+          "text": "que des mesures conservatoires sont nécessaires"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic agit"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

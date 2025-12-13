@@ -1,0 +1,580 @@
+{
+  "id": "tax-quotient-conjugal-et-d-claration-commune",
+  "name": "Quotient conjugal et déclaration commune",
+  "description": "En tant que couple marié ou cohabitant légal Je veux bénéficier du quotient conjugal Afin d'optimiser notre imposition commune",
+  "category": "tax",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres du quotient conjugal 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Couple avec un seul revenu professionnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes mariés"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu professionnel est de 45000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint n'a aucun revenu"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous n'avons pas d'enfants"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons notre imposition commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "le quotient conjugal s'applique automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "11660€ sont transférés à mon conjoint (30% de 45000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "ma base imposable devient 33340€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie d'impôt est significative par rapport à une imposition séparée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Couple avec revenus déséquilibrés et enfants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes cohabitants légaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu est de 55000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le revenu de mon partenaire est de 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons 2 enfants à charge"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons le quotient conjugal"
+        },
+        {
+          "keyword": "Then",
+          "text": "le transfert maximal est 11660€ (30% du plus bas revenu imposable)"
+        },
+        {
+          "keyword": "And",
+          "text": "nous bénéficions de la majoration pour enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "la quotité exemptée est augmentée de 1810€ par enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "notre charge fiscale commune est optimisée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Conjoint aidant dans profession indépendante",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint m'aide dans mon activité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je lui attribue 30% de mes revenus professionnels"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus nets sont de 60000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déclarons nos revenus"
+        },
+        {
+          "keyword": "Then",
+          "text": "18000€ sont attribués à mon conjoint aidant"
+        },
+        {
+          "keyword": "And",
+          "text": "ces revenus sont imposés séparément dans son chef"
+        },
+        {
+          "keyword": "And",
+          "text": "nous bénéficions d'une optimisation fiscale"
+        },
+        {
+          "keyword": "And",
+          "text": "les cotisations sociales sont calculées séparément"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Limite du quotient conjugal atteinte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes mariés"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu est de 80000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a un revenu de 3000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons le quotient conjugal"
+        },
+        {
+          "keyword": "Then",
+          "text": "le transfert est limité car le conjoint a moins de 3830€"
+        },
+        {
+          "keyword": "And",
+          "text": "seulement la différence (3830€ - 3000€ = 830€) peut être transférée"
+        },
+        {
+          "keyword": "And",
+          "text": "le quotient conjugal est moins avantageux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Pension de survie et quotient conjugal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis veuf/veuve"
+        },
+        {
+          "keyword": "And",
+          "text": "que je perçois une pension de survie de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des revenus professionnels de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 1 enfant à charge"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon imposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie du quotient conjugal pour veuf/veuve"
+        },
+        {
+          "keyword": "And",
+          "text": "ma quotité exemptée est majorée"
+        },
+        {
+          "keyword": "And",
+          "text": "l'avantage est maintenu pendant l'année du décès et les 3 suivantes"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Séparation en cours d'année",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous nous sommes séparés le 1er juillet 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous étions mariés depuis 2015"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 40000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que celui de mon ex-conjoint est de 30000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous établissons nos déclarations"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons choisir entre:"
+        },
+        {
+          "keyword": "And",
+          "text": "généralement la déclaration commune reste avantageuse"
+        },
+        {
+          "keyword": "And",
+          "text": "l'année suivante, déclarations obligatoirement séparées"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Revenus de remplacement et quotient conjugal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis au chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes allocations annuelles sont de 18000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a un salaire de 45000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons notre imposition commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes allocations sont imposables"
+        },
+        {
+          "keyword": "But",
+          "text": "le quotient conjugal s'applique normalement"
+        },
+        {
+          "keyword": "And",
+          "text": "le transfert est calculé sur les revenus nets"
+        },
+        {
+          "keyword": "And",
+          "text": "nous optimisons notre charge fiscale globale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Parent isolé vs quotient conjugal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé (divorcé)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 enfants à charge exclusive"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de 35000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je compare avec le quotient conjugal"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie d'avantages spécifiques:"
+        },
+        {
+          "keyword": "And",
+          "text": "ces avantages compensent partiellement l'absence de quotient conjugal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Optimisation fiscale selon configuration familiale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le revenu 1 est de <revenu1>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le revenu 2 est de <revenu2>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons <enfants> enfants"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons l'optimisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "le transfert quotient conjugal est <transfert>€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'économie d'impôt estimée est <economie>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "revenu1",
+            "revenu2",
+            "enfants",
+            "transfert",
+            "economie"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "mariés",
+                "revenu1": "50000",
+                "revenu2": "0",
+                "enfants": "0",
+                "transfert": "11660",
+                "economie": "3500"
+              }
+            },
+            {
+              "values": {
+                "situation": "mariés",
+                "revenu1": "60000",
+                "revenu2": "20000",
+                "enfants": "2",
+                "transfert": "6000",
+                "economie": "1800"
+              }
+            },
+            {
+              "values": {
+                "situation": "cohabitants",
+                "revenu1": "40000",
+                "revenu2": "10000",
+                "enfants": "1",
+                "transfert": "10000",
+                "economie": "2500"
+              }
+            },
+            {
+              "values": {
+                "situation": "mariés",
+                "revenu1": "70000",
+                "revenu2": "35000",
+                "enfants": "3",
+                "transfert": "10500",
+                "economie": "2100"
+              }
+            },
+            {
+              "values": {
+                "situation": "mariés",
+                "revenu1": "45000",
+                "revenu2": "2000",
+                "enfants": "0",
+                "transfert": "1830",
+                "economie": "550"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Déclaration commune obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes mariés ou cohabitants légaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous n'étions pas séparés au 31 décembre 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "nous établissons notre déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons obligatoirement faire une déclaration commune"
+        },
+        {
+          "keyword": "And",
+          "text": "nous recevons un seul avertissement-extrait de rôle"
+        },
+        {
+          "keyword": "And",
+          "text": "les deux conjoints sont solidairement responsables"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Avantages fiscaux personnels dans déclaration commune",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous faisons une déclaration commune"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des frais professionnels de 3000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a des frais de garde d'enfants de 2000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai souscrit une épargne-pension de 990€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons nos déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "chaque avantage reste personnel:"
+        },
+        {
+          "keyword": "But",
+          "text": "le quotient conjugal s'applique sur le résultat net"
+        },
+        {
+          "keyword": "And",
+          "text": "l'optimisation est automatique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Précompte professionnel et versements anticipés",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes mariés"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un précompte professionnel retenu de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint indépendant a fait des versements anticipés de 8000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons notre impôt final"
+        },
+        {
+          "keyword": "Then",
+          "text": "les deux montants sont additionnés (20000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "comparés à l'impôt total du couple"
+        },
+        {
+          "keyword": "And",
+          "text": "nous recevons un remboursement ou devons un complément"
+        },
+        {
+          "keyword": "And",
+          "text": "la bonification pour versements anticipés s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Documentation pour quotient conjugal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous voulons bénéficier du quotient conjugal"
+        },
+        {
+          "keyword": "When",
+          "text": "nous préparons notre déclaration"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul du quotient est automatique"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune demande spécifique n'est nécessaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.219Z"
+}

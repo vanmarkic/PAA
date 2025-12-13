@@ -1,0 +1,468 @@
+{
+  "id": "immobilier-location-et-droits-des-locataires-en-belgique",
+  "name": "Location et Droits des Locataires en Belgique",
+  "description": "En tant que locataire ou propriétaire Je veux connaître mes droits et obligations en matière de location Afin de respecter la législation sur les baux d'habitation",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la garantie locative maximum est de 2 mois en Wallonie et Bruxelles"
+      },
+      {
+        "text": "Et que la garantie locative maximum est de 3 mois en Flandre"
+      },
+      {
+        "text": "Et que l'indexation du loyer suit l'indice santé"
+      },
+      {
+        "text": "Et que le préavis standard est de 3 mois pour le locataire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Établissement d'un bail d'habitation conforme",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je loue un appartement 2 chambres"
+        },
+        {
+          "keyword": "And",
+          "text": "que le loyer mensuel est de 800€"
+        },
+        {
+          "keyword": "And",
+          "text": "que la location est en Région Wallonne"
+        },
+        {
+          "keyword": "When",
+          "text": "j'établis le contrat de bail"
+        },
+        {
+          "keyword": "Then",
+          "text": "le bail doit contenir obligatoirement:"
+        },
+        {
+          "keyword": "And",
+          "text": "le bail doit être enregistré dans les 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais d'enregistrement sont gratuits"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Constitution de la garantie locative bancaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le loyer est de 900€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Région Bruxelloise"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis une garantie bancaire"
+        },
+        {
+          "keyword": "When",
+          "text": "je constitue la garantie locative"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "les intérêts appartiennent au locataire"
+        },
+        {
+          "keyword": "And",
+          "text": "la libération nécessite l'accord des deux parties"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Calcul de l'indexation annuelle du loyer",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le loyer initial est de 750€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le bail a commencé en janvier 2022"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'indice de base est 115.53"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'indice actuel est 123.47"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule l'indexation pour 2024"
+        },
+        {
+          "keyword": "Then",
+          "text": "la formule est: loyer_base × indice_nouveau / indice_base"
+        },
+        {
+          "keyword": "And",
+          "text": "le nouveau loyer est: 750 × 123.47 / 115.53 = 801.60€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indexation doit être notifiée par écrit"
+        },
+        {
+          "keyword": "And",
+          "text": "elle ne peut être rétroactive que de 3 mois maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Réalisation de l'état des lieux contradictoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je commence une location"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'état des lieux d'entrée est obligatoire"
+        },
+        {
+          "keyword": "When",
+          "text": "je procède à l'état des lieux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "si désaccord, un expert est désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais d'expert sont partagés 50/50"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Répartition des obligations de réparation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une réparation est nécessaire dans le logement"
+        },
+        {
+          "keyword": "When",
+          "text": "je détermine qui doit payer"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition est:"
+        },
+        {
+          "keyword": "And",
+          "text": "le locataire doit permettre l'accès pour réparations urgentes"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Résiliation du bail par le locataire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un bail de 9 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'occupe le logement depuis 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux donner mon préavis"
+        },
+        {
+          "keyword": "When",
+          "text": "je résilie mon bail"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles de préavis sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "le préavis doit être envoyé par recommandé"
+        },
+        {
+          "keyword": "And",
+          "text": "il prend cours le 1er du mois suivant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Procédure d'expulsion pour non-paiement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un locataire a 3 mois d'arriérés de loyer"
+        },
+        {
+          "keyword": "And",
+          "text": "que des rappels ont été envoyés"
+        },
+        {
+          "keyword": "When",
+          "text": "le propriétaire lance une procédure d'expulsion"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "le CPAS peut intervenir pour médiation"
+        },
+        {
+          "keyword": "And",
+          "text": "l'expulsion hivernale est interdite (décembre-mars)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Location d'un logement étudiant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je loue un kot à un étudiant"
+        },
+        {
+          "keyword": "And",
+          "text": "que le loyer est de 400€ charges comprises"
+        },
+        {
+          "keyword": "When",
+          "text": "j'établis le bail étudiant"
+        },
+        {
+          "keyword": "Then",
+          "text": "les spécificités sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "le bail prend fin automatiquement aux études"
+        },
+        {
+          "keyword": "And",
+          "text": "les parents peuvent être caution solidaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Mise en place d'une colocation légale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 personnes veulent colouer une maison"
+        },
+        {
+          "keyword": "And",
+          "text": "que le loyer total est de 1200€"
+        },
+        {
+          "keyword": "And",
+          "text": "que chacun a une chambre privée"
+        },
+        {
+          "keyword": "When",
+          "text": "nous organisons la colocation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options de bail sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "un règlement de colocation est recommandé"
+        },
+        {
+          "keyword": "And",
+          "text": "la garantie peut être divisée ou solidaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Recours pour logement insalubre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon logement présente des problèmes de salubrité"
+        },
+        {
+          "keyword": "And",
+          "text": "que le propriétaire refuse d'agir"
+        },
+        {
+          "keyword": "When",
+          "text": "j'engage un recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux consigner le loyer si graves manquements"
+        },
+        {
+          "keyword": "And",
+          "text": "une attestation de conformité peut être exigée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Calcul du préavis selon la durée d'occupation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un bail de <type_bail>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'occupe depuis <mois_occupation> mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis <partie>"
+        },
+        {
+          "keyword": "When",
+          "text": "je donne mon préavis"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de préavis est <delai> mois"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité est <indemnite>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_bail",
+            "mois_occupation",
+            "partie",
+            "delai",
+            "indemnite"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_bail": "9 ans",
+                "mois_occupation": "5",
+                "partie": "locataire",
+                "delai": "3",
+                "indemnite": "3 mois"
+              }
+            },
+            {
+              "values": {
+                "type_bail": "9 ans",
+                "mois_occupation": "8",
+                "partie": "locataire",
+                "delai": "3",
+                "indemnite": "2 mois"
+              }
+            },
+            {
+              "values": {
+                "type_bail": "9 ans",
+                "mois_occupation": "15",
+                "partie": "locataire",
+                "delai": "3",
+                "indemnite": "1 mois"
+              }
+            },
+            {
+              "values": {
+                "type_bail": "9 ans",
+                "mois_occupation": "24",
+                "partie": "locataire",
+                "delai": "3",
+                "indemnite": "0 mois"
+              }
+            },
+            {
+              "values": {
+                "type_bail": "3 ans",
+                "mois_occupation": "12",
+                "partie": "locataire",
+                "delai": "3",
+                "indemnite": "0 mois"
+              }
+            },
+            {
+              "values": {
+                "type_bail": "9 ans",
+                "mois_occupation": "36",
+                "partie": "propriétaire",
+                "delai": "6",
+                "indemnite": "0 mois"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

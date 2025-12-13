@@ -1,0 +1,616 @@
+{
+  "id": "etrangers-recours-et-voies-de-droit-pour-trangers",
+  "name": "Recours et voies de droit pour étrangers",
+  "description": "En tant qu'étranger confronté à une décision négative Je veux exercer mes droits de recours Afin de contester la décision et obtenir justice",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les juridictions compétentes sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Recours CCE contre refus de visa",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon visa a été refusé par le consulat"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu la notification avec motivation"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste les motifs du refus"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis dans le délai de 30 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose un recours au CCE"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois utiliser le formulaire standard"
+        },
+        {
+          "keyword": "And",
+          "text": "payer 200€ de droits de rôle"
+        },
+        {
+          "keyword": "And",
+          "text": "joindre la décision contestée"
+        },
+        {
+          "keyword": "And",
+          "text": "exposer mes moyens en droit"
+        },
+        {
+          "keyword": "And",
+          "text": "le CCE statue dans les 3 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Suspension en extrême urgence d'un OQT",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu un ordre de quitter le territoire"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis détenu en centre fermé"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'éloignement est imminent (48h)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des attaches familiales en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la suspension en extrême urgence"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver l'extrême urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "le préjudice grave difficilement réparable"
+        },
+        {
+          "keyword": "And",
+          "text": "le moyen sérieux d'annulation"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audience a lieu dans les 3 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision est rendue séance tenante"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recours en annulation décision CGRA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le CGRA a rejeté ma demande d'asile"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste l'évaluation de ma crédibilité"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai de nouveaux éléments de preuve"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais un recours de pleine juridiction au CCE"
+        },
+        {
+          "keyword": "Then",
+          "text": "le recours est suspensif automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander à être entendu"
+        },
+        {
+          "keyword": "And",
+          "text": "présenter de nouveaux documents"
+        },
+        {
+          "keyword": "And",
+          "text": "le CCE peut confirmer, réformer ou annuler"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de décision est de 3 à 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Cassation administrative au Conseil d'État",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le CCE a rejeté mon recours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste la légalité de l'arrêt"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a violation de la loi ou procédure"
+        },
+        {
+          "keyword": "When",
+          "text": "je me pourvois en cassation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois le faire dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir un avocat au Conseil d'État"
+        },
+        {
+          "keyword": "And",
+          "text": "payer 200€ de droits"
+        },
+        {
+          "keyword": "And",
+          "text": "le Conseil examine uniquement le droit"
+        },
+        {
+          "keyword": "And",
+          "text": "peut casser et renvoyer au CCE"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Recours contre décision négative de naturalisation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la Chambre a rejeté ma naturalisation"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste les motifs"
+        },
+        {
+          "keyword": "And",
+          "text": "que je pense qu'il y a erreur d'appréciation"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais un recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois saisir le tribunal de première instance"
+        },
+        {
+          "keyword": "And",
+          "text": "le faire dans les 15 jours de notification"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal examine les faits et le droit"
+        },
+        {
+          "keyword": "And",
+          "text": "peut ordonner l'octroi de la nationalité"
+        },
+        {
+          "keyword": "And",
+          "text": "appel possible devant la Cour d'appel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Procédure devant le tribunal du travail",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le CPAS refuse l'aide sociale"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il invoque mon statut de séjour"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'estime y avoir droit"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le tribunal du travail"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai 3 mois pour agir"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander l'aide juridique"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal examine mes besoins"
+        },
+        {
+          "keyword": "And",
+          "text": "peut condamner le CPAS"
+        },
+        {
+          "keyword": "And",
+          "text": "ordonner le paiement avec effet rétroactif"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Recours devant la Cour européenne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que tous mes recours internes sont épuisés"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes droits fondamentaux sont violés"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est une violation de la CEDH"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est dans les 6 mois de la décision finale"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis la Cour européenne"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois remplir le formulaire de requête"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer le préjudice important"
+        },
+        {
+          "keyword": "And",
+          "text": "l'épuisement des recours internes"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour peut demander des mesures provisoires"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de plusieurs années"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Demande de mesures provisoires (article 39)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon éloignement est programmé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un recours est pendant au CCE"
+        },
+        {
+          "keyword": "But",
+          "text": "que le recours n'est pas suspensif"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a risque de traitement inhumain"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures provisoires"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois invoquer l'article 39 du règlement CCE"
+        },
+        {
+          "keyword": "And",
+          "text": "prouver le risque de préjudice irréparable"
+        },
+        {
+          "keyword": "And",
+          "text": "le CCE peut suspendre l'éloignement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Tierce opposition contre décision",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une décision affecte mes droits"
+        },
+        {
+          "keyword": "But",
+          "text": "que je n'étais pas partie à la procédure"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes intérêts sont lésés"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme tierce opposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois justifier mon intérêt"
+        },
+        {
+          "keyword": "And",
+          "text": "agir dans le délai de 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer le préjudice"
+        },
+        {
+          "keyword": "And",
+          "text": "le juge peut modifier la décision"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Demande de réouverture de dossier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande a été rejetée"
+        },
+        {
+          "keyword": "But",
+          "text": "que j'ai découvert de nouveaux éléments"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils sont déterminants"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils n'étaient pas disponibles avant"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la réouverture"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver le caractère nouveau"
+        },
+        {
+          "keyword": "And",
+          "text": "leur pertinence pour la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "l'impossibilité de les produire avant"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration peut rouvrir le dossier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Procédure en référé administratif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'administration ne répond pas"
+        },
+        {
+          "keyword": "And",
+          "text": "que le délai légal est dépassé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin urgent d'une décision"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le président du tribunal"
+        },
+        {
+          "keyword": "Then",
+          "text": "c'est une procédure en référé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audience est fixée rapidement"
+        },
+        {
+          "keyword": "And",
+          "text": "le juge peut ordonner à l'administration"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Délais de recours selon la décision",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision <type_decision>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux faire un recours"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le délai"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois agir dans les <delai> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_decision",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_decision": "refus de visa",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "rejet demande asile",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "ordre quitter territoire",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "refus naturalisation",
+                "delai": "15"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "refus séjour",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "retrait titre séjour",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "refus aide sociale",
+                "delai": "90"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Aide juridique de deuxième ligne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont insuffisants"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin d'un avocat pour mon recours"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'aide juridique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je m'adresse au bureau d'aide juridique"
+        },
+        {
+          "keyword": "And",
+          "text": "je fournis mes preuves de revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "si éligible, un avocat pro deo est désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de justice sont réduits ou gratuits"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à l'assistance complète"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

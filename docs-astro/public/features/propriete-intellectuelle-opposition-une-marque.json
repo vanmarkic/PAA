@@ -1,0 +1,168 @@
+{
+  "id": "propriete-intellectuelle-opposition-une-marque",
+  "name": "Opposition à une marque",
+  "description": "En tant que titulaire de marque antérieure Je veux m'opposer à une nouvelle marque similaire Afin de protéger mes droits exclusifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le délai d'opposition est de 2 mois"
+      },
+      {
+        "text": "Et que les frais d'opposition sont de 1000€"
+      },
+      {
+        "text": "Et que la procédure est contradictoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Opposition fondée sur marque identique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je possède la marque \"TECHPRO\" depuis 2020"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une nouvelle marque \"TECHPRO\" est publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "que les produits sont identiques ou similaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose mon opposition dans les 2 mois"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon opposition est recevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le déposant est notifié"
+        },
+        {
+          "keyword": "And",
+          "text": "une phase contradictoire commence"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision intervient dans 6-12 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Opposition basée sur risque de confusion",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque est \"NOVATEL\""
+        },
+        {
+          "keyword": "And",
+          "text": "que la nouvelle marque est \"NOVOTEL\""
+        },
+        {
+          "keyword": "And",
+          "text": "que les services sont similaires"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il existe un risque de confusion"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme opposition avec preuves d'usage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver l'usage sérieux de ma marque"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer le risque de confusion"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir une argumentation juridique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Défense contre une opposition",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une opposition est formée contre ma marque"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 mois pour répondre"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare ma défense"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux contester l'usage de la marque antérieure"
+        },
+        {
+          "keyword": "And",
+          "text": "argumenter sur l'absence de similarité"
+        },
+        {
+          "keyword": "And",
+          "text": "demander des preuves d'usage à l'opposant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Règlement amiable pendant l'opposition",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une opposition est en cours"
+        },
+        {
+          "keyword": "And",
+          "text": "que les parties souhaitent négocier"
+        },
+        {
+          "keyword": "When",
+          "text": "nous demandons une suspension \"cooling-off\""
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est suspendue 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "nous pouvons négocier un accord de coexistence"
+        },
+        {
+          "keyword": "And",
+          "text": "éviter une décision défavorable"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

@@ -1,0 +1,222 @@
+{
+  "id": "propriete-intellectuelle-d-p-t-de-marque-benelux",
+  "name": "Dépôt de marque Benelux",
+  "description": "En tant qu'entreprise ou entrepreneur Je veux déposer une marque Benelux Afin de protéger mon identité commerciale en Belgique, Pays-Bas et Luxembourg",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les frais de marque Benelux 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Dépôt de marque verbale distinctive",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souhaite protéger le nom \"INNOVATECH\""
+        },
+        {
+          "keyword": "And",
+          "text": "que la marque est distinctive pour des services informatiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai choisi les classes 9, 35 et 42"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'aucune marque identique n'existe dans ces classes"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose ma demande auprès du BOIP"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais payer 244€ de frais de base"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois un numéro de dépôt immédiat"
+        },
+        {
+          "keyword": "And",
+          "text": "la marque sera publiée dans 2 semaines"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Marque descriptive refusée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déposer \"SUPER ORDINATEUR\""
+        },
+        {
+          "keyword": "And",
+          "text": "que ces termes décrivent directement les produits"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils manquent de caractère distinctif"
+        },
+        {
+          "keyword": "When",
+          "text": "le BOIP examine ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"marque descriptive sans caractère distinctif\""
+        },
+        {
+          "keyword": "And",
+          "text": "je peux faire appel dans les 2 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Opposition par un tiers",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque a été publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un concurrent a une marque antérieure similaire"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il dépose une opposition dans les 2 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "la procédure d'opposition commence"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois répondre dans le délai imparti"
+        },
+        {
+          "keyword": "And",
+          "text": "une phase contradictoire s'engage"
+        },
+        {
+          "keyword": "And",
+          "text": "le BOIP rendra une décision dans 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Renouvellement de marque après 10 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque expire dans 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite la renouveler pour 10 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renouvellement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois payer 268€"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux le faire jusqu'à 6 mois après expiration"
+        },
+        {
+          "keyword": "And",
+          "text": "une surtaxe s'applique après la date d'expiration"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Calcul des frais selon nombre de classes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je dépose une marque dans <nombre_classes> classes"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les frais totaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant devrait être <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "nombre_classes",
+            "montant"
+          ],
+          "rows": [
+            {
+              "values": {
+                "nombre_classes": "3",
+                "montant": "244"
+              }
+            },
+            {
+              "values": {
+                "nombre_classes": "4",
+                "montant": "281"
+              }
+            },
+            {
+              "values": {
+                "nombre_classes": "5",
+                "montant": "318"
+              }
+            },
+            {
+              "values": {
+                "nombre_classes": "10",
+                "montant": "503"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

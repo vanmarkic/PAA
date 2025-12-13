@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-r-gime-petite-copropri-t",
+  "name": "Régime Petite Copropriété",
+  "description": "En tant que petite copropriété Je veux appliquer le régime simplifié Afin de réduire les contraintes administratives",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété compte moins de 20 lots"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Application régime simplifié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la copropriété a 15 lots"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle opte pour le régime simplifié"
+        },
+        {
+          "keyword": "When",
+          "text": "les règles s'appliquent"
+        },
+        {
+          "keyword": "Then",
+          "text": "les simplifications sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "AG biannuelle petite copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'AG précédente date de 18 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le régime biannuel est adopté"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG est convoquée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle doit traiter:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Décision sans AG physique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une décision urgente est nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que tous les copropriétaires sont d'accord"
+        },
+        {
+          "keyword": "When",
+          "text": "la décision est prise par écrit"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle est valable si:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

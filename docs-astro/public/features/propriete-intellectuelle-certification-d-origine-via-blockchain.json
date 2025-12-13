@@ -1,0 +1,84 @@
+{
+  "id": "propriete-intellectuelle-certification-d-origine-via-blockchain",
+  "name": "Certification d'origine via blockchain",
+  "description": "En tant que créateur ou innovateur Je veux certifier l'origine via blockchain Afin de créer une preuve horodatée infalsifiable",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la blockchain offre l'immutabilité"
+      },
+      {
+        "text": "Et que l'horodatage est juridiquement reconnu"
+      },
+      {
+        "text": "Et que les coûts sont modérés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Enregistrement blockchain pour œuvre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé une nouvelle œuvre digitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux prouver mon antériorité"
+        },
+        {
+          "keyword": "When",
+          "text": "j'enregistre sur une blockchain"
+        },
+        {
+          "keyword": "Then",
+          "text": "je génère un hash unique de l'œuvre"
+        },
+        {
+          "keyword": "And",
+          "text": "l'inscris avec timestamp"
+        },
+        {
+          "keyword": "And",
+          "text": "obtiens une preuve cryptographique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Preuve d'antériorité pour invention",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je développe une invention"
+        },
+        {
+          "keyword": "And",
+          "text": "que je documente chaque étape"
+        },
+        {
+          "keyword": "When",
+          "text": "j'ancre les documents sur blockchain"
+        },
+        {
+          "keyword": "Then",
+          "text": "chaque version est horodatée"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux prouver ma chronologie d'invention"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

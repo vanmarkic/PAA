@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-location-de-partie-commune",
+  "name": "Location de Partie Commune",
+  "description": "En tant que copropriété Je veux louer des parties communes Afin de générer des revenus supplémentaires",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété a des espaces locatifs"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Location emplacement publicitaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une façade permet l'affichage publicitaire"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une société offre 500€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote la location"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majorité des 2/3 est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "les revenus réduisent les charges communes"
+        },
+        {
+          "keyword": "And",
+          "text": "un contrat maximum 3 ans est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Location toiture pour antenne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un opérateur télécom veut installer une antenne"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG examine l'offre"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle vérifie:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Répartition revenus locatifs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la location rapporte 12000€/an"
+        },
+        {
+          "keyword": "When",
+          "text": "les revenus sont distribués"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

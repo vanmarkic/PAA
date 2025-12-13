@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-protection-ip-pour-l-intelligence-artificielle",
+  "name": "Protection IP pour l'intelligence artificielle",
+  "description": "En tant que développeur d'IA Je veux protéger mes innovations IA Afin de valoriser mes algorithmes et modèles",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'IA pose des défis IP nouveaux"
+      },
+      {
+        "text": "Et que la brevetabilité est débattue"
+      },
+      {
+        "text": "Et que plusieurs stratégies coexistent"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Protection multicouche pour système IA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai développé un système IA innovant"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il comprend algorithmes, données et modèles"
+        },
+        {
+          "keyword": "When",
+          "text": "j'établis ma protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "je brevète les applications techniques concrètes"
+        },
+        {
+          "keyword": "And",
+          "text": "protège le code par droit d'auteur"
+        },
+        {
+          "keyword": "And",
+          "text": "garde les modèles entraînés secrets"
+        },
+        {
+          "keyword": "And",
+          "text": "contractualise l'usage des données"
+        },
+        {
+          "keyword": "And",
+          "text": "dépose la marque du produit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Gestion des données d'entraînement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon IA nécessite des données massives"
+        },
+        {
+          "keyword": "And",
+          "text": "que les données peuvent avoir des droits"
+        },
+        {
+          "keyword": "When",
+          "text": "je constitue mon dataset"
+        },
+        {
+          "keyword": "Then",
+          "text": "je vérifie les licences des données sources"
+        },
+        {
+          "keyword": "And",
+          "text": "respecte le RGPD pour données personnelles"
+        },
+        {
+          "keyword": "And",
+          "text": "documente la provenance"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

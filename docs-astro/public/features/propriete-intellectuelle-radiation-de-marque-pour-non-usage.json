@@ -1,0 +1,80 @@
+{
+  "id": "propriete-intellectuelle-radiation-de-marque-pour-non-usage",
+  "name": "Radiation de marque pour non-usage",
+  "description": "En tant que tiers intéressé Je veux faire radier une marque non utilisée Afin de libérer le signe pour mon usage",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'une marque doit être utilisée"
+      },
+      {
+        "text": "Et que 5 ans de non-usage permet la radiation"
+      },
+      {
+        "text": "Et que la charge de la preuve incombe au titulaire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de déchéance pour non-usage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une marque bloque mon projet"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle n'est pas utilisée depuis 5 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande sa déchéance au BOIP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie les frais de procédure"
+        },
+        {
+          "keyword": "And",
+          "text": "le titulaire doit prouver l'usage sérieux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Défense avec preuves d'usage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque est attaquée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je l'utilise effectivement"
+        },
+        {
+          "keyword": "When",
+          "text": "je fournis les preuves d'usage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je produis factures, publicités, catalogues"
+        },
+        {
+          "keyword": "And",
+          "text": "la demande de déchéance échoue"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

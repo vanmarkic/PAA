@@ -1,0 +1,404 @@
+{
+  "id": "propriete-intellectuelle-d-p-t-de-brevet-belge",
+  "name": "Dépôt de brevet belge",
+  "description": "En tant qu'inventeur ou entreprise Je veux déposer une demande de brevet en Belgique Afin de protéger mon invention pendant 20 ans",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les frais de dépôt de brevet 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Dépôt de brevet pour invention technique éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un inventeur indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai développé un nouveau dispositif médical"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon invention présente une nouveauté absolue"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon invention implique une activité inventive"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon invention est susceptible d'application industrielle"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai préparé une description complète avec revendications"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose ma demande de brevet auprès de l'OPRI"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être acceptée pour dépôt"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir un numéro de demande BE2024/XXXXX"
+        },
+        {
+          "keyword": "And",
+          "text": "la date de dépôt devrait être enregistrée"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais payer les frais de dépôt de 50€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Demande avec priorité conventionnelle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déposé une première demande en France il y a 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le numéro de priorité est FR2023/12345"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite étendre ma protection en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose ma demande belge avec revendication de priorité"
+        },
+        {
+          "keyword": "Then",
+          "text": "la priorité devrait être reconnue"
+        },
+        {
+          "keyword": "And",
+          "text": "la date de priorité devrait être celle du dépôt français"
+        },
+        {
+          "keyword": "And",
+          "text": "je dispose de 16 mois pour fournir la copie certifiée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Invention non brevetable - méthode commerciale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai développé une nouvelle méthode de marketing"
+        },
+        {
+          "keyword": "And",
+          "text": "que cette méthode est purement commerciale"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle ne présente pas de caractère technique"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie l'éligibilité au brevet"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être informé que c'est non brevetable"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"les méthodes commerciales ne sont pas brevetables\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Invention non brevetable - programme d'ordinateur en tant que tel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé un nouveau logiciel"
+        },
+        {
+          "keyword": "And",
+          "text": "que le logiciel n'a pas d'effet technique"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il s'agit d'un programme d'ordinateur en tant que tel"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie l'éligibilité au brevet"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être informé que c'est non brevetable"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"les programmes d'ordinateur en tant que tels ne sont pas brevetables\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Demande provisoire pour établir une date de dépôt",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une invention urgente à protéger"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma description n'est pas complète"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas encore rédigé les revendications"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose une demande provisoire"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais obtenir une date de dépôt"
+        },
+        {
+          "keyword": "And",
+          "text": "je dispose de 12 mois pour compléter le dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux revendiquer \"patent pending\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Rapport de recherche avec antériorités destructrices",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déposé ma demande de brevet"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé les frais de recherche de 300€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'OPRI effectue la recherche d'antériorités"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un document X est trouvé détruisant la nouveauté"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir un rapport de recherche négatif"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux modifier mes revendications dans un délai de 2 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Calcul des annuités selon l'année",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon brevet a été délivré"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en année <année> après le dépôt"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule l'annuité à payer"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant devrait être <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "année",
+            "montant"
+          ],
+          "rows": [
+            {
+              "values": {
+                "année": "3",
+                "montant": "40"
+              }
+            },
+            {
+              "values": {
+                "année": "5",
+                "montant": "60"
+              }
+            },
+            {
+              "values": {
+                "année": "10",
+                "montant": "260"
+              }
+            },
+            {
+              "values": {
+                "année": "15",
+                "montant": "560"
+              }
+            },
+            {
+              "values": {
+                "année": "20",
+                "montant": "1200"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-8",
+      "name": "Extension via PCT (Patent Cooperation Treaty)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déposé une demande belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite une protection internationale"
+        },
+        {
+          "keyword": "And",
+          "text": "que moins de 12 mois se sont écoulés depuis le dépôt"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose une demande PCT"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux désigner jusqu'à 153 pays"
+        },
+        {
+          "keyword": "And",
+          "text": "je dispose de 30 mois pour entrer en phase nationale"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois payer les taxes PCT internationales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Certificat complémentaire de protection pour médicament",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un brevet sur un principe actif pharmaceutique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai obtenu une AMM (Autorisation de Mise sur le Marché)"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'AMM a pris 8 ans après le dépôt du brevet"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un certificat complémentaire de protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux obtenir jusqu'à 5 ans de protection supplémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée est calculée selon la formule réglementaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Co-inventeurs avec répartition des droits",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes 3 co-inventeurs"
+        },
+        {
+          "keyword": "And",
+          "text": "que les contributions sont 50%, 30%, et 20%"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déposons la demande de brevet ensemble"
+        },
+        {
+          "keyword": "Then",
+          "text": "tous les inventeurs doivent être mentionnés"
+        },
+        {
+          "keyword": "And",
+          "text": "un accord de copropriété doit être établi"
+        },
+        {
+          "keyword": "And",
+          "text": "les droits d'exploitation doivent être définis"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

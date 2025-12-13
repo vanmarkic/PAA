@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-accord-de-confidentialit-nda",
+  "name": "Accord de confidentialité (NDA)",
+  "description": "En tant qu'entreprise partageant des informations sensibles Je veux établir un NDA efficace Afin de protéger mes secrets lors de négociations",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le NDA protège les informations confidentielles"
+      },
+      {
+        "text": "Et qu'il peut être unilatéral ou bilatéral"
+      },
+      {
+        "text": "Et que les violations sont sanctionnables"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "NDA avant négociation de partenariat",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je vais révéler ma technologie"
+        },
+        {
+          "keyword": "And",
+          "text": "que le partenaire potentiel doit l'évaluer"
+        },
+        {
+          "keyword": "When",
+          "text": "nous signons un NDA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je définis précisément les informations couvertes"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée de confidentialité (3-5 ans typique)"
+        },
+        {
+          "keyword": "And",
+          "text": "les exceptions (déjà connues, publiques)"
+        },
+        {
+          "keyword": "And",
+          "text": "les pénalités de 50000-100000€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Violation de NDA et recours",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un partenaire a violé le NDA"
+        },
+        {
+          "keyword": "And",
+          "text": "divulgué mes secrets à un concurrent"
+        },
+        {
+          "keyword": "When",
+          "text": "j'engage des poursuites"
+        },
+        {
+          "keyword": "Then",
+          "text": "je demande la cessation immédiate"
+        },
+        {
+          "keyword": "And",
+          "text": "des dommages-intérêts"
+        },
+        {
+          "keyword": "And",
+          "text": "peux obtenir une injonction"
+        },
+        {
+          "keyword": "And",
+          "text": "la saisie des documents"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

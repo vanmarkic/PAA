@@ -1,0 +1,194 @@
+{
+  "id": "statut-artiste-commission-des-artistes",
+  "name": "Commission des Artistes",
+  "description": "En tant qu'artiste demandeur Je veux comprendre le rôle de la Commission Afin de faire valoir mes droits correctement",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la Commission des Artistes:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de visa artiste",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste débutant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des preuves de formations artistiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des contrats signés"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande de visa"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Commission examine mes qualifications"
+        },
+        {
+          "keyword": "And",
+          "text": "vérifie le caractère artistique de mes activités"
+        },
+        {
+          "keyword": "And",
+          "text": "rend sa décision sous 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Renouvellement de carte artiste",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma carte artiste expire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai presté 100 jours l'année passée"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques sont de 15000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renouvellement"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Commission vérifie la continuité"
+        },
+        {
+          "keyword": "And",
+          "text": "valide mes nouvelles prestations"
+        },
+        {
+          "keyword": "And",
+          "text": "renouvelle pour 5 ans si conditions remplies"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Contestation de refus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma demande a été refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai de nouveaux éléments"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais appel"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dispose de 30 jours pour contester"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander une audition"
+        },
+        {
+          "keyword": "And",
+          "text": "la Commission réexamine mon dossier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Médiation avec employeur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un litige existe avec un théâtre"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes cachets ne sont pas payés"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai saisi la Commission"
+        },
+        {
+          "keyword": "When",
+          "text": "la médiation commence"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Commission convoque les parties"
+        },
+        {
+          "keyword": "And",
+          "text": "propose une solution amiable"
+        },
+        {
+          "keyword": "And",
+          "text": "peut émettre un avis contraignant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Artiste étranger - reconnaissance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste européen"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un statut reconnu dans mon pays"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux travailler en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la reconnaissance"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Commission vérifie l'équivalence"
+        },
+        {
+          "keyword": "And",
+          "text": "peut accorder une reconnaissance temporaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

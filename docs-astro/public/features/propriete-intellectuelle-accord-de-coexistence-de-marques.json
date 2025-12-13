@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-accord-de-coexistence-de-marques",
+  "name": "Accord de coexistence de marques",
+  "description": "En tant que titulaire de marque Je veux négocier une coexistence pacifique Afin d'éviter les conflits avec des marques similaires",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que des marques similaires peuvent coexister"
+      },
+      {
+        "text": "Et qu'un accord évite les procédures coûteuses"
+      },
+      {
+        "text": "Et que l'accord doit être équilibré"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Négociation d'accord de coexistence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque \"NOVEX\" existe depuis 2018"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une entreprise dépose \"NOVEC\" dans un secteur proche"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous voulons éviter un conflit"
+        },
+        {
+          "keyword": "When",
+          "text": "nous négocions un accord"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous délimitons les territoires respectifs"
+        },
+        {
+          "keyword": "And",
+          "text": "définissons les produits/services de chacun"
+        },
+        {
+          "keyword": "And",
+          "text": "convenons de modifications visuelles"
+        },
+        {
+          "keyword": "And",
+          "text": "nous engageons à ne pas nous opposer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Accord avec limitations géographiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que deux marques identiques coexistent"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elles opèrent dans des régions différentes"
+        },
+        {
+          "keyword": "When",
+          "text": "nous formalisons la coexistence"
+        },
+        {
+          "keyword": "Then",
+          "text": "chacun limite son usage à sa région"
+        },
+        {
+          "keyword": "And",
+          "text": "s'engage à ne pas s'étendre"
+        },
+        {
+          "keyword": "And",
+          "text": "nous informons mutuellement des développements"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

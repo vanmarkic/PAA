@@ -1,0 +1,118 @@
+{
+  "id": "copropriete-travaux-d-am-lioration",
+  "name": "Travaux d'Amélioration",
+  "description": "En tant que copropriété Je veux réaliser des travaux d'amélioration Afin de valoriser l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que des améliorations sont proposées"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation d'un ascenseur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'immeuble n'a pas d'ascenseur"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un projet d'installation est proposé à 150000€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote le projet"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majorité des 3/4 est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "la répartition des coûts suit une clé spéciale"
+        },
+        {
+          "keyword": "And",
+          "text": "les RDC participent à 10%"
+        },
+        {
+          "keyword": "And",
+          "text": "les étages selon coefficient progressif"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Amélioration énergétique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'isolation est déficiente"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un projet d'isolation coûte 80000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que des subsides de 30% sont disponibles"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG examine le projet"
+        },
+        {
+          "keyword": "Then",
+          "text": "le retour sur investissement est calculé"
+        },
+        {
+          "keyword": "And",
+          "text": "les économies d'énergie sont estimées à 20%/an"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision requiert 2/3 des voix"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Refus d'un copropriétaire de participer",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire vote contre les travaux"
+        },
+        {
+          "keyword": "But",
+          "text": "que la majorité requise est atteinte"
+        },
+        {
+          "keyword": "When",
+          "text": "les travaux sont décidés"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit quand même payer sa quote-part"
+        },
+        {
+          "keyword": "And",
+          "text": "peut saisir le juge de paix sous 4 mois"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

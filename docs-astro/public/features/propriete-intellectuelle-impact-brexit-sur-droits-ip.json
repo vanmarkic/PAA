@@ -1,0 +1,84 @@
+{
+  "id": "propriete-intellectuelle-impact-brexit-sur-droits-ip",
+  "name": "Impact Brexit sur droits IP",
+  "description": "En tant que titulaire de droits IP européens Je veux gérer l'impact du Brexit Afin de maintenir ma protection au Royaume-Uni",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le Brexit affecte certains droits européens"
+      },
+      {
+        "text": "Et que des conversions sont nécessaires"
+      },
+      {
+        "text": "Et que de nouvelles procédures s'appliquent"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Conversion de marque UE en marque UK",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une marque européenne d'avant 2021"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux maintenir la protection UK"
+        },
+        {
+          "keyword": "When",
+          "text": "le Brexit est effectif"
+        },
+        {
+          "keyword": "Then",
+          "text": "un droit UK comparable est créé automatiquement"
+        },
+        {
+          "keyword": "But",
+          "text": "je dois payer les renouvellements UK séparément"
+        },
+        {
+          "keyword": "And",
+          "text": "désigner un représentant UK si non-résident"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Nouveau dépôt pour droits post-Brexit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je dépose une nouvelle marque en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux couvrir l'UE et le UK"
+        },
+        {
+          "keyword": "When",
+          "text": "je planifie mes dépôts"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois faire deux demandes séparées"
+        },
+        {
+          "keyword": "And",
+          "text": "gérer deux procédures distinctes"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

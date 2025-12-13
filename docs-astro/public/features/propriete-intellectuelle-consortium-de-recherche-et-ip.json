@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-consortium-de-recherche-et-ip",
+  "name": "Consortium de recherche et IP",
+  "description": "En tant que membre d'un consortium R&D Je veux gérer la propriété intellectuelle commune Afin de valoriser les résultats collaboratifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les projets collaboratifs génèrent de l'IP"
+      },
+      {
+        "text": "Et que la propriété doit être clarifiée"
+      },
+      {
+        "text": "Et que l'exploitation nécessite des accords"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Accord de consortium avec gestion IP",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 5 partenaires collaborent sur un projet"
+        },
+        {
+          "keyword": "And",
+          "text": "que chacun apporte son background IP"
+        },
+        {
+          "keyword": "When",
+          "text": "nous signons l'accord de consortium"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous définissons la propriété des résultats"
+        },
+        {
+          "keyword": "And",
+          "text": "les droits d'accès au background"
+        },
+        {
+          "keyword": "And",
+          "text": "les règles d'exploitation"
+        },
+        {
+          "keyword": "And",
+          "text": "la répartition des revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Gestion des résultats conjoints",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une invention est créée conjointement"
+        },
+        {
+          "keyword": "And",
+          "text": "que 3 partenaires sont co-inventeurs"
+        },
+        {
+          "keyword": "When",
+          "text": "nous gérons cette IP commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous désignons un leader pour le dépôt"
+        },
+        {
+          "keyword": "And",
+          "text": "partageons les coûts et revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "définissons les territoires d'exploitation"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoyons les cas de désaccord"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

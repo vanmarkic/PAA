@@ -1,0 +1,100 @@
+{
+  "id": "propriete-intellectuelle-valorisation-de-brevet",
+  "name": "Valorisation de brevet",
+  "description": "En tant que titulaire de brevet Je veux valoriser mon portefeuille Afin de générer des revenus ou obtenir des financements",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les brevets sont des actifs valorisables"
+      },
+      {
+        "text": "Et que plusieurs méthodes d'évaluation existent"
+      },
+      {
+        "text": "Et que la valorisation impacte la fiscalité"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Évaluation pour cession de brevet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux vendre mon brevet"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un acheteur potentiel est intéressé"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais évaluer le brevet"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'expert utilise la méthode des revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "projette les redevances futures"
+        },
+        {
+          "keyword": "And",
+          "text": "actualise les flux financiers"
+        },
+        {
+          "keyword": "And",
+          "text": "propose une fourchette de valeur"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux négocier sur cette base"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Nantissement de brevets pour crédit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai besoin de financement"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un portefeuille de 10 brevets"
+        },
+        {
+          "keyword": "When",
+          "text": "je propose un nantissement à la banque"
+        },
+        {
+          "keyword": "Then",
+          "text": "les brevets sont évalués"
+        },
+        {
+          "keyword": "And",
+          "text": "inscrits au registre des gages"
+        },
+        {
+          "keyword": "And",
+          "text": "la banque accorde 30-50% de la valeur"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve l'exploitation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

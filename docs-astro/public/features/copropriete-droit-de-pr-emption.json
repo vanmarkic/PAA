@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-droit-de-pr-emption",
+  "name": "Droit de Préemption",
+  "description": "En tant que copropriété Je veux gérer le droit de préemption Afin de contrôler les mutations",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un droit de préemption existe"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Exercice droit préemption copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un lot est mis en vente à 200000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que la copropriété a un droit de préemption"
+        },
+        {
+          "keyword": "When",
+          "text": "le propriétaire notifie la vente"
+        },
+        {
+          "keyword": "Then",
+          "text": "la copropriété doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Préemption pour agrandissement parties communes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un local commercial est vendu"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il jouxte le hall d'entrée"
+        },
+        {
+          "keyword": "When",
+          "text": "la copropriété veut l'acquérir"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle vérifie:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Renonciation au droit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire vend"
+        },
+        {
+          "keyword": "And",
+          "text": "demande renonciation préemption"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic traite la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

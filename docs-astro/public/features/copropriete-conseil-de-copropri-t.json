@@ -1,0 +1,102 @@
+{
+  "id": "copropriete-conseil-de-copropri-t",
+  "name": "Conseil de Copropriété",
+  "description": "En tant que copropriété Je veux élire et gérer un conseil de copropriété Afin d'assister et contrôler le syndic",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété compte plus de 20 lots"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Élection obligatoire du conseil",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la copropriété a 25 lots principaux"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'aucun conseil n'est en place"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG ordinaire se tient"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'élection du conseil est obligatoire"
+        },
+        {
+          "keyword": "And",
+          "text": "au moins 3 membres doivent être élus"
+        },
+        {
+          "keyword": "And",
+          "text": "le mandat est de 3 ans maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Missions du conseil de copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le conseil est élu"
+        },
+        {
+          "keyword": "When",
+          "text": "il exerce ses fonctions"
+        },
+        {
+          "keyword": "Then",
+          "text": "ses missions incluent:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Réunion conseil avec le syndic",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le conseil demande une réunion"
+        },
+        {
+          "keyword": "And",
+          "text": "que 2 membres sur 3 le demandent"
+        },
+        {
+          "keyword": "When",
+          "text": "la demande est formulée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit organiser la réunion sous 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir les documents demandés"
+        },
+        {
+          "keyword": "And",
+          "text": "un PV doit être rédigé"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

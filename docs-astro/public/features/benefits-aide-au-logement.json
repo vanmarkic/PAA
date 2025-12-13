@@ -1,0 +1,671 @@
+{
+  "id": "benefits-aide-au-logement",
+  "name": "Aide au Logement",
+  "description": "En tant que locataire à revenus modestes Je veux savoir si j'ai droit à l'aide au logement Afin d'alléger mes charges locatives",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les montants d'aide au logement 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Famille monoparentale à Bruxelles éligible à l'allocation loyer",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé avec 2 enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 20,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je loue un logement privé à 750€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 6 points de priorité sur la liste d'attente logement social"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à l'allocation loyer"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être 186.67€"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"famille monoparentale avec revenus <= 20,895.43€\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Couple avec revenus moyens à Bruxelles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en couple sans enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que notre revenu annuel est de 25,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous louons un logement à 900€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons au moins 6 points de priorité"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie notre éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devrions être éligibles à l'allocation loyer"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être 140€"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus entre 20,895.43€ et 27,550.86€\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Personne isolée en Wallonie éligible à ADeL",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 15,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je quitte un logement insalubre"
+        },
+        {
+          "keyword": "And",
+          "text": "que je loue un nouveau logement salubre à 500€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à l'ADeL"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation déménagement devrait être 400€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation loyer mensuelle devrait être 100€"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée maximale devrait être 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus < 17,000€ et déménagement logement salubre\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Famille en Wallonie avec enfants éligible à ADeL",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en couple avec 3 enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que notre revenu annuel est de 22,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous quittons un logement surpeuplé"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous louons un logement adapté à 800€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie notre éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devrions être éligibles à l'ADeL"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation déménagement devrait être 640€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation loyer mensuelle devrait être 160€"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul devrait être \"100€ + (20€ × 3 enfants)\""
+        },
+        {
+          "keyword": "And",
+          "text": "la durée maximale devrait être 2 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Candidat logement social en Wallonie éligible à AAL",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis inscrit sur la liste d'attente logement social depuis 24 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu ne dépasse pas les plafonds sociaux"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'allocation d'attente"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible à l'AAL"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être entre 125€ et 185€"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"inscrit liste attente > 18 mois\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Revenus trop élevés à Bruxelles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 35,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je loue un logement à 1000€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus annuels > 27,550.86€\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Propriétaire non éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire de mon logement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des difficultés financières"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"propriétaire du logement - aide réservée aux locataires\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Loyer trop élevé en Wallonie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 14,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je loue un logement à 1,200€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'aide au logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être partiellement éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant pourrait être plafonné"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"loyer excessif par rapport aux plafonds régionaux\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Allocation de relogement à Bruxelles après expulsion",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis expulsé de mon logement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de 20,000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 1 enfant à charge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je trouve un nouveau logement à 700€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'allocation de relogement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide au déménagement devrait être 1,180€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide mensuelle au loyer devrait être accordée pour 5 ans maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul devrait inclure \"majoration pour enfant à charge\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Personne sans-abri en Wallonie accédant à un logement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je sors de la rue"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'accède à un logement via le CPAS"
+        },
+        {
+          "keyword": "And",
+          "text": "que le loyer est de 400€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'ADeL"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation loyer devrait être forfaitaire à 100€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune preuve de logement antérieur n'est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée devrait être 2 ans renouvelable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Calcul aide au logement selon région et situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation_familiale>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en <région>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon revenu annuel est de <revenu>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon loyer mensuel est de <loyer>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que <condition_spécifique>"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'éligibilité devrait être <éligibilité>"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être <aide_mensuelle>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "situation_familiale",
+            "revenu",
+            "loyer",
+            "condition_spécifique",
+            "éligibilité",
+            "aide_mensuelle"
+          ],
+          "rows": [
+            {
+              "values": {
+                "région": "Bruxelles-Capitale",
+                "situation_familiale": "parent isolé",
+                "revenu": "18000",
+                "loyer": "700",
+                "condition_spécifique": "6 points priorité liste sociale",
+                "éligibilité": "oui",
+                "aide_mensuelle": "186.67"
+              }
+            },
+            {
+              "values": {
+                "région": "Bruxelles-Capitale",
+                "situation_familiale": "couple",
+                "revenu": "26000",
+                "loyer": "850",
+                "condition_spécifique": "6 points priorité liste sociale",
+                "éligibilité": "oui",
+                "aide_mensuelle": "140"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "situation_familiale": "personne isolée",
+                "revenu": "12000",
+                "loyer": "450",
+                "condition_spécifique": "déménagement logement salubre",
+                "éligibilité": "oui",
+                "aide_mensuelle": "100"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "situation_familiale": "couple 2 enfants",
+                "revenu": "20000",
+                "loyer": "650",
+                "condition_spécifique": "déménagement logement adapté",
+                "éligibilité": "oui",
+                "aide_mensuelle": "140"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "situation_familiale": "personne isolée",
+                "revenu": "14000",
+                "loyer": "500",
+                "condition_spécifique": "liste attente sociale 20 mois",
+                "éligibilité": "oui",
+                "aide_mensuelle": "155"
+              }
+            },
+            {
+              "values": {
+                "région": "Bruxelles-Capitale",
+                "situation_familiale": "personne isolée",
+                "revenu": "30000",
+                "loyer": "900",
+                "condition_spécifique": "aucune",
+                "éligibilité": "non",
+                "aide_mensuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "situation_familiale": "personne isolée",
+                "revenu": "25000",
+                "loyer": "600",
+                "condition_spécifique": "revenus dépassent plafond",
+                "éligibilité": "non",
+                "aide_mensuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "région": "Flandres",
+                "situation_familiale": "famille",
+                "revenu": "22000",
+                "loyer": "750",
+                "condition_spécifique": "liste attente 5 ans",
+                "éligibilité": "oui",
+                "aide_mensuelle": "variable"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-12",
+      "name": "Cumul avec autres aides sociales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie du RIS à 1070.49€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon loyer est de 600€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 8 points de priorité sur la liste sociale"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à l'allocation loyer"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide au logement est cumulable avec le RIS"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant total d'aides ne peut dépasser certains plafonds"
+        },
+        {
+          "keyword": "And",
+          "text": "une déclaration au CPAS est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Procédure de demande et délais",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis éligible à l'aide au logement"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir les documents suivants:"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est:"
+        },
+        {
+          "keyword": "And",
+          "text": "le paiement est effectué mensuellement"
+        },
+        {
+          "keyword": "And",
+          "text": "un contrôle annuel des conditions est effectué"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.190Z"
+}

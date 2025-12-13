@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-strat-gie-de-d-p-t-international",
+  "name": "Stratégie de dépôt international",
+  "description": "En tant qu'entreprise innovante Je veux optimiser ma stratégie de protection internationale Afin de maximiser la protection en minimisant les coûts",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que plusieurs voies existent (PCT, Madrid, La Haye)"
+      },
+      {
+        "text": "Et que les coûts varient significativement"
+      },
+      {
+        "text": "Et que les délais sont critiques"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Stratégie PCT pour brevets mondiaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon invention a un potentiel global"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux différer les coûts"
+        },
+        {
+          "keyword": "When",
+          "text": "j'utilise la voie PCT"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dépose une demande unique"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai 30 mois pour choisir les pays"
+        },
+        {
+          "keyword": "And",
+          "text": "je diffère les traductions et taxes nationales"
+        },
+        {
+          "keyword": "And",
+          "text": "j'obtiens un rapport de recherche international"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Système de Madrid pour marques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux protéger ma marque mondialement"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une marque de base belge"
+        },
+        {
+          "keyword": "When",
+          "text": "j'utilise le système de Madrid"
+        },
+        {
+          "keyword": "Then",
+          "text": "je désigne jusqu'à 128 pays"
+        },
+        {
+          "keyword": "And",
+          "text": "je paie les taxes consolidées"
+        },
+        {
+          "keyword": "And",
+          "text": "je gère centralement les renouvellements"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

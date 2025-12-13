@@ -1,0 +1,94 @@
+{
+  "id": "copropriete-mutation-d-un-lot",
+  "name": "Mutation d'un Lot",
+  "description": "En tant que notaire Je veux gérer la mutation d'un lot Afin de transférer la propriété correctement",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un lot est vendu"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Vérification des charges dues",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un lot est en vente"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'acte est prévu dans 30 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "le notaire demande l'état des charges"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit fournir sous 15 jours:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Transfert avec charges impayées",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le vendeur doit 2500€ de charges"
+        },
+        {
+          "keyword": "And",
+          "text": "que la vente est prévue"
+        },
+        {
+          "keyword": "When",
+          "text": "le notaire établit l'acte"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit retenir le montant dû"
+        },
+        {
+          "keyword": "And",
+          "text": "payer directement le syndic"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir quittance avant signature"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Information du nouveau propriétaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un nouveau propriétaire arrive"
+        },
+        {
+          "keyword": "When",
+          "text": "la mutation est effectuée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

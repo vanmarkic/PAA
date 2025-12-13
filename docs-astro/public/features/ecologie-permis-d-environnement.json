@@ -1,0 +1,286 @@
+{
+  "id": "ecologie-permis-d-environnement",
+  "name": "Permis d'environnement",
+  "description": "En tant qu'entreprise ou particulier Je veux obtenir un permis d'environnement Afin d'exploiter une installation classée légalement",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les classes d'installations sont définies selon l'impact:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation industrielle classe 1 nécessitant permis complet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une entreprise industrielle"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon installation a une puissance de 2000 kW"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'émets plus de 50 tonnes de CO2 par an"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis situé en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir une étude d'incidences complète"
+        },
+        {
+          "keyword": "And",
+          "text": "une enquête publique doit être organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement sera de 90 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois appliquer les meilleures techniques disponibles (MTD)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "PME classe 2 avec procédure simplifiée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une PME"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon installation a une puissance de 500 kW"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes émissions sont inférieures aux seuils IPPC"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis situé à Bruxelles"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir une notice d'évaluation"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement sera de 60 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter les conditions sectorielles"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Artisan classe 3 avec simple déclaration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un artisan"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon atelier fait moins de 100 m²"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'utilise moins de 50 kW de puissance"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'utilise pas de produits dangereux"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma déclaration environnementale"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle est automatiquement acceptée sous 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois un récépissé de déclaration"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter les conditions générales d'exploitation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Installation Seveso seuil haut",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je stocke 500 tonnes de substances dangereuses"
+        },
+        {
+          "keyword": "And",
+          "text": "que je dépasse le seuil haut Seveso"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir un rapport de sécurité"
+        },
+        {
+          "keyword": "And",
+          "text": "un plan d'urgence interne doit être établi"
+        },
+        {
+          "keyword": "And",
+          "text": "une zone de protection doit être définie"
+        },
+        {
+          "keyword": "And",
+          "text": "l'inspection annuelle est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Refus pour non-conformité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon installation est située en zone Natura 2000"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'étude d'incidences montre un impact majeur sur la biodiversité"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'aucune mesure compensatoire n'est suffisante"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un permis d'environnement"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande est refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"impact inacceptable sur zone protégée\""
+        },
+        {
+          "keyword": "And",
+          "text": "je peux introduire un recours dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul des garanties financières selon la classe",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon installation est de classe <classe>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le risque est évalué comme <risque>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule la garantie financière requise"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant sera de <garantie> euros"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "classe",
+            "risque",
+            "garantie"
+          ],
+          "rows": [
+            {
+              "values": {
+                "classe": "1",
+                "risque": "élevé",
+                "garantie": "50000"
+              }
+            },
+            {
+              "values": {
+                "classe": "1",
+                "risque": "modéré",
+                "garantie": "30000"
+              }
+            },
+            {
+              "values": {
+                "classe": "2",
+                "risque": "élevé",
+                "garantie": "20000"
+              }
+            },
+            {
+              "values": {
+                "classe": "2",
+                "risque": "modéré",
+                "garantie": "10000"
+              }
+            },
+            {
+              "values": {
+                "classe": "3",
+                "risque": "faible",
+                "garantie": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

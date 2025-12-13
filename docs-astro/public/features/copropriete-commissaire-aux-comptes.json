@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-commissaire-aux-comptes",
+  "name": "Commissaire aux Comptes",
+  "description": "En tant que copropriété Je veux nommer un commissaire aux comptes Afin de contrôler la gestion financière",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété veut contrôler ses comptes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Nomination obligatoire grande copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la copropriété compte plus de 50 lots"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG ordinaire se réunit"
+        },
+        {
+          "keyword": "Then",
+          "text": "la nomination d'un commissaire est obligatoire"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut être copropriétaire ou externe"
+        },
+        {
+          "keyword": "And",
+          "text": "son mandat est d'un an renouvelable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Missions du commissaire aux comptes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un commissaire est nommé"
+        },
+        {
+          "keyword": "When",
+          "text": "il exerce sa mission"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Découverte d'irrégularités",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le commissaire découvre des anomalies"
+        },
+        {
+          "keyword": "When",
+          "text": "il constate l'irrégularité"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

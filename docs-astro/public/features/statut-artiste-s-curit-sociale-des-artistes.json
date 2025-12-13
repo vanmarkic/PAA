@@ -1,0 +1,206 @@
+{
+  "id": "statut-artiste-s-curit-sociale-des-artistes",
+  "name": "Sécurité Sociale des Artistes",
+  "description": "En tant qu'artiste indépendant Je veux comprendre ma couverture sociale Afin de bénéficier de la protection adaptée",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la sécurité sociale artistique comprend:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Affiliation comme artiste indépendant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je débute comme artiste indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus prévisionnels sont de 20000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'affilie à une caisse d'assurances sociales"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie les cotisations provisoires"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis couvert en maladie-invalidité"
+        },
+        {
+          "keyword": "And",
+          "text": "j'accumule des droits de pension"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Calcul des cotisations sociales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus artistiques sont de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis indépendant à titre principal"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes cotisations"
+        },
+        {
+          "keyword": "Then",
+          "text": "la base de calcul est de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "les cotisations sont de 5125€ (20.5%)"
+        },
+        {
+          "keyword": "And",
+          "text": "elles sont payables trimestriellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Dispense de cotisations pour faibles revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus annuels sont de 4000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est inférieur au seuil"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une dispense"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux être dispensé de cotisations"
+        },
+        {
+          "keyword": "But",
+          "text": "je perds certains droits sociaux"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois le demander explicitement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Assimilation artiste-salarié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai le statut article 1bis"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille sous contrats courts"
+        },
+        {
+          "keyword": "When",
+          "text": "mes cotisations sont calculées"
+        },
+        {
+          "keyword": "Then",
+          "text": "elles sont prélevées comme pour un salarié"
+        },
+        {
+          "keyword": "And",
+          "text": "l'employeur paie la part patronale"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai les mêmes droits qu'un salarié"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Congé maternité pour artiste",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste enceinte"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai cotisé 6 mois minimum"
+        },
+        {
+          "keyword": "When",
+          "text": "je prends mon congé maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à 12 semaines"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité est de 506.24€/semaine"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux reprendre progressivement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Cumul pension et activité artistique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis pensionné"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux continuer mon activité artistique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension est de 1500€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les limites"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux gagner jusqu'à 7700€/an"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.218Z"
+}

@@ -1,0 +1,312 @@
+{
+  "id": "statut-artiste-droits-d-auteur-et-droits-voisins",
+  "name": "Droits d'Auteur et Droits Voisins",
+  "description": "En tant qu'artiste créateur Je veux gérer mes droits d'auteur Afin de protéger et monétiser mes œuvres",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les droits d'auteur comprennent:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Inscription à la SABAM",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis compositeur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai créé 10 œuvres originales"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux protéger mes droits"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'inscris à la SABAM"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir les partitions"
+        },
+        {
+          "keyword": "And",
+          "text": "déclarer toutes mes œuvres"
+        },
+        {
+          "keyword": "And",
+          "text": "signer un mandat de gestion"
+        },
+        {
+          "keyword": "And",
+          "text": "payer la cotisation annuelle de 50€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Déclaration d'œuvre musicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai composé une nouvelle chanson"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis membre SABAM"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare l'œuvre"
+        },
+        {
+          "keyword": "Then",
+          "text": "je fournis le titre et les paroles"
+        },
+        {
+          "keyword": "And",
+          "text": "j'indique les co-auteurs éventuels"
+        },
+        {
+          "keyword": "And",
+          "text": "je précise la répartition des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "l'œuvre est protégée immédiatement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Perception de droits de diffusion",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma musique est diffusée à la radio"
+        },
+        {
+          "keyword": "And",
+          "text": "que la radio a déclaré 50 diffusions"
+        },
+        {
+          "keyword": "And",
+          "text": "que le tarif est de 25€ par diffusion"
+        },
+        {
+          "keyword": "When",
+          "text": "la SABAM perçoit les droits"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant brut est de 1250€"
+        },
+        {
+          "keyword": "And",
+          "text": "la SABAM retient 12% de frais"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois 1100€ de droits nets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Droit de suite sur vente d'œuvre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste plasticien"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une de mes œuvres est revendue 50000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est une vente aux enchères"
+        },
+        {
+          "keyword": "When",
+          "text": "le droit de suite s'applique"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux est de 4% jusqu'à 50000€"
+        },
+        {
+          "keyword": "And",
+          "text": "je perçois 2000€ de droit de suite"
+        },
+        {
+          "keyword": "And",
+          "text": "la société de gestion prélève 10% de frais"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Contrat de cession de droits",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un éditeur veut publier mon livre"
+        },
+        {
+          "keyword": "And",
+          "text": "que le tirage prévu est de 5000 exemplaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que le prix de vente est de 20€"
+        },
+        {
+          "keyword": "When",
+          "text": "je négocie la cession"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes droits d'auteur sont de 10% du prix"
+        },
+        {
+          "keyword": "And",
+          "text": "j'obtiens une avance de 5000€"
+        },
+        {
+          "keyword": "And",
+          "text": "les droits numériques sont négociés séparément"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Protection contre le plagiat",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon œuvre a été plagiée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai les preuves d'antériorité"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai déposé l'œuvre"
+        },
+        {
+          "keyword": "When",
+          "text": "j'engage une procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander l'arrêt de l'exploitation"
+        },
+        {
+          "keyword": "And",
+          "text": "réclamer des dommages et intérêts"
+        },
+        {
+          "keyword": "And",
+          "text": "exiger la mention de mon nom"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Calcul des droits selon exploitation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon œuvre est exploitée en <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que les recettes sont de <recettes>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes droits"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux applicable est de <taux>%"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits bruts sont de <droits>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "recettes",
+            "taux",
+            "droits"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type": "streaming",
+                "recettes": "10000",
+                "taux": "12",
+                "droits": "1200"
+              }
+            },
+            {
+              "values": {
+                "type": "téléchargement",
+                "recettes": "5000",
+                "taux": "15",
+                "droits": "750"
+              }
+            },
+            {
+              "values": {
+                "type": "synchronisation",
+                "recettes": "20000",
+                "taux": "50",
+                "droits": "10000"
+              }
+            },
+            {
+              "values": {
+                "type": "reproduction",
+                "recettes": "8000",
+                "taux": "10",
+                "droits": "800"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

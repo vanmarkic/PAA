@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-saisie-douani-re-de-contrefa-ons",
+  "name": "Saisie douanière de contrefaçons",
+  "description": "En tant que titulaire de droits IP Je veux faire saisir les contrefaçons aux frontières Afin d'empêcher leur entrée sur le marché",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le règlement UE 608/2013 s'applique"
+      },
+      {
+        "text": "Et que la demande d'intervention est gratuite"
+      },
+      {
+        "text": "Et que la surveillance dure 1 an renouvelable"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'intervention douanière",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je subis des contrefaçons importées"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des marques et brevets enregistrés"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'intervention des douanes"
+        },
+        {
+          "keyword": "Then",
+          "text": "je remplis le formulaire AFA"
+        },
+        {
+          "keyword": "And",
+          "text": "fournis les informations sur mes droits"
+        },
+        {
+          "keyword": "And",
+          "text": "décris les produits authentiques et contrefaits"
+        },
+        {
+          "keyword": "And",
+          "text": "les douanes surveillent pendant 1 an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Notification de retenue douanière",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les douanes ont détecté des suspects"
+        },
+        {
+          "keyword": "And",
+          "text": "retenu une cargaison"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis notifié de la retenue"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai 10 jours pour confirmer la contrefaçon"
+        },
+        {
+          "keyword": "And",
+          "text": "engager une procédure"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir une garantie si nécessaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

@@ -1,476 +1,424 @@
 {
   "id": "benefits-formation-professionnelle",
   "name": "Formation Professionnelle",
-  "description": "  En tant que demandeur d'emploi ou travailleur\n  Je veux accéder à une formation professionnelle\n  Afin d'améliorer mes compétences et mon employabilité",
+  "description": "En tant que demandeur d'emploi ou travailleur Je veux accéder à une formation professionnelle Afin d'améliorer mes compétences et mon employabilité",
   "category": "benefits",
   "tags": [],
   "background": {
-    "name": "",
-    "description": "",
     "steps": [
       {
-        "keyword": "Étant donné que",
-        "text": "les conditions de formation professionnelle 2024 sont:",
-        "dataTable": {
-          "headers": [
-            "Type de prestation",
-            "Détails"
-          ],
-          "rows": [
-            {
-              "Type de prestation": "Organismes régionaux",
-              "Détails": "Forem (Wallonie), Actiris/Bruxelles Formation (Bruxelles), VDAB (Flandre)"
-            },
-            {
-              "Type de prestation": "Indemnité de formation",
-              "Détails": "1€ par heure de formation"
-            },
-            {
-              "Type de prestation": "Maintien allocations chômage",
-              "Détails": "Oui, si formation agréée"
-            },
-            {
-              "Type de prestation": "Prime de formation",
-              "Détails": "350€ après formation métier en pénurie"
-            },
-            {
-              "Type de prestation": "Frais de déplacement",
-              "Détails": "Remboursement selon distance"
-            },
-            {
-              "Type de prestation": "Durée maximale",
-              "Détails": "Variable selon le type de formation"
-            },
-            {
-              "Type de prestation": "Formations métiers en pénurie",
-              "Détails": "Liste mise à jour annuellement"
-            },
-            {
-              "Type de prestation": "Âge minimum",
-              "Détails": "18 ans (sauf exceptions)"
-            }
-          ]
-        }
+        "text": "Étant donné que les conditions de formation professionnelle 2024 sont:"
       }
     ]
   },
   "scenarios": [
     {
-      "id": "4ac0beac-b299-4118-8406-926c74649f0e",
+      "id": "scenario-1",
       "name": "Demandeur d'emploi en formation métier en pénurie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis inscrit comme demandeur d'emploi au Forem"
+          "keyword": "Given",
+          "text": "que je suis inscrit comme demandeur d'emploi au Forem"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 28 ans"
+          "keyword": "And",
+          "text": "que j'ai 28 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je perçois des allocations de chômage de 1200€"
+          "keyword": "And",
+          "text": "que je perçois des allocations de chômage de 1200€"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite suivre une formation d'électricien (métier en pénurie)"
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation d'électricien (métier en pénurie)"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation dure 6 mois à temps plein"
+          "keyword": "And",
+          "text": "que la formation dure 6 mois à temps plein"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité à la formation professionnelle"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je maintiens mes allocations de chômage complètes"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reçois une indemnité de \"1€ par heure de formation\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je recevrai une prime de \"350€ à la fin de la formation\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "mes frais de déplacement seront remboursés"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "b9934129-c667-47d0-a63f-b0f6fff77832",
+      "id": "scenario-2",
       "name": "Travailleur en reconversion professionnelle",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis employé à temps plein"
+          "keyword": "Given",
+          "text": "que je suis employé à temps plein"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 35 ans"
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite me reconvertir dans le secteur informatique"
+          "keyword": "And",
+          "text": "que je souhaite me reconvertir dans le secteur informatique"
         },
         {
-          "keyword": "Et que",
-          "text": "je demande un congé-éducation payé"
+          "keyword": "And",
+          "text": "que je demande un congé-éducation payé"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation est reconnue par la Région"
+          "keyword": "And",
+          "text": "que la formation est reconnue par la Région"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mes droits à la formation"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible au congé-éducation payé"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai droit à \"120 heures par an\" de congé-éducation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "mon salaire est maintenu pendant les heures de formation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le plafond salarial est de \"3098€ brut par mois\""
         }
       ],
       "isOutline": false
     },
     {
-      "id": "9b029ead-4e2f-480c-85a5-b672e5fe7a45",
+      "id": "scenario-3",
       "name": "Jeune sans qualification en formation qualifiante",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai 20 ans"
+          "keyword": "Given",
+          "text": "que j'ai 20 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai pas de diplôme du secondaire supérieur"
+          "keyword": "And",
+          "text": "que je n'ai pas de diplôme du secondaire supérieur"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis inscrit chez Actiris"
+          "keyword": "And",
+          "text": "que je suis inscrit chez Actiris"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite suivre une formation qualifiante en vente"
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation qualifiante en vente"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation dure 3 mois"
+          "keyword": "And",
+          "text": "que la formation dure 3 mois"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible prioritairement"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reçois une allocation de formation de \"200€ par mois\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai accès à la gratuité des transports en commun"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reçois une attestation de compétences à la fin"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "836e607d-28ce-475b-9774-dfdba6e4f54f",
+      "id": "scenario-4",
       "name": "Formation en alternance pour demandeur d'emploi",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis demandeur d'emploi"
+          "keyword": "Given",
+          "text": "que je suis demandeur d'emploi"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 24 ans"
+          "keyword": "And",
+          "text": "que j'ai 24 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite suivre une formation en alternance"
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation en alternance"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai trouvé une entreprise d'accueil"
+          "keyword": "And",
+          "text": "que j'ai trouvé une entreprise d'accueil"
         },
         {
-          "keyword": "Et que",
-          "text": "le contrat est de type FPIE (Formation Professionnelle Individuelle en Entreprise)"
+          "keyword": "And",
+          "text": "que le contrat est de type FPIE (Formation Professionnelle Individuelle en Entreprise)"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je démarre la formation"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je maintiens mes allocations de chômage"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reçois une indemnité de productivité progressive"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'entreprise s'engage à m'embaucher après la formation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la durée maximale est de \"6 mois\""
         }
       ],
       "isOutline": false
     },
     {
-      "id": "21d9dfdd-d633-40bc-abcc-bbdc7358f6f1",
+      "id": "scenario-5",
       "name": "Travailleur âgé de plus de 50 ans",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai 52 ans"
+          "keyword": "Given",
+          "text": "que j'ai 52 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai été licencié après 20 ans dans la même entreprise"
+          "keyword": "And",
+          "text": "que j'ai été licencié après 20 ans dans la même entreprise"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite me former aux outils numériques"
+          "keyword": "And",
+          "text": "que je souhaite me former aux outils numériques"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis inscrit au VDAB"
+          "keyword": "And",
+          "text": "que je suis inscrit au VDAB"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mes droits spécifiques"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "j'ai accès prioritaire aux formations"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je bénéficie d'un accompagnement personnalisé"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je maintiens mes allocations de chômage majorées"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux accéder au programme \"50+\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la durée de formation peut être étendue"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "de758dfb-0faf-4b26-b79a-d53400ce04b1",
+      "id": "scenario-6",
       "name": "Formation non agréée par le service régional",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis demandeur d'emploi"
+          "keyword": "Given",
+          "text": "que je suis demandeur d'emploi"
         },
         {
-          "keyword": "Et que",
-          "text": "je perçois des allocations de chômage"
+          "keyword": "And",
+          "text": "que je perçois des allocations de chômage"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite suivre une formation privée non reconnue"
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation privée non reconnue"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation n'est pas sur la liste agréée"
+          "keyword": "And",
+          "text": "que la formation n'est pas sur la liste agréée"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie l'impact sur mes allocations"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je risque de perdre mes allocations de chômage"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois demander une dispense à l'ONEM"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif devrait être \"formation non compatible avec disponibilité\""
         }
       ],
       "isOutline": false
     },
     {
-      "id": "e37662a9-bddd-4b14-a237-5ecb63d671ee",
+      "id": "scenario-7",
       "name": "Parent isolé avec enfants en formation",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis parent isolé avec 2 enfants"
+          "keyword": "Given",
+          "text": "que je suis parent isolé avec 2 enfants"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis au chômage"
+          "keyword": "And",
+          "text": "que je suis au chômage"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite suivre une formation d'aide-soignante"
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation d'aide-soignante"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation nécessite des stages"
+          "keyword": "And",
+          "text": "que la formation nécessite des stages"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie les aides supplémentaires"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "j'ai droit aux frais de garde d'enfants"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le remboursement peut atteindre \"18€ par jour par enfant\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai accès aux horaires de formation adaptés"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je maintiens mes allocations familiales majorées"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "66277f71-449e-41a4-99e0-3d95ff98a680",
+      "id": "scenario-8",
       "name": "Formation en langues pour emploi spécifique",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis demandeur d'emploi à Bruxelles"
+          "keyword": "Given",
+          "text": "que je suis demandeur d'emploi à Bruxelles"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai une promesse d'embauche conditionnelle"
+          "keyword": "And",
+          "text": "que j'ai une promesse d'embauche conditionnelle"
         },
         {
-          "keyword": "Et que",
-          "text": "l'emploi nécessite la connaissance du néerlandais"
+          "keyword": "And",
+          "text": "que l'emploi nécessite la connaissance du néerlandais"
         },
         {
-          "keyword": "Et que",
-          "text": "mon niveau actuel est A1"
+          "keyword": "And",
+          "text": "que mon niveau actuel est A1"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande une formation linguistique"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "j'ai accès aux chèques-langues gratuits"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la formation intensive dure \"3 mois maximum\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux passer la certification Selor"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je maintiens mes allocations pendant la formation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'employeur peut recevoir une prime à l'embauche"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "d3fea478-b7d9-4b6e-aa65-42dddf74465b",
+      "id": "scenario-9",
       "name": "Indemnités selon le type de formation",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis <statut>"
+          "keyword": "Given",
+          "text": "que je suis <statut>"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis une formation de type <type_formation>"
+          "keyword": "And",
+          "text": "que je suis une formation de type <type_formation>"
         },
         {
-          "keyword": "Et que",
-          "text": "la durée est de <duree> mois"
+          "keyword": "And",
+          "text": "que la durée est de <duree> mois"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis inscrit auprès de <organisme>"
+          "keyword": "And",
+          "text": "que je suis inscrit auprès de <organisme>"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je calcule mes indemnités"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "l'indemnité de formation est <indemnite>"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "les avantages supplémentaires sont <avantages>"
         }
       ],
@@ -488,7 +436,6 @@
           ],
           "rows": [
             {
-              "name": "0cc952a1-ebf1-4961-9131-a360dfc2f802",
               "values": {
                 "statut": "demandeur emploi",
                 "type_formation": "métier en pénurie",
@@ -499,7 +446,6 @@
               }
             },
             {
-              "name": "a05cf17e-27a0-4148-b021-a5d07ec8ae03",
               "values": {
                 "statut": "demandeur emploi",
                 "type_formation": "qualifiante",
@@ -510,7 +456,6 @@
               }
             },
             {
-              "name": "39641188-419d-478b-928c-cd06cda54b8c",
               "values": {
                 "statut": "travailleur",
                 "type_formation": "reconversion",
@@ -521,7 +466,6 @@
               }
             },
             {
-              "name": "6456b988-6574-4f01-9db3-25719b7e9934",
               "values": {
                 "statut": "jeune sans diplôme",
                 "type_formation": "alternance",
@@ -532,7 +476,6 @@
               }
             },
             {
-              "name": "6247d03c-0138-4423-958e-5ccb6d06818d",
               "values": {
                 "statut": "parent isolé",
                 "type_formation": "aide-soignante",
@@ -548,147 +491,142 @@
       "isOutline": true
     },
     {
-      "id": "edcf4028-aa28-4f91-acd2-b817449cd678",
+      "id": "scenario-10",
       "name": "Validation des compétences acquises",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "j'ai suivi une formation professionnelle complète"
+          "keyword": "Given",
+          "text": "que j'ai suivi une formation professionnelle complète"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai réussi les évaluations"
+          "keyword": "And",
+          "text": "que j'ai réussi les évaluations"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je termine la formation"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je reçois une attestation de réussite"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux demander la validation des compétences"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le titre de compétence est reconnu par les trois Régions"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux l'ajouter à mon CV Europass"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "cela améliore mon positionnement salarial"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "1f96902d-0ec0-4f50-88d0-6894fd61bed3",
+      "id": "scenario-11",
       "name": "Obligations durant la formation",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis en formation professionnelle agréée"
+          "keyword": "Given",
+          "text": "que je suis en formation professionnelle agréée"
         },
         {
-          "keyword": "Et que",
-          "text": "je maintiens mes allocations de chômage"
+          "keyword": "And",
+          "text": "que je maintiens mes allocations de chômage"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je suis les cours"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je dois respecter un taux de présence minimum de 80%"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois justifier toute absence"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois participer activement aux cours"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois réussir les évaluations intermédiaires"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois rester inscrit comme demandeur d'emploi"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois informer l'ONEM du début et fin de formation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reste disponible pour un emploi convenable"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "eaa5806c-518a-48fd-979a-87f9e4dfd341",
+      "id": "scenario-12",
       "name": "Formation à l'entrepreneuriat",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis demandeur d'emploi"
+          "keyword": "Given",
+          "text": "que je suis demandeur d'emploi"
         },
         {
-          "keyword": "Et que",
-          "text": "je souhaite créer ma propre entreprise"
+          "keyword": "And",
+          "text": "que je souhaite créer ma propre entreprise"
         },
         {
-          "keyword": "Et que",
-          "text": "je m'inscris à une formation en gestion d'entreprise"
+          "keyword": "And",
+          "text": "que je m'inscris à une formation en gestion d'entreprise"
         },
         {
-          "keyword": "Et que",
-          "text": "la formation est organisée par l'IFAPME"
+          "keyword": "And",
+          "text": "que la formation est organisée par l'IFAPME"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je démarre la formation"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je peux maintenir mes allocations pendant 6 mois"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai accès à l'accompagnement \"Airbag\" de l'UCM"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux demander le plan \"Tremplin-indépendants\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je bénéficie d'un coaching personnalisé"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux accéder aux microcrédits après formation"
         }
       ],
       "isOutline": false
     }
   ],
-  "metadata": {
-    "language": "fr"
-  },
-  "generated": "2025-12-13T11:57:49.160Z"
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.197Z"
 }

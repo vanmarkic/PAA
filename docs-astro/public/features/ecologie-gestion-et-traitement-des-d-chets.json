@@ -1,0 +1,280 @@
+{
+  "id": "ecologie-gestion-et-traitement-des-d-chets",
+  "name": "Gestion et traitement des déchets",
+  "description": "En tant qu'entreprise ou collectivité Je veux obtenir les autorisations pour la gestion des déchets Afin de respecter la réglementation environnementale",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les catégories de déchets sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Autorisation centre de recyclage classe B",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux ouvrir un centre de recyclage"
+        },
+        {
+          "keyword": "And",
+          "text": "que je traiterai 5000 tonnes/an de déchets non dangereux"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une surface de 2 hectares"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en zone d'activité économique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation d'exploitation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'enquête publique durera 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter la hiérarchie des déchets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Permis transport déchets dangereux ADR",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis transporteur de déchets"
+        },
+        {
+          "keyword": "And",
+          "text": "que je transporte des déchets classés dangereux"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 5 camions conformes ADR"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis de transport"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois avoir:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois tenir un registre de transport"
+        },
+        {
+          "keyword": "And",
+          "text": "déclarer mensuellement les flux transportés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Prime compostage collectif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je représente une copropriété de 50 logements"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous installons un système de compostage collectif"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût du projet est de 8000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous demandons la prime compostage"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous sommes éligibles à 60% du coût"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime sera de 4800€"
+        },
+        {
+          "keyword": "And",
+          "text": "nous devons former 3 maîtres-composteurs"
+        },
+        {
+          "keyword": "And",
+          "text": "faire un rapport annuel de valorisation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Enregistrement collecteur déchets électroniques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je collecte des équipements électroniques usagés"
+        },
+        {
+          "keyword": "And",
+          "text": "que je traite 500 tonnes de DEEE par an"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un contrat avec Recupel"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon enregistrement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'enregistrement est valable 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "un audit annuel est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Obligation tri 5 flux pour entreprise",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon entreprise génère plus de 10m³ de déchets par semaine"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 50 employés"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes obligations de tri"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois trier obligatoirement:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois tenir un registre des déchets"
+        },
+        {
+          "keyword": "And",
+          "text": "faire une déclaration annuelle"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul taxe déchets selon volume et type",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je produis <volume> tonnes de déchets <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis une <structure>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma taxe déchets"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant sera <taxe>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "volume",
+            "type",
+            "structure",
+            "taxe"
+          ],
+          "rows": [
+            {
+              "values": {
+                "volume": "100",
+                "type": "ménagers",
+                "structure": "entreprise",
+                "taxe": "12000"
+              }
+            },
+            {
+              "values": {
+                "volume": "100",
+                "type": "dangereux",
+                "structure": "entreprise",
+                "taxe": "25000"
+              }
+            },
+            {
+              "values": {
+                "volume": "50",
+                "type": "inertes",
+                "structure": "collectivité",
+                "taxe": "4250"
+              }
+            },
+            {
+              "values": {
+                "volume": "200",
+                "type": "industriels",
+                "structure": "entreprise",
+                "taxe": "30000"
+              }
+            },
+            {
+              "values": {
+                "volume": "10",
+                "type": "DEEE",
+                "structure": "association",
+                "taxe": "2000"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

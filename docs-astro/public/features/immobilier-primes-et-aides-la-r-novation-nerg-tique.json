@@ -1,0 +1,518 @@
+{
+  "id": "immobilier-primes-et-aides-la-r-novation-nerg-tique",
+  "name": "Primes et Aides à la Rénovation Énergétique",
+  "description": "En tant que propriétaire occupant ou bailleur Je veux obtenir des aides pour rénover mon bien Afin d'améliorer sa performance énergétique et son confort",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les primes varient selon les régions"
+      },
+      {
+        "text": "Et que les montants dépendent des revenus du ménage"
+      },
+      {
+        "text": "Et que le PEB initial influence les primes"
+      },
+      {
+        "text": "Et que les travaux doivent être réalisés par des professionnels"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de prime habitation pour isolation toiture",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire occupant en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus de référence sont 35000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux isoler 120m² de toiture"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'entrepreneur est agréé"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime habitation"
+        },
+        {
+          "keyword": "Then",
+          "text": "le calcul est:"
+        },
+        {
+          "keyword": "And",
+          "text": "les conditions sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime est plafonnée à 70% de la facture"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Réalisation d'un audit énergétique PAE2",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux rénover globalement ma maison"
+        },
+        {
+          "keyword": "And",
+          "text": "que plusieurs postes de travaux sont prévus"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je commande un audit PAE2"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'audit comprend:"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût est 660-990€ selon superficie"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime audit est 110-660€ selon revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audit est valable 5 ans pour les primes"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Primes RENOLUTION pour rénovation complète",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je rénove un bien à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont catégorie B (moyens)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réalise isolation + chauffage + ventilation"
+        },
+        {
+          "keyword": "When",
+          "text": "je cumule les primes RENOLUTION"
+        },
+        {
+          "keyword": "Then",
+          "text": "les montants sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'accompagnement Homegrade est gratuit"
+        },
+        {
+          "keyword": "And",
+          "text": "les factures doivent dater de moins de 2 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Obtention d'un prêt RenoWatt à taux zéro",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont < 51300€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je finance des travaux économiseurs énergie"
+        },
+        {
+          "keyword": "And",
+          "text": "que le montant travaux est 25000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un prêt vert"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entrepreneur doit être enregistré"
+        },
+        {
+          "keyword": "And",
+          "text": "un rapport énergie est requis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Obtention du certificat PEB pour location",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je mets un bien en location"
+        },
+        {
+          "keyword": "And",
+          "text": "que le PEB est obligatoire pour publier"
+        },
+        {
+          "keyword": "When",
+          "text": "je commande un certificat PEB"
+        },
+        {
+          "keyword": "Then",
+          "text": "le processus est:"
+        },
+        {
+          "keyword": "And",
+          "text": "les classes vont de A++ à G"
+        },
+        {
+          "keyword": "And",
+          "text": "l'affichage est obligatoire dans l'annonce"
+        },
+        {
+          "keyword": "And",
+          "text": "les recommandations sont incluses"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Installation de panneaux photovoltaïques avec primes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'installe 4kWc de panneaux solaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon installation coûte 6000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande les aides disponibles"
+        },
+        {
+          "keyword": "Then",
+          "text": "les incitants sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "le retour sur investissement est 7-10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "le compteur bidirectionnel est supprimé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Adaptation d'un logement pour personne âgée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un occupant a plus de 65 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que des adaptations sont nécessaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que les revenus sont modestes"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime adaptation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les travaux éligibles sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "un rapport ergothérapeute est requis"
+        },
+        {
+          "keyword": "And",
+          "text": "le cumul avec AViQ est possible"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est 3-6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Rénovation énergétique d'une copropriété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une copropriété de 20 appartements"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'AG vote une rénovation globale"
+        },
+        {
+          "keyword": "And",
+          "text": "que le budget est 400000€"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic organise le projet"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "les primes sont majorées de 10% si collectif"
+        },
+        {
+          "keyword": "And",
+          "text": "un coordinateur est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Prime démolition-reconstruction énergétique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un bâtiment est énergivore (PEB G)"
+        },
+        {
+          "keyword": "And",
+          "text": "que la rénovation coûterait plus que reconstruire"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux démolir et reconstruire"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande les aides"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "la nouvelle construction doit être passive"
+        },
+        {
+          "keyword": "And",
+          "text": "le volume peut augmenter de 20% max"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Rénovation par tiers investisseur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je n'ai pas les fonds pour rénover"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une société propose le tiers investissement"
+        },
+        {
+          "keyword": "And",
+          "text": "que les économies sont garanties"
+        },
+        {
+          "keyword": "When",
+          "text": "je signe un contrat CPE"
+        },
+        {
+          "keyword": "Then",
+          "text": "le modèle est:"
+        },
+        {
+          "keyword": "And",
+          "text": "les primes restent au bénéficiaire"
+        },
+        {
+          "keyword": "And",
+          "text": "le contrat est cessible si vente"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Calcul prime isolation selon revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus de référence sont <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'isole <surface>m² de <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en <region>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma prime"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma catégorie est <categorie>"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime unitaire est <prime_m2>€/m²"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime totale est <prime_totale>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "region",
+            "revenus",
+            "type",
+            "surface",
+            "categorie",
+            "prime_m2",
+            "prime_totale"
+          ],
+          "rows": [
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "20000",
+                "type": "toiture",
+                "surface": "100",
+                "categorie": "R1",
+                "prime_m2": "8",
+                "prime_totale": "800"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "35000",
+                "type": "toiture",
+                "surface": "100",
+                "categorie": "R2",
+                "prime_m2": "6",
+                "prime_totale": "600"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "50000",
+                "type": "toiture",
+                "surface": "100",
+                "categorie": "R3",
+                "prime_m2": "4",
+                "prime_totale": "400"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "70000",
+                "type": "toiture",
+                "surface": "100",
+                "categorie": "R4",
+                "prime_m2": "3",
+                "prime_totale": "300"
+              }
+            },
+            {
+              "values": {
+                "region": "Bruxelles",
+                "revenus": "35000",
+                "type": "murs",
+                "surface": "80",
+                "categorie": "B",
+                "prime_m2": "50",
+                "prime_totale": "4000"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "25000",
+                "type": "sol",
+                "surface": "60",
+                "categorie": "R1",
+                "prime_m2": "10",
+                "prime_totale": "600"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

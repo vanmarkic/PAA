@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-am-nagement-local-v-los",
+  "name": "Aménagement Local Vélos",
+  "description": "En tant que copropriété Je veux aménager un local vélos Afin de promouvoir la mobilité douce",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les résidents utilisent des vélos"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Création local vélos sécurisé",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un espace de 30m² est disponible"
+        },
+        {
+          "keyword": "When",
+          "text": "l'aménagement est voté"
+        },
+        {
+          "keyword": "Then",
+          "text": "il comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Attribution emplacements vélos",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 30 places sont disponibles"
+        },
+        {
+          "keyword": "But",
+          "text": "40 demandes existent"
+        },
+        {
+          "keyword": "When",
+          "text": "l'attribution est organisée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les critères sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Responsabilité vol/dégradation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un vélo est volé du local"
+        },
+        {
+          "keyword": "When",
+          "text": "la responsabilité est examinée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle dépend de:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.202Z"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-tenue-du-registre-de-copropri-t",
+  "name": "Tenue du Registre de Copropriété",
+  "description": "En tant que syndic Je veux tenir le registre de copropriété Afin de documenter toutes les décisions et événements",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le registre est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Contenu obligatoire du registre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je constitue le registre"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la complétude"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit contenir:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Consultation du registre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire demande consultation"
+        },
+        {
+          "keyword": "When",
+          "text": "il formule sa demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Transmission registre nouveau syndic",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un nouveau syndic est désigné"
+        },
+        {
+          "keyword": "When",
+          "text": "la passation s'effectue"
+        },
+        {
+          "keyword": "Then",
+          "text": "la transmission comprend:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

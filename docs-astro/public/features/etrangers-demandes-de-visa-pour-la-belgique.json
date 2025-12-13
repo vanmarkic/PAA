@@ -1,0 +1,525 @@
+{
+  "id": "etrangers-demandes-de-visa-pour-la-belgique",
+  "name": "Demandes de visa pour la Belgique",
+  "description": "En tant que ressortissant étranger Je veux demander un visa pour la Belgique Afin de pouvoir entrer et séjourner légalement sur le territoire",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les frais de visa 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Visa Schengen tourisme court séjour",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis ressortissant d'un pays soumis à visa"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux visiter la Belgique pour 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une réservation d'hôtel confirmée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance voyage de 30000€ minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des moyens de subsistance de 95€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un billet retour"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa Schengen type C"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être complète"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 80€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement devrait être 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais fournir mes données biométriques"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Visa étudiant long séjour",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis accepté dans une université belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une attestation d'inscription"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une preuve de moyens de subsistance de 730€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un certificat médical"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un casier judiciaire vierge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une preuve de logement"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa D pour études"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 200€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai devrait être environ 90 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "mon visa devrait permettre l'obtention d'une carte A"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Visa travail avec permis unique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un contrat de travail en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon employeur a obtenu une autorisation d'occupation"
+        },
+        {
+          "keyword": "And",
+          "text": "que le salaire annuel est supérieur à 45000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai les qualifications requises"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa D pour travail"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 350€"
+        },
+        {
+          "keyword": "And",
+          "text": "le visa devrait mentionner \"permis unique\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir demander une carte A à l'arrivée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Visa regroupement familial avec citoyen belge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon conjoint est belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes mariés depuis plus de 1 an"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un acte de mariage légalisé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a des revenus de 1953€/mois minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un logement adéquat"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa D regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 180€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai devrait être maximum 180 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir obtenir une carte F"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Visa affaires court séjour",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une invitation d'une entreprise belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je participe à une réunion d'affaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon entreprise couvre mes frais"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance voyage professionnelle"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa Schengen affaires"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être prioritaire"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 80€"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais demander un visa à entrées multiples"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Visa médical",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai besoin d'un traitement médical en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une attestation de l'hôpital belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai la preuve du paiement anticipé ou garantie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie couvrant le traitement"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa pour raisons médicales"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être traitée en urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "un accompagnant pourrait être autorisé"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée devrait correspondre au traitement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Visa de transit aéroportuaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis ressortissant d'un pays soumis au VTA"
+        },
+        {
+          "keyword": "And",
+          "text": "que je transite par l'aéroport de Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un vol confirmé vers ma destination finale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un visa pour le pays de destination"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un visa de transit type A"
+        },
+        {
+          "keyword": "Then",
+          "text": "les frais devraient être 80€"
+        },
+        {
+          "keyword": "And",
+          "text": "le visa devrait être valable uniquement pour le transit"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne pourrais pas sortir de la zone internationale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Refus de visa pour documents insuffisants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai soumis une demande de visa touristique"
+        },
+        {
+          "keyword": "But",
+          "text": "que je n'ai pas de réservation d'hébergement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de preuve de moyens financiers"
+        },
+        {
+          "keyword": "When",
+          "text": "ma demande est examinée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"documentation insuffisante\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir faire appel dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Exemption de visa pour séjour court",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis citoyen américain"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux séjourner 60 jours en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est pour du tourisme"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes obligations de visa"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas avoir besoin de visa"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais entrer avec mon passeport"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais respecter la règle des 90/180 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Frais de visa selon le type et l'âge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande un <type_visa>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les frais"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant devrait être <frais>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_visa",
+            "age",
+            "frais"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_visa": "visa Schengen",
+                "age": "25",
+                "frais": "80"
+              }
+            },
+            {
+              "values": {
+                "type_visa": "visa Schengen",
+                "age": "8",
+                "frais": "40"
+              }
+            },
+            {
+              "values": {
+                "type_visa": "visa Schengen",
+                "age": "4",
+                "frais": "0"
+              }
+            },
+            {
+              "values": {
+                "type_visa": "visa étudiant",
+                "age": "22",
+                "frais": "200"
+              }
+            },
+            {
+              "values": {
+                "type_visa": "visa travail",
+                "age": "35",
+                "frais": "350"
+              }
+            },
+            {
+              "values": {
+                "type_visa": "regroupement familial",
+                "age": "30",
+                "frais": "180"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-11",
+      "name": "Procédure de recours après refus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon visa a été refusé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu la notification avec les motifs"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste la décision"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose un recours au CCE"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois le faire dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de recours sont de 200€"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander la suspension en extrême urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de décision est d'environ 60 jours"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

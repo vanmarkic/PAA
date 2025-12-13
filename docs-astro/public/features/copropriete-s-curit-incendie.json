@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-s-curit-incendie",
+  "name": "Sécurité Incendie",
+  "description": "En tant que syndic Je veux assurer la sécurité incendie Afin de protéger les occupants et l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la sécurité incendie est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Contrôle annuel des équipements",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'immeuble a des équipements incendie"
+        },
+        {
+          "keyword": "When",
+          "text": "le contrôle annuel est effectué"
+        },
+        {
+          "keyword": "Then",
+          "text": "il vérifie:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mise en conformité obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le rapport signale des non-conformités"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic reçoit le rapport"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Plan d'évacuation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'immeuble compte 5 étages"
+        },
+        {
+          "keyword": "When",
+          "text": "le plan d'évacuation est établi"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit inclure:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

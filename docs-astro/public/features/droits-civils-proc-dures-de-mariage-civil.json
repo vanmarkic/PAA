@@ -1,0 +1,370 @@
+{
+  "id": "droits-civils-proc-dures-de-mariage-civil",
+  "name": "Procédures de Mariage Civil",
+  "description": "En tant que personne souhaitant se marier Je veux suivre la procédure légale de mariage Afin de formaliser mon union civile",
+  "category": "droits-civils",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les conditions légales sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Déclaration de mariage entre deux majeurs belges",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes deux personnes majeures"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes tous les deux belges"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes célibataires"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous n'avons pas de lien de parenté prohibé"
+        },
+        {
+          "keyword": "When",
+          "text": "nous faisons une déclaration de mariage à la commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "la publication des bans devrait être affichée pendant 14 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "nous pouvons choisir une date de célébration après ce délai"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût devrait être de 50€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mariage avec un ressortissant étranger",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon/ma partenaire est de nationalité française"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes tous les deux célibataires"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déclarons notre mariage"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons fournir des documents supplémentaires:"
+        },
+        {
+          "keyword": "And",
+          "text": "le parquet doit donner son avis"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai peut être prolongé jusqu'à 5 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Refus de mariage pour bigamie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis déjà marié(e)"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon divorce n'est pas finalisé"
+        },
+        {
+          "keyword": "When",
+          "text": "je tente de déclarer un nouveau mariage"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"Bigamie interdite - Article 147 Code Civil\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais attendre la transcription du divorce"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Mariage entre cousins germains",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes cousins germains"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous souhaitons nous marier"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déclarons notre mariage"
+        },
+        {
+          "keyword": "Then",
+          "text": "notre demande devrait être acceptée"
+        },
+        {
+          "keyword": "But",
+          "text": "nous devons prouver le lien de parenté exact"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Opposition au mariage par un parent",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une déclaration de mariage est publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un parent forme opposition pour \"mariage blanc suspecté\""
+        },
+        {
+          "keyword": "When",
+          "text": "l'officier de l'état civil examine l'opposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "le mariage devrait être suspendu"
+        },
+        {
+          "keyword": "And",
+          "text": "une enquête devrait être menée"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal de la famille peut être saisi"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai maximum de suspension est de 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Cohabitation légale comme alternative au mariage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous ne souhaitons pas nous marier"
+        },
+        {
+          "keyword": "But",
+          "text": "que nous voulons une reconnaissance légale"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes majeurs et capables"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déclarons une cohabitation légale"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons:"
+        },
+        {
+          "keyword": "And",
+          "text": "les effets juridiques sont limités par rapport au mariage"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût devrait être de 25€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Divorce par consentement mutuel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes mariés depuis plus d'un an"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes d'accord pour divorcer"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un accord sur:"
+        },
+        {
+          "keyword": "When",
+          "text": "nous introduisons une procédure de divorce"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons passer devant le notaire ou le tribunal"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure peut durer minimum 1 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût dépend du notaire (500-1500€)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Divorce pour désunion irrémédiable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes séparés depuis 12 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y a pas d'accord mutuel"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le divorce pour désunion"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver:"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal décide des modalités"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure peut durer 6-18 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Vérification des empêchements au mariage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les futurs époux ont un lien de <parente>"
+        },
+        {
+          "keyword": "When",
+          "text": "ils déclarent leur mariage"
+        },
+        {
+          "keyword": "Then",
+          "text": "le mariage devrait être <decision>"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif serait \"<motif>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "parente",
+            "decision",
+            "motif"
+          ],
+          "rows": [
+            {
+              "values": {
+                "parente": "frère-sœur",
+                "decision": "refusé",
+                "motif": "Parenté en ligne directe prohibée"
+              }
+            },
+            {
+              "values": {
+                "parente": "parent-enfant",
+                "decision": "refusé",
+                "motif": "Parenté en ligne directe prohibée"
+              }
+            },
+            {
+              "values": {
+                "parente": "oncle-nièce",
+                "decision": "refusé",
+                "motif": "Parenté collatérale 3e degré prohibée"
+              }
+            },
+            {
+              "values": {
+                "parente": "cousins germains",
+                "decision": "accepté",
+                "motif": "Parenté collatérale 4e degré autorisée"
+              }
+            },
+            {
+              "values": {
+                "parente": "aucun",
+                "decision": "accepté",
+                "motif": "Pas d'empêchement"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

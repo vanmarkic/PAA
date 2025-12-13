@@ -1,0 +1,283 @@
+{
+  "id": "cour-europeenne-proc-dure-de-l-arr-t-pilote",
+  "name": "Procédure de l'arrêt pilote",
+  "description": "En tant que CEDH face à un problème systémique Je veux appliquer la procédure de l'arrêt pilote Afin de traiter efficacement de nombreuses requêtes similaires",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'arrêt pilote traite les problèmes structurels"
+      },
+      {
+        "text": "Et qu'il peut suspendre les affaires similaires"
+      },
+      {
+        "text": "Et qu'il ordonne des mesures générales"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Identification d'un problème systémique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 500 requêtes concernent les conditions de détention"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elles révèlent un problème structurel en Roumanie"
+        },
+        {
+          "keyword": "And",
+          "text": "que le problème affecte des milliers de détenus"
+        },
+        {
+          "keyword": "And",
+          "text": "que la législation nationale est défaillante"
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour examine ces requêtes"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait identifier le problème systémique"
+        },
+        {
+          "keyword": "And",
+          "text": "sélectionner une ou plusieurs affaires pilotes"
+        },
+        {
+          "keyword": "And",
+          "text": "communiquer avec le gouvernement"
+        },
+        {
+          "keyword": "And",
+          "text": "envisager la procédure de l'arrêt pilote"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Arrêt pilote avec mesures générales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt pilote est rendu"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il constate des violations systémiques de l'article 3"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il identifie les causes structurelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que 2000 requêtes similaires sont pendantes"
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour ordonne des mesures"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait fixer des mesures générales précises"
+        },
+        {
+          "keyword": "And",
+          "text": "établir un calendrier de mise en œuvre (18 mois)"
+        },
+        {
+          "keyword": "And",
+          "text": "suspendre l'examen des affaires similaires"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoir un mécanisme de réparation domestique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Suivi de l'exécution d'un arrêt pilote",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt pilote a été rendu il y a 12 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'État a soumis un plan d'action"
+        },
+        {
+          "keyword": "And",
+          "text": "que des réformes législatives sont en cours"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un mécanisme d'indemnisation a été créé"
+        },
+        {
+          "keyword": "When",
+          "text": "le Comité des Ministres supervise"
+        },
+        {
+          "keyword": "Then",
+          "text": "il devrait évaluer les progrès réalisés"
+        },
+        {
+          "keyword": "And",
+          "text": "vérifier l'effectivité des mesures"
+        },
+        {
+          "keyword": "And",
+          "text": "décider de la reprise des affaires suspendues"
+        },
+        {
+          "keyword": "And",
+          "text": "surveiller jusqu'à résolution complète"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Échec de mise en œuvre et reprise des affaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt pilote fixait un délai de 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que le délai est expiré sans mesures adéquates"
+        },
+        {
+          "keyword": "And",
+          "text": "que le problème systémique persiste"
+        },
+        {
+          "keyword": "And",
+          "text": "que les victimes n'ont pas de recours"
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour constate l'échec"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait reprendre l'examen des affaires gelées"
+        },
+        {
+          "keyword": "And",
+          "text": "traiter les requêtes individuellement"
+        },
+        {
+          "keyword": "And",
+          "text": "constater les violations dans chaque cas"
+        },
+        {
+          "keyword": "And",
+          "text": "accorder des satisfactions équitables"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Critères pour arrêt pilote",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "\"<nombre>\" requêtes similaires"
+        },
+        {
+          "keyword": "And",
+          "text": "un problème de type \"<type_probleme>\""
+        },
+        {
+          "keyword": "And",
+          "text": "une origine \"<origine>\""
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour évalue la procédure pilote"
+        },
+        {
+          "keyword": "Then",
+          "text": "la décision devrait être \"<decision>\""
+        },
+        {
+          "keyword": "And",
+          "text": "la priorité serait \"<priorite>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "nombre",
+            "type_probleme",
+            "origine",
+            "decision",
+            "priorite"
+          ],
+          "rows": [
+            {
+              "values": {
+                "nombre": "1000",
+                "type_probleme": "conditions détention",
+                "origine": "législatif",
+                "decision": "pilote",
+                "priorite": "haute"
+              }
+            },
+            {
+              "values": {
+                "nombre": "50",
+                "type_probleme": "délais judiciaires",
+                "origine": "systémique",
+                "decision": "pilote",
+                "priorite": "moyenne"
+              }
+            },
+            {
+              "values": {
+                "nombre": "10",
+                "type_probleme": "cas individuel",
+                "origine": "ponctuel",
+                "decision": "normale",
+                "priorite": "basse"
+              }
+            },
+            {
+              "values": {
+                "nombre": "5000",
+                "type_probleme": "pensions impayées",
+                "origine": "structurel",
+                "decision": "pilote",
+                "priorite": "critique"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

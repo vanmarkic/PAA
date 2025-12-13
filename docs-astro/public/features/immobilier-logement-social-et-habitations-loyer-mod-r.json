@@ -1,0 +1,479 @@
+{
+  "id": "immobilier-logement-social-et-habitations-loyer-mod-r",
+  "name": "Logement Social et Habitations à Loyer Modéré",
+  "description": "En tant que personne à revenus modestes Je veux accéder à un logement social Afin d'avoir un logement décent et abordable",
+  "category": "immobilier",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les plafonds de revenus 2024 pour le logement social sont:"
+      },
+      {
+        "text": "Et que les sociétés de logement social sont régionales"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'inscription pour un logement social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus annuels sont de 20000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis une personne seule"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vis en Région Wallonne"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de propriété"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'inscris pour un logement social"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois un numéro de candidature unique"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis inscrit sur liste d'attente avec points de priorité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Attribution des points de priorité logement social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis candidat au logement social"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai différentes situations prioritaires"
+        },
+        {
+          "keyword": "When",
+          "text": "mon dossier est évalué"
+        },
+        {
+          "keyword": "Then",
+          "text": "les points sont attribués selon:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'attribution suit l'ordre des points"
+        },
+        {
+          "keyword": "And",
+          "text": "à points égaux, l'ancienneté prime"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Détermination du loyer dans le logement social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai obtenu un logement social 2 chambres"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 18000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le loyer de base est de 400€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "mon loyer social est calculé"
+        },
+        {
+          "keyword": "Then",
+          "text": "la formule comprend:"
+        },
+        {
+          "keyword": "And",
+          "text": "le loyer total est 350€ charges comprises"
+        },
+        {
+          "keyword": "And",
+          "text": "le loyer est révisé annuellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Demande de mutation vers un autre logement social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'occupe un logement social 1 chambre"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma famille s'est agrandie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai maintenant 2 enfants"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une mutation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les motifs valables sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "je reste locataire pendant la procédure"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutation est prioritaire sur nouvelles candidatures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Acquisition d'un logement social par le locataire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'occupe mon logement social depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que la société propose la vente"
+        },
+        {
+          "keyword": "And",
+          "text": "que le prix estimé est de 150000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je veux acheter mon logement"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "le prix d'achat est environ 105000€"
+        },
+        {
+          "keyword": "And",
+          "text": "je bénéficie du taux réduit crédit social"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Location via une Agence Immobilière Sociale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont de 22000€ annuels"
+        },
+        {
+          "keyword": "And",
+          "text": "que je cherche un logement abordable"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une AIS gère des biens privés"
+        },
+        {
+          "keyword": "When",
+          "text": "je candidate auprès de l'AIS"
+        },
+        {
+          "keyword": "Then",
+          "text": "les avantages sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "les revenus doivent être < plafonds sociaux + 20%"
+        },
+        {
+          "keyword": "And",
+          "text": "le bail est de type classique 9 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Création d'un habitat groupé solidaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 5 familles veulent créer un habitat groupé"
+        },
+        {
+          "keyword": "And",
+          "text": "que le projet inclut espaces communs"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous visons l'accessibilité financière"
+        },
+        {
+          "keyword": "When",
+          "text": "nous montons le projet"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "des subsides régionaux sont disponibles"
+        },
+        {
+          "keyword": "And",
+          "text": "l'accompagnement Habitat et Participation existe"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Attribution d'un logement de transit d'urgence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en situation d'urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai perdu mon logement suite à un sinistre"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des enfants mineurs"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un logement de transit"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est:"
+        },
+        {
+          "keyword": "And",
+          "text": "la recherche de logement définitif est obligatoire"
+        },
+        {
+          "keyword": "And",
+          "text": "l'aide sociale est coordonnée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Installation en habitat léger permanent",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux vivre en habitat léger (tiny house)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai trouvé un terrain en zone d'habitat"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare mon installation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "certaines communes ont des zones dédiées"
+        },
+        {
+          "keyword": "And",
+          "text": "le Code wallon de l'habitation durable s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Travaux de rénovation dans un logement social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon logement social nécessite rénovation"
+        },
+        {
+          "keyword": "And",
+          "text": "que la société programme des travaux"
+        },
+        {
+          "keyword": "When",
+          "text": "les travaux sont planifiés"
+        },
+        {
+          "keyword": "Then",
+          "text": "le processus est:"
+        },
+        {
+          "keyword": "And",
+          "text": "le loyer n'augmente pas suite aux travaux obligatoires"
+        },
+        {
+          "keyword": "And",
+          "text": "l'amélioration énergétique est prioritaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Éligibilité au logement social par région",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus annuels sont <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon ménage compte <personnes> personne(s)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <enfants> enfant(s)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en <region>"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "le plafond applicable est <plafond>€"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis <eligibilite>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "region",
+            "revenus",
+            "personnes",
+            "enfants",
+            "plafond",
+            "eligibilite"
+          ],
+          "rows": [
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "20000",
+                "personnes": "1",
+                "enfants": "0",
+                "plafond": "25300",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "28000",
+                "personnes": "2",
+                "enfants": "1",
+                "plafond": "33100",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "values": {
+                "region": "Bruxelles",
+                "revenus": "25000",
+                "personnes": "1",
+                "enfants": "0",
+                "plafond": "24229",
+                "eligibilite": "non éligible"
+              }
+            },
+            {
+              "values": {
+                "region": "Flandre",
+                "revenus": "35000",
+                "personnes": "2",
+                "enfants": "2",
+                "plafond": "46572",
+                "eligibilite": "éligible"
+              }
+            },
+            {
+              "values": {
+                "region": "Wallonie",
+                "revenus": "35000",
+                "personnes": "2",
+                "enfants": "0",
+                "plafond": "30700",
+                "eligibilite": "non éligible"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-des-balcons-et-fa-ades",
+  "name": "Gestion des Balcons et Façades",
+  "description": "En tant que copropriété Je veux encadrer l'usage des balcons Afin de maintenir l'esthétique de l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les balcons sont visibles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation jardinières balcon",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire veut des jardinières"
+        },
+        {
+          "keyword": "When",
+          "text": "il demande l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Store banne sur balcon",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un store banne est souhaité"
+        },
+        {
+          "keyword": "When",
+          "text": "l'installation est demandée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle requiert:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Interdiction séchage linge visible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le règlement interdit le linge visible"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un résident sèche sur balcon façade rue"
+        },
+        {
+          "keyword": "When",
+          "text": "l'infraction est constatée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

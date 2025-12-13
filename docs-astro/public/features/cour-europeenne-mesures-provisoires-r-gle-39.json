@@ -1,0 +1,292 @@
+{
+  "id": "cour-europeenne-mesures-provisoires-r-gle-39",
+  "name": "Mesures provisoires (Règle 39)",
+  "description": "En tant que personne face à un danger imminent et irréversible Je veux demander des mesures provisoires à la CEDH Afin d'empêcher une violation grave de mes droits fondamentaux",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les mesures provisoires sont exceptionnelles"
+      },
+      {
+        "text": "Et qu'elles ne sont accordées que si le risque est imminent"
+      },
+      {
+        "text": "Et que le préjudice serait irréversible"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande urgente d'empêcher une expulsion",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je dois être expulsé vers la Syrie demain"
+        },
+        {
+          "keyword": "And",
+          "text": "que je risque la torture ou la mort dans ce pays"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des preuves de persécutions antérieures"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai été condamné à mort par contumace"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures provisoires d'urgence"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être traitée immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais fournir \"identité, date d'expulsion, preuves du risque\""
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait suspendre l'expulsion si accordée"
+        },
+        {
+          "keyword": "And",
+          "text": "l'État devrait être notifié immédiatement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mesures provisoires pour traitement médical vital",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis détenu avec un cancer en phase terminale"
+        },
+        {
+          "keyword": "And",
+          "text": "que les autorités refusent le traitement médical nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon état se détériore rapidement"
+        },
+        {
+          "keyword": "And",
+          "text": "que le médecin confirme un risque vital imminent"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures provisoires médicales"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être prioritaire"
+        },
+        {
+          "keyword": "And",
+          "text": "inclure \"rapports médicaux, correspondances avec l'administration\""
+        },
+        {
+          "keyword": "And",
+          "text": "demander l'accès immédiat aux soins"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour pourrait ordonner le transfert médical"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Refus de mesures provisoires - pas de risque imminent",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conteste une décision de justice"
+        },
+        {
+          "keyword": "And",
+          "text": "que la décision me cause un préjudice financier"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y a pas de risque pour ma vie ou intégrité"
+        },
+        {
+          "keyword": "And",
+          "text": "que le préjudice pourrait être compensé financièrement"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures provisoires"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif serait \"absence de risque imminent et irréversible\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais poursuivre la procédure normale"
+        },
+        {
+          "keyword": "And",
+          "text": "demander une satisfaction équitable ultérieurement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Protection d'un témoin dans une affaire de violation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis témoin clé dans une affaire de torture"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu des menaces de mort"
+        },
+        {
+          "keyword": "And",
+          "text": "que deux autres témoins ont déjà disparu"
+        },
+        {
+          "keyword": "And",
+          "text": "que la police refuse de me protéger"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures de protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Cour devrait examiner le danger"
+        },
+        {
+          "keyword": "And",
+          "text": "pourrait demander à l'État de garantir ma sécurité"
+        },
+        {
+          "keyword": "And",
+          "text": "des mesures de protection devraient être mises en place"
+        },
+        {
+          "keyword": "And",
+          "text": "mon témoignage pourrait être recueilli sous protection"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Évaluation de l'urgence selon le délai",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une mesure est prévue dans <delai>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le risque est de type \"<type_risque>\""
+        },
+        {
+          "keyword": "And",
+          "text": "que le préjudice serait \"<nature_prejudice>\""
+        },
+        {
+          "keyword": "When",
+          "text": "j'évalue l'urgence"
+        },
+        {
+          "keyword": "Then",
+          "text": "le niveau d'urgence devrait être \"<niveau>\""
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure devrait être \"<procedure>\""
+        },
+        {
+          "keyword": "And",
+          "text": "la réponse attendue dans \"<reponse>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "delai",
+            "type_risque",
+            "nature_prejudice",
+            "niveau",
+            "procedure",
+            "reponse"
+          ],
+          "rows": [
+            {
+              "values": {
+                "delai": "24 heures",
+                "type_risque": "expulsion/torture",
+                "nature_prejudice": "irréversible",
+                "niveau": "critique",
+                "procedure": "ultra-prioritaire",
+                "reponse": "6 heures"
+              }
+            },
+            {
+              "values": {
+                "delai": "48 heures",
+                "type_risque": "exécution",
+                "nature_prejudice": "irréversible",
+                "niveau": "critique",
+                "procedure": "ultra-prioritaire",
+                "reponse": "12 heures"
+              }
+            },
+            {
+              "values": {
+                "delai": "1 semaine",
+                "type_risque": "transfert prison",
+                "nature_prejudice": "potentiellement grave",
+                "niveau": "élevé",
+                "procedure": "prioritaire",
+                "reponse": "48 heures"
+              }
+            },
+            {
+              "values": {
+                "delai": "1 mois",
+                "type_risque": "démolition maison",
+                "nature_prejudice": "réparable",
+                "niveau": "modéré",
+                "procedure": "normale",
+                "reponse": "1 semaine"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

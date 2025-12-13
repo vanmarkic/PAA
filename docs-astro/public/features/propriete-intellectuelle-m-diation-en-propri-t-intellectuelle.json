@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-m-diation-en-propri-t-intellectuelle",
+  "name": "Médiation en propriété intellectuelle",
+  "description": "En tant que partie à un litige IP Je veux recourir à la médiation Afin de résoudre le conflit rapidement et confidentiellement",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la médiation est volontaire"
+      },
+      {
+        "text": "Et que le CEPANI et WIPO offrent ce service"
+      },
+      {
+        "text": "Et que les coûts sont partagés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Médiation WIPO pour litige international",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un litige oppose deux entreprises"
+        },
+        {
+          "keyword": "When",
+          "text": "nous convenons d'une médiation WIPO"
+        },
+        {
+          "keyword": "Then",
+          "text": "un médiateur spécialisé IP est désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure est confidentielle"
+        },
+        {
+          "keyword": "And",
+          "text": "dure généralement 1-3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "coûte 10000-20000€ partagés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Médiation ordonnée par le juge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un procès en contrefaçon est en cours"
+        },
+        {
+          "keyword": "And",
+          "text": "que le juge suggère une médiation"
+        },
+        {
+          "keyword": "When",
+          "text": "nous acceptons la médiation judiciaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "le procès est suspendu 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "un médiateur agréé intervient"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas d'accord, il est homologué"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

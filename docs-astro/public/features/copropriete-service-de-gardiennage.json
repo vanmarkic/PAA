@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-service-de-gardiennage",
+  "name": "Service de Gardiennage",
+  "description": "En tant que copropriété Je veux organiser le gardiennage Afin d'assurer la sécurité et l'entretien",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété envisage un gardiennage"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Engagement concierge résident",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un poste de concierge est créé"
+        },
+        {
+          "keyword": "When",
+          "text": "le recrutement est lancé"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Société de gardiennage externe",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 sociétés sont consultées"
+        },
+        {
+          "keyword": "When",
+          "text": "les offres sont comparées"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'évaluation porte sur:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Répartition coûts gardiennage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le gardiennage coûte 3000€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "les charges sont réparties"
+        },
+        {
+          "keyword": "Then",
+          "text": "la clé est:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

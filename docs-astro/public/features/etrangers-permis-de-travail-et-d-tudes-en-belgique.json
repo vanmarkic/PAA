@@ -1,0 +1,656 @@
+{
+  "id": "etrangers-permis-de-travail-et-d-tudes-en-belgique",
+  "name": "Permis de travail et d'études en Belgique",
+  "description": "En tant qu'étranger souhaitant travailler ou étudier Je veux obtenir les autorisations nécessaires Afin d'exercer une activité professionnelle ou suivre des études",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les types de permis de travail sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de permis unique pour travailleur qualifié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une offre d'emploi en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que le poste requiert un diplôme universitaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai les qualifications requises"
+        },
+        {
+          "keyword": "And",
+          "text": "que le salaire annuel est de 45000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'employeur a fait le test du marché du travail"
+        },
+        {
+          "keyword": "When",
+          "text": "mon employeur demande le permis unique"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande doit être faite à la région compétente"
+        },
+        {
+          "keyword": "And",
+          "text": "inclure le contrat de travail"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est de 4 mois maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "si approuvé, j'obtiens une carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux commencer à travailler"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Carte bleue européenne pour hautement qualifié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un master en informatique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une offre d'emploi avec salaire de 58000€/an"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est 1,5 fois le salaire moyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que le contrat est d'au moins 1 an"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la carte bleue européenne"
+        },
+        {
+          "keyword": "Then",
+          "text": "les conditions sont plus favorables"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de 90 jours maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "j'obtiens une carte H valable 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "ma famille peut me rejoindre facilement"
+        },
+        {
+          "keyword": "And",
+          "text": "après 5 ans dans l'UE, je peux demander le statut long-terme"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Permis de travail B standard",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon employeur veut m'engager"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis cuisinier spécialisé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a pénurie de main-d'œuvre"
+        },
+        {
+          "keyword": "And",
+          "text": "que le salaire respecte les barèmes"
+        },
+        {
+          "keyword": "When",
+          "text": "l'employeur demande le permis B"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit prouver la recherche infructueuse"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir l'autorisation d'occupation"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois obtenir le permis de travail"
+        },
+        {
+          "keyword": "And",
+          "text": "ensuite demander le visa D"
+        },
+        {
+          "keyword": "And",
+          "text": "le permis est lié à cet employeur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Permis étudiant-travailleur (20h/semaine)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étudiant avec carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux travailler pendant mes études"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est maximum 20h par semaine"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est hors vacances scolaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes droits"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux travailler sans permis supplémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "utiliser mes 475 heures étudiant"
+        },
+        {
+          "keyword": "And",
+          "text": "travailler temps plein pendant les vacances"
+        },
+        {
+          "keyword": "And",
+          "text": "ne pas dépasser le plafond de revenus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Carte professionnelle pour indépendant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux créer mon entreprise en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un business plan viable"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai les fonds nécessaires (18600€ minimum)"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'activité a une plus-value économique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la carte professionnelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois la demander au poste consulaire"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir le plan financier"
+        },
+        {
+          "keyword": "And",
+          "text": "prouver mes compétences de gestion"
+        },
+        {
+          "keyword": "And",
+          "text": "si approuvée, demander un visa D indépendant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Inscription universitaire pour étudiant étranger",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux étudier en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un diplôme secondaire équivalent"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai réussi l'examen d'admission"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une preuve de moyens de subsistance (730€/mois)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le visa étudiant"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois avoir l'attestation d'inscription"
+        },
+        {
+          "keyword": "And",
+          "text": "payer les frais de scolarité"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir un certificat médical"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir le visa D pour études"
+        },
+        {
+          "keyword": "And",
+          "text": "m'inscrire à la commune dans les 8 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Chercheur avec convention d'accueil",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis chercheur post-doctoral"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une université belge m'invite"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une convention d'accueil approuvée"
+        },
+        {
+          "keyword": "And",
+          "text": "que le projet est financé"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis chercheur"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est accélérée"
+        },
+        {
+          "keyword": "And",
+          "text": "je n'ai pas besoin de permis de travail B"
+        },
+        {
+          "keyword": "And",
+          "text": "j'obtiens directement une carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "ma famille peut m'accompagner"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux enseigner accessoirement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Travailleur saisonnier agricole",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux travailler dans l'agriculture"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est pour la saison des récoltes"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est maximum 90 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'employeur a l'autorisation"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis saisonnier"
+        },
+        {
+          "keyword": "Then",
+          "text": "c'est une procédure simplifiée"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir un logement fourni"
+        },
+        {
+          "keyword": "And",
+          "text": "retourner après la saison"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux revenir l'année suivante"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Transfert intra-entreprise (ICT)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille pour une multinationale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis transféré en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est un poste de manager/spécialiste"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 6 mois d'ancienneté minimum"
+        },
+        {
+          "keyword": "When",
+          "text": "l'entreprise demande le permis ICT"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie de la directive européenne"
+        },
+        {
+          "keyword": "And",
+          "text": "j'obtiens un permis spécifique ICT"
+        },
+        {
+          "keyword": "And",
+          "text": "valable jusqu'à 3 ans pour managers"
+        },
+        {
+          "keyword": "And",
+          "text": "1 an pour stagiaires"
+        },
+        {
+          "keyword": "And",
+          "text": "mobilité intra-UE facilitée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Stage professionnel rémunéré",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un contrat de stage"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est dans le cadre de mes études"
+        },
+        {
+          "keyword": "And",
+          "text": "que le stage est rémunéré"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il dure 6 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois avoir une convention de stage"
+        },
+        {
+          "keyword": "And",
+          "text": "l'approbation de l'établissement d'enseignement"
+        },
+        {
+          "keyword": "And",
+          "text": "un permis de travail C si hors UE"
+        },
+        {
+          "keyword": "And",
+          "text": "respecter la durée maximum de 12 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Artiste ou sportif temporaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis musicien professionnel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des concerts en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est pour 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des contrats signés"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis"
+        },
+        {
+          "keyword": "Then",
+          "text": "c'est une procédure spécifique artistes"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver ma qualité d'artiste"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir les cachets garantis"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir un permis de travail B temporaire"
+        },
+        {
+          "keyword": "And",
+          "text": "déclarer mes revenus en Belgique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Délais de traitement selon le type de permis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande un <type_permis>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon dossier est complet"
+        },
+        {
+          "keyword": "When",
+          "text": "les autorités traitent ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai maximum devrait être <delai> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_permis",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_permis": "permis unique",
+                "delai": "120"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "carte bleue",
+                "delai": "90"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "permis B standard",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "carte professionnelle",
+                "delai": "90"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "visa étudiant",
+                "delai": "90"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "chercheur",
+                "delai": "60"
+              }
+            },
+            {
+              "values": {
+                "type_permis": "ICT",
+                "delai": "90"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Refus de permis pour métier non en pénurie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je postule comme vendeur"
+        },
+        {
+          "keyword": "And",
+          "text": "que ce n'est pas un métier en pénurie"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a des demandeurs d'emploi disponibles"
+        },
+        {
+          "keyword": "When",
+          "text": "l'employeur demande le permis B"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif serait \"main-d'œuvre disponible sur le marché\""
+        },
+        {
+          "keyword": "And",
+          "text": "l'employeur peut faire un recours"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

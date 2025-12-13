@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-renouvellement-de-marque",
+  "name": "Renouvellement de marque",
+  "description": "En tant que titulaire de marque Je veux renouveler mon enregistrement Afin de maintenir mes droits exclusifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les marques durent 10 ans"
+      },
+      {
+        "text": "Et que le renouvellement est indéfini"
+      },
+      {
+        "text": "Et que les frais sont de 268€ pour le Benelux"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Renouvellement dans le délai normal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque expire dans 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux la renouveler pour 10 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renouvellement au BOIP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie 268€ pour 3 classes"
+        },
+        {
+          "keyword": "And",
+          "text": "37€ par classe supplémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "le renouvellement prend effet à l'échéance"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois un certificat de renouvellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Renouvellement tardif avec surtaxe",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma marque a expiré il y a 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis dans le délai de grâce de 6 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renouvellement tardif"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie les frais normaux plus 25% de surtaxe"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits sont restaurés rétroactivement"
+        },
+        {
+          "keyword": "And",
+          "text": "les tiers de bonne foi sont protégés"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

@@ -1,0 +1,623 @@
+{
+  "id": "benefits-garde-d-enfants-et-aides-financi-res",
+  "name": "Garde d'Enfants et Aides Financières",
+  "description": "En tant que parent ayant besoin de faire garder mon enfant Je veux connaître les aides financières disponibles pour la garde Afin de réduire le coût de l'accueil de mon enfant",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les aides pour la garde d'enfants en 2024 comprennent:"
+      },
+      {
+        "text": "Et que les tarifs des crèches subventionnées sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Parent avec revenus moyens en crèche ONE",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant de 18 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus annuels nets sont de 35000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant va en crèche ONE à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que la crèche est subventionnée"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le coût de garde"
+        },
+        {
+          "keyword": "Then",
+          "text": "le tarif journalier sera calculé selon mes revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "il sera environ de 18€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrai déduire 45% fiscalement"
+        },
+        {
+          "keyword": "And",
+          "text": "la déduction maximale sera 16.40€/jour"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Famille avec statut BIM",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai le statut BIM (intervention majorée)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant va en crèche subventionnée"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le tarif applicable"
+        },
+        {
+          "keyword": "Then",
+          "text": "la garde est gratuite"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir mon attestation BIM"
+        },
+        {
+          "keyword": "And",
+          "text": "cette gratuité s'applique depuis janvier 2023"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Famille nombreuse avec 3 enfants en crèche",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 3 enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que 2 enfants vont en crèche simultanément"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus annuels nets sont de 40000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que la crèche est ONE"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le coût total"
+        },
+        {
+          "keyword": "Then",
+          "text": "le 1er enfant paie le tarif normal selon revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "le 2ème enfant bénéficie de -30% de réduction"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai aussi -30% car famille de 3 enfants ou plus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Parent isolé avec réduction supplémentaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai la garde exclusive de mon enfant de 1 an"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels nets sont de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant va en crèche ONE"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le coût de garde"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie de -30% en tant que parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "le tarif de base sera déjà réduit vu mes revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "le cumul des réductions s'applique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Garde temps partiel (moins de 5h/jour)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant va en crèche"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y reste que 4 heures par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus annuels nets sont de 30000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le tarif journalier"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie de -40% sur le tarif normal"
+        },
+        {
+          "keyword": "And",
+          "text": "cette réduction s'applique automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer les heures de présence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Déduction fiscale pour garde privée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant va chez une gardienne privée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie 30€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'enfant y va 220 jours par an"
+        },
+        {
+          "keyword": "And",
+          "text": "que la gardienne est agréée ONE/Kind en Gezin"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux déduire maximum 16.40€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "la déduction totale sera 3608€ (16.40€ × 220 jours)"
+        },
+        {
+          "keyword": "And",
+          "text": "j'aurai une réduction d'impôt de 45% de ce montant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Intervention employeur secteur alimentaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille dans le secteur alimentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 2 ans en crèche"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie 20€/jour de garde"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'intervention employeur"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à une intervention via Alimento"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant peut aller jusqu'à 5€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les attestations de paiement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Garde d'enfant malade à domicile",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant de 3 ans est malade"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il ne peut pas aller en crèche"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin d'une garde à domicile"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une mutuelle"
+        },
+        {
+          "keyword": "When",
+          "text": "je contacte le service garde enfants malades"
+        },
+        {
+          "keyword": "Then",
+          "text": "certaines mutuelles offrent ce service"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût est réduit (environ 3-5€/heure)"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux avoir jusqu'à 10 jours/an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Accueillante conventionnée vs libre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je cherche une garde pour mon enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'hésite entre conventionnée et libre"
+        },
+        {
+          "keyword": "When",
+          "text": "je compare les options"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'accueillante conventionnée:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'accueillante libre:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Enfant de plus de 12 ans - non éligible déduction",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant a 13 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il va en garderie après l'école"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie 10€/jour"
+        },
+        {
+          "keyword": "When",
+          "text": "je veux déduire fiscalement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne suis pas éligible à la déduction"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"enfant de plus de 12 ans\""
+        },
+        {
+          "keyword": "And",
+          "text": "aucune déduction fiscale n'est possible"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Crèche d'entreprise avec participation employeur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon entreprise a une crèche"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'entreprise subventionne 50% du coût"
+        },
+        {
+          "keyword": "And",
+          "text": "que le tarif normal est 30€/jour"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon coût réel"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie 15€/jour après intervention"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux toujours déduire fiscalement"
+        },
+        {
+          "keyword": "And",
+          "text": "la déduction porte sur les 15€ payés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Calcul coût net selon revenus et aides",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus annuels nets sont <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le tarif crèche ONE est <tarif>€/jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <nombre_enfants> enfant(s) en crèche"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le coût net après déductions"
+        },
+        {
+          "keyword": "Then",
+          "text": "le coût journalier après réduction fiscale est <cout_net>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "revenus",
+            "tarif",
+            "nombre_enfants",
+            "cout_net"
+          ],
+          "rows": [
+            {
+              "values": {
+                "revenus": "25000",
+                "tarif": "12.00",
+                "nombre_enfants": "1",
+                "cout_net": "6.60"
+              }
+            },
+            {
+              "values": {
+                "revenus": "35000",
+                "tarif": "18.00",
+                "nombre_enfants": "1",
+                "cout_net": "10.62"
+              }
+            },
+            {
+              "values": {
+                "revenus": "45000",
+                "tarif": "25.00",
+                "nombre_enfants": "1",
+                "cout_net": "17.62"
+              }
+            },
+            {
+              "values": {
+                "revenus": "35000",
+                "tarif": "18.00",
+                "nombre_enfants": "2",
+                "cout_net": "8.10"
+              }
+            },
+            {
+              "values": {
+                "revenus": "0",
+                "tarif": "3.06",
+                "nombre_enfants": "1",
+                "cout_net": "1.68"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Procédure inscription en crèche",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'attends un enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux l'inscrire en crèche"
+        },
+        {
+          "keyword": "When",
+          "text": "j'entame les démarches"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "les places sont attribuées selon critères de priorité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-14",
+      "name": "Chèques garde d'enfants de la Région",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'habite en Région wallonne"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de moins de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reprends une formation ou emploi"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les aides régionales"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander des chèques garde d'enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "ils couvrent une partie des frais de garde"
+        },
+        {
+          "keyword": "And",
+          "text": "c'est limité dans le temps (6-12 mois)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver la reprise d'activité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-15",
+      "name": "Cumul des différentes aides",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 2 enfants en crèche"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis parent isolé avec statut BIM"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon employeur intervient"
+        },
+        {
+          "keyword": "When",
+          "text": "je cumule toutes les aides"
+        },
+        {
+          "keyword": "Then",
+          "text": "la garde est gratuite (statut BIM)"
+        },
+        {
+          "keyword": "But",
+          "text": "l'intervention employeur reste acquise"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas déduire fiscalement (déjà gratuit)"
+        },
+        {
+          "keyword": "And",
+          "text": "l'employeur pourrait me verser l'intervention en net"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.198Z"
+}

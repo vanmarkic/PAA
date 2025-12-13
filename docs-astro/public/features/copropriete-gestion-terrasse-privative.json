@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-gestion-terrasse-privative",
+  "name": "Gestion Terrasse Privative",
+  "description": "En tant que copropriété Je veux gérer les terrasses privatives Afin de maintenir l'harmonie architecturale",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que des terrasses sont privatives"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Aménagement terrasse par copropriétaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire veut aménager sa terrasse"
+        },
+        {
+          "keyword": "When",
+          "text": "il demande l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit vérifier:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Étanchéité sous terrasse",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une fuite apparaît sous terrasse"
+        },
+        {
+          "keyword": "When",
+          "text": "la responsabilité est déterminée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle dépend de:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Transformation terrasse en véranda",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire veut fermer sa terrasse"
+        },
+        {
+          "keyword": "When",
+          "text": "le projet est présenté"
+        },
+        {
+          "keyword": "Then",
+          "text": "il nécessite:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

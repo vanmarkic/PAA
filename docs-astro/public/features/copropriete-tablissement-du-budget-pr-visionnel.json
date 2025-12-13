@@ -1,0 +1,94 @@
+{
+  "id": "copropriete-tablissement-du-budget-pr-visionnel",
+  "name": "Établissement du Budget Prévisionnel",
+  "description": "En tant que syndic Je veux établir le budget prévisionnel Afin de planifier les dépenses annuelles",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'exercice comptable approche"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Préparation budget annuel standard",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'AG ordinaire approche"
+        },
+        {
+          "keyword": "And",
+          "text": "que le budget précédent était de 50000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare le nouveau budget"
+        },
+        {
+          "keyword": "Then",
+          "text": "il comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Ajustement pour inflation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'inflation est de 4%"
+        },
+        {
+          "keyword": "And",
+          "text": "que certains postes sont indexés"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les ajustements"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'augmentation est:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Vote budget déficitaire interdit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les dépenses prévues sont 60000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que les recettes prévues sont 55000€"
+        },
+        {
+          "keyword": "When",
+          "text": "le budget est soumis à l'AG"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit être équilibré"
+        },
+        {
+          "keyword": "And",
+          "text": "ne peut être voté en déficit"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

@@ -1,0 +1,634 @@
+{
+  "id": "benefits-cong-de-maternit",
+  "name": "Congé de Maternité",
+  "description": "En tant que femme enceinte ou jeune mère Je veux connaître mes droits au congé de maternité Afin de bénéficier d'un repos payé avant et après l'accouchement",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le congé de maternité en Belgique comprend:"
+      },
+      {
+        "text": "Et que les indemnités 2024 sont:"
+      },
+      {
+        "text": "Et que le repos prénatal obligatoire est de 1 semaine avant la date prévue"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Employée enceinte avec salaire moyen",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de 7 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis employée depuis plus de 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut est de 3000€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai cotisé à la sécurité sociale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 15 semaines de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité des 30 premiers jours sera 82% de mon salaire brut"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité après 30 jours sera 75% avec plafond journalier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Travailleuse indépendante enceinte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de 8 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis travailleuse indépendante"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai cotisé depuis au moins 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 40000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 12 semaines de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité sera forfaitaire selon mon statut"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux bénéficier de titres-services gratuits"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Grossesse multiple (jumeaux)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de jumeaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis employée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai cotisé à la sécurité sociale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 17 semaines minimum de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "le repos prénatal peut être porté à 8 semaines"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander jusqu'à 19 semaines au total"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Report du repos prénatal au postnatal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de 8 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis employée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite travailler jusqu'à l'accouchement"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon médecin donne son accord"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le report du repos prénatal"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux reporter jusqu'à 5 semaines au postnatal"
+        },
+        {
+          "keyword": "But",
+          "text": "je dois prendre obligatoirement 1 semaine avant l'accouchement"
+        },
+        {
+          "keyword": "And",
+          "text": "mon repos postnatal sera prolongé d'autant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Accouchement prématuré",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai accouché prématurément"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'avais pris que 2 semaines de repos prénatal"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'avais droit à 6 semaines prénatales"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon congé postnatal"
+        },
+        {
+          "keyword": "Then",
+          "text": "les 4 semaines non prises sont perdues"
+        },
+        {
+          "keyword": "But",
+          "text": "j'ai toujours droit à 9 semaines postnatales minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas d'hospitalisation du bébé, le congé peut être prolongé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Hospitalisation prolongée du nouveau-né",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon bébé est hospitalisé après la naissance"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'hospitalisation dure plus de 7 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en congé de maternité"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prolongation de mon congé"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon congé postnatal peut être prolongé"
+        },
+        {
+          "keyword": "And",
+          "text": "la prolongation égale la durée d'hospitalisation au-delà de 7 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Décès du nouveau-né",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant est décédé à la naissance"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'étais en congé de maternité"
+        },
+        {
+          "keyword": "When",
+          "text": "je consulte mes droits"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit au congé de maternité complet"
+        },
+        {
+          "keyword": "And",
+          "text": "les indemnités sont maintenues"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux bénéficier d'un accompagnement psychologique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Chômeuse enceinte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis au chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis enceinte de 8 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je perçois des allocations de chômage"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "mes allocations de chômage sont converties en indemnités de maternité"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant sera basé sur mes allocations de chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mes droits au chômage après le congé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Employée à temps partiel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps partiel (20h/semaine)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis enceinte"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut est de 1500€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 15 semaines de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité sera calculée sur base de mon salaire temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "les premiers 30 jours seront à 82% de 1500€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Incapacité de travail avant le congé de maternité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en incapacité de travail pour raison médicale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis enceinte de 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon incapacité est liée à la grossesse"
+        },
+        {
+          "keyword": "When",
+          "text": "arrive la période de congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je passe automatiquement en congé de maternité"
+        },
+        {
+          "keyword": "And",
+          "text": "les indemnités de maternité remplacent celles d'incapacité"
+        },
+        {
+          "keyword": "And",
+          "text": "le taux d'indemnisation peut être plus avantageux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Travailleuse sans cotisations suffisantes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai commencé à travailler il y a 3 mois seulement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas suffisamment cotisé"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon congé de maternité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne suis pas éligible aux indemnités complètes"
+        },
+        {
+          "keyword": "But",
+          "text": "j'ai droit au repos de maternité non payé"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois vérifier mes droits au CPAS"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Calcul indemnités selon salaire et durée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon salaire brut mensuel est de <salaire>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis au jour <jour> de mon congé de maternité"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon indemnité journalière"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux applicable est <taux>%"
+        },
+        {
+          "keyword": "And",
+          "text": "l'indemnité journalière est <indemnité>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "salaire",
+            "jour",
+            "taux",
+            "indemnité"
+          ],
+          "rows": [
+            {
+              "values": {
+                "salaire": "2500",
+                "jour": "15",
+                "taux": "82",
+                "indemnité": "68.33"
+              }
+            },
+            {
+              "values": {
+                "salaire": "2500",
+                "jour": "45",
+                "taux": "75",
+                "indemnité": "62.50"
+              }
+            },
+            {
+              "values": {
+                "salaire": "4500",
+                "jour": "15",
+                "taux": "82",
+                "indemnité": "123.00"
+              }
+            },
+            {
+              "values": {
+                "salaire": "4500",
+                "jour": "45",
+                "taux": "75",
+                "indemnité": "120.00"
+              }
+            },
+            {
+              "values": {
+                "salaire": "1800",
+                "jour": "15",
+                "taux": "82",
+                "indemnité": "49.20"
+              }
+            },
+            {
+              "values": {
+                "salaire": "1800",
+                "jour": "45",
+                "taux": "75",
+                "indemnité": "45.00"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Démarches administratives pour le congé",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux préparer mon congé de maternité"
+        },
+        {
+          "keyword": "When",
+          "text": "j'entame les démarches"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutuelle verse les indemnités directement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-14",
+      "name": "Protection contre le licenciement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai informé mon employeur de ma grossesse"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis en période de protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon employeur ne peut pas me licencier"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection commence à l'annonce de la grossesse"
+        },
+        {
+          "keyword": "And",
+          "text": "elle se termine 1 mois après la fin du congé de maternité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-15",
+      "name": "Allaitement après le congé de maternité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon congé de maternité se termine"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'allaite mon enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reprends le travail"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des pauses d'allaitement"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à des pauses rémunérées"
+        },
+        {
+          "keyword": "And",
+          "text": "30 minutes par tranche de 4 heures travaillées"
+        },
+        {
+          "keyword": "And",
+          "text": "ce droit est valable jusqu'aux 9 mois de l'enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir un certificat médical mensuel"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.193Z"
+}

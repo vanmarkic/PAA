@@ -1,0 +1,526 @@
+{
+  "id": "etrangers-regroupement-familial-en-belgique",
+  "name": "Regroupement familial en Belgique",
+  "description": "En tant que membre de famille d'une personne résidant en Belgique Je veux demander le regroupement familial Afin de vivre avec ma famille en Belgique",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les conditions de revenus 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Regroupement familial conjoint de Belge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon conjoint est belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes mariés depuis 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons vécu ensemble à l'étranger"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a des revenus stables de 2100€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un logement de 60m² avec 2 chambres"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le regroupement familial article 40ter"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais obtenir une carte F"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai maximum devrait être 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais avoir un droit de séjour temporaire de 5 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Regroupement familial enfant mineur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon père a une carte B en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 15 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes parents ont l'autorité parentale conjointe"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon père a des revenus de 2000€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un acte de naissance légalisé"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être automatiquement éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "aucun test ADN ne devrait être requis"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais obtenir le même type de carte que mon père"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Regroupement familial partenaire enregistré",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon partenaire a une carte E (citoyen UE)"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un partenariat enregistré équivalent au mariage"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons une relation stable de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons cohabité pendant 1 an"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon partenaire travaille en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais obtenir une carte F"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits devraient être similaires aux conjoints"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Regroupement familial ascendant à charge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon fils est belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 68 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis à sa charge financièrement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de ressources dans mon pays"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon fils a des revenus de 3000€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie complète"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le regroupement familial comme ascendant"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais prouver la dépendance financière"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais fournir des preuves de virements réguliers"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai d'examen devrait être plus long"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais obtenir une carte F"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Regroupement familial étudiant étranger",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étudiant avec une carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint veut me rejoindre"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une bourse d'études de 1200€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un logement étudiant familial"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a une assurance maladie"
+        },
+        {
+          "keyword": "When",
+          "text": "mon conjoint demande le regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "il devrait être éligible sous conditions"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait obtenir une carte A liée à mon statut"
+        },
+        {
+          "keyword": "And",
+          "text": "la validité devrait correspondre à mes études"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Refus pour revenus insuffisants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon conjoint est belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que ses revenus sont de 1200€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est inférieur au seuil de 1953€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'a pas de revenus stables"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"revenus insuffisants\""
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais refaire une demande quand les revenus augmentent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Procédure de cohabitation légale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon partenaire est belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous ne sommes pas mariés"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous voulons faire une cohabitation légale"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons une relation de 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un titre de séjour temporaire"
+        },
+        {
+          "keyword": "When",
+          "text": "nous faisons la déclaration de cohabitation"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'officier d'état civil devrait faire une enquête"
+        },
+        {
+          "keyword": "And",
+          "text": "vérifier qu'il ne s'agit pas d'une relation de complaisance"
+        },
+        {
+          "keyword": "And",
+          "text": "après 6 mois, je pourrais demander un séjour"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Maintien du droit après divorce",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une carte F depuis 4 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je divorce de mon conjoint belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons des enfants communs belges"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai la garde partagée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un emploi stable"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le maintien de mon droit de séjour"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais pouvoir garder ma carte F"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais prouver mon intégration"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais demander une carte B après 5 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Regroupement familial réfugié reconnu",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai le statut de réfugié en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma famille est restée dans le pays d'origine"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai été reconnu il y a 6 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "ma famille demande le regroupement familial"
+        },
+        {
+          "keyword": "Then",
+          "text": "aucune condition de revenu ne devrait s'appliquer"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune condition de logement ne devrait s'appliquer"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure devrait être gratuite si dans l'année"
+        },
+        {
+          "keyword": "And",
+          "text": "ils devraient obtenir le même statut de protection"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Délais de traitement selon le type",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande un regroupement familial <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon dossier est complet"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai maximum devrait être <delai> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type": "conjoint de Belge",
+                "delai": "180"
+              }
+            },
+            {
+              "values": {
+                "type": "conjoint de UE",
+                "delai": "180"
+              }
+            },
+            {
+              "values": {
+                "type": "conjoint pays tiers",
+                "delai": "270"
+              }
+            },
+            {
+              "values": {
+                "type": "enfant mineur",
+                "delai": "180"
+              }
+            },
+            {
+              "values": {
+                "type": "ascendant à charge",
+                "delai": "270"
+              }
+            },
+            {
+              "values": {
+                "type": "membre famille réfugié",
+                "delai": "90"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-11",
+      "name": "Contrôle de la cellule familiale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai obtenu une carte F par mariage"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vis en Belgique depuis 2 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "l'Office des Étrangers fait un contrôle"
+        },
+        {
+          "keyword": "Then",
+          "text": "ils peuvent vérifier la réalité de la vie commune"
+        },
+        {
+          "keyword": "And",
+          "text": "demander des preuves de vie familiale effective"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas de séparation non justifiée"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

@@ -1,0 +1,467 @@
+{
+  "id": "recours-etat-recours-en-mati-re-fiscale",
+  "name": "Recours en matière fiscale",
+  "description": "En tant que contribuable Je veux contester une imposition ou une décision fiscale Afin d'obtenir une rectification ou un dégrèvement",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les recours fiscaux suivent une procédure spécifique"
+      },
+      {
+        "text": "Et que la réclamation administrative est obligatoire"
+      },
+      {
+        "text": "Et que les délais sont stricts et de déchéance"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Réclamation contre l'impôt des personnes physiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu mon avertissement-extrait de rôle le \"2024-06-15\""
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste le calcul de mon impôt"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"2024-09-01\""
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis ma réclamation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois l'envoyer au directeur régional des contributions"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de 6 mois n'est pas dépassé"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois motiver précisément mes griefs"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander la suspension du paiement"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration a 6 mois pour répondre (prolongeable de 3 mois)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Réclamation tardive avec circonstances exceptionnelles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le délai de réclamation est dépassé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'étais hospitalisé pendant la période"
+        },
+        {
+          "keyword": "And",
+          "text": "que je peux prouver l'impossibilité d'agir"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la recevabilité tardive"
+        },
+        {
+          "keyword": "Then",
+          "text": "le directeur peut accepter en équité"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les justificatifs médicaux"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision reste discrétionnaire"
+        },
+        {
+          "keyword": "And",
+          "text": "je garde un recours au tribunal si refus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recours au tribunal de première instance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma réclamation a été rejetée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu la décision le \"2024-01-15\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"2024-03-01\""
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis un recours judiciaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de 3 mois n'est pas dépassé"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois assigner l'État belge (SPF Finances)"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de justice sont de 50€"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander une expertise"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal examine en fait et en droit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Procédure amiable avec le service de conciliation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un différend fiscal complexe"
+        },
+        {
+          "keyword": "And",
+          "text": "que je préfère éviter un long procès"
+        },
+        {
+          "keyword": "And",
+          "text": "que le service de conciliation est compétent"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la conciliation fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est gratuite et confidentielle"
+        },
+        {
+          "keyword": "And",
+          "text": "le conciliateur examine objectivement le dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut proposer une solution équitable"
+        },
+        {
+          "keyword": "And",
+          "text": "l'accord lie les parties s'il est accepté"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Réclamation TVA avec remboursement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai payé de la TVA en trop"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit à un remboursement"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma déclaration contenait une erreur"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis une demande de restitution"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai est de 3 ans à partir du paiement"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois corriger ma déclaration TVA"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration vérifie la demande"
+        },
+        {
+          "keyword": "And",
+          "text": "les intérêts moratoires peuvent être dus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Recours contre une amende fiscale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une amende administrative m'a été infligée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste la proportionnalité de la sanction"
+        },
+        {
+          "keyword": "When",
+          "text": "je conteste l'amende"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois d'abord faire une réclamation administrative"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux invoquer ma bonne foi"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration peut réduire ou annuler l'amende"
+        },
+        {
+          "keyword": "And",
+          "text": "le juge a un pouvoir de pleine juridiction"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Opposition à contrainte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une contrainte a été décernée pour non-paiement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste la dette fiscale"
+        },
+        {
+          "keyword": "And",
+          "text": "que la contrainte m'a été signifiée"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais opposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai est d'un mois à partir de la signification"
+        },
+        {
+          "keyword": "And",
+          "text": "l'opposition se fait par citation"
+        },
+        {
+          "keyword": "And",
+          "text": "elle suspend l'exécution (sauf mesures conservatoires)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois motiver mon opposition"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Délais selon le type d'impôt",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conteste un impôt de type <type_impot>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu la décision le <date_decision>"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le <date_actuelle>"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les délais"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de réclamation est de <delai_reclamation> mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le recours est <statut>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_impot",
+            "date_decision",
+            "date_actuelle",
+            "delai_reclamation",
+            "statut"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_impot": "IPP",
+                "date_decision": "2024-06-01",
+                "date_actuelle": "2024-10-01",
+                "delai_reclamation": "6",
+                "statut": "recevable"
+              }
+            },
+            {
+              "values": {
+                "type_impot": "Précompte immobilier",
+                "date_decision": "2024-01-01",
+                "date_actuelle": "2024-04-01",
+                "delai_reclamation": "6",
+                "statut": "recevable"
+              }
+            },
+            {
+              "values": {
+                "type_impot": "TVA",
+                "date_decision": "2024-01-01",
+                "date_actuelle": "2025-01-01",
+                "delai_reclamation": "36",
+                "statut": "recevable"
+              }
+            },
+            {
+              "values": {
+                "type_impot": "Droits de succession",
+                "date_decision": "2023-01-01",
+                "date_actuelle": "2024-07-01",
+                "delai_reclamation": "6",
+                "statut": "irrecevable"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Demande de surséance indéfinie au recouvrement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conteste l'impôt"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai introduit une réclamation ou un recours"
+        },
+        {
+          "keyword": "And",
+          "text": "que le paiement immédiat causerait un préjudice grave"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la surséance au recouvrement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois motiver le préjudice grave"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir une garantie peut être exigé"
+        },
+        {
+          "keyword": "And",
+          "text": "la surséance peut être totale ou partielle"
+        },
+        {
+          "keyword": "And",
+          "text": "des intérêts de retard peuvent être dus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Recours en cassation fiscal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt de la cour d'appel m'est défavorable"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste uniquement des points de droit"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis un pourvoi en cassation"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai est de 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois être représenté par un avocat à la Cour de cassation"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais sont de 375€"
+        },
+        {
+          "keyword": "And",
+          "text": "seules les violations de la loi sont examinées"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-gestion-des-troubles-de-voisinage",
+  "name": "Gestion des Troubles de Voisinage",
+  "description": "En tant que syndic Je veux gérer les troubles de voisinage Afin de maintenir la tranquillité dans l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que des troubles sont signalés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Nuisances sonores répétées",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire fait du bruit excessif"
+        },
+        {
+          "keyword": "When",
+          "text": "des plaintes sont déposées"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Travaux non autorisés bruyants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire fait des travaux"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic intervient"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Médiation entre copropriétaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un conflit oppose deux copropriétaires"
+        },
+        {
+          "keyword": "When",
+          "text": "une médiation est organisée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle comprend:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

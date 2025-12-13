@@ -1,0 +1,480 @@
+{
+  "id": "benefits-soins-de-sant-mentale",
+  "name": "Soins de Santé Mentale",
+  "description": "En tant que personne ayant besoin d'aide psychologique Je veux accéder aux soins de santé mentale remboursés Afin de bénéficier d'un suivi psychologique abordable",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les remboursements santé mentale INAMI 2024 sont:"
+      },
+      {
+        "text": "Et que les mutuelles offrent des remboursements complémentaires:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Adulte demandant soins psychologiques première ligne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un adulte de 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des symptômes d'anxiété et dépression"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai jamais consulté de psychologue"
+        },
+        {
+          "keyword": "When",
+          "text": "je contacte un réseau de santé mentale"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma première séance est gratuite (bilan)"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 8 séances par an (série 1)"
+        },
+        {
+          "keyword": "And",
+          "text": "je paie 11€ par séance (ou 4€ si BIM)"
+        },
+        {
+          "keyword": "And",
+          "text": "après épuisement, possibilité série 2 (8 séances)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Jeune de 20 ans avec troubles psychologiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 20 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souffre de troubles anxieux"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis étudiant"
+        },
+        {
+          "keyword": "When",
+          "text": "je consulte via le réseau santé mentale"
+        },
+        {
+          "keyword": "Then",
+          "text": "toutes mes séances sont gratuites (< 23 ans)"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 10 séances par an minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "renouvelable selon évaluation clinique"
+        },
+        {
+          "keyword": "And",
+          "text": "pas besoin de prescription médicale"
+        },
+        {
+          "keyword": "And",
+          "text": "mes parents ne sont pas informés (secret médical)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Parent cherchant aide pour enfant de 8 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon enfant de 8 ans a des troubles comportementaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'école recommande un suivi psychologique"
+        },
+        {
+          "keyword": "When",
+          "text": "je contacte un centre PMS ou réseau santé mentale"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'évaluation initiale est gratuite"
+        },
+        {
+          "keyword": "And",
+          "text": "le suivi est entièrement gratuit (< 23 ans)"
+        },
+        {
+          "keyword": "And",
+          "text": "comprend:"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune limite de séances pour les mineurs"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne avec revenus limités et statut BIM",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie du statut BIM"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin d'un suivi psychologique régulier"
+        },
+        {
+          "keyword": "And",
+          "text": "que je consulte via le réseau conventionné"
+        },
+        {
+          "keyword": "When",
+          "text": "j'utilise mes droits INAMI et mutuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "pour les soins de première ligne:"
+        },
+        {
+          "keyword": "And",
+          "text": "ma mutuelle rembourse jusqu'à 20€/séance"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Urgence psychiatrique et hospitalisation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en crise psychologique aiguë"
+        },
+        {
+          "keyword": "And",
+          "text": "que je me présente aux urgences psychiatriques"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis admis en hospitalisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'admission urgente est couverte à 100%"
+        },
+        {
+          "keyword": "And",
+          "text": "l'hospitalisation en psychiatrie comprend:"
+        },
+        {
+          "keyword": "And",
+          "text": "le suivi post-hospitalisation est organisé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Thérapie de groupe pour addiction",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai des problèmes d'addiction"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux participer à une thérapie de groupe"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'inscris via le réseau santé mentale"
+        },
+        {
+          "keyword": "Then",
+          "text": "les séances de groupe coûtent 2.50€"
+        },
+        {
+          "keyword": "And",
+          "text": "sont accessibles sans limite annuelle"
+        },
+        {
+          "keyword": "And",
+          "text": "incluent:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Consultation psychiatre avec prescription médicaments",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon médecin me réfère à un psychiatre"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin de médicaments psychotropes"
+        },
+        {
+          "keyword": "When",
+          "text": "je consulte le psychiatre conventionné"
+        },
+        {
+          "keyword": "Then",
+          "text": "la consultation coûte 79.54€"
+        },
+        {
+          "keyword": "And",
+          "text": "je paie 19.89€ (7.96€ si BIM)"
+        },
+        {
+          "keyword": "And",
+          "text": "le suivi comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Burn-out professionnel et trajet de réintégration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en burn-out reconnu"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en incapacité de travail"
+        },
+        {
+          "keyword": "When",
+          "text": "mon médecin-conseil organise un trajet"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai accès à:"
+        },
+        {
+          "keyword": "And",
+          "text": "maintien des indemnités maladie"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul remboursement selon âge et statut",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon statut est <statut>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je consulte pour la <numero>e séance"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon remboursement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie <cout_patient>€"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutuelle rembourse <remb_mutuelle>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "age",
+            "statut",
+            "numero",
+            "cout_patient",
+            "remb_mutuelle"
+          ],
+          "rows": [
+            {
+              "values": {
+                "age": "10",
+                "statut": "ordinaire",
+                "numero": "1",
+                "cout_patient": "0",
+                "remb_mutuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "age": "10",
+                "statut": "ordinaire",
+                "numero": "5",
+                "cout_patient": "0",
+                "remb_mutuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "age": "22",
+                "statut": "ordinaire",
+                "numero": "1",
+                "cout_patient": "0",
+                "remb_mutuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "age": "22",
+                "statut": "BIM",
+                "numero": "5",
+                "cout_patient": "0",
+                "remb_mutuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "age": "30",
+                "statut": "ordinaire",
+                "numero": "1",
+                "cout_patient": "0",
+                "remb_mutuelle": "0"
+              }
+            },
+            {
+              "values": {
+                "age": "30",
+                "statut": "ordinaire",
+                "numero": "5",
+                "cout_patient": "11",
+                "remb_mutuelle": "11"
+              }
+            },
+            {
+              "values": {
+                "age": "30",
+                "statut": "BIM",
+                "numero": "5",
+                "cout_patient": "4",
+                "remb_mutuelle": "4"
+              }
+            },
+            {
+              "values": {
+                "age": "45",
+                "statut": "ordinaire",
+                "numero": "10",
+                "cout_patient": "11",
+                "remb_mutuelle": "11"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Services spécialisés santé mentale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai des besoins spécifiques en santé mentale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux accéder aux services spécialisés:"
+        },
+        {
+          "keyword": "And",
+          "text": "ces services sont largement subsidiés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Téléconsultation et soins à distance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'habite en zone rurale"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une consultation vidéo"
+        },
+        {
+          "keyword": "Then",
+          "text": "depuis 2024, la téléconsultation est:"
+        },
+        {
+          "keyword": "And",
+          "text": "mêmes tarifs et remboursements appliqués"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Coordination des soins et secret professionnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis suivi par plusieurs professionnels"
+        },
+        {
+          "keyword": "Then",
+          "text": "la coordination implique:"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux refuser le partage d'informations"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.201Z"
+}

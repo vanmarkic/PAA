@@ -1,0 +1,113 @@
+{
+  "id": "copropriete-d-signation-du-syndic",
+  "name": "Désignation du Syndic",
+  "description": "En tant que copropriété Je veux désigner un syndic Afin d'assurer la gestion de l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le mandat du syndic actuel expire"
+      },
+      {
+        "text": "Et que l'AG doit désigner un nouveau syndic"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Désignation syndic professionnel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 candidats syndics se présentent"
+        },
+        {
+          "keyword": "And",
+          "text": "que le candidat A propose 500€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le candidat B propose 450€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le candidat C propose 600€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote à la majorité des 2/3"
+        },
+        {
+          "keyword": "And",
+          "text": "que le candidat B obtient 680 millièmes"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic B est désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "son mandat est de 3 ans maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Validation des conditions IPI",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un syndic professionnel est candidat"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie ses qualifications"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit avoir:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Révocation du syndic pour faute grave",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le syndic a commis une faute grave"
+        },
+        {
+          "keyword": "And",
+          "text": "que 30% des copropriétaires demandent une AG extraordinaire"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote la révocation à la majorité absolue"
+        },
+        {
+          "keyword": "And",
+          "text": "que 550 millièmes votent pour la révocation"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic est révoqué immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "un syndic provisoire doit être désigné"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

@@ -1,0 +1,200 @@
+{
+  "id": "propriete-intellectuelle-protection-par-droit-d-auteur",
+  "name": "Protection par droit d'auteur",
+  "description": "En tant que créateur d'œuvre originale Je veux protéger mes droits d'auteur Afin de contrôler l'exploitation de mon œuvre pendant 70 ans après mon décès",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le droit d'auteur naît automatiquement"
+      },
+      {
+        "text": "Et qu'aucun dépôt n'est obligatoire en Belgique"
+      },
+      {
+        "text": "Et que la protection dure 70 ans post mortem auctoris"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Protection automatique d'une œuvre littéraire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai écrit un roman original"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'œuvre présente une forme d'expression originale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai la preuve de la date de création"
+        },
+        {
+          "keyword": "When",
+          "text": "je publie mon œuvre"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes droits d'auteur sont automatiquement protégés"
+        },
+        {
+          "keyword": "And",
+          "text": "je détiens les droits moraux et patrimoniaux"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection dure jusqu'à 70 ans après mon décès"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Dépôt i-DEPOT pour preuve de création",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé une nouvelle œuvre musicale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux une preuve datée de création"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais un dépôt i-DEPOT au BOIP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie 45€ pour 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une preuve horodatée"
+        },
+        {
+          "keyword": "And",
+          "text": "cela facilite la preuve en cas de litige"
+        },
+        {
+          "keyword": "But",
+          "text": "cela ne crée pas le droit d'auteur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Œuvre créée par un employé",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis salarié développeur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai créé un logiciel dans le cadre de mon travail"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon contrat prévoit une cession des droits"
+        },
+        {
+          "keyword": "When",
+          "text": "l'œuvre est achevée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les droits patrimoniaux appartiennent à l'employeur"
+        },
+        {
+          "keyword": "But",
+          "text": "je conserve mes droits moraux"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois être cité comme auteur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Œuvre de collaboration à plusieurs auteurs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes 3 co-auteurs d'une BD"
+        },
+        {
+          "keyword": "And",
+          "text": "que chacun a contribué de manière créative"
+        },
+        {
+          "keyword": "When",
+          "text": "l'œuvre est publiée"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous sommes tous titulaires des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "l'exploitation nécessite l'accord de tous"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection dure 70 ans après le décès du dernier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Protection d'une base de données",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé une base de données"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle présente une structure originale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai investi substantiellement dans sa constitution"
+        },
+        {
+          "keyword": "When",
+          "text": "je revendique la protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai le droit d'auteur sur la structure"
+        },
+        {
+          "keyword": "And",
+          "text": "le droit sui generis sur le contenu"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection sui generis dure 15 ans"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

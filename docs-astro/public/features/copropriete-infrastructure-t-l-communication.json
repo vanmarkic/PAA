@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-infrastructure-t-l-communication",
+  "name": "Infrastructure Télécommunication",
+  "description": "En tant que copropriété Je veux moderniser les télécommunications Afin d'offrir la fibre optique à tous",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la fibre optique arrive"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation fibre optique immeuble",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un opérateur propose la fibre"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle vérifie:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mutualisation infrastructure",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 opérateurs veulent accès"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'infrastructure existe"
+        },
+        {
+          "keyword": "When",
+          "text": "la mutualisation est organisée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Suppression antenne collective",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que tous ont la fibre/satellite"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'antenne TV est obsolète"
+        },
+        {
+          "keyword": "When",
+          "text": "sa suppression est votée"
+        },
+        {
+          "keyword": "Then",
+          "text": "il faut:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

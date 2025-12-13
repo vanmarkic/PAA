@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-arbitrage-ompi-pour-litiges-ip",
+  "name": "Arbitrage OMPI pour litiges IP",
+  "description": "En tant que partie à un litige IP international Je veux recourir à l'arbitrage OMPI Afin de résoudre efficacement le différend",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'arbitrage OMPI est spécialisé"
+      },
+      {
+        "text": "Et que la sentence est exécutoire mondialement"
+      },
+      {
+        "text": "Et que la procédure est confidentielle"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Arbitrage pour litige de licence internationale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un conflit oppose licencié US et titulaire belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que le contrat prévoit l'arbitrage OMPI"
+        },
+        {
+          "keyword": "When",
+          "text": "nous lançons la procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "un arbitre expert IP est nommé"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure suit le règlement OMPI"
+        },
+        {
+          "keyword": "And",
+          "text": "dure 6-12 mois typiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "la sentence est finale et exécutoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Arbitrage accéléré pour domaine",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un litige porte sur un nom de domaine"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous voulons une résolution rapide"
+        },
+        {
+          "keyword": "When",
+          "text": "nous choisissons l'arbitrage accéléré"
+        },
+        {
+          "keyword": "Then",
+          "text": "un arbitre unique statue"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision est définitive"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

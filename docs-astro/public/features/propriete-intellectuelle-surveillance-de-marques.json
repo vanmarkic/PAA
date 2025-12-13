@@ -1,0 +1,76 @@
+{
+  "id": "propriete-intellectuelle-surveillance-de-marques",
+  "name": "Surveillance de marques",
+  "description": "En tant que titulaire de marque Je veux surveiller les nouvelles demandes Afin de protéger mes droits contre les marques similaires",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la surveillance est essentielle"
+      },
+      {
+        "text": "Et que le délai d'opposition est court (2-3 mois)"
+      },
+      {
+        "text": "Et que les services coûtent 500-2000€/an"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Mise en place d'une veille marques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai plusieurs marques importantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux détecter les conflits potentiels"
+        },
+        {
+          "keyword": "When",
+          "text": "je souscris à un service de surveillance"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois des alertes hebdomadaires"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai le temps de former opposition"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Détection et action rapide",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une alerte signale une marque similaire"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle vient d'être publiée"
+        },
+        {
+          "keyword": "When",
+          "text": "j'analyse le risque de confusion"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux former opposition dans les 2 mois"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

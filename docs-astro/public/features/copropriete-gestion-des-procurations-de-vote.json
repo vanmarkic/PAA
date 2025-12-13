@@ -1,0 +1,109 @@
+{
+  "id": "copropriete-gestion-des-procurations-de-vote",
+  "name": "Gestion des Procurations de Vote",
+  "description": "En tant que copropriétaire absent Je veux donner procuration Afin d'être représenté à l'AG",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'une AG est convoquée"
+      },
+      {
+        "text": "Et que je ne peux pas y assister"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Procuration valide à un autre copropriétaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je possède 50 millièmes"
+        },
+        {
+          "keyword": "And",
+          "text": "que je donne procuration au copropriétaire B"
+        },
+        {
+          "keyword": "And",
+          "text": "que B possède déjà 60 millièmes"
+        },
+        {
+          "keyword": "When",
+          "text": "je transmets la procuration écrite"
+        },
+        {
+          "keyword": "Then",
+          "text": "B peut voter pour 110 millièmes total"
+        },
+        {
+          "keyword": "And",
+          "text": "la procuration est valide pour cette AG uniquement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Limite de procurations par mandataire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un mandataire a déjà 2 procurations"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il représente 90 millièmes de procurations"
+        },
+        {
+          "keyword": "When",
+          "text": "un 3ème copropriétaire veut lui donner procuration"
+        },
+        {
+          "keyword": "And",
+          "text": "que cette procuration représente 15 millièmes"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procuration est refusée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Procuration avec instructions de vote",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je donne procuration avec instructions"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'indique mon vote pour chaque point"
+        },
+        {
+          "keyword": "When",
+          "text": "le mandataire vote"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit respecter mes instructions"
+        },
+        {
+          "keyword": "And",
+          "text": "peut s'abstenir sur les points non prévus"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

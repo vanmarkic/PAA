@@ -1,0 +1,108 @@
+{
+  "id": "propriete-intellectuelle-d-claration-d-invention-de-salari",
+  "name": "Déclaration d'invention de salarié",
+  "description": "En tant que salarié inventeur Je dois déclarer mon invention à mon employeur Afin de déterminer les droits respectifs",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la loi régit les inventions de salariés"
+      },
+      {
+        "text": "Et que trois catégories existent"
+      },
+      {
+        "text": "Et que la déclaration est obligatoire"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Invention de mission appartenant à l'employeur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai inventé dans le cadre de ma mission"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon contrat prévoit une mission inventive"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare l'invention à mon employeur"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'invention appartient à l'employeur"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à une rémunération supplémentaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Invention hors mission attribuable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai inventé hors de ma mission"
+        },
+        {
+          "keyword": "But",
+          "text": "en utilisant les moyens de l'entreprise"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare l'invention"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'employeur peut revendiquer l'attribution"
+        },
+        {
+          "keyword": "And",
+          "text": "me verser un juste prix"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Invention libre du salarié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon invention est hors mission"
+        },
+        {
+          "keyword": "And",
+          "text": "sans lien avec l'entreprise"
+        },
+        {
+          "keyword": "When",
+          "text": "je la déclare par précaution"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'employeur confirme mon entière propriété"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux l'exploiter librement"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

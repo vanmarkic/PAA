@@ -1,0 +1,336 @@
+{
+  "id": "cour-europeenne-satisfaction-quitable-article-41",
+  "name": "Satisfaction équitable (Article 41)",
+  "description": "En tant que requérant ayant obtenu gain de cause Je veux demander une satisfaction équitable Afin d'obtenir réparation pour le préjudice subi",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'article 41 prévoit la satisfaction équitable"
+      },
+      {
+        "text": "Et que la Cour peut l'accorder si le droit interne ne permet pas réparation"
+      },
+      {
+        "text": "Et que les demandes doivent être chiffrées et justifiées"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande complète de satisfaction équitable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la Cour a constaté une violation de l'article 6"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi un préjudice matériel de 25000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "un préjudice moral évalué à 15000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes frais d'avocat s'élèvent à 12000 euros"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande de satisfaction équitable"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais fournir les justificatifs pour chaque montant"
+        },
+        {
+          "keyword": "And",
+          "text": "détailler le calcul du préjudice matériel"
+        },
+        {
+          "keyword": "And",
+          "text": "justifier le préjudice moral par des cas comparables"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir les factures des frais et dépens"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Préjudice matériel avec perte de revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été licencié illégalement"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire mensuel était de 3000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai été sans emploi pendant 18 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai retrouvé un emploi à 2500 euros"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon préjudice matériel"
+        },
+        {
+          "keyword": "Then",
+          "text": "la perte totale devrait être 54000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "la perte future estimée à 6000 euros par an"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais demander la capitalisation des pertes futures"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir mes fiches de paie comme preuves"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Préjudice moral pour détention arbitraire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été détenu arbitrairement 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que la jurisprudence accorde 100-200 euros par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes conditions de détention étaient difficiles"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi une atteinte à ma réputation"
+        },
+        {
+          "keyword": "When",
+          "text": "j'évalue mon préjudice moral"
+        },
+        {
+          "keyword": "Then",
+          "text": "je pourrais demander 30000 euros minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "citer les arrêts similaires comme références"
+        },
+        {
+          "keyword": "And",
+          "text": "décrire les souffrances endurées"
+        },
+        {
+          "keyword": "And",
+          "text": "l'impact sur ma vie familiale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Frais et dépens avec plusieurs avocats",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai eu un avocat national (8000 euros)"
+        },
+        {
+          "keyword": "And",
+          "text": "un avocat devant la CEDH (15000 euros)"
+        },
+        {
+          "keyword": "And",
+          "text": "des frais de traduction de 3000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "des frais d'expertise de 5000 euros"
+        },
+        {
+          "keyword": "When",
+          "text": "je compile mes frais et dépens"
+        },
+        {
+          "keyword": "Then",
+          "text": "le total devrait être 31000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais fournir toutes les factures"
+        },
+        {
+          "keyword": "And",
+          "text": "justifier la nécessité de chaque dépense"
+        },
+        {
+          "keyword": "And",
+          "text": "demander les intérêts moratoires"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Refus partiel de satisfaction équitable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai demandé 100000 euros au total"
+        },
+        {
+          "keyword": "And",
+          "text": "que certains préjudices ne sont pas prouvés"
+        },
+        {
+          "keyword": "And",
+          "text": "que certains frais sont jugés excessifs"
+        },
+        {
+          "keyword": "And",
+          "text": "que la violation est partielle"
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour statue sur ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle pourrait accorder une somme réduite"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer les raisons des réductions"
+        },
+        {
+          "keyword": "And",
+          "text": "fixer un délai de paiement de 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoir des intérêts en cas de retard"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Montants typiques selon la violation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "une violation de l'article \"<article>\""
+        },
+        {
+          "keyword": "And",
+          "text": "une durée/gravité \"<gravite>\""
+        },
+        {
+          "keyword": "And",
+          "text": "un contexte \"<contexte>\""
+        },
+        {
+          "keyword": "When",
+          "text": "la Cour accorde une satisfaction équitable"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant typique serait environ <montant> euros"
+        },
+        {
+          "keyword": "And",
+          "text": "le type principal serait \"<type>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "article",
+            "gravite",
+            "contexte",
+            "montant",
+            "type"
+          ],
+          "rows": [
+            {
+              "values": {
+                "article": "3",
+                "gravite": "torture",
+                "contexte": "garde à vue",
+                "montant": "50000",
+                "type": "préjudice moral"
+              }
+            },
+            {
+              "values": {
+                "article": "5",
+                "gravite": "2 ans détention",
+                "contexte": "détention illégale",
+                "montant": "40000",
+                "type": "préjudice moral"
+              }
+            },
+            {
+              "values": {
+                "article": "6",
+                "gravite": "5 ans procès",
+                "contexte": "délai déraisonnable",
+                "montant": "15000",
+                "type": "préjudice moral"
+              }
+            },
+            {
+              "values": {
+                "article": "8",
+                "gravite": "surveillance",
+                "contexte": "vie privée violée",
+                "montant": "10000",
+                "type": "préjudice moral"
+              }
+            },
+            {
+              "values": {
+                "article": "1-P1",
+                "gravite": "expropriation",
+                "contexte": "sans indemnisation",
+                "montant": "100000",
+                "type": "préjudice matériel"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

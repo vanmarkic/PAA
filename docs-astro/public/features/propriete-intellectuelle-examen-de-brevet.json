@@ -1,0 +1,192 @@
+{
+  "id": "propriete-intellectuelle-examen-de-brevet",
+  "name": "Examen de brevet",
+  "description": "En tant que déposant de brevet Je veux que ma demande soit examinée Afin d'obtenir la délivrance du brevet",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que j'ai déposé une demande de brevet"
+      },
+      {
+        "text": "Et que le rapport de recherche a été établi"
+      },
+      {
+        "text": "Et que les frais d'examen de 150€ sont dus"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Examen favorable sans objections",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le rapport de recherche est positif"
+        },
+        {
+          "keyword": "And",
+          "text": "que toutes les revendications sont nouvelles et inventives"
+        },
+        {
+          "keyword": "And",
+          "text": "que la description est suffisante"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé les frais d'examen"
+        },
+        {
+          "keyword": "When",
+          "text": "l'examinateur procède à l'examen au fond"
+        },
+        {
+          "keyword": "Then",
+          "text": "aucune objection ne devrait être soulevée"
+        },
+        {
+          "keyword": "And",
+          "text": "le brevet devrait être accordé directement"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais payer les frais de délivrance de 40€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Objection pour manque de clarté des revendications",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revendications utilisent des termes vagues"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'étendue de protection n'est pas claire"
+        },
+        {
+          "keyword": "When",
+          "text": "l'examinateur examine ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir une notification d'objection"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai 2 mois pour répondre"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux modifier les revendications pour les clarifier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Objection pour défaut d'activité inventive",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le rapport cite deux documents Y"
+        },
+        {
+          "keyword": "And",
+          "text": "que leur combinaison rend l'invention évidente"
+        },
+        {
+          "keyword": "When",
+          "text": "l'examinateur examine ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "une objection pour manque d'activité inventive est soulevée"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois argumenter ou modifier les revendications"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander une audition"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Demande de prorogation de délai",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une notification avec délai de 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne peux pas respecter ce délai"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une prorogation avant l'expiration"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux obtenir 2 mois supplémentaires"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois payer une taxe de prorogation"
+        },
+        {
+          "keyword": "And",
+          "text": "la prorogation est limitée à une fois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Abandon de certaines revendications",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que certaines revendications sont rejetées"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux maintenir les autres revendications"
+        },
+        {
+          "keyword": "When",
+          "text": "je modifie ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux abandonner les revendications problématiques"
+        },
+        {
+          "keyword": "And",
+          "text": "maintenir les revendications acceptables"
+        },
+        {
+          "keyword": "And",
+          "text": "accélérer la délivrance du brevet"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

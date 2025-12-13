@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-expropriation-pour-utilit-publique",
+  "name": "Expropriation pour Utilité Publique",
+  "description": "En tant que copropriété Je veux gérer une procédure d'expropriation Afin de défendre les intérêts collectifs",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'une expropriation est envisagée"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Notification plan d'expropriation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la commune projette une expropriation"
+        },
+        {
+          "keyword": "When",
+          "text": "le plan est notifié"
+        },
+        {
+          "keyword": "Then",
+          "text": "la copropriété doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Négociation indemnité collective",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'expropriation touche parties communes"
+        },
+        {
+          "keyword": "When",
+          "text": "la négociation s'engage"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle porte sur:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Répartition indemnité entre copropriétaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une indemnité de 300000€ est obtenue"
+        },
+        {
+          "keyword": "When",
+          "text": "la répartition est décidée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle suit:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

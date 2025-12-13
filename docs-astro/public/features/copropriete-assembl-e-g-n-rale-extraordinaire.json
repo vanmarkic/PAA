@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-assembl-e-g-n-rale-extraordinaire",
+  "name": "Assemblée Générale Extraordinaire",
+  "description": "En tant que copropriété Je veux convoquer une AG extraordinaire Afin de traiter des questions urgentes",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'une situation exceptionnelle survient"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Convocation à la demande des copropriétaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 350 millièmes le demandent"
+        },
+        {
+          "keyword": "When",
+          "text": "la demande est formulée par écrit"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit convoquer l'AG"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "AG extraordinaire pour travaux urgents",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la façade menace de s'effondrer"
+        },
+        {
+          "keyword": "And",
+          "text": "que les travaux dépassent les pouvoirs du syndic"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG extraordinaire est convoquée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai peut être réduit à 8 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "la convocation mentionne l'urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "seuls les points urgents sont traités"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Refus du syndic de convoquer",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le syndic refuse de convoquer l'AG"
+        },
+        {
+          "keyword": "When",
+          "text": "30 jours se sont écoulés"
+        },
+        {
+          "keyword": "Then",
+          "text": "les copropriétaires peuvent:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

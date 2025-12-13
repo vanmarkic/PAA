@@ -1,0 +1,418 @@
+{
+  "id": "benefits-bail-ferme-en-wallonie",
+  "name": "Bail à ferme en Wallonie",
+  "description": "En tant que propriétaire ou agriculteur en Wallonie Je veux comprendre les règles du bail à ferme Afin de louer ou exploiter des terres agricoles conformément à la législation",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le bail à ferme est régi par la législation wallonne"
+      },
+      {
+        "text": "Et que l'Agence du foncier agricole supervise les locations de biens agricoles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Choix du type de bail à ferme",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souhaite conclure un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "je consulte les différents types de baux disponibles"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux choisir parmi les options suivantes:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Obligation d'un écrit pour le bail à ferme",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conclus un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "le contrat est établi"
+        },
+        {
+          "keyword": "Then",
+          "text": "un écrit est obligatoire pour formaliser le bail"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Réalisation de l'état des lieux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conclus un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "le bail entre en vigueur"
+        },
+        {
+          "keyword": "Then",
+          "text": "un état des lieux doit être réalisé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Notification à l'Observatoire du foncier agricole",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conclus un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "le contrat est signé"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois notifier le bail à l'Observatoire du foncier agricole"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Enregistrement au SPF Finances",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je conclus un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "le contrat est formalisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "le bail doit être enregistré au SPF Finances"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul du fermage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bailleur ou preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "je dois déterminer le montant du loyer"
+        },
+        {
+          "keyword": "Then",
+          "text": "le fermage est calculé selon les coefficients de fermage en vigueur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Location de biens publics",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des biens agricoles publics sont mis en location"
+        },
+        {
+          "keyword": "When",
+          "text": "une personne publique loue des terres agricoles"
+        },
+        {
+          "keyword": "Then",
+          "text": "des règles spécifiques de mise en location s'appliquent"
+        },
+        {
+          "keyword": "And",
+          "text": "des contrats de gestion peuvent être conclus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Transmission du bail par décès du preneur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un preneur décède"
+        },
+        {
+          "keyword": "When",
+          "text": "le bail est en cours"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles de transmission du bail par décès du preneur s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Transmission du bail par décès du bailleur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un bailleur décède"
+        },
+        {
+          "keyword": "When",
+          "text": "le bail est en cours"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles de transmission du bail par décès du bailleur s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Cession du bail",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "je souhaite céder mon bail"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter les règles de cession prévues par la législation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Aliénation des biens loués",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bailleur d'un bien agricole"
+        },
+        {
+          "keyword": "When",
+          "text": "je souhaite vendre le bien loué"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles d'aliénation des biens s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Sous-location d'un bien agricole",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis preneur d'un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "je souhaite sous-louer le bien"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter les conditions relatives aux sous-locations"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Échange de culture",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis agriculteur"
+        },
+        {
+          "keyword": "When",
+          "text": "je souhaite échanger des cultures avec un autre agriculteur"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter les règles relatives aux échanges de culture"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-14",
+      "name": "Contrat de culture",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souhaite conclure un contrat de culture"
+        },
+        {
+          "keyword": "When",
+          "text": "j'établis le contrat"
+        },
+        {
+          "keyword": "Then",
+          "text": "les dispositions spécifiques aux contrats de culture s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-15",
+      "name": "Fin du bail de plein droit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un bail à ferme arrive à son terme"
+        },
+        {
+          "keyword": "When",
+          "text": "les conditions de fin de plein droit sont remplies"
+        },
+        {
+          "keyword": "Then",
+          "text": "le bail prend fin automatiquement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-16",
+      "name": "Résiliation amiable du bail",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le bailleur et le preneur sont d'accord"
+        },
+        {
+          "keyword": "When",
+          "text": "ils souhaitent mettre fin au bail"
+        },
+        {
+          "keyword": "Then",
+          "text": "une résiliation amiable peut être conclue"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-17",
+      "name": "Fiscalité - Impôt des personnes physiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je perçois des revenus d'un bail à ferme"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare mes revenus"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles d'impôt des personnes physiques relatives au bail à ferme s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-18",
+      "name": "Fiscalité - Droits de donation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souhaite donner un bien agricole loué"
+        },
+        {
+          "keyword": "When",
+          "text": "la donation est réalisée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les droits de donation spécifiques s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-19",
+      "name": "Fiscalité - Droits de succession",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un bien agricole loué fait partie d'une succession"
+        },
+        {
+          "keyword": "When",
+          "text": "la succession est ouverte"
+        },
+        {
+          "keyword": "Then",
+          "text": "les droits de succession spécifiques s'appliquent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {
+    "specificationVersion": "1.0.0",
+    "legalBasis": "Documentation et législation - Bail à ferme",
+    "legalUrl": "https://agriculture.wallonie.be/home/ruralite-et-foncier/foncier/foncier-agricole/louer/bail-a-ferme/legislation-et-documentation.html",
+    "effectiveDate": "2025-12-13"
+  },
+  "generated": "2025-12-13T14:45:22.192Z",
+  "legalSources": {
+    "sources": [
+      {
+        "title": "Documentation et législation - Bail à ferme",
+        "authority": "Source légale"
+      }
+    ]
+  }
+}

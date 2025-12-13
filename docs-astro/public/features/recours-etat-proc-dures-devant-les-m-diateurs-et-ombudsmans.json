@@ -1,0 +1,501 @@
+{
+  "id": "recours-etat-proc-dures-devant-les-m-diateurs-et-ombudsmans",
+  "name": "Procédures devant les médiateurs et ombudsmans",
+  "description": "En tant que citoyen confronté à un problème avec l'administration Je veux saisir un médiateur ou ombudsman Afin d'obtenir une solution amiable et des recommandations",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les médiateurs sont indépendants"
+      },
+      {
+        "text": "Et que leurs services sont gratuits"
+      },
+      {
+        "text": "Et qu'ils ne peuvent pas imposer de décisions"
+      },
+      {
+        "text": "Et qu'ils formulent des recommandations"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Plainte au médiateur fédéral",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un problème avec une administration fédérale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai déjà contacté l'administration concernée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas obtenu satisfaction"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le médiateur fédéral"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux le faire par courrier, email ou formulaire en ligne"
+        },
+        {
+          "keyword": "And",
+          "text": "il n'y a pas de délai strict mais un délai d'un an est recommandé"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur examine la recevabilité"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut demander des informations à l'administration"
+        },
+        {
+          "keyword": "And",
+          "text": "il rend un rapport avec recommandations"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Médiateur régional wallon",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un différend avec la Région wallonne"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela concerne une matière régionale"
+        },
+        {
+          "keyword": "And",
+          "text": "que les démarches préalables ont échoué"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'adresse au médiateur wallon"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma plainte doit être écrite et signée"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois identifier clairement l'administration concernée"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur instruit le dossier contradictoirement"
+        },
+        {
+          "keyword": "And",
+          "text": "il tente une conciliation"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut faire des recommandations générales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Médiateur communal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma commune a désigné un médiateur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un problème avec les services communaux"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai tenté un contact direct sans succès"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le médiateur communal"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure suit le règlement communal"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur est accessible aux heures de permanence"
+        },
+        {
+          "keyword": "And",
+          "text": "il examine les plaintes des citoyens"
+        },
+        {
+          "keyword": "And",
+          "text": "il fait rapport au conseil communal annuellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Médiateur pour les pensions",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un problème avec ma pension"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela concerne le SFP ou une caisse de pension"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma réclamation directe n'a pas abouti"
+        },
+        {
+          "keyword": "When",
+          "text": "je contacte le service de médiation pensions"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux expliquer mon problème en français, néerlandais ou allemand"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur examine mon dossier pension"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut obtenir tous les documents nécessaires"
+        },
+        {
+          "keyword": "And",
+          "text": "il propose des solutions concrètes"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut recommander des modifications de pratiques"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Médiateur de l'énergie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un litige avec mon fournisseur d'énergie"
+        },
+        {
+          "keyword": "And",
+          "text": "que le fournisseur n'a pas résolu ma plainte en 60 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela concerne l'électricité ou le gaz"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le médiateur de l'énergie"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma plainte doit être recevable (écrite, identifiée, après démarche préalable)"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur examine le respect de la législation"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut proposer un accord amiable"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut faire des recommandations contraignantes dans certains cas"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est de 90 jours maximum"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Médiateur de la SNCB",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une plainte contre la SNCB"
+        },
+        {
+          "keyword": "And",
+          "text": "que le service clientèle n'a pas donné suite satisfaisante"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela concerne le transport de voyageurs"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'adresse au médiateur SNCB"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois d'abord avoir contacté le service clientèle"
+        },
+        {
+          "keyword": "And",
+          "text": "attendre 30 jours ou avoir un refus"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur examine la plainte objectivement"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut proposer des solutions équitables"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Médiateur des assurances",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un litige avec mon assureur"
+        },
+        {
+          "keyword": "And",
+          "text": "que la procédure interne de plainte a échoué"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela concerne un contrat d'assurance"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis l'Ombudsman des assurances"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est gratuite et confidentielle"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les documents pertinents"
+        },
+        {
+          "keyword": "And",
+          "text": "l'ombudsman examine les deux points de vue"
+        },
+        {
+          "keyword": "And",
+          "text": "il rend un avis non contraignant"
+        },
+        {
+          "keyword": "And",
+          "text": "les parties restent libres d'aller en justice"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Choix du médiateur approprié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un problème avec <organisme>"
+        },
+        {
+          "keyword": "And",
+          "text": "que la matière concerne <domaine>"
+        },
+        {
+          "keyword": "When",
+          "text": "je cherche le médiateur compétent"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois m'adresser au <mediateur>"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai recommandé est de <delai>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "organisme",
+            "domaine",
+            "mediateur",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "organisme": "SPF Finances",
+                "domaine": "impôts",
+                "mediateur": "médiateur fédéral",
+                "delai": "1 an"
+              }
+            },
+            {
+              "values": {
+                "organisme": "Région wallonne",
+                "domaine": "permis",
+                "mediateur": "médiateur wallon",
+                "delai": "1 an"
+              }
+            },
+            {
+              "values": {
+                "organisme": "CPAS",
+                "domaine": "aide sociale",
+                "mediateur": "médiateur fédéral",
+                "delai": "1 an"
+              }
+            },
+            {
+              "values": {
+                "organisme": "Proximus",
+                "domaine": "télécom",
+                "mediateur": "médiateur télécom",
+                "delai": "1 an"
+              }
+            },
+            {
+              "values": {
+                "organisme": "Electrabel",
+                "domaine": "facture énergie",
+                "mediateur": "médiateur énergie",
+                "delai": "1 an"
+              }
+            },
+            {
+              "values": {
+                "organisme": "commune",
+                "domaine": "taxe communale",
+                "mediateur": "médiateur communal",
+                "delai": "6 mois"
+              }
+            },
+            {
+              "values": {
+                "organisme": "SFP",
+                "domaine": "pension",
+                "mediateur": "médiateur pensions",
+                "delai": "pas de délai"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Plainte irrecevable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux saisir un médiateur"
+        },
+        {
+          "keyword": "But",
+          "text": "que je n'ai pas contacté l'administration d'abord"
+        },
+        {
+          "keyword": "When",
+          "text": "le médiateur examine la recevabilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma plainte sera déclarée irrecevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur m'expliquera pourquoi"
+        },
+        {
+          "keyword": "And",
+          "text": "il m'orientera vers la procédure appropriée"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrai revenir après avoir rempli les conditions"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Suivi des recommandations",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le médiateur a fait des recommandations"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'administration concernée a été notifiée"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le suivi"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'administration doit répondre dans un délai raisonnable"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer si elle suit ou non les recommandations"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur publie un rapport annuel"
+        },
+        {
+          "keyword": "And",
+          "text": "les recommandations non suivies y sont mentionnées"
+        },
+        {
+          "keyword": "And",
+          "text": "le Parlement peut interpeller l'administration"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

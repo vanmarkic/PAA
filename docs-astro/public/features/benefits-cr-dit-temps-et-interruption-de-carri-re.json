@@ -1,0 +1,688 @@
+{
+  "id": "benefits-cr-dit-temps-et-interruption-de-carri-re",
+  "name": "Crédit-temps et Interruption de Carrière",
+  "description": "En tant que travailleur du secteur privé ou public Je veux prendre un crédit-temps ou une interruption de carrière Afin de concilier vie professionnelle et vie privée",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les conditions de crédit-temps 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Congé parental pour parent d'un enfant de moins de 12 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis employé à temps plein depuis 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai jamais pris de congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon employeur a plus de 10 travailleurs"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental à 1/5 temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à 4 mois de réduction"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de l'ONEM de \"179.84€ net par mois\""
+        },
+        {
+          "keyword": "And",
+          "text": "mon employeur ne peut pas refuser"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mon ancienneté"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis protégé contre le licenciement"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection dure \"3 mois après la fin du congé\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Crédit-temps pour soins à un parent malade",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 45 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma mère est gravement malade (certificat médical)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite réduire mon temps de travail à mi-temps"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 24 mois d'ancienneté chez mon employeur"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un crédit-temps pour assistance médicale"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à 12 mois (prolongeable à 24)"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de \"664.10€ net par mois\" (mi-temps)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir un certificat médical tous les 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "mon contrat reste en CDI"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits sociaux sont maintenus proportionnellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Fin de carrière en douceur à 1/5 temps",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 58 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une carrière de 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille dans le secteur privé"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite réduire à 4/5 temps"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai l'accord de mon employeur"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un crédit-temps fin de carrière"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit jusqu'à ma pension"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de \"271.15€ net par mois\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir 25 ans de carrière salariée"
+        },
+        {
+          "keyword": "And",
+          "text": "la mesure est possible dès 55 ans avec conditions"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux cumuler avec mon salaire réduit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Interruption de carrière complète secteur public",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis fonctionnaire statutaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 5 ans d'ancienneté"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite faire une pause carrière d'un an"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une interruption de carrière ordinaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "la durée maximale est de \"60 mois sur ma carrière\""
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de \"766.42€ net par mois\" (isolé)"
+        },
+        {
+          "keyword": "And",
+          "text": "mon emploi est garanti au retour"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mes droits à la promotion"
+        },
+        {
+          "keyword": "And",
+          "text": "ma période compte pour ma pension (sous conditions)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Congé pour soins palliatifs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon partenaire est en phase terminale"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin de l'accompagner"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un certificat médical approprié"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé pour soins palliatifs"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à 1 mois (prolongeable 1 fois)"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de \"1528.78€ net\" (temps plein)"
+        },
+        {
+          "keyword": "And",
+          "text": "mon employeur ne peut pas refuser"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis protégé contre le licenciement"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux prendre ce congé de manière fractionnée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Crédit-temps refusé pour motif non valable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souhaite un crédit-temps pour voyager"
+        },
+        {
+          "keyword": "And",
+          "text": "que le crédit-temps sans motif est supprimé depuis 2017"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de motif reconnu"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un crédit-temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande sera refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif sera \"absence de motif valable depuis la réforme 2017\""
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas recevoir d'allocations ONEM"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Employé dans une PME de moins de 10 travailleurs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon employeur a seulement 8 employés"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite un congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 2 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le congé"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon employeur peut reporter la demande"
+        },
+        {
+          "keyword": "And",
+          "text": "le report peut être de \"6 mois maximum\""
+        },
+        {
+          "keyword": "And",
+          "text": "il doit justifier par l'organisation du travail"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai quand même droit après ce délai"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation ONEM reste identique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Crédit-temps pour formation reconnue",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis employé à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation en comptabilité"
+        },
+        {
+          "keyword": "And",
+          "text": "que la formation est reconnue par la Communauté"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 ans d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un crédit-temps formation à mi-temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à 36 mois maximum sur ma carrière"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois une allocation de \"664.10€ net par mois\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir une attestation d'inscription"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver la participation régulière"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois réussir pour continuer l'année suivante"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Montants d'allocations selon la situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je prends un <type_conge>"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma situation familiale est <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que la réduction est <reduction>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon allocation ONEM"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant mensuel net est <montant>€"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée maximale est <duree>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_conge",
+            "situation",
+            "reduction",
+            "age",
+            "montant",
+            "duree"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_conge": "congé parental",
+                "situation": "isolé",
+                "reduction": "1/5 temps",
+                "age": "35",
+                "montant": "179.84",
+                "duree": "4 mois"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "congé parental",
+                "situation": "isolé",
+                "reduction": "1/2 temps",
+                "age": "35",
+                "montant": "449.60",
+                "duree": "4 mois"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "congé parental",
+                "situation": "isolé",
+                "reduction": "temps plein",
+                "age": "35",
+                "montant": "899.20",
+                "duree": "4 mois"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "assistance médicale",
+                "situation": "cohabitant",
+                "reduction": "1/2 temps",
+                "age": "45",
+                "montant": "531.28",
+                "duree": "24 mois max"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "soins palliatifs",
+                "situation": "isolé",
+                "reduction": "temps plein",
+                "age": "40",
+                "montant": "1528.78",
+                "duree": "2 mois max"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "fin de carrière",
+                "situation": "isolé",
+                "reduction": "1/5 temps",
+                "age": "58",
+                "montant": "271.15",
+                "duree": "jusqu'à pension"
+              }
+            },
+            {
+              "values": {
+                "type_conge": "fin de carrière",
+                "situation": "isolé",
+                "reduction": "1/2 temps",
+                "age": "60",
+                "montant": "664.10",
+                "duree": "jusqu'à pension"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Procédure via Break@work depuis 2024",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux demander un crédit-temps"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes après octobre 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois obligatoirement utiliser Break@work"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux plus introduire de demande papier"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois d'abord créer mon compte avec eID"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux consulter mes droits restants en ligne"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois la décision par voie électronique"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est de \"30 jours maximum\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Cumul de différents types de congés",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déjà pris 24 mois de congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai maintenant un parent malade"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite prendre un congé pour assistance"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes droits restants"
+        },
+        {
+          "keyword": "Then",
+          "text": "le congé parental n'impacte pas mes droits assistance"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai encore droit à 12-24 mois pour assistance"
+        },
+        {
+          "keyword": "And",
+          "text": "le total ne peut pas dépasser 51 mois avec motif"
+        },
+        {
+          "keyword": "And",
+          "text": "les congés thématiques sont comptés séparément"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Impact sur la pension",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je prends une interruption de carrière"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis fonctionnaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'interruption dure 12 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule l'impact sur ma pension"
+        },
+        {
+          "keyword": "Then",
+          "text": "certaines périodes sont assimilées gratuitement"
+        },
+        {
+          "keyword": "And",
+          "text": "d'autres nécessitent une cotisation volontaire"
+        },
+        {
+          "keyword": "And",
+          "text": "le congé parental compte toujours pour la pension"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux racheter les périodes non couvertes"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût dépend de mon traitement de référence"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Obligations pendant le crédit-temps",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en crédit-temps pour formation"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis en période de crédit-temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois suivre la formation régulièrement"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les attestations trimestrielles"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas exercer d'activité incompatible"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois informer l'ONEM de tout changement"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois reprendre le travail à la date prévue"
+        },
+        {
+          "keyword": "And",
+          "text": "je reste lié par mon contrat de travail"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas prester pour un concurrent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.195Z"
+}

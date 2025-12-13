@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-du-stationnement",
+  "name": "Gestion du Stationnement",
+  "description": "En tant que copropriété Je veux gérer le stationnement Afin d'optimiser l'usage des parkings",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété a un parking"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Attribution places visiteurs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 5 places visiteurs existent"
+        },
+        {
+          "keyword": "When",
+          "text": "l'usage est réglementé"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Location place à externe",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 places sont inoccupées"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un voisin veut en louer une"
+        },
+        {
+          "keyword": "When",
+          "text": "la location est envisagée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle nécessite:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Stationnement gênant répété",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un véhicule gêne l'accès"
+        },
+        {
+          "keyword": "When",
+          "text": "l'intervention est nécessaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "les mesures sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "propriete-intellectuelle-partenariat-de-recherche-avec-universit",
+  "name": "Partenariat de recherche avec université",
+  "description": "En tant qu'entreprise Je veux collaborer avec une université Afin de développer des innovations avec expertise académique",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les partenariats génèrent de l'IP"
+      },
+      {
+        "text": "Et que les règles de propriété sont complexes"
+      },
+      {
+        "text": "Et que les financements publics ont des contraintes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Contrat de recherche collaborative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous finançons une recherche universitaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que des chercheurs sont impliqués"
+        },
+        {
+          "keyword": "When",
+          "text": "nous négocions le contrat"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous définissons la propriété des résultats"
+        },
+        {
+          "keyword": "And",
+          "text": "l'université garde les droits de publication"
+        },
+        {
+          "keyword": "And",
+          "text": "nous avons l'exclusivité commerciale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Thèse CIFRE avec gestion IP",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un doctorant travaille sur notre projet"
+        },
+        {
+          "keyword": "When",
+          "text": "nous gérons la propriété intellectuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'entreprise a généralement la propriété"
+        },
+        {
+          "keyword": "And",
+          "text": "la thèse peut être confidentielle 2 ans"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

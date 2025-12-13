@@ -1,0 +1,312 @@
+{
+  "id": "ecologie-gestion-de-l-eau-et-autorisations-hydrauliques",
+  "name": "Gestion de l'eau et autorisations hydrauliques",
+  "description": "En tant qu'utilisateur d'eau ou gestionnaire Je veux obtenir les autorisations nécessaires Afin d'utiliser ou rejeter l'eau légalement",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les types d'autorisations eau sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Permis captage eau souterraine pour industrie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une industrie agroalimentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai besoin de 500 m³/jour d'eau souterraine"
+        },
+        {
+          "keyword": "And",
+          "text": "que la nappe est classée en bon état quantitatif"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un permis de captage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "la redevance annuelle sera 9125€ (500 × 365 × 0.05)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois installer un compteur agréé"
+        },
+        {
+          "keyword": "And",
+          "text": "déclarer mensuellement les volumes prélevés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Autorisation rejet station d'épuration communale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je gère une station d'épuration"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle traite 5000 équivalents-habitants"
+        },
+        {
+          "keyword": "And",
+          "text": "que le rejet se fait en rivière classe 2"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation de rejet"
+        },
+        {
+          "keyword": "Then",
+          "text": "les normes de rejet sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois faire un autocontrôle permanent"
+        },
+        {
+          "keyword": "And",
+          "text": "transmettre les résultats trimestriellement"
+        },
+        {
+          "keyword": "And",
+          "text": "la redevance sera 12500€/an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Prime citerne eau de pluie particulier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un particulier"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'installe une citerne de 10000 litres"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma maison a une toiture de 150 m²"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût d'installation est de 4000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime citerne"
+        },
+        {
+          "keyword": "Then",
+          "text": "je suis éligible à la prime"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant sera 1000€ (maximum régional)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois connecter minimum 2 points d'usage"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir la facture d'un installateur agréé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Permis modification cours d'eau non navigable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux construire un pont privé"
+        },
+        {
+          "keyword": "And",
+          "text": "que le cours d'eau est de 3ème catégorie"
+        },
+        {
+          "keyword": "And",
+          "text": "que la largeur est de 4 mètres"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en zone agricole"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis de modification"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "obtenir l'accord du gestionnaire de cours d'eau"
+        },
+        {
+          "keyword": "And",
+          "text": "respecter la période de travaux (juillet-octobre)"
+        },
+        {
+          "keyword": "And",
+          "text": "garantir le libre écoulement des eaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Système d'épuration individuelle zone non-égouttée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma maison est en zone d'assainissement autonome"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle génère 5 équivalents-habitants"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'aucun égout n'est prévu avant 10 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "j'installe un système d'épuration individuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois installer:"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime sera de 70% du coût (max 4000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entretien annuel est obligatoire"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois tenir un carnet d'entretien"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul redevance captage selon volume et usage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je capte <volume> m³/an"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'usage est <usage>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en <region>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma redevance"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant sera <redevance>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "volume",
+            "usage",
+            "region",
+            "redevance"
+          ],
+          "rows": [
+            {
+              "values": {
+                "volume": "10000",
+                "usage": "domestique",
+                "region": "wallonie",
+                "redevance": "300"
+              }
+            },
+            {
+              "values": {
+                "volume": "100000",
+                "usage": "industriel",
+                "region": "wallonie",
+                "redevance": "5000"
+              }
+            },
+            {
+              "values": {
+                "volume": "50000",
+                "usage": "agricole",
+                "region": "flandre",
+                "redevance": "750"
+              }
+            },
+            {
+              "values": {
+                "volume": "200000",
+                "usage": "potable",
+                "region": "bruxelles",
+                "redevance": "8000"
+              }
+            },
+            {
+              "values": {
+                "volume": "5000",
+                "usage": "irrigation",
+                "region": "wallonie",
+                "redevance": "150"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

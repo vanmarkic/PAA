@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-audit-technique-de-l-immeuble",
+  "name": "Audit Technique de l'Immeuble",
+  "description": "En tant que copropriété Je veux réaliser un audit technique Afin de planifier les travaux nécessaires",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'immeuble a plus de 15 ans"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Audit technique quinquennal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le dernier audit date de 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'immeuble a 30 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "l'audit est réalisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il examine:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Plan travaux sur 10 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'audit révèle plusieurs problèmes"
+        },
+        {
+          "keyword": "When",
+          "text": "le plan décennal est établi"
+        },
+        {
+          "keyword": "Then",
+          "text": "il priorise:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Constitution provision travaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 250000€ sont nécessaires sur 10 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "la provision est calculée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle représente:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

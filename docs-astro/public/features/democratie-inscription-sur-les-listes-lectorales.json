@@ -1,0 +1,517 @@
+{
+  "id": "democratie-inscription-sur-les-listes-lectorales",
+  "name": "Inscription sur les listes électorales",
+  "description": "En tant que citoyen belge ou européen Je veux m'inscrire sur les listes électorales Afin d'exercer mon droit de vote démocratique",
+  "category": "democratie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'âge de majorité électorale est 18 ans"
+      },
+      {
+        "text": "Et que le vote est obligatoire en Belgique pour les citoyens belges"
+      },
+      {
+        "text": "Et que l'inscription est automatique pour les Belges"
+      },
+      {
+        "text": "Et que l'inscription est volontaire pour les citoyens européens"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Citoyen belge majeur automatiquement inscrit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 18 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside légalement à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon adresse est enregistrée au registre national"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon inscription électorale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être automatiquement inscrit"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits électoraux devraient inclure \"elections-federales\""
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits électoraux devraient inclure \"elections-regionales\""
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits électoraux devraient inclure \"elections-communales\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir ma convocation électorale par courrier"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Citoyen européen s'inscrivant pour les élections communales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen européen (français)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 25 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Liège depuis 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai jamais voté en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon inscription pour les élections communales"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis une preuve de résidence"
+        },
+        {
+          "keyword": "And",
+          "text": "que je signe la déclaration de non-double vote"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être approuvée"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits électoraux devraient inclure \"elections-communales\""
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits électoraux devraient inclure \"elections-europeennes\""
+        },
+        {
+          "keyword": "And",
+          "text": "le vote devrait être facultatif pour moi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Citoyen non-EU tentant de s'inscrire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen non-EU (marocain)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 30 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside légalement en Belgique depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un titre de séjour valide"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon inscription électorale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible uniquement pour \"elections-communales\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois résider depuis au moins 5 ans dans la commune"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois signer un engagement de respecter la Constitution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Mineur tentant de s'inscrire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 17 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside à Namur"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à voter"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"âge minimum non atteint (18 ans requis)\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais être informé que l'inscription sera automatique à mes 18 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Citoyen ayant perdu ses droits civiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 40 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai été condamné à une interdiction des droits civiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'interdiction court jusqu'au 31/12/2025"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes droits électoraux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais avoir aucun droit électoral actif"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"suspension des droits civiques jusqu'au 31/12/2025\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais être informé de la procédure de réhabilitation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Citoyen belge résidant à l'étranger",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en France (Paris)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis inscrit au consulat belge"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon inscription pour voter depuis l'étranger"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis le mode de vote \"postal\""
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être inscrit sur la liste consulaire"
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits devraient inclure \"elections-federales\""
+        },
+        {
+          "keyword": "And",
+          "text": "mes droits devraient inclure \"elections-europeennes\""
+        },
+        {
+          "keyword": "But",
+          "text": "je ne peux pas voter pour les élections communales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Radiation pour non-participation répétée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 45 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai manqué 4 élections consécutives sans justification"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu des amendes non payées"
+        },
+        {
+          "keyword": "When",
+          "text": "l'administration vérifie mon statut électoral"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être radié des listes électorales"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"abstention répétée non justifiée\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois payer les amendes pour retrouver mes droits"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant total des amendes devrait être au moins 600€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Inscription selon la nationalité et l'âge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen <nationalite>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Belgique depuis <annees_residence> ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes droits électoraux"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon éligibilité devrait être \"<eligible>\""
+        },
+        {
+          "keyword": "And",
+          "text": "les élections autorisées devraient être \"<elections_autorisees>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "nationalite",
+            "age",
+            "annees_residence",
+            "eligible",
+            "elections_autorisees"
+          ],
+          "rows": [
+            {
+              "values": {
+                "nationalite": "belge",
+                "age": "18",
+                "annees_residence": "18",
+                "eligible": "oui",
+                "elections_autorisees": "federales,regionales,communales,europeennes"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "belge",
+                "age": "17",
+                "annees_residence": "17",
+                "eligible": "non",
+                "elections_autorisees": "aucune"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "eu-citoyen",
+                "age": "25",
+                "annees_residence": "3",
+                "eligible": "oui",
+                "elections_autorisees": "communales,europeennes"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "eu-citoyen",
+                "age": "18",
+                "annees_residence": "0.5",
+                "eligible": "partiel",
+                "elections_autorisees": "europeennes"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "non-eu-resident",
+                "age": "30",
+                "annees_residence": "5",
+                "eligible": "oui",
+                "elections_autorisees": "communales"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "non-eu-resident",
+                "age": "30",
+                "annees_residence": "3",
+                "eligible": "non",
+                "elections_autorisees": "aucune"
+              }
+            },
+            {
+              "values": {
+                "nationalite": "refugie-reconnu",
+                "age": "21",
+                "annees_residence": "2",
+                "eligible": "non",
+                "elections_autorisees": "aucune"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Vérification des conditions de résidence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen européen"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 28 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai déménagé 3 fois en 2 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon inscription à Gand"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma résidence principale devrait être vérifiée"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée minimale de résidence devrait être respectée"
+        },
+        {
+          "keyword": "And",
+          "text": "mon bureau de vote devrait être assigné à Gand"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Double inscription interdite",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un citoyen européen (néerlandais)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis déjà inscrit pour voter aux Pays-Bas"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside maintenant en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon inscription en Belgique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois choisir où exercer mon droit de vote"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois signer une déclaration de non-double vote"
+        },
+        {
+          "keyword": "And",
+          "text": "mon inscription précédente devrait être annulée automatiquement"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

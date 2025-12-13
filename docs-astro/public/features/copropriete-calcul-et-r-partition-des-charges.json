@@ -1,0 +1,109 @@
+{
+  "id": "copropriete-calcul-et-r-partition-des-charges",
+  "name": "Calcul et Répartition des Charges",
+  "description": "En tant que syndic Je veux calculer les charges de copropriété Afin d'établir les appels de fonds",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le budget annuel est de 50000€"
+      },
+      {
+        "text": "Et que la copropriété compte 1000 millièmes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Calcul charges générales au prorata des millièmes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire possède 85 millièmes"
+        },
+        {
+          "keyword": "And",
+          "text": "que les charges générales sont de 30000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule sa quote-part"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit payer 2550€ annuellement"
+        },
+        {
+          "keyword": "And",
+          "text": "soit 212,50€ par mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Calcul charges spéciales ascenseur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'entretien ascenseur coûte 3000€/an"
+        },
+        {
+          "keyword": "And",
+          "text": "que seuls les étages 1 à 5 participent"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un copropriétaire du 3ème étage a 50 millièmes"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule sa participation"
+        },
+        {
+          "keyword": "Then",
+          "text": "sa quote-part est calculée selon la grille:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Charges impayées avec intérêts de retard",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire doit 1000€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il a 60 jours de retard"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les pénalités"
+        },
+        {
+          "keyword": "Then",
+          "text": "les intérêts sont de 8% annuel"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant total dû est 1013,15€"
+        },
+        {
+          "keyword": "And",
+          "text": "des frais de rappel de 15€ s'ajoutent"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "copropriete-contr-le-d-acc-s-lectronique",
+  "name": "Contrôle d'Accès Électronique",
+  "description": "En tant que copropriété Je veux moderniser le contrôle d'accès Afin de sécuriser les entrées",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'accès doit être sécurisé"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation système badges",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un système badges/vigik est proposé"
+        },
+        {
+          "keyword": "When",
+          "text": "l'installation est votée"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Gestion badges perdus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un résident perd son badge"
+        },
+        {
+          "keyword": "When",
+          "text": "il demande un remplacement"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Accès prestataires services",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des prestataires réguliers interviennent"
+        },
+        {
+          "keyword": "When",
+          "text": "l'accès est organisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

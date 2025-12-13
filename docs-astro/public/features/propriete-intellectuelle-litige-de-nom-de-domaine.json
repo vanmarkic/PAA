@@ -1,0 +1,140 @@
+{
+  "id": "propriete-intellectuelle-litige-de-nom-de-domaine",
+  "name": "Litige de nom de domaine",
+  "description": "En tant que titulaire de marque Je veux récupérer un nom de domaine cybersquatté Afin de protéger mon identité en ligne",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les procédures UDRP sont disponibles"
+      },
+      {
+        "text": "Et que les frais WIPO sont d'environ 1500€"
+      },
+      {
+        "text": "Et que la procédure dure 2-3 mois"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Procédure UDRP pour cybersquatting",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je possède la marque \"INNOVATECH\""
+        },
+        {
+          "keyword": "And",
+          "text": "que quelqu'un a enregistré innovatech.com de mauvaise foi"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il propose de me le vendre 10000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je lance une procédure UDRP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver mes droits sur la marque"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer la mauvaise foi du détenteur"
+        },
+        {
+          "keyword": "And",
+          "text": "l'absence d'intérêt légitime"
+        },
+        {
+          "keyword": "And",
+          "text": "demander le transfert du domaine"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Procédure pour .be via CEPANI",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un domaine .be utilise ma marque"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux le récupérer"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le CEPANI"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure est en français ou néerlandais"
+        },
+        {
+          "keyword": "And",
+          "text": "coûte environ 1000€"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision intervient en 60 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux obtenir transfert ou radiation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Action judiciaire pour concurrence déloyale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un concurrent utilise un domaine similaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela crée une confusion"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'UDRP n'est pas applicable"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le tribunal de l'entreprise"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander la cessation"
+        },
+        {
+          "keyword": "And",
+          "text": "le transfert ou la radiation"
+        },
+        {
+          "keyword": "And",
+          "text": "des dommages-intérêts"
+        },
+        {
+          "keyword": "And",
+          "text": "une astreinte en cas de non-respect"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

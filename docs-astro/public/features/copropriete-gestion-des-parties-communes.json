@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-gestion-des-parties-communes",
+  "name": "Gestion des Parties Communes",
+  "description": "En tant que copropriété Je veux gérer les parties communes Afin de maintenir et valoriser le patrimoine commun",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'immeuble comprend des parties communes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Utilisation privative temporaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire demande l'usage exclusif du jardin"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic évalue la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut autoriser si:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Modification de partie commune",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire veut modifier une partie commune"
+        },
+        {
+          "keyword": "When",
+          "text": "il soumet le projet à l'AG"
+        },
+        {
+          "keyword": "Then",
+          "text": "la décision requiert:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Privatisation d'une partie commune",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un couloir commun dessert un seul lot"
+        },
+        {
+          "keyword": "And",
+          "text": "que le propriétaire demande la privatisation"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG examine la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'unanimité est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "une modification de l'acte de base est nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "les millièmes doivent être recalculés"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

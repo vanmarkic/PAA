@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-proc-dure-d-invalidation-de-brevet",
+  "name": "Procédure d'invalidation de brevet",
+  "description": "En tant que concurrent ou partie intéressée Je veux invalider un brevet gênant Afin de libérer la technologie",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un brevet peut être annulé"
+      },
+      {
+        "text": "Et que plusieurs voies existent"
+      },
+      {
+        "text": "Et que les motifs doivent être sérieux"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Action en nullité devant le tribunal",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un brevet bloque mon activité"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai trouvé des antériorités destructrices"
+        },
+        {
+          "keyword": "When",
+          "text": "j'engage une action en nullité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver le défaut de nouveauté"
+        },
+        {
+          "keyword": "And",
+          "text": "le tribunal peut annuler totalement ou partiellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Opposition devant l'OEB",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un brevet européen vient d'être délivré"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 9 mois pour m'opposer"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme opposition à l'OEB"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie 880€ de taxes"
+        },
+        {
+          "keyword": "And",
+          "text": "je soumets mes arguments et preuves"
+        },
+        {
+          "keyword": "And",
+          "text": "une procédure orale est généralement tenue"
+        },
+        {
+          "keyword": "And",
+          "text": "la division d'opposition décide"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

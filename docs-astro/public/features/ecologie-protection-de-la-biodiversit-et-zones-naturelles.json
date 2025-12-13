@@ -1,0 +1,300 @@
+{
+  "id": "ecologie-protection-de-la-biodiversit-et-zones-naturelles",
+  "name": "Protection de la biodiversité et zones naturelles",
+  "description": "En tant que propriétaire ou gestionnaire de terrain Je veux obtenir les autorisations pour mes activités Afin de respecter la protection de la nature",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les zones protégées sont classées:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Autorisation activité en zone Natura 2000",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon terrain de 5 hectares est en Natura 2000"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux installer un parcours d'accrobranche"
+        },
+        {
+          "keyword": "And",
+          "text": "que le site abrite des espèces protégées"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'autorisation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'autorisation peut inclure:"
+        },
+        {
+          "keyword": "And",
+          "text": "un comité de suivi est créé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Permis abattage arbres remarquables",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux abattre 3 arbres remarquables"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils sont répertoriés au patrimoine naturel"
+        },
+        {
+          "keyword": "And",
+          "text": "que leur circonférence dépasse 150 cm"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils présentent un danger"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le permis d'abattage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "les essences de remplacement doivent être indigènes"
+        },
+        {
+          "keyword": "And",
+          "text": "un suivi de reprise sur 3 ans est requis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Subside création corridor écologique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un agriculteur"
+        },
+        {
+          "keyword": "And",
+          "text": "que je crée un corridor de 2 km de haies"
+        },
+        {
+          "keyword": "And",
+          "text": "que je connecte deux zones Natura 2000"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'utilise des essences locales"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le subside biodiversité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois:"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant total sera 24000€ pour la plantation"
+        },
+        {
+          "keyword": "And",
+          "text": "je m'engage pour 10 ans minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entretien doit être écologique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Prime toiture végétalisée extensive",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un bâtiment avec 500 m² de toiture plate"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'installe une toiture végétalisée extensive"
+        },
+        {
+          "keyword": "And",
+          "text": "que le substrat fait 10 cm d'épaisseur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'utilise des sedums locaux"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime toiture verte"
+        },
+        {
+          "keyword": "Then",
+          "text": "la prime est calculée:"
+        },
+        {
+          "keyword": "And",
+          "text": "la prime totale sera 32500€"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois maintenir la toiture 10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "faire un suivi biodiversité annuel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Dérogation espèces protégées pour projet d'intérêt public",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un projet de tramway traverse un habitat protégé"
+        },
+        {
+          "keyword": "And",
+          "text": "que 2 espèces protégées sont impactées"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'intérêt public majeur est démontré"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la dérogation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver:"
+        },
+        {
+          "keyword": "And",
+          "text": "créer des habitats de substitution avant travaux"
+        },
+        {
+          "keyword": "And",
+          "text": "assurer un suivi scientifique 10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "publier les résultats annuellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul compensation écologique selon impact",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'impacte <surface> ha d'habitat <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que la valeur écologique est <valeur>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule la compensation requise"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois compenser <compensation> ha"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "surface",
+            "type",
+            "valeur",
+            "compensation"
+          ],
+          "rows": [
+            {
+              "values": {
+                "surface": "1",
+                "type": "prairie humide",
+                "valeur": "élevée",
+                "compensation": "3"
+              }
+            },
+            {
+              "values": {
+                "surface": "2",
+                "type": "forêt ancienne",
+                "valeur": "très élevée",
+                "compensation": "8"
+              }
+            },
+            {
+              "values": {
+                "surface": "0.5",
+                "type": "friche",
+                "valeur": "faible",
+                "compensation": "0.5"
+              }
+            },
+            {
+              "values": {
+                "surface": "1.5",
+                "type": "zone humide",
+                "valeur": "maximale",
+                "compensation": "6"
+              }
+            },
+            {
+              "values": {
+                "surface": "3",
+                "type": "culture intensive",
+                "valeur": "très faible",
+                "compensation": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

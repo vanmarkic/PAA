@@ -1,0 +1,80 @@
+{
+  "id": "propriete-intellectuelle-smart-contracts-pour-gestion-automatis-e-ip",
+  "name": "Smart contracts pour gestion automatisée IP",
+  "description": "En tant que gestionnaire de droits IP Je veux utiliser des smart contracts Afin d'automatiser licensing et royalties",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les smart contracts automatisent l'exécution"
+      },
+      {
+        "text": "Et que la blockchain assure la traçabilité"
+      },
+      {
+        "text": "Et que les paiements sont instantanés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Smart contract pour licensing automatique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je licencie fréquemment mes brevets"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux automatiser le processus"
+        },
+        {
+          "keyword": "When",
+          "text": "je déploie un smart contract"
+        },
+        {
+          "keyword": "Then",
+          "text": "les licences sont accordées automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "les conditions sont encodées dans le contrat"
+        },
+        {
+          "keyword": "And",
+          "text": "les royalties sont distribuées automatiquement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Gestion décentralisée de royalties musicales",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis auteur-compositeur"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes œuvres génèrent des royalties complexes"
+        },
+        {
+          "keyword": "When",
+          "text": "j'utilise un smart contract pour la distribution"
+        },
+        {
+          "keyword": "Then",
+          "text": "chaque utilisation déclenche un micro-paiement"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

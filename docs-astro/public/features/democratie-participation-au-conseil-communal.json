@@ -1,0 +1,242 @@
+{
+  "id": "democratie-participation-au-conseil-communal",
+  "name": "Participation au conseil communal",
+  "description": "En tant que citoyen de la commune Je veux participer aux séances du conseil communal Afin d'influencer les décisions locales",
+  "category": "democratie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le conseil communal se réunit mensuellement"
+      },
+      {
+        "text": "Et que les séances publiques sont ouvertes aux citoyens"
+      },
+      {
+        "text": "Et que le droit d'interpellation existe pour les résidents"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'interpellation citoyenne",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident de Namur depuis 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 25 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux interpeller le conseil sur \"La sécurité routière\""
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma demande d'interpellation"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis un texte de maximum 3000 caractères"
+        },
+        {
+          "keyword": "And",
+          "text": "que je respecte le délai de 7 jours avant la séance"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être examinée par le bureau"
+        },
+        {
+          "keyword": "And",
+          "text": "si acceptée, je devrais recevoir une invitation"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais avoir 10 minutes de temps de parole"
+        },
+        {
+          "keyword": "And",
+          "text": "le collège devrait répondre pendant la séance"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Participation à une consultation publique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un projet d'aménagement urbain est proposé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une consultation publique est organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "que la période de consultation est de 30 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets mes observations"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'inclus des propositions alternatives"
+        },
+        {
+          "keyword": "And",
+          "text": "que je joins des documents techniques"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma contribution devrait être enregistrée"
+        },
+        {
+          "keyword": "And",
+          "text": "elle devrait être analysée par les services communaux"
+        },
+        {
+          "keyword": "And",
+          "text": "une réponse motivée devrait être fournie"
+        },
+        {
+          "keyword": "And",
+          "text": "le rapport final devrait mentionner ma contribution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Demande d'ajout d'un point à l'ordre du jour",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je représente une association locale"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons une pétition de 200 signatures"
+        },
+        {
+          "keyword": "And",
+          "text": "que le sujet concerne \"L'installation de composteurs collectifs\""
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'inscription à l'ordre du jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fournis le dossier complet 10 jours avant"
+        },
+        {
+          "keyword": "Then",
+          "text": "le point devrait être ajouté à l'ordre du jour"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir présenter le dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "un vote devrait avoir lieu sur notre proposition"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Accès aux documents du conseil",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un <type_demandeur>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je demande accès à <type_document>"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais ma demande d'accès"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'accès devrait être \"<decision>\""
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"<raison>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_demandeur",
+            "type_document",
+            "decision",
+            "raison"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_demandeur": "citoyen résident",
+                "type_document": "procès-verbal public",
+                "decision": "accordé",
+                "raison": "Document public accessible"
+              }
+            },
+            {
+              "values": {
+                "type_demandeur": "citoyen résident",
+                "type_document": "délibération secrète",
+                "decision": "refusé",
+                "raison": "Protection vie privée"
+              }
+            },
+            {
+              "values": {
+                "type_demandeur": "journaliste",
+                "type_document": "budget communal",
+                "decision": "accordé",
+                "raison": "Information d'intérêt public"
+              }
+            },
+            {
+              "values": {
+                "type_demandeur": "citoyen non-résident",
+                "type_document": "contrat marché public",
+                "decision": "accordé",
+                "raison": "Transparence administrative"
+              }
+            },
+            {
+              "values": {
+                "type_demandeur": "entreprise",
+                "type_document": "dossier concurrent",
+                "decision": "refusé",
+                "raison": "Secret commercial"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

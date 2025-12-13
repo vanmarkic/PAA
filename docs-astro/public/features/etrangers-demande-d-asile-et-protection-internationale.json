@@ -1,0 +1,608 @@
+{
+  "id": "etrangers-demande-d-asile-et-protection-internationale",
+  "name": "Demande d'asile et protection internationale",
+  "description": "En tant que personne fuyant la persécution Je veux demander l'asile en Belgique Afin d'obtenir une protection internationale",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les autorités compétentes sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Première demande d'asile à la frontière",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'arrive à l'aéroport de Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que je fuis des persécutions dans mon pays"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de visa valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que je demande immédiatement l'asile"
+        },
+        {
+          "keyword": "When",
+          "text": "je présente ma demande à la police des frontières"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être dirigé vers l'Office des Étrangers"
+        },
+        {
+          "keyword": "And",
+          "text": "recevoir une annexe 26 (attestation de demande)"
+        },
+        {
+          "keyword": "And",
+          "text": "être placé en centre fermé ou libéré"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir un entretien Dublin dans les 3 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Demande d'asile sur le territoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis déjà en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que la situation dans mon pays s'est détériorée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je crains des persécutions en cas de retour"
+        },
+        {
+          "keyword": "When",
+          "text": "je me présente à l'Office des Étrangers"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois le faire dans les 8 jours ouvrables"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir mes empreintes digitales"
+        },
+        {
+          "keyword": "And",
+          "text": "déclarer ma langue de procédure (FR/NL)"
+        },
+        {
+          "keyword": "And",
+          "text": "recevoir une attestation d'immatriculation (AI)"
+        },
+        {
+          "keyword": "And",
+          "text": "être assigné à un centre Fedasil ou ILA"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Procédure Dublin III applicable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai demandé l'asile en Belgique"
+        },
+        {
+          "keyword": "But",
+          "text": "que mes empreintes sont dans Eurodac"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai transité par l'Italie"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'Italie a accepté la reprise en charge"
+        },
+        {
+          "keyword": "When",
+          "text": "l'OE applique le règlement Dublin"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir une décision 26quater"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir 30 jours pour un recours en suspension"
+        },
+        {
+          "keyword": "And",
+          "text": "le transfert devrait se faire dans les 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Reconnaissance du statut de réfugié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai fui des persécutions politiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai fourni des preuves crédibles"
+        },
+        {
+          "keyword": "And",
+          "text": "que le CGRA a examiné mon dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a un risque réel en cas de retour"
+        },
+        {
+          "keyword": "When",
+          "text": "le CGRA prend sa décision"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être reconnu réfugié"
+        },
+        {
+          "keyword": "And",
+          "text": "recevoir une carte A de 5 ans (carte N temporaire)"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir accès au marché du travail"
+        },
+        {
+          "keyword": "And",
+          "text": "pouvoir demander le regroupement familial"
+        },
+        {
+          "keyword": "And",
+          "text": "après 5 ans, demander la carte B"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Octroi de la protection subsidiaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je viens d'une zone de conflit"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne suis pas personnellement persécuté"
+        },
+        {
+          "keyword": "But",
+          "text": "qu'il y a une violence aveugle généralisée"
+        },
+        {
+          "keyword": "And",
+          "text": "que tout civil court un risque réel"
+        },
+        {
+          "keyword": "When",
+          "text": "le CGRA examine ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "je pourrais obtenir la protection subsidiaire"
+        },
+        {
+          "keyword": "And",
+          "text": "recevoir une carte A d'1 an renouvelable"
+        },
+        {
+          "keyword": "And",
+          "text": "après 5 ans, demander la carte B"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir les mêmes droits sociaux qu'un réfugié"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Demande manifestement infondée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déjà demandé l'asile 3 fois"
+        },
+        {
+          "keyword": "And",
+          "text": "que toutes ont été rejetées définitivement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'apporte aucun élément nouveau"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose une nouvelle demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle devrait être déclarée irrecevable"
+        },
+        {
+          "keyword": "And",
+          "text": "je n'aurais pas droit à l'accueil"
+        },
+        {
+          "keyword": "And",
+          "text": "je recevrais un ordre de quitter le territoire"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais faire un recours non-suspensif"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Procédure pour mineur non-accompagné (MENA)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 16 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis arrivé seul en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai fui mon pays d'origine"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'asile"
+        },
+        {
+          "keyword": "Then",
+          "text": "un tuteur devrait m'être désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais être placé dans un centre adapté"
+        },
+        {
+          "keyword": "And",
+          "text": "bénéficier d'une procédure adaptée"
+        },
+        {
+          "keyword": "And",
+          "text": "ne pas être détenu"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir droit à la scolarisation immédiate"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Demande d'apatridie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je n'ai aucune nationalité"
+        },
+        {
+          "keyword": "And",
+          "text": "que je peux le prouver documentairement"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la reconnaissance d'apatride"
+        },
+        {
+          "keyword": "Then",
+          "text": "la procédure se fait au tribunal de famille"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver l'absence de nationalité"
+        },
+        {
+          "keyword": "And",
+          "text": "si reconnu, j'obtiens une carte B directement"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander des documents de voyage"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Recours au CCE après décision négative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le CGRA a rejeté ma demande d'asile"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu la notification de la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste les motifs du rejet"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose un recours au CCE"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois le faire dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "payer 200€ de frais de procédure"
+        },
+        {
+          "keyword": "And",
+          "text": "le recours est suspensif de plein droit"
+        },
+        {
+          "keyword": "And",
+          "text": "une audience devrait avoir lieu dans les 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le CCE peut confirmer, réformer ou annuler"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Régularisation humanitaire 9bis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en Belgique depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis bien intégré"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes enfants sont scolarisés"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un promesse d'embauche"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des circonstances exceptionnelles"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la régularisation 9bis"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois la déposer à la commune"
+        },
+        {
+          "keyword": "And",
+          "text": "payer 350€ de redevance"
+        },
+        {
+          "keyword": "And",
+          "text": "prouver l'impossibilité de retour"
+        },
+        {
+          "keyword": "And",
+          "text": "attendre environ 18 mois pour une décision"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Régularisation médicale 9ter",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souffre d'une maladie grave"
+        },
+        {
+          "keyword": "And",
+          "text": "que le traitement n'est pas disponible dans mon pays"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'arrêter le traitement présente un risque vital"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un certificat médical type"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la régularisation 9ter"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande doit être envoyée par recommandé"
+        },
+        {
+          "keyword": "And",
+          "text": "être examinée par un médecin de l'OE"
+        },
+        {
+          "keyword": "And",
+          "text": "si recevable, j'obtiens une AI"
+        },
+        {
+          "keyword": "And",
+          "text": "si fondée, j'obtiens une carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "après 5 ans, je peux demander la carte B"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Délais de procédure d'asile",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai introduit une demande d'asile <type>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon dossier est complet"
+        },
+        {
+          "keyword": "When",
+          "text": "le CGRA traite ma demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai devrait être environ <delai> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "delai"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type": "procédure normale",
+                "delai": "180"
+              }
+            },
+            {
+              "values": {
+                "type": "procédure prioritaire",
+                "delai": "60"
+              }
+            },
+            {
+              "values": {
+                "type": "procédure accélérée",
+                "delai": "30"
+              }
+            },
+            {
+              "values": {
+                "type": "demande ultérieure",
+                "delai": "60"
+              }
+            },
+            {
+              "values": {
+                "type": "MENA",
+                "delai": "120"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-13",
+      "name": "Cessation du statut de réfugié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis reconnu réfugié depuis 7 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que la situation dans mon pays a changé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y a plus de risque de persécution"
+        },
+        {
+          "keyword": "When",
+          "text": "le CGRA réexamine mon statut"
+        },
+        {
+          "keyword": "Then",
+          "text": "ils peuvent initier une procédure de cessation"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais être convoqué pour être entendu"
+        },
+        {
+          "keyword": "And",
+          "text": "pouvoir démontrer d'autres craintes"
+        },
+        {
+          "keyword": "And",
+          "text": "avoir droit à un recours au CCE"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

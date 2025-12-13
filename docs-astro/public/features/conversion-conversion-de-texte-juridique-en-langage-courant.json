@@ -1,0 +1,258 @@
+{
+  "id": "conversion-conversion-de-texte-juridique-en-langage-courant",
+  "name": "Conversion de texte juridique en langage courant",
+  "description": "En tant qu'utilisateur sans formation juridique Je veux comprendre les textes légaux Afin de connaître mes droits",
+  "category": "conversion",
+  "tags": [],
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Conversion basique d'un article du code civil",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "le texte juridique suivant:"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une conversion en niveau \"simple\""
+        },
+        {
+          "keyword": "Then",
+          "text": "le texte converti devrait contenir \"causez un dommage\""
+        },
+        {
+          "keyword": "And",
+          "text": "le texte converti devrait contenir \"réparer\""
+        },
+        {
+          "keyword": "And",
+          "text": "le score de lisibilité devrait être supérieur à 80"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Conversion avec exemples pratiques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "le texte juridique suivant:"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une conversion en niveau \"exemples\""
+        },
+        {
+          "keyword": "Then",
+          "text": "le résultat devrait contenir des exemples pratiques"
+        },
+        {
+          "keyword": "And",
+          "text": "les exemples devraient inclure \"vélo\" ou \"chien\" ou \"voiture\""
+        },
+        {
+          "keyword": "And",
+          "text": "chaque exemple devrait avoir une conséquence claire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Conversion pour optimiseur social",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "le texte juridique suivant:"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une conversion pour \"optimiseur\""
+        },
+        {
+          "keyword": "Then",
+          "text": "le résultat devrait être un objet structuré"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait contenir un \"rule_id\""
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait contenir des \"conditions\" vérifiables"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait contenir un \"benefit\" avec calcul"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait contenir des règles de \"cumul\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Détection d'ambiguïté juridique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "un texte juridique ambigu"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une conversion"
+        },
+        {
+          "keyword": "Then",
+          "text": "le système devrait détecter l'ambiguïté"
+        },
+        {
+          "keyword": "And",
+          "text": "proposer plusieurs interprétations possibles"
+        },
+        {
+          "keyword": "And",
+          "text": "recommander \"Vérifier avec votre CPAS local\""
+        },
+        {
+          "keyword": "And",
+          "text": "indiquer le niveau de risque"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Validation sémantique échoue",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "un texte juridique complexe"
+        },
+        {
+          "keyword": "And",
+          "text": "que la première conversion contient des erreurs sémantiques"
+        },
+        {
+          "keyword": "When",
+          "text": "le validateur détecte les erreurs"
+        },
+        {
+          "keyword": "Then",
+          "text": "le système devrait régénérer avec des contraintes"
+        },
+        {
+          "keyword": "And",
+          "text": "le nouveau texte devrait passer la validation"
+        },
+        {
+          "keyword": "And",
+          "text": "le nombre de tentatives devrait être tracé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Niveaux de conversion multiples",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "un article de loi standard"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une conversion en niveau \"<niveau>\""
+        },
+        {
+          "keyword": "Then",
+          "text": "la complexité linguistique devrait être \"<complexité>\""
+        },
+        {
+          "keyword": "And",
+          "text": "le public cible devrait être \"<public>\""
+        },
+        {
+          "keyword": "And",
+          "text": "le temps de lecture devrait être \"<temps>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "niveau",
+            "complexité",
+            "public",
+            "temps"
+          ],
+          "rows": [
+            {
+              "values": {
+                "niveau": "simple",
+                "complexité": "faible",
+                "public": "tout public",
+                "temps": "< 30s"
+              }
+            },
+            {
+              "values": {
+                "niveau": "détaillé",
+                "complexité": "moyenne",
+                "public": "bénéficiaires motivés",
+                "temps": "1-2min"
+              }
+            },
+            {
+              "values": {
+                "niveau": "exemples",
+                "complexité": "faible",
+                "public": "tout public",
+                "temps": "2-3min"
+              }
+            },
+            {
+              "values": {
+                "niveau": "warnings",
+                "complexité": "moyenne",
+                "public": "personnes à risque",
+                "temps": "< 1min"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.202Z",
+  "legalSources": {
+    "sources": [
+      {
+        "authority": "SPF Justice",
+        "authorityType": "SPF",
+        "region": "fédéral",
+        "title": "Conversion de droits",
+        "publicationDate": "2023-12-31T00:00:00.000Z",
+        "effectiveDate": "2024-01-01T00:00:00.000Z",
+        "officialUrl": "https://justice.belgium.be",
+        "language": "fr"
+      }
+    ],
+    "extractionDate": "2024-11-16T00:00:00.000Z",
+    "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
+    "version": "2024.1.0"
+  }
+}

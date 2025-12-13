@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-d-p-t-de-marque-collective-ou-de-certification",
+  "name": "Dépôt de marque collective ou de certification",
+  "description": "En tant qu'association ou organisme certificateur Je veux déposer une marque collective/certification Afin de distinguer les produits de nos membres",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les marques collectives ont des règles spéciales"
+      },
+      {
+        "text": "Et qu'un règlement d'usage est obligatoire"
+      },
+      {
+        "text": "Et que tous les membres peuvent l'utiliser"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Dépôt de marque collective par association",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que notre association regroupe 50 artisans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous voulons une marque commune"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déposons la marque collective"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous joignons le règlement d'usage"
+        },
+        {
+          "keyword": "And",
+          "text": "les critères d'admission"
+        },
+        {
+          "keyword": "And",
+          "text": "les contrôles qualité"
+        },
+        {
+          "keyword": "And",
+          "text": "tous les membres peuvent l'exploiter"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Marque de certification pour label qualité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous certifions des produits bio"
+        },
+        {
+          "keyword": "And",
+          "text": "voulons protéger notre label"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déposons une marque de certification"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous définissons les standards à respecter"
+        },
+        {
+          "keyword": "And",
+          "text": "les procédures de contrôle"
+        },
+        {
+          "keyword": "And",
+          "text": "nous ne pouvons pas l'utiliser nous-mêmes"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

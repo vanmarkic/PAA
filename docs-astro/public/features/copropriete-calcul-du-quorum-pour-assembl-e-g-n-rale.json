@@ -1,0 +1,141 @@
+{
+  "id": "copropriete-calcul-du-quorum-pour-assembl-e-g-n-rale",
+  "name": "Calcul du Quorum pour Assemblée Générale",
+  "description": "En tant que président de séance Je veux calculer le quorum atteint Afin de valider les décisions de l'assemblée",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété totalise 1000 millièmes"
+      },
+      {
+        "text": "Et que l'assemblée générale est en cours"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Quorum atteint pour décision majoritaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 520 millièmes sont présents"
+        },
+        {
+          "keyword": "And",
+          "text": "que 180 millièmes sont représentés"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le quorum"
+        },
+        {
+          "keyword": "Then",
+          "text": "le quorum de 50% est atteint"
+        },
+        {
+          "keyword": "And",
+          "text": "l'assemblée peut délibérer valablement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Quorum insuffisant première convocation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que seulement 400 millièmes sont présents ou représentés"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le quorum pour une décision aux 2/3"
+        },
+        {
+          "keyword": "Then",
+          "text": "le quorum n'est pas atteint"
+        },
+        {
+          "keyword": "And",
+          "text": "une seconde convocation est nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Calcul quorum selon type de décision",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que <milliemes_presents> millièmes sont présents/représentés"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le quorum pour <type_decision>"
+        },
+        {
+          "keyword": "Then",
+          "text": "le quorum est <resultat>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "milliemes_presents",
+            "type_decision",
+            "resultat"
+          ],
+          "rows": [
+            {
+              "values": {
+                "milliemes_presents": "510",
+                "type_decision": "majorité simple",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "values": {
+                "milliemes_presents": "490",
+                "type_decision": "majorité simple",
+                "resultat": "non atteint"
+              }
+            },
+            {
+              "values": {
+                "milliemes_presents": "667",
+                "type_decision": "deux tiers",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "values": {
+                "milliemes_presents": "750",
+                "type_decision": "trois quarts",
+                "resultat": "atteint"
+              }
+            },
+            {
+              "values": {
+                "milliemes_presents": "800",
+                "type_decision": "quatre cinquièmes",
+                "resultat": "atteint"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

@@ -1,0 +1,592 @@
+{
+  "id": "benefits-allocations-de-ch-mage",
+  "name": "Allocations de Chômage",
+  "description": "En tant que travailleur ayant perdu mon emploi Je veux savoir si j'ai droit aux allocations de chômage Afin de maintenir un revenu minimum pendant ma recherche d'emploi",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les conditions de chômage 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Licenciement économique avec conditions remplies",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un travailleur licencié économiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 32 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 350 jours sur les 18 derniers mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel était de 2800€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis inscrit auprès de l'ONEM"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis disponible pour le marché de l'emploi"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de l'allocation devrait être environ 1680€ par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "la catégorie devrait être \"travailleur avec charge de famille\""
+        },
+        {
+          "keyword": "And",
+          "text": "la durée maximale devrait être \"24 mois maximum\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Fin de contrat à durée déterminée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon contrat à durée déterminée est terminé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 25 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 320 jours sur les 18 derniers mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel était de 2200€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis inscrit auprès du Forem"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis isolé"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de l'allocation devrait être environ 1320€ par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "la catégorie devrait être \"isolé\""
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir \"60% du salaire plafonné\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Travailleur de plus de 36 ans avec historique insuffisant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été licencié"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 42 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé seulement 400 jours sur les 24 derniers mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel était de 3000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"jours travaillés insuffisants (468 jours requis sur 24 mois)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Démission volontaire sans motif valable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai démissionné volontairement"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 28 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de motif valable reconnu"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 400 jours sur les 18 derniers mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"démission volontaire - période de sanction applicable\""
+        },
+        {
+          "keyword": "And",
+          "text": "la durée de sanction devrait être \"4 à 52 semaines selon les circonstances\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Travailleur trop jeune sans stage suffisant",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai terminé mes études"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 17 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 100 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"âge minimum non atteint (18 ans requis)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Chômage temporaire pour force majeure",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en chômage temporaire pour force majeure"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 2500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis employé depuis 2 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage temporaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de l'allocation devrait être \"65% du salaire plafonné\""
+        },
+        {
+          "keyword": "And",
+          "text": "je n'ai pas besoin de prouver les conditions d'admissibilité"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Travailleur à temps partiel involontaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai perdu mon emploi à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 30 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 312 jours sur 18 mois à temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "que je cherche un emploi à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire mensuel était de 1200€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité aux allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul devrait tenir compte du régime temps partiel"
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrais avoir droit à l'AGR si je trouve un nouvel emploi temps partiel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Cumul avec formation professionnelle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis au chômage complet"
+        },
+        {
+          "keyword": "And",
+          "text": "que je perçois des allocations de chômage"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite suivre une formation professionnelle"
+        },
+        {
+          "keyword": "And",
+          "text": "que la formation est agréée par le Forem"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les règles de cumul"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux maintenir mes allocations pendant la formation"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer la formation à l'ONEM"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux recevoir une indemnité de formation supplémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant devrait être \"1€ par heure de formation\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul allocations selon situation familiale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été licencié"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <age> ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé <jours> jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma situation familiale est <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire mensuel était de <salaire>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes allocations de chômage"
+        },
+        {
+          "keyword": "Then",
+          "text": "le pourcentage applicable devrait être <pourcentage>%"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant mensuel devrait être environ <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "age",
+            "jours",
+            "situation",
+            "salaire",
+            "pourcentage",
+            "montant"
+          ],
+          "rows": [
+            {
+              "values": {
+                "age": "25",
+                "jours": "320",
+                "situation": "avec charge",
+                "salaire": "2800",
+                "pourcentage": "75",
+                "montant": "1440"
+              }
+            },
+            {
+              "values": {
+                "age": "30",
+                "jours": "350",
+                "situation": "isolé",
+                "salaire": "2500",
+                "pourcentage": "60",
+                "montant": "1440"
+              }
+            },
+            {
+              "values": {
+                "age": "28",
+                "jours": "400",
+                "situation": "cohabitant",
+                "salaire": "2200",
+                "pourcentage": "55",
+                "montant": "1210"
+              }
+            },
+            {
+              "values": {
+                "age": "40",
+                "jours": "500",
+                "situation": "avec charge",
+                "salaire": "3500",
+                "pourcentage": "75",
+                "montant": "1440"
+              }
+            },
+            {
+              "values": {
+                "age": "35",
+                "jours": "480",
+                "situation": "isolé",
+                "salaire": "1800",
+                "pourcentage": "60",
+                "montant": "1080"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Obligations liées aux allocations de chômage",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bénéficiaire d'allocations de chômage"
+        },
+        {
+          "keyword": "When",
+          "text": "j'accepte les allocations"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois être inscrit comme demandeur d'emploi"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois être disponible pour le marché de l'emploi"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois rechercher activement un emploi"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois accepter tout emploi convenable proposé"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois me présenter aux convocations de l'ONEM"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer toute activité ou revenu"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois résider effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois coller les timbres de contrôle (carte C3)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Réforme 2024 - Limitation dans le temps",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis au chômage depuis janvier 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que la nouvelle réforme est en application"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la durée de mes droits"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes allocations complètes sont limitées à 24 mois maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "après 12 mois, je passe en période 2 (montant dégressif)"
+        },
+        {
+          "keyword": "And",
+          "text": "après 24 mois, je passe en allocation forfaitaire (période 3)"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant forfaitaire dépend uniquement de ma situation familiale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Allocations d'insertion pour jeunes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai terminé mes études"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai effectué mon stage d'insertion de 310 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas trouvé d'emploi"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande les allocations d'insertion"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "la durée maximale est limitée à \"1 an depuis la réforme 2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "le montant dépend de ma situation familiale"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir obtenu un diplôme ou suivi une formation"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.191Z"
+}

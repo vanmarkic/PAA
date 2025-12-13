@@ -1,0 +1,104 @@
+{
+  "id": "propriete-intellectuelle-audit-de-propri-t-intellectuelle",
+  "name": "Audit de propriété intellectuelle",
+  "description": "En tant qu'entreprise Je veux auditer mon portefeuille IP Afin d'optimiser ma stratégie et identifier les risques",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un audit IP est recommandé annuellement"
+      },
+      {
+        "text": "Et qu'il couvre tous les actifs immatériels"
+      },
+      {
+        "text": "Et qu'il coûte typiquement 5000-20000€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Audit complet du portefeuille IP",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je n'ai jamais fait d'audit IP"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des brevets, marques et secrets d'affaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je lance un audit complet"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'auditeur inventorie tous les droits IP"
+        },
+        {
+          "keyword": "And",
+          "text": "vérifie leur validité et les échéances"
+        },
+        {
+          "keyword": "And",
+          "text": "évalue leur valeur économique"
+        },
+        {
+          "keyword": "And",
+          "text": "identifie les lacunes de protection"
+        },
+        {
+          "keyword": "And",
+          "text": "recommande des actions correctives"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Audit pré-acquisition (due diligence)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux acquérir une entreprise"
+        },
+        {
+          "keyword": "And",
+          "text": "que la PI est un actif clé"
+        },
+        {
+          "keyword": "When",
+          "text": "j'effectue la due diligence IP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je vérifie la titularité des droits"
+        },
+        {
+          "keyword": "And",
+          "text": "l'absence de litiges"
+        },
+        {
+          "keyword": "And",
+          "text": "la liberté d'exploitation"
+        },
+        {
+          "keyword": "And",
+          "text": "la validité des licences"
+        },
+        {
+          "keyword": "And",
+          "text": "j'évalue les risques cachés"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

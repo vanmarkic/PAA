@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-gestion-hybride-open-source-et-propri-taire",
+  "name": "Gestion hybride open source et propriétaire",
+  "description": "En tant qu'entreprise tech Je veux combiner open source et propriétaire Afin d'optimiser développement et revenus",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'open source accélère le développement"
+      },
+      {
+        "text": "Et que le propriétaire génère des revenus"
+      },
+      {
+        "text": "Et que les licences doivent être compatibles"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Dual licensing stratégie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je développe un logiciel"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux une communauté et des revenus"
+        },
+        {
+          "keyword": "When",
+          "text": "j'applique le dual licensing"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'offre une version GPL pour la communauté"
+        },
+        {
+          "keyword": "And",
+          "text": "une licence commerciale pour les entreprises"
+        },
+        {
+          "keyword": "And",
+          "text": "je monétise les usages commerciaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Contribution à projet open source",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je contribue à un projet Apache"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'y intègre mes améliorations"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets ma contribution"
+        },
+        {
+          "keyword": "Then",
+          "text": "je signe le CLA (Contributor License Agreement)"
+        },
+        {
+          "keyword": "And",
+          "text": "cède certains droits au projet"
+        },
+        {
+          "keyword": "But",
+          "text": "peux utiliser le code dans mes produits"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

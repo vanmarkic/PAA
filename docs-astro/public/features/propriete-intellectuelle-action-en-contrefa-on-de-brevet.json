@@ -1,0 +1,168 @@
+{
+  "id": "propriete-intellectuelle-action-en-contrefa-on-de-brevet",
+  "name": "Action en contrefaçon de brevet",
+  "description": "En tant que titulaire de brevet Je veux agir contre les contrefacteurs Afin de faire cesser l'atteinte à mes droits et obtenir réparation",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la contrefaçon est un délit civil et pénal"
+      },
+      {
+        "text": "Et que la prescription est de 5 ans"
+      },
+      {
+        "text": "Et que les tribunaux de l'entreprise sont compétents"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Saisie-contrefaçon avec huissier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suspecte une contrefaçon"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai obtenu une ordonnance du président du tribunal"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un expert est désigné"
+        },
+        {
+          "keyword": "When",
+          "text": "l'huissier procède à la saisie-description"
+        },
+        {
+          "keyword": "Then",
+          "text": "les produits contrefaisants sont décrits"
+        },
+        {
+          "keyword": "And",
+          "text": "des échantillons peuvent être prélevés"
+        },
+        {
+          "keyword": "And",
+          "text": "les documents commerciaux sont saisis"
+        },
+        {
+          "keyword": "And",
+          "text": "un PV détaillé est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Action au fond avec expertise judiciaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai des preuves de contrefaçon"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'assigne le contrefacteur"
+        },
+        {
+          "keyword": "When",
+          "text": "le tribunal examine l'affaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "une expertise technique est ordonnée"
+        },
+        {
+          "keyword": "And",
+          "text": "l'expert compare les revendications au produit"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander la cessation et des dommages"
+        },
+        {
+          "keyword": "And",
+          "text": "la publication du jugement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Calcul des dommages-intérêts",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la contrefaçon est établie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi un préjudice"
+        },
+        {
+          "keyword": "When",
+          "text": "le tribunal évalue les dommages"
+        },
+        {
+          "keyword": "Then",
+          "text": "il considère le manque à gagner"
+        },
+        {
+          "keyword": "And",
+          "text": "les bénéfices illicites du contrefacteur"
+        },
+        {
+          "keyword": "And",
+          "text": "le préjudice moral"
+        },
+        {
+          "keyword": "And",
+          "text": "peut accorder jusqu'à 2x les bénéfices"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Défense par invalidité du brevet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis poursuivi en contrefaçon"
+        },
+        {
+          "keyword": "And",
+          "text": "que le brevet manque de nouveauté"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme une demande reconventionnelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "je demande la nullité du brevet"
+        },
+        {
+          "keyword": "And",
+          "text": "je produis les antériorités destructrices"
+        },
+        {
+          "keyword": "And",
+          "text": "si le brevet est annulé, l'action échoue"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

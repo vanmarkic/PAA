@@ -1,0 +1,272 @@
+{
+  "id": "statut-artiste-r-gime-fiscal-des-artistes",
+  "name": "Régime Fiscal des Artistes",
+  "description": "En tant qu'artiste indépendant Je veux comprendre mon régime fiscal spécifique Afin d'optimiser ma situation fiscale légalement",
+  "category": "statut-artiste",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le régime fiscal artistique prévoit:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Application des frais forfaitaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste plasticien"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques bruts sont de 20000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis le régime des frais forfaitaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes revenus imposables"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes frais forfaitaires sont de 10000€ (plafond)"
+        },
+        {
+          "keyword": "And",
+          "text": "mes revenus nets imposables sont de 10000€"
+        },
+        {
+          "keyword": "And",
+          "text": "je bénéficie du régime fiscal avantageux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Droits d'auteur avec précompte mobilier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis écrivain"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes droits d'auteur sont de 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis le précompte mobilier libératoire"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon imposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "le précompte de 15% s'applique (2250€)"
+        },
+        {
+          "keyword": "And",
+          "text": "ces revenus sont exclus de l'IPP"
+        },
+        {
+          "keyword": "And",
+          "text": "mon revenu net est de 12750€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "TVA sur ventes d'œuvres",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis sculpteur"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vends une œuvre originale à 5000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'œuvre est ma création personnelle"
+        },
+        {
+          "keyword": "When",
+          "text": "j'applique la TVA"
+        },
+        {
+          "keyword": "Then",
+          "text": "le taux réduit de 6% s'applique"
+        },
+        {
+          "keyword": "And",
+          "text": "la TVA est de 300€"
+        },
+        {
+          "keyword": "And",
+          "text": "le prix total est de 5300€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Régime des petites indemnités",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis artiste occasionnel"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus artistiques annuels sont de 2500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne dépasse pas le plafond"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare mes revenus"
+        },
+        {
+          "keyword": "Then",
+          "text": "le régime des petites indemnités s'applique"
+        },
+        {
+          "keyword": "And",
+          "text": "l'exonération de cotisations sociales est accordée"
+        },
+        {
+          "keyword": "And",
+          "text": "seul l'impôt sur le revenu est dû"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Cumul salariat et indépendant artistique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis salarié à mi-temps"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des revenus artistiques indépendants de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire annuel est de 18000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma situation fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes deux revenus sont imposés séparément"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux appliquer les frais forfaitaires artistiques"
+        },
+        {
+          "keyword": "And",
+          "text": "les cotisations sociales sont calculées sur chaque régime"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul fiscal selon revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus artistiques sont de <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis <régime>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes frais déductibles sont de <frais>€"
+        },
+        {
+          "keyword": "And",
+          "text": "ma base imposable est de <imposable>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "revenus",
+            "régime",
+            "frais",
+            "imposable"
+          ],
+          "rows": [
+            {
+              "values": {
+                "revenus": "10000",
+                "régime": "forfaitaire",
+                "frais": "5000",
+                "imposable": "5000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "25000",
+                "régime": "forfaitaire",
+                "frais": "10000",
+                "imposable": "15000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "15000",
+                "régime": "frais réels",
+                "frais": "8000",
+                "imposable": "7000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "8000",
+                "régime": "petites indemnités",
+                "frais": "4000",
+                "imposable": "4000"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.218Z"
+}

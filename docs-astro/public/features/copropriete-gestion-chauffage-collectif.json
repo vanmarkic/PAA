@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-gestion-chauffage-collectif",
+  "name": "Gestion Chauffage Collectif",
+  "description": "En tant que copropriété Je veux optimiser le chauffage collectif Afin de maîtriser les coûts énergétiques",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le chauffage est collectif"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Période de chauffe légale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la saison de chauffe approche"
+        },
+        {
+          "keyword": "And",
+          "text": "que le règlement définit du 15/10 au 15/04"
+        },
+        {
+          "keyword": "When",
+          "text": "les températures sont clémentes"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic peut:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Contrat maintenance chaufferie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un contrat P2+P3 existe"
+        },
+        {
+          "keyword": "When",
+          "text": "le renouvellement approche"
+        },
+        {
+          "keyword": "Then",
+          "text": "il comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Passage chauffage gaz vers pompe chaleur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la chaudière gaz est vétuste"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une PAC coûte 120000€"
+        },
+        {
+          "keyword": "When",
+          "text": "la transition est étudiée"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'analyse porte sur:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

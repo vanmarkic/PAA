@@ -1,0 +1,84 @@
+{
+  "id": "propriete-intellectuelle-crowdfunding-et-protection-ip",
+  "name": "Crowdfunding et protection IP",
+  "description": "En tant que porteur de projet innovant Je veux lancer un crowdfunding sans perdre mon IP Afin de financer tout en protégeant mes droits",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le crowdfunding expose l'innovation"
+      },
+      {
+        "text": "Et que la divulgation peut détruire la nouveauté"
+      },
+      {
+        "text": "Et que les contributeurs n'ont pas de droits IP"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Protection avant campagne Kickstarter",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je vais lancer une campagne"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon produit est innovant"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare ma protection IP"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dépose mes demandes avant la campagne"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne révèle que le nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "garde les détails techniques secrets"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Gestion des améliorations suggérées",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que des backers suggèrent des améliorations"
+        },
+        {
+          "keyword": "And",
+          "text": "que certaines sont pertinentes"
+        },
+        {
+          "keyword": "When",
+          "text": "j'intègre ces suggestions"
+        },
+        {
+          "keyword": "Then",
+          "text": "je clarifie que l'IP reste mienne"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux remercier sans céder de droits"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

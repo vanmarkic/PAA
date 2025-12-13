@@ -1,0 +1,300 @@
+{
+  "id": "ecologie-primes-nergie-et-r-novation-nerg-tique",
+  "name": "Primes énergie et rénovation énergétique",
+  "description": "En tant que propriétaire ou locataire Je veux obtenir des primes pour améliorer la performance énergétique Afin de réduire ma consommation et mes factures",
+  "category": "ecologie",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les montants des primes 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Installation panneaux solaires pour famille revenus moyens",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire d'une maison unifamiliale"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 45000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'installe 6 kWc de panneaux solaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût total est de 8000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en Wallonie"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime panneaux solaires"
+        },
+        {
+          "keyword": "Then",
+          "text": "je suis éligible à la prime de base"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la prime sera 1500€ (6 × 250€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir la facture et l'attestation de conformité"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement est de 60 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Cumul de primes pour rénovation complète",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire d'une maison de 1975"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont considérés comme modestes (30000€/an)"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réalise une rénovation complète:"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande toutes les primes disponibles"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes primes totales seront:"
+        },
+        {
+          "keyword": "And",
+          "text": "le total des primes sera 10310€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audit énergétique préalable est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Bonus pour performance énergétique exceptionnelle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma maison atteint le label PEB A après rénovation"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai réalisé un bouquet de travaux complet"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'amélioration énergétique est de plus de 50%"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le bonus performance"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois un bonus de 25% sur toutes mes primes"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois fournir les certificats PEB avant/après"
+        },
+        {
+          "keyword": "And",
+          "text": "un test d'étanchéité à l'air est requis"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Prime véhicule électrique entreprise",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une PME"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'achète 3 véhicules électriques utilitaires"
+        },
+        {
+          "keyword": "And",
+          "text": "que chaque véhicule coûte 45000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime véhicule électrique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois 5000€ par véhicule"
+        },
+        {
+          "keyword": "And",
+          "text": "le total de la prime sera 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois garder les véhicules minimum 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "installer des bornes de recharge est obligatoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Refus pour travaux non conformes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai installé des panneaux solaires moi-même"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de certification RESCERT"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'installation n'est pas aux normes"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la prime"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande est refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"installation non conforme - pas de certification\""
+        },
+        {
+          "keyword": "And",
+          "text": "je peux régulariser et redemander dans 6 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Calcul prime isolation selon revenus et surface",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus sont <revenus>€/an"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'isole <surface> m² de <type>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma prime"
+        },
+        {
+          "keyword": "Then",
+          "text": "la prime sera de <prime>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "revenus",
+            "surface",
+            "type",
+            "prime"
+          ],
+          "rows": [
+            {
+              "values": {
+                "revenus": "25000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "4000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "25000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "5000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "45000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "2000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "45000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "2500"
+              }
+            },
+            {
+              "values": {
+                "revenus": "70000",
+                "surface": "100",
+                "type": "toiture",
+                "prime": "2000"
+              }
+            },
+            {
+              "values": {
+                "revenus": "70000",
+                "surface": "100",
+                "type": "murs",
+                "prime": "2500"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

@@ -1,0 +1,485 @@
+{
+  "id": "benefits-cong-maladie-et-indemnit-s-d-incapacit-de-travail",
+  "name": "Congé Maladie et Indemnités d'Incapacité de Travail",
+  "description": "En tant que travailleur en incapacité de travail Je veux comprendre mes droits aux indemnités maladie Afin de maintenir un revenu pendant mon incapacité",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les indemnités maladie INAMI 2024 sont:"
+      },
+      {
+        "text": "Et que les taux d'invalidité sont:"
+      },
+      {
+        "text": "Et que les conditions pour indépendants diffèrent:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Employé avec grippe de courte durée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis employé à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut est de 3000€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis malade pendant 5 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je fournis un certificat médical"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon employeur paie le salaire garanti:"
+        },
+        {
+          "keyword": "And",
+          "text": "je garde mon salaire complet"
+        },
+        {
+          "keyword": "And",
+          "text": "pas d'intervention mutuelle nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois envoyer le certificat dans les 48h"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Ouvrier avec accident non-professionnel (2 mois)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis ouvrier"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut est de 2500€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un accident domestique"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis en incapacité 60 jours"
+        },
+        {
+          "keyword": "Then",
+          "text": "la couverture est:"
+        },
+        {
+          "keyword": "And",
+          "text": "mon indemnité mutuelle = 60% × (2500/26) = 57.69€/jour"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Travailleur avec burn-out longue durée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je souffre d'un burn-out diagnostiqué"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en incapacité depuis 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une famille à charge"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire était de 3500€/mois"
+        },
+        {
+          "keyword": "When",
+          "text": "mon incapacité continue"
+        },
+        {
+          "keyword": "Then",
+          "text": "en incapacité primaire (mois 1-12):"
+        },
+        {
+          "keyword": "And",
+          "text": "après 1 an, je passe en invalidité:"
+        },
+        {
+          "keyword": "And",
+          "text": "possibilité de reprise progressive"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Indépendant avec maladie de 3 semaines",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 30000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis malade 21 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande les indemnités"
+        },
+        {
+          "keyword": "Then",
+          "text": "le calcul est:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir payé mes cotisations sociales"
+        },
+        {
+          "keyword": "And",
+          "text": "certificat médical obligatoire dès jour 1"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Femme enceinte avec complications",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis enceinte de 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des complications médicales"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon médecin prescrit repos complet"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis mise en incapacité"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois les indemnités maladie normales"
+        },
+        {
+          "keyword": "And",
+          "text": "protection contre licenciement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Chômeur tombant malade",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis chômeur indemnisé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon allocation est de 1200€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je tombe malade"
+        },
+        {
+          "keyword": "When",
+          "text": "je fournis certificat médical à mutuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes indemnités maladie sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "suspension des contrôles ONEM/FOREM"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Reprise progressive du travail (mi-temps médical)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en invalidité depuis 8 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon médecin autorise reprise progressive"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reprends à 50%"
+        },
+        {
+          "keyword": "When",
+          "text": "je travaille mi-temps thérapeutique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je cumule:"
+        },
+        {
+          "keyword": "And",
+          "text": "autorisation médecin-conseil requise"
+        },
+        {
+          "keyword": "And",
+          "text": "réévaluation tous les 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "durée maximale selon pathologie"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Contrôle médical et obligations",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en congé maladie"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter ces obligations:"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas de non-respect:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul indemnité selon durée et statut",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <statut>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire/revenu est <revenu>€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis malade <duree> jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma situation est <situation>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes indemnités"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon indemnité journalière est <indemnite>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "statut",
+            "revenu",
+            "duree",
+            "situation",
+            "indemnite"
+          ],
+          "rows": [
+            {
+              "values": {
+                "statut": "salarié",
+                "revenu": "2500",
+                "duree": "5",
+                "situation": "isolé",
+                "indemnite": "96.15"
+              }
+            },
+            {
+              "values": {
+                "statut": "salarié",
+                "revenu": "2500",
+                "duree": "45",
+                "situation": "isolé",
+                "indemnite": "57.69"
+              }
+            },
+            {
+              "values": {
+                "statut": "salarié",
+                "revenu": "4000",
+                "duree": "400",
+                "situation": "famille",
+                "indemnite": "114.41"
+              }
+            },
+            {
+              "values": {
+                "statut": "indépendant",
+                "revenu": "2000",
+                "duree": "5",
+                "situation": "isolé",
+                "indemnite": "0.00"
+              }
+            },
+            {
+              "values": {
+                "statut": "indépendant",
+                "revenu": "2000",
+                "duree": "20",
+                "situation": "isolé",
+                "indemnite": "38.44"
+              }
+            },
+            {
+              "values": {
+                "statut": "chômeur",
+                "revenu": "1100",
+                "duree": "30",
+                "situation": "isolé",
+                "indemnite": "60.56"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Accident du travail vs maladie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un accident"
+        },
+        {
+          "keyword": "When",
+          "text": "l'origine est déterminée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les indemnités diffèrent:"
+        },
+        {
+          "keyword": "And",
+          "text": "procédures de déclaration différentes"
+        },
+        {
+          "keyword": "And",
+          "text": "droits complémentaires selon le cas"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Épuisement des droits et CPAS",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes droits mutuelle sont épuisés"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas retrouvé capacité de travail"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai plus de ressources"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'adresse au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux demander:"
+        },
+        {
+          "keyword": "And",
+          "text": "enquête sociale approfondie"
+        },
+        {
+          "keyword": "And",
+          "text": "coordination avec médecin-conseil"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Fin de contrat pendant maladie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon CDD se termine pendant ma maladie"
+        },
+        {
+          "keyword": "When",
+          "text": "mon contrat prend fin"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes droits sont:"
+        },
+        {
+          "keyword": "And",
+          "text": "passage automatique en chômage-maladie"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.193Z"
+}

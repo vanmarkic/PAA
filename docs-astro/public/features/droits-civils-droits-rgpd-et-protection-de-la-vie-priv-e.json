@@ -1,0 +1,368 @@
+{
+  "id": "droits-civils-droits-rgpd-et-protection-de-la-vie-priv-e",
+  "name": "Droits RGPD et Protection de la Vie Privée",
+  "description": "En tant que citoyen concerné par le traitement de données personnelles Je veux exercer mes droits RGPD Afin de contrôler l'utilisation de mes données personnelles",
+  "category": "droits-civils",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les délais RGPD sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'accès aux données personnelles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis client d'une entreprise depuis 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'entreprise traite mes données personnelles"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'accès à mes données via le DPO"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir:"
+        },
+        {
+          "keyword": "And",
+          "text": "la première copie devrait être gratuite"
+        },
+        {
+          "keyword": "And",
+          "text": "la réponse devrait arriver dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander le format électronique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Droit à l'effacement (droit à l'oubli)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un compte sur un réseau social"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'utilise plus ce service"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y a pas d'obligation légale de conservation"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'effacement complet de mes données"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'entreprise devrait:"
+        },
+        {
+          "keyword": "And",
+          "text": "confirmer l'effacement dans les 30 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Rectification de données incorrectes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes données sont incorrectes dans une base de données"
+        },
+        {
+          "keyword": "And",
+          "text": "que je peux prouver l'erreur"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la rectification"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entreprise devrait rectifier dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "informer les destinataires des données"
+        },
+        {
+          "keyword": "And",
+          "text": "me confirmer la rectification"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Opposition au marketing direct",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je reçois des emails marketing"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas donné mon consentement explicite"
+        },
+        {
+          "keyword": "When",
+          "text": "je m'oppose au traitement pour marketing direct"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'opposition devrait être immédiate"
+        },
+        {
+          "keyword": "And",
+          "text": "gratuite"
+        },
+        {
+          "keyword": "And",
+          "text": "définitive"
+        },
+        {
+          "keyword": "And",
+          "text": "l'entreprise ne peut plus me contacter pour du marketing"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Demande de portabilité des données",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai fourni des données à un service"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux changer de fournisseur"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la portabilité de mes données"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir:"
+        },
+        {
+          "keyword": "And",
+          "text": "uniquement les données que j'ai fournies"
+        },
+        {
+          "keyword": "And",
+          "text": "dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander le transfert direct au nouveau responsable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Notification de violation de données",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une entreprise a subi une fuite de données"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes données personnelles sont concernées"
+        },
+        {
+          "keyword": "And",
+          "text": "que le risque pour mes droits est élevé"
+        },
+        {
+          "keyword": "When",
+          "text": "la violation est découverte"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'entreprise devrait:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Accès aux images de vidéosurveillance",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été filmé dans un lieu sous vidéosurveillance"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'était il y a 15 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'accès aux images me concernant"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de conservation est généralement de 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "l'accès peut être refusé si:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Copie du dossier médical",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été patient dans un hôpital"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit à mon dossier médical"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une copie de mon dossier"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais recevoir:"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de 15 jours maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "le coût de copie est plafonné à 25€"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux consulter gratuitement sur place"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Exercice des droits selon le responsable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le responsable du traitement est <type>"
+        },
+        {
+          "keyword": "When",
+          "text": "j'exerce mon droit de <droit>"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai de réponse est <delai> jours"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure est <procedure>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type",
+            "droit",
+            "delai",
+            "procedure"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type": "entreprise",
+                "droit": "accès",
+                "delai": "30",
+                "procedure": "via DPO ou formulaire"
+              }
+            },
+            {
+              "values": {
+                "type": "administration",
+                "droit": "accès",
+                "delai": "30",
+                "procedure": "via guichet ou courrier"
+              }
+            },
+            {
+              "values": {
+                "type": "hôpital",
+                "droit": "accès",
+                "delai": "15",
+                "procedure": "service médiation"
+              }
+            },
+            {
+              "values": {
+                "type": "école",
+                "droit": "rectification",
+                "delai": "30",
+                "procedure": "via direction"
+              }
+            },
+            {
+              "values": {
+                "type": "police",
+                "droit": "accès",
+                "delai": "30",
+                "procedure": "via COC/COL"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.207Z"
+}

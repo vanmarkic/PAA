@@ -1,0 +1,132 @@
+{
+  "id": "propriete-intellectuelle-recherche-d-ant-riorit-s",
+  "name": "Recherche d'antériorités",
+  "description": "En tant qu'innovateur ou entreprise Je veux effectuer des recherches d'antériorités Afin d'évaluer la brevetabilité ou la disponibilité d'une marque",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les bases de données sont accessibles"
+      },
+      {
+        "text": "Et que les recherches peuvent être faites en ligne"
+      },
+      {
+        "text": "Et qu'une recherche professionnelle coûte 500-2000€"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Recherche de brevets pour liberté d'exploitation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je développe un nouveau produit"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux éviter la contrefaçon"
+        },
+        {
+          "keyword": "When",
+          "text": "j'effectue une recherche FTO (Freedom to Operate)"
+        },
+        {
+          "keyword": "Then",
+          "text": "je consulte Espacenet et Google Patents"
+        },
+        {
+          "keyword": "And",
+          "text": "j'analyse les brevets en vigueur"
+        },
+        {
+          "keyword": "And",
+          "text": "j'identifie les risques potentiels"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux adapter ma conception si nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Recherche de marques similaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déposer la marque \"ECOTEC\""
+        },
+        {
+          "keyword": "And",
+          "text": "que je dois vérifier sa disponibilité"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais une recherche d'antériorités"
+        },
+        {
+          "keyword": "Then",
+          "text": "je vérifie TMview et les registres nationaux"
+        },
+        {
+          "keyword": "And",
+          "text": "je cherche les marques identiques et similaires"
+        },
+        {
+          "keyword": "And",
+          "text": "j'évalue le risque de confusion"
+        },
+        {
+          "keyword": "And",
+          "text": "je vérifie aussi les noms commerciaux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recherche de dessins et modèles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai créé un nouveau design"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux vérifier sa nouveauté"
+        },
+        {
+          "keyword": "When",
+          "text": "j'effectue une recherche"
+        },
+        {
+          "keyword": "Then",
+          "text": "je consulte DesignView"
+        },
+        {
+          "keyword": "And",
+          "text": "les catalogues commerciaux"
+        },
+        {
+          "keyword": "And",
+          "text": "les salons professionnels antérieurs"
+        },
+        {
+          "keyword": "And",
+          "text": "j'évalue le caractère individuel"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

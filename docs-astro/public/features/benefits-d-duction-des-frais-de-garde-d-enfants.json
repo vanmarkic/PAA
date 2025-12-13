@@ -1,0 +1,528 @@
+{
+  "id": "benefits-d-duction-des-frais-de-garde-d-enfants",
+  "name": "Déduction des frais de garde d'enfants",
+  "description": "En tant que parent contribuable Je veux déduire mes frais de garde d'enfants Afin de réduire mon impôt sur le revenu",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres fiscaux 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Parent avec frais de garde éligibles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent salarié"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 1 enfant de 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant fréquente une crèche agréée"
+        },
+        {
+          "keyword": "And",
+          "text": "que les frais de garde sont de 15€ par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant a été gardé 200 jours en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant déductible devrait être 3000€ (15€ × 200 jours)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être 1350€ (45% de 3000€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais indiquer 3000€ au code 1384-71"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Frais de garde dépassant le plafond journalier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent salarié"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 1 enfant de 6 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant fréquente une garderie privée agréée"
+        },
+        {
+          "keyword": "And",
+          "text": "que les frais de garde sont de 25€ par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant a été gardé 100 jours en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant déductible devrait être limité à 1640€ (16.40€ × 100 jours)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être 738€ (45% de 1640€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais indiquer 1640€ au code 1384-71"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Parent isolé avec revenus modestes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont inférieurs à 18363€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 1 enfant de 4 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant fréquente une crèche communale"
+        },
+        {
+          "keyword": "And",
+          "text": "que les frais de garde sont de 10€ par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant a été gardé 220 jours en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant déductible devrait être 2200€ (10€ × 220 jours)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être 1650€ (75% de 2200€)"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais bénéficier du taux majoré de 75%"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Enfant de moins de 3 ans - Choix entre avantages",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant né le 15 mars 2022"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 1500€ de frais de garde en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit à la majoration pour enfant de moins de 3 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je compare les deux avantages fiscaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois choisir entre:"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas cumuler les deux avantages"
+        },
+        {
+          "keyword": "And",
+          "text": "le système devrait recommander la majoration enfant < 3 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Enfant handicapé de plus de 14 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant de 16 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant a un handicap reconnu à 66%"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant fréquente un centre spécialisé"
+        },
+        {
+          "keyword": "And",
+          "text": "que les frais de garde sont de 20€ par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant a été gardé 150 jours en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible car l'âge limite est 21 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant déductible devrait être 2460€ (16.40€ × 150 jours)"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être 1107€ (45% de 2460€)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Garde partagée - Parents séparés",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis divorcé avec garde alternée"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon ex-conjoint et moi partageons la garde à 50/50"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 2000€ de frais de garde en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon ex-conjoint a payé 1800€ de frais de garde en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déclarons nos frais de garde"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux déduire 2000€ sur ma déclaration"
+        },
+        {
+          "keyword": "And",
+          "text": "mon ex-conjoint peut déduire 1800€ sur sa déclaration"
+        },
+        {
+          "keyword": "And",
+          "text": "chacun bénéficie de la réduction selon ses propres frais"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Camps de vacances et stages",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 2 enfants de 8 et 10 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes enfants ont participé à:"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant déductible devrait être:"
+        },
+        {
+          "keyword": "And",
+          "text": "le total déductible devrait être 328€"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être 147.60€ (45% de 328€)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Organisme non agréé - Pas de déduction",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant de 7 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon enfant est gardé par une baby-sitter non déclarée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie 2000€ de frais de garde en 2024"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la déduction"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"organisme de garde non agréé\""
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux déduire aucun montant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Attestation manquante",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai payé 3000€ de frais de garde en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'organisme de garde n'a pas fourni d'attestation fiscale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas le numéro d'agrément de l'organisme"
+        },
+        {
+          "keyword": "When",
+          "text": "je tente de déclarer mes frais"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne peux pas bénéficier de la déduction"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"attestation fiscale obligatoire manquante\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Calcul de déduction selon différents profils",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation_familiale>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <nb_enfants> enfant(s)"
+        },
+        {
+          "keyword": "And",
+          "text": "que les frais sont de <frais_jour>€ par jour"
+        },
+        {
+          "keyword": "And",
+          "text": "que la garde a duré <jours> jours"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant déductible devrait être <montant_deduit>€"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction d'impôt devrait être <reduction>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation_familiale",
+            "nb_enfants",
+            "frais_jour",
+            "jours",
+            "montant_deduit",
+            "reduction"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation_familiale": "couple marié",
+                "nb_enfants": "1",
+                "frais_jour": "10",
+                "jours": "200",
+                "montant_deduit": "2000",
+                "reduction": "900"
+              }
+            },
+            {
+              "values": {
+                "situation_familiale": "couple marié",
+                "nb_enfants": "2",
+                "frais_jour": "15",
+                "jours": "150",
+                "montant_deduit": "2250",
+                "reduction": "1012.50"
+              }
+            },
+            {
+              "values": {
+                "situation_familiale": "parent isolé",
+                "nb_enfants": "1",
+                "frais_jour": "8",
+                "jours": "220",
+                "montant_deduit": "1760",
+                "reduction": "1320"
+              }
+            },
+            {
+              "values": {
+                "situation_familiale": "parent isolé",
+                "nb_enfants": "3",
+                "frais_jour": "12",
+                "jours": "180",
+                "montant_deduit": "2160",
+                "reduction": "1620"
+              }
+            },
+            {
+              "values": {
+                "situation_familiale": "couple cohabitant",
+                "nb_enfants": "1",
+                "frais_jour": "20",
+                "jours": "100",
+                "montant_deduit": "1640",
+                "reduction": "738"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-11",
+      "name": "Documentation et justificatifs requis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déduire des frais de garde"
+        },
+        {
+          "keyword": "When",
+          "text": "je prépare ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois fournir:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois conserver les preuves de paiement pendant 7 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "l'organisme doit être situé dans l'Espace Économique Européen"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Comparaison régionale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les règles fiscales sont fédérales"
+        },
+        {
+          "keyword": "When",
+          "text": "je compare les déductions entre régions"
+        },
+        {
+          "keyword": "Then",
+          "text": "la déduction frais de garde s'applique identiquement en:"
+        },
+        {
+          "keyword": "And",
+          "text": "seules les majorations régionales peuvent différer"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.196Z"
+}

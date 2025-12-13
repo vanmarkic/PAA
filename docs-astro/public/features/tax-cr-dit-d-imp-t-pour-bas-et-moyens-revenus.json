@@ -1,0 +1,528 @@
+{
+  "id": "tax-cr-dit-d-imp-t-pour-bas-et-moyens-revenus",
+  "name": "Crédit d'impôt pour bas et moyens revenus",
+  "description": "En tant que contribuable à revenus modestes Je veux bénéficier du crédit d'impôt Afin de réduire ma charge fiscale ou recevoir un remboursement",
+  "category": "tax",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres du crédit d'impôt 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Travailleur isolé bas revenus avec crédit remboursable",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis travailleur isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus professionnels nets sont de 12000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 500€ de précompte professionnel"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon impôt calculé est de 200€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais avoir droit au crédit d'impôt de 320€"
+        },
+        {
+          "keyword": "And",
+          "text": "mon impôt final devrait être 0€"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir un remboursement de 620€ (500€ + 120€)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Couple avec enfants - Crédit d'impôt familial",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes un couple marié"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus communs sont de 25000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons 3 enfants à charge"
+        },
+        {
+          "keyword": "And",
+          "text": "que notre impôt calculé est de 2000€"
+        },
+        {
+          "keyword": "When",
+          "text": "nous calculons notre crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devrions bénéficier de:"
+        },
+        {
+          "keyword": "And",
+          "text": "notre impôt final devrait être 0€"
+        },
+        {
+          "keyword": "And",
+          "text": "nous devrions recevoir un remboursement de 20€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Bonus à l'emploi - Bas salaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis salarié"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon salaire brut mensuel est de 1800€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit au bonus emploi social"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon bonus emploi fiscal"
+        },
+        {
+          "keyword": "Then",
+          "text": "le bonus emploi devrait être environ 63€ par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le crédit d'impôt annuel devrait être 756€"
+        },
+        {
+          "keyword": "And",
+          "text": "ce montant réduit directement mon précompte professionnel"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Pensionné avec revenus modestes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis pensionné isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension annuelle est de 14000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 67 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 800€ de précompte"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais bénéficier du crédit d'impôt de 320€"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux aussi bénéficier de la quotité exemptée majorée"
+        },
+        {
+          "keyword": "And",
+          "text": "mon impôt final devrait être réduit significativement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Indépendant avec faibles revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus nets imposables sont de 10000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 1200€ de versements anticipés"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon impôt calculé est de 900€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais avoir droit au crédit d'impôt de 320€"
+        },
+        {
+          "keyword": "And",
+          "text": "mon impôt final devrait être 580€"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir un remboursement de 620€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Parent isolé avec bonus garde d'enfants",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de 18000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 enfants de moins de 12 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des frais de garde déductibles"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes avantages fiscaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie de:"
+        },
+        {
+          "keyword": "And",
+          "text": "le total des crédits devrait être 1700€"
+        },
+        {
+          "keyword": "And",
+          "text": "ces crédits sont remboursables si supérieurs à l'impôt"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Calcul dégressif pour revenus moyens",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de 13000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis dans la tranche dégressive du crédit"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "le crédit est calculé proportionnellement:"
+        },
+        {
+          "keyword": "And",
+          "text": "mon crédit d'impôt devrait être environ 103€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Cumul crédit d'impôt et autres réductions",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai droit au crédit d'impôt de 320€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai aussi des déductions pour:"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon impôt final"
+        },
+        {
+          "keyword": "Then",
+          "text": "les déductions s'appliquent d'abord sur la base imposable"
+        },
+        {
+          "keyword": "And",
+          "text": "le crédit non utilisé est remboursable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Crédit d'impôt selon profil et revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <situation>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus sont de <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <enfants> enfants à charge"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "le crédit de base devrait être <credit_base>€"
+        },
+        {
+          "keyword": "And",
+          "text": "le crédit enfants devrait être <credit_enfants>€"
+        },
+        {
+          "keyword": "And",
+          "text": "le crédit total devrait être <credit_total>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "situation",
+            "revenus",
+            "enfants",
+            "credit_base",
+            "credit_enfants",
+            "credit_total"
+          ],
+          "rows": [
+            {
+              "values": {
+                "situation": "isolé",
+                "revenus": "6000",
+                "enfants": "0",
+                "credit_base": "320",
+                "credit_enfants": "0",
+                "credit_total": "320"
+              }
+            },
+            {
+              "values": {
+                "situation": "isolé",
+                "revenus": "12000",
+                "enfants": "1",
+                "credit_base": "320",
+                "credit_enfants": "460",
+                "credit_total": "780"
+              }
+            },
+            {
+              "values": {
+                "situation": "couple",
+                "revenus": "13000",
+                "enfants": "0",
+                "credit_base": "640",
+                "credit_enfants": "0",
+                "credit_total": "640"
+              }
+            },
+            {
+              "values": {
+                "situation": "couple",
+                "revenus": "20000",
+                "enfants": "2",
+                "credit_base": "640",
+                "credit_enfants": "920",
+                "credit_total": "1560"
+              }
+            },
+            {
+              "values": {
+                "situation": "parent isolé",
+                "revenus": "15000",
+                "enfants": "2",
+                "credit_base": "320",
+                "credit_enfants": "920",
+                "credit_total": "1700"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Crédit d'impôt pour activité professionnelle complémentaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un emploi principal"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai aussi une activité complémentaire (économie collaborative)"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus de l'activité complémentaire sont de 3000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité au crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux bénéficier d'une exonération jusqu'à 6540€"
+        },
+        {
+          "keyword": "And",
+          "text": "les premiers 3000€ sont exonérés à 100%"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mon droit au crédit d'impôt normal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Transition chômage vers emploi",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'étais au chômage pendant 6 mois en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai trouvé un emploi en juillet 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus totaux sont de 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "7000€ de salaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon crédit d'impôt"
+        },
+        {
+          "keyword": "Then",
+          "text": "je bénéficie du crédit pour bas revenus"
+        },
+        {
+          "keyword": "And",
+          "text": "le bonus emploi s'applique sur mes mois travaillés"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration calcule automatiquement l'optimisation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Documentation et codes déclaration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux demander le crédit d'impôt"
+        },
+        {
+          "keyword": "When",
+          "text": "je remplis ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "le crédit d'impôt est calculé automatiquement"
+        },
+        {
+          "keyword": "And",
+          "text": "aucun code spécifique n'est nécessaire"
+        },
+        {
+          "keyword": "But",
+          "text": "je dois déclarer correctement:"
+        },
+        {
+          "keyword": "And",
+          "text": "le remboursement est automatique si dû"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.218Z"
+}

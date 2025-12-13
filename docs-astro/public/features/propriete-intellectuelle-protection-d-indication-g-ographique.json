@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-protection-d-indication-g-ographique",
+  "name": "Protection d'indication géographique",
+  "description": "En tant que groupement de producteurs Je veux protéger une appellation d'origine Afin de valoriser notre savoir-faire régional",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les AOP/IGP sont protégées au niveau européen"
+      },
+      {
+        "text": "Et que la demande passe par l'autorité nationale"
+      },
+      {
+        "text": "Et que la protection est illimitée"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande d'AOP pour produit agricole",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous produisons le \"Fromage de Herve\""
+        },
+        {
+          "keyword": "And",
+          "text": "que le lien au terroir est établi"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un cahier des charges strict"
+        },
+        {
+          "keyword": "When",
+          "text": "nous déposons la demande d'AOP"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'AFSCA examine la demande"
+        },
+        {
+          "keyword": "And",
+          "text": "une enquête publique est organisée"
+        },
+        {
+          "keyword": "And",
+          "text": "la Commission européenne valide"
+        },
+        {
+          "keyword": "And",
+          "text": "l'AOP est protégée dans toute l'UE"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Opposition à une demande d'IGP",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une demande d'IGP est publiée"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle porte atteinte à nos droits"
+        },
+        {
+          "keyword": "When",
+          "text": "nous formons opposition dans les 3 mois"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous devons justifier notre intérêt légitime"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer le préjudice"
+        },
+        {
+          "keyword": "And",
+          "text": "proposer des modifications"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.213Z"
+}

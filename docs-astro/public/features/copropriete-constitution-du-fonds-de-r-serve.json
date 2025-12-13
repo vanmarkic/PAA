@@ -1,0 +1,98 @@
+{
+  "id": "copropriete-constitution-du-fonds-de-r-serve",
+  "name": "Constitution du Fonds de Réserve",
+  "description": "En tant que copropriété Je veux constituer un fonds de réserve Afin de financer les gros travaux futurs",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la loi impose un fonds de réserve"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Calcul du montant obligatoire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le budget annuel est de 50000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le fonds de réserve actuel est de 2000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule le minimum légal"
+        },
+        {
+          "keyword": "Then",
+          "text": "le fonds doit atteindre 5% du budget"
+        },
+        {
+          "keyword": "And",
+          "text": "une provision de 500€ est nécessaire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Utilisation du fonds de réserve",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le fonds contient 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que des travaux de toiture coûtent 12000€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote aux 2/3 l'utilisation du fonds"
+        },
+        {
+          "keyword": "Then",
+          "text": "12000€ peuvent être utilisés"
+        },
+        {
+          "keyword": "And",
+          "text": "le fonds doit être reconstitué progressivement"
+        },
+        {
+          "keyword": "And",
+          "text": "un plan sur 5 ans maximum est établi"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Placement du fonds de réserve",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le fonds atteint 20000€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG décide du placement"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options autorisées sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

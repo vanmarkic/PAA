@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-division-d-un-lot",
+  "name": "Division d'un Lot",
+  "description": "En tant que copropriétaire Je veux diviser mon lot Afin de créer plusieurs unités distinctes",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un copropriétaire veut diviser son bien"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Division appartement en deux studios",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un appartement de 100m² et 120 millièmes"
+        },
+        {
+          "keyword": "When",
+          "text": "le projet est soumis à l'AG"
+        },
+        {
+          "keyword": "Then",
+          "text": "il nécessite:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Vérification conformité urbanisme",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une division est envisagée"
+        },
+        {
+          "keyword": "When",
+          "text": "les autorisations sont vérifiées"
+        },
+        {
+          "keyword": "Then",
+          "text": "sont requis:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recalcul des millièmes",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la division crée 2 lots"
+        },
+        {
+          "keyword": "When",
+          "text": "les millièmes sont recalculés"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition devient:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'acte de base est modifié"
+        },
+        {
+          "keyword": "And",
+          "text": "les charges sont ajustées"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

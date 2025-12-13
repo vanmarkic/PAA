@@ -1,0 +1,96 @@
+{
+  "id": "propriete-intellectuelle-gestion-de-portefeuille-ip",
+  "name": "Gestion de portefeuille IP",
+  "description": "En tant qu'entreprise avec multiples droits IP Je veux gérer efficacement mon portefeuille Afin d'optimiser la valeur et réduire les coûts",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un portefeuille IP nécessite gestion active"
+      },
+      {
+        "text": "Et que les coûts annuels peuvent être élevés"
+      },
+      {
+        "text": "Et que la stratégie doit s'aligner sur le business"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Revue annuelle du portefeuille",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 50 brevets et 30 marques"
+        },
+        {
+          "keyword": "And",
+          "text": "que les coûts annuels dépassent 100000€"
+        },
+        {
+          "keyword": "When",
+          "text": "j'effectue la revue annuelle"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'évalue chaque droit selon sa valeur business"
+        },
+        {
+          "keyword": "And",
+          "text": "j'abandonne les droits non stratégiques"
+        },
+        {
+          "keyword": "And",
+          "text": "je priorise les renouvellements"
+        },
+        {
+          "keyword": "And",
+          "text": "j'identifie les opportunités de licensing"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Système de gestion des échéances",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai des centaines d'échéances"
+        },
+        {
+          "keyword": "And",
+          "text": "que les oublis peuvent être fatals"
+        },
+        {
+          "keyword": "When",
+          "text": "j'implémente un système de gestion"
+        },
+        {
+          "keyword": "Then",
+          "text": "toutes les dates sont trackées"
+        },
+        {
+          "keyword": "And",
+          "text": "des alertes sont envoyées 3 mois avant"
+        },
+        {
+          "keyword": "And",
+          "text": "les décisions sont documentées"
+        },
+        {
+          "keyword": "And",
+          "text": "les paiements sont automatisés si possible"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.212Z"
+}

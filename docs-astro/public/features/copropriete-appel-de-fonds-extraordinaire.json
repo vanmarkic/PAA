@@ -1,0 +1,98 @@
+{
+  "id": "copropriete-appel-de-fonds-extraordinaire",
+  "name": "Appel de Fonds Extraordinaire",
+  "description": "En tant que syndic Je veux lancer un appel de fonds extraordinaire Afin de financer des travaux exceptionnels",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que des travaux extraordinaires sont votés"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Appel pour travaux de toiture",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les travaux coûtent 100000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'AG les a votés aux 2/3"
+        },
+        {
+          "keyword": "When",
+          "text": "je lance l'appel de fonds"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition est:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'échéancier peut être:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Copropriétaire demandant étalement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire doit 15000€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il demande un étalement"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic examine la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut accorder:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Utilisation fonds de réserve partielle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le fonds de réserve contient 30000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que les travaux coûtent 100000€"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG décide l'utilisation du fonds"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'appel extraordinaire est de 70000€"
+        },
+        {
+          "keyword": "And",
+          "text": "le fonds doit être reconstitué sur 5 ans"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.202Z"
+}

@@ -1,0 +1,679 @@
+{
+  "id": "benefits-cong-parental",
+  "name": "Congé Parental",
+  "description": "En tant que parent travailleur Je veux connaître mes droits au congé parental Afin de m'occuper de mon enfant tout en préservant mon emploi",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le congé parental en Belgique offre ces formules:"
+      },
+      {
+        "text": "Et que les allocations ONEM 2024 sont:"
+      },
+      {
+        "text": "Et que l'enfant doit avoir moins de 12 ans (21 ans si handicap)"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Parent temps plein demandant congé complet de 4 mois",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai jamais pris de congé parental"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental temps plein"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 4 mois de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation mensuelle sera de 879.15€"
+        },
+        {
+          "keyword": "And",
+          "text": "mon contrat de travail est suspendu mais protégé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Parent souhaitant réduire à mi-temps",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental mi-temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 8 mois de réduction"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation mensuelle sera de 439.58€"
+        },
+        {
+          "keyword": "And",
+          "text": "je travaillerai 50% de mon horaire normal"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Parent isolé avec majoration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai la garde exclusive de mon enfant de 4 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental temps plein"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à une majoration de l'allocation"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation mensuelle sera supérieure à 879.15€"
+        },
+        {
+          "keyword": "And",
+          "text": "la majoration compense partiellement la situation monoparentale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Congé 1/5 temps sur 20 mois",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps plein (5 jours/semaine)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 7 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental 1/5 temps"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 20 mois de réduction"
+        },
+        {
+          "keyword": "And",
+          "text": "je travaillerai 4 jours par semaine"
+        },
+        {
+          "keyword": "And",
+          "text": "l'allocation mensuelle sera de 148.74€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Parent d'enfant handicapé jusqu'à 21 ans",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant handicapé de 15 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que le handicap est reconnu à 66%"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible jusqu'aux 21 ans de l'enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit aux mêmes formules de congé"
+        },
+        {
+          "keyword": "And",
+          "text": "les allocations sont identiques"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux bénéficier d'aménagements supplémentaires"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Fractionnement du congé parental",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit à 4 mois de congé temps plein"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un fractionnement"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux prendre le congé en plusieurs périodes"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque période doit être d'au moins 1 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "avec l'accord de l'employeur pour le fractionnement"
+        },
+        {
+          "keyword": "And",
+          "text": "le total ne peut excéder 4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Congé parental pour adoption",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai adopté un enfant de 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'adoption est officielle depuis 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les mêmes droits s'appliquent que pour un enfant biologique"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prendre le congé avant les 12 ans de l'enfant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Congé parental corona (mesure temporaire expirée)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant de 8 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite un congé parental corona"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité"
+        },
+        {
+          "keyword": "Then",
+          "text": "cette mesure n'est plus disponible"
+        },
+        {
+          "keyword": "And",
+          "text": "le congé corona était limité à la période COVID"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois utiliser le congé parental classique"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Employé à temps partiel demandant congé parental",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille à temps partiel (24h/semaine)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 4 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai au moins 12 mois d'ancienneté"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes options sont limitées"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas prendre de congé 1/5 temps"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux prendre un congé complet ou mi-temps adapté"
+        },
+        {
+          "keyword": "And",
+          "text": "les allocations sont calculées proportionnellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Protection contre le licenciement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai notifié correctement mon employeur"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis en période de protection"
+        },
+        {
+          "keyword": "Then",
+          "text": "mon employeur ne peut pas me licencier"
+        },
+        {
+          "keyword": "And",
+          "text": "la protection commence à la notification écrite"
+        },
+        {
+          "keyword": "And",
+          "text": "elle se termine 3 mois après la fin du congé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Enfant de 13 ans - non éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un enfant de 13 ans sans handicap"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai jamais pris de congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que je travaille à temps plein"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne suis pas éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"enfant de plus de 12 ans\""
+        },
+        {
+          "keyword": "And",
+          "text": "je dois explorer d'autres formes de crédit-temps"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Travailleur avec moins de 12 mois d'ancienneté",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je travaille depuis 8 mois chez mon employeur"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un enfant de 2 ans"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande un congé parental"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne suis pas encore éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"ancienneté insuffisante (12 mois requis)\""
+        },
+        {
+          "keyword": "And",
+          "text": "je pourrai demander dans 4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Calcul allocation selon formule et situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande un congé parental <formule>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis <situation_familiale>"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon allocation"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'allocation mensuelle brute sera <montant>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "formule",
+            "situation_familiale",
+            "montant"
+          ],
+          "rows": [
+            {
+              "values": {
+                "formule": "temps plein",
+                "situation_familiale": "parent couple",
+                "montant": "879.15"
+              }
+            },
+            {
+              "values": {
+                "formule": "temps plein",
+                "situation_familiale": "parent isolé",
+                "montant": "1000.00"
+              }
+            },
+            {
+              "values": {
+                "formule": "mi-temps",
+                "situation_familiale": "parent couple",
+                "montant": "439.58"
+              }
+            },
+            {
+              "values": {
+                "formule": "mi-temps",
+                "situation_familiale": "parent isolé",
+                "montant": "500.00"
+              }
+            },
+            {
+              "values": {
+                "formule": "1/5 temps",
+                "situation_familiale": "parent couple",
+                "montant": "148.74"
+              }
+            },
+            {
+              "values": {
+                "formule": "1/10 temps",
+                "situation_familiale": "parent couple",
+                "montant": "74.37"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-14",
+      "name": "Procédure de demande de congé parental",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux prendre un congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "que je remplis les conditions"
+        },
+        {
+          "keyword": "When",
+          "text": "j'entame la procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "l'ONEM verse les allocations mensuellement"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-15",
+      "name": "Cumul avec d'autres congés",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis en congé de maternité"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon congé se termine dans 2 semaines"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite enchaîner avec un congé parental"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les possibilités de cumul"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux prendre le congé parental après la maternité"
+        },
+        {
+          "keyword": "And",
+          "text": "les deux congés sont distincts"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois faire une demande séparée pour le congé parental"
+        },
+        {
+          "keyword": "And",
+          "text": "informer mon employeur dans les délais"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-16",
+      "name": "Couple prenant congé parental simultanément",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes deux parents"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons un enfant de 3 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous travaillons tous les deux à temps plein"
+        },
+        {
+          "keyword": "When",
+          "text": "nous demandons un congé parental simultané"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous pouvons tous deux prendre un congé"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque parent a ses propres droits (4 mois temps plein)"
+        },
+        {
+          "keyword": "And",
+          "text": "nous pouvons le prendre en même temps"
+        },
+        {
+          "keyword": "And",
+          "text": "chacun reçoit son allocation ONEM séparément"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.194Z"
+}

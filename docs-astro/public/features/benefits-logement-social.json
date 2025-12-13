@@ -1,584 +1,451 @@
 {
   "id": "benefits-logement-social",
   "name": "Logement Social",
-  "description": "  En tant que personne à revenus modestes\n  Je veux savoir si je peux accéder à un logement social\n  Afin d'avoir un logement abordable et décent",
+  "description": "En tant que personne à revenus modestes Je veux savoir si je peux accéder à un logement social Afin d'avoir un logement abordable et décent",
   "category": "benefits",
   "tags": [],
   "background": {
-    "name": "",
-    "description": "",
     "steps": [
       {
-        "keyword": "Étant donné que",
-        "text": "les plafonds de revenus 2024 pour le logement social sont:",
-        "dataTable": {
-          "headers": [
-            "Région",
-            "Catégorie",
-            "Plafond annuel",
-            "Majoration par enfant"
-          ],
-          "rows": [
-            {
-              "Région": "Bruxelles-Capitale",
-              "Catégorie": "Personne isolée",
-              "Plafond annuel": "Variable",
-              "Majoration par enfant": "2,702.77€"
-            },
-            {
-              "Région": "Bruxelles-Capitale",
-              "Catégorie": "Ménage",
-              "Plafond annuel": "Variable",
-              "Majoration par enfant": "2,702.77€"
-            },
-            {
-              "Région": "Wallonie",
-              "Catégorie": "Personne isolée",
-              "Plafond annuel": "69,800€",
-              "Majoration par enfant": "3,200€"
-            },
-            {
-              "Région": "Wallonie",
-              "Catégorie": "Ménage multiple",
-              "Plafond annuel": "85,100€",
-              "Majoration par enfant": "3,200€"
-            },
-            {
-              "Région": "Flandres 2024",
-              "Catégorie": "Personne isolée",
-              "Plafond annuel": "29,515€",
-              "Majoration par enfant": "2,475€"
-            },
-            {
-              "Région": "Flandres 2024",
-              "Catégorie": "Personne isolée handicapée",
-              "Plafond annuel": "31,987€",
-              "Majoration par enfant": "2,475€"
-            },
-            {
-              "Région": "Flandres 2024",
-              "Catégorie": "Autres cas",
-              "Plafond annuel": "44,270€",
-              "Majoration par enfant": "2,475€"
-            },
-            {
-              "Région": "Flandres 2025",
-              "Catégorie": "Personne isolée",
-              "Plafond annuel": "30,636€",
-              "Majoration par enfant": "2,569€"
-            },
-            {
-              "Région": "Flandres 2025",
-              "Catégorie": "Personne isolée handicapée",
-              "Plafond annuel": "33,202€",
-              "Majoration par enfant": "2,569€"
-            },
-            {
-              "Région": "Flandres 2025",
-              "Catégorie": "Autres cas",
-              "Plafond annuel": "45,952€",
-              "Majoration par enfant": "2,569€"
-            }
-          ]
-        }
+        "text": "Étant donné que les plafonds de revenus 2024 pour le logement social sont:"
       },
       {
-        "keyword": "Et que",
-        "text": "les délais d'attente moyens sont:",
-        "dataTable": {
-          "headers": [
-            "Région",
-            "Type logement",
-            "Délai moyen"
-          ],
-          "rows": [
-            {
-              "Région": "Bruxelles-Capitale",
-              "Type logement": "Studio/1 chambre",
-              "Délai moyen": "11-12 ans"
-            },
-            {
-              "Région": "Bruxelles-Capitale",
-              "Type logement": "2 chambres",
-              "Délai moyen": "8-10 ans"
-            },
-            {
-              "Région": "Wallonie",
-              "Type logement": "Tous types",
-              "Délai moyen": "3-5 ans"
-            },
-            {
-              "Région": "Flandres",
-              "Type logement": "Tous types",
-              "Délai moyen": "2-5 ans"
-            }
-          ]
-        }
+        "text": "Et que les délais d'attente moyens sont:"
       }
     ]
   },
   "scenarios": [
     {
-      "id": "fa95f74b-2b98-49f0-855a-6a17deb49659",
+      "id": "scenario-1",
       "name": "Personne isolée à Bruxelles éligible au logement social",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis une personne isolée"
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside à Bruxelles-Capitale"
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
         },
         {
-          "keyword": "Et que",
-          "text": "mon revenu imposable net est de 20,000€"
+          "keyword": "And",
+          "text": "que mon revenu imposable net est de 20,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "je ne suis pas propriétaire d'un bien immobilier"
+          "keyword": "And",
+          "text": "que je ne suis pas propriétaire d'un bien immobilier"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis inscrit au registre de la population"
+          "keyword": "And",
+          "text": "que je suis inscrit au registre de la population"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux m'inscrire auprès d'une société de logement social"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le délai d'attente estimé est de 11-12 ans pour un studio"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "mon loyer sera calculé selon mes revenus (environ 20-30% des revenus)"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "c7527784-5b2d-42ac-8309-dcdd7881367f",
+      "id": "scenario-2",
       "name": "Famille en Wallonie éligible au logement social",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis en couple avec 3 enfants"
+          "keyword": "Given",
+          "text": "que je suis en couple avec 3 enfants"
         },
         {
-          "keyword": "Et que",
-          "text": "nous résidons en Wallonie"
+          "keyword": "And",
+          "text": "que nous résidons en Wallonie"
         },
         {
-          "keyword": "Et que",
-          "text": "notre revenu imposable annuel est de 45,000€"
+          "keyword": "And",
+          "text": "que notre revenu imposable annuel est de 45,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "nous ne possédons aucun bien immobilier"
+          "keyword": "And",
+          "text": "que nous ne possédons aucun bien immobilier"
         },
         {
-          "keyword": "Et que",
-          "text": "nous sommes inscrits au registre de la population"
+          "keyword": "And",
+          "text": "que nous sommes inscrits au registre de la population"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "nous vérifions notre éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "nous devrions être éligibles"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le plafond de revenus est 85,100€ + (3,200€ × 3) = 94,700€"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "nous pouvons nous inscrire auprès de la société wallonne du logement"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le délai d'attente estimé est de 3-5 ans"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "9f55547d-eb58-4eed-8854-eca7f760b2cb",
+      "id": "scenario-3",
       "name": "Personne handicapée en Flandres avec majoration",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis une personne isolée avec handicap reconnu"
+          "keyword": "Given",
+          "text": "que je suis une personne isolée avec handicap reconnu"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en Flandres"
+          "keyword": "And",
+          "text": "que je réside en Flandres"
         },
         {
-          "keyword": "Et que",
-          "text": "mon revenu imposable 2021 est de 30,000€"
+          "keyword": "And",
+          "text": "que mon revenu imposable 2021 est de 30,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "je ne suis pas propriétaire"
+          "keyword": "And",
+          "text": "que je ne suis pas propriétaire"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai un handicap reconnu à 66%"
+          "keyword": "And",
+          "text": "que j'ai un handicap reconnu à 66%"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le plafond adapté est 31,987€ (2024) ou 33,202€ (2025)"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai une priorité supplémentaire sur la liste d'attente"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le logement proposé sera adapté à mon handicap"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "f80b46a4-8602-4692-a649-e2d9138f9ec4",
+      "id": "scenario-4",
       "name": "Test de patrimoine en Flandres depuis 2024",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis une personne isolée"
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en Flandres"
+          "keyword": "And",
+          "text": "que je réside en Flandres"
         },
         {
-          "keyword": "Et que",
-          "text": "mon revenu imposable est de 25,000€"
+          "keyword": "And",
+          "text": "que mon revenu imposable est de 25,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 35,000€ d'épargne sur mes comptes"
+          "keyword": "And",
+          "text": "que j'ai 35,000€ d'épargne sur mes comptes"
         },
         {
-          "keyword": "Et que",
-          "text": "la limite patrimoniale est 30,636€ (2025)"
+          "keyword": "And",
+          "text": "que la limite patrimoniale est 30,636€ (2025)"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité après janvier 2024"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je ne devrais pas être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif devrait être \"patrimoine mobilier (35,000€) > limite (30,636€)\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "cette règle s'applique uniquement aux nouvelles inscriptions"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "c44feea2-b174-4af4-bca5-3db2c08adf37",
+      "id": "scenario-5",
       "name": "Revenus trop élevés en Wallonie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis une personne isolée"
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en Wallonie"
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
         },
         {
-          "keyword": "Et que",
-          "text": "mon revenu imposable annuel est de 75,000€"
+          "keyword": "And",
+          "text": "que mon revenu imposable annuel est de 75,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "le plafond est 69,800€"
+          "keyword": "And",
+          "text": "que le plafond est 69,800€"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je ne devrais pas être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif devrait être \"revenus (75,000€) > plafond (69,800€)\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je peux vérifier mon éligibilité au logement moyen"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "09851acc-73f5-465f-a8ef-2616ad3cd79b",
+      "id": "scenario-6",
       "name": "Propriétaire non éligible",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je possède un appartement en Belgique"
+          "keyword": "Given",
+          "text": "que je possède un appartement en Belgique"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside à Bruxelles-Capitale"
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
         },
         {
-          "keyword": "Et que",
-          "text": "mes revenus sont modestes (15,000€/an)"
+          "keyword": "And",
+          "text": "que mes revenus sont modestes (15,000€/an)"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je ne devrais pas être éligible"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif devrait être \"propriétaire d'un bien immobilier\""
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'exception existe uniquement si le bien est inhabitable avec certificat"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "01c459a4-ba51-4bfd-bb5f-f1bcfef1a97a",
+      "id": "scenario-7",
       "name": "Famille nombreuse avec priorité en Wallonie",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis parent isolé avec 4 enfants mineurs"
+          "keyword": "Given",
+          "text": "que je suis parent isolé avec 4 enfants mineurs"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en Wallonie"
+          "keyword": "And",
+          "text": "que je réside en Wallonie"
         },
         {
-          "keyword": "Et que",
-          "text": "notre revenu familial est de 35,000€"
+          "keyword": "And",
+          "text": "que notre revenu familial est de 35,000€"
         },
         {
-          "keyword": "Et que",
-          "text": "nous vivons dans un logement insalubre"
+          "keyword": "And",
+          "text": "que nous vivons dans un logement insalubre"
         },
         {
-          "keyword": "Et que",
-          "text": "nous avons un certificat d'insalubrité"
+          "keyword": "And",
+          "text": "que nous avons un certificat d'insalubrité"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "nous vérifions notre éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "nous devrions être éligibles avec priorité"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le plafond adapté est 85,100€ + (3,200€ × 4) = 97,900€"
         },
         {
-          "keyword": "Et",
-          "text": "nous avons des points de priorité supplémentaires pour:",
-          "dataTable": {
-            "headers": [
-              "Critère",
-              "Points"
-            ],
-            "rows": [
-              {
-                "Critère": "Famille monoparentale",
-                "Points": "3"
-              },
-              {
-                "Critère": "4 enfants à charge",
-                "Points": "4"
-              },
-              {
-                "Critère": "Logement insalubre",
-                "Points": "5"
-              }
-            ]
-          }
+          "keyword": "And",
+          "text": "nous avons des points de priorité supplémentaires pour:"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "notre dossier sera traité en priorité"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "c0a1e4c6-a5c8-4c88-b2e9-1249a3bb314c",
+      "id": "scenario-8",
       "name": "Étudiant majeur en Flandres",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis étudiant à temps plein"
+          "keyword": "Given",
+          "text": "que je suis étudiant à temps plein"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai 22 ans"
+          "keyword": "And",
+          "text": "que j'ai 22 ans"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en Flandres"
+          "keyword": "And",
+          "text": "que je réside en Flandres"
         },
         {
-          "keyword": "Et que",
-          "text": "mon revenu est de 8,000€/an (job étudiant)"
+          "keyword": "And",
+          "text": "que mon revenu est de 8,000€/an (job étudiant)"
         },
         {
-          "keyword": "Et que",
-          "text": "mes parents ont des revenus élevés"
+          "keyword": "And",
+          "text": "que mes parents ont des revenus élevés"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je vérifie mon éligibilité au logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "mon éligibilité dépend de ma situation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "si je suis encore à charge de mes parents, leurs revenus comptent"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "si je suis autonome financièrement, seuls mes revenus comptent"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois prouver mon indépendance depuis au moins 1 an"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "da1adec9-d25d-4873-83ec-acdd6a22c756",
+      "id": "scenario-9",
       "name": "Sans-abri avec accompagnement social",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis sans domicile fixe"
+          "keyword": "Given",
+          "text": "que je suis sans domicile fixe"
         },
         {
-          "keyword": "Et que",
-          "text": "je suis accompagné par le CPAS"
+          "keyword": "And",
+          "text": "que je suis accompagné par le CPAS"
         },
         {
-          "keyword": "Et que",
-          "text": "je n'ai aucun revenu"
+          "keyword": "And",
+          "text": "que je n'ai aucun revenu"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside à Bruxelles-Capitale"
+          "keyword": "And",
+          "text": "que je réside à Bruxelles-Capitale"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "le CPAS introduit une demande de logement social"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "je devrais être éligible en urgence"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "j'ai accès au logement de transit"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "la procédure est accélérée via Housing First"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "un accompagnement social est obligatoire"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "0adbd311-1411-46f7-8fa8-da790d39a64d",
+      "id": "scenario-10",
       "name": "Calcul du loyer social selon les revenus",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis locataire d'un logement social"
+          "keyword": "Given",
+          "text": "que je suis locataire d'un logement social"
         },
         {
-          "keyword": "Et que",
-          "text": "mes revenus annuels sont de <revenu>€"
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de <revenu>€"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en <région>"
+          "keyword": "And",
+          "text": "que je réside en <région>"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "mon loyer social est calculé"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "le loyer mensuel sera approximativement <loyer>€"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le calcul suit la formule régionale"
         }
       ],
@@ -593,7 +460,6 @@
           ],
           "rows": [
             {
-              "name": "9ca41ca2-64fc-4582-a255-90ba8fefc08e",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "revenu": "15000",
@@ -601,7 +467,6 @@
               }
             },
             {
-              "name": "369be1f3-4913-4112-9acc-5f67f764018b",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "revenu": "25000",
@@ -609,7 +474,6 @@
               }
             },
             {
-              "name": "225fe7db-5847-4a16-97ec-3692102d18b1",
               "values": {
                 "région": "Wallonie",
                 "revenu": "18000",
@@ -617,7 +481,6 @@
               }
             },
             {
-              "name": "36687169-9bc2-4612-a3df-0e8128f74768",
               "values": {
                 "région": "Wallonie",
                 "revenu": "30000",
@@ -625,7 +488,6 @@
               }
             },
             {
-              "name": "671a2afe-c27e-44fd-9e5b-1c22d6a4846a",
               "values": {
                 "région": "Flandres",
                 "revenu": "20000",
@@ -635,44 +497,43 @@
           ]
         }
       ],
-      "isOutline": true
+      "isOutline": false
     },
     {
-      "id": "beec460e-dbc9-4fbb-a892-32ab43b2f647",
+      "id": "scenario-11",
       "name": "Éligibilité selon région et composition familiale",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis <situation_familiale>"
+          "keyword": "Given",
+          "text": "que je suis <situation_familiale>"
         },
         {
-          "keyword": "Et que",
-          "text": "je réside en <région>"
+          "keyword": "And",
+          "text": "que je réside en <région>"
         },
         {
-          "keyword": "Et que",
-          "text": "le revenu du ménage est de <revenu>€"
+          "keyword": "And",
+          "text": "que le revenu du ménage est de <revenu>€"
         },
         {
-          "keyword": "Et que",
-          "text": "nous avons <enfants> enfant(s) à charge"
+          "keyword": "And",
+          "text": "que nous avons <enfants> enfant(s) à charge"
         },
         {
-          "keyword": "Et que",
-          "text": "<condition_patrimoine>"
+          "keyword": "And",
+          "text": "que <condition_patrimoine>"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "nous vérifions l'éligibilité"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "l'éligibilité devrait être <éligibilité>"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le motif est \"<motif>\""
         }
       ],
@@ -691,7 +552,6 @@
           ],
           "rows": [
             {
-              "name": "ab2fb1ca-397e-4bde-b127-b32317ad8c2a",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "personne isolée",
@@ -703,7 +563,6 @@
               }
             },
             {
-              "name": "46b8fcb5-792c-42ef-8f06-6b6c1bc8f829",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "personne isolée",
@@ -715,7 +574,6 @@
               }
             },
             {
-              "name": "1ba5307d-cbf5-4908-b9a0-035bccce96af",
               "values": {
                 "région": "Wallonie",
                 "situation_familiale": "couple",
@@ -727,7 +585,6 @@
               }
             },
             {
-              "name": "e68a2dfd-9f51-482c-9816-7914e9013cfe",
               "values": {
                 "région": "Flandres 2024",
                 "situation_familiale": "personne isolée",
@@ -739,7 +596,6 @@
               }
             },
             {
-              "name": "26839ee1-feab-4868-b4d2-54edddb3a8ad",
               "values": {
                 "région": "Flandres 2024",
                 "situation_familiale": "famille",
@@ -751,7 +607,6 @@
               }
             },
             {
-              "name": "9f450ec4-b307-40fd-9fd8-fae793c47346",
               "values": {
                 "région": "Flandres 2025",
                 "situation_familiale": "personne isolée",
@@ -763,7 +618,6 @@
               }
             },
             {
-              "name": "1fe8fb5a-c5c8-4650-b5ba-58495390610b",
               "values": {
                 "région": "Bruxelles-Capitale",
                 "situation_familiale": "couple",
@@ -780,134 +634,86 @@
       "isOutline": true
     },
     {
-      "id": "7ba12f30-bb1c-4d9b-a2eb-53464a1e2e50",
+      "id": "scenario-12",
       "name": "Procédure d'inscription et documents requis",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je souhaite m'inscrire pour un logement social"
+          "keyword": "Given",
+          "text": "que je souhaite m'inscrire pour un logement social"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je prépare mon dossier d'inscription"
         },
         {
-          "keyword": "Alors",
-          "text": "je dois fournir les documents suivants:",
-          "dataTable": {
-            "headers": [
-              "Document",
-              "Obligatoire",
-              "Remarque"
-            ],
-            "rows": [
-              {
-                "Document": "Carte d'identité",
-                "Obligatoire": "Oui",
-                "Remarque": "Tous les membres du ménage"
-              },
-              {
-                "Document": "Composition de ménage",
-                "Obligatoire": "Oui",
-                "Remarque": "Datée de moins de 3 mois"
-              },
-              {
-                "Document": "Avertissement-extrait de rôle",
-                "Obligatoire": "Oui",
-                "Remarque": "Année de référence N-3"
-              },
-              {
-                "Document": "Preuve de non-propriété",
-                "Obligatoire": "Oui",
-                "Remarque": "Attestation notariale"
-              },
-              {
-                "Document": "Certificat médical handicap",
-                "Obligatoire": "Si applicable",
-                "Remarque": "Pour priorité/adaptation"
-              },
-              {
-                "Document": "Jugement de garde enfants",
-                "Obligatoire": "Si applicable",
-                "Remarque": "Parents séparés"
-              },
-              {
-                "Document": "Attestation CPAS/chômage",
-                "Obligatoire": "Si applicable",
-                "Remarque": "Pour revenus de remplacement"
-              }
-            ]
-          }
+          "keyword": "Then",
+          "text": "je dois fournir les documents suivants:"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "l'inscription est gratuite"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je reçois un accusé de réception dans les 30-50 jours"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "mon numéro d'inscription détermine mon ordre sur la liste"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je dois renouveler ma candidature annuellement"
         }
       ],
       "isOutline": false
     },
     {
-      "id": "aeb00c9b-e53b-417a-9990-eee628a882d9",
+      "id": "scenario-13",
       "name": "Mutation au sein du parc social",
-      "description": "",
       "tags": [],
       "steps": [
         {
-          "keyword": "Étant donné que",
-          "text": "je suis déjà locataire social à Bruxelles"
+          "keyword": "Given",
+          "text": "que je suis déjà locataire social à Bruxelles"
         },
         {
-          "keyword": "Et que",
-          "text": "mon logement actuel a 2 chambres"
+          "keyword": "And",
+          "text": "que mon logement actuel a 2 chambres"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai eu 2 enfants supplémentaires depuis mon entrée"
+          "keyword": "And",
+          "text": "que j'ai eu 2 enfants supplémentaires depuis mon entrée"
         },
         {
-          "keyword": "Et que",
-          "text": "j'ai besoin d'un logement avec 4 chambres"
+          "keyword": "And",
+          "text": "que j'ai besoin d'un logement avec 4 chambres"
         },
         {
-          "keyword": "Quand",
+          "keyword": "When",
           "text": "je demande une mutation"
         },
         {
-          "keyword": "Alors",
+          "keyword": "Then",
           "text": "j'ai priorité sur les nouveaux candidats"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "ma demande est justifiée par sur-occupation"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "je conserve mon ancienneté dans le système"
         },
         {
-          "keyword": "Et",
+          "keyword": "And",
           "text": "le délai est généralement plus court (1-2 ans)"
         }
       ],
       "isOutline": false
     }
   ],
-  "metadata": {
-    "language": "fr"
-  },
-  "generated": "2025-12-13T11:57:49.161Z"
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.199Z"
 }

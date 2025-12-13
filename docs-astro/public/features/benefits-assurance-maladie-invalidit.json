@@ -1,0 +1,508 @@
+{
+  "id": "benefits-assurance-maladie-invalidit",
+  "name": "Assurance Maladie-Invalidité",
+  "description": "En tant qu'assuré social Je veux comprendre mes droits à l'assurance maladie obligatoire Afin d'être remboursé pour mes soins de santé et recevoir des indemnités en cas de maladie",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les taux de remboursement INAMI 2024 sont:"
+      },
+      {
+        "text": "Et que le statut BIM (Bénéficiaire Intervention Majorée) s'applique si:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Travailleur salarié avec consultation médicale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis travailleur salarié affilié à une mutuelle"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé mes cotisations sociales"
+        },
+        {
+          "keyword": "And",
+          "text": "que je consulte mon médecin généraliste (tarif 29€)"
+        },
+        {
+          "keyword": "When",
+          "text": "je présente ma carte eID+ chez le médecin"
+        },
+        {
+          "keyword": "Then",
+          "text": "le système tiers-payant s'applique"
+        },
+        {
+          "keyword": "And",
+          "text": "je paie seulement ma quote-part de 7.25€ (25%)"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutuelle paie directement 21.75€ au médecin"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit à 12 consultations/an avec DMG (Dossier Médical Global)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Famille avec enfants et statut BIM",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis parent isolé avec 2 enfants"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus annuels sont de 19000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis reconnu BIM automatiquement"
+        },
+        {
+          "keyword": "When",
+          "text": "mon enfant consulte un spécialiste (tarif 50€)"
+        },
+        {
+          "keyword": "Then",
+          "text": "le remboursement BIM s'applique (90%)"
+        },
+        {
+          "keyword": "And",
+          "text": "je paie seulement 5€ de ticket modérateur"
+        },
+        {
+          "keyword": "And",
+          "text": "le maximum à facturer (MAF) protège contre les dépenses excessives"
+        },
+        {
+          "keyword": "And",
+          "text": "le plafond MAF 2024 pour ma famille est de 250€/an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Personne âgée avec médicaments chroniques",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis pensionné de 72 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des médicaments pour diabète (catégorie A)"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des médicaments pour tension (catégorie B)"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus me donnent droit au BIM"
+        },
+        {
+          "keyword": "When",
+          "text": "j'achète mes médicaments mensuels"
+        },
+        {
+          "keyword": "Then",
+          "text": "les antidiabétiques sont remboursés à 100%"
+        },
+        {
+          "keyword": "And",
+          "text": "les antihypertenseurs sont remboursés à 85%"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai droit au forfait malade chronique (103.97€/an)"
+        },
+        {
+          "keyword": "And",
+          "text": "la pharmacie applique le tiers-payant"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Hospitalisation en chambre commune",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je dois être hospitalisé 5 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je choisis une chambre commune"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis en ordre de mutuelle"
+        },
+        {
+          "keyword": "When",
+          "text": "je suis admis à l'hôpital"
+        },
+        {
+          "keyword": "Then",
+          "text": "les frais médicaux sont couverts à 100%"
+        },
+        {
+          "keyword": "But",
+          "text": "je paie une intervention personnelle journalière:"
+        },
+        {
+          "keyword": "And",
+          "text": "aucun supplément d'honoraires n'est facturé"
+        },
+        {
+          "keyword": "And",
+          "text": "les médicaments hospitaliers sont inclus"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Indépendant avec assurance maladie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis travailleur indépendant"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie mes cotisations sociales trimestrielles"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai souscrit à une assurance maladie obligatoire"
+        },
+        {
+          "keyword": "When",
+          "text": "je tombe malade"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai les mêmes remboursements qu'un salarié"
+        },
+        {
+          "keyword": "But",
+          "text": "le délai de carence pour indemnités est différent:"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant dépend de ma situation familiale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Étudiant avec carte européenne d'assurance maladie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis étudiant belge de 22 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je pars en Erasmus en Espagne"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai demandé ma CEAM (Carte Européenne)"
+        },
+        {
+          "keyword": "When",
+          "text": "j'ai besoin de soins urgents à l'étranger"
+        },
+        {
+          "keyword": "Then",
+          "text": "la CEAM couvre les soins nécessaires"
+        },
+        {
+          "keyword": "And",
+          "text": "je suis remboursé selon les tarifs INAMI belges"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutuelle rembourse après présentation des factures"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Chômeur avec maintien des droits",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis chômeur indemnisé"
+        },
+        {
+          "keyword": "And",
+          "text": "que je perçois des allocations de chômage"
+        },
+        {
+          "keyword": "When",
+          "text": "je consulte un médecin"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes droits à l'assurance maladie sont maintenus"
+        },
+        {
+          "keyword": "And",
+          "text": "les cotisations sont prélevées sur mes allocations"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai potentiellement droit au statut BIM"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Soins dentaires avec remboursement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vais chez le dentiste agréé"
+        },
+        {
+          "keyword": "When",
+          "text": "je fais mon contrôle annuel préventif"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'examen buccal est remboursé à 100% (code 371011)"
+        },
+        {
+          "keyword": "And",
+          "text": "le détartrage est remboursé à 75%"
+        },
+        {
+          "keyword": "And",
+          "text": "si j'ai été l'année précédente (trajet de soins)"
+        },
+        {
+          "keyword": "Then",
+          "text": "j'ai droit à des remboursements majorés"
+        },
+        {
+          "keyword": "And",
+          "text": "les soins conservateurs sont mieux remboursés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul ticket modérateur selon statut",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <statut>"
+        },
+        {
+          "keyword": "And",
+          "text": "que le coût de la prestation est <cout>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le taux de remboursement est <taux>%"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma quote-part"
+        },
+        {
+          "keyword": "Then",
+          "text": "je paie <ticket>€ de ticket modérateur"
+        },
+        {
+          "keyword": "And",
+          "text": "la mutuelle rembourse <remboursement>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "statut",
+            "cout",
+            "taux",
+            "ticket",
+            "remboursement"
+          ],
+          "rows": [
+            {
+              "values": {
+                "statut": "assuré ordinaire",
+                "cout": "29",
+                "taux": "75",
+                "ticket": "7.25",
+                "remboursement": "21.75"
+              }
+            },
+            {
+              "values": {
+                "statut": "bénéficiaire BIM",
+                "cout": "29",
+                "taux": "90",
+                "ticket": "2.90",
+                "remboursement": "26.10"
+              }
+            },
+            {
+              "values": {
+                "statut": "assuré ordinaire",
+                "cout": "50",
+                "taux": "75",
+                "ticket": "12.50",
+                "remboursement": "37.50"
+              }
+            },
+            {
+              "values": {
+                "statut": "bénéficiaire BIM",
+                "cout": "50",
+                "taux": "90",
+                "ticket": "5.00",
+                "remboursement": "45.00"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Maximum à facturer (MAF) et protection financière",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que ma famille a des frais médicaux importants"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons atteint 650€ de tickets modérateurs en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que nos revenus sont de 35000€ (catégorie 2)"
+        },
+        {
+          "keyword": "When",
+          "text": "le MAF est calculé"
+        },
+        {
+          "keyword": "Then",
+          "text": "notre plafond MAF est de 650€ pour l'année"
+        },
+        {
+          "keyword": "And",
+          "text": "tous les tickets modérateurs au-delà sont remboursés à 100%"
+        },
+        {
+          "keyword": "And",
+          "text": "nous recevons automatiquement le remboursement"
+        },
+        {
+          "keyword": "And",
+          "text": "pour l'année suivante, le compteur repart à zéro"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Affection chronique avec forfait de soins",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une maladie chronique reconnue"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes dépenses de santé dépassent 365€/an"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le forfait malades chroniques"
+        },
+        {
+          "keyword": "Then",
+          "text": "je reçois automatiquement 103.97€/an"
+        },
+        {
+          "keyword": "And",
+          "text": "ce montant aide pour les frais non remboursés"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux demander le statut affection chronique"
+        },
+        {
+          "keyword": "And",
+          "text": "réduit mes avances de frais"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Contrôles et obligations de l'assuré",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de l'assurance maladie"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois respecter ces obligations:"
+        },
+        {
+          "keyword": "And",
+          "text": "le non-respect peut entraîner:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.192Z"
+}

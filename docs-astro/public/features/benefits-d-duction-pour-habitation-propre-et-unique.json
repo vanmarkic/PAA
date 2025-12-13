@@ -1,0 +1,576 @@
+{
+  "id": "benefits-d-duction-pour-habitation-propre-et-unique",
+  "name": "Déduction pour habitation propre et unique",
+  "description": "En tant que propriétaire occupant Je veux bénéficier des déductions fiscales pour mon habitation Afin de réduire mon impôt sur le revenu",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les paramètres fiscaux 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Chèque habitat wallon - Emprunt contracté après 2016",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt hypothécaire le 1er mars 2020"
+        },
+        {
+          "keyword": "And",
+          "text": "que le montant emprunté est de 200000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'habitation est mon unique logement"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus imposables sont de 45000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 2 enfants à charge"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon chèque habitat"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'avantage fiscal de base devrait être 1520€"
+        },
+        {
+          "keyword": "And",
+          "text": "la réduction forfaitaire devrait être 125€ × 2 = 250€"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant total du chèque habitat devrait être 1770€"
+        },
+        {
+          "keyword": "And",
+          "text": "cet avantage est valable pendant maximum 20 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Déduction intérêts hypothécaires Bruxelles",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident à Bruxelles"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt le 15 juin 2017"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 3500€ d'intérêts en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 1200€ de capital en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'habitation est mon unique logement"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la déduction des intérêts devrait être plafonnée à 2350€"
+        },
+        {
+          "keyword": "And",
+          "text": "l'avantage fiscal devrait être calculé au taux marginal"
+        },
+        {
+          "keyword": "And",
+          "text": "pour un taux de 45%, l'économie devrait être 1057.50€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Ancien bonus logement flamand - Droits acquis",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident en Flandre"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt avant le 1er janvier 2020"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficiais du bonus logement"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon bonus était de 1520€ en 2019"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon avantage fiscal 2024"
+        },
+        {
+          "keyword": "Then",
+          "text": "je conserve mes droits acquis"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant reste fixé selon les anciennes règles"
+        },
+        {
+          "keyword": "And",
+          "text": "l'avantage est maintenu jusqu'à la fin du crédit"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Nouvelle acquisition Flandre après 2020",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis résident en Flandre"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai acheté ma première habitation en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt de 250000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie 4000€ d'intérêts annuels"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mes avantages fiscaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne bénéficie d'aucune déduction fiscale régionale"
+        },
+        {
+          "keyword": "And",
+          "text": "le bonus logement n'existe plus depuis 2020"
+        },
+        {
+          "keyword": "But",
+          "text": "je peux déduire les droits d'enregistrement réduits (6% au lieu de 10%)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Habitation non principale - Déduction ordinaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je possède une résidence secondaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un emprunt hypothécaire sur ce bien"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 2800€ d'intérêts en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai payé 800€ d'assurance solde restant dû"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma déduction fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "la déduction est plafonnée à 2350€"
+        },
+        {
+          "keyword": "And",
+          "text": "seuls les intérêts sont déductibles (pas l'assurance)"
+        },
+        {
+          "keyword": "And",
+          "text": "la déduction s'applique au taux marginal d'imposition"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Famille nombreuse - Majorations",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis propriétaire occupant en Wallonie"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 4 enfants à charge au 1er janvier 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un emprunt hypothécaire en cours"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon chèque habitat de base est de 1520€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les majorations"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majoration pour enfants devrait être:"
+        },
+        {
+          "keyword": "And",
+          "text": "le chèque habitat total devrait être 2180€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Refinancement hypothécaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai refinancé mon emprunt en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'emprunt initial datait de 2018"
+        },
+        {
+          "keyword": "And",
+          "text": "que le nouveau montant emprunté est de 180000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que le solde restant dû était de 150000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes avantages fiscaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "seul le montant initial (150000€) reste éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le supplément de 30000€ n'ouvre pas droit à déduction"
+        },
+        {
+          "keyword": "And",
+          "text": "les conditions initiales sont maintenues"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Achat avec travaux économiseurs d'énergie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai acheté une habitation en 2024"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai contracté un emprunt de 300000€"
+        },
+        {
+          "keyword": "And",
+          "text": "50000€ pour des travaux de rénovation énergétique"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mes avantages fiscaux"
+        },
+        {
+          "keyword": "Then",
+          "text": "la partie habitation suit les règles régionales"
+        },
+        {
+          "keyword": "And",
+          "text": "la partie travaux peut bénéficier de déductions supplémentaires"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux cumuler avec les primes énergie régionales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul déduction selon région et revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je réside en <région>"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes revenus imposables sont de <revenus>€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai <enfants> enfants à charge"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon emprunt date de <année_emprunt>"
+        },
+        {
+          "keyword": "And",
+          "text": "que je paie <intérêts>€ d'intérêts annuels"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule mon avantage fiscal"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'avantage devrait être <avantage>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "région",
+            "revenus",
+            "enfants",
+            "année_emprunt",
+            "intérêts",
+            "avantage"
+          ],
+          "rows": [
+            {
+              "values": {
+                "région": "Wallonie",
+                "revenus": "35000",
+                "enfants": "2",
+                "année_emprunt": "2021",
+                "intérêts": "3000",
+                "avantage": "1770"
+              }
+            },
+            {
+              "values": {
+                "région": "Wallonie",
+                "revenus": "50000",
+                "enfants": "0",
+                "année_emprunt": "2019",
+                "intérêts": "4000",
+                "avantage": "1520"
+              }
+            },
+            {
+              "values": {
+                "région": "Bruxelles",
+                "revenus": "40000",
+                "enfants": "1",
+                "année_emprunt": "2018",
+                "intérêts": "3500",
+                "avantage": "1057"
+              }
+            },
+            {
+              "values": {
+                "région": "Flandre",
+                "revenus": "45000",
+                "enfants": "2",
+                "année_emprunt": "2019",
+                "intérêts": "3800",
+                "avantage": "1520"
+              }
+            },
+            {
+              "values": {
+                "région": "Flandre",
+                "revenus": "60000",
+                "enfants": "3",
+                "année_emprunt": "2024",
+                "intérêts": "4500",
+                "avantage": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Conditions d'occupation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai acheté une habitation avec avantage fiscal"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les conditions d'occupation"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois occuper l'habitation dans les 2 ans suivant l'acquisition"
+        },
+        {
+          "keyword": "And",
+          "text": "l'habitation doit rester mon domicile principal"
+        },
+        {
+          "keyword": "And",
+          "text": "en cas de non-respect, l'avantage fiscal est récupéré"
+        },
+        {
+          "keyword": "And",
+          "text": "des exceptions existent pour raisons professionnelles ou sociales"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Vente anticipée de l'habitation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie d'un avantage fiscal habitation"
+        },
+        {
+          "keyword": "And",
+          "text": "que je vends mon habitation après 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'emprunt court depuis 2019"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule les conséquences fiscales"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'avantage fiscal cesse à la date de vente"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune récupération n'est due si j'ai occupé 2 ans minimum"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux transférer l'avantage si j'achète une nouvelle habitation propre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Déclaration fiscale - Codes à utiliser",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je veux déclarer mes déductions habitation"
+        },
+        {
+          "keyword": "When",
+          "text": "je remplis ma déclaration fiscale"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois utiliser les codes suivants:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois joindre l'attestation de mon prêteur"
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul final est fait par l'administration fiscale"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "Cumul avec autres avantages",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je bénéficie de déductions habitation"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai aussi droit à d'autres avantages fiscaux"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les possibilités de cumul"
+        },
+        {
+          "keyword": "Then",
+          "text": "je peux cumuler avec:"
+        },
+        {
+          "keyword": "But",
+          "text": "je ne peux pas cumuler plusieurs avantages habitation"
+        },
+        {
+          "keyword": "And",
+          "text": "le plafond global des déductions reste d'application"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.196Z"
+}

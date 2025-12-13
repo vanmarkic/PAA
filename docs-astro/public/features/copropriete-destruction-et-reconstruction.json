@@ -1,0 +1,86 @@
+{
+  "id": "copropriete-destruction-et-reconstruction",
+  "name": "Destruction et Reconstruction",
+  "description": "En tant que copropriété Je veux gérer la destruction de l'immeuble Afin de protéger les droits en cas de sinistre",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un sinistre majeur survient"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Destruction partielle par incendie",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 40% de l'immeuble est détruit"
+        },
+        {
+          "keyword": "And",
+          "text": "que la reconstruction coûte 2 millions €"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG décide de la suite"
+        },
+        {
+          "keyword": "Then",
+          "text": "les options sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Indemnité assurance insuffisante",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'assurance verse 1,5 millions €"
+        },
+        {
+          "keyword": "But",
+          "text": "que la reconstruction coûte 2 millions €"
+        },
+        {
+          "keyword": "When",
+          "text": "le financement est organisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "les solutions sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Copropriétaire refusant reconstruction",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire refuse de participer"
+        },
+        {
+          "keyword": "When",
+          "text": "il conteste la décision"
+        },
+        {
+          "keyword": "Then",
+          "text": "ses options sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

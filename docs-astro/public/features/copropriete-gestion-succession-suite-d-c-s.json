@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-succession-suite-d-c-s",
+  "name": "Gestion Succession Suite Décès",
+  "description": "En tant que copropriété Je veux gérer les successions Afin d'assurer la continuité administrative",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'un copropriétaire décède"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Notification décès copropriétaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que M. Dupont est décédé"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic est informé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Indivision successorale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que 3 héritiers existent"
+        },
+        {
+          "keyword": "When",
+          "text": "ils doivent être représentés"
+        },
+        {
+          "keyword": "Then",
+          "text": "les règles sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Vente par succession",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les héritiers vendent"
+        },
+        {
+          "keyword": "And",
+          "text": "que des charges sont impayées"
+        },
+        {
+          "keyword": "When",
+          "text": "la vente se réalise"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

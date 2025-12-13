@@ -1,0 +1,512 @@
+{
+  "id": "cour-europeenne-requ-te-individuelle-devant-la-cedh",
+  "name": "Requête individuelle devant la CEDH",
+  "description": "En tant que victime d'une violation des droits de l'homme Je veux déposer une requête devant la Cour européenne des droits de l'homme Afin d'obtenir réparation pour la violation de mes droits",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la CEDH examine les violations de la Convention européenne des droits de l'homme"
+      },
+      {
+        "text": "Et que le délai pour déposer une requête est de 4 mois depuis février 2024"
+      },
+      {
+        "text": "Et que l'ancien délai de 6 mois s'applique aux violations antérieures"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Requête recevable dans le délai de 4 mois",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un ressortissant belge de 35 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi une violation de l'article 6 (procès équitable)"
+        },
+        {
+          "keyword": "And",
+          "text": "que la décision finale des tribunaux belges date du \"01/09/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"15/12/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai épuisé toutes les voies de recours internes"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi un préjudice important de 8000 euros"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la recevabilité de ma requête"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma requête devrait être recevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai restant devrait être de 15 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais utiliser le formulaire de requête officiel"
+        },
+        {
+          "keyword": "And",
+          "text": "les documents requis devraient inclure \"décision finale, procuration, preuves\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Requête irrecevable pour délai dépassé",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un ressortissant français de 42 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi une violation de l'article 8 (vie privée)"
+        },
+        {
+          "keyword": "And",
+          "text": "que la décision finale des tribunaux français date du \"01/03/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"15/11/2024\""
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la recevabilité de ma requête"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma requête devrait être irrecevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"délai de 4 mois dépassé\""
+        },
+        {
+          "keyword": "And",
+          "text": "le délai était expiré depuis 106 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Violation continue sans décision finale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis détenu dans des conditions inhumaines (article 3)"
+        },
+        {
+          "keyword": "And",
+          "text": "que la violation est continue depuis le \"01/01/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai introduit des recours qui sont toujours pendants"
+        },
+        {
+          "keyword": "And",
+          "text": "que la situation perdure actuellement"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie la possibilité de déposer une requête"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais pouvoir déposer une requête"
+        },
+        {
+          "keyword": "And",
+          "text": "le type devrait être \"violation continue\""
+        },
+        {
+          "keyword": "And",
+          "text": "des mesures provisoires pourraient être demandées"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure prioritaire pourrait s'appliquer"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Requête collective pour violations similaires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes 15 personnes affectées par la même loi"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons tous subi une violation de l'article 14 (discrimination)"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous avons tous épuisé les recours internes"
+        },
+        {
+          "keyword": "And",
+          "text": "que toutes les décisions finales datent de moins de 4 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "nous vérifions la possibilité d'une requête collective"
+        },
+        {
+          "keyword": "Then",
+          "text": "une requête collective devrait être possible"
+        },
+        {
+          "keyword": "And",
+          "text": "un représentant commun devrait être désigné"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque requérant devrait signer une procuration"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure pourrait être simplifiée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Demande de mesures provisoires (article 39)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je risque l'expulsion vers un pays où je risque la torture"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'expulsion est prévue dans 48 heures"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des preuves du risque de torture"
+        },
+        {
+          "keyword": "And",
+          "text": "que le danger est imminent et irréversible"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande des mesures provisoires"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être traitée en urgence"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais fournir \"identité complète, faits détaillés, preuves du risque\""
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait répondre dans les 24-48 heures"
+        },
+        {
+          "keyword": "And",
+          "text": "l'expulsion devrait être suspendue si accordée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Requête avec demande d'anonymat",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis victime de violences domestiques"
+        },
+        {
+          "keyword": "And",
+          "text": "que je crains des représailles si mon identité est révélée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des preuves du danger"
+        },
+        {
+          "keyword": "And",
+          "text": "que la publication pourrait me causer un préjudice grave"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'anonymat dans ma requête"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande d'anonymat devrait être motivée"
+        },
+        {
+          "keyword": "And",
+          "text": "les preuves du risque devraient être fournies"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait examiner la demande"
+        },
+        {
+          "keyword": "And",
+          "text": "mon identité pourrait être protégée dans les documents publics"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Requête sans épuisement des recours pour remède inefficace",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis victime d'une violation systémique"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il existe une jurisprudence constante défavorable"
+        },
+        {
+          "keyword": "And",
+          "text": "que 50 cas similaires ont tous été rejetés"
+        },
+        {
+          "keyword": "And",
+          "text": "que le recours serait manifestement inefficace"
+        },
+        {
+          "keyword": "When",
+          "text": "je dépose une requête sans épuiser tous les recours"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais expliquer pourquoi les recours sont inefficaces"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir la jurisprudence pertinente"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer l'absence de perspective de succès"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour pourrait accepter l'exception"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Calcul du délai selon la date de violation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la décision finale date du \"<date_decision>\""
+        },
+        {
+          "keyword": "And",
+          "text": "que la violation a eu lieu \"<type_violation>\""
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"<date_actuelle>\""
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie le délai"
+        },
+        {
+          "keyword": "Then",
+          "text": "le délai applicable devrait être <delai_mois> mois"
+        },
+        {
+          "keyword": "And",
+          "text": "la requête devrait être \"<statut>\""
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait rester <jours_restants> jours"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "date_decision",
+            "type_violation",
+            "date_actuelle",
+            "delai_mois",
+            "statut",
+            "jours_restants"
+          ],
+          "rows": [
+            {
+              "values": {
+                "date_decision": "01/08/2024",
+                "type_violation": "après février 2024",
+                "date_actuelle": "15/11/2024",
+                "delai_mois": "4",
+                "statut": "recevable",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "values": {
+                "date_decision": "01/01/2024",
+                "type_violation": "avant février 2024",
+                "date_actuelle": "15/06/2024",
+                "delai_mois": "6",
+                "statut": "recevable",
+                "jours_restants": "15"
+              }
+            },
+            {
+              "values": {
+                "date_decision": "01/03/2024",
+                "type_violation": "après février 2024",
+                "date_actuelle": "15/08/2024",
+                "delai_mois": "4",
+                "statut": "irrecevable",
+                "jours_restants": "-15"
+              }
+            },
+            {
+              "values": {
+                "date_decision": "01/10/2023",
+                "type_violation": "avant février 2024",
+                "date_actuelle": "15/03/2024",
+                "delai_mois": "6",
+                "statut": "recevable",
+                "jours_restants": "15"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-9",
+      "name": "Requête avec assistance judiciaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mes revenus annuels sont de 12000 euros"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas les moyens de payer un avocat"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma requête a des chances raisonnables de succès"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai fourni mes justificatifs de revenus"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande l'assistance judiciaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être examinée par la Cour"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais remplir le formulaire d'assistance judiciaire"
+        },
+        {
+          "keyword": "And",
+          "text": "fournir une déclaration de ressources"
+        },
+        {
+          "keyword": "And",
+          "text": "l'assistance pourrait couvrir les frais d'avocat et de traduction"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Vérification du statut de victime",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai été affecté directement par une mesure étatique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai subi un préjudice personnel et actuel"
+        },
+        {
+          "keyword": "And",
+          "text": "que le préjudice est suffisamment direct"
+        },
+        {
+          "keyword": "And",
+          "text": "que je peux le démontrer avec des preuves"
+        },
+        {
+          "keyword": "When",
+          "text": "ma qualité de victime est examinée"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être reconnu comme victime directe"
+        },
+        {
+          "keyword": "And",
+          "text": "ma requête devrait satisfaire l'article 34 de la Convention"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais pouvoir demander une satisfaction équitable"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

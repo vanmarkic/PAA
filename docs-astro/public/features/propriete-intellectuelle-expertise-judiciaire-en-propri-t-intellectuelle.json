@@ -1,0 +1,92 @@
+{
+  "id": "propriete-intellectuelle-expertise-judiciaire-en-propri-t-intellectuelle",
+  "name": "Expertise judiciaire en propriété intellectuelle",
+  "description": "En tant que partie à un litige IP complexe Je veux une expertise technique judiciaire Afin d'éclairer le tribunal sur les aspects techniques",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les litiges IP sont techniques"
+      },
+      {
+        "text": "Et que les juges ont besoin d'expertise"
+      },
+      {
+        "text": "Et que l'expert est neutre et indépendant"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Désignation d'expert en contrefaçon",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un litige porte sur la contrefaçon technique"
+        },
+        {
+          "keyword": "And",
+          "text": "que le juge ordonne une expertise"
+        },
+        {
+          "keyword": "When",
+          "text": "l'expert est désigné"
+        },
+        {
+          "keyword": "Then",
+          "text": "il analyse les produits en cause"
+        },
+        {
+          "keyword": "And",
+          "text": "compare avec les revendications du brevet"
+        },
+        {
+          "keyword": "And",
+          "text": "rend un rapport technique détaillé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Expertise sur la validité d'un brevet",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un brevet est contesté"
+        },
+        {
+          "keyword": "And",
+          "text": "que sa validité est questionnée"
+        },
+        {
+          "keyword": "When",
+          "text": "l'expert examine le brevet"
+        },
+        {
+          "keyword": "Then",
+          "text": "il évalue la nouveauté par rapport à l'art antérieur"
+        },
+        {
+          "keyword": "And",
+          "text": "l'activité inventive"
+        },
+        {
+          "keyword": "And",
+          "text": "la suffisance de description"
+        },
+        {
+          "keyword": "And",
+          "text": "éclaire le tribunal sur la validité"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.211Z"
+}

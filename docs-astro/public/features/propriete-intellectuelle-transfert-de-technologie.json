@@ -1,0 +1,136 @@
+{
+  "id": "propriete-intellectuelle-transfert-de-technologie",
+  "name": "Transfert de technologie",
+  "description": "En tant qu'université, centre de recherche ou entreprise Je veux transférer ma technologie Afin de valoriser mes innovations",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que le transfert peut prendre plusieurs formes"
+      },
+      {
+        "text": "Et que la valorisation est encouragée fiscalement"
+      },
+      {
+        "text": "Et que des contrats spécifiques sont nécessaires"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Transfert université-entreprise via licence",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'université a développé une technologie"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un brevet a été déposé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une entreprise est intéressée"
+        },
+        {
+          "keyword": "When",
+          "text": "nous négocions le transfert"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous établissons un contrat de licence"
+        },
+        {
+          "keyword": "And",
+          "text": "définissons les redevances (3-5% typique)"
+        },
+        {
+          "keyword": "And",
+          "text": "prévoyons un accompagnement technique"
+        },
+        {
+          "keyword": "And",
+          "text": "respectons la réglementation des aides d'État"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Création de spin-off universitaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une équipe de recherche veut commercialiser"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'université accepte la création d'une spin-off"
+        },
+        {
+          "keyword": "When",
+          "text": "nous structurons l'opération"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'université apporte la PI en capital"
+        },
+        {
+          "keyword": "And",
+          "text": "prend une participation minoritaire"
+        },
+        {
+          "keyword": "And",
+          "text": "les chercheurs deviennent entrepreneurs"
+        },
+        {
+          "keyword": "And",
+          "text": "un pacte d'actionnaires est signé"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Joint venture pour co-développement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que deux entreprises ont des technologies complémentaires"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elles veulent co-développer un produit"
+        },
+        {
+          "keyword": "When",
+          "text": "elles créent une joint venture"
+        },
+        {
+          "keyword": "Then",
+          "text": "chacune apporte sa technologie"
+        },
+        {
+          "keyword": "And",
+          "text": "les nouvelles innovations sont co-détenues"
+        },
+        {
+          "keyword": "And",
+          "text": "les revenus sont partagés selon l'accord"
+        },
+        {
+          "keyword": "And",
+          "text": "une clause de sortie est prévue"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.214Z"
+}

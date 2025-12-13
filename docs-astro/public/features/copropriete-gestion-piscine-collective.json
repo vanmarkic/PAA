@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-piscine-collective",
+  "name": "Gestion Piscine Collective",
+  "description": "En tant que copropriété avec piscine Je veux gérer la piscine collective Afin d'assurer sécurité et hygiène",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété possède une piscine"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Entretien et conformité sanitaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la piscine fait 100m²"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle est ouverte de mai à septembre"
+        },
+        {
+          "keyword": "When",
+          "text": "l'entretien est organisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "il comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Règlement utilisation piscine",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'usage doit être réglementé"
+        },
+        {
+          "keyword": "When",
+          "text": "le règlement est établi"
+        },
+        {
+          "keyword": "Then",
+          "text": "il précise:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Responsabilité accident piscine",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un accident survient"
+        },
+        {
+          "keyword": "When",
+          "text": "la responsabilité est recherchée"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'analyse porte sur:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

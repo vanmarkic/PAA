@@ -1,0 +1,90 @@
+{
+  "id": "copropriete-modification-de-l-acte-de-base",
+  "name": "Modification de l'Acte de Base",
+  "description": "En tant que copropriété Je veux modifier l'acte de base Afin d'adapter les statuts aux besoins actuels",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'acte de base nécessite une modification"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Modification requérant l'unanimité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la modification change la destination de l'immeuble"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote la modification"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'unanimité absolue est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune opposition n'est tolérée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Correction d'erreur matérielle",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une erreur de calcul existe dans les millièmes"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle est purement matérielle"
+        },
+        {
+          "keyword": "When",
+          "text": "la correction est proposée"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majorité des 4/5 suffit"
+        },
+        {
+          "keyword": "And",
+          "text": "ne modifie pas substantiellement les droits"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Procédure notariale de modification",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'AG a voté la modification"
+        },
+        {
+          "keyword": "When",
+          "text": "le processus notarial commence"
+        },
+        {
+          "keyword": "Then",
+          "text": "les étapes sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

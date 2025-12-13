@@ -1,0 +1,105 @@
+{
+  "id": "copropriete-vote-des-r-solutions-en-assembl-e-g-n-rale",
+  "name": "Vote des Résolutions en Assemblée Générale",
+  "description": "En tant que copropriétaire Je veux voter sur les résolutions proposées Afin d'exercer mes droits dans la copropriété",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'AG est en cours avec quorum atteint"
+      },
+      {
+        "text": "Et que je possède 85 millièmes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Vote pour travaux d'entretien ordinaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que les travaux coûtent 5000€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'ils nécessitent une majorité simple"
+        },
+        {
+          "keyword": "When",
+          "text": "520 millièmes votent pour et 300 contre"
+        },
+        {
+          "keyword": "Then",
+          "text": "la résolution est adoptée"
+        },
+        {
+          "keyword": "And",
+          "text": "les travaux sont approuvés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Vote pour modification du règlement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la modification nécessite les 3/4 des voix"
+        },
+        {
+          "keyword": "When",
+          "text": "760 millièmes votent pour"
+        },
+        {
+          "keyword": "And",
+          "text": "240 millièmes votent contre"
+        },
+        {
+          "keyword": "Then",
+          "text": "la résolution est adoptée à 76%"
+        },
+        {
+          "keyword": "And",
+          "text": "le règlement est modifié"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Rejet d'une résolution nécessitant l'unanimité",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la vente d'une partie commune nécessite l'unanimité"
+        },
+        {
+          "keyword": "When",
+          "text": "980 millièmes votent pour"
+        },
+        {
+          "keyword": "And",
+          "text": "20 millièmes votent contre"
+        },
+        {
+          "keyword": "Then",
+          "text": "la résolution est rejetée"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"unanimité requise non atteinte\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

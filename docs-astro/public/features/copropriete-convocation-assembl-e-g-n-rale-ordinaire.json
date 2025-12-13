@@ -1,0 +1,100 @@
+{
+  "id": "copropriete-convocation-assembl-e-g-n-rale-ordinaire",
+  "name": "Convocation Assemblée Générale Ordinaire",
+  "description": "En tant que syndic Je veux convoquer une assemblée générale ordinaire Afin de respecter les obligations légales annuelles",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété \"Résidence Bellevue\" existe"
+      },
+      {
+        "text": "Et qu'elle compte 30 lots principaux"
+      },
+      {
+        "text": "Et que le syndic est désigné"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Convocation AG ordinaire dans les délais légaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la dernière AG date de plus de 11 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que le syndic prépare la convocation 20 jours avant"
+        },
+        {
+          "keyword": "When",
+          "text": "il envoie la convocation avec l'ordre du jour"
+        },
+        {
+          "keyword": "Then",
+          "text": "la convocation est valide"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai légal de 15 jours est respecté"
+        },
+        {
+          "keyword": "And",
+          "text": "tous les copropriétaires sont notifiés"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Convocation AG avec documents obligatoires",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'AG ordinaire est prévue"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic prépare la convocation"
+        },
+        {
+          "keyword": "Then",
+          "text": "les documents suivants sont joints:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Convocation tardive invalide",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que l'AG est prévue dans 10 jours"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic envoie la convocation"
+        },
+        {
+          "keyword": "Then",
+          "text": "la convocation est invalide"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif est \"délai minimum de 15 jours non respecté\""
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

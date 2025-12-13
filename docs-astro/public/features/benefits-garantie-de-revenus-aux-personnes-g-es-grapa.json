@@ -1,0 +1,684 @@
+{
+  "id": "benefits-garantie-de-revenus-aux-personnes-g-es-grapa",
+  "name": "Garantie de Revenus aux Personnes Âgées (GRAPA)",
+  "description": "En tant que personne âgée avec des ressources insuffisantes Je veux savoir si j'ai droit à la GRAPA Afin de compléter mes revenus de pension",
+  "category": "benefits",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les montants GRAPA 2024 sont:"
+      },
+      {
+        "text": "Et que l'âge légal de la pension en 2024 est 65 ans"
+      },
+      {
+        "text": "Et que l'âge légal passera à 66 ans le 1er février 2025"
+      },
+      {
+        "text": "Et que l'âge légal passera à 67 ans le 1er février 2030"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Personne âgée isolée sans ressources éligible à la GRAPA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 65 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucune pension"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucune autre ressource"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la GRAPA devrait être 1549.42€"
+        },
+        {
+          "keyword": "And",
+          "text": "la catégorie devrait être \"personne isolée\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Personne cohabitante avec petite pension éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis cohabitant"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 68 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension mensuelle est de 500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas d'autres ressources"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la GRAPA devrait être 532.95€"
+        },
+        {
+          "keyword": "And",
+          "text": "la catégorie devrait être \"personne cohabitante\""
+        },
+        {
+          "keyword": "And",
+          "text": "le calcul devrait être \"1032.95€ - 500€ = 532.95€\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Réfugié reconnu de 70 ans éligible",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis réfugié reconnu en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension mensuelle est de 800€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la GRAPA devrait être 749.42€"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"réfugié reconnu éligible selon la loi du 22 mai 1969\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Personne trop jeune pour la GRAPA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 60 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai aucune ressource"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"âge minimum non atteint (65 ans requis en 2024)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Personne ne résidant pas en Belgique",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en France"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension est de 400€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"résidence effective en Belgique requise\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Ressources trop élevées pour personne isolée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 72 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension mensuelle est de 1600€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je ne devrais pas être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"ressources supérieures au plafond GRAPA (1549.42€/mois)\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Citoyen européen avec droit à pension belge",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 66 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis citoyen français"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai travaillé 15 ans en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai droit à une pension belge de 600€"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la GRAPA devrait être 949.42€"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"convention entre la Belgique et la France\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Personne avec patrimoine mobilier pris en compte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 75 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que ma pension mensuelle est de 500€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un compte épargne de 50000€"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie mon éligibilité à la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "mes ressources calculées incluent \"revenus du patrimoine mobilier\""
+        },
+        {
+          "keyword": "And",
+          "text": "le montant pris en compte est \"50000€ × 6% = 3000€/an = 250€/mois\""
+        },
+        {
+          "keyword": "And",
+          "text": "mes ressources totales sont \"500€ + 250€ = 750€\""
+        },
+        {
+          "keyword": "And",
+          "text": "le montant de la GRAPA devrait être 799.42€"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul GRAPA selon catégorie et ressources",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <catégorie>"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis Belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que mes ressources mensuelles totales sont de <ressources>€"
+        },
+        {
+          "keyword": "When",
+          "text": "je calcule ma GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant de la GRAPA devrait être <grapa_calculée>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "catégorie",
+            "ressources",
+            "grapa_calculée"
+          ],
+          "rows": [
+            {
+              "values": {
+                "catégorie": "une personne isolée",
+                "ressources": "0",
+                "grapa_calculée": "1549.42"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "une personne isolée",
+                "ressources": "500",
+                "grapa_calculée": "1049.42"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "une personne isolée",
+                "ressources": "1000",
+                "grapa_calculée": "549.42"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "une personne isolée",
+                "ressources": "1549.42",
+                "grapa_calculée": "0"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "cohabitant",
+                "ressources": "0",
+                "grapa_calculée": "1032.95"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "cohabitant",
+                "ressources": "400",
+                "grapa_calculée": "632.95"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "cohabitant",
+                "ressources": "800",
+                "grapa_calculée": "232.95"
+              }
+            },
+            {
+              "values": {
+                "catégorie": "cohabitant",
+                "ressources": "1032.95",
+                "grapa_calculée": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Obligations liées à la GRAPA",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis éligible à la GRAPA"
+        },
+        {
+          "keyword": "When",
+          "text": "j'accepte la GRAPA"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois déclarer tout changement de situation au SFP"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer tout changement de ressources"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois résider effectivement en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux pas m'absenter plus de 29 jours par an"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois avoir épuisé mes droits aux pensions belges et étrangères"
+        },
+        {
+          "keyword": "And",
+          "text": "la GRAPA est récupérable sur ma succession (au-delà de 32612.44€)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-11",
+      "name": "Demande de GRAPA - procédure administrative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai 65 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux demander la GRAPA"
+        },
+        {
+          "keyword": "When",
+          "text": "je commence la procédure"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois introduire ma demande au Service Fédéral des Pensions (SFP)"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux le faire via MyPension.be"
+        },
+        {
+          "keyword": "And",
+          "text": "le SFP examine automatiquement mon droit lors de ma demande de pension"
+        },
+        {
+          "keyword": "And",
+          "text": "le SFP vérifie mes ressources et celles de mon conjoint/cohabitant"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision est prise dans les 4 mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-12",
+      "name": "Cumul GRAPA avec autres revenus",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis une personne isolée de 70 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que je bénéficie de la GRAPA"
+        },
+        {
+          "keyword": "And",
+          "text": "que je commence une activité professionnelle limitée"
+        },
+        {
+          "keyword": "And",
+          "text": "que je gagne 200€ par mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare ce changement au SFP"
+        },
+        {
+          "keyword": "Then",
+          "text": "une partie de mes revenus professionnels est exonérée"
+        },
+        {
+          "keyword": "And",
+          "text": "l'exonération est de \"5000€ par an pour personne isolée\""
+        },
+        {
+          "keyword": "And",
+          "text": "ma GRAPA est recalculée avec \"revenus - exonération\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-13",
+      "name": "GRAPA et aide sociale du CPAS",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bénéficiaire de la GRAPA"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai des difficultés financières supplémentaires"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une aide au CPAS"
+        },
+        {
+          "keyword": "Then",
+          "text": "le CPAS peut octroyer une aide sociale complémentaire"
+        },
+        {
+          "keyword": "And",
+          "text": "cette aide est évaluée selon mes besoins spécifiques"
+        },
+        {
+          "keyword": "And",
+          "text": "elle peut couvrir \"frais médicaux, chauffage, loyer\""
+        },
+        {
+          "keyword": "But",
+          "text": "le CPAS tient compte de ma GRAPA dans le calcul"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-14",
+      "name": "Révision GRAPA suite à changement de situation",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis bénéficiaire GRAPA isolé"
+        },
+        {
+          "keyword": "And",
+          "text": "que je reçois 1549.42€ par mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je déménage pour vivre avec mon enfant"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare ce changement dans les 30 jours"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma catégorie passe de \"isolé\" à \"cohabitant\""
+        },
+        {
+          "keyword": "And",
+          "text": "ma GRAPA est recalculée à 1032.95€ maximum"
+        },
+        {
+          "keyword": "And",
+          "text": "le changement prend effet le mois suivant"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.198Z"
+}

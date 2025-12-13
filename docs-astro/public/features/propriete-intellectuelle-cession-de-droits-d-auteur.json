@@ -1,0 +1,88 @@
+{
+  "id": "propriete-intellectuelle-cession-de-droits-d-auteur",
+  "name": "Cession de droits d'auteur",
+  "description": "En tant qu'auteur ou cessionnaire Je veux céder ou acquérir des droits d'auteur Afin d'exploiter commercialement une œuvre",
+  "category": "propriete-intellectuelle",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la cession doit être écrite"
+      },
+      {
+        "text": "Et que les droits moraux sont incessibles"
+      },
+      {
+        "text": "Et que la rémunération doit être proportionnelle"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Cession de droits pour édition de livre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai écrit un roman"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un éditeur veut le publier"
+        },
+        {
+          "keyword": "When",
+          "text": "nous signons un contrat de cession"
+        },
+        {
+          "keyword": "Then",
+          "text": "je cède les droits de reproduction et distribution"
+        },
+        {
+          "keyword": "And",
+          "text": "je reçois 10% de royalties sur les ventes"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mes droits moraux"
+        },
+        {
+          "keyword": "And",
+          "text": "la cession est limitée à 5 ans et au territoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Cession globale d'œuvres futures invalide",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un éditeur me propose un contrat"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il veut tous mes futurs livres"
+        },
+        {
+          "keyword": "When",
+          "text": "j'examine la clause de cession"
+        },
+        {
+          "keyword": "Then",
+          "text": "cette cession globale est nulle"
+        },
+        {
+          "keyword": "And",
+          "text": "chaque œuvre doit faire l'objet d'un contrat"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.210Z"
+}

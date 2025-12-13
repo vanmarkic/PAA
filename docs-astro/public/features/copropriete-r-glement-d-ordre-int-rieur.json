@@ -1,0 +1,102 @@
+{
+  "id": "copropriete-r-glement-d-ordre-int-rieur",
+  "name": "Règlement d'Ordre Intérieur",
+  "description": "En tant que copropriété Je veux établir et modifier le règlement d'ordre intérieur Afin d'organiser la vie commune dans l'immeuble",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la copropriété nécessite des règles de vie commune"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Adoption du règlement initial",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'aucun règlement n'existe"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un projet est soumis à l'AG"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote à la majorité des 3/4"
+        },
+        {
+          "keyword": "And",
+          "text": "que 760 millièmes approuvent"
+        },
+        {
+          "keyword": "Then",
+          "text": "le règlement est adopté"
+        },
+        {
+          "keyword": "And",
+          "text": "devient opposable à tous"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Modification d'article sur les animaux",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le règlement interdit les animaux"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une demande de modification est faite"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG vote la modification"
+        },
+        {
+          "keyword": "Then",
+          "text": "la majorité des 3/4 est requise"
+        },
+        {
+          "keyword": "And",
+          "text": "la modification doit être notifiée à tous"
+        },
+        {
+          "keyword": "And",
+          "text": "transcrite au registre des décisions"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Sanctions pour violation du règlement",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire viole le règlement"
+        },
+        {
+          "keyword": "When",
+          "text": "le syndic constate l'infraction"
+        },
+        {
+          "keyword": "Then",
+          "text": "il peut:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.205Z"
+}

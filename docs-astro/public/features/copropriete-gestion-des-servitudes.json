@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-gestion-des-servitudes",
+  "name": "Gestion des Servitudes",
+  "description": "En tant que copropriété Je veux gérer les servitudes Afin de respecter les droits et obligations",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que l'immeuble a des servitudes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Servitude de passage existante",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une servitude de passage existe"
+        },
+        {
+          "keyword": "When",
+          "text": "la copropriété veut modifier l'accès"
+        },
+        {
+          "keyword": "Then",
+          "text": "elle doit:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Création nouvelle servitude",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un voisin demande une servitude"
+        },
+        {
+          "keyword": "When",
+          "text": "l'AG examine la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "la décision requiert:"
+        },
+        {
+          "keyword": "And",
+          "text": "une indemnité est négociable"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Servitude de vue contestée",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un copropriétaire ouvre une fenêtre"
+        },
+        {
+          "keyword": "When",
+          "text": "la violation est constatée"
+        },
+        {
+          "keyword": "Then",
+          "text": "le syndic doit:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.204Z"
+}

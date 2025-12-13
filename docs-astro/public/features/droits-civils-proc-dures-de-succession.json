@@ -1,0 +1,329 @@
+{
+  "id": "droits-civils-proc-dures-de-succession",
+  "name": "Procédures de Succession",
+  "description": "En tant qu'héritier ou ayant droit Je veux gérer une succession Afin de régler la transmission du patrimoine",
+  "category": "droits-civils",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les options successorales sont:"
+      },
+      {
+        "text": "Et que l'ordre des héritiers est:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Déclaration de succession simple",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un parent est décédé il y a 2 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis son unique enfant"
+        },
+        {
+          "keyword": "And",
+          "text": "que le patrimoine est inférieur à 250.000€"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il n'y a pas de testament"
+        },
+        {
+          "keyword": "When",
+          "text": "je déclare la succession"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "les droits de succession en ligne directe sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Succession avec testament",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un parent est décédé avec un testament"
+        },
+        {
+          "keyword": "And",
+          "text": "que le testament est déposé chez un notaire"
+        },
+        {
+          "keyword": "When",
+          "text": "le notaire ouvre le testament"
+        },
+        {
+          "keyword": "Then",
+          "text": "il doit:"
+        },
+        {
+          "keyword": "And",
+          "text": "la réserve héréditaire est:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Acceptation sous bénéfice d'inventaire",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le défunt avait des dettes importantes"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne connais pas l'étendue exacte du patrimoine"
+        },
+        {
+          "keyword": "And",
+          "text": "que je veux limiter ma responsabilité"
+        },
+        {
+          "keyword": "When",
+          "text": "j'accepte sous bénéfice d'inventaire"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne suis responsable des dettes qu'à concurrence de l'actif"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois gérer la succession séparément de mon patrimoine"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Renonciation à la succession",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le défunt avait plus de dettes que d'actifs"
+        },
+        {
+          "keyword": "And",
+          "text": "que je ne veux pas hériter des dettes"
+        },
+        {
+          "keyword": "When",
+          "text": "je renonce à la succession"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois:"
+        },
+        {
+          "keyword": "And",
+          "text": "je ne peux plus revenir sur cette décision"
+        },
+        {
+          "keyword": "And",
+          "text": "mes enfants peuvent accepter à ma place si mineurs"
+        },
+        {
+          "keyword": "And",
+          "text": "ma part accroît celle des autres héritiers"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Succession internationale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que le défunt avait des biens en France et en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il était résident belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que le règlement européen sur les successions s'applique"
+        },
+        {
+          "keyword": "When",
+          "text": "je gère la succession"
+        },
+        {
+          "keyword": "Then",
+          "text": "s'applique:"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois déclarer dans chaque pays où il y a des biens"
+        },
+        {
+          "keyword": "And",
+          "text": "les conventions fiscales s'appliquent"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Partage de succession conflictuel",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que nous sommes 3 héritiers"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous ne sommes pas d'accord sur le partage"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un héritier veut vendre et les autres non"
+        },
+        {
+          "keyword": "When",
+          "text": "nous ne trouvons pas d'accord amiable"
+        },
+        {
+          "keyword": "Then",
+          "text": "nous pouvons:"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais de procédure réduisent la succession"
+        },
+        {
+          "keyword": "And",
+          "text": "le partage peut prendre plusieurs années"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Donation avec réserve d'usufruit",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un parent veut transmettre de son vivant"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il veut garder les revenus du bien"
+        },
+        {
+          "keyword": "When",
+          "text": "il fait une donation avec réserve d'usufruit"
+        },
+        {
+          "keyword": "Then",
+          "text": ":"
+        },
+        {
+          "keyword": "And",
+          "text": "l'acte doit être passé devant notaire"
+        },
+        {
+          "keyword": "And",
+          "text": "les droits de donation sont:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Droits de succession selon le lien de parenté",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis <lien> du défunt"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'hérite de <montant>€"
+        },
+        {
+          "keyword": "Then",
+          "text": "les droits de succession sont de <taux>%"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "lien",
+            "montant",
+            "taux"
+          ],
+          "rows": [
+            {
+              "values": {
+                "lien": "enfant",
+                "montant": "40000",
+                "taux": "3"
+              }
+            },
+            {
+              "values": {
+                "lien": "enfant",
+                "montant": "100000",
+                "taux": "9"
+              }
+            },
+            {
+              "values": {
+                "lien": "frère/sœur",
+                "montant": "50000",
+                "taux": "30"
+              }
+            },
+            {
+              "values": {
+                "lien": "neveu/nièce",
+                "montant": "50000",
+                "taux": "35"
+              }
+            },
+            {
+              "values": {
+                "lien": "non-parent",
+                "montant": "50000",
+                "taux": "60"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.208Z"
+}

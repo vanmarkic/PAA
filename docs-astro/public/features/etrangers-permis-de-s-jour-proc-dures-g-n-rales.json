@@ -1,0 +1,468 @@
+{
+  "id": "etrangers-permis-de-s-jour-proc-dures-g-n-rales",
+  "name": "Permis de séjour - Procédures générales",
+  "description": "En tant qu'étranger en Belgique Je veux demander ou renouveler un permis de séjour Afin de résider légalement sur le territoire belge",
+  "category": "etrangers",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les frais de carte de séjour 2024 sont:"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de première carte A (séjour temporaire)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis un ressortissant de pays tiers"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un visa D valide pour études"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis inscrit dans une université belge"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une preuve de moyens de subsistance de 730€/mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une assurance maladie valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une adresse en Belgique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une carte A à la commune"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être recevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le type de carte devrait être \"A\""
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 180€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement devrait être environ 45 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Renouvellement de carte A",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une carte A qui expire dans 45 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis toujours étudiant"
+        },
+        {
+          "keyword": "And",
+          "text": "que je progresse dans mes études"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai maintenu mes moyens de subsistance"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renouvellement de ma carte A"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être acceptée"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 60€"
+        },
+        {
+          "keyword": "And",
+          "text": "ma nouvelle carte devrait être valide pour 1 an"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Demande de carte B (séjour illimité)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une carte A depuis 5 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai eu un séjour ininterrompu"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un emploi stable"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de condamnations pénales"
+        },
+        {
+          "keyword": "And",
+          "text": "que je parle français au niveau A2"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une carte B"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 200€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de traitement devrait être environ 120 jours"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Demande de carte E (citoyen UE)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis citoyen de l'Union européenne"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un emploi en Belgique"
+        },
+        {
+          "keyword": "And",
+          "text": "que je réside en Belgique depuis 3 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande mon enregistrement (carte E)"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être automatiquement acceptée"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 60€"
+        },
+        {
+          "keyword": "And",
+          "text": "ma carte devrait être valide pour 5 ans"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Demande de carte F (membre de famille UE)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je suis conjoint d'un citoyen UE"
+        },
+        {
+          "keyword": "And",
+          "text": "que mon conjoint a une carte E valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous vivons ensemble"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai une preuve de notre mariage"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une carte F"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 200€"
+        },
+        {
+          "keyword": "And",
+          "text": "ma carte devrait être liée au statut de mon conjoint"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Demande de carte H (carte bleue européenne)",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai une offre d'emploi hautement qualifié"
+        },
+        {
+          "keyword": "And",
+          "text": "que le salaire annuel est de 58000€"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai un diplôme universitaire reconnu"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'employeur a fait une demande de permis unique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une carte bleue européenne"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais être éligible"
+        },
+        {
+          "keyword": "And",
+          "text": "les frais devraient être 350€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai devrait être environ 90 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "ma famille devrait pouvoir me rejoindre"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Refus pour séjour irrégulier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon visa a expiré il y a 6 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de titre de séjour valide"
+        },
+        {
+          "keyword": "And",
+          "text": "que je n'ai pas de circonstances exceptionnelles"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande une carte de séjour"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande devrait être irrecevable"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais recevoir un ordre de quitter le territoire"
+        },
+        {
+          "keyword": "And",
+          "text": "le motif devrait être \"séjour irrégulier - pas de titre valide\""
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-8",
+      "name": "Contrôle de résidence par l'agent de quartier",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai déposé une demande de carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai déclaré mon adresse à la commune"
+        },
+        {
+          "keyword": "When",
+          "text": "l'agent de quartier fait le contrôle de résidence"
+        },
+        {
+          "keyword": "Then",
+          "text": "il devrait vérifier ma présence effective"
+        },
+        {
+          "keyword": "And",
+          "text": "il devrait faire maximum 2 visites"
+        },
+        {
+          "keyword": "And",
+          "text": "si je suis absent aux 2 visites"
+        },
+        {
+          "keyword": "Then",
+          "text": "ma demande pourrait être refusée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Calcul des frais selon le type de carte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que je demande une <type_carte>"
+        },
+        {
+          "keyword": "And",
+          "text": "que c'est une <type_demande>"
+        },
+        {
+          "keyword": "When",
+          "text": "je vérifie les frais"
+        },
+        {
+          "keyword": "Then",
+          "text": "le montant devrait être <frais>€"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_carte",
+            "type_demande",
+            "frais"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_carte": "Carte A",
+                "type_demande": "nouvelle",
+                "frais": "180"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte A",
+                "type_demande": "renouvellement",
+                "frais": "60"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte B",
+                "type_demande": "nouvelle",
+                "frais": "200"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte C",
+                "type_demande": "nouvelle",
+                "frais": "215"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte E",
+                "type_demande": "nouvelle",
+                "frais": "60"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte F",
+                "type_demande": "nouvelle",
+                "frais": "200"
+              }
+            },
+            {
+              "values": {
+                "type_carte": "Carte H",
+                "type_demande": "nouvelle",
+                "frais": "350"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-10",
+      "name": "Procédure accélérée moyennant supplément",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai besoin urgent de ma carte"
+        },
+        {
+          "keyword": "And",
+          "text": "que je suis éligible pour une carte A"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'accepte de payer le supplément"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la procédure accélérée"
+        },
+        {
+          "keyword": "Then",
+          "text": "les frais supplémentaires devraient être 180€"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai devrait être réduit à 15 jours ouvrables"
+        },
+        {
+          "keyword": "And",
+          "text": "je devrais avoir une attestation temporaire"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.209Z"
+}

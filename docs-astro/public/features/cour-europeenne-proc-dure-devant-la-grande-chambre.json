@@ -1,0 +1,283 @@
+{
+  "id": "cour-europeenne-proc-dure-devant-la-grande-chambre",
+  "name": "Procédure devant la Grande Chambre",
+  "description": "En tant que partie à une affaire CEDH Je veux demander le renvoi devant la Grande Chambre Afin d'obtenir un réexamen de l'affaire par la plus haute formation",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la Grande Chambre est composée de 17 juges"
+      },
+      {
+        "text": "Et qu'elle examine les affaires soulevant des questions graves"
+      },
+      {
+        "text": "Et que le renvoi doit être demandé dans les 3 mois"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Demande de renvoi recevable dans le délai",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt de Chambre a été rendu le \"01/09/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que l'arrêt soulève une question d'interprétation importante"
+        },
+        {
+          "keyword": "And",
+          "text": "que nous sommes le \"15/11/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que l'affaire concerne un problème systémique"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande le renvoi en Grande Chambre"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande devrait être dans le délai de 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le collège de 5 juges devrait examiner la demande"
+        },
+        {
+          "keyword": "And",
+          "text": "les critères d'acceptation devraient être évalués"
+        },
+        {
+          "keyword": "And",
+          "text": "la décision devrait être rendue sans motivation"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Dessaisissement en faveur de la Grande Chambre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une Chambre examine mon affaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'affaire soulève une question grave d'interprétation"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il pourrait y avoir contradiction avec un arrêt antérieur"
+        },
+        {
+          "keyword": "And",
+          "text": "que les parties ne s'opposent pas au dessaisissement"
+        },
+        {
+          "keyword": "When",
+          "text": "la Chambre propose le dessaisissement"
+        },
+        {
+          "keyword": "Then",
+          "text": "la Grande Chambre devrait être saisie directement"
+        },
+        {
+          "keyword": "And",
+          "text": "aucune demande de renvoi ne serait nécessaire"
+        },
+        {
+          "keyword": "And",
+          "text": "l'affaire serait réexaminée ab initio"
+        },
+        {
+          "keyword": "And",
+          "text": "une audience publique pourrait être organisée"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Audience devant la Grande Chambre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que mon affaire est devant la Grande Chambre"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'une audience est prévue le \"01/12/2024\""
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai préparé mes plaidoiries"
+        },
+        {
+          "keyword": "And",
+          "text": "que des tiers intervenants participent"
+        },
+        {
+          "keyword": "When",
+          "text": "l'audience se tient"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais disposer de 30 minutes de plaidoirie"
+        },
+        {
+          "keyword": "And",
+          "text": "pouvoir répondre aux questions des juges"
+        },
+        {
+          "keyword": "And",
+          "text": "les tiers intervenants auraient un temps limité"
+        },
+        {
+          "keyword": "And",
+          "text": "l'audience serait publique et retransmise"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Arrêt définitif de la Grande Chambre",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la Grande Chambre a délibéré"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle a trouvé une violation de l'article 6"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'elle accorde 50000 euros de satisfaction équitable"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'arrêt est prononcé publiquement"
+        },
+        {
+          "keyword": "When",
+          "text": "l'arrêt est rendu"
+        },
+        {
+          "keyword": "Then",
+          "text": "il devrait être définitif immédiatement"
+        },
+        {
+          "keyword": "And",
+          "text": "aucun recours ne serait possible"
+        },
+        {
+          "keyword": "And",
+          "text": "l'État devrait l'exécuter dans les 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "le Comité des Ministres superviserait l'exécution"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Évaluation des critères de renvoi",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt de Chambre concerne \"<question>\""
+        },
+        {
+          "keyword": "And",
+          "text": "que l'impact est \"<impact>\""
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il y a \"<contradiction>\""
+        },
+        {
+          "keyword": "When",
+          "text": "le collège évalue la demande"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'acceptation devrait être \"<decision>\""
+        },
+        {
+          "keyword": "And",
+          "text": "la raison principale serait \"<raison>\""
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "question",
+            "impact",
+            "contradiction",
+            "decision",
+            "raison"
+          ],
+          "rows": [
+            {
+              "values": {
+                "question": "interprétation nouvelle",
+                "impact": "systémique",
+                "contradiction": "aucune",
+                "decision": "acceptée",
+                "raison": "question grave d'interprétation"
+              }
+            },
+            {
+              "values": {
+                "question": "application standard",
+                "impact": "individuel",
+                "contradiction": "aucune",
+                "decision": "refusée",
+                "raison": "pas de question grave"
+              }
+            },
+            {
+              "values": {
+                "question": "principe fondamental",
+                "impact": "général",
+                "contradiction": "arrêt antérieur",
+                "decision": "acceptée",
+                "raison": "risque de contradiction"
+              }
+            },
+            {
+              "values": {
+                "question": "procédure habituelle",
+                "impact": "limité",
+                "contradiction": "aucune",
+                "decision": "refusée",
+                "raison": "importance insuffisante"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}

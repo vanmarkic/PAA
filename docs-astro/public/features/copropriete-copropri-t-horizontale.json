@@ -1,0 +1,82 @@
+{
+  "id": "copropriete-copropri-t-horizontale",
+  "name": "Copropriété Horizontale",
+  "description": "En tant que copropriété horizontale Je veux gérer les spécificités des maisons mitoyennes Afin d'organiser la gestion des parties communes",
+  "category": "copropriete",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné qu'il s'agit de maisons mitoyennes"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Gestion voiries privées",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que la copropriété gère des voiries privées"
+        },
+        {
+          "keyword": "When",
+          "text": "l'entretien est planifié"
+        },
+        {
+          "keyword": "Then",
+          "text": "il comprend:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Mitoyenneté des murs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un mur mitoyen nécessite réparation"
+        },
+        {
+          "keyword": "When",
+          "text": "les travaux sont nécessaires"
+        },
+        {
+          "keyword": "Then",
+          "text": "la répartition est:"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Jardins privatifs vs communs",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que certains jardins sont privatifs"
+        },
+        {
+          "keyword": "And",
+          "text": "d'autres espaces sont communs"
+        },
+        {
+          "keyword": "When",
+          "text": "l'entretien est organisé"
+        },
+        {
+          "keyword": "Then",
+          "text": "les responsabilités sont:"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.203Z"
+}

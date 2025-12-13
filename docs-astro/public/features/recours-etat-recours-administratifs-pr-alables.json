@@ -1,0 +1,464 @@
+{
+  "id": "recours-etat-recours-administratifs-pr-alables",
+  "name": "Recours administratifs préalables",
+  "description": "En tant qu'administré Je veux introduire un recours administratif Afin d'obtenir la révision d'une décision sans passer par le tribunal",
+  "category": "recours-etat",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que les recours administratifs sont généralement gratuits"
+      },
+      {
+        "text": "Et qu'ils peuvent être obligatoires avant le recours juridictionnel"
+      },
+      {
+        "text": "Et qu'ils suspendent parfois les délais de recours contentieux"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Recours gracieux auprès de l'auteur de l'acte",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision défavorable de l'administration communale"
+        },
+        {
+          "keyword": "And",
+          "text": "que je souhaite d'abord tenter un recours amiable"
+        },
+        {
+          "keyword": "And",
+          "text": "que la décision date de moins de 2 mois"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis un recours gracieux"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois l'adresser à l'autorité qui a pris la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration a 60 jours pour répondre"
+        },
+        {
+          "keyword": "And",
+          "text": "le silence vaut décision implicite de rejet après 60 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "je conserve mon droit au recours contentieux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Recours hiérarchique auprès du supérieur",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un fonctionnaire a pris une décision défavorable"
+        },
+        {
+          "keyword": "And",
+          "text": "que cette décision peut être révisée par son supérieur"
+        },
+        {
+          "keyword": "And",
+          "text": "que la voie hiérarchique est ouverte"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis un recours hiérarchique"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois l'adresser au supérieur hiérarchique"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est généralement de 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "le supérieur peut annuler, modifier ou confirmer la décision"
+        },
+        {
+          "keyword": "And",
+          "text": "ce recours est parfois obligatoire avant le contentieux"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Recours administratif obligatoire en matière fiscale",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu un avertissement-extrait de rôle"
+        },
+        {
+          "keyword": "And",
+          "text": "que je conteste le montant de l'impôt"
+        },
+        {
+          "keyword": "When",
+          "text": "je veux contester cette imposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois d'abord introduire une réclamation fiscale"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de 6 mois à partir de l'avertissement"
+        },
+        {
+          "keyword": "And",
+          "text": "cette réclamation est obligatoire avant le tribunal"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration a 6 mois pour répondre (prolongeable)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-4",
+      "name": "Recours devant une commission administrative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une commission de recours existe pour ma matière"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'ai reçu une décision susceptible de recours"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis mon recours devant la commission"
+        },
+        {
+          "keyword": "Then",
+          "text": "la commission doit m'entendre si je le demande"
+        },
+        {
+          "keyword": "And",
+          "text": "elle rend un avis ou une décision selon ses compétences"
+        },
+        {
+          "keyword": "And",
+          "text": "les délais varient selon le type de commission"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure est généralement contradictoire"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-5",
+      "name": "Médiation administrative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai un différend avec l'administration"
+        },
+        {
+          "keyword": "And",
+          "text": "que je préfère une solution négociée"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un médiateur est compétent pour ma situation"
+        },
+        {
+          "keyword": "When",
+          "text": "je saisis le médiateur"
+        },
+        {
+          "keyword": "Then",
+          "text": "la médiation est gratuite et confidentielle"
+        },
+        {
+          "keyword": "And",
+          "text": "le médiateur tente de rapprocher les points de vue"
+        },
+        {
+          "keyword": "And",
+          "text": "il peut faire des recommandations"
+        },
+        {
+          "keyword": "And",
+          "text": "la médiation n'empêche pas le recours ultérieur"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-6",
+      "name": "Recours contre le silence de l'administration",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai introduit une demande il y a 4 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'administration n'a pas répondu"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'aucun délai spécifique n'est prévu"
+        },
+        {
+          "keyword": "When",
+          "text": "le délai de 4 mois est écoulé"
+        },
+        {
+          "keyword": "Then",
+          "text": "le silence vaut décision implicite de rejet"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux contester cette décision implicite"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois prouver ma demande initiale"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai de recours court à partir du 4ème mois"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-7",
+      "name": "Choix du recours approprié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "que j'ai reçu une décision de type <type_decision>"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'autorité est <autorite>"
+        },
+        {
+          "keyword": "When",
+          "text": "je cherche le recours approprié"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais utiliser <type_recours>"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai est de <delai> jours"
+        },
+        {
+          "keyword": "And",
+          "text": "le recours est <caractere>"
+        }
+      ],
+      "examples": [
+        {
+          "name": "",
+          "tags": [],
+          "headers": [
+            "type_decision",
+            "autorite",
+            "type_recours",
+            "delai",
+            "caractere"
+          ],
+          "rows": [
+            {
+              "values": {
+                "type_decision": "permis refusé",
+                "autorite": "commune",
+                "type_recours": "hiérarchique",
+                "delai": "30",
+                "caractere": "facultatif"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "sanction disciplinaire",
+                "autorite": "administration",
+                "type_recours": "hiérarchique",
+                "delai": "30",
+                "caractere": "obligatoire"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "impôt",
+                "autorite": "SPF Finances",
+                "type_recours": "réclamation",
+                "delai": "180",
+                "caractere": "obligatoire"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "aide sociale",
+                "autorite": "CPAS",
+                "type_recours": "tribunal travail",
+                "delai": "90",
+                "caractere": "direct"
+              }
+            },
+            {
+              "values": {
+                "type_decision": "amende administrative",
+                "autorite": "commune",
+                "type_recours": "gracieux",
+                "delai": "30",
+                "caractere": "facultatif"
+              }
+            }
+          ]
+        }
+      ],
+      "isOutline": true
+    },
+    {
+      "id": "scenario-8",
+      "name": "Recours administratif avec effet suspensif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une sanction administrative m'a été infligée"
+        },
+        {
+          "keyword": "And",
+          "text": "que le recours a un effet suspensif légal"
+        },
+        {
+          "keyword": "When",
+          "text": "j'introduis mon recours dans les délais"
+        },
+        {
+          "keyword": "Then",
+          "text": "l'exécution de la sanction est suspendue"
+        },
+        {
+          "keyword": "And",
+          "text": "elle reste suspendue jusqu'à la décision sur recours"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois respecter scrupuleusement les délais"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration doit me notifier sa décision"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-9",
+      "name": "Opposition administrative",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une décision a été prise en mon absence"
+        },
+        {
+          "keyword": "And",
+          "text": "que j'avais un empêchement légitime"
+        },
+        {
+          "keyword": "And",
+          "text": "que la procédure prévoit l'opposition"
+        },
+        {
+          "keyword": "When",
+          "text": "je forme opposition"
+        },
+        {
+          "keyword": "Then",
+          "text": "la décision est remise en question"
+        },
+        {
+          "keyword": "And",
+          "text": "une nouvelle procédure contradictoire s'ouvre"
+        },
+        {
+          "keyword": "And",
+          "text": "je dois justifier mon absence"
+        },
+        {
+          "keyword": "And",
+          "text": "le délai d'opposition est généralement court (15-30 jours)"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-10",
+      "name": "Révision administrative pour fait nouveau",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'une décision définitive a été prise"
+        },
+        {
+          "keyword": "And",
+          "text": "que des éléments nouveaux sont apparus"
+        },
+        {
+          "keyword": "And",
+          "text": "que ces éléments auraient changé la décision"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la révision administrative"
+        },
+        {
+          "keyword": "Then",
+          "text": "je dois prouver le caractère nouveau des éléments"
+        },
+        {
+          "keyword": "And",
+          "text": "l'administration peut rouvrir le dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "la révision reste exceptionnelle"
+        },
+        {
+          "keyword": "And",
+          "text": "elle ne remet pas en cause la sécurité juridique"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.215Z"
+}

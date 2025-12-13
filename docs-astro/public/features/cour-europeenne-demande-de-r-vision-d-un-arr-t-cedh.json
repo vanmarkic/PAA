@@ -1,0 +1,152 @@
+{
+  "id": "cour-europeenne-demande-de-r-vision-d-un-arr-t-cedh",
+  "name": "Demande de révision d'un arrêt CEDH",
+  "description": "En tant que partie à un arrêt définitif Je veux demander la révision de l'arrêt Afin de faire prendre en compte un fait nouveau décisif",
+  "category": "cour-europeenne",
+  "tags": [],
+  "background": {
+    "steps": [
+      {
+        "text": "Étant donné que la révision est exceptionnelle (Règle 80)"
+      },
+      {
+        "text": "Et qu'un fait nouveau décisif doit être découvert"
+      },
+      {
+        "text": "Et que ce fait était inconnu lors de l'arrêt"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Découverte d'un document falsifié",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un arrêt a été rendu il y a 2 ans"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'un document clé était falsifié"
+        },
+        {
+          "keyword": "And",
+          "text": "que la falsification vient d'être prouvée"
+        },
+        {
+          "keyword": "And",
+          "text": "que ce document était déterminant"
+        },
+        {
+          "keyword": "When",
+          "text": "je demande la révision"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais fournir la preuve de falsification"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer pourquoi c'était impossible à découvrir avant"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer l'impact sur l'arrêt"
+        },
+        {
+          "keyword": "And",
+          "text": "respecter le délai de 6 mois depuis la découverte"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-2",
+      "name": "Témoin ayant menti sous serment",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un témoin clé a été condamné pour faux témoignage"
+        },
+        {
+          "keyword": "And",
+          "text": "que son témoignage était crucial dans l'affaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que la condamnation date d'il y a 3 mois"
+        },
+        {
+          "keyword": "And",
+          "text": "que cela change fondamentalement les faits"
+        },
+        {
+          "keyword": "When",
+          "text": "je soumets la demande de révision"
+        },
+        {
+          "keyword": "Then",
+          "text": "je devrais joindre le jugement pénal"
+        },
+        {
+          "keyword": "And",
+          "text": "expliquer l'importance du témoignage"
+        },
+        {
+          "keyword": "And",
+          "text": "démontrer qu'un arrêt différent aurait été rendu"
+        },
+        {
+          "keyword": "And",
+          "text": "la Cour devrait examiner la demande"
+        }
+      ],
+      "isOutline": false
+    },
+    {
+      "id": "scenario-3",
+      "name": "Fait nouveau sans impact décisif",
+      "tags": [],
+      "steps": [
+        {
+          "keyword": "Given",
+          "text": "qu'un nouveau document a été trouvé"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il apporte des précisions mineures"
+        },
+        {
+          "keyword": "And",
+          "text": "qu'il ne change pas l'essence de l'affaire"
+        },
+        {
+          "keyword": "And",
+          "text": "que les violations resteraient établies"
+        },
+        {
+          "keyword": "When",
+          "text": "j'évalue la pertinence pour révision"
+        },
+        {
+          "keyword": "Then",
+          "text": "la demande ne devrait pas être recevable"
+        },
+        {
+          "keyword": "And",
+          "text": "le fait ne serait pas considéré comme décisif"
+        },
+        {
+          "keyword": "And",
+          "text": "la procédure normale resterait close"
+        }
+      ],
+      "isOutline": false
+    }
+  ],
+  "metadata": {},
+  "generated": "2025-12-13T14:45:22.206Z"
+}
