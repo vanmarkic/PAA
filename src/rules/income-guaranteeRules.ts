@@ -273,7 +273,7 @@ export async function checkIncomeGuaranteeEligibility(
 
     if (ineligibleEvent) {
       return {
-        benefitType: 'income-guarantee',
+        benefitType: 'agr',
         isEligible: false,
         reason: ineligibleEvent.params?.reason as string,
       };
@@ -281,21 +281,24 @@ export async function checkIncomeGuaranteeEligibility(
 
     if (eligibleEvent) {
       const calculatedAmount = calculateIncomeGuaranteeAmount(input.grossMonthlySalary);
+      const totalRevenue = calculateTotalRevenueWithAGR(input.grossMonthlySalary, true);
+      const optimizationAdvice = input.weeklyHours ? getOptimizationAdvice(input.weeklyHours) : undefined;
+
       return {
-        benefitType: 'income-guarantee',
+        benefitType: 'agr',
         isEligible: true,
         calculatedAmount: calculatedAmount,
-        additionalInfo: {
-          canCombineWithSalary: eligibleEvent.params?.canCombineWithSalary,
-          canCombineWithFamilyAllowances: eligibleEvent.params?.canCombineWithFamilyAllowances,
-          totalRevenue: calculateTotalRevenueWithAGR(input.grossMonthlySalary, true),
-          optimizationAdvice: input.weeklyHours ? getOptimizationAdvice(input.weeklyHours) : undefined,
-        },
+        optimizationSuggestion: optimizationAdvice,
+        notes: [
+          'Peut être cumulé avec le salaire',
+          'Peut être cumulé avec les allocations familiales',
+          `Revenu total avec AGR: ${totalRevenue}€`,
+        ],
       };
     }
 
     return {
-      benefitType: 'income-guarantee',
+      benefitType: 'agr',
       isEligible: false,
       reason: 'conditions non remplies',
     };

@@ -14,7 +14,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck, LegalReference } from '../domain/types';
+import { EligibilityCheck, LegalReference } from '../../../../../domain/types';
 
 // CPAS Medical Card Coverage 2024
 export const CPAS_MEDICAL_CARD_COVERAGE = {

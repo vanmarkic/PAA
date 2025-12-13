@@ -22,7 +22,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../../../../../domain/types';
 
 // ============================================================================
 // REGIONAL CONSTANTS 2024-2025

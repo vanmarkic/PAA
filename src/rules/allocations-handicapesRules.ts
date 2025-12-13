@@ -847,6 +847,7 @@ export async function checkAllocationsHandicapesEligibility(
 
     if (aiEligibleEvent || arrEligibleEvent) {
       return {
+        benefitType: 'disability-allowance',
         isEligible: true,
         ...calculatedResult,
       };
@@ -854,13 +855,14 @@ export async function checkAllocationsHandicapesEligibility(
 
     if (elderlyAIOnlyEvent) {
       return {
+        benefitType: 'disability-allowance',
         isEligible: true,
-        type: 'AI_ONLY',
         ...calculatedResult,
       };
     }
 
     return {
+      benefitType: 'disability-allowance',
       isEligible: false,
       reason: 'Conditions non remplies',
     };

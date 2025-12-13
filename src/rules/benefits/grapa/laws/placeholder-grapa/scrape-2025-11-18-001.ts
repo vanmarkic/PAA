@@ -15,8 +15,8 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
-import { GRAPA_LEGAL_FRAMEWORK, GRAPA_AMOUNTS_2024 } from '../legal-sources/belgianLegalSources';
+import { User, EligibilityCheck } from '../../../../../domain/types';
+import { GRAPA_LEGAL_FRAMEWORK, GRAPA_AMOUNTS_2024 } from '../../../../../legal-sources/belgianLegalSources';
 
 // Constants from GRAPA law 2024
 const MIN_AGE_GRAPA = 65; // Will increase to 66 in 2025, 67 in 2030

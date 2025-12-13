@@ -685,7 +685,7 @@ export async function checkAssuranceMaladieEligibility(
 
     if (ineligibleEvent) {
       return {
-        benefitType: 'assurance-maladie',
+        benefitType: 'health-insurance',
         isEligible: false,
         reason: ineligibleEvent.params?.reason as string,
       };
@@ -705,43 +705,44 @@ export async function checkAssuranceMaladieEligibility(
         estBIM: estBIMCalcule,
       });
 
-      const additionalInfo: Record<string, unknown> = {
-        estBIM: estBIMCalcule,
-        plafondMAF,
-        mafAtteint,
-        tauxRemboursementConsultation: estBIMCalcule ? 0.90 : 0.75,
-        exempleTicketModerateur: exempleRemboursement.ticketModerateur,
-      };
+      // Build notes array with additional information
+      const notes: string[] = [
+        `Statut BIM: ${estBIMCalcule ? 'Oui' : 'Non'}`,
+        `Plafond MAF: ${plafondMAF}€`,
+        `MAF atteint: ${mafAtteint ? 'Oui' : 'Non'}`,
+        `Taux remboursement consultation: ${estBIMCalcule ? '90%' : '75%'}`,
+        `Exemple ticket modérateur: ${exempleRemboursement.ticketModerateur}€`,
+      ];
 
       // Add chronic illness benefits if applicable
       if (forfaitChroniqueEvent) {
-        additionalInfo.forfaitMaladeCronique = INAMI_CONSTANTS.FORFAIT_MALADE_CHRONIQUE;
-        additionalInfo.tiersPaiantObligatoire = true;
+        notes.push(`Forfait malade chronique: ${INAMI_CONSTANTS.FORFAIT_MALADE_CHRONIQUE}€`);
+        notes.push('Tiers payant obligatoire');
       }
 
       // Add DMG information
       if (user.aDMG) {
-        additionalInfo.consultationsAnnuellesDMG = INAMI_CONSTANTS.CONSULTATIONS_ANNUELLES_DMG;
+        notes.push(`Consultations annuelles DMG: ${INAMI_CONSTANTS.CONSULTATIONS_ANNUELLES_DMG}`);
       } else {
-        additionalInfo.reductionSansDMG = INAMI_CONSTANTS.REDUCTION_SANS_DMG;
+        notes.push(`Réduction sans DMG: ${INAMI_CONSTANTS.REDUCTION_SANS_DMG}€`);
       }
 
       // Add specific info for independents
       if (user.statutAssure === 'independant') {
-        additionalInfo.delaiCarence = INAMI_CONSTANTS.DELAI_CARENCE_INDEPENDANT;
+        notes.push(`Délai de carence: ${INAMI_CONSTANTS.DELAI_CARENCE_INDEPENDANT.INDEMNITE_COMPLETE} jours`);
       }
 
       return {
-        benefitType: 'assurance-maladie',
+        benefitType: 'health-insurance',
         isEligible: true,
         reason: eligibleEvent?.params?.reason as string || bimAutomatiqueEvent?.params?.reason as string || bimRevenusEvent?.params?.reason as string,
         calculatedAmount: forfaitChroniqueEvent ? INAMI_CONSTANTS.FORFAIT_MALADE_CHRONIQUE : undefined,
-        additionalInfo,
+        notes,
       };
     }
 
     return {
-      benefitType: 'assurance-maladie',
+      benefitType: 'health-insurance',
       isEligible: false,
       reason: 'conditions non remplies',
     };

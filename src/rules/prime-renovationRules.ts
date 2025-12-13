@@ -667,10 +667,7 @@ export async function checkPrimeRenovationEligibility(
         benefitType: 'prime-renovation' as any,
         isEligible: false,
         reason: ineligibleEvent.params?.reason as string,
-        details: {
-          recommendation: ineligibleEvent.params?.recommendation,
-          federalTaxAdvantage: ineligibleEvent.params?.federalTaxAdvantage,
-        },
+        notes: ineligibleEvent.params?.recommendation ? [ineligibleEvent.params.recommendation as string] : undefined,
       };
     }
 
@@ -691,20 +688,18 @@ export async function checkPrimeRenovationEligibility(
         user.year
       );
 
+      const notes: string[] = [];
+      if (eligibleEvent.params?.message) notes.push(eligibleEvent.params.message as string);
+      if (eligibleEvent.params?.system) notes.push(`Système: ${eligibleEvent.params.system}`);
+      if (eligibleEvent.params?.processingTime) notes.push(`Délai: ${eligibleEvent.params.processingTime}`);
+      if (federalTaxAdvantage > 0) notes.push(`Avantage fiscal fédéral: ${federalTaxAdvantage}€`);
+
       return {
         benefitType: 'prime-renovation' as any,
         isEligible: true,
         calculatedAmount: calculatedAmount,
-        details: {
-          category: eligibleEvent.params?.category,
-          interventionRate: eligibleEvent.params?.interventionRate,
-          auditRequired: eligibleEvent.params?.auditRequired,
-          auditSubsidy: eligibleEvent.params?.auditSubsidy,
-          federalTaxAdvantage: federalTaxAdvantage > 0 ? federalTaxAdvantage : undefined,
-          message: eligibleEvent.params?.message,
-          system: eligibleEvent.params?.system,
-          processingTime: eligibleEvent.params?.processingTime,
-        },
+        category: eligibleEvent.params?.category as string,
+        notes: notes.length > 0 ? notes : undefined,
       };
     }
 

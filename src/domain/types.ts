@@ -41,15 +41,24 @@ export type BenefitType =
   | 'aide-personnes-agees' // Aide aux Personnes Âgées
   // Employment
   | 'unemployment' // Allocations de Chômage
+  | 'allocations-chomage' // Allocations de Chômage (FR alias)
   | 'professional-training' // Formation Professionnelle
+  | 'formation-professionnelle' // Formation Professionnelle (FR alias)
   | 'professional-integration' // Insertion Professionnelle
+  | 'insertion-professionnelle' // Insertion Professionnelle (FR alias)
   | 'time-credit' // Crédit-temps
+  | 'credit-temps' // Crédit-temps (FR alias)
   // Family & Child
   | 'family-allowance' // Allocations Familiales
+  | 'allocations-familiales' // Allocations Familiales (FR alias)
   | 'birth-allowance' // Prime de Naissance
+  | 'prime-naissance' // Prime de Naissance (FR alias)
   | 'maternity-leave' // Congé Maternité
+  | 'conge-maternite' // Congé Maternité (FR alias)
   | 'parental-leave' // Congé Parental
+  | 'conge-parental' // Congé Parental (FR alias)
   | 'childcare' // Garde d'Enfants
+  | 'garde-enfants' // Garde d'Enfants (FR alias)
   // Housing & Energy
   | 'housing-allowance' // Aide au Logement (legacy)
   | 'aide-logement' // Aide au Logement
@@ -67,10 +76,18 @@ export type BenefitType =
   | 'marital-quotient' // Quotient Conjugal
   // Healthcare & Disability
   | 'disability-allowance' // Allocations Handicapés
+  | 'allocations-handicapes' // Allocations Handicapés (FR alias)
   | 'health-insurance' // Assurance Maladie
+  | 'assurance-maladie' // Assurance Maladie (FR alias)
   | 'medical-card' // Carte Médicale
+  | 'carte-medicale' // Carte Médicale (FR alias)
   | 'mental-health-care' // Soins Santé Mentale
-  | 'sick-leave'; // Congé Maladie
+  | 'soins-sante-mentale' // Soins Santé Mentale (FR alias)
+  | 'sick-leave' // Congé Maladie
+  | 'conge-maladie' // Congé Maladie (FR alias)
+  // Agriculture
+  | 'bail-ferme' // Bail à Ferme
+  | 'income-guarantee'; // Income Guarantee (generic)
 
 export interface Condition {
   field: string;

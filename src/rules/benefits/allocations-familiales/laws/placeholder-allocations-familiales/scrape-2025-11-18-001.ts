@@ -20,8 +20,8 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
-import { FAMILY_ALLOWANCES_LEGAL_FRAMEWORK, FAMILY_ALLOWANCES_AMOUNTS_2024 } from '../legal-sources/belgianLegalSources';
+import { User, EligibilityCheck } from '../../../../../domain/types';
+import { FAMILY_ALLOWANCES_LEGAL_FRAMEWORK, FAMILY_ALLOWANCES_AMOUNTS_2024 } from '../../../../../legal-sources/belgianLegalSources';
 
 // Regional types
 export type BelgianRegion = 'brussels' | 'wallonia' | 'flanders';

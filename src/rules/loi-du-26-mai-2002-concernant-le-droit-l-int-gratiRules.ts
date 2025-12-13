@@ -453,6 +453,12 @@ export async function checkLoiDu26Mai2002ConcernantLeDroitLIntGratiEligibility(
     isEligible: false, // Will be set based on eligibility events
   };
 
+  const baseResult: EligibilityCheck = {
+    benefitType: 'ris',
+    isEligible: false,
+    reason: 'Conditions non vérifiées',
+  };
+
   try {
     const results = await loiDu26Mai2002ConcernantLeDroitLIntGratiEngineInstance.run(facts);
 

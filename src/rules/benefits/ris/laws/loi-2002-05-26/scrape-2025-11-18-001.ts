@@ -12,8 +12,8 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { RISUser, RISEligibilityResult, RIS_AMOUNTS_2024, RIS_CONSTANTS, RISCategory } from '../domain/risTypes';
-import { RIS_LEGAL_FRAMEWORK, RIS_KEY_ARTICLES } from '../legal-sources/belgianLegalSources';
+import { RISUser, RISEligibilityResult, RIS_AMOUNTS_2024, RIS_CONSTANTS, RISCategory } from '../../../../../domain/risTypes';
+import { RIS_LEGAL_FRAMEWORK, RIS_KEY_ARTICLES } from '../../../../../legal-sources/belgianLegalSources';
 
 /**
  * RIS Rules Version Metadata

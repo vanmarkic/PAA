@@ -8,7 +8,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../../../../../domain/types';
 
 /**
  * Create the DeductionEmpruntHypothecaire eligibility rules engine

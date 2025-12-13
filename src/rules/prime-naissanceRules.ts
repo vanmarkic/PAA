@@ -597,44 +597,42 @@ export async function checkPrimeNaissanceEligibility(
         input.numberOfChildren
       );
 
-      const additionalInfo: Record<string, any> = {
-        region: input.region,
-        competentAuthority: getCompetentAuthority(input.region),
-        requiredDocuments: getRequiredDocuments(input),
-        paymentDelay: `${PRIME_NAISSANCE_CONSTANTS.PAYMENT_DELAY_MONTHS} mois`,
-      };
+      const notes: string[] = [
+        `Région: ${input.region}`,
+        `Autorité compétente: ${getCompetentAuthority(input.region)}`,
+        `Délai de paiement: ${PRIME_NAISSANCE_CONSTANTS.PAYMENT_DELAY_MONTHS} mois`,
+      ];
 
       if (eligibleLateEvent) {
-        additionalInfo.requiresJustification = true;
-        additionalInfo.message = 'Demande tardive - justification requise';
-      }
-
-      if (input.isMultipleBirth && input.numberOfChildren && input.numberOfChildren > 1) {
-        additionalInfo.breakdown = calculateMultipleBirthBreakdown(
-          input.region,
-          input.childRank,
-          input.numberOfChildren
-        );
+        notes.push('Demande tardive - justification requise');
       }
 
       if (input.isAnticipatedRequest) {
-        additionalInfo.paymentTiming = 'au 6ème mois de grossesse';
-        additionalInfo.requiresMedicalCertificate = true;
+        notes.push('Paiement au 6ème mois de grossesse');
+        notes.push('Certificat médical requis');
       }
 
       if (input.isAdoption) {
-        additionalInfo.requiresAdoptionJudgment = true;
+        notes.push('Jugement d\'adoption requis');
       }
 
       if (input.region === 'flandre') {
-        additionalInfo.system = 'Groeipakket';
+        notes.push('Système: Groeipakket');
       }
+
+      const breakdown = input.isMultipleBirth && input.numberOfChildren && input.numberOfChildren > 1
+        ? calculateMultipleBirthBreakdown(input.region, input.childRank, input.numberOfChildren)
+        : undefined;
 
       return {
         benefitType: 'prime-naissance' as any,
         isEligible: true,
         calculatedAmount,
-        additionalInfo,
+        notes,
+        nextSteps: getRequiredDocuments(input),
+        breakdown: breakdown ? {
+          total: breakdown.total,
+        } : undefined,
       };
     }
 

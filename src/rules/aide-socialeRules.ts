@@ -665,12 +665,7 @@ export async function checkAideSocialeEligibility(
         isEligible: true,
         calculatedAmount: montant,
         reason: eligibleEvent.params?.motif as string,
-        details: {
-          typeAide,
-          aideDetails: eligibleEvent.params?.aideDetails as string[],
-          recuperable: eligibleEvent.params?.recuperable as boolean,
-          delaiRecours: AIDE_SOCIALE_CONSTANTS.RECOURS_DELAI_MOIS,
-        },
+        notes: eligibleEvent.params?.aideDetails as string[],
       };
     }
 

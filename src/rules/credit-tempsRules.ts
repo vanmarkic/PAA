@@ -884,7 +884,7 @@ export async function checkCreditTempsEligibility(
 
     if (procedureErrorEvent) {
       return {
-        benefitType: 'credit-temps',
+        benefitType: 'time-credit',
         isEligible: false,
         reason: procedureErrorEvent.params?.reason as string,
         typeConge: typeConge,
@@ -894,14 +894,14 @@ export async function checkCreditTempsEligibility(
 
     if (ineligibleEvent) {
       return {
-        benefitType: 'credit-temps',
+        benefitType: 'time-credit',
         isEligible: false,
         reason: ineligibleEvent.params?.reason as string,
       };
     }
 
     return {
-      benefitType: 'credit-temps',
+      benefitType: 'time-credit',
       isEligible: false,
       reason: 'Conditions non remplies',
     };

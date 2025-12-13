@@ -873,13 +873,83 @@ export async function checkLogementSocialEligibility(
       patrimoineDansLimites_flandres = user.patrimoineMobilier <= LOGEMENT_SOCIAL_CONSTANTS.FLANDRES_PATRIMOINE_LIMITE_2025;
     }
   } else {
-    // Brussels - Variable thresholds, using Wallonia limits as default
-    revenuDansLimites = revenuImposable <= seuilsReferenceWallonie[compositionMenage] || revenuImposable <= seuilsReferenceWallonie['couple_ou_isole_avec_enfants'];
+    // Brussels - Variable thresholds, simplified check (no patrimony requirement)
+    plafondApplicable = calculateWalloniaPlafond(user.situationFamiliale, user.nombreEnfants);
     patrimoineDansLimites_flandres = true; // Not applicable for Brussels
   }
 
-  return {
-    revenuDansLimites,
+  // Add computed facts to the user object for the rules engine
+  const facts = {
+    ...user,
+    anneeReference: annee,
+    revenuDansLimites_wallonie,
+    revenuDansLimites_flandres,
+    revenuDepasse_wallonie_menage,
+    revenuDepasse_flandres_2024_autres,
     patrimoineDansLimites_flandres,
   };
+
+  // Run the rules engine
+  const results = await logementSocialEngineInstance.run(facts);
+
+  // Determine eligibility based on events
+  const hasIneligibleEvent = results.events.some(e =>
+    e.type === 'logementSocial-ineligible'
+  );
+  const hasEligibleEvent = results.events.some(e =>
+    e.type === 'logementSocial-eligible' || e.type === 'logementSocial-eligible-urgence'
+  );
+  const hasPriorityEvent = results.events.some(e =>
+    e.type === 'logementSocial-priorite'
+  );
+
+  const isEligible = !hasIneligibleEvent && hasEligibleEvent;
+
+  // Extract reason from events
+  let reason: string | undefined;
+  if (hasIneligibleEvent) {
+    const ineligibleEvent = results.events.find(e => e.type === 'logementSocial-ineligible');
+    reason = ineligibleEvent?.params?.reason;
+  }
+
+  // Calculate estimated rent
+  const loyerEstime = isEligible
+    ? calculateLogementSocialRent(user.revenuImposable, user.region)
+    : undefined;
+
+  // Calculate priority points (mainly for Wallonia)
+  const pointsPriorite = user.region === 'Wallonie'
+    ? calculatePriorityPoints(user)
+    : undefined;
+
+  // Get waiting time estimate
+  const delaiAttenteEstime = isEligible
+    ? getEstimatedWaitingTime(user.region)
+    : undefined;
+
+  // Get required documents
+  const documentsRequis = isEligible
+    ? getRequiredDocuments(user).map(d => d.document)
+    : undefined;
+
+  // Extract priority reasons
+  const motifsPriorite = results.events
+    .filter(e => e.type === 'logementSocial-priorite')
+    .map(e => e.params?.message || e.params?.priorite);
+
+  // Build the result
+  const result: LogementSocialEligibilityResult = {
+    benefitType: 'logement-social',
+    isEligible,
+    reason,
+    plafondApplicable,
+    delaiAttenteEstime,
+    pointsPriorite,
+    documentsRequis,
+    loyerEstime,
+    prioriteSupplementaire: hasPriorityEvent,
+    motifsPriorite: motifsPriorite.length > 0 ? motifsPriorite : undefined,
+  };
+
+  return result;
 }

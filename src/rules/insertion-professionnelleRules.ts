@@ -670,7 +670,7 @@ export async function checkInsertionProfessionnelleEligibility(
 
     if (ineligibleEvent) {
       return {
-        benefitType: 'insertion-professionnelle',
+        benefitType: 'professional-integration',
         isEligible: false,
         reason: ineligibleEvent.params?.reason as string,
       };
@@ -678,22 +678,23 @@ export async function checkInsertionProfessionnelleEligibility(
 
     if (eligibleEvent) {
       const device = eligibleEvent.params?.device as InsertionDevice;
+      const benefits = eligibleEvent.params?.benefits as string[];
+      const employerBenefits = eligibleEvent.params?.employerBenefits as string[];
+      const obligations = eligibleEvent.params?.obligations as string[];
+      const maxDuration = eligibleEvent.params?.maxDuration as string;
+
       return {
-        benefitType: 'insertion-professionnelle',
+        benefitType: 'professional-integration',
         isEligible: true,
         calculatedAmount: calculateInsertionProfessionnelleAmount(device, 1),
-        details: {
-          device: device,
-          maxDuration: eligibleEvent.params?.maxDuration,
-          benefits: eligibleEvent.params?.benefits,
-          employerBenefits: eligibleEvent.params?.employerBenefits,
-          obligations: eligibleEvent.params?.obligations,
-        },
+        duration: maxDuration,
+        obligations: obligations,
+        notes: [...benefits, ...employerBenefits.map(b => `Employeur: ${b}`)],
       };
     }
 
     return {
-      benefitType: 'insertion-professionnelle',
+      benefitType: 'professional-integration',
       isEligible: false,
       reason: 'Conditions non remplies pour le dispositif demandé',
     };

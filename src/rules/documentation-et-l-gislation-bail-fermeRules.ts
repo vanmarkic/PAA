@@ -543,3 +543,76 @@ function createDocumentationEtLGislationBailFermeEngine(): Engine {
 
   return engine;
 }
+
+/**
+ * Singleton instance of the DocumentationEtLGislationBailFerme rules engine
+ * Performance gain: Reuse engine instance instead of recreating on every call
+ */
+const documentationEtLGislationBailFermeEngineInstance = createDocumentationEtLGislationBailFermeEngine();
+
+/**
+ * Check Documentation et Législation Bail à Ferme eligibility
+ *
+ * @param input - Bail à ferme input data
+ * @returns Eligibility check result
+ */
+export async function checkDocumentationEtLGislationBailFermeEligibility(
+  input: BailFermeInput
+): Promise<EligibilityCheck> {
+  // Prepare facts for the rules engine
+  const facts = {
+    role: input.role,
+    actionType: input.actionType,
+    eventType: input.eventType,
+    bailType: input.bailType,
+    hasWrittenContract: input.hasWrittenContract,
+    hasEtatDesLieux: input.hasEtatDesLieux,
+    isNotifiedToObservatoire: input.isNotifiedToObservatoire,
+    isRegisteredSPF: input.isRegisteredSPF,
+    isPublicProperty: input.isPublicProperty,
+    hasMutualAgreement: input.hasMutualAgreement,
+    coefficientFermage: input.coefficientFermage,
+    surfaceHectares: input.surfaceHectares,
+  };
+
+  try {
+    const results = await documentationEtLGislationBailFermeEngineInstance.run(facts);
+
+    // Check for ineligible events first
+    const ineligibleEvent = results.events.find((e) =>
+      e.type === 'documentationEtLGislationBailFerme-ineligible'
+    );
+
+    if (ineligibleEvent) {
+      return {
+        benefitType: 'bail-ferme',
+        isEligible: false,
+        reason: ineligibleEvent.params?.reason,
+        notes: [ineligibleEvent.params?.requirement],
+      };
+    }
+
+    // Check for valid bail type
+    const bailTypeValidEvent = results.events.find((e) => e.type === 'bail-type-valid');
+
+    // Collect all applicable rules
+    const applicableRules: string[] = results.events.map((e) => e.params?.message || e.params?.requirement).filter(Boolean);
+
+    if (bailTypeValidEvent || results.events.length > 0) {
+      return {
+        benefitType: 'bail-ferme',
+        isEligible: true,
+        notes: applicableRules,
+      };
+    }
+
+    // Default: not eligible
+    return {
+      benefitType: 'bail-ferme',
+      isEligible: false,
+      reason: 'Conditions non remplies pour le bail à ferme',
+    };
+  } catch (error) {
+    throw new Error(`Error checking Documentation et Législation Bail à Ferme eligibility: ${error}`);
+  }
+}

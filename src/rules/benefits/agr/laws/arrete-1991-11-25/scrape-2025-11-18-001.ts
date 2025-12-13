@@ -13,8 +13,8 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
-import { AGR_LEGAL_FRAMEWORK, AGR_KEY_ARTICLES, AGR_CONDITIONS_2025 } from '../legal-sources/belgianLegalSources';
+import { User, EligibilityCheck } from '../../../../../domain/types';
+import { AGR_LEGAL_FRAMEWORK, AGR_KEY_ARTICLES, AGR_CONDITIONS_2025 } from '../../../../../legal-sources/belgianLegalSources';
 
 /**
  * AGR Rules Version Metadata

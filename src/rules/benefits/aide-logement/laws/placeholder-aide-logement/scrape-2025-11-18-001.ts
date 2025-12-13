@@ -22,8 +22,8 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
-import { RENT_ALLOWANCE_LEGAL_FRAMEWORK } from '../legal-sources/belgianLegalSources';
+import { User, EligibilityCheck } from '../../../../../domain/types';
+import { RENT_ALLOWANCE_LEGAL_FRAMEWORK } from '../../../../../legal-sources/belgianLegalSources';
 
 // ============================================================================
 // REGIONAL CONSTANTS 2024

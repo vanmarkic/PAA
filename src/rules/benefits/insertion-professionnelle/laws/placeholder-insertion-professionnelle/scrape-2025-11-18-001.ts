@@ -14,7 +14,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck } from '../domain/types';
+import { User, EligibilityCheck } from '../../../../../domain/types';
 
 // Constants for professional integration programs - Updated 2024
 const MIN_AGE = 18; // Âge minimum général

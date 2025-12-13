@@ -14,7 +14,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { EligibilityCheck } from '../domain/types';
+import { EligibilityCheck } from '../../../../../domain/types';
 
 // Constants for tax year 2024
 const HOUSING_CONSTANTS_2024 = {

@@ -75,7 +75,7 @@ export interface APAUser {
   receivesGRAPA?: boolean;
 }
 
-export interface APAEligibilityResult extends EligibilityCheck {
+export interface APAEligibilityResult extends Omit<EligibilityCheck, 'category'> {
   category?: APACategory;
   annualAmount?: number;
   monthlyAmount?: number;
@@ -857,6 +857,6 @@ export const AIDE_PERSONNES_AGEES_RULES_JSON = {
     minAutonomyScore: APA_CONSTANTS.MIN_AUTONOMY_SCORE,
     maxAutonomyScore: APA_CONSTANTS.MAX_AUTONOMY_SCORE,
     evaluationValidityYears: APA_CONSTANTS.EVALUATION_VALIDITY_YEARS,
-    pocketMoneyPercentage: APA_CONSTANTS.POCKET_MONEY_PERCENTAGE,
+    pocketMoneyNursingHome: APA_CONSTANTS.POCKET_MONEY_NURSING_HOME,
   },
 };

@@ -14,7 +14,7 @@
  */
 
 import { Engine } from 'json-rules-engine';
-import { User, EligibilityCheck, LegalReference } from '../domain/types';
+import { User, EligibilityCheck, LegalReference } from '../../../../../domain/types';
 
 // Constants from Belgian disability law - 2024 indexed values
 // Source: DG Handicap - Montants indexés au 01.01.2024

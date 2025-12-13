@@ -654,14 +654,18 @@ export async function checkSoinsSanteMentaleEligibility(
         benefitType: 'soins-sante-mentale' as any,
         isEligible: true,
         calculatedAmount: result.coutFinal,
-        details: {
-          coutPatient: result.coutPatient,
-          remboursementINAMI: result.remboursementINAMI,
-          remboursementMutuelle: result.remboursementMutuelle,
-          gratuit: result.gratuit,
-          seancesRestantes: result.seancesRestantes,
-          message: result.message,
+        reason: result.message,
+        breakdown: {
+          baseAmount: result.coutPatient,
+          supplements: {
+            remboursementINAMI: result.remboursementINAMI,
+            remboursementMutuelle: result.remboursementMutuelle,
+          },
+          total: result.coutFinal,
         },
+        notes: result.seancesRestantes !== undefined
+          ? [`Séances restantes: ${result.seancesRestantes}`]
+          : undefined,
       };
     }
 
