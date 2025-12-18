@@ -6,7 +6,7 @@ describe('Internal Links - No Hardcoded Paths', () => {
   const hardcodedPAAPattern = /href=["']\/PAA\/|href=`\/PAA\/|navigate\(["']\/PAA\/|fetch\(["']\/PAA\//g;
 
   // Pattern to match unresolved internal links that should use BASE_URL
-  const internalLinkPattern = /href=["'{`](\/[a-z])/g;
+  const _internalLinkPattern = /href=["'{`](\/[a-z])/g;
 
   // Files to exclude from checks
   const excludePatterns = [

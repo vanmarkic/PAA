@@ -5,8 +5,7 @@
 import {
   extractFeatureVersion,
   extractRulesVersion,
-  checkVersionCompliance,
-  ComplianceReport,
+  checkVersionCompliance
 } from '../utils/versionCompliance';
 
 describe('Version Compliance', () => {

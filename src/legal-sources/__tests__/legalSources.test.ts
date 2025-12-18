@@ -23,8 +23,7 @@ import {
   RENT_ALLOWANCE_LEGAL_FRAMEWORK,
   LEGAL_MAPPING,
   OFFICIAL_LEGAL_DATABASES,
-  type LegalReference,
-  type BenefitLegalFramework
+  type LegalReference
 } from '../belgianLegalSources';
 
 describe('Legal Sources - Structure Tests', () => {
