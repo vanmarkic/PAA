@@ -4,6 +4,14 @@ node_modules/
 # Build output
 dist/
 *.tsbuildinfo
+scripts/compiled/
+scripts/*.js
+scripts/*.d.ts
+scripts/*.js.map
+scripts/*.d.ts.map
+!scripts/*.config.js
+!scripts/analyzeFigmaSite.js
+!scripts/generate-features-metadata-standalone.js
 
 # IDE
 .vscode/
@@ -32,7 +40,12 @@ playwright/.cache/
 # Environment
 .env
 .env.local
+
+# Generated documentation
 docs/machines-metadata.json
+docs/all-machines.html
+docs/machines-dynamic.html
+docs/**/*.html
 
 # Monitoring state
 .monitoring-state.json
