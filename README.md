@@ -2,6 +2,8 @@
 
 ## 🎯 Overview
 
+**Note**: Cache busting commit - please ignore
+
 This is a proof-of-concept demonstrating how to encode complex Belgian social/legal business logic into maintainable, executable code. The POC addresses the core challenge: **converting legal text to common language** and **calculating benefit eligibility** for the Plateforme d'Aide Administrative.
 
 ## 🧠 Business Context
