@@ -9,8 +9,7 @@ import {
   generateFeatureFromLegalText,
   generateRulesFromFeature,
   generateMachineFromRules,
-  LegalSourceInput,
-  AIRewriteResult,
+  LegalSourceInput
 } from './claudeIntegration';
 import { checkVersionCompliance } from '../utils/versionCompliance';
 import { exec } from 'child_process';
@@ -151,7 +150,7 @@ export class PipelineOrchestrator {
           ...extracted,
           text: html.substring(0, 50000), // Limit text size
         };
-      } catch (error) {
+      } catch {
         console.warn(`   ⚠️  Failed to fetch URL, using provided metadata`);
         // Fallback to provided metadata
         return {
@@ -182,7 +181,7 @@ Return JSON with: authority, title, officialUrl (if mentioned), publicationDate,
             officialUrl: parsed.officialUrl || 'N/A',
           };
         }
-      } catch (error) {
+      } catch {
         console.warn(`   ⚠️  Failed to extract metadata, using defaults`);
       }
 

@@ -25,7 +25,7 @@ describe('Visualization System Integration', () => {
           cwd: path.join(__dirname, '../../..'),
           stdio: 'pipe',
         });
-      } catch (_error) {
+      } catch {
         // Le script peut échouer en test si les machines n'existent pas encore
         // On skip ce test dans ce cas
         if (!fs.existsSync(metadataPath)) {

@@ -522,7 +522,7 @@ function getCurrentVersion(benefitId: string): string {
 }
 
 function bumpVersion(currentVersion: string): string {
-  const [year, minor, patch] = currentVersion.split('.').map(Number);
+  const [year, minor, _patch] = currentVersion.split('.').map(Number);
   const currentYear = new Date().getFullYear();
 
   // If same year, bump minor
@@ -764,7 +764,7 @@ export async function generateRulesFromFeature(
   }
 }
 
-function generateRulesGenerationPrompt(
+function _generateRulesGenerationPrompt(
   feature: any,
   exampleRules: string
 ): string {
