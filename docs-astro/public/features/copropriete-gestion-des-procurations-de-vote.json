@@ -71,6 +71,10 @@
         {
           "keyword": "Then",
           "text": "la procuration est refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "la limite de 10% des voix serait dépassée"
         }
       ],
       "isOutline": false
@@ -98,6 +102,10 @@
         },
         {
           "keyword": "And",
+          "text": "pour les points modifiés en séance"
+        },
+        {
+          "keyword": "And",
           "text": "peut s'abstenir sur les points non prévus"
         }
       ],
@@ -105,5 +113,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.447Z"
+  "generated": "2025-12-20T16:41:06.626Z"
 }

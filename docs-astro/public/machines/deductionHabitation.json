@@ -33,7 +33,7 @@
     "REINITIALISER"
   ],
   "initial": "inactif",
-  "generated": "2025-12-13T17:27:42.367Z",
+  "generated": "2025-12-20T16:41:06.465Z",
   "legalSources": {
     "sources": [
       {
@@ -52,8 +52,8 @@
     "version": "2024.1.0",
     "dataFreshness": {
       "status": "outdated",
-      "label": "Révision nécessaire (392 jours)",
-      "daysOld": 392
+      "label": "Révision nécessaire (399 jours)",
+      "daysOld": 399
     }
   }
 }

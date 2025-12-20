@@ -319,6 +319,10 @@
         },
         {
           "keyword": "And",
+          "text": "dont 250000€ pour l'achat"
+        },
+        {
+          "keyword": "And",
           "text": "50000€ pour des travaux de rénovation énergétique"
         },
         {
@@ -572,5 +576,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.458Z"
+  "generated": "2025-12-20T16:41:06.656Z"
 }

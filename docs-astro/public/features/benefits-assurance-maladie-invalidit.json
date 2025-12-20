@@ -246,6 +246,10 @@
         },
         {
           "keyword": "And",
+          "text": "je suis remboursé selon les tarifs INAMI belges ou selon les tarifs du pays si plus avantageux"
+        },
+        {
+          "keyword": "And",
           "text": "la mutuelle rembourse après présentation des factures"
         }
       ],
@@ -279,6 +283,10 @@
         {
           "keyword": "And",
           "text": "j'ai potentiellement droit au statut BIM"
+        },
+        {
+          "keyword": "And",
+          "text": "j'ai potentiellement droit au statut BIM si mes revenus sont inférieurs au seuil"
         }
       ],
       "isOutline": false
@@ -477,6 +485,10 @@
         },
         {
           "keyword": "And",
+          "text": "je peux demander le statut affection chronique qui donne droit au tiers-payant obligatoire"
+        },
+        {
+          "keyword": "And",
           "text": "réduit mes avances de frais"
         }
       ],
@@ -504,5 +516,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.434Z"
+  "generated": "2025-12-20T16:41:06.600Z"
 }

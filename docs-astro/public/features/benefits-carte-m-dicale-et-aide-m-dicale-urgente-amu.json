@@ -85,6 +85,10 @@
           "text": "je me présente au CPAS"
         },
         {
+          "keyword": "And",
+          "text": "une attestation médicale d'urgence"
+        },
+        {
           "keyword": "Then",
           "text": "le CPAS vérifie mon état d'indigence"
         },
@@ -170,11 +174,19 @@
         },
         {
           "keyword": "And",
+          "text": "après déduction du loyer et charges fixes"
+        },
+        {
+          "keyword": "And",
           "text": "si le reste est insuffisant pour vivre"
         },
         {
           "keyword": "Then",
           "text": "j'obtiens une carte médicale"
+        },
+        {
+          "keyword": "And",
+          "text": "médicaments chroniques et soins"
         }
       ],
       "isOutline": false
@@ -291,6 +303,10 @@
         {
           "keyword": "And",
           "text": "la décision est prise dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "dans les 24h si urgence médicale"
         }
       ],
       "isOutline": false
@@ -331,6 +347,10 @@
         {
           "keyword": "Then",
           "text": "je dois payer et demander remboursement"
+        },
+        {
+          "keyword": "And",
+          "text": "risque de remboursement partiel seulement"
         }
       ],
       "isOutline": false
@@ -434,6 +454,10 @@
         {
           "keyword": "And",
           "text": "je dois respecter ce réseau"
+        },
+        {
+          "keyword": "And",
+          "text": "urgence absolue"
         }
       ],
       "isOutline": false
@@ -478,11 +502,19 @@
         {
           "keyword": "And",
           "text": "pendant le recours"
+        },
+        {
+          "keyword": "And",
+          "text": "aide médicale urgente reste accessible"
+        },
+        {
+          "keyword": "And",
+          "text": "attestée médicalement nécessaire"
         }
       ],
       "isOutline": false
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.434Z"
+  "generated": "2025-12-20T16:41:06.602Z"
 }

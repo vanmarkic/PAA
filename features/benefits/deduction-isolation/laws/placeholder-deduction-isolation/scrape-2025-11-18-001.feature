@@ -27,8 +27,7 @@ Fonctionnalité: Déduction pour travaux d'économie d'énergie et isolation
     Et je dois déclarer au code 7162-68
 
   Scénario: Remplacement de chaudière par pompe à chaleur
-    Étant donné que j'ai remplacé ma chaudière au mazout
-    Par une pompe à chaleur air-eau en juin 2024
+    Étant donné que j'ai remplacé ma chaudière au mazout par une pompe à chaleur air-eau en juin 2024
     Et que le coût total est de 12000€
     Et que j'ai obtenu une prime régionale de 3000€
     Et que l'installation est certifiée conforme
@@ -66,8 +65,7 @@ Fonctionnalité: Déduction pour travaux d'économie d'énergie et isolation
       | Tarif prosumer avantageux       | Selon région                   |
 
   Scénario: Double vitrage haute performance
-    Étant donné que j'ai remplacé mes châssis simple vitrage
-    Par du double vitrage haute performance (U ≤ 1.0)
+    Étant donné que j'ai remplacé mes châssis simple vitrage par du double vitrage haute performance (U ≤ 1.0)
     Et que le coût total est de 10000€ pour 10 fenêtres
     Et que les travaux sont réalisés en mai 2024
     Quand je calcule ma déduction
@@ -94,8 +92,7 @@ Fonctionnalité: Déduction pour travaux d'économie d'énergie et isolation
     Et que j'y ai fait des travaux d'isolation en 2024
     Et que le coût est de 7000€
     Quand je vérifie la déductibilité
-    Alors je ne peux pas bénéficier de la réduction
-    Car elle est réservée à l'habitation principale
+    Alors je ne peux pas bénéficier de la réduction car elle est réservée à l'habitation principale
     Mais je peux déduire via les charges professionnelles si location
 
   Scénario: Report des déductions non utilisées

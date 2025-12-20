@@ -22,6 +22,10 @@
           "text": "que la copropriété gère des voiries privées"
         },
         {
+          "keyword": "And",
+          "text": "2000m² pour 25 maisons"
+        },
+        {
           "keyword": "When",
           "text": "l'entretien est planifié"
         },
@@ -78,5 +82,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.446Z"
+  "generated": "2025-12-20T16:41:06.624Z"
 }

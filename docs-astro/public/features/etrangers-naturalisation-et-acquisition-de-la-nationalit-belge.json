@@ -344,6 +344,10 @@
         {
           "keyword": "And",
           "text": "je dois attendre 10 ans après la condamnation"
+        },
+        {
+          "keyword": "And",
+          "text": "demander la réhabilitation"
         }
       ],
       "isOutline": false
@@ -588,5 +592,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.451Z"
+  "generated": "2025-12-20T16:41:06.637Z"
 }

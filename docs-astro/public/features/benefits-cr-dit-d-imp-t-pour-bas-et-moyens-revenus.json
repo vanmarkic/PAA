@@ -307,6 +307,10 @@
         },
         {
           "keyword": "And",
+          "text": "puis le crédit d'impôt s'applique sur l'impôt calculé"
+        },
+        {
+          "keyword": "And",
           "text": "le crédit non utilisé est remboursable"
         }
       ],
@@ -469,6 +473,10 @@
         },
         {
           "keyword": "And",
+          "text": "dont 8000€ d'allocations de chômage"
+        },
+        {
+          "keyword": "And",
           "text": "7000€ de salaires"
         },
         {
@@ -524,5 +532,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.435Z"
+  "generated": "2025-12-20T16:41:06.608Z"
 }

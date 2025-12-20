@@ -184,11 +184,15 @@
         {
           "keyword": "And",
           "text": "peut accorder une reconnaissance temporaire"
+        },
+        {
+          "keyword": "And",
+          "text": "demander des preuves supplémentaires"
         }
       ],
       "isOutline": false
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.457Z"
+  "generated": "2025-12-20T16:41:06.654Z"
 }

@@ -40,6 +40,10 @@
           "text": "un droit UK comparable est créé automatiquement"
         },
         {
+          "keyword": "And",
+          "text": "la même date de dépôt et priorité"
+        },
+        {
           "keyword": "But",
           "text": "je dois payer les renouvellements UK séparément"
         },
@@ -73,6 +77,10 @@
         },
         {
           "keyword": "And",
+          "text": "des coûts doublés"
+        },
+        {
+          "keyword": "And",
           "text": "gérer deux procédures distinctes"
         }
       ],
@@ -80,5 +88,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.454Z"
+  "generated": "2025-12-20T16:41:06.646Z"
 }

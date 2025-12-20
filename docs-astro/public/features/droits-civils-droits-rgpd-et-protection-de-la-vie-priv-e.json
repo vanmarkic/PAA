@@ -76,6 +76,10 @@
         {
           "keyword": "And",
           "text": "confirmer l'effacement dans les 30 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "si conservation nécessaire pour:"
         }
       ],
       "isOutline": false
@@ -364,5 +368,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.450Z"
+  "generated": "2025-12-20T16:41:06.635Z"
 }

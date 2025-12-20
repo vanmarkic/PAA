@@ -22,6 +22,10 @@
           "text": "qu'un poste de concierge est créé"
         },
         {
+          "keyword": "And",
+          "text": "logement de fonction"
+        },
+        {
           "keyword": "When",
           "text": "le recrutement est lancé"
         },
@@ -74,5 +78,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.448Z"
+  "generated": "2025-12-20T16:41:06.630Z"
 }

@@ -22,6 +22,10 @@
           "text": "qu'un projet solaire de 50000€ est proposé"
         },
         {
+          "keyword": "And",
+          "text": "un retour sur investissement de 7 ans"
+        },
+        {
           "keyword": "When",
           "text": "l'AG vote le projet"
         },
@@ -86,5 +90,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.448Z"
+  "generated": "2025-12-20T16:41:06.630Z"
 }

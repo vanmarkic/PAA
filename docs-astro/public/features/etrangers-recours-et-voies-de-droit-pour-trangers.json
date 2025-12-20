@@ -452,6 +452,10 @@
         {
           "keyword": "And",
           "text": "l'administration peut rouvrir le dossier"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux saisir le juge"
         }
       ],
       "isOutline": false
@@ -612,5 +616,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.452Z"
+  "generated": "2025-12-20T16:41:06.638Z"
 }

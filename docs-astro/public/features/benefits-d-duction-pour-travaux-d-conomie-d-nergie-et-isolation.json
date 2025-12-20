@@ -67,7 +67,7 @@
       "steps": [
         {
           "keyword": "Given",
-          "text": "que j'ai remplacé ma chaudière au mazout"
+          "text": "que j'ai remplacé ma chaudière au mazout par une pompe à chaleur air-eau en juin 2024"
         },
         {
           "keyword": "And",
@@ -187,7 +187,7 @@
       "steps": [
         {
           "keyword": "Given",
-          "text": "que j'ai remplacé mes châssis simple vitrage"
+          "text": "que j'ai remplacé mes châssis simple vitrage par du double vitrage haute performance (U ≤ 1.0)"
         },
         {
           "keyword": "And",
@@ -279,7 +279,7 @@
         },
         {
           "keyword": "Then",
-          "text": "je ne peux pas bénéficier de la réduction"
+          "text": "je ne peux pas bénéficier de la réduction car elle est réservée à l'habitation principale"
         },
         {
           "keyword": "But",
@@ -542,5 +542,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.438Z"
+  "generated": "2025-12-20T16:41:06.613Z"
 }

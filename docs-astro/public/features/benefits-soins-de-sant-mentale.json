@@ -51,6 +51,10 @@
         {
           "keyword": "And",
           "text": "après épuisement, possibilité série 2 (8 séances)"
+        },
+        {
+          "keyword": "And",
+          "text": "prescription du médecin généraliste"
         }
       ],
       "isOutline": false
@@ -195,6 +199,10 @@
         {
           "keyword": "And",
           "text": "le suivi post-hospitalisation est organisé"
+        },
+        {
+          "keyword": "And",
+          "text": "équipe mobile si nécessaire"
         }
       ],
       "isOutline": false
@@ -440,6 +448,10 @@
           "text": "que j'habite en zone rurale"
         },
         {
+          "keyword": "And",
+          "text": "que j'ai des difficultés de déplacement"
+        },
+        {
           "keyword": "When",
           "text": "je demande une consultation vidéo"
         },
@@ -470,11 +482,15 @@
         {
           "keyword": "And",
           "text": "je peux refuser le partage d'informations"
+        },
+        {
+          "keyword": "And",
+          "text": "danger imminent pour moi ou autrui"
         }
       ],
       "isOutline": false
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.442Z"
+  "generated": "2025-12-20T16:41:06.621Z"
 }

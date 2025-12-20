@@ -111,6 +111,10 @@
         },
         {
           "keyword": "And",
+          "text": "dont 220000€ pour l'achat de l'habitation"
+        },
+        {
+          "keyword": "And",
           "text": "80000€ pour des travaux de rénovation"
         },
         {
@@ -532,5 +536,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.436Z"
+  "generated": "2025-12-20T16:41:06.610Z"
 }

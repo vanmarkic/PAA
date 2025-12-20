@@ -250,6 +250,10 @@
         {
           "keyword": "And",
           "text": "la prolongation égale la durée d'hospitalisation au-delà de 7 jours"
+        },
+        {
+          "keyword": "And",
+          "text": "un maximum de 24 semaines de prolongation"
         }
       ],
       "isOutline": false
@@ -584,6 +588,10 @@
         {
           "keyword": "And",
           "text": "elle se termine 1 mois après la fin du congé de maternité"
+        },
+        {
+          "keyword": "And",
+          "text": "pour motif grave étranger à la grossesse"
         }
       ],
       "isOutline": false
@@ -630,5 +638,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.434Z"
+  "generated": "2025-12-20T16:41:06.603Z"
 }

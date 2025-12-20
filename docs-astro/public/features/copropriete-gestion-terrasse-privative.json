@@ -22,6 +22,10 @@
           "text": "qu'un copropriétaire veut aménager sa terrasse"
         },
         {
+          "keyword": "And",
+          "text": "pergola et jardinière"
+        },
+        {
           "keyword": "When",
           "text": "il demande l'autorisation"
         },
@@ -74,5 +78,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.447Z"
+  "generated": "2025-12-20T16:41:06.628Z"
 }

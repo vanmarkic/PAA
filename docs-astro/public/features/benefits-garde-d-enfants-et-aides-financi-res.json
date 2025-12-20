@@ -423,6 +423,10 @@
         {
           "keyword": "And",
           "text": "la déduction porte sur les 15€ payés"
+        },
+        {
+          "keyword": "And",
+          "text": "maximum 16.40€/jour déductibles"
         }
       ],
       "isOutline": false
@@ -619,5 +623,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.440Z"
+  "generated": "2025-12-20T16:41:06.616Z"
 }

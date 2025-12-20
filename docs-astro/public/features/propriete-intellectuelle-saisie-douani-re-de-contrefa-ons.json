@@ -81,6 +81,10 @@
         },
         {
           "keyword": "And",
+          "text": "demander la destruction simplifiée"
+        },
+        {
+          "keyword": "And",
           "text": "fournir une garantie si nécessaire"
         }
       ],
@@ -88,5 +92,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.456Z"
+  "generated": "2025-12-20T16:41:06.651Z"
 }

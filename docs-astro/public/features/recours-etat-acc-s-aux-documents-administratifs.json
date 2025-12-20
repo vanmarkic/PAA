@@ -172,6 +172,10 @@
         },
         {
           "keyword": "And",
+          "text": "si une autre exception s'applique"
+        },
+        {
+          "keyword": "And",
           "text": "je peux revenir après la décision finale"
         }
       ],
@@ -185,6 +189,10 @@
         {
           "keyword": "Given",
           "text": "que ma demande d'accès a été refusée"
+        },
+        {
+          "keyword": "And",
+          "text": "que l'administration n'a pas répondu dans les 30 jours"
         },
         {
           "keyword": "When",
@@ -467,5 +475,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.456Z"
+  "generated": "2025-12-20T16:41:06.652Z"
 }

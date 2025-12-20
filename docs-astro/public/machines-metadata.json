@@ -1,4 +1,5 @@
 {
+  "generated": "2025-12-20T16:41:19.322Z",
   "totalMachines": 133,
   "categories": [
     "agriculture",
@@ -68,12 +69,7 @@
         "AIDES_CALCULEES",
         "PAIEMENT_VERSE"
       ],
-      "initial": "inscriptionAgriculteur",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.786Z"
+      "initial": "inscriptionAgriculteur"
     },
     {
       "id": "comptabiliteAnnuelle",
@@ -103,12 +99,7 @@
         "DEPOT_BCE",
         "PUBLICATION_CONFIRMEE"
       ],
-      "initial": "clotureExercice",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "clotureExercice"
     },
     {
       "id": "creationEntreprise",
@@ -147,12 +138,7 @@
         "AFFILIATION_CAISSE_COMPLETE",
         "CREATION_FINALISEE"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "inactif"
     },
     {
       "id": "declarationTVA",
@@ -179,12 +165,7 @@
         "TRANSMISSION_INTERVAT",
         "PAIEMENT_EFFECTUE"
       ],
-      "initial": "periode",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.790Z"
+      "initial": "periode"
     },
     {
       "id": "reglementCollectifDettes",
@@ -235,12 +216,7 @@
         "PLAN_REFUSE",
         "EXECUTION_TERMINEE"
       ],
-      "initial": "evaluation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.790Z"
+      "initial": "evaluation"
     },
     {
       "id": "reclamationConsommation",
@@ -275,12 +251,7 @@
         "SAISIR_TRIBUNAL",
         "JUGEMENT_RENDU"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.790Z"
+      "initial": "inactif"
     },
     {
       "id": "assembleeGenerale",
@@ -337,12 +308,7 @@
         "ANNULER_AG",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.935Z"
+      "initial": "idle"
     },
     {
       "id": "chargesPayment",
@@ -396,12 +362,7 @@
         "ANNULER_CREANCE",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "echrApplication",
@@ -485,12 +446,7 @@
         "RETRY",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "interimMeasures",
@@ -549,12 +505,7 @@
         "RETRY",
         "TIMEOUT"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "subventionAssociationCulturelle",
@@ -586,12 +537,7 @@
         "DEMANDE_CONVENTIONNEMENT",
         "CONVENTIONNEMENT_ACCORDE"
       ],
-      "initial": "depotDossierSubside",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.791Z"
+      "initial": "depotDossierSubside"
     },
     {
       "id": "inscriptionElectorale",
@@ -646,12 +592,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "petition",
@@ -712,12 +653,7 @@
         "RETRY",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "protectionDonneesPersonnellesRGPD",
@@ -749,12 +685,7 @@
         "REDIGER_POLITIQUE",
         "CONFORMITE_VALIDEE"
       ],
-      "initial": "identificationTraitements",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.793Z"
+      "initial": "identificationTraitements"
     },
     {
       "id": "identityDocument",
@@ -807,12 +738,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "marriage",
@@ -869,12 +795,7 @@
         "RETRY",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.936Z"
+      "initial": "idle"
     },
     {
       "id": "primeEnergie",
@@ -925,12 +846,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.937Z"
+      "initial": "idle"
     },
     {
       "id": "permisEnvironnement",
@@ -988,14 +904,7 @@
         "APPEAL",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "permisEnvironnementBase"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.937Z"
+      "initial": "idle"
     },
     {
       "id": "allocationEtudes",
@@ -1027,12 +936,7 @@
         "DECISION_FAVORABLE",
         "DECISION_DEFAVORABLE"
       ],
-      "initial": "depotDemande",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.793Z"
+      "initial": "depotDemande"
     },
     {
       "id": "inscriptionEnseignementSuperieur",
@@ -1069,12 +973,7 @@
         "PAYER_MINERVAL",
         "INSCRIPTION_VALIDEE"
       ],
-      "initial": "choixEtudes",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.793Z"
+      "initial": "choixEtudes"
     },
     {
       "id": "compteurBudgetElectricite",
@@ -1116,12 +1015,7 @@
         "RECHARGER",
         "CREDIT_EPUISE"
       ],
-      "initial": "information",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "information"
     },
     {
       "id": "tarifSocialEnergie",
@@ -1163,43 +1057,7 @@
         "NON_ELIGIBLE",
         "APPLIQUER_TARIF"
       ],
-      "initial": "information",
-      "legalMetadata": {
-        "machineId": "tarifSocialEnergie",
-        "nameFr": "Tarif social énergie",
-        "nameNl": "Sociaal tarief energie",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Économie",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Tarif social pour l'énergie",
-              "publicationDate": "2023-12-15T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://economie.fgov.be/fr/themes/energie/prix-de-lenergie/tarif-social-pour-lenergie",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "information"
     },
     {
       "id": "certificatPEB",
@@ -1226,12 +1084,7 @@
         "CALCUL_REALISE",
         "CERTIFICAT_EMIS"
       ],
-      "initial": "demandeCertificat",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "demandeCertificat"
     },
     {
       "id": "permisEnvironnementBase",
@@ -1266,14 +1119,7 @@
         "AVIS_DEFAVORABLE",
         "PERMIS_DELIVRE"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "permisEnvironnement"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.937Z"
+      "initial": "inactif"
     },
     {
       "id": "primeRenovationEnergetique",
@@ -1306,14 +1152,7 @@
         "CONTROLE_OK",
         "PAIEMENT_EFFECTUE"
       ],
-      "initial": "auditEnergetique",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "primeRenovation"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "auditEnergetique"
     },
     {
       "id": "asylumApplication",
@@ -1374,12 +1213,7 @@
         "REQUEST_VOLUNTARY_RETURN",
         "ABANDON_PROCEDURE"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.937Z"
+      "initial": "idle"
     },
     {
       "id": "residencePermit",
@@ -1440,12 +1274,7 @@
         "RETRY",
         "ABANDON"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.937Z"
+      "initial": "idle"
     },
     {
       "id": "congeParental",
@@ -1484,43 +1313,7 @@
         "EMPLOYEUR_REPORTE",
         "ONEM_OCTROIE"
       ],
-      "initial": "information",
-      "legalMetadata": {
-        "machineId": "congeParental",
-        "nameFr": "Congé parental",
-        "nameNl": "Ouderschapsverlof",
-        "category": "employment-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "ONEM",
-              "authorityType": "ONEM",
-              "region": "fédéral",
-              "title": "Congé parental",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.onem.be/fr/documentation/feuille-info/t19",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "info@onem.be"
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "information"
     },
     {
       "id": "reconnaissanceEnfant",
@@ -1559,12 +1352,7 @@
         "ACTE_DRESSE",
         "CONTESTER"
       ],
-      "initial": "information",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "information"
     },
     {
       "id": "droitsDonation",
@@ -1601,14 +1389,7 @@
         "ENREGISTRER_DONATION",
         "PAYER_DROITS"
       ],
-      "initial": "preparation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "droitsDonationReduits"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "preparation"
     },
     {
       "id": "droitsSuccession",
@@ -1650,12 +1431,7 @@
         "PAYER_DROITS",
         "DEMANDER_ECHEANCIER"
       ],
-      "initial": "inventaire",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "inventaire"
     },
     {
       "id": "accompagnementSocial",
@@ -1697,42 +1473,7 @@
         "ACCOMPAGNEMENT_TERMINE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "accompagnementSocial",
-        "nameFr": "Accompagnement social",
-        "nameNl": "Sociale begeleiding",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Accompagnement social - CPAS",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.mi-is.be/fr/cpas/accompagnement-social",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.786Z"
+      "initial": "attente"
     },
     {
       "id": "aideMobilite",
@@ -1772,42 +1513,7 @@
         "AIDE_TERMINEE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "aideMobilite",
-        "nameFr": "Aide à la mobilité",
-        "nameNl": "Mobiliteitshulp",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "DG Personnes handicapées",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide à la mobilité",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://handicap.belgium.be/fr/aides-techniques-et-adaptations/aides-a-la-mobilite.htm",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.787Z"
+      "initial": "attente"
     },
     {
       "id": "aideAlimentaire",
@@ -1842,42 +1548,7 @@
         "CESSER_AIDE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "aideAlimentaire",
-        "nameFr": "Aide alimentaire",
-        "nameNl": "Voedselhulp",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide alimentaire",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/aide-alimentaire",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.786Z"
+      "initial": "attente"
     },
     {
       "id": "aideSansAbri",
@@ -1920,42 +1591,7 @@
         "RETOUR_RUE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "aideSansAbri",
-        "nameFr": "Aide aux sans-abri",
-        "nameNl": "Hulp aan daklozen",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide aux sans-abri",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/sans-abrisme",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.787Z"
+      "initial": "attente"
     },
     {
       "id": "aideVictimes",
@@ -2001,42 +1637,7 @@
         "ACCOMPAGNEMENT_TERMINE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "aideVictimes",
-        "nameFr": "Aide aux victimes",
-        "nameNl": "Slachtofferhulp",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Justice",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide aux victimes",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://justice.belgium.be/fr/themes_et_dossiers/securite_et_criminalite/aide_aux_victimes",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.787Z"
+      "initial": "attente"
     },
     {
       "id": "aideMenagere",
@@ -2079,42 +1680,7 @@
         "ARRETER_SERVICE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "aideMenagere",
-        "nameFr": "Aide ménagère",
-        "nameNl": "Huishoudelijke hulp",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Aide à domicile",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.aviq.be/aide-domicile.html",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.787Z"
+      "initial": "attente"
     },
     {
       "id": "documentationEtLGislationBailFerme",
@@ -2158,12 +1724,7 @@
         "RESET",
         "RETRY"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-12-13T11:57:46.139Z"
+      "initial": "idle"
     },
     {
       "id": "banqueAlimentaire",
@@ -2204,42 +1765,7 @@
         "DESINSCRIRE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "banqueAlimentaire",
-        "nameFr": "Banque alimentaire",
-        "nameNl": "Voedselbank",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide alimentaire",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/aide-alimentaire",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.788Z"
+      "initial": "attente"
     },
     {
       "id": "budgetEnergetique",
@@ -2279,42 +1805,7 @@
         "BUDGET_TERMINE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "budgetEnergetique",
-        "nameFr": "Aide au budget énergétique",
-        "nameNl": "Energiebudgethulp",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Économie",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide énergétique",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://economie.fgov.be/fr/themes/energie/aide-energetique",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "attente"
     },
     {
       "id": "centreAccueil",
@@ -2353,42 +1844,7 @@
         "SORTIE_CENTRE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "centreAccueil",
-        "nameFr": "Centre d'accueil",
-        "nameNl": "Opvangcentrum",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Fedasil",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Centres d'accueil",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.fedasil.be",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "attente"
     },
     {
       "id": "fondsCreances",
@@ -2427,42 +1883,7 @@
         "RECUPERER_AUPRES_DEBITEUR",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "fondsCreances",
-        "nameFr": "Fonds des créances alimentaires",
-        "nameNl": "Fonds voor alimentatievorderingen",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances - SECAL",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Service des Créances Alimentaires",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/divorce_et_separation/service_creances_alimentaires",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "attente"
     },
     {
       "id": "formationProfessionnelle",
@@ -2508,42 +1929,7 @@
         "ABANDONNER",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "formationProfessionnelle",
-        "nameFr": "Formation professionnelle",
-        "nameNl": "Beroepsopleiding",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Le Forem",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Formation professionnelle",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.leforem.be/particuliers/formation-professionnelle.html",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.796Z"
+      "initial": "attente"
     },
     {
       "id": "inscriptionEcole",
@@ -2582,42 +1968,7 @@
         "ANNULER",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "inscriptionEcole",
-        "nameFr": "Inscription à l'école",
-        "nameNl": "Inschrijving school",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Fédération Wallonie-Bruxelles",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Inscription scolaire",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.enseignement.be/index.php?page=26100",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.799Z"
+      "initial": "attente"
     },
     {
       "id": "insertionProfessionnelle",
@@ -2657,42 +2008,7 @@
         "ABANDON",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "insertionProfessionnelle",
-        "nameFr": "Insertion professionnelle",
-        "nameNl": "Professionele inschakeling",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Le Forem",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Insertion socio-professionnelle",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.leforem.be/particuliers/insertion-professionnelle.html",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.799Z"
+      "initial": "attente"
     },
     {
       "id": "logementSocial",
@@ -2731,44 +2047,7 @@
         "RETIRER_DEMANDE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "logementSocial",
-        "nameFr": "Logement social",
-        "nameNl": "Sociale woningen",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne - Logement",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Code wallon du Logement et de l'Habitat durable",
-              "publicationDate": "2023-12-15T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://logement.wallonie.be/home/aides-au-logement/aides-a-lacquisition/logement-social.html",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "logement@spw.wallonie.be"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "attente"
     },
     {
       "id": "loiDu26Mai2002ConcernantLeDroitLIntGrati",
@@ -2801,12 +2080,7 @@
         "COMPLETE_CHECK",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-12-13T15:14:05.050Z"
+      "initial": "idle"
     },
     {
       "id": "abattementSuccession",
@@ -2853,42 +2127,7 @@
         "ABATTEMENT_APPLIQUE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "abattementSuccession",
-        "nameFr": "Abattement droits de succession",
-        "nameNl": "Vermindering successierechten",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Droits de succession",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/deces/droits_de_succession",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.786Z"
+      "initial": "inactif"
     },
     {
       "id": "exonerationPlusValue",
@@ -2924,42 +2163,7 @@
         "EXONERATION_ACCORDEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "exonerationPlusValue",
-        "nameFr": "Exonération des plus-values",
-        "nameNl": "Vrijstelling meerwaarden",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Plus-values - Exonérations",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/vente",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "inactif"
     },
     {
       "id": "exonerationPrecompte",
@@ -3000,42 +2204,7 @@
         "ANNEE_SUIVANTE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "exonerationPrecompte",
-        "nameFr": "Exonération du précompte immobilier",
-        "nameNl": "Vrijstelling van onroerende voorheffing",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Précompte immobilier - Exonérations",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/precompte_immobilier",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.794Z"
+      "initial": "inactif"
     },
     {
       "id": "exonerationRevenusMobiliers",
@@ -3076,45 +2245,7 @@
         "NOUVELLE_ANNEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "exonerationRevenusMobiliers",
-        "nameFr": "Exonération revenus mobiliers",
-        "nameNl": "Vrijstelling roerende inkomsten",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Revenus mobiliers - Exonération",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/declaration_impot/revenus/revenus-mobiliers",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "exemptionEpargne": 980
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.795Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionDons",
@@ -3154,45 +2285,7 @@
         "DEDUCTION_APPROUVEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionDons",
-        "nameFr": "Déduction fiscale pour dons",
-        "nameNl": "Belastingaftrek voor giften",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Déduction pour dons - CIR92 Art. 104",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/avantages_fiscaux/dons",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "minimumDeductible": 40
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionEmpruntHypothecaire",
@@ -3234,42 +2327,7 @@
         "ANNEE_SUIVANTE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionEmpruntHypothecaire",
-        "nameFr": "Déduction emprunt hypothécaire",
-        "nameNl": "Aftrek hypothecaire lening",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Emprunt hypothécaire - Déduction",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/credits_hypothecaires",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionHabitation",
@@ -3305,45 +2363,7 @@
         "ANNEE_SUIVANTE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionHabitation",
-        "nameFr": "Déduction fiscale habitation",
-        "nameNl": "Fiscale aftrek woning",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Déduction pour habitation propre - CIR92 Art. 104-106",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/credits_hypothecaires",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact.center@minfin.fed.be",
-        "contactPhone": "0257 257 57"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionFraisGarde",
@@ -3381,46 +2401,7 @@
         "NOUVELLE_ANNEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionFraisGarde",
-        "nameFr": "Déduction fiscale frais de garde",
-        "nameNl": "Belastingaftrek kinderopvang",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Déduction frais de garde d'enfants - CIR92",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/frais_de_garde",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "plafondDeduction": 14
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionInvestissement",
@@ -3456,44 +2437,7 @@
         "ANNEE_ECOULEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionInvestissement",
-        "nameFr": "Déduction pour investissement",
-        "nameNl": "Investeringsaftrek",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Déduction pour investissement - CIR92",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/entreprises/impots/impot_des_societes/deductions",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact.center@minfin.fed.be"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionIsolation",
@@ -3533,42 +2477,7 @@
         "DEDUCTION_APPROUVEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionIsolation",
-        "nameFr": "Déduction fiscale isolation",
-        "nameNl": "Belastingaftrek isolatie",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Réduction d'impôt isolation toiture",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/isolation_toiture",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "deductionVehiculeElectrique",
@@ -3608,42 +2517,7 @@
         "ANNEE_ECOULEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "deductionVehiculeElectrique",
-        "nameFr": "Déduction fiscale véhicule électrique",
-        "nameNl": "Belastingaftrek elektrische wagen",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Déduction véhicule électrique",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/entreprises/voitures-societe/deduction",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.792Z"
+      "initial": "inactif"
     },
     {
       "id": "primeRenovation",
@@ -3689,45 +2563,7 @@
         "PRIME_VERSEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "primeRenovation",
-        "nameFr": "Prime à la rénovation",
-        "nameNl": "Renovatiepremie",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne - Logement",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Prime à la rénovation",
-              "publicationDate": "2023-12-15T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://energie.wallonie.be/fr/prime-a-la-renovation.html",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "primeRenovationEnergetique"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.802Z"
+      "initial": "inactif"
     },
     {
       "id": "reductionEpargnePension",
@@ -3763,48 +2599,7 @@
         "NOUVELLE_ANNEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "reductionEpargnePension",
-        "nameFr": "Réduction fiscale épargne-pension",
-        "nameNl": "Belastingvermindering pensioensparen",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Épargne-pension - CIR92 Art. 145",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/avantages_fiscaux/epargne-pension",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "plafond1": 1020,
-            "plafond2": 1310
-          },
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact.center@minfin.fed.be"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "inactif"
     },
     {
       "id": "renteAlimentaire",
@@ -3843,42 +2638,7 @@
         "DECLARATION_APPROUVEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "renteAlimentaire",
-        "nameFr": "Rente alimentaire",
-        "nameNl": "Onderhoudsuitkering",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Rentes alimentaires - Déductibilité",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/divorce_et_separation/rentes_alimentaires",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "inactif"
     },
     {
       "id": "tvaReduite",
@@ -3915,47 +2675,7 @@
         "APPLIQUER_TVA_REDUITE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "tvaReduite",
-        "nameFr": "TVA réduite",
-        "nameNl": "Verlaagd BTW-tarief",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Taux de TVA réduits",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/entreprises/tva/assujettissement-et-franchise/taux-de-tva",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "tauxReduit": 6,
-            "tauxIntermediaire": 12,
-            "tauxNormal": 21
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.806Z"
+      "initial": "inactif"
     },
     {
       "id": "bonusLogement",
@@ -3994,42 +2714,7 @@
         "ANNEE_ECOULEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "bonusLogement",
-        "nameFr": "Bonus logement",
-        "nameNl": "Woonbonus",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Flamande",
-              "authorityType": "VDAB",
-              "region": "flandre",
-              "title": "Woonbonus",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.wonenvlaanderen.be/woonbonus",
-              "language": "nl"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "inactif"
     },
     {
       "id": "creditImpot",
@@ -4069,49 +2754,7 @@
         "CREDIT_VERSE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "creditImpot",
-        "nameFr": "Crédit d'impôt",
-        "nameNl": "Belastingkrediet",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Code des Impôts sur les Revenus 1992",
-              "referenceNumber": "CIR92",
-              "publicationDate": "1992-08-12T00:00:00.000Z",
-              "effectiveDate": "1992-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/avantages_fiscaux",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact.center@minfin.fed.be",
-        "contactPhone": "0257 257 57"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "creditImpotInvestissementDurable",
-        "creditImpotServiceLocal"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.791Z"
+      "initial": "inactif"
     },
     {
       "id": "creditImpotInvestissementDurable",
@@ -4149,44 +2792,7 @@
         "CREDIT_ACCORDE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "creditImpotInvestissementDurable",
-        "nameFr": "Crédit d'impôt investissement durable",
-        "nameNl": "Belastingkrediet duurzame investering",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Investissements économiseurs d'énergie",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/habitation/economie_energie",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "creditImpot"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.791Z"
+      "initial": "inactif"
     },
     {
       "id": "creditImpotServiceLocal",
@@ -4226,44 +2832,7 @@
         "CREDIT_ACCORDE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "creditImpotServiceLocal",
-        "nameFr": "Crédit d'impôt service local",
-        "nameNl": "Belastingkrediet lokale diensten",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Titre-services - Crédit d'impôt",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/avantages_fiscaux/titres-services",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "creditImpot"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.791Z"
+      "initial": "inactif"
     },
     {
       "id": "quotientConjugal",
@@ -4301,42 +2870,7 @@
         "QUOTIENT_APPLIQUE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "quotientConjugal",
-        "nameFr": "Quotient conjugal",
-        "nameNl": "Huwelijksquotiënt",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Quotient conjugal - CIR92",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/mariage_et_cohabitation_legale/quotient_conjugal",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "inactif"
     },
     {
       "id": "avantagesNature",
@@ -4371,43 +2905,7 @@
         "CORRIGER_DECLARATION",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "avantagesNature",
-        "nameFr": "Avantages de toute nature",
-        "nameNl": "Voordelen van alle aard",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Avantages de toute nature - CIR92",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/entreprises/personnel_et_remuneration/avantages_de_toute_nature",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact.center@minfin.fed.be"
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.788Z"
+      "initial": "inactif"
     },
     {
       "id": "chequesRepas",
@@ -4447,49 +2945,7 @@
         "MOIS_SUIVANT",
         "RESILIER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "chequesRepas",
-        "nameFr": "Chèques repas",
-        "nameNl": "Maaltijdcheques",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Arrêté royal du 28 novembre 1969 - Chèques-repas",
-              "publicationDate": "1969-12-09T00:00:00.000Z",
-              "effectiveDate": "1969-12-01T00:00:00.000Z",
-              "officialUrl": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&cn=1969112801",
-              "backupUrl": "https://finances.belgium.be/fr/entreprises/personnel_et_remuneration/avantages_de_toute_nature",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "valeurMaximaleExoneree": 8,
-            "contributionEmployeurMax": 6.91,
-            "contributionEmployeMin": 1.09
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.789Z"
+      "initial": "inactif"
     },
     {
       "id": "droitsDonationReduits",
@@ -4537,44 +2993,7 @@
         "DROITS_PAYES",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "droitsDonationReduits",
-        "nameFr": "Droits de donation réduits",
-        "nameNl": "Verminderde schenkingsrechten",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Droits de donation",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/famille/donations",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [
-        "droitsDonation"
-      ],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.793Z"
+      "initial": "inactif"
     },
     {
       "id": "ecoCheque",
@@ -4613,46 +3032,7 @@
         "NOUVELLE_ANNEE",
         "DESACTIVER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "ecoCheque",
-        "nameFr": "Éco-chèques",
-        "nameNl": "Ecocheques",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Éco-chèques - Avantages de toute nature",
-              "publicationDate": "2009-05-12T00:00:00.000Z",
-              "effectiveDate": "2009-05-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/entreprises/personnel_et_remuneration/avantages_de_toute_nature/ecocheques",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "montantMaximalAnnuel": 250
-          },
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.793Z"
+      "initial": "inactif"
     },
     {
       "id": "fraisProfessionnels",
@@ -4693,42 +3073,7 @@
         "DEDUCTION_APPLIQUEE",
         "REINITIALISER"
       ],
-      "initial": "inactif",
-      "legalMetadata": {
-        "machineId": "fraisProfessionnels",
-        "nameFr": "Frais professionnels",
-        "nameNl": "Beroepskosten",
-        "category": "fiscal-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Finances",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Frais professionnels - CIR92",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://finances.belgium.be/fr/particuliers/declaration_impot/revenus-professionnels/frais_professionnels",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.796Z"
+      "initial": "inactif"
     },
     {
       "id": "mediationDettes",
@@ -4770,42 +3115,7 @@
         "PLAN_TERMINE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "mediationDettes",
-        "nameFr": "Médiation de dettes",
-        "nameNl": "Schuldbemiddeling",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Économie - Médiation de dettes",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Loi relative au règlement collectif de dettes",
-              "publicationDate": "1998-08-05T00:00:00.000Z",
-              "effectiveDate": "1999-01-01T00:00:00.000Z",
-              "officialUrl": "https://economie.fgov.be/fr/themes/financial-services/credit-et-endettement/mediation-de-dettes",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "attente"
     },
     {
       "id": "protectionEnfance",
@@ -4851,42 +3161,7 @@
         "CLOTURER_DOSSIER",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "protectionEnfance",
-        "nameFr": "Protection de l'enfance",
-        "nameNl": "Jeugdbescherming",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Fédération Wallonie-Bruxelles",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Aide à la jeunesse",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.aidealajeunesse.cfwb.be",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "attente"
     },
     {
       "id": "protectionJuridique",
@@ -4926,42 +3201,7 @@
         "DOSSIER_CLOTURE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "protectionJuridique",
-        "nameFr": "Protection juridique",
-        "nameNl": "Juridische bescherming",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Justice",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Aide juridique",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://justice.belgium.be/fr/themes_et_dossiers/acces_a_la_justice/aide_juridique",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "attente"
     },
     {
       "id": "repasScolairesGratuits",
@@ -4997,42 +3237,7 @@
         "SUSPENDRE_AIDE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "repasScolairesGratuits",
-        "nameFr": "Repas scolaires gratuits",
-        "nameNl": "Gratis schoolmaaltijden",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Fédération Wallonie-Bruxelles",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Repas scolaires gratuits",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.cfwb.be",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "attente"
     },
     {
       "id": "restaurantsSociaux",
@@ -5068,42 +3273,7 @@
         "DESACTIVER_CARTE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "restaurantsSociaux",
-        "nameFr": "Restaurants sociaux",
-        "nameNl": "Sociale restaurants",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Restaurants sociaux",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.mi-is.be/fr/etudes-projets-pilotes-et-lutte-contre-la-pauvrete/restaurants-sociaux",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.804Z"
+      "initial": "attente"
     },
     {
       "id": "risApplication",
@@ -5149,52 +3319,7 @@
         "TERMINATE_RIS",
         "RESET"
       ],
-      "initial": "idle",
-      "legalMetadata": {
-        "machineId": "risApplication",
-        "nameFr": "Revenu d'Intégration Sociale (RIS)",
-        "nameNl": "Leefloon",
-        "category": "social-benefits",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Intégration Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Loi du 26 mai 2002 concernant le droit à l'intégration sociale",
-              "referenceNumber": "2002022559",
-              "publicationDate": "2002-07-31T00:00:00.000Z",
-              "effectiveDate": "2002-10-01T00:00:00.000Z",
-              "officialUrl": "https://www.ejustice.just.fgov.be/eli/loi/2002/05/26/2002022559/justel",
-              "backupUrl": "https://www.mi-is.be/fr/cpas/ris",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "isolé": 1070.49,
-            "cohabitant": 713.66,
-            "familleMonoparentale": 1450.52
-          },
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "info@mi-is.be",
-        "contactPhone": "02 508 85 86"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.804Z"
+      "initial": "idle"
     },
     {
       "id": "mediationFamiliale",
@@ -5234,42 +3359,7 @@
         "MEDIATION_TERMINEE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "mediationFamiliale",
-        "nameFr": "Médiation familiale",
-        "nameNl": "Familiebemiddeling",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Justice",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Médiation familiale",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://justice.belgium.be/fr/themes_et_dossiers/famille/mediation_familiale",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "attente"
     },
     {
       "id": "repasDomicile",
@@ -5310,42 +3400,7 @@
         "ARRETER_SERVICE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "repasDomicile",
-        "nameFr": "Repas à domicile",
-        "nameNl": "Maaltijden aan huis",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Sécurité Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Repas à domicile",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.belgium.be/fr/famille/aide_et_soins_a_domicile/repas_a_domicile",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.803Z"
+      "initial": "attente"
     },
     {
       "id": "servicePublicEmploi",
@@ -5388,42 +3443,7 @@
         "RADIATION",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "servicePublicEmploi",
-        "nameFr": "Service public de l'emploi",
-        "nameNl": "Openbare dienst voor arbeidsbemiddeling",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Le Forem",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Service public de l'emploi et de la formation",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.leforem.be",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.805Z"
+      "initial": "attente"
     },
     {
       "id": "soinsSanteMentale",
@@ -5465,42 +3485,7 @@
         "CRISE_RESOLUE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "soinsSanteMentale",
-        "nameFr": "Soins de santé mentale",
-        "nameNl": "Geestelijke gezondheidszorg",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Santé Publique",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Santé mentale",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.health.belgium.be/fr/sante/soins-de-sante/aide-aux-personnes/sante-mentale",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.805Z"
+      "initial": "attente"
     },
     {
       "id": "teleAssistance",
@@ -5547,42 +3532,7 @@
         "RESILIER_SERVICE",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "teleAssistance",
-        "nameFr": "Téléassistance",
-        "nameNl": "Teleassistentie",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Sécurité Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Téléassistance pour personnes âgées",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.belgium.be/fr/famille/aide_et_soins_a_domicile/teleassistance",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.805Z"
+      "initial": "attente"
     },
     {
       "id": "legalConversion",
@@ -5622,12 +3572,7 @@
         "MAX_RETRIES_REACHED",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.791Z"
+      "initial": "idle"
     },
     {
       "id": "transportScolaire",
@@ -5663,42 +3608,7 @@
         "RESILIER_ABONNEMENT",
         "REINITIALISER"
       ],
-      "initial": "attente",
-      "legalMetadata": {
-        "machineId": "transportScolaire",
-        "nameFr": "Transport scolaire",
-        "nameNl": "Schoolvervoer",
-        "category": "social-services",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Région Wallonne",
-              "authorityType": "SPW",
-              "region": "wallonie",
-              "title": "Transport scolaire",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.wallonie.be/fr/transport-scolaire",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": []
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.806Z"
+      "initial": "attente"
     },
     {
       "id": "allocationIntegration",
@@ -5744,45 +3654,7 @@
         "RECOURS",
         "REVISION"
       ],
-      "initial": "preparation",
-      "legalMetadata": {
-        "machineId": "allocationIntegration",
-        "nameFr": "Allocation d'intégration",
-        "nameNl": "Integratietegemoetkoming",
-        "category": "social-benefits",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "DG Personnes handicapées",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Allocation d'intégration pour personnes handicapées",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://handicap.belgium.be/fr/allocations-et-aides/allocation-integration.htm",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "contact@handicap.belgium.be",
-        "contactPhone": "0800 987 99"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "preparation"
     },
     {
       "id": "allocationRemplacementRevenus",
@@ -5827,12 +3699,7 @@
         "RECOURS",
         "REVISION"
       ],
-      "initial": "verification",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "verification"
     },
     {
       "id": "carteStationnementHandicap",
@@ -5861,12 +3728,7 @@
         "RENOUVELER",
         "DELIVRER_CARTE"
       ],
-      "initial": "preparation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "preparation"
     },
     {
       "id": "chirurgieAmbulatoire",
@@ -5896,12 +3758,7 @@
         "REVEIL_COMPLET",
         "AUTORISER_SORTIE"
       ],
-      "initial": "consultationPreoperatoire",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "consultationPreoperatoire"
     },
     {
       "id": "ophtalmologieConsultation",
@@ -5932,12 +3789,7 @@
         "CHOISIR_LUNETTES",
         "INTERVENTION_CALCULEE"
       ],
-      "initial": "consultation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "consultation"
     },
     {
       "id": "hospitalisation",
@@ -5964,12 +3816,7 @@
         "FACTURE_GENEREE",
         "SORTIE"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "inactif"
     },
     {
       "id": "kinesitherapie",
@@ -5992,12 +3839,7 @@
         "SEANCE_EFFECTUEE",
         "PROGRAMME_COMPLETE"
       ],
-      "initial": "prescription",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "prescription"
     },
     {
       "id": "accidentTravail",
@@ -6032,43 +3874,7 @@
         "INCAPACITE_PERMANENTE",
         "GUERISON_SANS_SEQUELLES"
       ],
-      "initial": "declaration",
-      "legalMetadata": {
-        "machineId": "accidentTravail",
-        "nameFr": "Accident du travail",
-        "nameNl": "Arbeidsongeval",
-        "category": "employment-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "FEDRIS",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Loi du 10 avril 1971 sur les accidents du travail",
-              "publicationDate": "1971-04-24T00:00:00.000Z",
-              "effectiveDate": "1971-07-01T00:00:00.000Z",
-              "officialUrl": "https://www.fedris.be/fr/professionnels-de-la-sante/accident-du-travail",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "info@fedris.be"
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "declaration"
     },
     {
       "id": "maladieProfessionnelle",
@@ -6109,43 +3915,7 @@
         "EVALUATION_IPP",
         "RECOURS"
       ],
-      "initial": "information",
-      "legalMetadata": {
-        "machineId": "maladieProfessionnelle",
-        "nameFr": "Maladie professionnelle",
-        "nameNl": "Beroepsziekte",
-        "category": "employment-rights",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "FEDRIS",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Maladies professionnelles",
-              "publicationDate": "2023-12-31T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.fedris.be/fr/professionnels-de-la-sante/maladie-professionnelle",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "info@fedris.be"
-      },
-      "dataFreshness": {
-        "status": "outdated",
-        "label": "Anciennes (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "information"
     },
     {
       "id": "materniteAccouchement",
@@ -6177,12 +3947,7 @@
         "SURVEILLANCE_OK",
         "AUTORISER_SORTIE"
       ],
-      "initial": "suiviPrenatal",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "suiviPrenatal"
     },
     {
       "id": "pharmacie",
@@ -6209,12 +3974,7 @@
         "REMBOURSEMENT_CALCULE",
         "PAIEMENT_EFFECTUE"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "inactif"
     },
     {
       "id": "dentisteSoins",
@@ -6245,12 +4005,7 @@
         "SOINS_REALISES",
         "REMBOURSEMENT_CALCULE"
       ],
-      "initial": "consultation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.797Z"
+      "initial": "consultation"
     },
     {
       "id": "urgencesHospitalieres",
@@ -6280,12 +4035,7 @@
         "HOSPITALISER",
         "AUTORISER_SORTIE"
       ],
-      "initial": "arrivee",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "arrivee"
     },
     {
       "id": "vaccinationEnfants",
@@ -6308,12 +4058,7 @@
         "RAPPEL_PLANIFIE",
         "CALENDRIER_COMPLET"
       ],
-      "initial": "calendrierVaccinal",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "calendrierVaccinal"
     },
     {
       "id": "expulsionDomicile",
@@ -6347,12 +4092,7 @@
         "HUISSIER_MANDATE",
         "EXPULSION_EXECUTEE"
       ],
-      "initial": "congeLocatif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "congeLocatif"
     },
     {
       "id": "logementInsalubre",
@@ -6382,12 +4122,7 @@
         "TRAVAUX_REALISES",
         "SANCTION_BAILLEUR"
       ],
-      "initial": "signalement",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "signalement"
     },
     {
       "id": "agenceImmobiliereSociale",
@@ -6414,12 +4149,7 @@
         "LOGEMENT_PROPOSE",
         "ACCEPTER_LOGEMENT"
       ],
-      "initial": "information",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.798Z"
+      "initial": "information"
     },
     {
       "id": "regroupementFamilial",
@@ -6450,12 +4180,7 @@
         "ENTREE_BELGIQUE",
         "CARTE_F_DELIVREE"
       ],
-      "initial": "verificationConditions",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.799Z"
+      "initial": "verificationConditions"
     },
     {
       "id": "titreSejourEtranger",
@@ -6489,12 +4214,7 @@
         "CARTE_SEJOUR_DELIVREE",
         "RECOURS_INTRODUIT"
       ],
-      "initial": "entreeTerritoire",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T08:35:15.125Z"
+      "initial": "entreeTerritoire"
     },
     {
       "id": "propertyAcquisition",
@@ -6554,12 +4274,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "searching",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "searching"
     },
     {
       "id": "rentalApplication",
@@ -6620,12 +4335,7 @@
         "DEPOSIT_DISPUTED",
         "RESET"
       ],
-      "initial": "searching",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "searching"
     },
     {
       "id": "permitApplication",
@@ -6687,12 +4397,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "preparation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "preparation"
     },
     {
       "id": "pensionAlimentaireDemande",
@@ -6719,12 +4424,7 @@
         "ACCORD_PARTIES",
         "JUGEMENT_RENDU"
       ],
-      "initial": "demande",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "demande"
     },
     {
       "id": "gardeEnfantsLitige",
@@ -6756,12 +4456,7 @@
         "EXPERTISE_RENDUE",
         "JUGEMENT"
       ],
-      "initial": "demande",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "demande"
     },
     {
       "id": "administrationProvisoire",
@@ -6797,12 +4492,7 @@
         "JUGEMENT_FAVORABLE",
         "JUGEMENT_DEFAVORABLE"
       ],
-      "initial": "evaluation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.799Z"
+      "initial": "evaluation"
     },
     {
       "id": "adoptionProcedure",
@@ -6840,12 +4530,7 @@
         "REQUETE_ADOPTION",
         "JUGEMENT_ADOPTION"
       ],
-      "initial": "informationPrealable",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.799Z"
+      "initial": "informationPrealable"
     },
     {
       "id": "procedureDivorce",
@@ -6885,12 +4570,7 @@
         "JUGEMENT_RENDU",
         "DIVORCE_PRONONCE"
       ],
-      "initial": "inactif",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.800Z"
+      "initial": "inactif"
     },
     {
       "id": "parcoursCreationEntreprise",
@@ -6937,12 +4617,7 @@
         "AUTORISATIONS_OBTENUES",
         "WARNING"
       ],
-      "initial": "ideationProjet",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.801Z"
+      "initial": "ideationProjet"
     },
     {
       "id": "parcoursDemenagement",
@@ -6981,12 +4656,7 @@
         "ORGANISMES_NOTIFIES",
         "TOUTES_DEMARCHES_FAITES"
       ],
-      "initial": "preparationDemenagement",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T08:35:15.125Z"
+      "initial": "preparationDemenagement"
     },
     {
       "id": "parcoursNaissanceEnfant",
@@ -7025,12 +4695,7 @@
         "TOUTES_DEMARCHES_COMPLETEES",
         "ERREUR"
       ],
-      "initial": "naissanceEnfant",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T08:35:15.125Z"
+      "initial": "naissanceEnfant"
     },
     {
       "id": "parcoursDemandeurEmploi",
@@ -7071,12 +4736,7 @@
         "EMPLOI_RETROUVE",
         "RIS_DEMANDE"
       ],
-      "initial": "perteEmploi",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.801Z"
+      "initial": "perteEmploi"
     },
     {
       "id": "reductionTransportPublic",
@@ -7117,12 +4777,7 @@
         "DEMANDER_CARTE",
         "CARTE_OBTENUE"
       ],
-      "initial": "information",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.801Z"
+      "initial": "information"
     },
     {
       "id": "grapa",
@@ -7168,50 +4823,7 @@
         "DECISION_REFUS",
         "REVISION_ANNUELLE"
       ],
-      "initial": "verification",
-      "legalMetadata": {
-        "machineId": "grapa",
-        "nameFr": "Garantie de revenus aux personnes âgées (GRAPA)",
-        "nameNl": "Inkomensgarantie voor ouderen (IGO)",
-        "category": "social-benefits",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "SPF Sécurité Sociale",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Loi du 22 mars 2001 instaurant la garantie de revenus aux personnes âgées",
-              "referenceNumber": "2001022201",
-              "publicationDate": "2001-04-26T00:00:00.000Z",
-              "effectiveDate": "2001-06-01T00:00:00.000Z",
-              "officialUrl": "https://www.ejustice.just.fgov.be/eli/loi/2001/03/22/2001022201/justel",
-              "backupUrl": "https://www.socialsecurity.belgium.be/fr/tout-sur-les-pensions/grapa",
-              "language": "fr"
-            }
-          ],
-          "amounts": {
-            "montantMaximalIsole": 1070.49,
-            "montantMaximalMenage": 713.66
-          },
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "grapa@minsoc.fed.be"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.801Z"
+      "initial": "verification"
     },
     {
       "id": "pensionAnticipee",
@@ -7255,12 +4867,7 @@
         "DEMANDE_ACCEPTEE",
         "DEMANDE_REFUSEE"
       ],
-      "initial": "verification",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.801Z"
+      "initial": "verification"
     },
     {
       "id": "pensionSurvie",
@@ -7298,45 +4905,7 @@
         "REFUS",
         "REVISION_REVENUS"
       ],
-      "initial": "verification",
-      "legalMetadata": {
-        "machineId": "pensionSurvie",
-        "nameFr": "Pension de survie",
-        "nameNl": "Overlevingspensioen",
-        "category": "social-benefits",
-        "currentVersion": {
-          "version": "2024.1.0",
-          "extractionDate": "2024-11-16T00:00:00.000Z",
-          "lastLegislativeUpdate": "2024-01-01T00:00:00.000Z",
-          "nextReviewDate": "2025-01-01T00:00:00.000Z",
-          "sources": [
-            {
-              "authority": "Service Fédéral des Pensions",
-              "authorityType": "SPF",
-              "region": "fédéral",
-              "title": "Pension de survie",
-              "publicationDate": "2023-12-20T00:00:00.000Z",
-              "effectiveDate": "2024-01-01T00:00:00.000Z",
-              "officialUrl": "https://www.sfpd.fgov.be/fr/pension-de-survie",
-              "language": "fr"
-            }
-          ],
-          "status": "active"
-        },
-        "versionHistory": [],
-        "contactEmail": "info@sfpd.fgov.be",
-        "contactPhone": "1765"
-      },
-      "dataFreshness": {
-        "status": "needs-review",
-        "label": "Révision nécessaire (392 jours)",
-        "daysOld": 392
-      },
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.802Z"
+      "initial": "verification"
     },
     {
       "id": "patentApplication",
@@ -7396,12 +4965,7 @@
         "ABANDON_APPLICATION",
         "RETRY"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "idle"
     },
     {
       "id": "trademarkRegistration",
@@ -7472,12 +5036,7 @@
         "RENEWAL_COMPLETED",
         "ABANDON"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "idle"
     },
     {
       "id": "conseilEtatAnnulation",
@@ -7531,12 +5090,7 @@
         "TIMEOUT",
         "RETRY"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.938Z"
+      "initial": "idle"
     },
     {
       "id": "ombudsmanProcedure",
@@ -7599,12 +5153,7 @@
         "WITHDRAW",
         "ESCALATE"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.940Z"
+      "initial": "idle"
     },
     {
       "id": "taxAppeal",
@@ -7672,12 +5221,7 @@
         "CLOSE_FILE",
         "WITHDRAW"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.940Z"
+      "initial": "idle"
     },
     {
       "id": "installationAlarmeHabitation",
@@ -7709,12 +5253,7 @@
         "DECLARER_ASSURANCE",
         "SYSTEME_OPERATIONNEL"
       ],
-      "initial": "evaluationBesoins",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.804Z"
+      "initial": "evaluationBesoins"
     },
     {
       "id": "affiliationCaisseSociale",
@@ -7751,12 +5290,7 @@
         "AFFILIATION_COMPLETE",
         "PREMIERE_COTISATION"
       ],
-      "initial": "information",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.804Z"
+      "initial": "information"
     },
     {
       "id": "cotisationsSocialesIndependant",
@@ -7799,12 +5333,7 @@
         "REVENUS_REELS_CONNUS",
         "REGULARISATION"
       ],
-      "initial": "estimation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.804Z"
+      "initial": "estimation"
     },
     {
       "id": "revenuIntegrationSociale",
@@ -7841,12 +5370,7 @@
         "DECISION_REFUS",
         "SIGNER_PIIS"
       ],
-      "initial": "demande",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.805Z"
+      "initial": "demande"
     },
     {
       "id": "artistGrant",
@@ -7911,12 +5435,7 @@
         "RETRY",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.940Z"
+      "initial": "idle"
     },
     {
       "id": "artistStatus",
@@ -7971,12 +5490,7 @@
         "CANCEL",
         "RESET"
       ],
-      "initial": "idle",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-17T11:52:02.940Z"
+      "initial": "idle"
     },
     {
       "id": "permisConduire",
@@ -8016,12 +5530,7 @@
         "PRATIQUE_REUSSI",
         "PERMIS_DEFINITIF_DELIVRE"
       ],
-      "initial": "inscriptionAutoEcole",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.806Z"
+      "initial": "inscriptionAutoEcole"
     },
     {
       "id": "permisUrbanisme",
@@ -8069,24 +5578,13 @@
         "DECISION_REFUS",
         "RECOURS"
       ],
-      "initial": "preparation",
-      "parentMachines": [],
-      "childMachines": [],
-      "siblingMachines": [],
-      "version": "1.0.0",
-      "lastModified": "2025-11-16T22:03:56.806Z"
+      "initial": "preparation"
     }
   ],
   "statistics": {
     "totalStates": 2799,
     "totalEvents": 1280,
     "averageStatesPerMachine": "21.0",
-    "averageEventsPerMachine": "9.6",
-    "legalCompliance": {
-      "upToDate": 0,
-      "needsReview": 14,
-      "outdated": 44,
-      "missingMetadata": 75
-    }
+    "averageEventsPerMachine": "9.6"
   }
 }

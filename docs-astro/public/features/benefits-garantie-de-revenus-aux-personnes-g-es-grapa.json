@@ -553,6 +553,14 @@
         },
         {
           "keyword": "And",
+          "text": "je peux le faire dans un point pension"
+        },
+        {
+          "keyword": "And",
+          "text": "je peux le faire par courrier recommandé"
+        },
+        {
+          "keyword": "And",
           "text": "le SFP examine automatiquement mon droit lors de ma demande de pension"
         },
         {
@@ -680,5 +688,5 @@
     }
   ],
   "metadata": {},
-  "generated": "2025-12-13T17:27:42.439Z"
+  "generated": "2025-12-20T16:41:06.614Z"
 }
