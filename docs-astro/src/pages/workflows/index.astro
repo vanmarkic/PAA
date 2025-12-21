@@ -7,23 +7,20 @@ import { getUrl } from '../../lib/utils';
 const metadata = await loadMachinesMetadata();
 const { machines, categories } = metadata;
 
-// Get category from query params if any
-const url = new URL(Astro.request.url);
-const selectedCategory = url.searchParams.get('category') || '';
-
-// Filter machines if category is selected
-const filteredMachines = selectedCategory
-  ? machines.filter((m: any) => m.category === selectedCategory)
-  : machines;
-
-// Group machines by category for display
-const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
+// Group all machines by category for display
+const machinesByCategory = machines.reduce((acc: any, machine: any) => {
   if (!acc[machine.category]) {
     acc[machine.category] = [];
   }
   acc[machine.category].push(machine);
   return acc;
 }, {});
+
+// Category counts for filter buttons
+const categoryCounts = categories.reduce((acc: any, cat: string) => {
+  acc[cat] = machines.filter((m: any) => m.category === cat).length;
+  return acc;
+}, {} as Record<string, number>);
 ---
 
 <MainLayout
@@ -34,16 +31,14 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Header -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        {selectedCategory ? `Procédures: ${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)}` : 'Toutes les Procédures'}
+      <h1 id="page-title" class="text-4xl font-bold text-gray-900 mb-4">
+        Toutes les Procédures
       </h1>
       <p class="text-xl text-gray-600">
-        {filteredMachines.length} procédures disponibles
-        {selectedCategory && (
-          <a href={getUrl('workflows')} class="ml-2 text-purple-600 hover:text-purple-700">
-            (voir tous)
-          </a>
-        )}
+        <span id="procedure-count">{machines.length}</span> procédures disponibles
+        <a href={getUrl('workflows')} id="clear-filter-link" class="ml-2 text-purple-600 hover:text-purple-700 hidden">
+          (voir tous)
+        </a>
       </p>
     </div>
 
@@ -69,38 +64,25 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
 
       <div class="flex items-center justify-between mb-4">
         <h2 class="font-semibold text-gray-900">Filtrer par catégorie</h2>
-        {selectedCategory && (
-          <a href={getUrl('workflows')} class="text-sm text-purple-600 hover:text-purple-700">
-            Effacer le filtre
-          </a>
-        )}
+        <button id="clear-category-filter" class="text-sm text-purple-600 hover:text-purple-700 hidden">
+          Effacer le filtre
+        </button>
       </div>
-      <div class="flex flex-wrap gap-2">
-        <a
-          href={getUrl('workflows')}
-          class={`px-4 py-2 rounded-lg transition-colors ${
-            !selectedCategory
-              ? 'bg-purple-100 text-purple-700 border-2 border-purple-500'
-              : 'bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300'
-          }`}
+      <div id="category-filters" class="flex flex-wrap gap-2">
+        <button
+          data-category=""
+          class="category-btn px-4 py-2 rounded-lg transition-colors bg-purple-100 text-purple-700 border-2 border-purple-500"
         >
           Tous ({machines.length})
-        </a>
-        {categories.map((cat: string) => {
-          const count = machines.filter((m: any) => m.category === cat).length;
-          return (
-            <a
-              href={getUrl(`workflows?category=${cat}`)}
-              class={`px-4 py-2 rounded-lg transition-colors ${
-                selectedCategory === cat
-                  ? 'bg-purple-100 text-purple-700 border-2 border-purple-500'
-                  : 'bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300'
-              }`}
-            >
-              {cat.charAt(0).toUpperCase() + cat.slice(1)} ({count})
-            </a>
-          );
-        })}
+        </button>
+        {categories.map((cat: string) => (
+          <button
+            data-category={cat}
+            class="category-btn px-4 py-2 rounded-lg transition-colors bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300"
+          >
+            {cat.charAt(0).toUpperCase() + cat.slice(1)} ({categoryCounts[cat]})
+          </button>
+        ))}
       </div>
     </div>
 
@@ -173,68 +155,170 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
     </div>
   </div>
 
-  <!-- Search filtering script -->
+  <!-- Search and category filtering script -->
   <script>
     const searchInput = document.getElementById('workflow-search') as HTMLInputElement;
     const workflowCards = document.querySelectorAll('.workflow-card');
     const categorySections = document.querySelectorAll('.category-section');
-    const resultsCountEl = document.querySelector('.results-count');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const clearCategoryBtn = document.getElementById('clear-category-filter');
+    const clearFilterLink = document.getElementById('clear-filter-link');
+    const pageTitle = document.getElementById('page-title');
+    const procedureCount = document.getElementById('procedure-count');
 
+    let currentCategory = '';
+    let debounceTimer: ReturnType<typeof setTimeout>;
+
+    // Get category from URL on page load
+    function initFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const categoryParam = params.get('category');
+      if (categoryParam) {
+        currentCategory = categoryParam;
+        applyFilters();
+        updateCategoryButtonStyles();
+      }
+    }
+
+    // Apply both search and category filters
+    function applyFilters() {
+      const query = searchInput?.value.toLowerCase().trim() || '';
+      let visibleCount = 0;
+
+      workflowCards.forEach((card) => {
+        const name = card.getAttribute('data-name') || '';
+        const description = card.getAttribute('data-description') || '';
+        const keywords = card.getAttribute('data-keywords') || '';
+        const category = card.getAttribute('data-category') || '';
+
+        const matchesSearch = query === '' ||
+          name.includes(query) ||
+          description.includes(query) ||
+          keywords.includes(query);
+
+        const matchesCategory = currentCategory === '' || category === currentCategory;
+
+        if (matchesSearch && matchesCategory) {
+          (card as HTMLElement).style.display = '';
+          visibleCount++;
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+
+      // Hide category sections with no visible cards
+      categorySections.forEach((section) => {
+        const sectionCategory = section.getAttribute('data-category') || '';
+        const visibleCards = section.querySelectorAll('.workflow-card:not([style*="display: none"])');
+
+        // Hide section if no visible cards, or if filtering by a different category
+        if (visibleCards.length === 0 || (currentCategory !== '' && sectionCategory !== currentCategory)) {
+          (section as HTMLElement).style.display = 'none';
+        } else {
+          (section as HTMLElement).style.display = '';
+        }
+      });
+
+      // Update count and title
+      if (procedureCount) {
+        procedureCount.textContent = String(visibleCount);
+      }
+
+      if (pageTitle) {
+        if (currentCategory) {
+          pageTitle.textContent = `Procédures: ${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}`;
+        } else {
+          pageTitle.textContent = 'Toutes les Procédures';
+        }
+      }
+
+      // Show/hide clear filter buttons
+      if (clearCategoryBtn) {
+        clearCategoryBtn.classList.toggle('hidden', currentCategory === '');
+      }
+      if (clearFilterLink) {
+        clearFilterLink.classList.toggle('hidden', currentCategory === '');
+      }
+
+      // Update search helper text
+      const helperText = searchInput?.parentElement?.nextElementSibling;
+      if (helperText && query !== '') {
+        helperText.textContent = `${visibleCount} procédure${visibleCount !== 1 ? 's' : ''} trouvée${visibleCount !== 1 ? 's' : ''}`;
+      } else if (helperText) {
+        helperText.textContent = 'Tapez pour filtrer par nom ou description';
+      }
+    }
+
+    // Update button styles to show active category
+    function updateCategoryButtonStyles() {
+      categoryButtons.forEach((btn) => {
+        const btnCategory = btn.getAttribute('data-category') || '';
+        if (btnCategory === currentCategory) {
+          btn.classList.remove('bg-gray-100', 'text-gray-700', 'border-transparent');
+          btn.classList.add('bg-purple-100', 'text-purple-700', 'border-purple-500');
+        } else {
+          btn.classList.remove('bg-purple-100', 'text-purple-700', 'border-purple-500');
+          btn.classList.add('bg-gray-100', 'text-gray-700', 'border-transparent');
+        }
+      });
+    }
+
+    // Category button click handlers
+    categoryButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentCategory = btn.getAttribute('data-category') || '';
+
+        // Update URL without reload
+        const url = new URL(window.location.href);
+        if (currentCategory) {
+          url.searchParams.set('category', currentCategory);
+        } else {
+          url.searchParams.delete('category');
+        }
+        window.history.pushState({}, '', url.toString());
+
+        applyFilters();
+        updateCategoryButtonStyles();
+      });
+    });
+
+    // Clear category filter
+    if (clearCategoryBtn) {
+      clearCategoryBtn.addEventListener('click', () => {
+        currentCategory = '';
+        const url = new URL(window.location.href);
+        url.searchParams.delete('category');
+        window.history.pushState({}, '', url.toString());
+        applyFilters();
+        updateCategoryButtonStyles();
+      });
+    }
+
+    // Search input with debounce
     if (searchInput) {
-      // Debounce function for better performance
-      let debounceTimer: ReturnType<typeof setTimeout>;
-
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener('input', () => {
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-          const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
-          let visibleCount = 0;
-
-          workflowCards.forEach((card) => {
-            const name = card.getAttribute('data-name') || '';
-            const description = card.getAttribute('data-description') || '';
-            const keywords = card.getAttribute('data-keywords') || '';
-
-            const matches = query === '' ||
-              name.includes(query) ||
-              description.includes(query) ||
-              keywords.includes(query);
-
-            if (matches) {
-              (card as HTMLElement).style.display = '';
-              visibleCount++;
-            } else {
-              (card as HTMLElement).style.display = 'none';
-            }
-          });
-
-          // Hide category sections with no visible cards
-          categorySections.forEach((section) => {
-            const visibleCards = section.querySelectorAll('.workflow-card:not([style*="display: none"])');
-            if (visibleCards.length === 0 && query !== '') {
-              (section as HTMLElement).style.display = 'none';
-            } else {
-              (section as HTMLElement).style.display = '';
-            }
-          });
-
-          // Update search helper text
-          const helperText = searchInput.parentElement?.nextElementSibling;
-          if (helperText && query !== '') {
-            helperText.textContent = `${visibleCount} procédure${visibleCount !== 1 ? 's' : ''} trouvée${visibleCount !== 1 ? 's' : ''}`;
-          } else if (helperText) {
-            helperText.textContent = 'Tapez pour filtrer par nom ou description';
-          }
-        }, 150);
+        debounceTimer = setTimeout(applyFilters, 150);
       });
 
       // Clear search on Escape
       searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           searchInput.value = '';
-          searchInput.dispatchEvent(new Event('input'));
+          applyFilters();
         }
       });
     }
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(window.location.search);
+      currentCategory = params.get('category') || '';
+      applyFilters();
+      updateCategoryButtonStyles();
+    });
+
+    // Initialize on page load
+    initFromUrl();
   </script>
 </MainLayout>
