@@ -117,15 +117,15 @@ const contextTypes = getWorkflowContextTypes(machine.id);
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="text-3xl font-bold text-gray-900">{machine.states?.length || 0}</div>
-        <div class="text-gray-600">États</div>
+        <div class="text-gray-600" title="Nombre d'étapes dans cette procédure">Étapes</div>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="text-3xl font-bold text-gray-900">{machine.events?.length || 0}</div>
-        <div class="text-gray-600">Événements</div>
+        <div class="text-gray-600" title="Actions possibles dans cette procédure">Actions</div>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="text-3xl font-bold text-gray-900">{machine.initial || 'N/A'}</div>
-        <div class="text-gray-600">État Initial</div>
+        <div class="text-gray-600">Point de départ</div>
       </div>
     </div>
 
@@ -134,20 +134,20 @@ const contextTypes = getWorkflowContextTypes(machine.id);
       <div class="border-b border-gray-200">
         <nav class="flex space-x-8 px-6" aria-label="Tabs">
           <a href="#states" class="py-4 px-1 border-b-2 border-purple-500 font-medium text-sm text-purple-600">
-            États
+            Étapes
           </a>
           <a href="#events" class="py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-            Événements
+            Actions
           </a>
           <a href="#flow" class="py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-            Flux
+            Diagramme
           </a>
         </nav>
       </div>
 
       <!-- States Section -->
       <div id="states" class="p-6">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">États de la Procédure</h2>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Étapes de la Procédure</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {machine.states?.map((state: string, index: number) => (
             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
@@ -157,7 +157,7 @@ const contextTypes = getWorkflowContextTypes(machine.id);
               <div class="ml-4">
                 <div class="text-gray-900 font-medium">{state}</div>
                 {state === machine.initial && (
-                  <div class="text-xs text-purple-600 mt-1">État initial</div>
+                  <div class="text-xs text-purple-600 mt-1">Point de départ</div>
                 )}
               </div>
             </div>
@@ -167,7 +167,7 @@ const contextTypes = getWorkflowContextTypes(machine.id);
 
       <!-- Events Section -->
       <div id="events" class="p-6 hidden">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Événements</h2>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Actions Possibles</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {machine.events?.map((event: string) => (
             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
@@ -234,8 +234,8 @@ const contextTypes = getWorkflowContextTypes(machine.id);
               <h3 class="font-semibold text-gray-900 mb-2">{related.name}</h3>
               <p class="text-gray-600 text-sm mb-3">{related.description || 'Procédure administrative'}</p>
               <div class="flex items-center text-sm text-gray-500">
-                <span class="mr-3">{related.states?.length || 0} états</span>
-                <span>{related.events?.length || 0} événements</span>
+                <span class="mr-3">{related.states?.length || 0} étapes</span>
+                <span>{related.events?.length || 0} actions</span>
               </div>
             </a>
           ))}

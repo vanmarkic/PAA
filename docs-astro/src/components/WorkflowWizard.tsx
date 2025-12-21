@@ -32,6 +32,37 @@ const categoryMapping: Record<string, string[]> = {
   'immigration': ['Immigration', 'Séjour', 'Naturalisation']
 };
 
+const categoryLabels: Record<string, string> = {
+  'social': 'Aide Sociale',
+  'family': 'Famille',
+  'housing': 'Logement',
+  'health': 'Santé',
+  'pension': 'Pension',
+  'energy': 'Énergie',
+  'handicap': 'Handicap',
+  'selfemployed': 'Indépendant',
+  'education': 'Formation',
+  'immigration': 'Immigration',
+  '': 'Toutes catégories'
+};
+
+const situationLabels: Record<string, string> = {
+  'unemployed': 'Sans emploi',
+  'employed': 'En emploi',
+  'student': 'Étudiant',
+  'retired': 'Retraité'
+};
+
+const urgencyLabels: Record<string, string> = {
+  'immediate': 'Urgent',
+  'soon': 'Prochaines semaines',
+  'planning': 'Je planifie'
+};
+
+const getCategoryLabel = (key: string) => categoryLabels[key] || key;
+const getSituationLabel = (key: string) => situationLabels[key] || key;
+const getUrgencyLabel = (key: string) => urgencyLabels[key] || key;
+
 export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWizardProps) {
   const [currentStep, setCurrentStep] = useState<Step>('category');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -87,14 +118,14 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex justify-between mb-2">
-          <span className={`text-sm font-medium ${currentStep === 'category' ? 'text-purple-600' : 'text-gray-400'}`}>
-            Catégorie
+          <span className={`text-sm font-medium ${currentStep === 'category' ? 'text-purple-600' : selectedCategory ? 'text-green-600' : 'text-gray-400'}`}>
+            {selectedCategory ? `✓ ${getCategoryLabel(selectedCategory)}` : 'Catégorie'}
           </span>
-          <span className={`text-sm font-medium ${currentStep === 'situation' ? 'text-purple-600' : 'text-gray-400'}`}>
-            Situation
+          <span className={`text-sm font-medium ${currentStep === 'situation' ? 'text-purple-600' : selectedSituation ? 'text-green-600' : 'text-gray-400'}`}>
+            {selectedSituation ? `✓ ${getSituationLabel(selectedSituation)}` : 'Situation'}
           </span>
-          <span className={`text-sm font-medium ${currentStep === 'urgency' ? 'text-purple-600' : 'text-gray-400'}`}>
-            Urgence
+          <span className={`text-sm font-medium ${currentStep === 'urgency' ? 'text-purple-600' : selectedUrgency ? 'text-green-600' : 'text-gray-400'}`}>
+            {selectedUrgency ? `✓ ${getUrgencyLabel(selectedUrgency)}` : 'Urgence'}
           </span>
           <span className={`text-sm font-medium ${currentStep === 'results' ? 'text-purple-600' : 'text-gray-400'}`}>
             Résultats
@@ -110,6 +141,17 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
             }}
           />
         </div>
+        {/* Skip to browse option */}
+        {currentStep !== 'results' && (
+          <div className="mt-3 text-center">
+            <a
+              href={getUrl('workflows')}
+              className="text-sm text-gray-500 hover:text-purple-600 underline"
+            >
+              Passer l'assistant et parcourir toutes les procédures →
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Step Content */}
@@ -252,8 +294,27 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
             Procédures Recommandées
           </h2>
 
+          {/* Selection Summary */}
+          <div className="bg-purple-50 rounded-lg p-4 mb-6">
+            <h3 className="font-medium text-purple-900 mb-2">Votre recherche:</h3>
+            <div className="flex flex-wrap gap-2 text-sm">
+              <span className="px-3 py-1 bg-white rounded-full text-purple-700 border border-purple-200">
+                {getCategoryLabel(selectedCategory)}
+              </span>
+              <span className="px-3 py-1 bg-white rounded-full text-purple-700 border border-purple-200">
+                {getSituationLabel(selectedSituation)}
+              </span>
+              <span className="px-3 py-1 bg-white rounded-full text-purple-700 border border-purple-200">
+                {getUrgencyLabel(selectedUrgency)}
+              </span>
+            </div>
+          </div>
+
           {results.length > 0 ? (
             <div className="space-y-4 mb-6">
+              <p className="text-sm text-gray-600 mb-4">
+                {results.length} procédure{results.length > 1 ? 's' : ''} correspond{results.length > 1 ? 'ent' : ''} à votre recherche:
+              </p>
               {results.map(machine => (
                 <a
                   key={machine.id}
@@ -268,10 +329,10 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
                       </p>
                       <div className="flex items-center gap-4 text-xs text-gray-500">
                         <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
-                          {machine.category}
+                          {getCategoryLabel(machine.category)}
                         </span>
-                        <span>{machine.states?.length || 0} états</span>
-                        <span>{machine.events?.length || 0} événements</span>
+                        <span>{machine.states?.length || 0} étapes</span>
+                        <span>{machine.events?.length || 0} actions</span>
                       </div>
                     </div>
                     <svg className="w-5 h-5 text-gray-400 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,11 +343,24 @@ export default function WorkflowWizard({ machines, baseUrl = '/' }: WorkflowWiza
               ))}
             </div>
           ) : (
-            <div className="bg-gray-50 rounded-lg p-8 text-center mb-6">
-              <p className="text-gray-600">
-                Aucune procédure ne correspond exactement à vos critères.
-                Essayez d'élargir votre recherche ou consultez toutes les catégories.
-              </p>
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+              <div className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <div>
+                  <h3 className="font-semibold text-amber-800 mb-2">Aucun résultat exact</h3>
+                  <p className="text-amber-700 text-sm mb-3">
+                    Nous n'avons pas trouvé de procédure correspondant exactement à vos critères.
+                  </p>
+                  <p className="text-amber-700 text-sm font-medium">Suggestions:</p>
+                  <ul className="text-amber-700 text-sm list-disc list-inside mt-1 space-y-1">
+                    <li>Essayez avec une catégorie différente</li>
+                    <li>Consultez votre CPAS local pour une aide personnalisée</li>
+                    <li>Parcourez toutes les procédures disponibles</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           )}
 

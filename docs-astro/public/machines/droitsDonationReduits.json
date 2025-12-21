@@ -45,7 +45,7 @@
     "REINITIALISER"
   ],
   "initial": "inactif",
-  "generated": "2025-12-20T16:41:06.467Z",
+  "generated": "2025-12-21T08:49:06.725Z",
   "legalSources": {
     "sources": [
       {
@@ -64,8 +64,8 @@
     "version": "2024.1.0",
     "dataFreshness": {
       "status": "outdated",
-      "label": "Données anciennes (399 jours)",
-      "daysOld": 399
+      "label": "Données anciennes (400 jours)",
+      "daysOld": 400
     }
   }
 }

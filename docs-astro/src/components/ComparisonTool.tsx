@@ -111,7 +111,7 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
               <div className="flex-1">
                 <div className="font-medium text-gray-900">{machine.name}</div>
                 <div className="text-sm text-gray-500">
-                  {machine.category} • {machine.states?.length || 0} états • {machine.events?.length || 0} événements
+                  {machine.category} • {machine.states?.length || 0} étapes • {machine.events?.length || 0} actions
                 </div>
               </div>
             </label>

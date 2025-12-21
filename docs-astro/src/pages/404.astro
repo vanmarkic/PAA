@@ -1,0 +1,45 @@
+---
+import MainLayout from '../layouts/Layout.astro';
+import { getUrl } from '../lib/utils';
+---
+
+<MainLayout title="Page Non Trouvée - PAA" description="La page demandée n'existe pas">
+  <div class="min-h-[60vh] flex items-center justify-center px-4">
+    <div class="text-center max-w-2xl">
+      <!-- 404 Icon -->
+      <div class="mb-8">
+        <svg class="w-32 h-32 mx-auto text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+
+      <!-- Error Message -->
+      <h1 class="text-6xl font-bold text-gray-900 mb-4">404</h1>
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Page Non Trouvée</h2>
+      <p class="text-gray-600 mb-8">
+        Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+      </p>
+
+      <!-- Navigation Options -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href={getUrl('')} class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+          Retour à l'Accueil
+        </a>
+        <a href={getUrl('workflows')} class="px-6 py-3 bg-white text-purple-600 border-2 border-purple-500 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
+          Voir les Procédures
+        </a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="border-t pt-8">
+        <p class="text-sm text-gray-500 mb-4">Liens utiles:</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <a href={getUrl('wizard')} class="text-purple-600 hover:underline">Assistant de Recherche</a>
+          <a href={getUrl('benefits')} class="text-purple-600 hover:underline">Guide des Prestations</a>
+          <a href={getUrl('rules')} class="text-purple-600 hover:underline">Règles d'Éligibilité</a>
+          <a href="https://github.com/vanmarkic/PAA" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

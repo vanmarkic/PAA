@@ -26,7 +26,11 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
 }, {});
 ---
 
-<MainLayout title="Toutes les Procédures - PAA" description="Liste complète des procédures administratives belges">
+<MainLayout
+  title="Toutes les Procédures - PAA"
+  description="Liste complète des procédures administratives belges"
+  breadcrumbs={[{ label: 'Procédures' }]}
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Header -->
     <div class="text-center mb-12">
@@ -43,8 +47,26 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
       </p>
     </div>
 
-    <!-- Category Filter -->
+    <!-- Search and Filter -->
     <div class="mb-8 bg-white rounded-lg border border-gray-200 p-4">
+      <!-- Search Input -->
+      <div class="mb-4">
+        <div class="relative">
+          <input
+            type="text"
+            id="workflow-search"
+            placeholder="Rechercher une procédure (ex: logement, pension, CPAS...)"
+            class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+          />
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <p class="mt-2 text-xs text-gray-500">
+          Tapez pour filtrer par nom ou description
+        </p>
+      </div>
+
       <div class="flex items-center justify-between mb-4">
         <h2 class="font-semibold text-gray-900">Filtrer par catégorie</h2>
         {selectedCategory && (
@@ -84,7 +106,7 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
 
     <!-- Workflows by Category -->
     {Object.entries(machinesByCategory).map(([category, categoryMachines]: [string, any]) => (
-      <div class="mb-12">
+      <div class="mb-12 category-section" data-category={category}>
         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
           <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-lg mr-3">
             {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -94,11 +116,15 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
           </span>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 workflow-grid">
           {categoryMachines.map((machine: any) => (
             <a
               href={getUrl(`workflows/${machine.id}`)}
-              class="bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all">
+              class="workflow-card bg-white rounded-lg border border-gray-200 p-6 hover:border-purple-500 hover:shadow-lg transition-all"
+              data-name={machine.name.toLowerCase()}
+              data-description={(machine.description || machine.plainLanguage || '').toLowerCase()}
+              data-keywords={(machine.keywords || []).join(' ').toLowerCase()}
+              data-category={machine.category}
             >
               <h3 class="text-lg font-semibold text-gray-900 mb-2">{machine.name}</h3>
               <p class="text-gray-600 text-sm mb-4">
@@ -107,8 +133,8 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
 
               <div class="flex items-center justify-between text-sm">
                 <div class="flex items-center gap-4 text-gray-500">
-                  <span>{machine.states?.length || 0} états</span>
-                  <span>{machine.events?.length || 0} événements</span>
+                  <span title="Nombre d'étapes dans cette procédure">{machine.states?.length || 0} étapes</span>
+                  <span title="Nombre d'actions possibles">{machine.events?.length || 0} actions</span>
                 </div>
                 <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -146,4 +172,69 @@ const machinesByCategory = filteredMachines.reduce((acc: any, machine: any) => {
       </div>
     </div>
   </div>
+
+  <!-- Search filtering script -->
+  <script>
+    const searchInput = document.getElementById('workflow-search') as HTMLInputElement;
+    const workflowCards = document.querySelectorAll('.workflow-card');
+    const categorySections = document.querySelectorAll('.category-section');
+    const resultsCountEl = document.querySelector('.results-count');
+
+    if (searchInput) {
+      // Debounce function for better performance
+      let debounceTimer: ReturnType<typeof setTimeout>;
+
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+          let visibleCount = 0;
+
+          workflowCards.forEach((card) => {
+            const name = card.getAttribute('data-name') || '';
+            const description = card.getAttribute('data-description') || '';
+            const keywords = card.getAttribute('data-keywords') || '';
+
+            const matches = query === '' ||
+              name.includes(query) ||
+              description.includes(query) ||
+              keywords.includes(query);
+
+            if (matches) {
+              (card as HTMLElement).style.display = '';
+              visibleCount++;
+            } else {
+              (card as HTMLElement).style.display = 'none';
+            }
+          });
+
+          // Hide category sections with no visible cards
+          categorySections.forEach((section) => {
+            const visibleCards = section.querySelectorAll('.workflow-card:not([style*="display: none"])');
+            if (visibleCards.length === 0 && query !== '') {
+              (section as HTMLElement).style.display = 'none';
+            } else {
+              (section as HTMLElement).style.display = '';
+            }
+          });
+
+          // Update search helper text
+          const helperText = searchInput.parentElement?.nextElementSibling;
+          if (helperText && query !== '') {
+            helperText.textContent = `${visibleCount} procédure${visibleCount !== 1 ? 's' : ''} trouvée${visibleCount !== 1 ? 's' : ''}`;
+          } else if (helperText) {
+            helperText.textContent = 'Tapez pour filtrer par nom ou description';
+          }
+        }, 150);
+      });
+
+      // Clear search on Escape
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchInput.value = '';
+          searchInput.dispatchEvent(new Event('input'));
+        }
+      });
+    }
+  </script>
 </MainLayout>
