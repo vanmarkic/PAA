@@ -97,7 +97,7 @@ const contextTypes = getWorkflowContextTypes(machine.id);
           <button onclick="window.print()" class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
             Imprimer
           </button>
-          <a href={`/comparison?workflows=${machine.id}`} class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+          <a href={getUrl(`comparison?workflows=${machine.id}`)} class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
             Comparer
           </a>
         </div>

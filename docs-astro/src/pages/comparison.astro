@@ -7,9 +7,8 @@ import { loadMachinesMetadata } from '../lib/machines';
 const metadata = await loadMachinesMetadata();
 const { machines } = metadata;
 
-// Get workflow IDs from query params if any
-const url = new URL(Astro.request.url);
-const workflowIds = url.searchParams.get('workflows')?.split(',') || [];
+// Note: URL params are read client-side in ComparisonTool component
+// This enables ?workflows=id1,id2 to work on static sites
 ---
 
 <MainLayout title="Comparaison de Procédures - PAA" description="Comparez les procédures administratives belges">
@@ -41,7 +40,6 @@ const workflowIds = url.searchParams.get('workflows')?.split(',') || [];
     <!-- React Island for Interactive Comparison -->
     <ComparisonTool
       machines={machines}
-      preselectedIds={workflowIds}
       client:load
     />
 

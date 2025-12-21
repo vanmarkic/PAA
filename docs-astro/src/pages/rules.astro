@@ -296,10 +296,20 @@ const featuredRules = await Promise.all(
   <!-- JavaScript for filtering and interaction -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('search-input');
-      const categoryFilter = document.getElementById('category-filter');
-      const priorityFilter = document.getElementById('priority-filter');
+      const searchInput = document.getElementById('search-input') as HTMLInputElement;
+      const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+      const priorityFilter = document.getElementById('priority-filter') as HTMLSelectElement;
       const categoryCards = document.querySelectorAll('.category-card');
+
+      // Read category from URL params on page load
+      function initFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const categoryParam = params.get('category');
+        if (categoryParam && categoryFilter) {
+          categoryFilter.value = categoryParam;
+          filterCategories();
+        }
+      }
 
       // Search and filter functionality
       function filterCategories() {
@@ -307,30 +317,43 @@ const featuredRules = await Promise.all(
         const selectedCategory = categoryFilter?.value || '';
 
         categoryCards.forEach(card => {
-          const category = card.dataset.category;
+          const category = (card as HTMLElement).dataset.category;
           const text = card.textContent?.toLowerCase() || '';
 
           const matchesSearch = !searchTerm || text.includes(searchTerm);
           const matchesCategory = !selectedCategory || category === selectedCategory;
 
           if (matchesSearch && matchesCategory) {
-            card.style.display = '';
+            (card as HTMLElement).style.display = '';
           } else {
-            card.style.display = 'none';
+            (card as HTMLElement).style.display = 'none';
           }
         });
+
+        // Update URL without page reload
+        const url = new URL(window.location.href);
+        if (selectedCategory) {
+          url.searchParams.set('category', selectedCategory);
+        } else {
+          url.searchParams.delete('category');
+        }
+        window.history.replaceState({}, '', url.toString());
       }
 
       searchInput?.addEventListener('input', filterCategories);
       categoryFilter?.addEventListener('change', filterCategories);
 
-      // Handle category rule expansion
+      // Handle category rule expansion - now filters instead of navigating
       document.querySelectorAll('.show-category-rules').forEach(button => {
         button.addEventListener('click', (e) => {
-          const category = e.target.dataset.category;
-          // In a real implementation, this would expand to show all rules
-          // or navigate to a filtered view
-          window.location.href = `/rules?category=${category}`;
+          const target = e.target as HTMLElement;
+          const category = target.dataset.category;
+          if (category && categoryFilter) {
+            categoryFilter.value = category;
+            filterCategories();
+            // Scroll to top of filter section
+            categoryFilter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
         });
       });
 
@@ -339,6 +362,14 @@ const featuredRules = await Promise.all(
         e.preventDefault();
         alert('Guide des règles: Les règles utilisent des conditions AND (toutes doivent être vraies) ou OR (au moins une doit être vraie) pour déterminer l\'éligibilité.');
       });
+
+      // Handle browser back/forward
+      window.addEventListener('popstate', () => {
+        initFromUrl();
+      });
+
+      // Initialize on page load
+      initFromUrl();
     });
   </script>
 </MainLayout>

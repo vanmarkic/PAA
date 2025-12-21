@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { getUrl } from '../lib/utils';
 
 interface Machine {
@@ -22,6 +22,20 @@ export default function ComparisonTool({ machines, preselectedIds = [] }: Compar
   const [selectedMachines, setSelectedMachines] = useState<string[]>(preselectedIds);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
+
+  // Read URL params on mount (client-side)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const workflowsParam = params.get('workflows');
+    if (workflowsParam) {
+      const ids = workflowsParam.split(',').filter(id =>
+        machines.some(m => m.id === id)
+      );
+      if (ids.length > 0) {
+        setSelectedMachines(ids.slice(0, 4)); // Max 4
+      }
+    }
+  }, [machines]);
 
   // Get unique categories
   const categories = useMemo(() => {
