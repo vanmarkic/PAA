@@ -53,7 +53,7 @@
     "gherkin"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
     "@cucumber/cucumber": "^12.2.0",
     "@cucumber/gherkin": "^36.1.0",
