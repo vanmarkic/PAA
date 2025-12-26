@@ -459,7 +459,29 @@ This is a POC demonstrating architectural patterns. To extend:
 
 ## 📄 License
 
-ISC
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License** (CC BY-NC-SA 4.0).
+
+### What this means:
+
+✅ **You CAN:**
+- Use this software for personal, educational, or research purposes
+- Modify and adapt the code for non-commercial projects
+- Share and redistribute the code (with attribution)
+- Learn from and study the codebase
+
+❌ **You CANNOT:**
+- Use this software for commercial purposes without permission
+- Remove or modify license notices or attributions
+- Apply additional restrictions beyond those in the license
+
+### Commercial Use
+
+If you wish to use this software for commercial purposes, please contact the project maintainers to obtain a commercial license.
+
+### Full License
+
+See the [LICENSE](LICENSE) file for the complete license text, or view it online at:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ---
 
