@@ -1,21 +1,56 @@
-Business Source License 1.1
+Source Available License — All Rights Reserved
 
-Licensor:             Markic Van (vanmarkic)
+Licensor:             MediaXP SRL, Belgium
+                      (Rights may be transferred to a foundation or other
+                      fitting non-profit legal entity in the future.)
 Licensed Work:        PAA (Plateforme d'Aide Administrative)
-                      The Licensed Work is (c) 2024 Markic Van
-Change Date:          Never
-Change License:       N/A
-
-Additional Use Grant: None
+                      The Licensed Work is (c) 2024 MediaXP SRL, Belgium.
+                      All rights reserved.
 
 -----------------------------------------------------------------------------
 
-Business Source License 1.1
+Purpose
+
+This license is designed to keep the source code publicly readable while
+preventing any third party from making commercial profit from the Licensed
+Work without the explicit written permission of the Licensor.
+
+-----------------------------------------------------------------------------
 
 Terms
 
-The Licensor hereby grants you the right to copy, modify, create derivative
-works, redistribute, and make non-production use of the Licensed Work.
+1. PERMITTED USES
+   - Viewing and reading the source code is permitted for personal evaluation,
+     study, and non-commercial research purposes only.
+
+2. PROHIBITED USES — the following are strictly forbidden without the prior
+   explicit written permission of the Licensor:
+
+   a. Any commercial use, including but not limited to selling, licensing,
+      offering as a service (SaaS), embedding in commercial products, or
+      any other use that generates revenue or commercial advantage.
+
+   b. Copying, reproducing, or distributing the Licensed Work, in whole or
+      in part, for any purpose.
+
+   c. Incorporating any part of this Licensed Work into another project,
+      product, or service.
+
+   d. Sublicensing, selling, renting, leasing, transferring, assigning, or
+      otherwise disposing of the Licensed Work or any portion thereof.
+
+3. ATTRIBUTION
+   Any permitted use must retain this copyright notice and license in full.
+
+4. FUTURE TRANSFER
+   The Licensor reserves the right to transfer ownership of this Licensed
+   Work to a foundation or other non-profit legal entity. Such a transfer
+   shall not expand the rights granted to third parties under this license
+   unless a new license is explicitly issued.
+
+-----------------------------------------------------------------------------
+
+DISCLAIMER
 
 THE LICENSED WORK IS PROVIDED "AS IS". THE LICENSOR HEREBY DISCLAIMS ALL
 WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
@@ -25,28 +60,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE LICENSED WORK OR THE USE OR OTHER DEALINGS
 IN THE LICENSED WORK.
 
-However, the following restrictions apply:
-
-1. You may NOT use, copy, reproduce, or distribute the Licensed Work, in
-   whole or in part, for any purpose, commercial or non-commercial, without
-   the prior written permission of the Licensor.
-
-2. Viewing and reading the source code is permitted for evaluation and study
-   purposes only.
-
-3. You may NOT incorporate any part of this Licensed Work into another
-   project, product, or service without explicit written consent from the
-   Licensor.
-
-4. You may NOT sublicense, sell, rent, lease, transfer, assign, or otherwise
-   dispose of the Licensed Work.
-
-For permissions beyond the scope of this license, contact:
-vanmarkic on GitHub (https://github.com/vanmarkic)
-
 -----------------------------------------------------------------------------
 
-All Rights Reserved. No use, copying, or distribution is permitted without
-the express written permission of the Licensor.
+For permissions or licensing inquiries, contact:
+MediaXP SRL — https://github.com/vanmarkic
 
-Copyright (c) 2024 Markic Van. All rights reserved.
+Copyright (c) 2024 MediaXP SRL, Belgium. All rights reserved.
