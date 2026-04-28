@@ -1,0 +1,165 @@
+name: AI Eval Suite
+
+on:
+  pull_request:
+    paths:
+      - 'ai/**'
+      - '.github/workflows/ai-eval.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ai/**'
+      - '.github/workflows/ai-eval.yml'
+
+jobs:
+  lint-and-test:
+    name: Lint and unit tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Unit tests
+        run: uv run pytest tests/ -x
+
+  retrieval-eval:
+    name: Retrieval eval (offline, stub embedder)
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: paa_test
+          POSTGRES_USER: paa
+          POSTGRES_PASSWORD: paa_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U paa -d paa_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://paa:paa_test@localhost:5432/paa_test
+      # Empty key forces the StubEmbedder; retrieval still exercises pgvector
+      # and tsvector against real Postgres, just with deterministic vectors.
+      OPENAI_API_KEY: ""
+    defaults:
+      run:
+        working-directory: ai
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Build corpus and chunks
+        run: |
+          uv run python -m ai.ingest.audit --repo-root .. --output data/audit_report.json
+          uv run python -m ai.ingest.loader --repo-root .. --output data/corpus.jsonl
+          uv run python -m ai.ingest.chunker --corpus data/corpus.jsonl --output data/chunks.jsonl
+
+      - name: Embed and index
+        run: uv run python -m ai.ingest.embedder --chunks data/chunks.jsonl
+
+      - name: Retrieval eval
+        run: uv run python -m ai.eval.retrieval_eval --top-k 5 --max-queries 200
+
+      - name: Upload eval report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retrieval-eval-${{ github.sha }}
+          path: ai/eval/results/
+
+  agent-eval:
+    name: Agent eval (LLM calls — main only)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: paa_test
+          POSTGRES_USER: paa
+          POSTGRES_PASSWORD: paa_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U paa -d paa_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://paa:paa_test@localhost:5432/paa_test
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    defaults:
+      run:
+        working-directory: ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build TypeScript rules engine (for agent eligibility bridge)
+        run: |
+          cd ..
+          npm ci
+          npm run build || echo "Build step is best-effort; agent eval will mark unavailable if it fails."
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Build corpus and chunks
+        run: |
+          uv run python -m ai.ingest.loader --repo-root .. --output data/corpus.jsonl
+          uv run python -m ai.ingest.chunker --corpus data/corpus.jsonl --output data/chunks.jsonl
+
+      - name: Embed and index
+        run: uv run python -m ai.ingest.embedder --chunks data/chunks.jsonl
+
+      - name: Agent eval
+        run: uv run python -m ai.eval.agent_eval --max-queries 50
+
+      - name: Upload eval report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-eval-${{ github.sha }}
+          path: ai/eval/results/
