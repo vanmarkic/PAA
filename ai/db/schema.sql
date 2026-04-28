@@ -1,7 +1,10 @@
 -- PAA AI corpus schema (pgvector + tsvector for hybrid retrieval).
 -- Run once against the target Postgres database before embedding.
 --
--- Embedding dimension defaults to 1536 (OpenAI text-embedding-3-small).
+-- Embedding dimension defaults to 1024 — works natively with Voyage 3-large,
+-- Cohere embed-multilingual-v3, BAAI/bge-m3, and intfloat/multilingual-e5-large.
+-- OpenAI text-embedding-3-small (native 1536) is truncated to 1024 via the
+-- `dimensions` API parameter so the schema stays portable across providers.
 -- If you change EMBEDDING_DIM in ai/config.py, recreate the table.
 
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -16,7 +19,7 @@ CREATE TABLE IF NOT EXISTS chunks (
     language        TEXT NOT NULL DEFAULT 'fr',
     source_path     TEXT NOT NULL,
     position        INTEGER NOT NULL DEFAULT 0,
-    embedding       vector(1536),
+    embedding       vector(1024),
     -- Use 'french' for French content; the retriever uses the same regconfig
     -- when calling to_tsquery so stemming matches.
     tsv             tsvector GENERATED ALWAYS AS (to_tsvector('french', content)) STORED,

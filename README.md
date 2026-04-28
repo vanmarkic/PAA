@@ -181,10 +181,11 @@ documentation. Output a unified document schema ready for embedding.
 
 Hybrid retrieval (semantic + keyword) over Belgian administrative procedures.
 
-- Embeddings: OpenAI `text-embedding-3-small` (multilingual FR/NL/DE)
+- Embeddings: pluggable — Voyage AI (default), Cohere, OpenAI, or local
+  Sentence-Transformers (`BAAI/bge-m3`). All settle on 1024 dim.
 - Vector store: pgvector on PostgreSQL 16
 - Keyword search: PostgreSQL `tsvector` with French stemming
-- Re-ranker: Cohere `rerank-v3.5`
+- Re-ranker: Cohere `rerank-v3.5` or Voyage `rerank-2`
 - Generation: Claude Sonnet 4 (primary), GPT-4o (fallback)
 
 ### Phase 2 — Agentic Eligibility Checker

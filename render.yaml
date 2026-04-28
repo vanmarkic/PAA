@@ -27,16 +27,23 @@ services:
         sync: false
       - key: ANTHROPIC_API_KEY
         sync: false
-      - key: OPENAI_API_KEY
+      - key: VOYAGE_API_KEY
         sync: false
       - key: COHERE_API_KEY
+        sync: false
+      # OpenAI is optional — only set if EMBEDDING_PROVIDER=openai is used.
+      - key: OPENAI_API_KEY
         sync: false
       - key: LLM_PROVIDER
         value: anthropic
       - key: LLM_MODEL
         value: claude-sonnet-4-20250514
+      - key: EMBEDDING_PROVIDER
+        value: voyage
       - key: EMBEDDING_MODEL
-        value: text-embedding-3-small
+        value: voyage-3-large
+      - key: EMBEDDING_DIM
+        value: "1024"
 
 databases:
   - name: PAA-db

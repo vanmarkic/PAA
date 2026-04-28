@@ -66,8 +66,11 @@ services:
       DATABASE_URL: postgresql://paa:paa_dev@postgres:5432/paa
       REDIS_URL: redis://redis:6379/0
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      VOYAGE_API_KEY: ${VOYAGE_API_KEY:-}
       COHERE_API_KEY: ${COHERE_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-auto}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
     depends_on:
       postgres:
         condition: service_healthy

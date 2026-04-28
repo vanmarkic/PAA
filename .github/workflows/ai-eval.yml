@@ -58,9 +58,12 @@ jobs:
           --health-retries 10
     env:
       DATABASE_URL: postgresql://paa:paa_test@localhost:5432/paa_test
-      # Empty key forces the StubEmbedder; retrieval still exercises pgvector
-      # and tsvector against real Postgres, just with deterministic vectors.
-      OPENAI_API_KEY: ""
+      # No embedding API keys → the auto-selector lands on the StubEmbedder.
+      # Retrieval still exercises pgvector and tsvector against real Postgres,
+      # just with deterministic vectors. Quality metrics aren't meaningful in
+      # this mode, but the pipeline shape and failure modes are.
+      EMBEDDING_PROVIDER: stub
+      EMBEDDING_DIM: "1024"
     defaults:
       run:
         working-directory: ai
@@ -118,8 +121,12 @@ jobs:
           --health-retries 10
     env:
       DATABASE_URL: postgresql://paa:paa_test@localhost:5432/paa_test
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+      COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+      EMBEDDING_PROVIDER: voyage
+      EMBEDDING_MODEL: voyage-3-large
+      EMBEDDING_DIM: "1024"
     defaults:
       run:
         working-directory: ai

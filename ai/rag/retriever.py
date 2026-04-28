@@ -62,7 +62,9 @@ class HybridRetriever:
         from ai.db.connection import connect  # noqa: PLC0415  (lazy import for tests)
 
         top_k = top_k or self._settings.retriever_top_k
-        query_vec = self._embedder.embed([query])[0]
+        # Use input_type="query" so providers that distinguish query vs document
+        # embeddings (Voyage, Cohere, e5-style local models) align the spaces.
+        query_vec = self._embedder.embed([query], input_type="query")[0]
         vec_literal = _vec_literal(query_vec)
 
         semantic: list[ChunkResult] = []

@@ -36,6 +36,21 @@ def test_stub_embedder_distinguishes_inputs():
     assert a != b
 
 
+def test_stub_embedder_default_dim_is_1024():
+    """Schema is vector(1024). Stub default must match so tests round-trip."""
+    e = StubEmbedder()
+    [v] = e.embed(["hello"])
+    assert len(v) == 1024
+
+
+def test_stub_embedder_accepts_input_type():
+    e = StubEmbedder(dim=64)
+    [doc] = e.embed(["query"], input_type="document")
+    [query] = e.embed(["query"], input_type="query")
+    # Stub doesn't differentiate, but accepting the kwarg is the contract.
+    assert doc == query
+
+
 def test_rrf_fuses_two_rankings():
     semantic = [_mk("a"), _mk("b"), _mk("c")]
     keyword = [_mk("b"), _mk("a"), _mk("d")]
@@ -53,6 +68,31 @@ def test_passthrough_reranker_truncates():
     chunks = [_mk("a"), _mk("b"), _mk("c"), _mk("d")]
     out = PassthroughReranker().rerank("query", chunks, top_k=2)
     assert [c.id for c in out] == ["a", "b"]
+
+
+def test_get_reranker_falls_back_to_passthrough_without_keys(monkeypatch):
+    monkeypatch.delenv("COHERE_API_KEY", raising=False)
+    monkeypatch.delenv("VOYAGE_API_KEY", raising=False)
+    from ai.config import get_settings
+    from ai.rag.reranker import get_reranker
+
+    get_settings.cache_clear()
+    r = get_reranker()
+    assert r.name == "passthrough"
+
+
+def test_get_embedder_resolves_to_stub_without_keys(monkeypatch):
+    """Auto-selection lands on stub when no embedding provider is configured."""
+    for k in ("VOYAGE_API_KEY", "COHERE_API_KEY", "OPENAI_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    from ai.config import get_settings
+    from ai.ingest.embedder import get_embedder
+
+    get_settings.cache_clear()
+    e = get_embedder()
+    # Stub or local — depending on whether sentence_transformers is importable
+    # in the test env. Either way, no API key is leaked.
+    assert e.name in {"stub", "local"}
 
 
 def test_generator_stub_mode_cites_top_chunk(monkeypatch):

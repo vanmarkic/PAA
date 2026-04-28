@@ -7,13 +7,33 @@ business logic.
 ## Setup
 
 ```bash
-# Install dependencies
+# Install dependencies (Voyage + Cohere SDKs are core deps)
 uv sync
+
+# To enable local embeddings (no API key, runs sentence-transformers on CPU/GPU):
+uv sync --extra local
+
+# To enable OpenAI embeddings:
+uv sync --extra openai
 
 # Copy environment template
 cp .env.example .env
 # Edit .env to add API keys
 ```
+
+## Embedding providers
+
+| Provider | Default model              | Native dim | Price ($/MTok) | Notes                                    |
+|----------|----------------------------|------------|----------------|------------------------------------------|
+| voyage   | `voyage-3-large`           | 1024       | 0.12           | **Recommended.** Anthropic-aligned.      |
+| voyage   | `voyage-4-lite`            | 1024       | 0.02           | Cheap multilingual; same price as 3-small. |
+| cohere   | `embed-multilingual-v3.0`  | 1024       | 0.10           | Already needed if using Cohere reranker. |
+| openai   | `text-embedding-3-small`   | 1536→1024  | 0.02           | Truncated to 1024 via `dimensions=`.     |
+| local    | `BAAI/bge-m3`              | 1024       | 0 (compute)    | ~2 GB download. CPU-friendly.            |
+| stub     | hash-to-vec                | 1024       | 0              | Tests/CI only. Not for retrieval.        |
+
+Set `EMBEDDING_PROVIDER=auto` (default) to pick the first available provider
+in the order voyage → cohere → openai → local → stub.
 
 ## Modules
 
