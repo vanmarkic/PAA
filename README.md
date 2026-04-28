@@ -1,50 +1,34 @@
-# Plateforme d'Aide Administrative - POC
+# Plateforme d'Aide Administrative (PAA)
 
-## 🎯 Overview
+A platform encoding Belgian administrative procedures as executable state machines,
+with a rules engine for eligibility determination and an AI-powered conversational
+assistant.
 
-**Note**: Cache busting commit - please ignore
+- **133 procedures** modelled as XState state machines
+- **1150 eligibility rules** evaluated via json-rules-engine
+- **Gherkin specifications** as living documentation and test suites
+- **AI layer** (in progress): RAG pipeline, agentic eligibility checker, evaluation framework
 
-This is a proof-of-concept demonstrating how to encode complex Belgian social/legal business logic into maintainable, executable code. The POC addresses the core challenge: **converting legal text to common language** and **calculating benefit eligibility** for the Plateforme d'Aide Administrative.
+## Live Documentation
 
-## 🧠 Business Context
-
-The platform aims to:
-- Convert Belgian legal/administrative text to plain language
-- Optimize social benefits for precarious populations
-- Provide conversational assistance (WhatsApp bot)
-- Calculate eligibility and benefit amounts
-
-**Key Challenge:** Legal rules are complex, change frequently, and must be understandable by:
-- Social workers
-- Beneficiaries (often with limited literacy)
-- Automated systems (optimization algorithms)
-
-## 📚 Live Documentation
-
-Interactive documentation for all workflows is available at:
+Interactive documentation for all procedures is available at:
 
 **https://vanmarkic.github.io/PAA/**
 
-Features:
-- Browse 131+ Belgian administrative workflows
-- Filter by category (e.g., `/PAA/workflows?category=propriete-intellectuelle`)
-- Interactive workflow visualization
+- Browse Belgian administrative procedures
+- Filter by category (e.g. `propriete-intellectuelle`, `etrangers`, `tax`)
+- Interactive procedure visualization
 - Search and comparison tools
 
-## 🏗️ Architecture Decision: Why This Hybrid Approach?
+## Architecture
 
-After analyzing the requirements, we chose a **hybrid architecture** combining:
+PAA uses a **hybrid architecture** where each tool serves a specific purpose:
 
-### 1. **Gherkin/Cucumber** - For Business Rules Specification
+### 1. Gherkin/Cucumber — Eligibility Rules Specification
 
-**Why:**
-- ✅ **Human-readable** by non-technical stakeholders (legal experts, social workers)
-- ✅ **Living documentation** that stays in sync with code
-- ✅ **Executable specifications** that can be validated
-- ✅ **Testable** - scenarios become automated tests
-- ✅ **Versioned** - track rule changes over time
+Human-readable specifications for eligibility criteria. Legal experts and social
+workers can validate rules without reading code.
 
-**Example:**
 ```gherkin
 Scénario: Travailleur à temps partiel avec maintien des droits éligible
   Étant donné que je suis un travailleur à temps partiel
@@ -55,16 +39,12 @@ Scénario: Travailleur à temps partiel avec maintien des droits éligible
   Et le montant de l'allocation devrait être 360€
 ```
 
-### 2. **XState** - For Workflow State Machines
+### 2. XState — Administrative Procedure State Machines
 
-**Why:**
-- ✅ **Visual representation** of complex workflows
-- ✅ **Predictable state transitions** (no hidden states)
-- ✅ **Built-in retry logic** and error handling
-- ✅ **Auditable** - track exactly where in the process something failed
-- ✅ **Type-safe** with TypeScript
+Visual, predictable orchestration of multi-step administrative procedures
+(legal text simplification, application procedures). Each machine has explicit
+states, guards, transitions, and meta descriptions.
 
-**Example:** Legal text conversion pipeline
 ```
 idle → extractingStructure → identifyingConcepts → mappingVocabulary
   → generatingVersions → validating → completed
@@ -72,403 +52,193 @@ idle → extractingStructure → identifyingConcepts → mappingVocabulary
                         regeneratingWithConstraints ⟲
 ```
 
-### 3. **json-rules-engine** - For Runtime Rule Evaluation
+### 3. json-rules-engine — Runtime Eligibility Evaluation
 
-**Why:**
-- ✅ **Declarative rules** that can be stored in database
-- ✅ **Dynamic updates** without code deployment
-- ✅ **Priority-based** evaluation
-- ✅ **Composable conditions** (AND, OR, NOT)
-- ✅ **Auditable** - know exactly which rules fired
+Declarative rules stored as JSON, evaluated at runtime. Rules can be updated
+without redeployment, versioned, and audited.
 
-### 4. **TypeScript** - For Type-Safe Implementation
-
-**Why:**
-- ✅ **Compile-time safety** for critical calculations (money, dates)
-- ✅ **Self-documenting** with strong types
-- ✅ **Refactoring confidence**
-- ✅ **IDE support** for developers
-
-## 📂 Project Structure
-
-```
-PAA/
-├── features/                    # Gherkin business rules (human-readable)
-│   ├── benefits/
-│   │   └── income-guarantee.feature    # AGR eligibility rules
-│   └── conversion/
-│       └── legal-text-conversion.feature
-│
-├── src/
-│   ├── domain/                  # Core business entities
-│   │   └── types.ts            # User, Benefit, LegalText, etc.
-│   │
-│   ├── workflows/               # XState state machines
-│   │   └── conversionMachine.ts    # Legal text conversion workflow
-│   │
-│   ├── rules/                   # Business rules implementation
-│   │   └── agrRules.ts         # AGR eligibility rules engine
-│   │
-│   ├── services/                # Business logic services
-│   │   └── conversionService.ts    # Legal text conversion service
-│   │
-│   └── examples/                # Runnable examples
-│       ├── agrExample.ts       # AGR eligibility examples
-│       └── conversionExample.ts    # Conversion workflow examples
-│
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-cd ../PAA
-npm install
-```
-
-### Run Examples
-
-**AGR Eligibility Check:**
-```bash
-npm run example:agr
-```
-
-This demonstrates:
-- ✓ Eligible case (part-time, rights maintenance, salary < 1650€)
-- ✗ Ineligible cases (salary too high, no rights maintenance, etc.)
-- Optimization hints based on working hours
-
-**Legal Text Conversion Workflow:**
-```bash
-npm run example:conversion
-```
-
-This demonstrates:
-- State machine progression through conversion pipeline
-- Retry logic when validation fails
-- Context tracking at each step
-
-### Build
-
-```bash
-npm run build
-```
-
-## 🖥️ Frontend Application
-
-The PAA project includes a modern React-based frontend application with a comprehensive UI for interacting with the system.
-
-### Frontend Features
-
-- **React 18** with TypeScript for type-safe development
-- **Vite** for lightning-fast development and optimized builds
-- **Radix UI** components for accessibility
-- **Tailwind CSS** for styling
-- **Dark mode** support
-- **Responsive design** for mobile, tablet, and desktop
-- **Multi-language support** (FR, NL, DE)
-
-### Running the Full Stack
-
-#### Prerequisites
-
-- Node.js 18+ and npm 9+
-- Docker and Docker Compose (for PostgreSQL and Redis)
-
-#### 1. Start Backend Services
-
-```bash
-# Start database and cache services
-npm run docker:up
-
-# In a separate terminal, start the API server
-npm run dev:api
-
-# The API will be available at http://localhost:3000
-# API documentation at http://localhost:3000/docs
-```
-
-#### 2. Start Frontend Application
-
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies (first time only)
-npm install
-
-# Copy environment configuration
-cp .env.example .env.local
-
-# Start development server
-npm run dev
-
-# The frontend will be available at http://localhost:5173
-```
-
-#### 3. Access the Application
-
-- **Frontend UI**: http://localhost:5173
-- **API Documentation**: http://localhost:3000/docs
-- **Database Admin**: http://localhost:5050 (pgAdmin)
-- **Redis Admin**: http://localhost:8081 (Redis Commander)
-
-### Frontend Production Build
-
-```bash
-cd frontend
-
-# Build for production
-npm run build
-
-# Preview production build locally
-npm run preview
-
-# Build outputs to frontend/dist/
-```
-
-#### Production Build Details
-
-- **Bundle size**: ~73 KB gzipped total
-- **Code splitting** for optimal loading
-- **Lazy loading** of components
-- **Source maps** for debugging
-- **Environment-specific configuration**
-
-### Development Workflow
-
-1. **Backend Development**: The main PAA backend provides APIs and business logic
-2. **Frontend Development**: The React frontend provides the user interface
-3. **Integration**: Frontend proxies API calls to the backend during development
-
-For detailed frontend documentation, see [frontend/README.md](frontend/README.md).
-
-## 📋 Key Features Demonstrated
-
-### 1. Business Rules in Gherkin
-
-See `features/benefits/income-guarantee.feature`
-
-Benefits:
-- Legal experts can validate rules without reading code
-- Rules serve as automated tests
-- Changes are tracked in git with clear history
-- Scenarios cover edge cases explicitly
-
-### 2. State Machine Workflow
-
-See `src/workflows/conversionMachine.ts`
-
-The conversion pipeline implements the architecture from the documentation:
-```typescript
-1. Extract legal structure (NLP)
-2. Identify key concepts
-3. Map to common vocabulary
-4. Generate multiple versions (simple, detailed, examples)
-5. Validate semantic accuracy
-6. Retry if validation fails (max 3 attempts)
-```
-
-Visualization available via XState tools.
-
-### 3. Rules Engine
-
-See `src/rules/agrRules.ts`
-
-Rules are defined as JSON objects:
 ```typescript
 {
   conditions: {
     all: [
-      { fact: 'employmentStatus', operator: 'equal', value: 'part-time' },
-      { fact: 'hasRightsMaintenance', operator: 'equal', value: true },
-      { fact: 'monthlySalaryGross', operator: 'lessThan', value: 1650 }
-    ]
+      { fact: 'employmentStatus',     operator: 'equal',    value: 'part-time' },
+      { fact: 'hasRightsMaintenance', operator: 'equal',    value: true },
+      { fact: 'monthlySalaryGross',   operator: 'lessThan', value: 1650 },
+    ],
   },
-  event: { type: 'agr-eligible' }
+  event: { type: 'agr-eligible' },
 }
 ```
 
-Can be:
-- Stored in database
-- Updated without deployment
-- Versioned for legal compliance
-- Audited (which rules fired when)
+### 4. TypeScript — Type-Safe Implementation
 
-### 4. Type Safety
+Compile-time safety for critical calculations (money, dates) and refactoring
+confidence. All domain types live in `src/domain/types.ts`.
 
-See `src/domain/types.ts`
+### Why this hybrid?
 
-Strong typing prevents errors:
-```typescript
-interface EligibilityCheck {
-  benefitType: BenefitType;  // Enum, not string
-  isEligible: boolean;
-  calculatedAmount?: number;  // Optional, only if eligible
-  reason?: string;            // Required if not eligible
-}
+- **Gherkin** defines **what** the eligibility rules are (readable specs)
+- **XState** defines **how** procedures flow (visual process automata)
+- **json-rules-engine** defines **when** conditions apply (runtime evaluation)
+- **TypeScript** provides **implementation** safety (compile-time guarantees)
+
+## Project Structure
+
+```
+PAA/
+├── features/              # Gherkin BDD scenarios (240 .feature files)
+│   ├── benefits/          # AGR, RIS, allocations, etc.
+│   ├── tax/               # Tax-related procedures
+│   └── ...                # 13 other categories
+│
+├── src/
+│   ├── domain/            # Pure domain models (types.ts, etc.)
+│   ├── workflows/         # XState machines (135 procedures)
+│   ├── rules/             # json-rules-engine rules (139 files)
+│   ├── services/          # Orchestration layer
+│   ├── api/               # Fastify HTTP layer (planned)
+│   ├── database/          # TypeORM entities/migrations
+│   ├── cache/             # Redis caching
+│   ├── queue/             # Bull async jobs
+│   └── examples/          # Runnable demos
+│
+├── ai/                    # AI layer (Python — see roadmap below)
+│   ├── ingest/            # Phase 0: data normalisation
+│   ├── rag/               # Phase 1: retrieval pipeline
+│   ├── agents/            # Phase 2: agentic eligibility checker
+│   ├── eval/              # Phase 3: evaluation framework
+│   └── api/               # FastAPI service
+│
+├── database/              # Legal source registry, scrapings
+├── docs/                  # Documentation
+├── docs-astro/            # Astro static site for docs
+└── frontend/              # React + Radix UI + Tailwind
 ```
 
-## 🎨 Design Patterns Used
+## Quick Start
 
-### 1. **Domain-Driven Design (DDD)**
-- Clear domain models (`User`, `Benefit`, `LegalText`)
-- Ubiquitous language from business domain
-- Bounded contexts (rules, workflows, services)
+### Prerequisites
 
-### 2. **State Pattern (XState)**
-- Explicit state machines
-- No hidden states or race conditions
-- Predictable behavior
+- Node.js 18+ and npm 9+
+- Docker and Docker Compose (for PostgreSQL + Redis)
+- Python 3.12+ and `uv` (for the AI layer)
 
-### 3. **Strategy Pattern (Rules Engine)**
-- Rules are strategies for eligibility determination
-- Can swap/add rules dynamically
-- Composition over inheritance
+### Backend
 
-### 4. **Pipeline Pattern**
-- Conversion is a pipeline of transformations
-- Each stage has clear input/output
-- Stages can be tested independently
-
-## 🔄 Comparison with Alternatives
-
-### Why NOT pure Cucumber?
-- ❌ Cucumber alone doesn't execute business logic
-- ❌ Step definitions still need implementation
-- ❌ Doesn't handle complex workflows well
-
-### Why NOT pure XState?
-- ❌ State machines for business rules = verbose
-- ❌ Hard for non-developers to validate
-- ❌ No natural representation of eligibility conditions
-
-### Why NOT pure Rules Engine?
-- ❌ Doesn't handle workflows/pipelines well
-- ❌ No visual representation
-- ❌ State transitions are awkward
-
-### Why This Hybrid?
-- ✅ **Gherkin** for **what** the rules are (readable specs)
-- ✅ **XState** for **how** processes flow (visual workflows)
-- ✅ **Rules Engine** for **when** conditions apply (runtime evaluation)
-- ✅ **TypeScript** for **implementation** (type safety)
-
-## 📊 What Each Tool Handles
-
-| Concern | Tool | Why |
-|---------|------|-----|
-| Business rule specification | Gherkin | Human-readable by legal experts |
-| Workflow orchestration | XState | Visual, predictable state management |
-| Runtime rule evaluation | json-rules-engine | Dynamic, database-driven rules |
-| Type safety & implementation | TypeScript | Compile-time guarantees |
-| Data validation | Zod (planned) | Runtime schema validation |
-
-## 🔮 Future Enhancements
-
-### Phase 1 - Currently in POC
-- ✅ Basic AGR rules
-- ✅ Conversion workflow
-- ✅ Type definitions
-
-### Phase 2 - Next Steps
-- [ ] Integrate actual LLM API (Claude/GPT)
-- [ ] Add Zod schemas for validation
-- [ ] Implement Cucumber step definitions
-- [ ] Add more benefit types (RIS, unemployment, etc.)
-- [ ] Create visual state machine diagrams
-
-### Phase 3 - Production Ready
-- [ ] Store rules in PostgreSQL
-- [ ] Version rules with effective dates
-- [ ] Audit trail for all eligibility checks
-- [ ] Multi-language support (FR/NL/DE)
-- [ ] Human-in-the-loop validation workflow
-
-## 💡 How to Add New Rules
-
-### 1. Define in Gherkin
-```gherkin
-# features/benefits/new-benefit.feature
-Fonctionnalité: Nouveau Bénéfice
-  Scénario: Cas d'éligibilité
-    Étant donné que [conditions]
-    Quand [action]
-    Alors [résultat attendu]
-```
-
-### 2. Implement Rule
-```typescript
-// src/rules/newBenefitRules.ts
-const rule: Rule = {
-  conditions: { /* ... */ },
-  event: { type: 'new-benefit-eligible' }
-};
-```
-
-### 3. Add Types
-```typescript
-// src/domain/types.ts
-export type BenefitType = 'agr' | 'ris' | 'new-benefit';
-```
-
-### 4. Test
 ```bash
-npm run example:new-benefit
+npm install
+npm run docker:up          # Start PostgreSQL + Redis
+npm run dev:api            # Start API server on http://localhost:3000
 ```
 
-## 🎯 Best Practices
+### Examples
 
-### For Business Rules
-1. **One scenario per edge case** - Don't combine multiple cases
-2. **Use scenario outlines** for parametric testing
-3. **Write in French** for Belgian context (stakeholder language)
-4. **Include "why"** in scenario descriptions
+```bash
+npm run example:agr                # AGR eligibility check
+npm run example:ris                # RIS eligibility check
+npm run example:ris:workflow       # RIS procedure state machine
+npm run example:conversion         # Legal text simplification pipeline
+```
 
-### For State Machines
-1. **Keep states focused** - One responsibility per state
-2. **Use meta descriptions** - Document what each state does
-3. **Handle all transitions** - No undefined behavior
-4. **Implement timeouts** for async operations
+### Frontend
 
-### For Rules Engine
-1. **Prioritize rules** - Explicit order when overlap exists
-2. **Document facts** - What each fact represents
-3. **Test rule combinations** - Ensure no conflicts
-4. **Version rules** - Track changes over time
+```bash
+cd frontend
+npm install
+cp .env.example .env.local
+npm run dev                # Frontend on http://localhost:5173
+```
 
-## 📚 Resources
+### AI Layer
 
-- [XState Documentation](https://xstate.js.org/)
-- [Cucumber Gherkin Reference](https://cucumber.io/docs/gherkin/reference/)
-- [json-rules-engine](https://github.com/CacheControl/json-rules-engine)
-- [Domain-Driven Design](https://martinfowler.com/tags/domain%20driven%20design.html)
+```bash
+cd ai
+uv sync                    # Install Python dependencies
+uv run python -m ai.ingest.audit --repo-root .. --output data/audit_report.json
+```
 
-## 🤝 Contributing
+## Testing
 
-This is a POC demonstrating architectural patterns. To extend:
+```bash
+npm test                           # Jest unit/integration tests
+npm run test:coverage              # Coverage report
+npm run cucumber                   # Cucumber/Gherkin BDD tests
+npm run lint                       # ESLint
+```
 
-1. Add new `.feature` files for new business rules
-2. Implement corresponding rule engines
-3. Create examples demonstrating the functionality
-4. Update this README with new patterns
+## AI Layer Roadmap
 
-## 📄 License
+The AI layer adds RAG-based question answering and agentic eligibility checking
+on top of the existing PAA business logic. It is built in Python alongside the
+TypeScript core.
+
+### Phase 0 — Data Normalisation
+
+Audit and normalise the corpus: XState machines, Gherkin scenarios, rules,
+documentation. Output a unified document schema ready for embedding.
+
+### Phase 1 — RAG Pipeline
+
+Hybrid retrieval (semantic + keyword) over Belgian administrative procedures.
+
+- Embeddings: OpenAI `text-embedding-3-small` (multilingual FR/NL/DE)
+- Vector store: pgvector on PostgreSQL 16
+- Keyword search: PostgreSQL `tsvector` with French stemming
+- Re-ranker: Cohere `rerank-v3.5`
+- Generation: Claude Sonnet 4 (primary), GPT-4o (fallback)
+
+### Phase 2 — Agentic Eligibility Checker
+
+A multi-turn agent that conversationally gathers user facts and delegates
+eligibility calculation to the deterministic json-rules-engine. The LLM handles
+conversation and reasoning; the rules engine handles calculation. They never
+cross responsibilities.
+
+### Phase 3 — Evaluation Framework
+
+Quantitative regression testing using existing Gherkin scenarios as golden
+sets:
+
+- **Retrieval eval** — Precision@5, Recall@5, MRR
+- **Agent correctness** — exact match against deterministic rules engine
+- **Faithfulness** — LLM-as-judge or RAGAS faithfulness score
+
+CI runs the eval suite on every PR touching `ai/`.
+
+### Phase 4 — Frontend Integration
+
+Chat panel in the existing React frontend. Streaming responses via SSE,
+clickable source citations, eligibility result cards.
+
+## Key Belgian Social Benefits
+
+- **AGR** (Allocation de Garantie de Revenus) — Income guarantee for part-time workers
+- **RIS** (Revenu d'Intégration Sociale) — Social integration income
+- **CPAS** (Centre Public d'Action Sociale) — Public social welfare center
+
+Benefits have complex eligibility rules based on employment status, income,
+family situation, and residence. Rules change frequently and must be versioned
+and auditable.
+
+## Multi-Language Support
+
+| Concept       | Technical Term | User-Facing (EN / FR / NL / DE)                           |
+|---------------|----------------|-----------------------------------------------------------|
+| Workflow      | workflow       | Procedures / Procédures / Procedures / Verfahren          |
+| State Machine | state machine  | Process Automata / Automates de processus / ...           |
+| Conversion    | conversion     | Simplification / Simplification / Vereenvoudiging / ...   |
+| Business Rules| business rules | Eligibility Rules / Règles d'éligibilité / ...            |
+
+See `docs/TERMINOLOGY_MAPPING.md` for the complete reference.
+
+## Documentation
+
+- `CONTRIBUTING.md` — Detailed contributor guide with code examples
+- `QUICKSTART.md` — Getting started in 5 minutes
+- `DIRECTORY_STRUCTURE.md` — Full project structure
+- `CLAUDE.md` — Guidance for Claude Code working in this repo
+- `docs/TERMINOLOGY_MAPPING.md` — User-facing terminology across languages
+
+## License
 
 ISC
-
----
-
-## 🎓 Key Takeaways
-
-1. **No single tool solves everything** - Complex business logic needs a hybrid approach
-2. **Readability matters** - Legal rules must be validated by domain experts
-3. **Type safety prevents errors** - Especially critical for money/date calculations
-4. **Workflows need visualization** - State machines make complex processes understandable
-5. **Flexibility is key** - Rules stored in DB can change without deployment
-
-**This POC proves the architecture is feasible and maintainable.**
