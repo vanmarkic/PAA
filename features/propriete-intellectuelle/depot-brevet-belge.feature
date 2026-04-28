@@ -69,7 +69,7 @@ Fonctionnalité: Dépôt de brevet belge
     Et qu'un document X est trouvé détruisant la nouveauté
     Alors je devrais recevoir un rapport de recherche négatif
     Et je peux modifier mes revendications dans un délai de 2 mois
-    Ou abandonner ma demande
+    Et abandonner ma demande
 
   Plan du Scénario: Calcul des annuités selon l'année
     Étant donné que mon brevet a été délivré

@@ -14,7 +14,7 @@ Fonctionnalité: Impact Brexit sur droits IP
     Et que je veux maintenir la protection UK
     Quand le Brexit est effectif
     Alors un droit UK comparable est créé automatiquement
-    Avec la même date de dépôt et priorité
+    Et la même date de dépôt et priorité
     Mais je dois payer les renouvellements UK séparément
     Et désigner un représentant UK si non-résident
 
@@ -24,5 +24,5 @@ Fonctionnalité: Impact Brexit sur droits IP
     Quand je planifie mes dépôts
     Alors je dois faire deux demandes séparées
     Une marque UE et une marque UK
-    Avec des coûts doublés
+    Et des coûts doublés
     Et gérer deux procédures distinctes

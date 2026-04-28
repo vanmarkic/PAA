@@ -96,7 +96,7 @@ Fonctionnalité: Naturalisation et acquisition de la nationalité belge
     Alors ma demande sera probablement refusée
     Et le motif sera "faits personnels graves"
     Et je dois attendre 10 ans après la condamnation
-    Ou demander la réhabilitation
+    Et demander la réhabilitation
 
   Scénario: Nationalité pour enfant né en Belgique
     Étant donné qu'un enfant est né en Belgique

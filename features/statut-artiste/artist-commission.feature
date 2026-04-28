@@ -56,4 +56,4 @@ Fonctionnalité: Commission des Artistes
     Quand je demande la reconnaissance
     Alors la Commission vérifie l'équivalence
     Et peut accorder une reconnaissance temporaire
-    Ou demander des preuves supplémentaires
+    Et demander des preuves supplémentaires

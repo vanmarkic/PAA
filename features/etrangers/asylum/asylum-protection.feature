@@ -43,7 +43,7 @@ Fonctionnalité: Demande d'asile et protection internationale
     Alors je devrais recevoir une décision 26quater
     Et avoir 30 jours pour un recours en suspension
     Et le transfert devrait se faire dans les 6 mois
-    Sauf si je fais un recours suspensif
+    Et si je fais un recours suspensif
 
   Scénario: Reconnaissance du statut de réfugié
     Étant donné que j'ai fui des persécutions politiques
@@ -156,5 +156,5 @@ Fonctionnalité: Demande d'asile et protection internationale
     Alors ils peuvent initier une procédure de cessation
     Et je devrais être convoqué pour être entendu
     Et pouvoir démontrer d'autres craintes
-    Ou demander le maintien pour raisons humanitaires
+    Et demander le maintien pour raisons humanitaires
     Et avoir droit à un recours au CCE

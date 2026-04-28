@@ -9,7 +9,7 @@ Fonctionnalité: Copropriété Horizontale
 
   Scénario: Gestion voiries privées
     Étant donné que la copropriété gère des voiries privées
-    Couvrant 2000m² pour 25 maisons
+    Et 2000m² pour 25 maisons
     Quand l'entretien est planifié
     Alors il comprend:
       | Élément | Fréquence | Coût/an |

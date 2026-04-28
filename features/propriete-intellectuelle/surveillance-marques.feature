@@ -23,5 +23,5 @@ Fonctionnalité: Surveillance de marques
     Et qu'elle vient d'être publiée
     Quand j'analyse le risque de confusion
     Alors je peux former opposition dans les 2 mois
-    Ou envoyer une mise en garde amiable
-    Ou négocier un accord de coexistence
+    Et envoyer une mise en garde amiable
+    Et négocier un accord de coexistence

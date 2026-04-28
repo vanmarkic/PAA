@@ -14,8 +14,8 @@ Fonctionnalité: Procédure d'invalidation de brevet
     Et que j'ai trouvé des antériorités destructrices
     Quand j'engage une action en nullité
     Alors je dois prouver le défaut de nouveauté
-    Ou le manque d'activité inventive
-    Ou l'insuffisance de description
+    Et le manque d'activité inventive
+    Et l'insuffisance de description
     Et le tribunal peut annuler totalement ou partiellement
 
   Scénario: Opposition devant l'OEB

@@ -128,7 +128,7 @@ Fonctionnalité: Garde d'Enfants et Aides Financières
     Alors je paie 15€/jour après intervention
     Et je peux toujours déduire fiscalement
     Et la déduction porte sur les 15€ payés
-    Avec maximum 16.40€/jour déductibles
+    Et maximum 16.40€/jour déductibles
 
   Plan du Scénario: Calcul coût net selon revenus et aides
     Étant donné que mes revenus annuels nets sont <revenus>€

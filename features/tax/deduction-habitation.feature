@@ -95,7 +95,7 @@ Fonctionnalité: Déduction pour habitation propre et unique
   Scénario: Achat avec travaux économiseurs d'énergie
     Étant donné que j'ai acheté une habitation en 2024
     Et que j'ai contracté un emprunt de 300000€
-    Dont 250000€ pour l'achat
+    Et dont 250000€ pour l'achat
     Et 50000€ pour des travaux de rénovation énergétique
     Quand je calcule mes avantages fiscaux
     Alors la partie habitation suit les règles régionales

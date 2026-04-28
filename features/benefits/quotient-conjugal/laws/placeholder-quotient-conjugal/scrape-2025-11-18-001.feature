@@ -126,7 +126,7 @@ Fonctionnalité: Quotient conjugal et déclaration commune
     Alors nous devons obligatoirement faire une déclaration commune
     Et nous recevons un seul avertissement-extrait de rôle
     Et les deux conjoints sont solidairement responsables
-    Sauf pour les dettes fiscales antérieures au mariage
+    Et pour les dettes fiscales antérieures au mariage
 
   Scénario: Avantages fiscaux personnels dans déclaration commune
     Étant donné que nous faisons une déclaration commune

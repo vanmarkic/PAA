@@ -30,5 +30,5 @@ Fonctionnalité: Travaux d'Amélioration
     Mais que la majorité requise est atteinte
     Quand les travaux sont décidés
     Alors il doit quand même payer sa quote-part
-    Sauf s'il prouve un préjudice excessif
+    Et s'il prouve un préjudice excessif
     Et peut saisir le juge de paix sous 4 mois

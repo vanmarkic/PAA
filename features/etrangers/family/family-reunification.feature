@@ -136,4 +136,4 @@ Fonctionnalité: Regroupement familial en Belgique
     Et demander des preuves de vie familiale effective
     Et en cas de séparation non justifiée
     Mon titre de séjour pourrait être retiré
-    Sauf si j'ai des raisons humanitaires
+    Et si j'ai des raisons humanitaires

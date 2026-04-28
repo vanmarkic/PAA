@@ -9,7 +9,7 @@ Fonctionnalité: Gestion Terrasse Privative
 
   Scénario: Aménagement terrasse par copropriétaire
     Étant donné qu'un copropriétaire veut aménager sa terrasse
-    Avec pergola et jardinière
+    Et pergola et jardinière
     Quand il demande l'autorisation
     Alors il doit vérifier:
       | Aspect | Règle |

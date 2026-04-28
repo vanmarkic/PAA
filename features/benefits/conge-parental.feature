@@ -118,7 +118,7 @@ Fonctionnalité: Congé Parental
     Alors mon employeur ne peut pas me licencier
     Et la protection commence à la notification écrite
     Et elle se termine 3 mois après la fin du congé
-    Sauf pour motif grave ou raisons économiques
+    Et pour motif grave ou raisons économiques
 
   Scénario: Enfant de 13 ans - non éligible
     Étant donné que j'ai un enfant de 13 ans sans handicap

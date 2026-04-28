@@ -20,7 +20,7 @@ Fonctionnalité: Modification de l'Acte de Base
     Et qu'elle est purement matérielle
     Quand la correction est proposée
     Alors la majorité des 4/5 suffit
-    Si l'erreur est manifeste et documentée
+    Et l'erreur est manifeste et documentée
     Et ne modifie pas substantiellement les droits
 
   Scénario: Procédure notariale de modification

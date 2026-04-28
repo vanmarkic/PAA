@@ -139,8 +139,8 @@ Fonctionnalité: Garantie de Revenus aux Personnes Âgées (GRAPA)
     Quand je commence la procédure
     Alors je dois introduire ma demande au Service Fédéral des Pensions (SFP)
     Et je peux le faire via MyPension.be
-    Ou je peux le faire dans un point pension
-    Ou je peux le faire par courrier recommandé
+    Et je peux le faire dans un point pension
+    Et je peux le faire par courrier recommandé
     Et le SFP examine automatiquement mon droit lors de ma demande de pension
     Et le SFP vérifie mes ressources et celles de mon conjoint/cohabitant
     Et la décision est prise dans les 4 mois

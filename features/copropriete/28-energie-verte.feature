@@ -9,7 +9,7 @@ Fonctionnalité: Transition Énergétique
 
   Scénario: Installation panneaux solaires
     Étant donné qu'un projet solaire de 50000€ est proposé
-    Avec un retour sur investissement de 7 ans
+    Et un retour sur investissement de 7 ans
     Quand l'AG vote le projet
     Alors la majorité requise est 2/3
     Et les subsides disponibles sont:

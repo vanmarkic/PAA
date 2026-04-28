@@ -16,7 +16,7 @@ Fonctionnalité: Partenariat de recherche avec université
     Alors nous définissons la propriété des résultats
     Généralement partagée ou avec option de licence
     Et l'université garde les droits de publication
-    Avec embargo de 6-12 mois
+    Et embargo de 6-12 mois
     Et nous avons l'exclusivité commerciale
 
   Scénario: Thèse CIFRE avec gestion IP
@@ -25,5 +25,5 @@ Fonctionnalité: Partenariat de recherche avec université
     Quand nous gérons la propriété intellectuelle
     Alors l'entreprise a généralement la propriété
     Le doctorant est co-inventeur
-    L'université a des droits d'usage académique
+    Et université a des droits d'usage académique
     Et la thèse peut être confidentielle 2 ans

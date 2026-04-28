@@ -105,7 +105,7 @@ Fonctionnalité: Crédit d'impôt pour bas et moyens revenus
       | Frais de garde              | 1500€    |
     Quand je calcule mon impôt final
     Alors les déductions s'appliquent d'abord sur la base imposable
-    Puis le crédit d'impôt s'applique sur l'impôt calculé
+    Et puis le crédit d'impôt s'applique sur l'impôt calculé
     Et le crédit non utilisé est remboursable
 
   Plan du Scénario: Crédit d'impôt selon profil et revenus
@@ -138,7 +138,7 @@ Fonctionnalité: Crédit d'impôt pour bas et moyens revenus
     Étant donné que j'étais au chômage pendant 6 mois en 2024
     Et que j'ai trouvé un emploi en juillet 2024
     Et que mes revenus totaux sont de 15000€
-    Dont 8000€ d'allocations de chômage
+    Et dont 8000€ d'allocations de chômage
     Et 7000€ de salaires
     Quand je calcule mon crédit d'impôt
     Alors je bénéficie du crédit pour bas revenus

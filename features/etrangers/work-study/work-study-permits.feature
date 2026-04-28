@@ -68,7 +68,7 @@ Fonctionnalité: Permis de travail et d'études en Belgique
     Et que l'activité a une plus-value économique
     Quand je demande la carte professionnelle
     Alors je dois la demander au poste consulaire
-    Ou au guichet d'entreprise si déjà en Belgique
+    Et au guichet d'entreprise si déjà en Belgique
     Et fournir le plan financier
     Et prouver mes compétences de gestion
     Et si approuvée, demander un visa D indépendant
@@ -168,4 +168,4 @@ Fonctionnalité: Permis de travail et d'études en Belgique
     Alors la demande devrait être refusée
     Et le motif serait "main-d'œuvre disponible sur le marché"
     Et l'employeur peut faire un recours
-    Ou chercher un candidat européen
+    Et chercher un candidat européen

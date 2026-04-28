@@ -74,7 +74,7 @@ Fonctionnalité: Congé de Maternité
     Quand je demande la prolongation de mon congé
     Alors mon congé postnatal peut être prolongé
     Et la prolongation égale la durée d'hospitalisation au-delà de 7 jours
-    Avec un maximum de 24 semaines de prolongation
+    Et un maximum de 24 semaines de prolongation
 
   Scénario: Décès du nouveau-né
     Étant donné que mon enfant est décédé à la naissance
@@ -158,7 +158,7 @@ Fonctionnalité: Congé de Maternité
     Alors mon employeur ne peut pas me licencier
     Et la protection commence à l'annonce de la grossesse
     Et elle se termine 1 mois après la fin du congé de maternité
-    Sauf pour motif grave étranger à la grossesse
+    Et pour motif grave étranger à la grossesse
 
   Scénario: Allaitement après le congé de maternité
     Étant donné que mon congé de maternité se termine

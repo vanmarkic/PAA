@@ -46,7 +46,7 @@ Fonctionnalité: Congé Maladie et Indemnités d'Incapacité de Travail
       | Jours 15-30 | Employeur   | 25.88% + mutuelle 60%  |
       | Jours 31-60 | Mutuelle    | 60% salaire (max plafond)|
     Et mon indemnité mutuelle = 60% × (2500/26) = 57.69€/jour
-    Plafonné si nécessaire
+    Et Plafonné si nécessaire
 
   Scénario: Travailleur avec burn-out longue durée
     Étant donné que je souffre d'un burn-out diagnostiqué
@@ -55,12 +55,12 @@ Fonctionnalité: Congé Maladie et Indemnités d'Incapacité de Travail
     Et que mon salaire était de 3500€/mois
     Quand mon incapacité continue
     Alors en incapacité primaire (mois 1-12):
-      - Indemnité = 60% × (3500/26) = 80.77€/jour
-      - Minimum garanti famille = 76.42€/jour
-      - Maximum = 170.66€/jour
+    Et Indemnité = 60% × (3500/26) = 80.77€/jour
+    Et Minimum garanti famille = 76.42€/jour
+    Et Maximum = 170.66€/jour
     Et après 1 an, je passe en invalidité:
-      - Taux = 65% (charge famille)
-      - Maximum = 114.41€/jour
+    Et Taux = 65% (charge famille)
+    Et Maximum = 114.41€/jour
     Et possibilité de reprise progressive
 
   Scénario: Indépendant avec maladie de 3 semaines
@@ -82,8 +82,8 @@ Fonctionnalité: Congé Maladie et Indemnités d'Incapacité de Travail
     Et que mon médecin prescrit repos complet
     Quand je suis mise en incapacité
     Alors je reçois les indemnités maladie normales
-    Jusqu'à 6 semaines avant accouchement
-    Puis je bascule en congé de maternité:
+    Et Jusqu'à 6 semaines avant accouchement
+    Et Puis je bascule en congé de maternité:
       | Période                | Indemnité              |
       | 6 sem avant - 9 sem après | 82% salaire (3 premiers mois) |
       | Reste congé maternité   | 75% salaire plafonné   |
@@ -176,7 +176,7 @@ Fonctionnalité: Congé Maladie et Indemnités d'Incapacité de Travail
 
   Scénario: Fin de contrat pendant maladie
     Étant donné que mon CDD se termine pendant ma maladie
-    Ou que je suis licencié (hors faute grave)
+    Et que je suis licencié (hors faute grave)
     Quand mon contrat prend fin
     Alors mes droits sont:
       | Situation            | Droits                  |
@@ -185,4 +185,4 @@ Fonctionnalité: Congé Maladie et Indemnités d'Incapacité de Travail
       | Démission            | Indemnités si incapacité|
       | Force majeure méd.   | Indemnités maintenues   |
     Et passage automatique en chômage-maladie
-    Après fin incapacité si pas de reprise
+    Et Après fin incapacité si pas de reprise

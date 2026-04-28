@@ -42,7 +42,7 @@ Fonctionnalité: Droits RGPD et Protection de la Vie Privée
       | Cesser la diffusion des données          |
       | Informer les tiers si raisonnablement possible |
     Et confirmer l'effacement dans les 30 jours
-    Sauf si conservation nécessaire pour:
+    Et si conservation nécessaire pour:
       | Exception                          |
       | Liberté d'expression              |
       | Obligation légale                 |

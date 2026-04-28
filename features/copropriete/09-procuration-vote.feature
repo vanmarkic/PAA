@@ -23,12 +23,12 @@ Fonctionnalité: Gestion des Procurations de Vote
     Et que cette procuration représente 15 millièmes
     Alors la procuration est refusée
     Car la limite de 3 procurations est atteinte
-    Ou la limite de 10% des voix serait dépassée
+    Et la limite de 10% des voix serait dépassée
 
   Scénario: Procuration avec instructions de vote
     Étant donné que je donne procuration avec instructions
     Et que j'indique mon vote pour chaque point
     Quand le mandataire vote
     Alors il doit respecter mes instructions
-    Sauf pour les points modifiés en séance
+    Et pour les points modifiés en séance
     Et peut s'abstenir sur les points non prévus

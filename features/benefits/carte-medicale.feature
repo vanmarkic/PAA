@@ -36,7 +36,7 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
     Et que j'ai besoin de soins médicaux urgents
     Et que je n'ai aucune ressource financière
     Quand je me présente au CPAS
-    Avec une attestation médicale d'urgence
+    Et une attestation médicale d'urgence
     Alors le CPAS vérifie mon état d'indigence
     Et accorde l'AMU pour les soins urgents
     Et couvre:
@@ -69,10 +69,10 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
     Et que je vis seul
     Quand le CPAS évalue ma situation
     Alors il calcule mes ressources disponibles
-    Après déduction du loyer et charges fixes
+    Et après déduction du loyer et charges fixes
     Et si le reste est insuffisant pour vivre
     Alors j'obtiens une carte médicale
-    Couvrant médicaments chroniques et soins
+    Et médicaments chroniques et soins
 
   Scénario: Étudiant européen sans ressources
     Étant donné que je suis étudiant européen
@@ -113,7 +113,7 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
     Et l'assistant social mène une enquête
     Et visite mon domicile si nécessaire
     Et la décision est prise dans les 30 jours
-    Ou dans les 24h si urgence médicale
+    Et dans les 24h si urgence médicale
 
   Scénario: Utilisation de la carte médicale chez le médecin
     Étant donné que j'ai une carte médicale CPAS valide
@@ -124,7 +124,7 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
     Et envoie la facture directement au CPAS
     Mais si je vais chez un médecin non-conventionné
     Alors je dois payer et demander remboursement
-    Avec risque de remboursement partiel seulement
+    Et risque de remboursement partiel seulement
 
   Plan du Scénario: Évaluation ressources pour carte médicale
     Étant donné que mes revenus sont de <revenus>€
@@ -152,7 +152,7 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
       | Planning familial          | Contraception et suivi         |
       | Centres santé mentale      | Si prescription médicale       |
     Et je dois respecter ce réseau
-    Sauf urgence absolue
+    Et urgence absolue
 
   Scénario: Renouvellement et obligations du bénéficiaire
     Étant donné que je bénéficie de la carte médicale
@@ -178,5 +178,5 @@ Fonctionnalité: Carte Médicale et Aide Médicale Urgente (AMU)
       | Tribunal du travail        | 3 mois après décision          |
       | Aide juridique gratuite    | Via bureau aide juridique      |
     Et pendant le recours
-    L'aide médicale urgente reste accessible
-    Si attestée médicalement nécessaire
+    Et aide médicale urgente reste accessible
+    Et attestée médicalement nécessaire

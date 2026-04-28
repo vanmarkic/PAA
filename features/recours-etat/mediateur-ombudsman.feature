@@ -105,8 +105,8 @@ Fonctionnalité: Procédures devant les médiateurs et ombudsmans
   Scénario: Plainte irrecevable
     Étant donné que je veux saisir un médiateur
     Mais que je n'ai pas contacté l'administration d'abord
-    Ou que ma plainte est anonyme
-    Ou que l'affaire est en justice
+    Et que ma plainte est anonyme
+    Et que l'affaire est en justice
     Quand le médiateur examine la recevabilité
     Alors ma plainte sera déclarée irrecevable
     Et le médiateur m'expliquera pourquoi

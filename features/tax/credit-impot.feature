@@ -138,7 +138,7 @@ Fonctionnalité: Crédit d'impôt pour bas et moyens revenus
     Étant donné que j'étais au chômage pendant 6 mois en 2024
     Et que j'ai trouvé un emploi en juillet 2024
     Et que mes revenus totaux sont de 15000€
-    Dont 8000€ d'allocations de chômage
+    Et dont 8000€ d'allocations de chômage
     Et 7000€ de salaires
     Quand je calcule mon crédit d'impôt
     Alors je bénéficie du crédit pour bas revenus

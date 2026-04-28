@@ -125,7 +125,7 @@ Fonctionnalité: Recours et voies de droit pour étrangers
     Et leur pertinence pour la décision
     Et l'impossibilité de les produire avant
     Et l'administration peut rouvrir le dossier
-    Ou je peux saisir le juge
+    Et je peux saisir le juge
 
   Scénario: Procédure en référé administratif
     Étant donné que l'administration ne répond pas

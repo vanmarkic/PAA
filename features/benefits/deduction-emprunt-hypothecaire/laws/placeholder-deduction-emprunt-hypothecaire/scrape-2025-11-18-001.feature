@@ -44,7 +44,7 @@ Fonctionnalité: Déduction des emprunts hypothécaires
 
   Scénario: Emprunt mixte habitation et travaux
     Étant donné que j'ai contracté un emprunt de 300000€
-    Dont 220000€ pour l'achat de l'habitation
+    Et dont 220000€ pour l'achat de l'habitation
     Et 80000€ pour des travaux de rénovation
     Et que j'ai payé 4500€ d'intérêts en 2024
     Quand je calcule mes déductions

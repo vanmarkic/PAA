@@ -47,12 +47,12 @@ Fonctionnalité: Accès aux documents administratifs
     Quand je demande ce document
     Alors l'administration peut refuser temporairement
     Et le document devient accessible après la décision
-    Sauf si une autre exception s'applique
+    Et si une autre exception s'applique
     Et je peux revenir après la décision finale
 
   Scénario: Recours à la Commission d'accès aux documents administratifs
     Étant donné que ma demande d'accès a été refusée
-    Ou que l'administration n'a pas répondu dans les 30 jours
+    Et que l'administration n'a pas répondu dans les 30 jours
     Quand je saisis la Commission d'accès
     Alors je dois le faire dans les 60 jours
     Et fournir copie de ma demande initiale

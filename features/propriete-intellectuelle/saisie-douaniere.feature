@@ -24,5 +24,5 @@ Fonctionnalité: Saisie douanière de contrefaçons
     Quand je suis notifié de la retenue
     Alors j'ai 10 jours pour confirmer la contrefaçon
     Et engager une procédure
-    Ou demander la destruction simplifiée
+    Et demander la destruction simplifiée
     Et fournir une garantie si nécessaire

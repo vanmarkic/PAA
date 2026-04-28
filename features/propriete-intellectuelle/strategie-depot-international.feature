@@ -23,6 +23,6 @@ Fonctionnalité: Stratégie de dépôt international
     Et que j'ai une marque de base belge
     Quand j'utilise le système de Madrid
     Alors je désigne jusqu'à 128 pays
-    Avec une seule demande
+    Et une seule demande
     Et je paie les taxes consolidées
     Et je gère centralement les renouvellements

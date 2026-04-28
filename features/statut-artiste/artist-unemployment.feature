@@ -69,5 +69,5 @@ Fonctionnalité: Chômage pour Artistes
     Et que j'ai presté 80 jours sur cette période
     Quand j'évalue mon renouvellement
     Alors je dois prouver 156 jours sur 21 mois
-    Ou demander une prolongation exceptionnelle
+    Et demander une prolongation exceptionnelle
     Et justifier de démarches actives

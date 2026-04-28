@@ -28,7 +28,7 @@ Fonctionnalité: Soins de Santé Mentale
     Et j'ai droit à 8 séances par an (série 1)
     Et je paie 11€ par séance (ou 4€ si BIM)
     Et après épuisement, possibilité série 2 (8 séances)
-    Avec prescription du médecin généraliste
+    Et prescription du médecin généraliste
 
   Scénario: Jeune de 20 ans avec troubles psychologiques
     Étant donné que j'ai 20 ans
@@ -78,7 +78,7 @@ Fonctionnalité: Soins de Santé Mentale
       | Jours 6-365        | 17.02€ (6.32€ si BIM)         |
       | Après 1 an         | 6.32€ pour tous               |
     Et le suivi post-hospitalisation est organisé
-    Avec équipe mobile si nécessaire
+    Et équipe mobile si nécessaire
 
   Scénario: Thérapie de groupe pour addiction
     Étant donné que j'ai des problèmes d'addiction
@@ -151,7 +151,7 @@ Fonctionnalité: Soins de Santé Mentale
 
   Scénario: Téléconsultation et soins à distance
     Étant donné que j'habite en zone rurale
-    Ou que j'ai des difficultés de déplacement
+    Et que j'ai des difficultés de déplacement
     Quand je demande une consultation vidéo
     Alors depuis 2024, la téléconsultation est:
       | Aspect                   | Règle                        |
@@ -171,4 +171,4 @@ Fonctionnalité: Soins de Santé Mentale
       | Psychiatre              | Suivi médicamenteux     | Échange avec MT      |
       | Assistant social        | Soutien social          | Selon autorisation   |
     Et je peux refuser le partage d'informations
-    Sauf danger imminent pour moi ou autrui
+    Et danger imminent pour moi ou autrui

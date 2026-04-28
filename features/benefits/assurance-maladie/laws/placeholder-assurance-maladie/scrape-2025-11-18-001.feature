@@ -85,7 +85,6 @@ Fonctionnalité: Assurance Maladie-Invalidité
     Quand j'ai besoin de soins urgents à l'étranger
     Alors la CEAM couvre les soins nécessaires
     Et je suis remboursé selon les tarifs INAMI belges
-    Ou selon les tarifs du pays si plus avantageux
     Et la mutuelle rembourse après présentation des factures
 
   Scénario: Chômeur avec maintien des droits
@@ -95,7 +94,6 @@ Fonctionnalité: Assurance Maladie-Invalidité
     Alors mes droits à l'assurance maladie sont maintenus
     Et les cotisations sont prélevées sur mes allocations
     Et j'ai potentiellement droit au statut BIM
-    Si mes revenus sont inférieurs au seuil
 
   Scénario: Soins dentaires avec remboursement
     Étant donné que j'ai 35 ans
@@ -139,8 +137,7 @@ Fonctionnalité: Assurance Maladie-Invalidité
     Alors je reçois automatiquement 103.97€/an
     Et ce montant aide pour les frais non remboursés
     Et je peux demander le statut affection chronique
-    Qui donne droit au tiers-payant obligatoire
-    Et réduit mes avances de frais
+    Et je peux demander le statut affection chronique qui donne droit au tiers-payant obligatoire
 
   Scénario: Contrôles et obligations de l'assuré
     Étant donné que je bénéficie de l'assurance maladie

@@ -13,7 +13,7 @@ Fonctionnalité: Assemblée Générale Extraordinaire
     Quand la demande est formulée par écrit
     Alors le syndic doit convoquer l'AG
     Dans un délai de 30 jours maximum
-    Avec les points demandés à l'ordre du jour
+    Et les points demandés à l'ordre du jour
 
   Scénario: AG extraordinaire pour travaux urgents
     Étant donné que la façade menace de s'effondrer

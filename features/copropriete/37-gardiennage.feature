@@ -9,7 +9,7 @@ Fonctionnalité: Service de Gardiennage
 
   Scénario: Engagement concierge résident
     Étant donné qu'un poste de concierge est créé
-    Avec logement de fonction
+    Et logement de fonction
     Quand le recrutement est lancé
     Alors les conditions sont:
       | Élément | Détail |
