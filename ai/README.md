@@ -67,4 +67,5 @@ uv run pytest
 uv run ruff check .
 ```
 
-See `../README.md` for the full project context and roadmap.
+See `ARCHITECTURE.md` for architecture diagrams and technical flow, and
+`../README.md` for the full project context and roadmap.
