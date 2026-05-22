@@ -69,12 +69,11 @@ class HybridRetriever:
 
         semantic: list[ChunkResult] = []
         keyword: list[ChunkResult] = []
-        with connect() as conn:
-            with conn.cursor() as cur:
-                cur.execute(SEMANTIC_SQL, (vec_literal, vec_literal, top_k))
-                semantic = [self._row_to_result(row) for row in cur.fetchall()]
-                cur.execute(KEYWORD_SQL, (query, top_k))
-                keyword = [self._row_to_result(row) for row in cur.fetchall()]
+        with connect() as conn, conn.cursor() as cur:
+            cur.execute(SEMANTIC_SQL, (vec_literal, vec_literal, top_k))
+            semantic = [self._row_to_result(row) for row in cur.fetchall()]
+            cur.execute(KEYWORD_SQL, (query, top_k))
+            keyword = [self._row_to_result(row) for row in cur.fetchall()]
 
         for i, r in enumerate(semantic):
             r.rank_semantic = i + 1
