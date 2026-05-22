@@ -55,8 +55,9 @@ def get_procedure_steps(procedure_id: str) -> list[dict]:
     and works in environments without Postgres. Falls back to an empty list
     if the corpus isn't available.
     """
-    from ai.ingest.normaliser import Document  # noqa: PLC0415
     from pathlib import Path  # noqa: PLC0415
+
+    from ai.ingest.normaliser import Document  # noqa: PLC0415
 
     candidates = [
         Path("data/corpus.jsonl"),

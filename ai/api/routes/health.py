@@ -29,10 +29,9 @@ def ready() -> dict:
     try:
         from ai.db.connection import connect  # noqa: PLC0415
 
-        with connect() as conn:
-            with conn.cursor() as cur:
-                cur.execute("SELECT 1")
-                cur.fetchone()
+        with connect() as conn, conn.cursor() as cur:
+            cur.execute("SELECT 1")
+            cur.fetchone()
         db_ok = True
     except Exception as e:  # noqa: BLE001
         db_ok = False

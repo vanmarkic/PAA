@@ -178,30 +178,44 @@ class LocalEmbedder:
     name = "local"
 
     def __init__(self, model: str, dim: int) -> None:
-        from sentence_transformers import SentenceTransformer  # type: ignore  # noqa: PLC0415
-
-        self._model = SentenceTransformer(model)
+        # Model loading (and the ~2 GB HuggingFace download for bge-m3) is
+        # deferred to the first embed() call. Constructing the embedder must
+        # stay cheap and offline so provider resolution and CLI startup never
+        # touch the network.
         self.model = model
-        # Trust the model's reported dim; fall back to the configured one.
-        try:
-            native_dim = int(self._model.get_sentence_embedding_dimension() or dim)
-        except Exception:  # noqa: BLE001
-            native_dim = dim
-        if native_dim != dim:
-            print(
-                f"[embedder] LocalEmbedder native dim={native_dim} differs from "
-                f"EMBEDDING_DIM={dim}. Using native dim. Update the schema accordingly.",
-                file=sys.stderr,
-            )
-        self.dim = native_dim
+        self.dim = dim
+        self._model = None
+
+    def _ensure_model(self):
+        if self._model is None:
+            from sentence_transformers import SentenceTransformer  # type: ignore  # noqa: PLC0415
+
+            self._model = SentenceTransformer(self.model)
+            # Trust the model's reported dim; fall back to the configured one.
+            try:
+                native_dim = int(
+                    self._model.get_sentence_embedding_dimension() or self.dim
+                )
+            except Exception:  # noqa: BLE001
+                native_dim = self.dim
+            if native_dim != self.dim:
+                print(
+                    f"[embedder] LocalEmbedder native dim={native_dim} differs from "
+                    f"EMBEDDING_DIM={self.dim}. Using native dim. Update the schema "
+                    "accordingly.",
+                    file=sys.stderr,
+                )
+            self.dim = native_dim
+        return self._model
 
     def embed(
         self, texts: list[str], input_type: InputType = "document"
     ) -> list[list[float]]:
         # bge-m3 and many e5-style models recommend a "query: " / "passage: "
         # prefix for asymmetric retrieval. Apply when the model name suggests it.
+        model = self._ensure_model()
         prepared = self._maybe_prefix(texts, input_type)
-        vectors = self._model.encode(
+        vectors = model.encode(
             prepared,
             normalize_embeddings=True,
             convert_to_numpy=True,

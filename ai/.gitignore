@@ -6,9 +6,6 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 
-# uv
-uv.lock
-
 # Generated outputs
 # corpus.jsonl is generated but version-controlled (per roadmap) so reviewers can
 # see what content gets indexed. chunks.jsonl is fully reproducible from corpus

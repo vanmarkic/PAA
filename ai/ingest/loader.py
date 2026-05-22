@@ -18,7 +18,6 @@ The CLI emits one JSON object per Document to `corpus.jsonl`:
 from __future__ import annotations
 
 import argparse
-import json
 import re
 import sys
 from collections.abc import Iterable
