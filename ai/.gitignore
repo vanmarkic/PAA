@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Generated outputs
+# corpus.jsonl is generated but version-controlled (per roadmap) so reviewers can
+# see what content gets indexed. chunks.jsonl is fully reproducible from corpus
+# and changes more often, so it stays out of git.
+data/chunks.jsonl
+eval/results/
+
+# Local environment
+.env
